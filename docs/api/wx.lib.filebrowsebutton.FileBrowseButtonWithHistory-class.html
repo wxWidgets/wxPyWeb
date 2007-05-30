@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.filebrowsebutton.FileBrowseButtonWithHistory</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.filebrowsebutton-module.html">Module&nbsp;filebrowsebutton</a> ::
+        Class&nbsp;FileBrowseButtonWithHistory
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.filebrowsebutton.FileBrowseButtonWithHistory-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type FileBrowseButtonWithHistory</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+    
+                         |    
+          <a href="wx.lib.filebrowsebutton.FileBrowseButton-class.html"><code>FileBrowseButton</code></a> --+
+                             |
+                            <b>FileBrowseButtonWithHistory</b>
+</pre><br />
+
+<hr/>
+
+<dl class="rst-docutils">
+<dt>with following additions:</dt>
+<dd><p class="first">__init__(..., history=None)</p>
+<blockquote>
+<dl class="rst-docutils">
+<dt>history -- optional list of paths for initial history drop-down</dt>
+<dd>(must be passed by name, not a positional argument)
+If history is callable it will must return a list used
+for the history drop-down</dd>
+<dt>changeCallback -- as for FileBrowseButton, but with a work-around</dt>
+<dd>for win32 systems which don't appear to create wx.EVT_COMBOBOX
+events properly.  There is a (slight) chance that this work-around
+will cause some systems to create two events for each Combobox
+selection. If you discover this condition, please report it!</dd>
+</dl>
+<p>As for a FileBrowseButton.__init__ otherwise.</p>
+</blockquote>
+<dl class="last rst-docutils">
+<dt>GetHistoryControl()</dt>
+<dd>Return reference to the control which implements interfaces
+required for manipulating the history list.  See GetHistoryControl
+documentation for description of what that interface is.</dd>
+<dt>GetHistory()</dt>
+<dd>Return current history list</dd>
+<dt>SetHistory( value=(), selectionIndex = None )</dt>
+<dd>Set current history list, if selectionIndex is not None, select that index</dd>
+</dl>
+</dd>
+</dl>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*arguments</span>,
+          <span class="summary-sig-kwarg">**namedarguments</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.filebrowsebutton.FileBrowseButtonWithHistory-class.html#createTextControl" class="summary-sig-name"><code>createTextControl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Create the text control</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.filebrowsebutton.FileBrowseButtonWithHistory-class.html#GetHistory" class="summary-sig-name"><code>GetHistory</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the current history list</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.filebrowsebutton.FileBrowseButtonWithHistory-class.html#GetHistoryControl" class="summary-sig-name"><code>GetHistoryControl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return a pointer to the control which provides (at least)
+the following methods for manipulating the history list:</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.filebrowsebutton.FileBrowseButtonWithHistory-class.html#OnSetFocus" class="summary-sig-name"><code>OnSetFocus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+When the history scroll is selected, update the history</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.filebrowsebutton.FileBrowseButtonWithHistory-class.html#SetHistory" class="summary-sig-name"><code>SetHistory</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>,
+          <span class=summary-sig-arg>selectionIndex</span>,
+          <span class=summary-sig-arg>control</span>)</span></code>
+<br />
+Set the current history list</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="createTextControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">createTextControl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Create the text control</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.filebrowsebutton.FileBrowseButton-class.html#createTextControl"><code>wx.lib.filebrowsebutton.FileBrowseButton.createTextControl</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHistory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHistory</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the current history list</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHistoryControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHistoryControl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return a pointer to the control which provides (at least)
+the following methods for manipulating the history list:</p>
+<blockquote>
+Append( item ) -- add item
+Clear() -- clear all items
+Delete( index ) -- 0-based index to delete from list
+SetSelection( index ) -- 0-based index to select in list</blockquote>
+<p>Semantics of the methods follow those for the wxComboBox control</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSetFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSetFocus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>When the history scroll is selected, update the history</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHistory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHistory</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>()</span>,
+          <span class=sig-arg>selectionIndex</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>control</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Set the current history list</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:03:49 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.gestures.MouseGestures</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.gestures-module.html">Module&nbsp;gestures</a> ::
+        Class&nbsp;MouseGestures
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.gestures.MouseGestures-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class MouseGestures</h2>
+
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>Auto</span>,
+          <span class=summary-sig-arg>MouseButton</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#AddGesture" class="summary-sig-name"><code>AddGesture</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>gesture</span>,
+          <span class=summary-sig-arg>action</span>,
+          <span class="summary-sig-vararg">*args</span>)</span></code>
+<br />
+Registers a gesture, and an associated function, with any arguments needed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#DoAction" class="summary-sig-name"><code>DoAction</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>gesture</span>)</span></code>
+<br />
+If the gesture is in the array of registered gestures, run the associated function.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#End" class="summary-sig-name"><code>End</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Stops recording the points to create the mouse gesture from,
+and creates the mouse gesture, returns the result as a string.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#GetDirection" class="summary-sig-name"><code>GetDirection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>point1</span>,
+          <span class=summary-sig-arg>point2</span>)</span></code>
+<br />
+Gets the direction between two points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#GetRecording" class="summary-sig-name"><code>GetRecording</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns whether or not Gesture Recording has started.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#OnMotion" class="summary-sig-name"><code>OnMotion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Internal.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#OnMouseEvent" class="summary-sig-name"><code>OnMouseEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Internal.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#RemoveGesture" class="summary-sig-name"><code>RemoveGesture</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>gesture</span>)</span></code>
+<br />
+Removes a gesture, and its associated action</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#SetAuto" class="summary-sig-name"><code>SetAuto</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>auto</span>)</span></code>
+<br />
+Warning:  Once auto is set, it stays set, unless you manually use UnBind</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#SetGesturePen" class="summary-sig-name"><code>SetGesturePen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+<br />
+Sets the colour and width of the line drawn to visually represent each gesture</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#SetGesturesVisible" class="summary-sig-name"><code>SetGesturesVisible</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>vis</span>)</span></code>
+<br />
+Sets whether a line is drawn to visually represent each gesture</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#SetModifiers" class="summary-sig-name"><code>SetModifiers</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>modifiers</span>)</span></code>
+<br />
+Takes an array of wx Key constants (Control, Shift, and/or Alt).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#SetMouseButton" class="summary-sig-name"><code>SetMouseButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mousebutton</span>)</span></code>
+<br />
+Takes the wx constant for the target mousebutton</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#SetWobbleTolerance" class="summary-sig-name"><code>SetWobbleTolerance</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>wobbletolerance</span>)</span></code>
+<br />
+Sets just how much wobble this class can take!</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.gestures.MouseGestures-class.html#Start" class="summary-sig-name"><code>Start</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Starts recording the points to create the mouse gesture from</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="AddGesture"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddGesture</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>gesture</span>,
+          <span class=sig-arg>action</span>,
+          <span class="sig-vararg">*args</span>)</span>
+  </h3>
+<p>Registers a gesture, and an associated function, with any arguments needed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoAction"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoAction</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>gesture</span>)</span>
+  </h3>
+<p>If the gesture is in the array of registered gestures, run the associated function.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="End"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">End</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Stops recording the points to create the mouse gesture from,
+and creates the mouse gesture, returns the result as a string.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDirection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDirection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>point1</span>,
+          <span class=sig-arg>point2</span>)</span>
+  </h3>
+<p>Gets the direction between two points.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRecording"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRecording</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns whether or not Gesture Recording has started.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMotion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMotion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Internal.  Used if Start() has been run</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Internal.  Used in Auto Mode.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveGesture"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveGesture</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>gesture</span>)</span>
+  </h3>
+<p>Removes a gesture, and its associated action</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAuto"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAuto</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>auto</span>)</span>
+  </h3>
+<p>Warning:  Once auto is set, it stays set, unless you manually use UnBind</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGesturePen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGesturePen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>,
+          <span class=sig-arg>width</span>)</span>
+  </h3>
+<p>Sets the colour and width of the line drawn to visually represent each gesture</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGesturesVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGesturesVisible</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>vis</span>)</span>
+  </h3>
+<p>Sets whether a line is drawn to visually represent each gesture</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetModifiers"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetModifiers</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>modifiers</span>=<span class=sig-default>[]</span>)</span>
+  </h3>
+<p>Takes an array of wx Key constants (Control, Shift, and/or Alt).
+Leave empty to unset all modifiers.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMouseButton"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMouseButton</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mousebutton</span>)</span>
+  </h3>
+<p>Takes the wx constant for the target mousebutton</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetWobbleTolerance"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetWobbleTolerance</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>wobbletolerance</span>)</span>
+  </h3>
+<p>Sets just how much wobble this class can take!</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Start"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Start</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Starts recording the points to create the mouse gesture from</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:35 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

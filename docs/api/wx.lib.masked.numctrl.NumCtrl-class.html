@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.masked.numctrl.NumCtrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.masked-module.html">Package&nbsp;masked</a> ::
+        <a href="wx.lib.masked.numctrl-module.html">Module&nbsp;numctrl</a> ::
+        Class&nbsp;NumCtrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.masked.numctrl.NumCtrl-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type NumCtrl</h2>
+
+<pre class="base-tree">
+           <a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html"><code>MaskedEditMixin</code></a> --+    
+                             |    
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                   |    
+         |                   |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+               |    
+             |               |    
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+           |    
+                 |           |    
+            <a href="wx.Window-class.html"><code>Window</code></a> --+       |    
+                     |       |    
+               <a href="wx.Control-class.html"><code>Control</code></a> --+   |    
+                         |   |    
+                  <a href="wx.TextCtrl-class.html"><code>TextCtrl</code></a> --+    
+                             |    
+            <a href="wx.lib.masked.textctrl.BaseMaskedTextCtrl-class.html"><code>BaseMaskedTextCtrl</code></a> --+
+                                 |
+         <a href="wx.lib.masked.numctrl.NumCtrlAccessorsMixin-class.html"><code>NumCtrlAccessorsMixin</code></a> --+
+                                 |
+                                <b>NumCtrl</b>
+</pre><br />
+
+<hr/>
+
+<p>Masked edit control supporting &quot;native&quot; numeric values, ie. .SetValue(3), for
+example, and supporting a variety of formatting options, including automatic
+rounding specifiable precision, grouping and decimal place characters, etc.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>value</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#GetAllowNegative" class="summary-sig-name"><code>GetAllowNegative</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+(For regularization of property accessors)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#GetAllowNone" class="summary-sig-name"><code>GetAllowNone</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+(For regularization of property accessors)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetAutoSize"></a><span class="summary-sig"><span class="summary-sig-name">GetAutoSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#GetBounds" class="summary-sig-name"><code>GetBounds</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+This function returns a two-tuple (min,max), indicating the
+current bounds of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetDecimalChar"></a><span class="summary-sig"><span class="summary-sig-name">GetDecimalChar</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#GetFraction" class="summary-sig-name"><code>GetFraction</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>candidate</span>)</span></code>
+<br />
+Returns the fractional portion of the value as a float.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetFractionWidth"></a><span class="summary-sig"><span class="summary-sig-name">GetFractionWidth</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetGroupChar"></a><span class="summary-sig"><span class="summary-sig-name">GetGroupChar</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#GetGroupDigits" class="summary-sig-name"><code>GetGroupDigits</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+(For regularization of property accessors)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetIntegerWidth"></a><span class="summary-sig"><span class="summary-sig-name">GetIntegerWidth</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#GetLimited" class="summary-sig-name"><code>GetLimited</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+(For regularization of property accessors)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#GetLimitOnFieldChange" class="summary-sig-name"><code>GetLimitOnFieldChange</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+(For regularization of property accessors)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#GetMax" class="summary-sig-name"><code>GetMax</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the maximum value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#GetMin" class="summary-sig-name"><code>GetMin</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the lower bound value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetSelectOnEntry"></a><span class="summary-sig"><span class="summary-sig-name">GetSelectOnEntry</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the current numeric value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="IsGroupingAllowed"></a><span class="summary-sig"><span class="summary-sig-name">IsGroupingAllowed</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#IsInBounds" class="summary-sig-name"><code>IsInBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Returns True if no value is specified and the current value
+of the control falls within the current bounds.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#IsLimited" class="summary-sig-name"><code>IsLimited</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the control is currently limiting the
+value to fall within the current bounds.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#IsLimitedOnFieldChange" class="summary-sig-name"><code>IsLimitedOnFieldChange</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the control is currently limiting the
+value to fall within the current bounds.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="IsNegativeAllowed"></a><span class="summary-sig"><span class="summary-sig-name">IsNegativeAllowed</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="IsNoneAllowed"></a><span class="summary-sig"><span class="summary-sig-name">IsNoneAllowed</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#OnTextChange" class="summary-sig-name"><code>OnTextChange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles an event indicating that the text control's value
+has changed, and issue EVT_NUM event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAllowNegative"></a><span class="summary-sig"><span class="summary-sig-name">SetAllowNegative</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#SetAllowNone" class="summary-sig-name"><code>SetAllowNone</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>allow_none</span>)</span></code>
+<br />
+Change the behavior of the validation code, allowing control
+to have a value of None or not, as appropriate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAutoSize"></a><span class="summary-sig"><span class="summary-sig-name">SetAutoSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#SetBounds" class="summary-sig-name"><code>SetBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>min</span>,
+          <span class=summary-sig-arg>max</span>)</span></code>
+<br />
+This function is a convenience function for setting the min and max
+values at the same time.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDecimalChar"></a><span class="summary-sig"><span class="summary-sig-name">SetDecimalChar</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetFractionWidth"></a><span class="summary-sig"><span class="summary-sig-name">SetFractionWidth</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetGroupChar"></a><span class="summary-sig"><span class="summary-sig-name">SetGroupChar</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetGroupDigits"></a><span class="summary-sig"><span class="summary-sig-name">SetGroupDigits</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetIntegerWidth"></a><span class="summary-sig"><span class="summary-sig-name">SetIntegerWidth</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#SetLimited" class="summary-sig-name"><code>SetLimited</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>limited</span>)</span></code>
+<br />
+If called with a value of True, this function will cause the control
+to limit the value to fall within the bounds currently specified.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#SetLimitOnFieldChange" class="summary-sig-name"><code>SetLimitOnFieldChange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>limit</span>)</span></code>
+<br />
+If called with a value of True, this function will cause the control
+to prevent navigation out of the current field if its value is out-of-bounds,
+and limit the value to fall within the bounds currently specified if the
+control loses focus.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#SetMax" class="summary-sig-name"><code>SetMax</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>max</span>)</span></code>
+<br />
+Sets the maximum value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#SetMin" class="summary-sig-name"><code>SetMin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>min</span>)</span></code>
+<br />
+Sets the minimum value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#SetParameters" class="summary-sig-name"><code>SetParameters</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+This function is used to initialize and reconfigure the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSelectOnEntry"></a><span class="summary-sig"><span class="summary-sig-name">SetSelectOnEntry</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.numctrl.NumCtrl-class.html#SetValue" class="summary-sig-name"><code>SetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Sets the value of the control to the value specified.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="wx.lib.masked.numctrl.NumCtrl-class.html#valid_ctrl_params"><code>valid_ctrl_params</code></a></b> = <span title="{'selectOnEntry': True, 'limited': False, 'autoSize': True, 'foregroundColour': 'Black', 'emptyBackgroundColour': 'White', 'allowNegative': True, 'useParensForNegatives': False, 'max': None, 'invalidBackgroundColour': 'Yellow', 'min': None, 'signedForegroundColour': 'Red', 'groupChar': ',', 'limitOnFieldChange': False, 'groupDigits': True, 'integerWidth': 10, 'validBackgroundColour': 'White', 'useFixedWidthFont': True, 'allowNone': False, 'decimalChar': '.', 'fractionWidth': 0}"><code>{'selectOnEntry':&nbsp;True,&nbsp;'limited':&nbsp;F<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="GetAllowNegative"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAllowNegative</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>(For regularization of property accessors)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAllowNone"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAllowNone</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>(For regularization of property accessors)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBounds</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>This function returns a two-tuple (min,max), indicating the
+current bounds of the control.  Each value can be None if
+that bound is not set.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFraction"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFraction</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>candidate</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns the fractional portion of the value as a float.  If there is no
+fractional portion, the value returned will be 0.0.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGroupDigits"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGroupDigits</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>(For regularization of property accessors)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLimited"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLimited</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>(For regularization of property accessors)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLimitOnFieldChange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLimitOnFieldChange</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>(For regularization of property accessors)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMax"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMax</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the maximum value of the control.  It will return the current
+maximum integer, or None if not specified.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMin</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the lower bound value of the control.  It will return
+None if not specified.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the current numeric value of the control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.TextCtrl-class.html#GetValue"><code>wx.TextCtrl.GetValue</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsInBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsInBounds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns True if no value is specified and the current value
+of the control falls within the current bounds.  This function can
+also be called with a value to see if that value would fall within
+the current bounds of the given control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsLimited"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsLimited</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the control is currently limiting the
+value to fall within the current bounds.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsLimitedOnFieldChange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsLimitedOnFieldChange</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the control is currently limiting the
+value to fall within the current bounds.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnTextChange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnTextChange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles an event indicating that the text control's value
+has changed, and issue EVT_NUM event.
+NOTE: using wxTextCtrl.SetValue() to change the control's
+contents from within a EVT_CHAR handler can cause double
+text events.  So we check for actual changes to the text
+before passing the events on.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAllowNone"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAllowNone</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>allow_none</span>)</span>
+  </h3>
+<p>Change the behavior of the validation code, allowing control
+to have a value of None or not, as appropriate.  If the value
+of the control is currently None, and allow_none is False, the
+value of the control will be set to the minimum value of the
+control, or 0 if no lower bound is set.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBounds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>min</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>max</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>This function is a convenience function for setting the min and max
+values at the same time.  The function only applies the maximum bound
+if setting the minimum bound is successful, and returns True
+only if both operations succeed.
+NOTE: leaving out an argument will remove the corresponding bound.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLimited"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLimited</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>limited</span>)</span>
+  </h3>
+<p>If called with a value of True, this function will cause the control
+to limit the value to fall within the bounds currently specified.
+If the control's value currently exceeds the bounds, it will then
+be limited accordingly.</p>
+<p>If called with a value of False, this function will disable value
+limiting, but coloring of out-of-bounds values will still take
+place if bounds have been set for the control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLimitOnFieldChange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLimitOnFieldChange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>limit</span>)</span>
+  </h3>
+<p>If called with a value of True, this function will cause the control
+to prevent navigation out of the current field if its value is out-of-bounds,
+and limit the value to fall within the bounds currently specified if the
+control loses focus.</p>
+<p>If called with a value of False, this function will disable value
+limiting, but coloring of out-of-bounds values will still take
+place if bounds have been set for the control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMax"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMax</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>max</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the maximum value of the control. If a value of None
+is provided, then the control will have no explicit maximum value.
+If the value specified is less than the current minimum value, then
+the function returns False and the maximum will not change from its
+current setting. On success, the function returns True.</p>
+<p>If successful and the current value is greater than the new upper
+bound, if the control is limited the value will be automatically
+adjusted to this maximum value; if not limited, the value in the
+control will be colored as invalid.</p>
+<p>If max &gt; the max value allowed by the width of the control,
+the function will return False, and the max will not be set.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMin</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>min</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the minimum value of the control.  If a value of None
+is provided, then the control will have no explicit minimum value.
+If the value specified is greater than the current maximum value,
+then the function returns False and the minimum will not change from
+its current setting.  On success, the function returns True.</p>
+<p>If successful and the current value is lower than the new lower
+bound, if the control is limited, the value will be automatically
+adjusted to the new minimum value; if not limited, the value in the
+control will be colored as invalid.</p>
+<p>If min &gt; the max value allowed by the width of the control,
+the function will return False, and the min will not be set.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetParameters"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetParameters</span>(<span class=sig-arg>self</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>This function is used to initialize and reconfigure the control.
+See TimeCtrl module overview for available parameters.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Sets the value of the control to the value specified.
+The resulting actual value of the control may be altered to
+conform with the bounds set on the control if limited,
+or colored if not limited but the value is out-of-bounds.
+A ValueError exception will be raised if an invalid value
+is specified.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.masked.textctrl.BaseMaskedTextCtrl-class.html#SetValue"><code>wx.lib.masked.textctrl.BaseMaskedTextCtrl.SetValue</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="valid_ctrl_params"></a>
+<h3>valid_ctrl_params</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{'selectOnEntry': True, 'limited': False, 'autoSize': True, 'foregroundColour': 'Black', 'emptyBackgroundColour': 'White', 'allowNegative': True, 'useParensForNegatives': False, 'max': None, 'invalidBackgroundColour': 'Yellow', 'min': None, 'signedForegroundColour': 'Red', 'groupChar': ',', 'limitOnFieldChange': False, 'groupDigits': True, 'integerWidth': 10, 'validBackgroundColour': 'White', 'useFixedWidthFont': True, 'allowNone': False, 'decimalChar': '.', 'fractionWidth': 0}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{'allowNegative': True,
+ 'allowNone': False,
+ 'autoSize': True,
+ 'decimalChar': '.',
+ 'emptyBackgroundColour': 'White',
+ 'foregroundColour': 'Black',
+ 'fractionWidth': 0,
+ 'groupChar': ',',
+<span class="variable-ellipsis">...</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:01:38 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

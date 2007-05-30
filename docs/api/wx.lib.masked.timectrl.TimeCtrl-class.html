@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.masked.timectrl.TimeCtrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.masked-module.html">Package&nbsp;masked</a> ::
+        <a href="wx.lib.masked.timectrl-module.html">Module&nbsp;timectrl</a> ::
+        Class&nbsp;TimeCtrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.masked.timectrl.TimeCtrl-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type TimeCtrl</h2>
+
+<pre class="base-tree">
+           <a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html"><code>MaskedEditMixin</code></a> --+    
+                             |    
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                   |    
+         |                   |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+               |    
+             |               |    
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+           |    
+                 |           |    
+            <a href="wx.Window-class.html"><code>Window</code></a> --+       |    
+                     |       |    
+               <a href="wx.Control-class.html"><code>Control</code></a> --+   |    
+                         |   |    
+                  <a href="wx.TextCtrl-class.html"><code>TextCtrl</code></a> --+    
+                             |    
+            <a href="wx.lib.masked.textctrl.BaseMaskedTextCtrl-class.html"><code>BaseMaskedTextCtrl</code></a> --+
+                                 |
+                                <b>TimeCtrl</b>
+</pre><br />
+
+<hr/>
+
+<p>Masked control providing several time formats and manipulation of time values.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>value</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>fmt24hr</span>,
+          <span class=summary-sig-arg>spinButton</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__repr__"></a><span class="summary-sig"><span class="summary-sig-name">__repr__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#BindSpinButton" class="summary-sig-name"><code>BindSpinButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sb</span>)</span></code>
+<br />
+This function binds an externally created spin button to the control, so that
+up/down events from the button automatically change the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#GetBounds" class="summary-sig-name"><code>GetBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>as_string</span>)</span></code>
+<br />
+This function returns a two-tuple (min,max), indicating the
+current bounds of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetFormat"></a><span class="summary-sig"><span class="summary-sig-name">GetFormat</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#GetMax" class="summary-sig-name"><code>GetMax</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>as_string</span>)</span></code>
+<br />
+Gets the minimum value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#GetMin" class="summary-sig-name"><code>GetMin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>as_string</span>)</span></code>
+<br />
+Gets the minimum value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#GetMxDateTime" class="summary-sig-name"><code>GetMxDateTime</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Returns the value of the control as an mx.DateTime, with the date
+portion set to January 1, 1970.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>as_wxDateTime</span>,
+          <span class=summary-sig-arg>as_mxDateTime</span>,
+          <span class=summary-sig-arg>as_wxTimeSpan</span>,
+          <span class=summary-sig-arg>as_mxDateTimeDelta</span>)</span></code>
+<br />
+This function returns the value of the display as a string by default, but
+supports return as a wx.DateTime, mx.DateTime, wx.TimeSpan, or mx.DateTimeDelta,
+if requested.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#GetWxDateTime" class="summary-sig-name"><code>GetWxDateTime</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+This function is the conversion engine for TimeCtrl; it takes
+one of the following types:
+    time string
+    wxDateTime
+    wxTimeSpan
+    mxDateTime
+    mxDateTimeDelta
+and converts it to a wx.DateTime that always has Jan 1, 1970 as its date
+portion, so that range comparisons around values can work using
+wx.DateTime's built-in comparison function.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#IsInBounds" class="summary-sig-name"><code>IsInBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Returns True if no value is specified and the current value
+of the control falls within the current bounds.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#IsLimited" class="summary-sig-name"><code>IsLimited</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the control is currently limiting the
+value to fall within any current bounds.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#IsValid" class="summary-sig-name"><code>IsValid</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Can be used to determine if a given value would be a legal and
+in-bounds value for the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#SetBounds" class="summary-sig-name"><code>SetBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>min</span>,
+          <span class=summary-sig-arg>max</span>)</span></code>
+<br />
+This function is a convenience function for setting the min and max
+values at the same time.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetFormat"></a><span class="summary-sig"><span class="summary-sig-name">SetFormat</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>format</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#SetInsertionPoint" class="summary-sig-name"><code>SetInsertionPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+This override records the specified position and associated cell before
+calling base class' function.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#SetLimited" class="summary-sig-name"><code>SetLimited</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>limited</span>)</span></code>
+<br />
+If called with a value of True, this function will cause the control
+to limit the value to fall within the bounds currently specified.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#SetMax" class="summary-sig-name"><code>SetMax</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>max</span>)</span></code>
+<br />
+Sets the maximum value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#SetMin" class="summary-sig-name"><code>SetMin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>min</span>)</span></code>
+<br />
+Sets the minimum value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#SetMxDateTime" class="summary-sig-name"><code>SetMxDateTime</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mxdt</span>)</span></code>
+<br />
+Because SetValue can take an mx.DateTime, (if DateTime is importable),
+this is now just an alias.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#SetParameters" class="summary-sig-name"><code>SetParameters</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Function providing access to the parameters governing TimeCtrl display and bounds.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSelection"></a><span class="summary-sig"><span class="summary-sig-name">SetSelection</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sel_start</span>,
+          <span class=summary-sig-arg>sel_to</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#SetValue" class="summary-sig-name"><code>SetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Validating SetValue function for time values:
+This function will do dynamic type checking on the value argument,
+and convert wxDateTime, mxDateTime, or 12/24 format time string
+into the appropriate format string for the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#SetWxDateTime" class="summary-sig-name"><code>SetWxDateTime</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>wxdt</span>)</span></code>
+<br />
+Because SetValue can take a wx.DateTime, this is now just an alias.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="wx.lib.masked.timectrl.TimeCtrl-class.html#valid_ctrl_params"><code>valid_ctrl_params</code></a></b> = <span title="{'limited': False, 'displaySeconds': True, 'max': None, 'format': 'HHMMSS', 'min': None, 'useFixedWidthFont': True, 'oob_color': 'Yellow'}"><code>{'limited':&nbsp;False,&nbsp;'displaySeconds':<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="BindSpinButton"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">BindSpinButton</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sb</span>)</span>
+  </h3>
+<p>This function binds an externally created spin button to the control, so that
+up/down events from the button automatically change the control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBounds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>as_string</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>This function returns a two-tuple (min,max), indicating the
+current bounds of the control.  Each value can be None if
+that bound is not set.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMax"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMax</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>as_string</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Gets the minimum value of the control.
+If None, it will return None.  Otherwise it will return
+the current minimum bound on the control, as a wxDateTime
+by default, or as a string if as_string argument is True.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMin</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>as_string</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Gets the minimum value of the control.
+If None, it will return None.  Otherwise it will return
+the current minimum bound on the control, as a wxDateTime
+by default, or as a string if as_string argument is True.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMxDateTime"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMxDateTime</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns the value of the control as an mx.DateTime, with the date
+portion set to January 1, 1970.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>as_wxDateTime</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>as_mxDateTime</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>as_wxTimeSpan</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>as_mxDateTimeDelta</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>This function returns the value of the display as a string by default, but
+supports return as a wx.DateTime, mx.DateTime, wx.TimeSpan, or mx.DateTimeDelta,
+if requested. (Evaluated in the order above-- first one wins!)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.TextCtrl-class.html#GetValue"><code>wx.TextCtrl.GetValue</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetWxDateTime"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetWxDateTime</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<pre class="literalblock">
+This function is the conversion engine for TimeCtrl; it takes
+one of the following types:
+    time string
+    wxDateTime
+    wxTimeSpan
+    mxDateTime
+    mxDateTimeDelta
+and converts it to a wx.DateTime that always has Jan 1, 1970 as its date
+portion, so that range comparisons around values can work using
+wx.DateTime's built-in comparison function.  If a value is not
+provided to convert, the string value of the control will be used.
+If the value is not one of the accepted types, a ValueError will be
+raised.
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsInBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsInBounds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns True if no value is specified and the current value
+of the control falls within the current bounds.  As the clock
+is a &quot;circle&quot;, both minimum and maximum bounds must be set for
+a value to ever be considered &quot;out of bounds&quot;.  This function can
+also be called with a value to see if that value would fall within
+the current bounds of the given control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsLimited"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsLimited</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the control is currently limiting the
+value to fall within any current bounds.  <em>Note:</em> can
+be set even if there are no current bounds.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsValid"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsValid</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Can be used to determine if a given value would be a legal and
+in-bounds value for the control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#IsValid"><code>wx.lib.masked.maskededit.MaskedEditMixin.IsValid</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBounds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>min</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>max</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>This function is a convenience function for setting the min and max
+values at the same time.  The function only applies the maximum bound
+if setting the minimum bound is successful, and returns True
+only if both operations succeed.
+<strong>NOTE:</strong> leaving out an argument will remove the corresponding bound.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetInsertionPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetInsertionPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>This override records the specified position and associated cell before
+calling base class' function.  This is necessary to handle the optional
+spin button, because the insertion point is lost when the focus shifts
+to the spin button.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.TextCtrl-class.html#SetInsertionPoint"><code>wx.TextCtrl.SetInsertionPoint</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLimited"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLimited</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>limited</span>)</span>
+  </h3>
+<p>If called with a value of True, this function will cause the control
+to limit the value to fall within the bounds currently specified.
+If the control's value currently exceeds the bounds, it will then
+be limited accordingly.</p>
+<p>If called with a value of 0, this function will disable value
+limiting, but coloring of out-of-bounds values will still take
+place if bounds have been set for the control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMax"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMax</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>max</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the maximum value of the control. If a value of None
+is provided, then the control will have no explicit maximum value.
+If the value specified is less than the current minimum value, then
+the function returns False and the maximum will not change from its
+current setting. On success, the function returns True.</p>
+<p>If successful and the current value is greater than the new upper
+bound, if the control is limited the value will be automatically
+adjusted to this maximum value; if not limited, the value in the
+control will be colored as invalid.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMin</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>min</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the minimum value of the control.  If a value of None
+is provided, then the control will have no explicit minimum value.
+If the value specified is greater than the current maximum value,
+then the function returns 0 and the minimum will not change from
+its current setting.  On success, the function returns 1.</p>
+<p>If successful and the current value is lower than the new lower
+bound, if the control is limited, the value will be automatically
+adjusted to the new minimum value; if not limited, the value in the
+control will be colored as invalid.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMxDateTime"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMxDateTime</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mxdt</span>)</span>
+  </h3>
+<p>Because SetValue can take an mx.DateTime, (if DateTime is importable),
+this is now just an alias.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetParameters"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetParameters</span>(<span class=sig-arg>self</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Function providing access to the parameters governing TimeCtrl display and bounds.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Validating SetValue function for time values:
+This function will do dynamic type checking on the value argument,
+and convert wxDateTime, mxDateTime, or 12/24 format time string
+into the appropriate format string for the control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.masked.textctrl.BaseMaskedTextCtrl-class.html#SetValue"><code>wx.lib.masked.textctrl.BaseMaskedTextCtrl.SetValue</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetWxDateTime"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetWxDateTime</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>wxdt</span>)</span>
+  </h3>
+<p>Because SetValue can take a wx.DateTime, this is now just an alias.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="valid_ctrl_params"></a>
+<h3>valid_ctrl_params</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{'limited': False, 'displaySeconds': True, 'max': None, 'format': 'HHMMSS', 'min': None, 'useFixedWidthFont': True, 'oob_color': 'Yellow'}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{'displaySeconds': True,
+ 'format': 'HHMMSS',
+ 'limited': False,
+ 'max': None,
+ 'min': None,
+ 'oob_color': 'Yellow',
+ 'useFixedWidthFont': True}                                            </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:00:36 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

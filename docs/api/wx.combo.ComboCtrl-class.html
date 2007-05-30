@@ -1,0 +1,1554 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.combo.ComboCtrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.combo-module.html">Module&nbsp;combo</a> ::
+        Class&nbsp;ComboCtrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.combo.ComboCtrl-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type ComboCtrl</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+               <a href="wx.Control-class.html"><code>Control</code></a> --+
+                         |
+                        <b>ComboCtrl</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.combo.OwnerDrawnComboBox-class.html"><code>OwnerDrawnComboBox</code></a></dd></dl>
+
+<hr/>
+
+<p>A combo control is a generic combobox that allows for a totally custom
+popup. In addition it has other customization features. For instance,
+position and size of the dropdown button can be changed.</p>
+<p>To specify what to use for the popup control you need to derive a
+class from <a href="wx.combo.ComboPopup-class.html" class="link"><code>wx.combo.ComboPopup</code></a> and pass it to the ComboCtrl with
+<a href="wx.combo.ComboCtrl-class.html#SetPopupControl" class="link"><code>SetPopupControl</code></a>.  It doesn't derive from any widget class so it can
+be used either as a mixin class combined with some standard or custom
+widget, or you can use the derived ComboPopup to create and hold an
+independent reference to the widget to be used for the popup.</p>
+<div class="rst-section" id="window-styles">
+<h1 class="heading"><a name="rst-window-styles">Window Styles</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="29%" />
+<col class="rst" width="71%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.CB_READONLY</td>
+<td class="rst">Text will not be editable.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CB_SORT</td>
+<td class="rst">Sorts the entries in the list alphabetically.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.TE_PROCESS_ENTER</td>
+<td class="rst">The control will generate the event
+EVT_TEXT_ENTER (otherwise pressing Enter key
+is either processed internally by the control
+or used for navigation between dialog controls).</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CC_SPECIAL_DCLICK</td>
+<td class="rst">Double-clicking triggers a call to popup's
+OnComboDoubleClick. Actual behaviour is defined
+by a derived class. For instance,
+OwnerDrawnComboBox will cycle an item. This
+style only applies if wx.CB_READONLY is used
+as well.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CC_STD_BUTTON</td>
+<td class="rst">Drop button will behave more like a standard
+push button.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Control</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Create a Control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#AnimateShow" class="summary-sig-name"><code>AnimateShow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Implement in derived class to create a drop-down animation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Copy"></a><span class="summary-sig"><span class="summary-sig-name">Copy</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Cut"></a><span class="summary-sig"><span class="summary-sig-name">Cut</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#DoShowPopup" class="summary-sig-name"><code>DoShowPopup</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Shows and positions the popup.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#EnablePopupAnimation" class="summary-sig-name"><code>EnablePopupAnimation</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Enables or disables popup animation, if any, depending on the value of
+the argument.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><a name="GetBitmapDisabled"></a><span class="summary-sig"><span class="summary-sig-name">GetBitmapDisabled</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><a name="GetBitmapHover"></a><span class="summary-sig"><span class="summary-sig-name">GetBitmapHover</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><a name="GetBitmapNormal"></a><span class="summary-sig"><span class="summary-sig-name">GetBitmapNormal</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><a name="GetBitmapPressed"></a><span class="summary-sig"><span class="summary-sig-name">GetBitmapPressed</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetButton" class="summary-sig-name"><code>GetButton</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the dropdown button which is part of the combobox.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetButtonSize" class="summary-sig-name"><code>GetButtonSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns current size of the dropdown button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetCustomPaintWidth"></a><span class="summary-sig"><span class="summary-sig-name">GetCustomPaintWidth</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetFeatures" class="summary-sig-name"><code>GetFeatures</code></a>()</span></code>
+<br />
+Returns a bit-list of flags indicating which features of the ComboCtrl
+functionality are implemented by this implemetation.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><a name="GetInsertionPoint"></a><span class="summary-sig"><span class="summary-sig-name">GetInsertionPoint</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">unsigned int</font></td>
+  <td><code><a name="GetInternalFlags"></a><span class="summary-sig"><span class="summary-sig-name">GetInternalFlags</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><a name="GetLastPosition"></a><span class="summary-sig"><span class="summary-sig-name">GetLastPosition</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><a name="GetMainWindowOfCompositeControl"></a><span class="summary-sig"><span class="summary-sig-name">GetMainWindowOfCompositeControl</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">ComboPopup</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetPopupControl" class="summary-sig-name"><code>GetPopupControl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the current popup interface that has been set with
+<a href="wx.combo.ComboCtrl-class.html#SetPopupControl" class="link"><code>SetPopupControl</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetPopupWindow" class="summary-sig-name"><code>GetPopupWindow</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the popup window containing the popup control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetPopupWindowState"></a><span class="summary-sig"><span class="summary-sig-name">GetPopupWindowState</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxTextCtrl</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetTextCtrl" class="summary-sig-name"><code>GetTextCtrl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the text control which is part of the combo control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetTextIndent" class="summary-sig-name"><code>GetTextIndent</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns actual indentation in pixels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetTextRect" class="summary-sig-name"><code>GetTextRect</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns area covered by the text field (includes everything except
+borders and the dropdown button).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns text representation of the current value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#HidePopup" class="summary-sig-name"><code>HidePopup</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Dismisses the popup window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#IsCreated" class="summary-sig-name"><code>IsCreated</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return true if Create has finished</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#IsKeyPopupToggle" class="summary-sig-name"><code>IsKeyPopupToggle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Returns true if given key combination should toggle the popup.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#IsPopupShown" class="summary-sig-name"><code>IsPopupShown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if the popup is currently shown.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsPopupWindowState"></a><span class="summary-sig"><span class="summary-sig-name">IsPopupWindowState</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>state</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#OnButtonClick" class="summary-sig-name"><code>OnButtonClick</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Implement in a derived class to define what happens on dropdown button
+click.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#OnPopupDismiss" class="summary-sig-name"><code>OnPopupDismiss</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Common code to be called on popup hide/dismiss</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Paste"></a><span class="summary-sig"><span class="summary-sig-name">Paste</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#PrepareBackground" class="summary-sig-name"><code>PrepareBackground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Prepare background of combo control or an item in a dropdown list in a
+way typical on platform.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Remove"></a><span class="summary-sig"><span class="summary-sig-name">Remove</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>from</span>,
+          <span class=summary-sig-arg>to</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Replace"></a><span class="summary-sig"><span class="summary-sig-name">Replace</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>from</span>,
+          <span class=summary-sig-arg>to</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetButtonBitmaps" class="summary-sig-name"><code>SetButtonBitmaps</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmpNormal</span>,
+          <span class=summary-sig-arg>pushButtonBg</span>,
+          <span class=summary-sig-arg>bmpPressed</span>,
+          <span class=summary-sig-arg>bmpHover</span>,
+          <span class=summary-sig-arg>bmpDisabled</span>)</span></code>
+<br />
+Sets custom dropdown button graphics.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetButtonPosition" class="summary-sig-name"><code>SetButtonPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>,
+          <span class=summary-sig-arg>side</span>,
+          <span class=summary-sig-arg>spacingX</span>)</span></code>
+<br />
+Set the position of the dropdown button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCtrlMainWnd"></a><span class="summary-sig"><span class="summary-sig-name">SetCtrlMainWnd</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>wnd</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetCustomPaintWidth" class="summary-sig-name"><code>SetCustomPaintWidth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+<br />
+Set width, in pixels, of custom painted area in control without
+wx.CB_READONLY style.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetInsertionPoint"></a><span class="summary-sig"><span class="summary-sig-name">SetInsertionPoint</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetInsertionPointEnd"></a><span class="summary-sig"><span class="summary-sig-name">SetInsertionPointEnd</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMark"></a><span class="summary-sig"><span class="summary-sig-name">SetMark</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>from</span>,
+          <span class=summary-sig-arg>to</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetPopupAnchor" class="summary-sig-name"><code>SetPopupAnchor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>anchorSide</span>)</span></code>
+<br />
+Set side of the control to which the popup will align itself.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetPopupControl" class="summary-sig-name"><code>SetPopupControl</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>popup</span>)</span></code>
+<br />
+Set popup interface class derived from <a href="wx.combo.ComboPopup-class.html" class="link"><code>wx.combo.ComboPopup</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetPopupExtents" class="summary-sig-name"><code>SetPopupExtents</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>extLeft</span>,
+          <span class=summary-sig-arg>extRight</span>)</span></code>
+<br />
+Extends popup size horizontally, relative to the edges of the combo
+control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetPopupMaxHeight" class="summary-sig-name"><code>SetPopupMaxHeight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+<br />
+Sets preferred maximum height of the popup.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetPopupMinWidth" class="summary-sig-name"><code>SetPopupMinWidth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+<br />
+Sets minimum width of the popup.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetText" class="summary-sig-name"><code>SetText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Sets the text for the text field without affecting the popup.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetTextIndent" class="summary-sig-name"><code>SetTextIndent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>indent</span>)</span></code>
+<br />
+This will set the space in pixels between left edge of the control and
+the text, regardless whether control is read-only or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetValue" class="summary-sig-name"><code>SetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Sets the text for the combo control text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetValueWithEvent" class="summary-sig-name"><code>SetValueWithEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>,
+          <span class=summary-sig-arg>withEvent</span>)</span></code>
+<br />
+Same as <a href="wx.combo.ComboCtrl-class.html#SetValue" class="link"><code>SetValue</code></a>, but also sends a EVT_TEXT event if withEvent is true.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#ShouldDrawFocus" class="summary-sig-name"><code>ShouldDrawFocus</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if focus indicator should be drawn in the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#ShowPopup" class="summary-sig-name"><code>ShowPopup</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Show the popup window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Undo"></a><span class="summary-sig"><span class="summary-sig-name">Undo</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#UseAltPopupWindow" class="summary-sig-name"><code>UseAltPopupWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Enable or disable usage of an alternative popup window, which
+guarantees ability to focus the popup control, and allows common
+native controls to function normally.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#BitmapDisabled"><code>BitmapDisabled</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#BitmapHover"><code>BitmapHover</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#BitmapNormal"><code>BitmapNormal</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#BitmapPressed"><code>BitmapPressed</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#Button"><code>Button</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#ButtonSize"><code>ButtonSize</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#CustomPaintWidth"><code>CustomPaintWidth</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#InsertionPoint"><code>InsertionPoint</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#PopupControl"><code>PopupControl</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#PopupWindow"><code>PopupWindow</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#PopupWindowState"><code>PopupWindowState</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#TextCtrl"><code>TextCtrl</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#TextIndent"><code>TextIndent</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#TextRect"><code>TextRect</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboCtrl-class.html#Value"><code>Value</code></a></b></td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.combo.ComboCtrl-class.html#Animating"><code>Animating</code></a></b> = <span title="2">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.combo.ComboCtrl-class.html#CanDeferShow"><code>CanDeferShow</code></a></b> = <span title="2">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.combo.ComboCtrl-class.html#Hidden"><code>Hidden</code></a></b> = <span title="0">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.combo.ComboCtrl-class.html#ShowAbove"><code>ShowAbove</code></a></b> = <span title="1">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.combo.ComboCtrl-class.html#ShowBelow"><code>ShowBelow</code></a></b> = <span title="0">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.combo.ComboCtrl-class.html#Visible"><code>Visible</code></a></b> = <span title="3">3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>ID_ANY</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>wxEmptyString</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>validator</span>=<span class=sig-default>DefaultValidator</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>wxPyComboBoxNameStr</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Create a Control.  Normally you should only call this from a subclass'
+__init__ as a plain old wx.Control is not very useful.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>validator</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Validator)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Control      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Control-class.html#__init__"><code>wx.Control.__init__</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AnimateShow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AnimateShow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>)</span>
+  </h3>
+<p>Implement in derived class to create a drop-down animation.  Return
+<tt class="rst-docutils literal"><span class="pre">True</span></tt> if finished immediately. Otherwise the popup is only shown when the
+derived class calls <a href="wx.combo.ComboCtrl-class.html#DoShowPopup" class="link"><code>DoShowPopup</code></a>.  Flags are same as for <a href="wx.combo.ComboCtrl-class.html#DoShowPopup" class="link"><code>DoShowPopup</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoShowPopup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoShowPopup</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>)</span>
+  </h3>
+<p>Shows and positions the popup.</p>
+<dl class="rst-docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="18%" />
+<col class="rst" width="82%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">ShowBelow</td>
+<td class="rst">Showing popup below the control</td>
+</tr>
+<tr class="rst"><td class="rst">ShowAbove</td>
+<td class="rst">Showing popup above the control</td>
+</tr>
+<tr class="rst"><td class="rst">CanDeferShow</td>
+<td class="rst">Can only return true from AnimateShow if this is set</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnablePopupAnimation"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnablePopupAnimation</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Enables or disables popup animation, if any, depending on the value of
+the argument.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>enable</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetButton"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetButton</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the dropdown button which is part of the combobox.  Note: it's not
+necessarily a wx.Button or wx.BitmapButton.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Window      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetButtonSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetButtonSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns current size of the dropdown button.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Size      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPopupControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPopupControl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the current popup interface that has been set with
+<a href="wx.combo.ComboCtrl-class.html#SetPopupControl" class="link"><code>SetPopupControl</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+ComboPopup      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPopupWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPopupWindow</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the popup window containing the popup control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Window      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTextCtrl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTextCtrl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the text control which is part of the combo control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+wxTextCtrl      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTextIndent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTextIndent</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns actual indentation in pixels.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTextRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTextRect</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns area covered by the text field (includes everything except
+borders and the dropdown button).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns text representation of the current value. For writable combo
+control it always returns the value in the text field.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HidePopup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HidePopup</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Dismisses the popup window.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsCreated"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsCreated</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return true if Create has finished</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsKeyPopupToggle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsKeyPopupToggle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Returns true if given key combination should toggle the popup.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>event</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=KeyEvent)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsPopupShown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsPopupShown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if the popup is currently shown.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnButtonClick"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnButtonClick</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Implement in a derived class to define what happens on dropdown button
+click.  Default action is to show the popup.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPopupDismiss"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPopupDismiss</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Common code to be called on popup hide/dismiss</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PrepareBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PrepareBackground</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>)</span>
+  </h3>
+<p>Prepare background of combo control or an item in a dropdown list in a
+way typical on platform. This includes painting the focus/disabled
+background and setting the clipping region.  Unless you plan to paint
+your own focus indicator, you should always call this in your
+wxComboPopup::PaintComboControl implementation.  In addition, it sets
+pen and text colour to what looks good and proper against the
+background.</p>
+<p>flags are the same as wx.RendererNative flags:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="33%" />
+<col class="rst" width="67%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.CONTROL_ISSUBMENU</td>
+<td class="rst">drawing a list item instead of combo control</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CONTROL_SELECTED</td>
+<td class="rst">list item is selected</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CONTROL_DISABLED</td>
+<td class="rst">control/item is disabled</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetButtonBitmaps"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetButtonBitmaps</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmpNormal</span>,
+          <span class=sig-arg>pushButtonBg</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>bmpPressed</span>=<span class=sig-default>wxNullBitmap</span>,
+          <span class=sig-arg>bmpHover</span>=<span class=sig-default>wxNullBitmap</span>,
+          <span class=sig-arg>bmpDisabled</span>=<span class=sig-default>wxNullBitmap</span>)</span>
+  </h3>
+<p>Sets custom dropdown button graphics.</p>
+<blockquote>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>bmpNormal</b></code> -
+ Default button image
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      <dd><code><b>pushButtonBg</b></code> -
+ If <tt class="rst-docutils literal"><span class="pre">True</span></tt>, blank push button background is painted below the image.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      <dd><code><b>bmpPressed</b></code> -
+ Depressed butotn image.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      <dd><code><b>bmpHover</b></code> -
+ Button imate to use when the mouse hovers over it.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      <dd><code><b>bmpDisabled</b></code> -
+ Disabled button image.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetButtonPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetButtonPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>width</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>height</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>side</span>=<span class=sig-default>RIGHT</span>,
+          <span class=sig-arg>spacingX</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Set the position of the dropdown button.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>side</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>spacingX</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCustomPaintWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCustomPaintWidth</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>width</span>)</span>
+  </h3>
+<p>Set width, in pixels, of custom painted area in control without
+wx.CB_READONLY style. In read-only OwnerDrawnComboBox, this is used
+to indicate the area that is not covered by the focus rectangle.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPopupAnchor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPopupAnchor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>anchorSide</span>)</span>
+  </h3>
+<p>Set side of the control to which the popup will align itself. Valid
+values are wx.LEFT, wx.RIGHT and 0. The default value 0 means that the
+most appropriate side is used (which, currently, is always wx.LEFT).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>anchorSide</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPopupControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPopupControl</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>popup</span>)</span>
+  </h3>
+<p>Set popup interface class derived from <a href="wx.combo.ComboPopup-class.html" class="link"><code>wx.combo.ComboPopup</code></a>. This
+method should be called as soon as possible after the control has been
+created, unless <a href="wx.combo.ComboCtrl-class.html#OnButtonClick" class="link"><code>OnButtonClick</code></a> has been overridden.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>popup</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=ComboPopup)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPopupExtents"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPopupExtents</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>extLeft</span>,
+          <span class=sig-arg>extRight</span>)</span>
+  </h3>
+<p>Extends popup size horizontally, relative to the edges of the combo
+control.  Values are given in pixels, and the defaults are zero.  It
+is up to the popup to fully take these values into account.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>extLeft</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>extRight</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPopupMaxHeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPopupMaxHeight</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>height</span>)</span>
+  </h3>
+<p>Sets preferred maximum height of the popup. A value of -1 indicates to
+use the default.  The popup implementation may choose to ignore this.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPopupMinWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPopupMinWidth</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>width</span>)</span>
+  </h3>
+<p>Sets minimum width of the popup. If wider than combo control, it will
+extend to the left.  A value of -1 indicates to use the default.  The
+popup implementation may choose to ignore this.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Sets the text for the text field without affecting the popup. Thus,
+unlike <a href="wx.combo.ComboCtrl-class.html#SetValue" class="link"><code>SetValue</code></a>, it works equally well with combo control using
+wx.CB_READONLY style.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTextIndent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTextIndent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>indent</span>)</span>
+  </h3>
+<p>This will set the space in pixels between left edge of the control and
+the text, regardless whether control is read-only or not. A value of -1 can
+be given to indicate platform default.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>indent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Sets the text for the combo control text field.  For a combo control
+with wx.CB_READONLY style the string must be accepted by the popup (for
+instance, exist in the dropdown list), otherwise the call to
+SetValue is ignored.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetValueWithEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetValueWithEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>,
+          <span class=sig-arg>withEvent</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Same as <a href="wx.combo.ComboCtrl-class.html#SetValue" class="link"><code>SetValue</code></a>, but also sends a EVT_TEXT event if withEvent is true.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>withEvent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShouldDrawFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShouldDrawFocus</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if focus indicator should be drawn in the control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowPopup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowPopup</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Show the popup window.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UseAltPopupWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UseAltPopupWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Enable or disable usage of an alternative popup window, which
+guarantees ability to focus the popup control, and allows common
+native controls to function normally. This alternative popup window is
+usually a wxDialog, and as such, when it is shown, its parent
+top-level window will appear as if the focus has been lost from it.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>enable</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="GetFeatures"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFeatures</span>()</span>
+  </h3>
+<p>Returns a bit-list of flags indicating which features of the ComboCtrl
+functionality are implemented by this implemetation.  See
+<a href="wx.combo.ComboCtrlFeatures-class.html" class="link"><code>wx.combo.ComboCtrlFeatures</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BitmapDisabled"></a>
+<h3>BitmapDisabled</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetBitmapDisabled" class="summary-sig-name"><code>GetBitmapDisabled</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BitmapHover"></a>
+<h3>BitmapHover</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetBitmapHover" class="summary-sig-name"><code>GetBitmapHover</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BitmapNormal"></a>
+<h3>BitmapNormal</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetBitmapNormal" class="summary-sig-name"><code>GetBitmapNormal</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BitmapPressed"></a>
+<h3>BitmapPressed</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetBitmapPressed" class="summary-sig-name"><code>GetBitmapPressed</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Button"></a>
+<h3>Button</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetButton" class="summary-sig-name"><code>GetButton</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ButtonSize"></a>
+<h3>ButtonSize</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetButtonSize" class="summary-sig-name"><code>GetButtonSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="CustomPaintWidth"></a>
+<h3>CustomPaintWidth</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetCustomPaintWidth" class="summary-sig-name"><code>GetCustomPaintWidth</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetCustomPaintWidth" class="summary-sig-name"><code>SetCustomPaintWidth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="InsertionPoint"></a>
+<h3>InsertionPoint</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetInsertionPoint" class="summary-sig-name"><code>GetInsertionPoint</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="PopupControl"></a>
+<h3>PopupControl</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetPopupControl" class="summary-sig-name"><code>GetPopupControl</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetPopupControl" class="summary-sig-name"><code>SetPopupControl</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>popup</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="PopupWindow"></a>
+<h3>PopupWindow</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetPopupWindow" class="summary-sig-name"><code>GetPopupWindow</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="PopupWindowState"></a>
+<h3>PopupWindowState</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetPopupWindowState" class="summary-sig-name"><code>GetPopupWindowState</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="TextCtrl"></a>
+<h3>TextCtrl</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetTextCtrl" class="summary-sig-name"><code>GetTextCtrl</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="TextIndent"></a>
+<h3>TextIndent</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetTextIndent" class="summary-sig-name"><code>GetTextIndent</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetTextIndent" class="summary-sig-name"><code>SetTextIndent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>indent</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="TextRect"></a>
+<h3>TextRect</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetTextRect" class="summary-sig-name"><code>GetTextRect</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1218199116</span>(...)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1218199060</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Value"></a>
+<h3>Value</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.combo.ComboCtrl-class.html#SetValue" class="summary-sig-name"><code>SetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="Animating"></a>
+<h3>Animating</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="2">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="CanDeferShow"></a>
+<h3>CanDeferShow</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="2">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="Hidden"></a>
+<h3>Hidden</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="0">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="ShowAbove"></a>
+<h3>ShowAbove</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="1">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="ShowBelow"></a>
+<h3>ShowBelow</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="0">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="Visible"></a>
+<h3>Visible</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="3">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:00:22 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

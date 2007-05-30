@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.docview.DocManager</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.docview-module.html">Module&nbsp;docview</a> ::
+        Class&nbsp;DocManager
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.docview.DocManager-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type DocManager</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+
+                 |
+                <b>DocManager</b>
+</pre><br />
+
+<hr/>
+
+<p>The wxDocManager class is part of the document/view framework supported by
+wxWindows, and cooperates with the wxView, wxDocument and wxDocTemplate
+classes.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>initialize</span>)</span></code>
+<br />
+Constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#ActivateView" class="summary-sig-name"><code>ActivateView</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>view</span>,
+          <span class=summary-sig-arg>activate</span>,
+          <span class=summary-sig-arg>deleting</span>)</span></code>
+<br />
+Sets the current view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#AddDocument" class="summary-sig-name"><code>AddDocument</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>document</span>)</span></code>
+<br />
+Adds the document to the list of documents.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#AddFileToHistory" class="summary-sig-name"><code>AddFileToHistory</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fileName</span>)</span></code>
+<br />
+Adds a file to the file history list, if we have a pointer to an
+appropriate file menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#AssociateTemplate" class="summary-sig-name"><code>AssociateTemplate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>docTemplate</span>)</span></code>
+<br />
+Adds the template to the document manager's template list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#Clear" class="summary-sig-name"><code>Clear</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>force</span>)</span></code>
+<br />
+Closes all currently opened document by callling CloseDocuments and
+clears the document manager's templates.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#CloseDocument" class="summary-sig-name"><code>CloseDocument</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doc</span>,
+          <span class=summary-sig-arg>force</span>)</span></code>
+<br />
+Closes the specified document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#CloseDocuments" class="summary-sig-name"><code>CloseDocuments</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>force</span>)</span></code>
+<br />
+Closes all currently opened documents.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#CreateDocument" class="summary-sig-name"><code>CreateDocument</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Creates a new document in a manner determined by the flags parameter,
+which can be:</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#CreateView" class="summary-sig-name"><code>CreateView</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doc</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Creates a new view for the given document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#DeleteTemplate" class="summary-sig-name"><code>DeleteTemplate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>template</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Placeholder, not yet implemented in wxWindows.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#Destroy" class="summary-sig-name"><code>Destroy</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Destructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#DisassociateTemplate" class="summary-sig-name"><code>DisassociateTemplate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>docTemplate</span>)</span></code>
+<br />
+Removes the template from the list of templates.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#FileHistoryAddFilesToMenu" class="summary-sig-name"><code>FileHistoryAddFilesToMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menu</span>)</span></code>
+<br />
+Appends the files in the history list, to all menus managed by the
+file history object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#FileHistoryLoad" class="summary-sig-name"><code>FileHistoryLoad</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>config</span>)</span></code>
+<br />
+Loads the file history from a config object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#FileHistoryRemoveMenu" class="summary-sig-name"><code>FileHistoryRemoveMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menu</span>)</span></code>
+<br />
+Removes the given menu from the list of menus managed by the file
+history object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#FileHistorySave" class="summary-sig-name"><code>FileHistorySave</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>config</span>)</span></code>
+<br />
+Saves the file history into a config object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#FileHistoryUseMenu" class="summary-sig-name"><code>FileHistoryUseMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menu</span>)</span></code>
+<br />
+Use this menu for appending recently-visited document filenames, for
+convenient access.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#FindSuitableParent" class="summary-sig-name"><code>FindSuitableParent</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a parent frame or dialog, either the frame with the current
+focus or if there is no current focus the application's top frame.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#FindTemplateForPath" class="summary-sig-name"><code>FindTemplateForPath</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>)</span></code>
+<br />
+Given a path, try to find template that matches the extension.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#FlushDoc" class="summary-sig-name"><code>FlushDoc</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doc</span>)</span></code>
+<br />
+Placeholder, not yet implemented in wxWindows.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#GetCurrentDocument" class="summary-sig-name"><code>GetCurrentDocument</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the document associated with the currently active view (if any).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#GetCurrentView" class="summary-sig-name"><code>GetCurrentView</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the currently active view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#GetDocuments" class="summary-sig-name"><code>GetDocuments</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the list of documents.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#GetFileHistory" class="summary-sig-name"><code>GetFileHistory</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the file history.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#GetFlags" class="summary-sig-name"><code>GetFlags</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the document manager's flags.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#GetHistoryFile" class="summary-sig-name"><code>GetHistoryFile</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>i</span>)</span></code>
+<br />
+Returns the file at index i from the file history.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#GetHistoryFilesCount" class="summary-sig-name"><code>GetHistoryFilesCount</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of files currently stored in the file history.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#GetLastActiveView" class="summary-sig-name"><code>GetLastActiveView</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the last active view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#GetMaxDocsOpen" class="summary-sig-name"><code>GetMaxDocsOpen</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of documents that can be open simultaneously.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#GetTemplates" class="summary-sig-name"><code>GetTemplates</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the document manager's template list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#Initialize" class="summary-sig-name"><code>Initialize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Initializes data; currently just calls OnCreateFileHistory.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#MakeDefaultName" class="summary-sig-name"><code>MakeDefaultName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a suitable default name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#MakeFrameTitle" class="summary-sig-name"><code>MakeFrameTitle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a suitable title for a document frame.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#MatchTemplate" class="summary-sig-name"><code>MatchTemplate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>)</span></code>
+<br />
+Placeholder, not yet implemented in wxWindows.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnCreateFileHistory" class="summary-sig-name"><code>OnCreateFileHistory</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+A hook to allow a derived class to create a different type of file
+history.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnFileClose" class="summary-sig-name"><code>OnFileClose</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Closes and deletes the currently active document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnFileCloseAll" class="summary-sig-name"><code>OnFileCloseAll</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Closes and deletes all the currently opened documents.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnFileNew" class="summary-sig-name"><code>OnFileNew</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Creates a new document and reads in the selected file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnFileOpen" class="summary-sig-name"><code>OnFileOpen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Creates a new document and reads in the selected file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnFileRevert" class="summary-sig-name"><code>OnFileRevert</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Reverts the current document by calling wxDocument.Save for the current
+document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnFileSave" class="summary-sig-name"><code>OnFileSave</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Saves the current document by calling wxDocument.Save for the current
+document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnFileSaveAs" class="summary-sig-name"><code>OnFileSaveAs</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Calls wxDocument.SaveAs for the current document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnOpenFileFailure" class="summary-sig-name"><code>OnOpenFileFailure</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Called when there is an error opening a file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnPreview" class="summary-sig-name"><code>OnPreview</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Previews the current document by calling its View's OnCreatePrintout
+method.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnPrint" class="summary-sig-name"><code>OnPrint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Prints the current document by calling its View's OnCreatePrintout
+method.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnPrintSetup" class="summary-sig-name"><code>OnPrintSetup</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Presents the print setup dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnRedo" class="summary-sig-name"><code>OnRedo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Issues a Redo command to the current document's command processor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUndo" class="summary-sig-name"><code>OnUndo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Issues an Undo command to the current document's command processor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdateFileClose" class="summary-sig-name"><code>OnUpdateFileClose</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the File Close command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdateFileCloseAll" class="summary-sig-name"><code>OnUpdateFileCloseAll</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the File Close All command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdateFileNew" class="summary-sig-name"><code>OnUpdateFileNew</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the File New command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdateFileOpen" class="summary-sig-name"><code>OnUpdateFileOpen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the File Open command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdateFileRevert" class="summary-sig-name"><code>OnUpdateFileRevert</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the File Revert command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdateFileSave" class="summary-sig-name"><code>OnUpdateFileSave</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the File Save command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdateFileSaveAs" class="summary-sig-name"><code>OnUpdateFileSaveAs</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the File Save As command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdatePreview" class="summary-sig-name"><code>OnUpdatePreview</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the Print Preview command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdatePrint" class="summary-sig-name"><code>OnUpdatePrint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the Print command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdatePrintSetup" class="summary-sig-name"><code>OnUpdatePrintSetup</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the Print Setup command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdateRedo" class="summary-sig-name"><code>OnUpdateRedo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the Redo command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#OnUpdateUndo" class="summary-sig-name"><code>OnUpdateUndo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the user interface for the Undo command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#ProcessEvent" class="summary-sig-name"><code>ProcessEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Processes an event, searching event tables and calling zero or more
+suitable event handler function(s).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#ProcessUpdateUIEvent" class="summary-sig-name"><code>ProcessUpdateUIEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Processes a UI event, searching event tables and calling zero or more
+suitable event handler function(s).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#RemoveDocument" class="summary-sig-name"><code>RemoveDocument</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doc</span>)</span></code>
+<br />
+Removes the document from the list of documents.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#RemoveFileFromHistory" class="summary-sig-name"><code>RemoveFileFromHistory</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>i</span>)</span></code>
+<br />
+Removes a file from the file history list, if we have a pointer to an
+appropriate file menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#SelectDocumentPath" class="summary-sig-name"><code>SelectDocumentPath</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>templates</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>save</span>)</span></code>
+<br />
+Under Windows, pops up a file selector with a list of filters
+corresponding to document templates.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#SelectDocumentType" class="summary-sig-name"><code>SelectDocumentType</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>temps</span>,
+          <span class=summary-sig-arg>sort</span>)</span></code>
+<br />
+Returns a document template by asking the user (if there is more than
+one template).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#SelectViewType" class="summary-sig-name"><code>SelectViewType</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>temps</span>,
+          <span class=summary-sig-arg>sort</span>)</span></code>
+<br />
+Returns a document template by asking the user (if there is more than one template), displaying a list of valid views.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocManager-class.html#SetMaxDocsOpen" class="summary-sig-name"><code>SetMaxDocsOpen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>maxDocsOpen</span>)</span></code>
+<br />
+Sets the maximum number of documents that can be open at a time.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>initialize</span>=<span class=sig-default>True</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor. Create a document manager instance dynamically near the
+start of your application before doing any document or view operations.</p>
+<p>flags is used in the Python version to indicate whether the document
+manager is in DOC_SDI or DOC_MDI mode.</p>
+<p>If initialize is true, the Initialize function will be called to
+create a default history list object. If you derive from wxDocManager,
+you may wish to call the base constructor with false, and then call
+Initialize in your own constructor, to allow your own Initialize or
+OnCreateFileHistory functions to be called.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.EvtHandler-class.html#__init__"><code>wx.EvtHandler.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ActivateView"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ActivateView</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>view</span>,
+          <span class=sig-arg>activate</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>deleting</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Sets the current view.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddDocument</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>document</span>)</span>
+  </h3>
+<p>Adds the document to the list of documents.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddFileToHistory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddFileToHistory</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fileName</span>)</span>
+  </h3>
+<p>Adds a file to the file history list, if we have a pointer to an
+appropriate file menu.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AssociateTemplate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AssociateTemplate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>docTemplate</span>)</span>
+  </h3>
+<p>Adds the template to the document manager's template list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Clear"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Clear</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>force</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Closes all currently opened document by callling CloseDocuments and
+clears the document manager's templates.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CloseDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CloseDocument</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doc</span>,
+          <span class=sig-arg>force</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Closes the specified document.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CloseDocuments"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CloseDocuments</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>force</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Closes all currently opened documents.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateDocument</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Creates a new document in a manner determined by the flags parameter,
+which can be:</p>
+<p>wx.lib.docview.DOC_NEW Creates a fresh document.
+wx.lib.docview.DOC_SILENT Silently loads the given document file.</p>
+<p>If wx.lib.docview.DOC_NEW is present, a new document will be created and returned,
+possibly after asking the user for a template to use if there is more
+than one document template. If wx.lib.docview.DOC_SILENT is present, a new document
+will be created and the given file loaded into it. If neither of these
+flags is present, the user will be presented with a file selector for
+the file to load, and the template to use will be determined by the
+extension (Windows) or by popping up a template choice list (other
+platforms).</p>
+<p>If the maximum number of documents has been reached, this function
+will delete the oldest currently loaded document before creating a new
+one.</p>
+<p>wxPython version supports the document manager's wx.lib.docview.DOC_OPEN_ONCE
+and wx.lib.docview.DOC_NO_VIEW flag.</p>
+<p>if wx.lib.docview.DOC_OPEN_ONCE is present, trying to open the same file multiple 
+times will just return the same document.
+if wx.lib.docview.DOC_NO_VIEW is present, opening a file will generate the document,
+but not generate a corresponding view.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateView"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateView</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doc</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Creates a new view for the given document. If more than one view is
+allowed for the document (by virtue of multiple templates mentioning
+the same document type), a choice of view is presented to the user.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteTemplate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteTemplate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>template</span>,
+          <span class=sig-arg>flags</span>)</span>
+  </h3>
+<p>Placeholder, not yet implemented in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Destroy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Destroy</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Destructor.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Object-class.html#Destroy"><code>wx.Object.Destroy</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DisassociateTemplate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DisassociateTemplate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>docTemplate</span>)</span>
+  </h3>
+<p>Removes the template from the list of templates.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FileHistoryAddFilesToMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FileHistoryAddFilesToMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menu</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Appends the files in the history list, to all menus managed by the
+file history object.</p>
+<p>If menu is specified, appends the files in the history list to the
+given menu only.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FileHistoryLoad"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FileHistoryLoad</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>config</span>)</span>
+  </h3>
+<p>Loads the file history from a config object.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FileHistoryRemoveMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FileHistoryRemoveMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menu</span>)</span>
+  </h3>
+<p>Removes the given menu from the list of menus managed by the file
+history object.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FileHistorySave"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FileHistorySave</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>config</span>)</span>
+  </h3>
+<p>Saves the file history into a config object. This must be called
+explicitly by the application.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FileHistoryUseMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FileHistoryUseMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menu</span>)</span>
+  </h3>
+<p>Use this menu for appending recently-visited document filenames, for
+convenient access. Calling this function with a valid menu enables the
+history list functionality.</p>
+<p>Note that you can add multiple menus using this function, to be
+managed by the file history object.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindSuitableParent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindSuitableParent</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a parent frame or dialog, either the frame with the current
+focus or if there is no current focus the application's top frame.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindTemplateForPath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindTemplateForPath</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>)</span>
+  </h3>
+<p>Given a path, try to find template that matches the extension. This is
+only an approximate method of finding a template for creating a
+document.</p>
+<p>Note this wxPython verson looks for and returns a default template if no specific template is found.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FlushDoc"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FlushDoc</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doc</span>)</span>
+  </h3>
+<p>Placeholder, not yet implemented in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCurrentDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCurrentDocument</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the document associated with the currently active view (if any).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCurrentView"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCurrentView</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the currently active view.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocuments"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocuments</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the list of documents.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFileHistory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFileHistory</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the file history.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFlags"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFlags</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the document manager's flags.  This method has been
+added to wxPython and is not in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHistoryFile"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHistoryFile</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>i</span>)</span>
+  </h3>
+<p>Returns the file at index i from the file history.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHistoryFilesCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHistoryFilesCount</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the number of files currently stored in the file history.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLastActiveView"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLastActiveView</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the last active view.  This is used in the SDI framework where dialogs can be mistaken for a view
+and causes the framework to deactivete the current view.  This happens when something like a custom dialog box used
+to operate on the current view is shown.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMaxDocsOpen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMaxDocsOpen</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the number of documents that can be open simultaneously.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTemplates"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTemplates</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the document manager's template list.  This method has been added to
+wxPython and is not in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Initialize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Initialize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Initializes data; currently just calls OnCreateFileHistory. Some data
+cannot always be initialized in the constructor because the programmer
+must be given the opportunity to override functionality. In fact
+Initialize is called from the wxDocManager constructor, but this can
+be vetoed by passing false to the second argument, allowing the
+derived class's constructor to call Initialize, possibly calling a
+different OnCreateFileHistory from the default.</p>
+<p>The bottom line: if you're not deriving from Initialize, forget it and
+construct wxDocManager with no arguments.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeDefaultName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeDefaultName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a suitable default name. This is implemented by appending an
+integer counter to the string &quot;Untitled&quot; and incrementing the counter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeFrameTitle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeFrameTitle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a suitable title for a document frame. This is implemented by
+appending the document name to the application name.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MatchTemplate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MatchTemplate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>)</span>
+  </h3>
+<p>Placeholder, not yet implemented in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCreateFileHistory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCreateFileHistory</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>A hook to allow a derived class to create a different type of file
+history. Called from Initialize.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnFileClose"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnFileClose</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Closes and deletes the currently active document.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnFileCloseAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnFileCloseAll</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Closes and deletes all the currently opened documents.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnFileNew"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnFileNew</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Creates a new document and reads in the selected file.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnFileOpen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnFileOpen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Creates a new document and reads in the selected file.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnFileRevert"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnFileRevert</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Reverts the current document by calling wxDocument.Save for the current
+document.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnFileSave"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnFileSave</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Saves the current document by calling wxDocument.Save for the current
+document.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnFileSaveAs"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnFileSaveAs</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Calls wxDocument.SaveAs for the current document.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnOpenFileFailure"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnOpenFileFailure</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Called when there is an error opening a file.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPreview"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPreview</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Previews the current document by calling its View's OnCreatePrintout
+method.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPrint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPrint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Prints the current document by calling its View's OnCreatePrintout
+method.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPrintSetup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPrintSetup</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Presents the print setup dialog.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnRedo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnRedo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Issues a Redo command to the current document's command processor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUndo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUndo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Issues an Undo command to the current document's command processor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdateFileClose"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdateFileClose</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the File Close command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdateFileCloseAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdateFileCloseAll</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the File Close All command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdateFileNew"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdateFileNew</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the File New command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdateFileOpen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdateFileOpen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the File Open command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdateFileRevert"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdateFileRevert</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the File Revert command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdateFileSave"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdateFileSave</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the File Save command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdateFileSaveAs"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdateFileSaveAs</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the File Save As command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdatePreview"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdatePreview</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the Print Preview command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdatePrint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdatePrint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the Print command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdatePrintSetup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdatePrintSetup</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the Print Setup command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdateRedo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdateRedo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the Redo command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdateUndo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdateUndo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the user interface for the Undo command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Processes an event, searching event tables and calling zero or more
+suitable event handler function(s).  Note that the ProcessEvent
+method is called from the wxPython docview framework directly since
+wxPython does not have a virtual ProcessEvent function.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.EvtHandler-class.html#ProcessEvent"><code>wx.EvtHandler.ProcessEvent</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessUpdateUIEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessUpdateUIEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Processes a UI event, searching event tables and calling zero or more
+suitable event handler function(s).  Note that the ProcessEvent
+method is called from the wxPython docview framework directly since
+wxPython does not have a virtual ProcessEvent function.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveDocument</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doc</span>)</span>
+  </h3>
+<p>Removes the document from the list of documents.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveFileFromHistory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveFileFromHistory</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>i</span>)</span>
+  </h3>
+<p>Removes a file from the file history list, if we have a pointer to an
+appropriate file menu.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SelectDocumentPath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SelectDocumentPath</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>templates</span>,
+          <span class=sig-arg>flags</span>,
+          <span class=sig-arg>save</span>)</span>
+  </h3>
+<p>Under Windows, pops up a file selector with a list of filters
+corresponding to document templates. The wxDocTemplate corresponding
+to the selected file's extension is returned.</p>
+<p>On other platforms, if there is more than one document template a
+choice list is popped up, followed by a file selector.</p>
+<p>This function is used in wxDocManager.CreateDocument.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SelectDocumentType"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SelectDocumentType</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>temps</span>,
+          <span class=sig-arg>sort</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Returns a document template by asking the user (if there is more than
+one template). This function is used in wxDocManager.CreateDocument.</p>
+<p>Parameters</p>
+<p>templates - list of templates from which to choose a desired template.</p>
+<p>sort - If more than one template is passed in in templates, then this
+parameter indicates whether the list of templates that the user will
+have to choose from is sorted or not when shown the choice box dialog.
+Default is false.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SelectViewType"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SelectViewType</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>temps</span>,
+          <span class=sig-arg>sort</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Returns a document template by asking the user (if there is more than one template), displaying a list of valid views. This function is used in wxDocManager::CreateView. The dialog normally will not appear because the array of templates only contains those relevant to the document in question, and often there will only be one such.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMaxDocsOpen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMaxDocsOpen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>maxDocsOpen</span>)</span>
+  </h3>
+<p>Sets the maximum number of documents that can be open at a time. By
+default, this is 10,000. If you set it to 1, existing documents will
+be saved and deleted when the user tries to open or create a new one
+(similar to the behaviour of Windows Write, for example). Allowing
+multiple documents gives behaviour more akin to MS Word and other
+Multiple Document Interface applications.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:55:12 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

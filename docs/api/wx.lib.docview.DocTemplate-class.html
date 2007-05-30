@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.docview.DocTemplate</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.docview-module.html">Module&nbsp;docview</a> ::
+        Class&nbsp;DocTemplate
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.docview.DocTemplate-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type DocTemplate</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+    
+         |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+
+             |
+            <b>DocTemplate</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.pydocview.ChildDocTemplate-class.html"><code>ChildDocTemplate</code></a></dd></dl>
+
+<hr/>
+
+<p>The wxDocTemplate class is used to model the relationship between a
+document class and a view class.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>manager</span>,
+          <span class=summary-sig-arg>description</span>,
+          <span class=summary-sig-arg>filter</span>,
+          <span class=summary-sig-arg>dir</span>,
+          <span class=summary-sig-arg>ext</span>,
+          <span class=summary-sig-arg>docTypeName</span>,
+          <span class=summary-sig-arg>viewTypeName</span>,
+          <span class=summary-sig-arg>docType</span>,
+          <span class=summary-sig-arg>viewType</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>icon</span>)</span></code>
+<br />
+Constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#CreateDocument" class="summary-sig-name"><code>CreateDocument</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Creates a new instance of the associated document class.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#CreateView" class="summary-sig-name"><code>CreateView</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doc</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Creates a new instance of the associated document view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#FileMatchesTemplate" class="summary-sig-name"><code>FileMatchesTemplate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>)</span></code>
+<br />
+Returns True if the path's extension matches one of this template's
+file filter extensions.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#GetDefaultExtension" class="summary-sig-name"><code>GetDefaultExtension</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the default file extension for the document data, as passed to
+the document template constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#GetDescription" class="summary-sig-name"><code>GetDescription</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the text description of this template, as passed to the
+document template constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#GetDirectory" class="summary-sig-name"><code>GetDirectory</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the default directory, as passed to the document template
+constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#GetDocumentManager" class="summary-sig-name"><code>GetDocumentManager</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the document manager instance for which this template was
+created.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#GetDocumentName" class="summary-sig-name"><code>GetDocumentName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the document type name, as passed to the document template
+constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#GetDocumentType" class="summary-sig-name"><code>GetDocumentType</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the Python document class, as passed to the document template
+constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#GetFileFilter" class="summary-sig-name"><code>GetFileFilter</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the file filter, as passed to the document template
+constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#GetFlags" class="summary-sig-name"><code>GetFlags</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the flags, as passed to the document template constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#GetIcon" class="summary-sig-name"><code>GetIcon</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the icon, as passed to the document template
+constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#GetViewName" class="summary-sig-name"><code>GetViewName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the view type name, as passed to the document template
+constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#GetViewType" class="summary-sig-name"><code>GetViewType</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the Python view class, as passed to the document template
+constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#IsNewable" class="summary-sig-name"><code>IsNewable</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if the document template can be shown in &quot;New&quot; dialogs,
+false otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#IsVisible" class="summary-sig-name"><code>IsVisible</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if the document template can be shown in user dialogs,
+false otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#SetDefaultExtension" class="summary-sig-name"><code>SetDefaultExtension</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>defaultExt</span>)</span></code>
+<br />
+Sets the default file extension.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#SetDescription" class="summary-sig-name"><code>SetDescription</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>description</span>)</span></code>
+<br />
+Sets the template description.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#SetDirectory" class="summary-sig-name"><code>SetDirectory</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dir</span>)</span></code>
+<br />
+Sets the default directory.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#SetDocumentManager" class="summary-sig-name"><code>SetDocumentManager</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>manager</span>)</span></code>
+<br />
+Sets the document manager instance for which this template was
+created.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#SetFileFilter" class="summary-sig-name"><code>SetFileFilter</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filter</span>)</span></code>
+<br />
+Sets the file filter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#SetFlags" class="summary-sig-name"><code>SetFlags</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Sets the internal document template flags (see the constructor
+description for more details).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.DocTemplate-class.html#SetIcon" class="summary-sig-name"><code>SetIcon</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Sets the icon.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>manager</span>,
+          <span class=sig-arg>description</span>,
+          <span class=sig-arg>filter</span>,
+          <span class=sig-arg>dir</span>,
+          <span class=sig-arg>ext</span>,
+          <span class=sig-arg>docTypeName</span>,
+          <span class=sig-arg>viewTypeName</span>,
+          <span class=sig-arg>docType</span>,
+          <span class=sig-arg>viewType</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>icon</span>=<span class=sig-default>None</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor. Create instances dynamically near the start of your
+application after creating a wxDocManager instance, and before doing
+any document or view operations.</p>
+<p>manager is the document manager object which manages this template.</p>
+<p>description is a short description of what the template is for. This
+string will be displayed in the file filter list of Windows file
+selectors.</p>
+<p>filter is an appropriate file filter such as *.txt.</p>
+<p>dir is the default directory to use for file selectors.</p>
+<p>ext is the default file extension (such as txt).</p>
+<p>docTypeName is a name that should be unique for a given type of
+document, used for gathering a list of views relevant to a
+particular document.</p>
+<p>viewTypeName is a name that should be unique for a given view.</p>
+<p>docClass is a Python class. If this is not supplied, you will need to
+derive a new wxDocTemplate class and override the CreateDocument
+member to return a new document instance on demand.</p>
+<p>viewClass is a Python class. If this is not supplied, you will need to
+derive a new wxDocTemplate class and override the CreateView member to
+return a new view instance on demand.</p>
+<p>flags is a bit list of the following:
+wx.TEMPLATE_VISIBLE The template may be displayed to the user in
+dialogs.</p>
+<p>wx.TEMPLATE_INVISIBLE The template may not be displayed to the user in
+dialogs.</p>
+<p>wx.DEFAULT_TEMPLATE_FLAGS Defined as wxTEMPLATE_VISIBLE.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Object-class.html#__init__"><code>wx.Object.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateDocument</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>,
+          <span class=sig-arg>flags</span>)</span>
+  </h3>
+<p>Creates a new instance of the associated document class. If you have
+not supplied a class to the template constructor, you will need to
+override this function to return an appropriate document instance.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateView"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateView</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doc</span>,
+          <span class=sig-arg>flags</span>)</span>
+  </h3>
+<p>Creates a new instance of the associated document view. If you have
+not supplied a class to the template constructor, you will need to
+override this function to return an appropriate view instance.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FileMatchesTemplate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FileMatchesTemplate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>)</span>
+  </h3>
+<p>Returns True if the path's extension matches one of this template's
+file filter extensions.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDefaultExtension"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDefaultExtension</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the default file extension for the document data, as passed to
+the document template constructor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDescription"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDescription</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the text description of this template, as passed to the
+document template constructor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDirectory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDirectory</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the default directory, as passed to the document template
+constructor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocumentManager"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocumentManager</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the document manager instance for which this template was
+created.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocumentName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocumentName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the document type name, as passed to the document template
+constructor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocumentType"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocumentType</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the Python document class, as passed to the document template
+constructor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFileFilter"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFileFilter</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the file filter, as passed to the document template
+constructor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFlags"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFlags</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the flags, as passed to the document template constructor.
+(see the constructor description for more details).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetIcon</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the icon, as passed to the document template
+constructor.  This method has been added to wxPython and is
+not in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetViewName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetViewName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the view type name, as passed to the document template
+constructor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetViewType"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetViewType</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the Python view class, as passed to the document template
+constructor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsNewable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsNewable</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if the document template can be shown in &quot;New&quot; dialogs,
+false otherwise.</p>
+<p>This method has been added to wxPython and is not in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsVisible</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if the document template can be shown in user dialogs,
+false otherwise.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDefaultExtension"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDefaultExtension</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>defaultExt</span>)</span>
+  </h3>
+<p>Sets the default file extension.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDescription"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDescription</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>description</span>)</span>
+  </h3>
+<p>Sets the template description.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDirectory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDirectory</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dir</span>)</span>
+  </h3>
+<p>Sets the default directory.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDocumentManager"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDocumentManager</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>manager</span>)</span>
+  </h3>
+<p>Sets the document manager instance for which this template was
+created. Should not be called by the application.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFileFilter"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFileFilter</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>filter</span>)</span>
+  </h3>
+<p>Sets the file filter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFlags"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFlags</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>flags</span>)</span>
+  </h3>
+<p>Sets the internal document template flags (see the constructor
+description for more details).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetIcon</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>flags</span>)</span>
+  </h3>
+<p>Sets the icon.  This method has been added to wxPython and is not
+in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:54:56 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

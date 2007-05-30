@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.masked.maskededit.MaskedEditMixin</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.masked-module.html">Package&nbsp;masked</a> ::
+        <a href="wx.lib.masked.maskededit-module.html">Module&nbsp;maskededit</a> ::
+        Class&nbsp;MaskedEditMixin
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class MaskedEditMixin</h2>
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.masked.combobox.BaseMaskedComboBox-class.html"><code>BaseMaskedComboBox</code></a>,
+    <a href="wx.lib.masked.textctrl.BaseMaskedTextCtrl-class.html"><code>BaseMaskedTextCtrl</code></a></dd></dl>
+
+<hr/>
+
+<p>This class allows us to abstract the masked edit functionality that could
+be associated with any text entry control. (eg. wx.TextCtrl, wx.ComboBox, etc.)
+It forms the basis for all of the lib.masked controls.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+This is the &quot;constructor&quot; for setting up the mixin variable parameters for the composite class.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#ClearValue" class="summary-sig-name"><code>ClearValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Blanks the current control value by replacing it with the default value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#GetCtrlParameter" class="summary-sig-name"><code>GetCtrlParameter</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>paramname</span>)</span></code>
+<br />
+Routine for retrieving the value of any given parameter</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#GetFieldParameter" class="summary-sig-name"><code>GetFieldParameter</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>field_index</span>,
+          <span class=summary-sig-arg>paramname</span>)</span></code>
+<br />
+Routine provided for getting a parameter of an individual field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#GetMaskParameter" class="summary-sig-name"><code>GetMaskParameter</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>paramname</span>)</span></code>
+<br />
+old name for the GetCtrlParameters function  (DEPRECATED)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#GetPlainValue" class="summary-sig-name"><code>GetPlainValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>candidate</span>)</span></code>
+<br />
+Returns control's value stripped of the template text.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#IsDefault" class="summary-sig-name"><code>IsDefault</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Returns True if the value specified (or the value of the control if not specified)
+is equal to the default value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#IsEmpty" class="summary-sig-name"><code>IsEmpty</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Returns True if control is equal to an empty value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#IsValid" class="summary-sig-name"><code>IsValid</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Indicates whether the value specified (or the current value of the control
+if not specified) is considered valid.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#SetCtrlParameters" class="summary-sig-name"><code>SetCtrlParameters</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+This public function can be used to set individual or multiple masked edit
+parameters after construction.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#SetFieldParameters" class="summary-sig-name"><code>SetFieldParameters</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>field_index</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Routine provided to modify the parameters of a given field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#SetMaskParameters" class="summary-sig-name"><code>SetMaskParameters</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+old name for the SetCtrlParameters function  (DEPRECATED)</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="wx.lib.masked.maskededit.MaskedEditMixin-class.html#valid_ctrl_params"><code>valid_ctrl_params</code></a></b> = <span title="{'demo': False, 'foregroundColour': 'Black', 'retainFieldValidation': False, 'emptyBackgroundColour': 'White', 'fields': {}, 'datestyle': 'MDY', 'validBackgroundColour': 'White', 'mask': 'XXXXXXXXXXXXX', 'autoCompleteKeycodes': [], 'signedForegroundColour': 'Red', 'useFixedWidthFont': True, 'defaultEncoding': 'latin1', 'autoformat': '', 'invalidBackgroundColour': 'Yellow'}"><code>{'demo':&nbsp;False,&nbsp;'foregroundColour':&nbsp;<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>'MaskedEdit'</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>This is the &quot;constructor&quot; for setting up the mixin variable parameters for the composite class.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClearValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClearValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Blanks the current control value by replacing it with the default value.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCtrlParameter"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCtrlParameter</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>paramname</span>)</span>
+  </h3>
+<p>Routine for retrieving the value of any given parameter</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFieldParameter"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFieldParameter</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>field_index</span>,
+          <span class=sig-arg>paramname</span>)</span>
+  </h3>
+<p>Routine provided for getting a parameter of an individual field.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMaskParameter"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMaskParameter</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>paramname</span>)</span>
+  </h3>
+<p>old name for the GetCtrlParameters function  (DEPRECATED)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPlainValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPlainValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>candidate</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns control's value stripped of the template text.
+plainvalue = MaskedEditMixin.GetPlainValue()</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsDefault"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsDefault</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns True if the value specified (or the value of the control if not specified)
+is equal to the default value.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsEmpty"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsEmpty</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns True if control is equal to an empty value.
+(Empty means all editable positions in the template == fillChar.)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsValid"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsValid</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Indicates whether the value specified (or the current value of the control
+if not specified) is considered valid.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCtrlParameters"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCtrlParameters</span>(<span class=sig-arg>self</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>This public function can be used to set individual or multiple masked edit
+parameters after construction.  (See maskededit module overview for the list
+of valid parameters.)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFieldParameters"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFieldParameters</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>field_index</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Routine provided to modify the parameters of a given field.
+Because changes to fields can affect the overall control,
+direct access to the fields is prevented, and the control
+is always &quot;reconfigured&quot; after setting a field parameter.
+(See maskededit module overview for the list of valid field-level
+parameters.)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMaskParameters"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMaskParameters</span>(<span class=sig-arg>self</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>old name for the SetCtrlParameters function  (DEPRECATED)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="valid_ctrl_params"></a>
+<h3>valid_ctrl_params</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{'demo': False, 'foregroundColour': 'Black', 'retainFieldValidation': False, 'emptyBackgroundColour': 'White', 'fields': {}, 'datestyle': 'MDY', 'validBackgroundColour': 'White', 'mask': 'XXXXXXXXXXXXX', 'autoCompleteKeycodes': [], 'signedForegroundColour': 'Red', 'useFixedWidthFont': True, 'defaultEncoding': 'latin1', 'autoformat': '', 'invalidBackgroundColour': 'Yellow'}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{'autoCompleteKeycodes': [],
+ 'autoformat': '',
+ 'datestyle': 'MDY',
+ 'defaultEncoding': 'latin1',
+ 'demo': False,
+ 'emptyBackgroundColour': 'White',
+ 'fields': {},
+ 'foregroundColour': 'Black',
+<span class="variable-ellipsis">...</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:59:07 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,2706 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.Image</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;Image
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.Image-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Image</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+    
+         |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+
+             |
+            <b>Image</b>
+</pre><br />
+
+<hr/>
+
+<p>A platform-independent image class.  An image can be created from
+data, or using <a href="wx.Bitmap-class.html#ConvertToImage" class="link"><code>wx.Bitmap.ConvertToImage</code></a>, or loaded from a file in a
+variety of formats.  Functions are available to set and get image
+bits, so it can be used for basic image manipulation.</p>
+<p>A wx.Image cannot be drawn directly to a <a href="wx.DC-class.html" class="link"><code>wx.DC</code></a>.  Instead, a
+platform-specific <a href="wx.Bitmap-class.html" class="link"><code>wx.Bitmap</code></a> object must be created from it using the
+<a href="wx-module.html#BitmapFromImage" class="link"><code>wx.BitmapFromImage</code></a> constructor. This bitmap can then be drawn in a
+device context, using <a href="wx.DC-class.html#DrawBitmap" class="link"><code>wx.DC.DrawBitmap</code></a>.</p>
+<p>One colour value of the image may be used as a mask colour which will
+lead to the automatic creation of a <a href="wx.Mask-class.html" class="link"><code>wx.Mask</code></a> object associated to the
+bitmap object.</p>
+<p>wx.Image supports alpha channel data, that is in addition to a byte
+for the red, green and blue colour components for each pixel it also
+stores a byte representing the pixel opacity. An alpha value of 0
+corresponds to a transparent pixel (null opacity) while a value of 255
+means that the pixel is 100% opaque.</p>
+<p>Unlike RGB data, not all images have an alpha channel and before using
+<a href="wx.Image-class.html#GetAlpha" class="link"><code>GetAlpha</code></a> you should check if this image contains an alpha channel
+with <a href="wx.Image-class.html#HasAlpha" class="link"><code>HasAlpha</code></a>. Note that currently only images loaded from PNG files
+with transparency information will have an alpha channel.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>type</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1352219788"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__nonzero__"></a><span class="summary-sig"><span class="summary-sig-name">__nonzero__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AddHandler"></a><span class="summary-sig"><span class="summary-sig-name">AddHandler</span>(<span class=summary-sig-arg>handler</span>)</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Blur" class="summary-sig-name"><code>Blur</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Blurs the image in both horizontal and vertical directions by the
+specified pixel <tt class="rst-docutils literal"><span class="pre">radius</span></tt>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#BlurHorizontal" class="summary-sig-name"><code>BlurHorizontal</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Blurs the image in the horizontal direction only.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#BlurVertical" class="summary-sig-name"><code>BlurVertical</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Blurs the image in the vertical direction only.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#CanRead" class="summary-sig-name"><code>CanRead</code></a>(<span class=summary-sig-arg>filename</span>)</span></code>
+<br />
+Returns True if the image handlers can read this file.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#CanReadStream" class="summary-sig-name"><code>CanReadStream</code></a>(<span class=summary-sig-arg>stream</span>)</span></code>
+<br />
+Returns True if the image handlers can read an image file from the
+data currently on the input stream, or a readable Python file-like
+object.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">unsigned long</font></td>
+  <td><code><a name="ComputeHistogram"></a><span class="summary-sig"><span class="summary-sig-name">ComputeHistogram</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#ConvertAlphaToMask" class="summary-sig-name"><code>ConvertAlphaToMask</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>threshold</span>)</span></code>
+<br />
+If the image has alpha channel, this method converts it to mask.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#ConvertColourToAlpha" class="summary-sig-name"><code>ConvertColourToAlpha</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>r</span>,
+          <span class=summary-sig-arg>g</span>,
+          <span class=summary-sig-arg>b</span>)</span></code>
+<br />
+This method converts an image where the original alpha information is
+only available as a shades of a colour (actually shades of grey)
+typically when you draw anti-aliased text into a bitmap.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><a name="ConvertToBitmap"></a><span class="summary-sig"><span class="summary-sig-name">ConvertToBitmap</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>depth</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#ConvertToGreyscale" class="summary-sig-name"><code>ConvertToGreyscale</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>lr</span>,
+          <span class=summary-sig-arg>lg</span>,
+          <span class=summary-sig-arg>lb</span>)</span></code>
+<br />
+Convert to greyscale image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#ConvertToMono" class="summary-sig-name"><code>ConvertToMono</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>r</span>,
+          <span class=summary-sig-arg>g</span>,
+          <span class=summary-sig-arg>b</span>)</span></code>
+<br />
+Returns monochromatic version of the image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><a name="ConvertToMonoBitmap"></a><span class="summary-sig"><span class="summary-sig-name">ConvertToMonoBitmap</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>red</span>,
+          <span class=summary-sig-arg>green</span>,
+          <span class=summary-sig-arg>blue</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Copy" class="summary-sig-name"><code>Copy</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns an identical copy of the image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#CountColours" class="summary-sig-name"><code>CountColours</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+CountColours(self, unsigned long stopafter=(unsigned long) -1) -&gt; unsigned long</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Create" class="summary-sig-name"><code>Create</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>,
+          <span class=summary-sig-arg>clear</span>)</span></code>
+<br />
+Creates a fresh image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Destroy" class="summary-sig-name"><code>Destroy</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Destroys the image data.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(success, r, g, b)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#FindFirstUnusedColour" class="summary-sig-name"><code>FindFirstUnusedColour</code></a>(<span class=summary-sig-arg>startR</span>,
+          <span class=summary-sig-arg>startG</span>,
+          <span class=summary-sig-arg>startB</span>)</span></code>
+<br />
+Find first colour that is not used in the image and has higher RGB
+values than startR, startG, startB.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">byte</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetAlpha" class="summary-sig-name"><code>GetAlpha</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Returns the alpha value for the given pixel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetAlphaBuffer" class="summary-sig-name"><code>GetAlphaBuffer</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a writable Python buffer object that is pointing at the Alpha
+data buffer inside the wx.Image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetAlphaData" class="summary-sig-name"><code>GetAlphaData</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a string containing a copy of the alpha bytes of the image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">byte</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetBlue" class="summary-sig-name"><code>GetBlue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Returns the blue intensity at the given coordinate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetData" class="summary-sig-name"><code>GetData</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a string containing a copy of the RGB bytes of the image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetDataBuffer" class="summary-sig-name"><code>GetDataBuffer</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a writable Python buffer object that is pointing at the RGB
+image data buffer inside the wx.Image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">byte</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetGreen" class="summary-sig-name"><code>GetGreen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Returns the green intensity at the given coordinate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><a name="GetHandlers"></a><span class="summary-sig"><span class="summary-sig-name">GetHandlers</span>()</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetHeight" class="summary-sig-name"><code>GetHeight</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the height of the image in pixels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetImageCount" class="summary-sig-name"><code>GetImageCount</code></a>(<span class=summary-sig-arg>filename</span>,
+          <span class=summary-sig-arg>type</span>)</span></code>
+<br />
+If the image file contains more than one image and the image handler
+is capable of retrieving these individually, this function will return
+the number of available images.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetImageExtWildcard" class="summary-sig-name"><code>GetImageExtWildcard</code></a>()</span></code>
+<br />
+Iterates all registered wxImageHandler objects, and returns a string
+containing file extension masks suitable for passing to file open/save
+dialog boxes.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">byte</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetMaskBlue" class="summary-sig-name"><code>GetMaskBlue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the blue component of the mask colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">byte</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetMaskGreen" class="summary-sig-name"><code>GetMaskGreen</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the green component of the mask colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">byte</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetMaskRed" class="summary-sig-name"><code>GetMaskRed</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the red component of the mask colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetOption" class="summary-sig-name"><code>GetOption</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Gets the value of an image handler option.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetOptionInt" class="summary-sig-name"><code>GetOptionInt</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Gets the value of an image handler option as an integer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(r,g,b)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetOrFindMaskColour" class="summary-sig-name"><code>GetOrFindMaskColour</code></a>()</span></code>
+<br />
+Get the current mask colour or find a suitable colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">byte</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetRed" class="summary-sig-name"><code>GetRed</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Returns the red intensity at the given coordinate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetSize" class="summary-sig-name"><code>GetSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the size of the image in pixels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetSubImage" class="summary-sig-name"><code>GetSubImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Returns a sub image of the current one as long as the rect belongs
+entirely to the image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#GetWidth" class="summary-sig-name"><code>GetWidth</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the width of the image in pixels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#HasAlpha" class="summary-sig-name"><code>HasAlpha</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if this image has alpha channel, false otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#HasMask" class="summary-sig-name"><code>HasMask</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if there is a mask active, <tt class="rst-docutils literal"><span class="pre">False</span></tt> otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#HasOption" class="summary-sig-name"><code>HasOption</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Returns true if the given option is present.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image_RGBValue</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#HSVtoRGB" class="summary-sig-name"><code>HSVtoRGB</code></a>(<span class=summary-sig-arg>hsv</span>)</span></code>
+<br />
+Converts a color in HSV color space to RGB color space.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#InitAlpha" class="summary-sig-name"><code>InitAlpha</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Initializes the image alpha channel data.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="InsertHandler"></a><span class="summary-sig"><span class="summary-sig-name">InsertHandler</span>(<span class=summary-sig-arg>handler</span>)</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#IsOk" class="summary-sig-name"><code>IsOk</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if image data is present.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#IsTransparent" class="summary-sig-name"><code>IsTransparent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>threshold</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if this pixel is masked or has an alpha value less
+than the spcified threshold.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#LoadFile" class="summary-sig-name"><code>LoadFile</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>type</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+Loads an image from a file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#LoadMimeFile" class="summary-sig-name"><code>LoadMimeFile</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>mimetype</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+Loads an image from a file, specifying the image type with a MIME type
+string.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#LoadMimeStream" class="summary-sig-name"><code>LoadMimeStream</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>stream</span>,
+          <span class=summary-sig-arg>mimetype</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+Loads an image from an input stream or a readable Python file-like
+object, using a MIME type string to specify the image file format.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#LoadStream" class="summary-sig-name"><code>LoadStream</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>stream</span>,
+          <span class=summary-sig-arg>type</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+Loads an image from an input stream or a readable Python file-like
+object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Mirror" class="summary-sig-name"><code>Mirror</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>horizontally</span>)</span></code>
+<br />
+Returns a mirrored copy of the image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#IsOk" class="summary-sig-name"><code>Ok</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if image data is present.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Paste" class="summary-sig-name"><code>Paste</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Pastes <tt class="rst-docutils literal"><span class="pre">image</span></tt> into this instance and takes care of the mask colour
+and any out of bounds problems.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="RemoveHandler"></a><span class="summary-sig"><span class="summary-sig-name">RemoveHandler</span>(<span class=summary-sig-arg>name</span>)</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Replace" class="summary-sig-name"><code>Replace</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>r1</span>,
+          <span class=summary-sig-arg>g1</span>,
+          <span class=summary-sig-arg>b1</span>,
+          <span class=summary-sig-arg>r2</span>,
+          <span class=summary-sig-arg>g2</span>,
+          <span class=summary-sig-arg>b2</span>)</span></code>
+<br />
+Replaces the colour specified by <tt class="rst-docutils literal"><span class="pre">(r1,g1,b1)</span></tt> by the colour
+<tt class="rst-docutils literal"><span class="pre">(r2,g2,b2)</span></tt>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><a name="ResampleBicubic"></a><span class="summary-sig"><span class="summary-sig-name">ResampleBicubic</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><a name="ResampleBox"></a><span class="summary-sig"><span class="summary-sig-name">ResampleBox</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Rescale" class="summary-sig-name"><code>Rescale</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>,
+          <span class=summary-sig-arg>quality</span>)</span></code>
+<br />
+Changes the size of the image in-place by scaling it: after a call to
+this function, the image will have the given width and height.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Resize" class="summary-sig-name"><code>Resize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>r</span>,
+          <span class=summary-sig-arg>g</span>,
+          <span class=summary-sig-arg>b</span>)</span></code>
+<br />
+Changes the size of the image in-place without scaling it, by adding
+either a border with the given colour or cropping as necessary.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image_HSVValue</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#RGBtoHSV" class="summary-sig-name"><code>RGBtoHSV</code></a>(<span class=summary-sig-arg>rgb</span>)</span></code>
+<br />
+Converts a color in RGB color space to HSV color space.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Rotate" class="summary-sig-name"><code>Rotate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>angle</span>,
+          <span class=summary-sig-arg>centre_of_rotation</span>,
+          <span class=summary-sig-arg>interpolating</span>,
+          <span class=summary-sig-arg>offset_after_rotation</span>)</span></code>
+<br />
+Rotates the image about the given point, by <tt class="rst-docutils literal"><span class="pre">angle</span></tt> radians.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Rotate90" class="summary-sig-name"><code>Rotate90</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>clockwise</span>)</span></code>
+<br />
+Returns a copy of the image rotated 90 degrees in the direction
+indicated by <tt class="rst-docutils literal"><span class="pre">clockwise</span></tt>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#RotateHue" class="summary-sig-name"><code>RotateHue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>angle</span>)</span></code>
+<br />
+Rotates the hue of each pixel of the image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SaveFile" class="summary-sig-name"><code>SaveFile</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>type</span>)</span></code>
+<br />
+Saves an image in the named file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SaveMimeFile" class="summary-sig-name"><code>SaveMimeFile</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>mimetype</span>)</span></code>
+<br />
+Saves an image in the named file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Scale" class="summary-sig-name"><code>Scale</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>,
+          <span class=summary-sig-arg>quality</span>)</span></code>
+<br />
+Returns a scaled version of the image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetAlpha" class="summary-sig-name"><code>SetAlpha</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>alpha</span>)</span></code>
+<br />
+Sets the alpha value for the given pixel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetAlphaBuffer" class="summary-sig-name"><code>SetAlphaBuffer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>alpha</span>)</span></code>
+<br />
+Sets the internal image alpha pointer to point at a Python buffer
+object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetAlphaData" class="summary-sig-name"><code>SetAlphaData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>alpha</span>)</span></code>
+<br />
+Resets the Image's alpha data from a buffer of bytes.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetData" class="summary-sig-name"><code>SetData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Resets the Image's RGB data from a buffer of RGB bytes.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetDataBuffer" class="summary-sig-name"><code>SetDataBuffer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Sets the internal image data pointer to point at a Python buffer
+object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetMask" class="summary-sig-name"><code>SetMask</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mask</span>)</span></code>
+<br />
+Specifies whether there is a mask or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetMaskColour" class="summary-sig-name"><code>SetMaskColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>r</span>,
+          <span class=summary-sig-arg>g</span>,
+          <span class=summary-sig-arg>b</span>)</span></code>
+<br />
+Sets the mask colour for this image (and tells the image to use the
+mask).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetMaskFromImage" class="summary-sig-name"><code>SetMaskFromImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mask</span>,
+          <span class=summary-sig-arg>mr</span>,
+          <span class=summary-sig-arg>mg</span>,
+          <span class=summary-sig-arg>mb</span>)</span></code>
+<br />
+Sets the image's mask so that the pixels that have RGB value of
+<tt class="rst-docutils literal"><span class="pre">(mr,mg,mb)</span></tt> in <tt class="rst-docutils literal"><span class="pre">mask</span></tt> will be masked in this image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetOption" class="summary-sig-name"><code>SetOption</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Sets an image handler defined option.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetOptionInt" class="summary-sig-name"><code>SetOptionInt</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Sets an image option as an integer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetRGB" class="summary-sig-name"><code>SetRGB</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>r</span>,
+          <span class=summary-sig-arg>g</span>,
+          <span class=summary-sig-arg>b</span>)</span></code>
+<br />
+Sets the pixel at the given coordinate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#SetRGBRect" class="summary-sig-name"><code>SetRGBRect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>r</span>,
+          <span class=summary-sig-arg>g</span>,
+          <span class=summary-sig-arg>b</span>)</span></code>
+<br />
+Sets the colour of the pixels within the given rectangle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#ShrinkBy" class="summary-sig-name"><code>ShrinkBy</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>xFactor</span>,
+          <span class=summary-sig-arg>yFactor</span>)</span></code>
+<br />
+Return a version of the image scaled smaller by the given factors.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Image</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Image-class.html#Size" class="summary-sig-name"><code>Size</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>r</span>,
+          <span class=summary-sig-arg>g</span>,
+          <span class=summary-sig-arg>b</span>)</span></code>
+<br />
+Returns a resized version of this image without scaling it by adding
+either a border with the given colour or cropping as necessary.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Image-class.html#AlphaBuffer"><code>AlphaBuffer</code></a></b>: See <a href="wx.Image-class.html#GetAlphaBuffer" class="link"><code>GetAlphaBuffer</code></a> and <a href="wx.Image-class.html#SetAlphaBuffer" class="link"><code>SetAlphaBuffer</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Image-class.html#AlphaData"><code>AlphaData</code></a></b>: See <a href="wx.Image-class.html#GetAlphaData" class="link"><code>GetAlphaData</code></a> and <a href="wx.Image-class.html#SetAlphaData" class="link"><code>SetAlphaData</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Image-class.html#Data"><code>Data</code></a></b>: See <a href="wx.Image-class.html#GetData" class="link"><code>GetData</code></a> and <a href="wx.Image-class.html#SetData" class="link"><code>SetData</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Image-class.html#DataBuffer"><code>DataBuffer</code></a></b>: See <a href="wx.Image-class.html#GetDataBuffer" class="link"><code>GetDataBuffer</code></a> and <a href="wx.Image-class.html#SetDataBuffer" class="link"><code>SetDataBuffer</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Image-class.html#Height"><code>Height</code></a></b>: See <a href="wx.Image-class.html#GetHeight" class="link"><code>GetHeight</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Image-class.html#MaskBlue"><code>MaskBlue</code></a></b>: See <a href="wx.Image-class.html#GetMaskBlue" class="link"><code>GetMaskBlue</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Image-class.html#MaskGreen"><code>MaskGreen</code></a></b>: See <a href="wx.Image-class.html#GetMaskGreen" class="link"><code>GetMaskGreen</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Image-class.html#MaskRed"><code>MaskRed</code></a></b>: See <a href="wx.Image-class.html#GetMaskRed" class="link"><code>GetMaskRed</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Image-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Image-class.html#Width"><code>Width</code></a></b>: See <a href="wx.Image-class.html#GetWidth" class="link"><code>GetWidth</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>,
+          <span class=sig-arg>type</span>=<span class=sig-default>BITMAP_TYPE_ANY</span>,
+          <span class=sig-arg>index</span>=<span class=sig-default>-1</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<dl class="rst-docutils">
+<dt>Loads an image from a file.</dt>
+<dd></dd>
+</dl>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code> -
+ Name of the file from which to load the image.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>type</b></code> -
+ May be one of the following:</p>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="32%" />
+<col class="rst" width="68%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_BMP</td>
+<td class="rst">Load a Windows bitmap file.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_GIF</td>
+<td class="rst">Load a GIF bitmap file.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_JPEG</td>
+<td class="rst">Load a JPEG bitmap file.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_PNG</td>
+<td class="rst">Load a PNG bitmap file.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_PCX</td>
+<td class="rst">Load a PCX bitmap file.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_PNM</td>
+<td class="rst">Load a PNM bitmap file.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_TIF</td>
+<td class="rst">Load a TIFF bitmap file.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_XPM</td>
+<td class="rst">Load a XPM bitmap file.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_ICO</td>
+<td class="rst">Load a Windows icon file (ICO).</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_CUR</td>
+<td class="rst">Load a Windows cursor file (CUR).</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_ANI</td>
+<td class="rst">Load a Windows animated cursor file (ANI).</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BITMAP_TYPE_ANY</td>
+<td class="rst">Will try to autodetect the format.</td>
+</tr>
+</tbody>
+</table>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>index</b></code> -
+ Index of the image to load in the case that the
+image file contains multiple images. This is only used by GIF,
+ICO and TIFF handlers. The default value (-1) means to choose
+the default image and is interpreted as the first image (the
+one with index=0) by the GIF and TIFF handler and as the
+largest and most colourful one by the ICO handler.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Object-class.html#__init__"><code>wx.Object.__init__</code></a></dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx-module.html#ImageFromMime" class="link"><code>wx.ImageFromMime</code></a>, <a href="wx-module.html#ImageFromStream" class="link"><code>wx.ImageFromStream</code></a>, <a href="wx-module.html#ImageFromStreamMime" class="link"><code>wx.ImageFromStreamMime</code></a>,
+<a href="wx-module.html#EmptyImage" class="link"><code>wx.EmptyImage</code></a>, <a href="wx-module.html#ImageFromBitmap" class="link"><code>wx.ImageFromBitmap</code></a>, <a href="wx-module.html#ImageFromBuffer" class="link"><code>wx.ImageFromBuffer</code></a>,
+<a href="wx-module.html#ImageFromData" class="link"><code>wx.ImageFromData</code></a>, <a href="wx-module.html#ImageFromDataWithAlpha" class="link"><code>wx.ImageFromDataWithAlpha</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="Blur"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Blur</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Blurs the image in both horizontal and vertical directions by the
+specified pixel <tt class="rst-docutils literal"><span class="pre">radius</span></tt>. This should not be used when using a
+single mask colour for transparency.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>radius</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="BlurHorizontal"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">BlurHorizontal</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Blurs the image in the horizontal direction only. This should not be
+used when using a single mask colour for transparency.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>radius</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="BlurVertical"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">BlurVertical</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Blurs the image in the vertical direction only. This should not be
+used when using a single mask colour for transparency.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>radius</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ConvertAlphaToMask"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ConvertAlphaToMask</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>threshold</span>=<span class=sig-default>IMAGE_ALPHA_THRESHOLD</span>)</span>
+  </h3>
+<p>If the image has alpha channel, this method converts it to mask. All
+pixels with alpha value less than <tt class="rst-docutils literal"><span class="pre">threshold</span></tt> are replaced with the
+mask colour and the alpha channel is removed. The mask colour is
+chosen automatically using <a href="wx.Image-class.html#FindFirstUnusedColour" class="link"><code>FindFirstUnusedColour</code></a>.</p>
+<p>If the image image doesn't have alpha channel, ConvertAlphaToMask does
+nothing.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>threshold</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ConvertColourToAlpha"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ConvertColourToAlpha</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>r</span>,
+          <span class=sig-arg>g</span>,
+          <span class=sig-arg>b</span>)</span>
+  </h3>
+<p>This method converts an image where the original alpha information is
+only available as a shades of a colour (actually shades of grey)
+typically when you draw anti-aliased text into a bitmap. The DC
+drawing routines draw grey values on the black background although
+they actually mean to draw white with differnt alpha values.  This
+method reverses it, assuming a black (!) background and white text.
+The method will then fill up the whole image with the colour given.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>r</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>g</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>b</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ConvertToGreyscale"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ConvertToGreyscale</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>lr</span>=<span class=sig-default>0.299</span>,
+          <span class=sig-arg>lg</span>=<span class=sig-default>0.587</span>,
+          <span class=sig-arg>lb</span>=<span class=sig-default>0.114</span>)</span>
+  </h3>
+<p>Convert to greyscale image. Uses the luminance component (Y) of the
+image.  The luma value (YUV) is calculated using (R * lr) + (G * lg) + (B * lb),
+defaults to ITU-T BT.601</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>lr</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      <dd><code><b>lg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      <dd><code><b>lb</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ConvertToMono"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ConvertToMono</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>r</span>,
+          <span class=sig-arg>g</span>,
+          <span class=sig-arg>b</span>)</span>
+  </h3>
+<p>Returns monochromatic version of the image. The returned image has
+white colour where the original has <tt class="rst-docutils literal"><span class="pre">(r,g,b)</span></tt> colour and black
+colour everywhere else.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>r</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>g</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>b</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Copy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Copy</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns an identical copy of the image.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CountColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CountColours</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>CountColours(self, unsigned long stopafter=(unsigned long) -1) -&gt; unsigned long</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>width</span>,
+          <span class=sig-arg>height</span>,
+          <span class=sig-arg>clear</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Creates a fresh image.  If clear is <tt class="rst-docutils literal"><span class="pre">True</span></tt>, the new image will be
+initialized to black. Otherwise, the image data will be uninitialized.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>clear</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Destroy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Destroy</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Destroys the image data.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Object-class.html#Destroy"><code>wx.Object.Destroy</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindFirstUnusedColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindFirstUnusedColour</span>(<span class=sig-arg>startR</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>startG</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>startB</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Find first colour that is not used in the image and has higher RGB
+values than startR, startG, startB.  Returns a tuple consisting of a
+success flag and rgb values.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>startR</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>startG</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>startB</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(success, r, g, b)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAlpha"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAlpha</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Returns the alpha value for the given pixel. This function may only be
+called for the images with alpha channel, use <a href="wx.Image-class.html#HasAlpha" class="link"><code>HasAlpha</code></a> to check for
+this.</p>
+<p>The returned value is the <em>opacity</em> of the image, i.e. the value of 0
+corresponds to the fully transparent pixels while the value of 255 to
+the fully opaque pixels.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+byte      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAlphaBuffer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAlphaBuffer</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a writable Python buffer object that is pointing at the Alpha
+data buffer inside the wx.Image. You need to ensure that you do not
+use this buffer object after the image has been destroyed.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyObject      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAlphaData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAlphaData</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a string containing a copy of the alpha bytes of the image.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyObject      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBlue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBlue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Returns the blue intensity at the given coordinate.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+byte      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetData</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a string containing a copy of the RGB bytes of the image.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyObject      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDataBuffer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDataBuffer</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a writable Python buffer object that is pointing at the RGB
+image data buffer inside the wx.Image. You need to ensure that you do
+not use this buffer object after the image has been destroyed.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyObject      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGreen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGreen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Returns the green intensity at the given coordinate.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+byte      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHeight</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the height of the image in pixels.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMaskBlue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMaskBlue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the blue component of the mask colour.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+byte      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMaskGreen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMaskGreen</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the green component of the mask colour.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+byte      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMaskRed"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMaskRed</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the red component of the mask colour.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+byte      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetOption"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetOption</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Gets the value of an image handler option.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Image-class.html#HasOption" class="link"><code>HasOption</code></a>, <a href="wx.Image-class.html#GetOptionInt" class="link"><code>GetOptionInt</code></a>, <a href="wx.Image-class.html#SetOption" class="link"><code>SetOption</code></a>, <a href="wx.Image-class.html#SetOptionInt" class="link"><code>SetOptionInt</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetOptionInt"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetOptionInt</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Gets the value of an image handler option as an integer.  If the given
+option is not present, the function returns 0.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Image-class.html#HasOption" class="link"><code>HasOption</code></a>, <a href="wx.Image-class.html#GetOption" class="link"><code>GetOption</code></a>, <a href="wx.Image-class.html#SetOptionInt" class="link"><code>SetOptionInt</code></a>, <a href="wx.Image-class.html#SetOption" class="link"><code>SetOption</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetOrFindMaskColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetOrFindMaskColour</span>()</span>
+  </h3>
+<p>Get the current mask colour or find a suitable colour.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(r,g,b)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRed"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRed</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Returns the red intensity at the given coordinate.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+byte      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the size of the image in pixels.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Size      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSubImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSubImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Returns a sub image of the current one as long as the rect belongs
+entirely to the image.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetWidth</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the width of the image in pixels.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasAlpha"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasAlpha</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if this image has alpha channel, false otherwise.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Image-class.html#GetAlpha" class="link"><code>GetAlpha</code></a>, <a href="wx.Image-class.html#SetAlpha" class="link"><code>SetAlpha</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasMask"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasMask</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if there is a mask active, <tt class="rst-docutils literal"><span class="pre">False</span></tt> otherwise.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasOption"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasOption</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Returns true if the given option is present.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Image-class.html#GetOption" class="link"><code>GetOption</code></a>, <a href="wx.Image-class.html#GetOptionInt" class="link"><code>GetOptionInt</code></a>, <a href="wx.Image-class.html#SetOption" class="link"><code>SetOption</code></a>, <a href="wx.Image-class.html#SetOptionInt" class="link"><code>SetOptionInt</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="InitAlpha"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InitAlpha</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Initializes the image alpha channel data. It is an error to call it if
+the image already has alpha data. If it doesn't, alpha data will be by
+default initialized to all pixels being fully opaque. But if the image
+has a a mask colour, all mask pixels will be completely transparent.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsOk"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsOk</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if image data is present.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsTransparent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsTransparent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>threshold</span>=<span class=sig-default>IMAGE_ALPHA_THRESHOLD</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if this pixel is masked or has an alpha value less
+than the spcified threshold.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>threshold</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LoadFile"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LoadFile</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>,
+          <span class=sig-arg>type</span>=<span class=sig-default>BITMAP_TYPE_ANY</span>,
+          <span class=sig-arg>index</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Loads an image from a file. If no handler type is provided, the
+library will try to autodetect the format.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>type</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>index</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LoadMimeFile"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LoadMimeFile</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>,
+          <span class=sig-arg>mimetype</span>,
+          <span class=sig-arg>index</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Loads an image from a file, specifying the image type with a MIME type
+string.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>mimetype</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>index</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LoadMimeStream"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LoadMimeStream</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>stream</span>,
+          <span class=sig-arg>mimetype</span>,
+          <span class=sig-arg>index</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Loads an image from an input stream or a readable Python file-like
+object, using a MIME type string to specify the image file format.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>stream</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=InputStream)</i>
+<p/>
+      <dd><code><b>mimetype</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>index</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LoadStream"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LoadStream</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>stream</span>,
+          <span class=sig-arg>type</span>=<span class=sig-default>BITMAP_TYPE_ANY</span>,
+          <span class=sig-arg>index</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Loads an image from an input stream or a readable Python file-like
+object. If no handler type is provided, the library will try to
+autodetect the format.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>stream</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=InputStream)</i>
+<p/>
+      <dd><code><b>type</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>index</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Mirror"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Mirror</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>horizontally</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Returns a mirrored copy of the image. The parameter <tt class="rst-docutils literal"><span class="pre">horizontally</span></tt>
+indicates the orientation.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>horizontally</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsOk"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Ok</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if image data is present.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Paste"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Paste</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>image</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Pastes <tt class="rst-docutils literal"><span class="pre">image</span></tt> into this instance and takes care of the mask colour
+and any out of bounds problems.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>image</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Image)</i>
+<p/>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Replace"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Replace</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>r1</span>,
+          <span class=sig-arg>g1</span>,
+          <span class=sig-arg>b1</span>,
+          <span class=sig-arg>r2</span>,
+          <span class=sig-arg>g2</span>,
+          <span class=sig-arg>b2</span>)</span>
+  </h3>
+<p>Replaces the colour specified by <tt class="rst-docutils literal"><span class="pre">(r1,g1,b1)</span></tt> by the colour
+<tt class="rst-docutils literal"><span class="pre">(r2,g2,b2)</span></tt>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>r1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>g1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>b1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>r2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>g2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>b2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Rescale"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Rescale</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>width</span>,
+          <span class=sig-arg>height</span>,
+          <span class=sig-arg>quality</span>=<span class=sig-default>IMAGE_QUALITY_NORMAL</span>)</span>
+  </h3>
+<p>Changes the size of the image in-place by scaling it: after a call to
+this function, the image will have the given width and height.</p>
+<p>Returns the (modified) image itself.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>quality</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Image-class.html#Scale" class="link"><code>Scale</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="Resize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Resize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>size</span>,
+          <span class=sig-arg>pos</span>,
+          <span class=sig-arg>r</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>g</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>b</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Changes the size of the image in-place without scaling it, by adding
+either a border with the given colour or cropping as necessary. The
+image is pasted into a new image with the given size and background
+colour at the position pos relative to the upper left of the new
+image. If red = green = blue = -1 then use either the current mask
+colour if set or find, use, and set a suitable mask colour for any
+newly exposed areas.</p>
+<p>Returns the (modified) image itself.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>r</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>g</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>b</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Image-class.html#Size" class="link"><code>Size</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="Rotate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Rotate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>angle</span>,
+          <span class=sig-arg>centre_of_rotation</span>,
+          <span class=sig-arg>interpolating</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>offset_after_rotation</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Rotates the image about the given point, by <tt class="rst-docutils literal"><span class="pre">angle</span></tt> radians. Passing
+<tt class="rst-docutils literal"><span class="pre">True</span></tt> to <tt class="rst-docutils literal"><span class="pre">interpolating</span></tt> results in better image quality, but is
+slower. If the image has a mask, then the mask colour is used for the
+uncovered pixels in the rotated image background. Otherwise, black
+will be used as the fill colour.</p>
+<p>Returns the rotated image, leaving this image intact.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>angle</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      <dd><code><b>centre_of_rotation</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>interpolating</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      <dd><code><b>offset_after_rotation</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Rotate90"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Rotate90</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>clockwise</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Returns a copy of the image rotated 90 degrees in the direction
+indicated by <tt class="rst-docutils literal"><span class="pre">clockwise</span></tt>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>clockwise</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RotateHue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RotateHue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>angle</span>)</span>
+  </h3>
+<p>Rotates the hue of each pixel of the image. Hue is a double in the
+range -1.0..1.0 where -1.0 is -360 degrees and 1.0 is 360 degrees</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>angle</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SaveFile"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SaveFile</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>,
+          <span class=sig-arg>type</span>)</span>
+  </h3>
+<p>Saves an image in the named file.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>type</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SaveMimeFile"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SaveMimeFile</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>,
+          <span class=sig-arg>mimetype</span>)</span>
+  </h3>
+<p>Saves an image in the named file.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>mimetype</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Scale"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Scale</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>width</span>,
+          <span class=sig-arg>height</span>,
+          <span class=sig-arg>quality</span>=<span class=sig-default>IMAGE_QUALITY_NORMAL</span>)</span>
+  </h3>
+<p>Returns a scaled version of the image. This is also useful for scaling
+bitmaps in general as the only other way to scale bitmaps is to blit a
+<a href="wx.MemoryDC-class.html" class="link"><code>wx.MemoryDC</code></a> into another <a href="wx.MemoryDC-class.html" class="link"><code>wx.MemoryDC</code></a>.  The <tt class="rst-docutils literal"><span class="pre">quality</span></tt> parameter
+specifies what method to use for resampling the image.  It can be
+either wx.IMAGE_QUALITY_NORMAL, which uses the normal default scaling
+method of pixel replication, or wx.IMAGE_QUALITY_HIGH which uses
+bicubic and box averaging resampling methods for upsampling and
+downsampling respectively.</p>
+<p>It should be noted that although using wx.IMAGE_QUALITY_HIGH produces
+much nicer looking results it is a slower method.  Downsampling will
+use the box averaging method which seems to operate very fast.  If you
+are upsampling larger images using this method you will most likely
+notice that it is a bit slower and in extreme cases it will be quite
+substantially slower as the bicubic algorithm has to process a lot of
+data.</p>
+<p>It should also be noted that the high quality scaling may not work as
+expected when using a single mask colour for transparency, as the
+scaling will blur the image and will therefore remove the mask
+partially. Using the alpha channel will work.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>quality</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Image-class.html#Rescale" class="link"><code>Rescale</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAlpha"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAlpha</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>alpha</span>)</span>
+  </h3>
+<p>Sets the alpha value for the given pixel. This function should only be
+called if the image has alpha channel data, use <a href="wx.Image-class.html#HasAlpha" class="link"><code>HasAlpha</code></a> to check
+for this.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>alpha</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAlphaBuffer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAlphaBuffer</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>alpha</span>)</span>
+  </h3>
+<p>Sets the internal image alpha pointer to point at a Python buffer
+object.  This can save making an extra copy of the data but you must
+ensure that the buffer object lives as long as the wx.Image does.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>alpha</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=buffer)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAlphaData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAlphaData</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>alpha</span>)</span>
+  </h3>
+<p>Resets the Image's alpha data from a buffer of bytes.  Accepts either
+a string or a buffer object holding the data and the length of the
+data must be width*height.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>alpha</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=buffer)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetData</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>data</span>)</span>
+  </h3>
+<p>Resets the Image's RGB data from a buffer of RGB bytes.  Accepts
+either a string or a buffer object holding the data and the length of
+the data must be width*height*3.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>data</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=buffer)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDataBuffer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDataBuffer</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>data</span>)</span>
+  </h3>
+<p>Sets the internal image data pointer to point at a Python buffer
+object.  This can save making an extra copy of the data but you must
+ensure that the buffer object lives longer than the wx.Image does.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>data</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=buffer)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMask"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMask</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mask</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Specifies whether there is a mask or not. The area of the mask is
+determined by the current mask colour.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>mask</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMaskColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMaskColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>r</span>,
+          <span class=sig-arg>g</span>,
+          <span class=sig-arg>b</span>)</span>
+  </h3>
+<p>Sets the mask colour for this image (and tells the image to use the
+mask).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>r</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>g</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>b</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMaskFromImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMaskFromImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mask</span>,
+          <span class=sig-arg>mr</span>,
+          <span class=sig-arg>mg</span>,
+          <span class=sig-arg>mb</span>)</span>
+  </h3>
+<p>Sets the image's mask so that the pixels that have RGB value of
+<tt class="rst-docutils literal"><span class="pre">(mr,mg,mb)</span></tt> in <tt class="rst-docutils literal"><span class="pre">mask</span></tt> will be masked in this image. This is done
+by first finding an unused colour in the image, setting this colour as
+the mask colour and then using this colour to draw all pixels in the
+image who corresponding pixel in mask has given RGB value.</p>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">False</span></tt> if <tt class="rst-docutils literal"><span class="pre">mask</span></tt> does not have same dimensions as the
+image or if there is no unused colour left. Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the
+mask was successfully applied.</p>
+<p>Note that this method involves computing the histogram, which is
+computationally intensive operation.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>mask</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Image)</i>
+<p/>
+      <dd><code><b>mr</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>mg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>mb</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetOption"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetOption</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Sets an image handler defined option.  For example, when saving as a
+JPEG file, the option <tt class="rst-docutils literal"><span class="pre">wx.IMAGE_OPTION_QUALITY</span></tt> is used, which is a
+number between 0 and 100 (0 is terrible, 100 is very good).</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="92%" />
+<col class="rst" width="8%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_BMP_FORMAT</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_CUR_HOTSPOT_X</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_CUR_HOTSPOT_Y</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_RESOLUTION</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_RESOLUTIONX</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_RESOLUTIONY</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_RESOLUTIONUNIT</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_QUALITY</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_BITSPERSAMPLE</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_SAMPLESPERPIXEL</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_COMPRESSION</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_IMAGEDESCRIPTOR</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_PNG_FORMAT</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.IMAGE_OPTION_PNG_BITDEPTH</td>
+<td class="rst">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Image-class.html#HasOption" class="link"><code>HasOption</code></a>, <a href="wx.Image-class.html#GetOption" class="link"><code>GetOption</code></a>, <a href="wx.Image-class.html#GetOptionInt" class="link"><code>GetOptionInt</code></a>, <a href="wx.Image-class.html#SetOptionInt" class="link"><code>SetOptionInt</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetOptionInt"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetOptionInt</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Sets an image option as an integer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Image-class.html#HasOption" class="link"><code>HasOption</code></a>, <a href="wx.Image-class.html#GetOption" class="link"><code>GetOption</code></a>, <a href="wx.Image-class.html#GetOptionInt" class="link"><code>GetOptionInt</code></a>, <a href="wx.Image-class.html#SetOption" class="link"><code>SetOption</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRGB"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRGB</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>r</span>,
+          <span class=sig-arg>g</span>,
+          <span class=sig-arg>b</span>)</span>
+  </h3>
+<p>Sets the pixel at the given coordinate. This routine performs
+bounds-checks for the coordinate so it can be considered a safe way to
+manipulate the data, but in some cases this might be too slow so that
+the data will have to be set directly. In that case you will have to
+get access to the image data using the <a href="wx.Image-class.html#GetData" class="link"><code>GetData</code></a> method.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>r</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>g</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>b</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRGBRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRGBRect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>r</span>,
+          <span class=sig-arg>g</span>,
+          <span class=sig-arg>b</span>)</span>
+  </h3>
+<p>Sets the colour of the pixels within the given rectangle. This routine
+performs bounds-checks for the rectangle so it can be considered a
+safe way to manipulate the data.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>r</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>g</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>b</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShrinkBy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShrinkBy</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>xFactor</span>,
+          <span class=sig-arg>yFactor</span>)</span>
+  </h3>
+<p>Return a version of the image scaled smaller by the given factors.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>xFactor</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>yFactor</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Size"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Size</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>size</span>,
+          <span class=sig-arg>pos</span>,
+          <span class=sig-arg>r</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>g</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>b</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Returns a resized version of this image without scaling it by adding
+either a border with the given colour or cropping as necessary. The
+image is pasted into a new image with the given size and background
+colour at the position <tt class="rst-docutils literal"><span class="pre">pos</span></tt> relative to the upper left of the new
+image. If red = green = blue = -1 then use either the current mask
+colour if set or find, use, and set a suitable mask colour for any
+newly exposed areas.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>r</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>g</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>b</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Image-class.html#Resize" class="link"><code>Resize</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="CanRead"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanRead</span>(<span class=sig-arg>filename</span>)</span>
+  </h3>
+<p>Returns True if the image handlers can read this file.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>filename</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanReadStream"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanReadStream</span>(<span class=sig-arg>stream</span>)</span>
+  </h3>
+<p>Returns True if the image handlers can read an image file from the
+data currently on the input stream, or a readable Python file-like
+object.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>stream</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=InputStream)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetImageCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetImageCount</span>(<span class=sig-arg>filename</span>,
+          <span class=sig-arg>type</span>=<span class=sig-default>BITMAP_TYPE_ANY</span>)</span>
+  </h3>
+<p>If the image file contains more than one image and the image handler
+is capable of retrieving these individually, this function will return
+the number of available images.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>filename</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>type</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetImageExtWildcard"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetImageExtWildcard</span>()</span>
+  </h3>
+<p>Iterates all registered wxImageHandler objects, and returns a string
+containing file extension masks suitable for passing to file open/save
+dialog boxes.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HSVtoRGB"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HSVtoRGB</span>(<span class=sig-arg>hsv</span>)</span>
+  </h3>
+<p>Converts a color in HSV color space to RGB color space.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>hsv</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Image_HSVValue)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image_RGBValue      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RGBtoHSV"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RGBtoHSV</span>(<span class=sig-arg>rgb</span>)</span>
+  </h3>
+<p>Converts a color in RGB color space to HSV color space.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rgb</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Image_RGBValue)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Image_HSVValue      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="AlphaBuffer"></a>
+<h3>AlphaBuffer</h3>
+<p>See <a href="wx.Image-class.html#GetAlphaBuffer" class="link"><code>GetAlphaBuffer</code></a> and <a href="wx.Image-class.html#SetAlphaBuffer" class="link"><code>SetAlphaBuffer</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#GetAlphaBuffer" class="summary-sig-name"><code>GetAlphaBuffer</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#SetAlphaBuffer" class="summary-sig-name"><code>SetAlphaBuffer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>alpha</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="AlphaData"></a>
+<h3>AlphaData</h3>
+<p>See <a href="wx.Image-class.html#GetAlphaData" class="link"><code>GetAlphaData</code></a> and <a href="wx.Image-class.html#SetAlphaData" class="link"><code>SetAlphaData</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#GetAlphaData" class="summary-sig-name"><code>GetAlphaData</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#SetAlphaData" class="summary-sig-name"><code>SetAlphaData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>alpha</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Data"></a>
+<h3>Data</h3>
+<p>See <a href="wx.Image-class.html#GetData" class="link"><code>GetData</code></a> and <a href="wx.Image-class.html#SetData" class="link"><code>SetData</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#GetData" class="summary-sig-name"><code>GetData</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#SetData" class="summary-sig-name"><code>SetData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>data</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DataBuffer"></a>
+<h3>DataBuffer</h3>
+<p>See <a href="wx.Image-class.html#GetDataBuffer" class="link"><code>GetDataBuffer</code></a> and <a href="wx.Image-class.html#SetDataBuffer" class="link"><code>SetDataBuffer</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#GetDataBuffer" class="summary-sig-name"><code>GetDataBuffer</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#SetDataBuffer" class="summary-sig-name"><code>SetDataBuffer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>data</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Height"></a>
+<h3>Height</h3>
+<p>See <a href="wx.Image-class.html#GetHeight" class="link"><code>GetHeight</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#GetHeight" class="summary-sig-name"><code>GetHeight</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="MaskBlue"></a>
+<h3>MaskBlue</h3>
+<p>See <a href="wx.Image-class.html#GetMaskBlue" class="link"><code>GetMaskBlue</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#GetMaskBlue" class="summary-sig-name"><code>GetMaskBlue</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="MaskGreen"></a>
+<h3>MaskGreen</h3>
+<p>See <a href="wx.Image-class.html#GetMaskGreen" class="link"><code>GetMaskGreen</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#GetMaskGreen" class="summary-sig-name"><code>GetMaskGreen</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="MaskRed"></a>
+<h3>MaskRed</h3>
+<p>See <a href="wx.Image-class.html#GetMaskRed" class="link"><code>GetMaskRed</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#GetMaskRed" class="summary-sig-name"><code>GetMaskRed</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Width"></a>
+<h3>Width</h3>
+<p>See <a href="wx.Image-class.html#GetWidth" class="link"><code>GetWidth</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Image-class.html#GetWidth" class="summary-sig-name"><code>GetWidth</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:53:52 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

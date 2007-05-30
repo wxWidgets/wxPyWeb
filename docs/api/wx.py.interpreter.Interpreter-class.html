@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.py.interpreter.Interpreter</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.py-module.html">Package&nbsp;py</a> ::
+        <a href="wx.py.interpreter-module.html">Module&nbsp;interpreter</a> ::
+        Class&nbsp;Interpreter
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.py.interpreter.Interpreter-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class Interpreter</h2>
+
+<pre class="base-tree">
+<a href="code.InteractiveInterpreter-class.html"><code>InteractiveInterpreter</code></a> --+
+                         |
+                        <b>Interpreter</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.py.interpreter.InterpreterAlaCarte-class.html"><code>InterpreterAlaCarte</code></a></dd></dl>
+
+<hr/>
+
+<p>Interpreter based on code.InteractiveInterpreter.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.interpreter.Interpreter-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>locals</span>,
+          <span class=summary-sig-arg>rawin</span>,
+          <span class=summary-sig-arg>stdin</span>,
+          <span class=summary-sig-arg>stdout</span>,
+          <span class=summary-sig-arg>stderr</span>,
+          <span class=summary-sig-arg>showInterpIntro</span>)</span></code>
+<br />
+Create an interactive interpreter object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.interpreter.Interpreter-class.html#getAutoCompleteKeys" class="summary-sig-name"><code>getAutoCompleteKeys</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return list of auto-completion keycodes.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.interpreter.Interpreter-class.html#getAutoCompleteList" class="summary-sig-name"><code>getAutoCompleteList</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwds</span>)</span></code>
+<br />
+Return list of auto-completion options for a command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.interpreter.Interpreter-class.html#getCallTip" class="summary-sig-name"><code>getCallTip</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwds</span>)</span></code>
+<br />
+Return call tip text for a command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.interpreter.Interpreter-class.html#push" class="summary-sig-name"><code>push</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>)</span></code>
+<br />
+Send command to the interpreter to be executed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.interpreter.Interpreter-class.html#runsource" class="summary-sig-name"><code>runsource</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>source</span>)</span></code>
+<br />
+Compile and run source code in the interpreter.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.py.interpreter.Interpreter-class.html#revision"><code>revision</code></a></b> = <span title="'1.8'"><code><span class="variable-quote">'</span>1.8<span class="variable-quote">'</span>                                         </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>locals</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>rawin</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>stdin</span>=<span class=sig-default>&lt;epydoc.imports._DevNull&nbsp;instance&nbsp;at&nbsp;0xb7b89f8c&gt;</span>,
+          <span class=sig-arg>stdout</span>=<span class=sig-default>&lt;epydoc.imports._DevNull&nbsp;instance&nbsp;at&nbsp;0xb7b89f8c&gt;</span>,
+          <span class=sig-arg>stderr</span>=<span class=sig-default>&lt;epydoc.imports._DevNull&nbsp;instance&nbsp;at&nbsp;0xb7b89f8c&gt;</span>,
+          <span class=sig-arg>showInterpIntro</span>=<span class=sig-default>True</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Create an interactive interpreter object.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="code.InteractiveInterpreter-class.html#__init__"><code>code.InteractiveInterpreter.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getAutoCompleteKeys"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getAutoCompleteKeys</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return list of auto-completion keycodes.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getAutoCompleteList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getAutoCompleteList</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>command</span>=<span class=sig-default>''</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwds</span>)</span>
+  </h3>
+<p>Return list of auto-completion options for a command.</p>
+<p>The list of options will be based on the locals namespace.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getCallTip"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getCallTip</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>command</span>=<span class=sig-default>''</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwds</span>)</span>
+  </h3>
+<p>Return call tip text for a command.</p>
+<p>Call tip information will be based on the locals namespace.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="push"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">push</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>command</span>)</span>
+  </h3>
+<p>Send command to the interpreter to be executed.</p>
+<p>Because this may be called recursively, we append a new list
+onto the commandBuffer list and then append commands into
+that.  If the passed in command is part of a multi-line
+command we keep appending the pieces to the last list in
+commandBuffer until we have a complete command. If not, we
+delete that last list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="runsource"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">runsource</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>source</span>)</span>
+  </h3>
+<p>Compile and run source code in the interpreter.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="code.InteractiveInterpreter-class.html#runsource"><code>code.InteractiveInterpreter.runsource</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="revision"></a>
+<h3>revision</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'1.8'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>1.8<span class="variable-quote">'</span>                                                                  </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:00:33 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

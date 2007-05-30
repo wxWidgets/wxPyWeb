@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.splitter.MultiSplitterWindow</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.splitter-module.html">Module&nbsp;splitter</a> ::
+        Class&nbsp;MultiSplitterWindow
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.splitter.MultiSplitterWindow-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type MultiSplitterWindow</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+    
+                         |    
+                   <a href="wx.PyPanel-class.html"><code>PyPanel</code></a> --+
+                             |
+                            <b>MultiSplitterWindow</b>
+</pre><br />
+
+<hr/>
+
+<p>This class is very similar to <a href="wx.SplitterWindow-class.html" class="link"><code>wx.SplitterWindow</code></a> except that it
+allows for more than two windows and more than one sash.  Many of
+the same styles, constants, and methods behave the same as in
+wx.SplitterWindow.  The key differences are seen in the methods
+that deal with the child windows managed by the splitter, and also
+those that deal with the sash positions.  In most cases you will
+need to pass an index value to tell the class which window or sash
+you are refering to.</p>
+<p>The concept of the sash position is also different than in
+wx.SplitterWindow.  Since the wx.Splitterwindow has only one sash
+you can think of it's position as either relative to the whole
+splitter window, or as relative to the first window pane managed
+by the splitter.  Once there is more than one sash then the
+distinciton between the two concepts needs to be clairified.  I've
+chosen to use the second definition, and sash positions are the
+distance (either horizontally or vertically) from the origin of
+the window just before the sash in the splitter stack.</p>
+<p>NOTE: These things are not yet supported:</p>
+<blockquote>
+<ul class="rst-simple">
+<li>Using negative sash positions to indicate a position offset
+from the end.</li>
+<li>User controlled unsplitting (with double clicks on the sash
+or dragging a sash until the pane size is zero.)</li>
+<li>Sash gravity</li>
+</ul>
+</blockquote>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#AppendWindow" class="summary-sig-name"><code>AppendWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window</span>,
+          <span class=summary-sig-arg>sashPos</span>)</span></code>
+<br />
+Add a new window to the splitter at the right side or bottom
+of the window stack.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#DetachWindow" class="summary-sig-name"><code>DetachWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window</span>)</span></code>
+<br />
+Removes the window from the stack of windows managed by the
+splitter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#DoGetBestSize" class="summary-sig-name"><code>DoGetBestSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Overridden base class virtual.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#ExchangeWindows" class="summary-sig-name"><code>ExchangeWindows</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window1</span>,
+          <span class=summary-sig-arg>window2</span>)</span></code>
+<br />
+Trade the positions in the splitter of the two windows.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#GetMinimumPaneSize" class="summary-sig-name"><code>GetMinimumPaneSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the smallest allowed size for a window pane.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#GetOrientation" class="summary-sig-name"><code>GetOrientation</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the current orientation of the splitter, either
+wx.VERTICAL or wx.HORIZONTAL.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#GetSashPosition" class="summary-sig-name"><code>GetSashPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>idx</span>)</span></code>
+<br />
+Returns the position of the idx'th sash, measured from the
+left/top of the window preceding the sash.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#GetWindow" class="summary-sig-name"><code>GetWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>idx</span>)</span></code>
+<br />
+Returns the idx'th window being managed by the splitter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#InsertWindow" class="summary-sig-name"><code>InsertWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>idx</span>,
+          <span class=summary-sig-arg>window</span>,
+          <span class=summary-sig-arg>sashPos</span>)</span></code>
+<br />
+Insert a new window into the splitter at the position given in
+<tt class="rst-docutils literal"><span class="pre">idx</span></tt>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#ReplaceWindow" class="summary-sig-name"><code>ReplaceWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>oldWindow</span>,
+          <span class=summary-sig-arg>newWindow</span>)</span></code>
+<br />
+Replaces oldWindow (which is currently being managed by the
+splitter) with newWindow.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#SetMinimumPaneSize" class="summary-sig-name"><code>SetMinimumPaneSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>minSize</span>)</span></code>
+<br />
+Set the smallest size that any pane will be allowed to be
+resized to.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#SetOrientation" class="summary-sig-name"><code>SetOrientation</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>orient</span>)</span></code>
+<br />
+Set whether the windows managed by the splitter will be
+stacked vertically or horizontally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#SetSashPosition" class="summary-sig-name"><code>SetSashPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>idx</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Set the psition of the idx'th sash, measured from the left/top
+of the window preceding the sash.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.splitter.MultiSplitterWindow-class.html#SizeWindows" class="summary-sig-name"><code>SizeWindows</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Reposition and size the windows managed by the splitter.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="AppendWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AppendWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window</span>,
+          <span class=sig-arg>sashPos</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Add a new window to the splitter at the right side or bottom
+of the window stack.  If sashPos is given then it is used to
+size the new window.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DetachWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DetachWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window</span>)</span>
+  </h3>
+<p>Removes the window from the stack of windows managed by the
+splitter.  The window will still exist so you should <a href="wx.Window-class.html#Hide" class="link"><code>Hide</code></a> or
+<a href="wx.Window-class.html#Destroy" class="link"><code>Destroy</code></a> it as needed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoGetBestSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoGetBestSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Overridden base class virtual.  Determines the best size of
+the control based on the best sizes of the child windows.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyPanel-class.html#DoGetBestSize"><code>wx.PyPanel.DoGetBestSize</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ExchangeWindows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ExchangeWindows</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window1</span>,
+          <span class=sig-arg>window2</span>)</span>
+  </h3>
+<p>Trade the positions in the splitter of the two windows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMinimumPaneSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMinimumPaneSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the smallest allowed size for a window pane.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetOrientation"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetOrientation</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the current orientation of the splitter, either
+wx.VERTICAL or wx.HORIZONTAL.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSashPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSashPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>idx</span>)</span>
+  </h3>
+<p>Returns the position of the idx'th sash, measured from the
+left/top of the window preceding the sash.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>idx</span>)</span>
+  </h3>
+<p>Returns the idx'th window being managed by the splitter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>idx</span>,
+          <span class=sig-arg>window</span>,
+          <span class=sig-arg>sashPos</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Insert a new window into the splitter at the position given in
+<tt class="rst-docutils literal"><span class="pre">idx</span></tt>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ReplaceWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ReplaceWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>oldWindow</span>,
+          <span class=sig-arg>newWindow</span>)</span>
+  </h3>
+<p>Replaces oldWindow (which is currently being managed by the
+splitter) with newWindow.  The oldWindow window will still
+exist so you should <a href="wx.Window-class.html#Hide" class="link"><code>Hide</code></a> or <a href="wx.Window-class.html#Destroy" class="link"><code>Destroy</code></a> it as needed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMinimumPaneSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMinimumPaneSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>minSize</span>)</span>
+  </h3>
+<p>Set the smallest size that any pane will be allowed to be
+resized to.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetOrientation"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetOrientation</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>orient</span>)</span>
+  </h3>
+<p>Set whether the windows managed by the splitter will be
+stacked vertically or horizontally.  The default is
+horizontal.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSashPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSashPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>idx</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>Set the psition of the idx'th sash, measured from the left/top
+of the window preceding the sash.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SizeWindows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SizeWindows</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Reposition and size the windows managed by the splitter.
+Useful when windows have been added/removed or when styles
+have been changed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:00:00 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

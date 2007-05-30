@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.docview.View</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.docview-module.html">Module&nbsp;docview</a> ::
+        Class&nbsp;View
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.docview.View-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type View</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+
+                 |
+                <b>View</b>
+</pre><br />
+
+<hr/>
+
+<p>The view class can be used to model the viewing and editing component of
+an application's file-based data. It is part of the document/view
+framework supported by wxWindows, and cooperates with the wxDocument,
+wxDocTemplate and wxDocManager classes.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#Activate" class="summary-sig-name"><code>Activate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>activate</span>)</span></code>
+<br />
+Call this from your view frame's OnActivate member to tell the
+framework which view is currently active.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#Close" class="summary-sig-name"><code>Close</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>deleteWindow</span>)</span></code>
+<br />
+Closes the view by calling OnClose.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#Destroy" class="summary-sig-name"><code>Destroy</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Destructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#GetDocument" class="summary-sig-name"><code>GetDocument</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the document associated with the view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#GetDocumentManager" class="summary-sig-name"><code>GetDocumentManager</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the document manager instance associated with this view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#GetFrame" class="summary-sig-name"><code>GetFrame</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the frame associated with the view (if any).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#GetViewName" class="summary-sig-name"><code>GetViewName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the name associated with the view (passed to the wxDocTemplate
+constructor).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#OnActivateView" class="summary-sig-name"><code>OnActivateView</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>activate</span>,
+          <span class=summary-sig-arg>activeView</span>,
+          <span class=summary-sig-arg>deactiveView</span>)</span></code>
+<br />
+Called when a view is activated by means of wxView::Activate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#OnChangeFilename" class="summary-sig-name"><code>OnChangeFilename</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Called when the filename has changed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#OnClose" class="summary-sig-name"><code>OnClose</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>deleteWindow</span>)</span></code>
+<br />
+Implements closing behaviour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#OnClosingDocument" class="summary-sig-name"><code>OnClosingDocument</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Override this to clean up the view when the document is being closed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#OnCreate" class="summary-sig-name"><code>OnCreate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doc</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+wxDocManager or wxDocument creates a wxView via a wxDocTemplate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#OnCreatePrintout" class="summary-sig-name"><code>OnCreatePrintout</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a wxPrintout object for the purposes of printing.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#OnDraw" class="summary-sig-name"><code>OnDraw</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Override this to draw the view for the printing framework.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#OnPrint" class="summary-sig-name"><code>OnPrint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>info</span>)</span></code>
+<br />
+Override this to print the view for the printing framework.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#OnUpdate" class="summary-sig-name"><code>OnUpdate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sender</span>,
+          <span class=summary-sig-arg>hint</span>)</span></code>
+<br />
+Called when the view should be updated.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#ProcessEvent" class="summary-sig-name"><code>ProcessEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Processes an event, searching event tables and calling zero or more
+suitable event handler function(s).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#ProcessUpdateUIEvent" class="summary-sig-name"><code>ProcessUpdateUIEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Processes a UI event, searching event tables and calling zero or more
+suitable event handler function(s).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#SetDocument" class="summary-sig-name"><code>SetDocument</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doc</span>)</span></code>
+<br />
+Associates the given document with the view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#SetFrame" class="summary-sig-name"><code>SetFrame</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>frame</span>)</span></code>
+<br />
+Sets the frame associated with this view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.View-class.html#SetViewName" class="summary-sig-name"><code>SetViewName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Sets the view type name.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor. Define your own default constructor to initialize
+application-specific data.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.EvtHandler-class.html#__init__"><code>wx.EvtHandler.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Activate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Activate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>activate</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Call this from your view frame's OnActivate member to tell the
+framework which view is currently active. If your windowing system
+doesn't call OnActivate, you may need to call this function from
+OnMenuCommand or any place where you know the view must be active, and
+the framework will need to get the current view.</p>
+<p>The prepackaged view frame wxDocChildFrame calls wxView.Activate from
+its OnActivate member and from its OnMenuCommand member.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Close"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Close</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>deleteWindow</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Closes the view by calling OnClose. If deleteWindow is true, this
+function should delete the window associated with the view.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Destroy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Destroy</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Destructor. Removes itself from the document's list of views.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Object-class.html#Destroy"><code>wx.Object.Destroy</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocument</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the document associated with the view.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocumentManager"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocumentManager</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the document manager instance associated with this view.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFrame"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFrame</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the frame associated with the view (if any). Note that this
+&quot;frame&quot; is not a wxFrame at all in the generic MDI implementation
+which uses the notebook pages instead of the frames and this is why
+this method returns a wxWindow and not a wxFrame.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetViewName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetViewName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the name associated with the view (passed to the wxDocTemplate
+constructor). Not currently used by the framework.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnActivateView"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnActivateView</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>activate</span>,
+          <span class=sig-arg>activeView</span>,
+          <span class=sig-arg>deactiveView</span>)</span>
+  </h3>
+<p>Called when a view is activated by means of wxView::Activate. The
+default implementation does nothing.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnChangeFilename"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnChangeFilename</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Called when the filename has changed. The default implementation
+constructs a suitable title and sets the title of the view frame (if
+any).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnClose"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnClose</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>deleteWindow</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Implements closing behaviour. The default implementation calls
+wxDocument.Close to close the associated document. Does not delete the
+view. The application may wish to do some cleaning up operations in
+this function, if a call to wxDocument::Close succeeded. For example,
+if your application's all share the same window, you need to
+disassociate the window from the view and perhaps clear the window. If
+deleteWindow is true, delete the frame associated with the view.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnClosingDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnClosingDocument</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Override this to clean up the view when the document is being closed.
+The default implementation does nothing.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCreate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCreate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doc</span>,
+          <span class=sig-arg>flags</span>)</span>
+  </h3>
+<p>wxDocManager or wxDocument creates a wxView via a wxDocTemplate. Just
+after the wxDocTemplate creates the wxView, it calls wxView::OnCreate.
+In its OnCreate member function, the wxView can create a
+wxDocChildFrame or a derived class. This wxDocChildFrame provides user
+interface elements to view and/or edit the contents of the wxDocument.</p>
+<p>By default, simply returns true. If the function returns false, the
+view will be deleted.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCreatePrintout"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCreatePrintout</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a wxPrintout object for the purposes of printing. It should
+create a new object every time it is called; the framework will delete
+objects it creates.</p>
+<p>By default, this function returns an instance of wxDocPrintout, which
+prints and previews one page by calling wxView.OnDraw.</p>
+<p>Override to return an instance of a class other than wxDocPrintout.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnDraw"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnDraw</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Override this to draw the view for the printing framework.  The
+default implementation does nothing.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPrint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPrint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>info</span>)</span>
+  </h3>
+<p>Override this to print the view for the printing framework.  The
+default implementation calls View.OnDraw.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sender</span>,
+          <span class=sig-arg>hint</span>)</span>
+  </h3>
+<p>Called when the view should be updated. sender is a pointer to the
+view that sent the update request, or NULL if no single view requested
+the update (for instance, when the document is opened). hint is as yet
+unused but may in future contain application-specific information for
+making updating more efficient.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Processes an event, searching event tables and calling zero or more
+suitable event handler function(s).  Note that the ProcessEvent
+method is called from the wxPython docview framework directly since
+wxPython does not have a virtual ProcessEvent function.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.EvtHandler-class.html#ProcessEvent"><code>wx.EvtHandler.ProcessEvent</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessUpdateUIEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessUpdateUIEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Processes a UI event, searching event tables and calling zero or more
+suitable event handler function(s).  Note that the ProcessEvent
+method is called from the wxPython docview framework directly since
+wxPython does not have a virtual ProcessEvent function.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDocument</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doc</span>)</span>
+  </h3>
+<p>Associates the given document with the view. Normally called by the
+framework.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFrame"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFrame</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>frame</span>)</span>
+  </h3>
+<p>Sets the frame associated with this view. The application should call
+this if possible, to tell the view about the frame.  See GetFrame for
+the explanation about the mismatch between the &quot;Frame&quot; in the method
+name and the type of its parameter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetViewName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetViewName</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Sets the view type name. Should only be called by the framework.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:01:29 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

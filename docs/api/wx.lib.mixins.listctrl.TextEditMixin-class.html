@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.mixins.listctrl.TextEditMixin</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.mixins-module.html">Package&nbsp;mixins</a> ::
+        <a href="wx.lib.mixins.listctrl-module.html">Module&nbsp;listctrl</a> ::
+        Class&nbsp;TextEditMixin
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.mixins.listctrl.TextEditMixin-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class TextEditMixin</h2>
+
+<hr/>
+
+<p>A mixin class that enables any text in any column of a
+multi-column listctrl to be edited by clicking on the given row
+and column.  You close the text editor by hitting the ENTER key or
+clicking somewhere else on the listctrl. You switch to the next
+column by hiting TAB.</p>
+<p>To use the mixin you have to include it in the class definition
+and call the __init__ function:</p>
+<pre class="rst-literal-block">
+class TestListCtrl(wx.ListCtrl, TextEditMixin):
+    def __init__(self, parent, ID, pos=wx.DefaultPosition,
+                 size=wx.DefaultSize, style=0):
+        wx.ListCtrl.__init__(self, parent, ID, pos, size, style)
+        TextEditMixin.__init__(self) 
+</pre>
+<p>Authors:     Steve Zatz, Pim Van Heuven (<a class="rst-reference" href="mailto:pim&#64;think-wize.com">pim&#64;think-wize.com</a>)</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.listctrl.TextEditMixin-class.html#CloseEditor" class="summary-sig-name"><code>CloseEditor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+Close the editor and save the new value to the ListCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="make_editor"></a><span class="summary-sig"><span class="summary-sig-name">make_editor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col_style</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.listctrl.TextEditMixin-class.html#OnChar" class="summary-sig-name"><code>OnChar</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Catch the TAB, Shift-TAB, cursor DOWN/UP key code
+so we can open the editor at the next column (if any).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnItemSelected"></a><span class="summary-sig"><span class="summary-sig-name">OnItemSelected</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.listctrl.TextEditMixin-class.html#OnLeftDown" class="summary-sig-name"><code>OnLeftDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+Examine the click and double
+click events to see if a row has been click on twice.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.listctrl.TextEditMixin-class.html#OpenEditor" class="summary-sig-name"><code>OpenEditor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>row</span>)</span></code>
+<br />
+Opens an editor at the current position.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>Colour</code></font></td>
+<td><b><a href="wx.lib.mixins.listctrl.TextEditMixin-class.html#editorBgColour"><code>editorBgColour</code></a></b> = <span title="wx.Colour(255, 255, 175, 255)"><code>wx.Colour(255,&nbsp;255,&nbsp;175,&nbsp;255)           </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>Colour</code></font></td>
+<td><b><a href="wx.lib.mixins.listctrl.TextEditMixin-class.html#editorFgColour"><code>editorFgColour</code></a></b> = <span title="wx.Colour(0, 0, 0, 255)"><code>wx.Colour(0,&nbsp;0,&nbsp;0,&nbsp;255)                 </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="CloseEditor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CloseEditor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Close the editor and save the new value to the ListCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnChar"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnChar</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Catch the TAB, Shift-TAB, cursor DOWN/UP key code
+so we can open the editor at the next column (if any).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnLeftDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnLeftDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Examine the click and double
+click events to see if a row has been click on twice. If so,
+determine the current row and columnn and open the editor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OpenEditor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OpenEditor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>col</span>,
+          <span class=sig-arg>row</span>)</span>
+  </h3>
+<p>Opens an editor at the current position.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="editorBgColour"></a>
+<h3>editorBgColour</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>Colour</code>
+
+      </dd>
+<span title="wx.Colour(255, 255, 175, 255)">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+wx.Colour(255, 255, 175, 255)                                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="editorFgColour"></a>
+<h3>editorFgColour</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>Colour</code>
+
+      </dd>
+<span title="wx.Colour(0, 0, 0, 255)">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+wx.Colour(0, 0, 0, 255)                                                </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:53:27 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

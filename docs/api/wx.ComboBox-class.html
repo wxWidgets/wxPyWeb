@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.ComboBox</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;ComboBox
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.ComboBox-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type ComboBox</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+               <a href="wx.Control-class.html"><code>Control</code></a> --+
+                         |
+            <a href="__builtin__.object-class.html"><code>object</code></a> --+   |
+                     |   |
+         <a href="wx.ItemContainer-class.html"><code>ItemContainer</code></a> --+
+                         |
+                        <b>ComboBox</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.masked.combobox.BaseMaskedComboBox-class.html"><code>BaseMaskedComboBox</code></a></dd></dl>
+
+<hr/>
+
+<p>A combobox is like a combination of an edit control and a
+listbox. It can be displayed as static list with editable or
+read-only text field; or a drop-down list with text field.</p>
+<p>A combobox permits a single selection only. Combobox items are
+numbered from zero.</p>
+<div class="rst-section" id="styles">
+<h1 class="heading"><a name="rst-styles">Styles</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="25%" />
+<col class="rst" width="75%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.CB_SIMPLE</td>
+<td class="rst">Creates a combobox with a permanently
+displayed list.  Windows only.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CB_DROPDOWN</td>
+<td class="rst">Creates a combobox with a drop-down list.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CB_READONLY</td>
+<td class="rst">Same as wxCB_DROPDOWN but only the strings
+specified as the combobox choices can be
+selected, it is impossible to select
+(even from a program) a string which is
+not in the choices list.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CB_SORT</td>
+<td class="rst">Sorts the entries in the list alphabetically.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="rst-section" id="events">
+<h1 class="heading"><a name="rst-events">Events</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="25%" />
+<col class="rst" width="75%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">EVT_COMBOBOX</td>
+<td class="rst">Sent when an item on the list is selected.
+Note that calling <a href="wx.ComboBox-class.html#GetValue" class="link"><code>GetValue</code></a> in this handler
+will return the newly selected value.</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_TEXT</td>
+<td class="rst">Sent when the combobox text changes.</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_TEXT_ENTER</td>
+<td class="rst">Sent when the RETURN/ENTER key is pressed in
+the combobox.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">ComboBox</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>value</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>choices</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Constructor, creates and shows a ComboBox control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#CanCopy" class="summary-sig-name"><code>CanCopy</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the combobox is editable and there is a text selection
+to copy to the clipboard.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#CanCut" class="summary-sig-name"><code>CanCut</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the combobox is editable and there is a text selection
+to copy to the clipboard.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#CanPaste" class="summary-sig-name"><code>CanPaste</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the combobox is editable and there is text on the
+clipboard that can be pasted into the text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#CanRedo" class="summary-sig-name"><code>CanRedo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the combobox is editable and the last undo can be
+redone.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#CanUndo" class="summary-sig-name"><code>CanUndo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the combobox is editable and the last edit can be
+undone.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#Copy" class="summary-sig-name"><code>Copy</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Copies the selected text to the clipboard.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#Create" class="summary-sig-name"><code>Create</code></a>(<span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>value</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>choices</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Actually create the GUI wxComboBox control for 2-phase creation</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#Cut" class="summary-sig-name"><code>Cut</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Copies the selected text to the clipboard and removes the selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">VisualAttributes</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#GetClassDefaultAttributes" class="summary-sig-name"><code>GetClassDefaultAttributes</code></a>(<span class=summary-sig-arg>variant</span>)</span></code>
+<br />
+Get the default attributes for this class.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#GetCurrentSelection" class="summary-sig-name"><code>GetCurrentSelection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Unlike <a href="wx.ItemContainer-class.html#GetSelection" class="link"><code>GetSelection</code></a> which only returns the accepted selection value,
+i.e.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#GetInsertionPoint" class="summary-sig-name"><code>GetInsertionPoint</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the insertion point for the combobox's text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#GetLastPosition" class="summary-sig-name"><code>GetLastPosition</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the last position in the combobox text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(from, to)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#GetMark" class="summary-sig-name"><code>GetMark</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the positions of the begining and ending of the selection mark in
+the combobox text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the current value in the combobox text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#IsEditable" class="summary-sig-name"><code>IsEditable</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the combo is ediatable (not read-only.)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#Paste" class="summary-sig-name"><code>Paste</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Pastes text from the clipboard to the text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#Redo" class="summary-sig-name"><code>Redo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Undoes the last edit in the text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#Remove" class="summary-sig-name"><code>Remove</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>from</span>,
+          <span class=summary-sig-arg>to</span>)</span></code>
+<br />
+Removes the text between the two positions in the combobox text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#Replace" class="summary-sig-name"><code>Replace</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>from</span>,
+          <span class=summary-sig-arg>to</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Replaces the text between two positions with the given text, in the
+combobox text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#SelectAll" class="summary-sig-name"><code>SelectAll</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Select all the text in the combo's text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetEditable"></a><span class="summary-sig"><span class="summary-sig-name">SetEditable</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>editable</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#SetInsertionPoint" class="summary-sig-name"><code>SetInsertionPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Sets the insertion point in the combobox text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#SetInsertionPointEnd" class="summary-sig-name"><code>SetInsertionPointEnd</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets the insertion point at the end of the combobox text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#SetMark" class="summary-sig-name"><code>SetMark</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>from</span>,
+          <span class=summary-sig-arg>to</span>)</span></code>
+<br />
+Selects the text between the two positions in the combobox text field.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#SetStringSelection" class="summary-sig-name"><code>SetStringSelection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>string</span>)</span></code>
+<br />
+Select the item with the specifed string</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetValue"></a><span class="summary-sig"><span class="summary-sig-name">SetValue</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ComboBox-class.html#Undo" class="summary-sig-name"><code>Undo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Redoes the last undo in the text field.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ComboBox-class.html#CurrentSelection"><code>CurrentSelection</code></a></b>: See <a href="wx.ComboBox-class.html#GetCurrentSelection" class="link"><code>GetCurrentSelection</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ComboBox-class.html#InsertionPoint"><code>InsertionPoint</code></a></b>: See <a href="wx.ComboBox-class.html#GetInsertionPoint" class="link"><code>GetInsertionPoint</code></a> and <a href="wx.ComboBox-class.html#SetInsertionPoint" class="link"><code>SetInsertionPoint</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ComboBox-class.html#LastPosition"><code>LastPosition</code></a></b>: See <a href="wx.ComboBox-class.html#GetLastPosition" class="link"><code>GetLastPosition</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ComboBox-class.html#Mark"><code>Mark</code></a></b>: See <a href="wx.ComboBox-class.html#GetMark" class="link"><code>GetMark</code></a> and <a href="wx.ComboBox-class.html#SetMark" class="link"><code>SetMark</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ComboBox-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ComboBox-class.html#Value"><code>Value</code></a></b>: See <a href="wx.ComboBox-class.html#GetValue" class="link"><code>GetValue</code></a> and <a href="wx.ComboBox-class.html#SetValue" class="link"><code>SetValue</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>EmptyString</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>choices</span>=<span class=sig-default>EmptyList</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>validator</span>=<span class=sig-default>DefaultValidator</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>ComboBoxNameStr</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor, creates and shows a ComboBox control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>choices</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=List)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>validator</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Validator)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+ComboBox      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Control-class.html#__init__"><code>wx.Control.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanCopy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanCopy</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the combobox is editable and there is a text selection
+to copy to the clipboard.  Only available on Windows.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanCut"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanCut</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the combobox is editable and there is a text selection
+to copy to the clipboard.  Only available on Windows.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanPaste"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanPaste</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the combobox is editable and there is text on the
+clipboard that can be pasted into the text field. Only available on
+Windows.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanRedo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanRedo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the combobox is editable and the last undo can be
+redone.  Only available on Windows.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanUndo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanUndo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the combobox is editable and the last edit can be
+undone.  Only available on Windows.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Copy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Copy</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Copies the selected text to the clipboard.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>(<span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>EmptyString</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>choices</span>=<span class=sig-default>EmptyList</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>validator</span>=<span class=sig-default>DefaultValidator</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>ChoiceNameStr</span>)</span>
+  </h3>
+<p>Actually create the GUI wxComboBox control for 2-phase creation</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>choices</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=List)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>validator</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Validator)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Control-class.html#Create"><code>wx.Control.Create</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Cut"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Cut</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Copies the selected text to the clipboard and removes the selection.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCurrentSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCurrentSelection</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Unlike <a href="wx.ItemContainer-class.html#GetSelection" class="link"><code>GetSelection</code></a> which only returns the accepted selection value,
+i.e. the selection in the control once the user closes the dropdown
+list, this function returns the current selection.  That is, while the
+dropdown list is shown, it returns the currently selected item in
+it. When it is not shown, its result is the same as for the other
+function.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetInsertionPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetInsertionPoint</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the insertion point for the combobox's text field.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+long      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLastPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLastPosition</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the last position in the combobox text field.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+long      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMark"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMark</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the positions of the begining and ending of the selection mark in
+the combobox text field.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(from, to)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the current value in the combobox text field.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsEditable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsEditable</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the combo is ediatable (not read-only.)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Paste"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Paste</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Pastes text from the clipboard to the text field.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Redo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Redo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Undoes the last edit in the text field. Windows only.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Remove"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Remove</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>from</span>,
+          <span class=sig-arg>to</span>)</span>
+  </h3>
+<p>Removes the text between the two positions in the combobox text field.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>from</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>to</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Replace"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Replace</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>from</span>,
+          <span class=sig-arg>to</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Replaces the text between two positions with the given text, in the
+combobox text field.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>from</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>to</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SelectAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SelectAll</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Select all the text in the combo's text field.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetInsertionPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetInsertionPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>Sets the insertion point in the combobox text field.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetInsertionPointEnd"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetInsertionPointEnd</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets the insertion point at the end of the combobox text field.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMark"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMark</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>from</span>,
+          <span class=sig-arg>to</span>)</span>
+  </h3>
+<p>Selects the text between the two positions in the combobox text field.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>from</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>to</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetStringSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetStringSelection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>string</span>)</span>
+  </h3>
+<p>Select the item with the specifed string</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>string</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.ItemContainer-class.html#SetStringSelection"><code>wx.ItemContainer.SetStringSelection</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Undo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Undo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Redoes the last undo in the text field. Windows only.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="GetClassDefaultAttributes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClassDefaultAttributes</span>(<span class=sig-arg>variant</span>=<span class=sig-default>WINDOW_VARIANT_NORMAL</span>)</span>
+  </h3>
+<p>Get the default attributes for this class.  This is useful if you want
+to use the same font or colour in your own control as in a standard
+control -- which is a much better idea than hard coding specific
+colours or fonts which might look completely out of place on the
+user's system, especially if it uses themes.</p>
+<p>The variant parameter is only relevant under Mac currently and is
+ignore under other platforms. Under Mac, it will change the size of
+the returned font. See <a href="wx.Window-class.html#SetWindowVariant" class="link"><code>wx.Window.SetWindowVariant</code></a> for more about
+this.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>variant</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+VisualAttributes      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="CurrentSelection"></a>
+<h3>CurrentSelection</h3>
+<p>See <a href="wx.ComboBox-class.html#GetCurrentSelection" class="link"><code>GetCurrentSelection</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ComboBox-class.html#GetCurrentSelection" class="summary-sig-name"><code>GetCurrentSelection</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="InsertionPoint"></a>
+<h3>InsertionPoint</h3>
+<p>See <a href="wx.ComboBox-class.html#GetInsertionPoint" class="link"><code>GetInsertionPoint</code></a> and <a href="wx.ComboBox-class.html#SetInsertionPoint" class="link"><code>SetInsertionPoint</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ComboBox-class.html#GetInsertionPoint" class="summary-sig-name"><code>GetInsertionPoint</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ComboBox-class.html#SetInsertionPoint" class="summary-sig-name"><code>SetInsertionPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="LastPosition"></a>
+<h3>LastPosition</h3>
+<p>See <a href="wx.ComboBox-class.html#GetLastPosition" class="link"><code>GetLastPosition</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ComboBox-class.html#GetLastPosition" class="summary-sig-name"><code>GetLastPosition</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Mark"></a>
+<h3>Mark</h3>
+<p>See <a href="wx.ComboBox-class.html#GetMark" class="link"><code>GetMark</code></a> and <a href="wx.ComboBox-class.html#SetMark" class="link"><code>SetMark</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ComboBox-class.html#GetMark" class="summary-sig-name"><code>GetMark</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ComboBox-class.html#SetMark" class="summary-sig-name"><code>SetMark</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>from</span>,
+          <span class=summary-sig-arg>to</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Value"></a>
+<h3>Value</h3>
+<p>See <a href="wx.ComboBox-class.html#GetValue" class="link"><code>GetValue</code></a> and <a href="wx.ComboBox-class.html#SetValue" class="link"><code>SetValue</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ComboBox-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ComboBox-class.html#SetValue" class="summary-sig-name"><code>SetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:55 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

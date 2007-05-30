@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.pyshell.PyShellWindow</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.pyshell-module.html">Module&nbsp;pyshell</a> ::
+        Class&nbsp;PyShellWindow
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.pyshell.PyShellWindow-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type PyShellWindow</h2>
+
+<pre class="base-tree">
+    <a href="code.InteractiveInterpreter-class.html"><code>InteractiveInterpreter</code></a> --+
+                             |
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                   |
+         |                   |
+    <a href="wx.Object-class.html"><code>Object</code></a> --+               |
+             |               |
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+           |
+                 |           |
+            <a href="wx.Window-class.html"><code>Window</code></a> --+       |
+                     |       |
+               <a href="wx.Control-class.html"><code>Control</code></a> --+   |
+                         |   |
+            <a href="wx.stc.StyledTextCtrl-class.html"><code>StyledTextCtrl</code></a> --+
+                             |
+                            <b>PyShellWindow</b>
+</pre><br />
+
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>ID</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>locals</span>,
+          <span class=summary-sig-arg>properties</span>,
+          <span class=summary-sig-arg>banner</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetLocals"></a><span class="summary-sig"><span class="summary-sig-name">GetLocals</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetProperties"></a><span class="summary-sig"><span class="summary-sig-name">GetProperties</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnKey"></a><span class="summary-sig"><span class="summary-sig-name">OnKey</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnStyle"></a><span class="summary-sig"><span class="summary-sig-name">OnStyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnUpdateUI"></a><span class="summary-sig"><span class="summary-sig-name">OnUpdateUI</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Prompt"></a><span class="summary-sig"><span class="summary-sig-name">Prompt</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="PushLine"></a><span class="summary-sig"><span class="summary-sig-name">PushLine</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="runsource"></a><span class="summary-sig"><span class="summary-sig-name">runsource</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>source</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetLocals"></a><span class="summary-sig"><span class="summary-sig-name">SetLocals</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>locals</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetProperties"></a><span class="summary-sig"><span class="summary-sig-name">SetProperties</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>properties</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pyshell.PyShellWindow-class.html#showsyntaxerror" class="summary-sig-name"><code>showsyntaxerror</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filename</span>)</span></code>
+<br />
+Display the syntax error that just occurred.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pyshell.PyShellWindow-class.html#showtraceback" class="summary-sig-name"><code>showtraceback</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Display the exception that just occurred.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pyshell.PyShellWindow-class.html#UpdateProperties" class="summary-sig-name"><code>UpdateProperties</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Reset the editor and other settings based on the contents of the
+current properties dictionary.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="writeTrace"></a><span class="summary-sig"><span class="summary-sig-name">writeTrace</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="showsyntaxerror"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">showsyntaxerror</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>filename</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Display the syntax error that just occurred.</p>
+<p>This doesn't display a stack trace because there isn't one.</p>
+<p>If a filename is given, it is stuffed in the exception instead
+of what was there before (because Python's parser always uses
+&quot;&lt;string&gt;&quot; when reading from a string).</p>
+<p>The output is written by self.write(), below.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="code.InteractiveInterpreter-class.html#showsyntaxerror"><code>code.InteractiveInterpreter.showsyntaxerror</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="showtraceback"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">showtraceback</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Display the exception that just occurred.</p>
+<p>We remove the first stack item because it is our own code.</p>
+<p>The output is written by self.write(), below.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="code.InteractiveInterpreter-class.html#showtraceback"><code>code.InteractiveInterpreter.showtraceback</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateProperties"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateProperties</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Reset the editor and other settings based on the contents of the
+current properties dictionary.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:03:06 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

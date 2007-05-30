@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.ItemContainer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;ItemContainer
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.ItemContainer-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type ItemContainer</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>ItemContainer</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.ComboBox-class.html"><code>ComboBox</code></a>,
+    <a href="wx.ControlWithItems-class.html"><code>ControlWithItems</code></a>,
+    <a href="wx.combo.OwnerDrawnComboBox-class.html"><code>OwnerDrawnComboBox</code></a>,
+    <a href="wx.SimpleHtmlListBox-class.html"><code>SimpleHtmlListBox</code></a></dd></dl>
+
+<hr/>
+
+<p>The wx.ItemContainer class defines an interface which is implemented
+by all controls which have string subitems, each of which may be
+selected, such as <a href="wx.ListBox-class.html" class="link"><code>wx.ListBox</code></a>, <a href="wx.CheckListBox-class.html" class="link"><code>wx.CheckListBox</code></a>, <a href="wx.Choice-class.html" class="link"><code>wx.Choice</code></a> as well
+as <a href="wx.ComboBox-class.html" class="link"><code>wx.ComboBox</code></a> which implements an extended interface deriving from
+this one.</p>
+<p>It defines the methods for accessing the control's items and although
+each of the derived classes implements them differently, they still
+all conform to the same interface.</p>
+<p>The items in a wx.ItemContainer have (non empty) string labels and,
+optionally, client data associated with them.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#Append" class="summary-sig-name"><code>Append</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>clientData</span>)</span></code>
+<br />
+Adds the item to the control, associating the given data with the item
+if not None.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#AppendItems" class="summary-sig-name"><code>AppendItems</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>strings</span>)</span></code>
+<br />
+Apend several items at once to the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#Clear" class="summary-sig-name"><code>Clear</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Removes all items from the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#Delete" class="summary-sig-name"><code>Delete</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>n</span>)</span></code>
+<br />
+Deletes the item at the zero-based index 'n' from the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#FindString" class="summary-sig-name"><code>FindString</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>s</span>)</span></code>
+<br />
+Finds an item whose label matches the given string.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#GetClientData" class="summary-sig-name"><code>GetClientData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>n</span>)</span></code>
+<br />
+Returns the client data associated with the given item, (if any.)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#GetCount" class="summary-sig-name"><code>GetCount</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of items in the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#GetItems" class="summary-sig-name"><code>GetItems</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return a list of the strings in the control</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#GetSelection" class="summary-sig-name"><code>GetSelection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the index of the selected item or <tt class="rst-docutils literal"><span class="pre">wx.NOT_FOUND</span></tt> if no item
+is selected.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#GetString" class="summary-sig-name"><code>GetString</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>n</span>)</span></code>
+<br />
+Returns the label of the item with the given index.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxArrayString</font></td>
+  <td><code><a name="GetStrings"></a><span class="summary-sig"><span class="summary-sig-name">GetStrings</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#GetStringSelection" class="summary-sig-name"><code>GetStringSelection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the label of the selected item or an empty string if no item
+is selected.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#Insert" class="summary-sig-name"><code>Insert</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>clientData</span>)</span></code>
+<br />
+Insert an item into the control before the item at the <tt class="rst-docutils literal"><span class="pre">pos</span></tt> index,
+optionally associating some data object with the item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#IsEmpty" class="summary-sig-name"><code>IsEmpty</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the control is empty or False if it has some items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#Select" class="summary-sig-name"><code>Select</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>n</span>)</span></code>
+<br />
+This is the same as <a href="wx.ItemContainer-class.html#SetSelection" class="link"><code>SetSelection</code></a> and exists only because it is
+slightly more natural for controls which support multiple selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#SetClientData" class="summary-sig-name"><code>SetClientData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>n</span>,
+          <span class=summary-sig-arg>clientData</span>)</span></code>
+<br />
+Associate the given client data with the item at position n.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#SetItems" class="summary-sig-name"><code>SetItems</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>items</span>)</span></code>
+<br />
+Clear and set the strings in the control from a list</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#SetSelection" class="summary-sig-name"><code>SetSelection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>n</span>)</span></code>
+<br />
+Sets the item at index 'n' to be the selected item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ItemContainer-class.html#SetString" class="summary-sig-name"><code>SetString</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>n</span>,
+          <span class=summary-sig-arg>s</span>)</span></code>
+<br />
+Sets the label for the given item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="SetStringSelection"></a><span class="summary-sig"><span class="summary-sig-name">SetStringSelection</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>s</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ItemContainer-class.html#Count"><code>Count</code></a></b>: See <a href="wx.ItemContainer-class.html#GetCount" class="link"><code>GetCount</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ItemContainer-class.html#Items"><code>Items</code></a></b>: See <a href="wx.ItemContainer-class.html#GetItems" class="link"><code>GetItems</code></a> and <a href="wx.ItemContainer-class.html#SetItems" class="link"><code>SetItems</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ItemContainer-class.html#Selection"><code>Selection</code></a></b>: See <a href="wx.ItemContainer-class.html#GetSelection" class="link"><code>GetSelection</code></a> and <a href="wx.ItemContainer-class.html#SetSelection" class="link"><code>SetSelection</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ItemContainer-class.html#Strings"><code>Strings</code></a></b>: See <a href="wx.ItemContainer-class.html#GetStrings" class="link"><code>GetStrings</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ItemContainer-class.html#StringSelection"><code>StringSelection</code></a></b>: See <a href="wx.ItemContainer-class.html#GetStringSelection" class="link"><code>GetStringSelection</code></a> and <a href="wx.ItemContainer-class.html#SetStringSelection" class="link"><code>SetStringSelection</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ItemContainer-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="Append"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Append</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>clientData</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Adds the item to the control, associating the given data with the item
+if not None.  The return value is the index of the newly added item
+which may be different from the last one if the control is sorted (e.g.
+has wx.LB_SORT or wx.CB_SORT style).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>item</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>clientData</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AppendItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AppendItems</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>strings</span>)</span>
+  </h3>
+<p>Apend several items at once to the control.  Notice that calling this
+method may be much faster than appending the items one by one if you
+need to add a lot of items.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>strings</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=List)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Clear"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Clear</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Removes all items from the control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Delete"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Delete</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>n</span>)</span>
+  </h3>
+<p>Deletes the item at the zero-based index 'n' from the control. Note
+that it is an error (signalled by a <a href="wx.PyAssertionError-class.html" class="link"><code>wx.PyAssertionError</code></a> exception if
+enabled) to remove an item with the index negative or greater or equal
+than the number of items in the control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>n</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindString"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindString</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>s</span>)</span>
+  </h3>
+<p>Finds an item whose label matches the given string.  Returns the
+zero-based position of the item, or <tt class="rst-docutils literal"><span class="pre">wx.NOT_FOUND</span></tt> if the string was not
+found.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>s</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetClientData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClientData</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>n</span>)</span>
+  </h3>
+<p>Returns the client data associated with the given item, (if any.)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>n</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyObject      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCount</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the number of items in the control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItems</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return a list of the strings in the control</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSelection</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the index of the selected item or <tt class="rst-docutils literal"><span class="pre">wx.NOT_FOUND</span></tt> if no item
+is selected.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetString"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetString</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>n</span>)</span>
+  </h3>
+<p>Returns the label of the item with the given index.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>n</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetStringSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetStringSelection</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the label of the selected item or an empty string if no item
+is selected.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Insert"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Insert</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>pos</span>,
+          <span class=sig-arg>clientData</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Insert an item into the control before the item at the <tt class="rst-docutils literal"><span class="pre">pos</span></tt> index,
+optionally associating some data object with the item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>item</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>clientData</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsEmpty"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsEmpty</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the control is empty or False if it has some items.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Select"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Select</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>n</span>)</span>
+  </h3>
+<p>This is the same as <a href="wx.ItemContainer-class.html#SetSelection" class="link"><code>SetSelection</code></a> and exists only because it is
+slightly more natural for controls which support multiple selection.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>n</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetClientData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetClientData</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>n</span>,
+          <span class=sig-arg>clientData</span>)</span>
+  </h3>
+<p>Associate the given client data with the item at position n.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>n</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>clientData</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItems</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>items</span>)</span>
+  </h3>
+<p>Clear and set the strings in the control from a list</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSelection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>n</span>)</span>
+  </h3>
+<p>Sets the item at index 'n' to be the selected item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>n</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetString"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetString</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>n</span>,
+          <span class=sig-arg>s</span>)</span>
+  </h3>
+<p>Sets the label for the given item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>n</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>s</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Count"></a>
+<h3>Count</h3>
+<p>See <a href="wx.ItemContainer-class.html#GetCount" class="link"><code>GetCount</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ItemContainer-class.html#GetCount" class="summary-sig-name"><code>GetCount</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Items"></a>
+<h3>Items</h3>
+<p>See <a href="wx.ItemContainer-class.html#GetItems" class="link"><code>GetItems</code></a> and <a href="wx.ItemContainer-class.html#SetItems" class="link"><code>SetItems</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ItemContainer-class.html#GetItems" class="summary-sig-name"><code>GetItems</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ItemContainer-class.html#SetItems" class="summary-sig-name"><code>SetItems</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>items</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Selection"></a>
+<h3>Selection</h3>
+<p>See <a href="wx.ItemContainer-class.html#GetSelection" class="link"><code>GetSelection</code></a> and <a href="wx.ItemContainer-class.html#SetSelection" class="link"><code>SetSelection</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ItemContainer-class.html#GetSelection" class="summary-sig-name"><code>GetSelection</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ItemContainer-class.html#SetSelection" class="summary-sig-name"><code>SetSelection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>n</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Strings"></a>
+<h3>Strings</h3>
+<p>See <a href="wx.ItemContainer-class.html#GetStrings" class="link"><code>GetStrings</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ItemContainer-class.html#GetStrings" class="summary-sig-name"><code>GetStrings</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="StringSelection"></a>
+<h3>StringSelection</h3>
+<p>See <a href="wx.ItemContainer-class.html#GetStringSelection" class="link"><code>GetStringSelection</code></a> and <a href="wx.ItemContainer-class.html#SetStringSelection" class="link"><code>SetStringSelection</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ItemContainer-class.html#GetStringSelection" class="summary-sig-name"><code>GetStringSelection</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ItemContainer-class.html#SetStringSelection" class="summary-sig-name"><code>SetStringSelection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>s</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:00:58 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

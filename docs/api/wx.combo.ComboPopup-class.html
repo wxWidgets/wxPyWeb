@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.combo.ComboPopup</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.combo-module.html">Module&nbsp;combo</a> ::
+        Class&nbsp;ComboPopup
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.combo.ComboPopup-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type ComboPopup</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>ComboPopup</b>
+</pre><br />
+
+<hr/>
+
+<p>In order to use a custom popup with <a href="wx.combo.ComboCtrl-class.html" class="link"><code>wx.combo.ComboCtrl</code></a> an interface
+class derived from wx.combo.ComboPopup is used to manage the interface
+between the popup control and the popup.  You can either derive a new
+class from both the widget class and this ComboPopup class, or the
+derived class can have a reference to the widget used for the popup.
+In either case you simply need to return the widget from the
+<a href="wx.combo.ComboPopup-class.html#GetControl" class="link"><code>GetControl</code></a> method to allow the ComboCtrl to interact with it.</p>
+<p>Nearly all of the methods of this class are overridable in Python.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">ComboPopup</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Constructor</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1441522516"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#Create" class="summary-sig-name"><code>Create</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>)</span></code>
+<br />
+The derived class must implement this method to create the popup
+control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#DefaultPaintComboControl" class="summary-sig-name"><code>DefaultPaintComboControl</code></a>(<span class=summary-sig-arg>combo</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Default PaintComboControl behaviour    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#Dismiss" class="summary-sig-name"><code>Dismiss</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Hides the popup</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#GetAdjustedSize" class="summary-sig-name"><code>GetAdjustedSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>minWidth</span>,
+          <span class=summary-sig-arg>prefHeight</span>,
+          <span class=summary-sig-arg>maxHeight</span>)</span></code>
+<br />
+The derived class may implement this method to return adjusted size
+for the popup control, according to the variables given.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">ComboCtrl</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#GetCombo" class="summary-sig-name"><code>GetCombo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a reference to the <a href="wx.combo.ComboCtrl-class.html" class="link"><code>wx.combo.ComboCtrl</code></a> this ComboPopup object
+is associated with.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#GetControl" class="summary-sig-name"><code>GetControl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+The derived class must implement this method and it should return a
+reference to the widget created in the <a href="wx.combo.ComboPopup-class.html#Create" class="link"><code>Create</code></a> method.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#GetStringValue" class="summary-sig-name"><code>GetStringValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the string representation of the currently selected value to be
+used to display in the combo widget.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#Init" class="summary-sig-name"><code>Init</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+This method is called after the popup is contructed and has been
+assigned to the ComboCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#IsCreated" class="summary-sig-name"><code>IsCreated</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if <a href="wx.combo.ComboPopup-class.html#Create" class="link"><code>Create</code></a> has been called.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#LazyCreate" class="summary-sig-name"><code>LazyCreate</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+The derived class may implement this to return <tt class="rst-docutils literal"><span class="pre">True</span></tt> if it wants to
+delay the call to <a href="wx.combo.ComboPopup-class.html#Create" class="link"><code>Create</code></a> until the popup is shown for the first
+time.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#OnComboDoubleClick" class="summary-sig-name"><code>OnComboDoubleClick</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Implement this method in the derived class if you need to support
+special actions when the user double-clicks on the parent ComboCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#OnComboKeyEvent" class="summary-sig-name"><code>OnComboKeyEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Receives key events from the parent ComboCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#OnDismiss" class="summary-sig-name"><code>OnDismiss</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+The derived class may implement this to do special processing when
+popup is hidden.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#OnPopup" class="summary-sig-name"><code>OnPopup</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+The derived class may implement this to do special processing when
+popup is shown.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#PaintComboControl" class="summary-sig-name"><code>PaintComboControl</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+This is called to custom paint in the combo control itself (ie.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.combo.ComboPopup-class.html#SetStringValue" class="summary-sig-name"><code>SetStringValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Called just prior to displaying the popup.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.combo.ComboPopup-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+ComboPopup      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="__builtin__.object-class.html#__init__"><code>__builtin__.object.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>)</span>
+  </h3>
+<p>The derived class must implement this method to create the popup
+control.  It should be a child of the <tt class="rst-docutils literal"><span class="pre">parent</span></tt> passed in, but other
+than that there is much flexibility in what the widget can be, its
+style, etc.  Return <tt class="rst-docutils literal"><span class="pre">True</span></tt> for success, <tt class="rst-docutils literal"><span class="pre">False</span></tt> otherwise.  (NOTE:
+this return value is not currently checked...)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Dismiss"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Dismiss</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Hides the popup</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAdjustedSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAdjustedSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>minWidth</span>,
+          <span class=sig-arg>prefHeight</span>,
+          <span class=sig-arg>maxHeight</span>)</span>
+  </h3>
+<p>The derived class may implement this method to return adjusted size
+for the popup control, according to the variables given.  It is called
+on every popup, just prior to <a href="wx.combo.ComboPopup-class.html#OnPopup" class="link"><code>OnPopup</code></a>.</p>
+<blockquote>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>minWidth</b></code> -
+ Preferred minimum width.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>prefHeight</b></code> -
+ Preferred height. May be -1 to indicate no preference.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>maxHeight</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Size      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCombo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCombo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a reference to the <a href="wx.combo.ComboCtrl-class.html" class="link"><code>wx.combo.ComboCtrl</code></a> this ComboPopup object
+is associated with.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+ComboCtrl      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetControl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>The derived class must implement this method and it should return a
+reference to the widget created in the <a href="wx.combo.ComboPopup-class.html#Create" class="link"><code>Create</code></a> method.  If the
+derived class inherits from both the widget class and ComboPopup then
+the return value is probably just <tt class="rst-docutils literal"><span class="pre">self</span></tt>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Window      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetStringValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetStringValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the string representation of the currently selected value to be
+used to display in the combo widget.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Init"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Init</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>This method is called after the popup is contructed and has been
+assigned to the ComboCtrl.  Derived classes can override this to do
+extra inialization or whatever.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsCreated"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsCreated</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if <a href="wx.combo.ComboPopup-class.html#Create" class="link"><code>Create</code></a> has been called.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LazyCreate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LazyCreate</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>The derived class may implement this to return <tt class="rst-docutils literal"><span class="pre">True</span></tt> if it wants to
+delay the call to <a href="wx.combo.ComboPopup-class.html#Create" class="link"><code>Create</code></a> until the popup is shown for the first
+time. It is more efficient, but on the other hand it is often more
+convenient to have the control created immediately.  The default
+implementation returns <tt class="rst-docutils literal"><span class="pre">False</span></tt>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnComboDoubleClick"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnComboDoubleClick</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Implement this method in the derived class if you need to support
+special actions when the user double-clicks on the parent ComboCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnComboKeyEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnComboKeyEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Receives key events from the parent ComboCtrl.  Events not handled
+should be skipped, as usual.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>event</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=KeyEvent)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnDismiss"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnDismiss</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>The derived class may implement this to do special processing when
+popup is hidden.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPopup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPopup</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>The derived class may implement this to do special processing when
+popup is shown.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PaintComboControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PaintComboControl</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>This is called to custom paint in the combo control itself (ie. not
+the popup).  Default implementation draws the current value as string.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetStringValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetStringValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Called just prior to displaying the popup.  The derived class can
+implement this to &quot;select&quot; the item in the popup that coresponds to
+the passed in string value, if appropriate.  The default
+implementation does nothing.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="DefaultPaintComboControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DefaultPaintComboControl</span>(<span class=sig-arg>combo</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Default PaintComboControl behaviour</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>combo</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=wxComboCtrlBase)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1218195700</span>(...)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1218195644</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:59:22 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

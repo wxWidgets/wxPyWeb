@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.floatcanvas</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        Package&nbsp;floatcanvas
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.floatcanvas-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF PACKAGE DESCRIPTION =========== -->
+<h2 class="package">Package wx.lib.floatcanvas</h2>
+
+<p>This is the floatcanvas package. It provides two primary modules, and a
+support module.</p>
+<p>FloatCanvas.py contains the main FloatCanvas class, and its supporting
+classes.  NavCanvas.py contains a wrapper for the FloatCanvas that
+provides the canvas and a toolbar with tools that allow you to navigate
+the canvas (zooming, panning, etc.)  Resources.py is a module that
+contains a few resources required by the FloatCanvas (icons, etc)</p>
+<p>The FloatCanvas is a high level window for drawing maps and anything
+else in an arbitrary coordinate system.</p>
+<p>The goal is to provide a convenient way to draw stuff on the screen
+without having to deal with handling OnPaint events, converting to pixel
+coordinates, knowing about wxWindows brushes, pens, and colors, etc. It
+also provides virtually unlimited zooming and scrolling</p>
+<p>I am using it for two things:
+1) general purpose drawing in floating point coordinates
+2) displaying map data in Lat-long coordinates</p>
+<p>If the projection is set to None, it will draw in general purpose
+floating point coordinates. If the projection is set to 'FlatEarth', it
+will draw a FlatEarth projection, centered on the part of the map that
+you are viewing. You can also pass in your own projection function.</p>
+<p>It is double buffered, so re-draws after the window is uncovered by
+something else are very quick.</p>
+<p>It relies on NumPy, which is needed for speed (maybe, I haven't profiled
+properly) and convenience.</p>
+<p>Bugs and Limitations: Lots: patches, fixes welcome</p>
+<p>For Map drawing: It ignores the fact that the world is, in fact, a
+sphere, so it will do strange things if you are looking at stuff near
+the poles or the date line. so far I don't have a need to do that, so I
+havn't bothered to add any checks for that yet.</p>
+<p>Zooming: I have set no zoom limits. What this means is that if you zoom
+in really far, you can get integer overflows, and get weird results. It
+doesn't seem to actually cause any problems other than weird output, at
+least when I have run it.</p>
+<p>Speed: I have done a couple of things to improve speed in this app. The
+one thing I have done is used NumPy Arrays to store the coordinates of
+the points of the objects. This allowed me to use array oriented
+functions when doing transformations, and should provide some speed
+improvement for objects with a lot of points (big polygons, polylines,
+pointsets).</p>
+<p>The real slowdown comes when you have to draw a lot of objects, because
+you have to call the wx.DC.DrawSomething call each time. This is plenty
+fast for tens of objects, OK for hundreds of objects, but pretty darn
+slow for thousands of objects.</p>
+<p>If you are zoomed in, it checks the Bounding box of an object before
+drawing it. This makes it a great deal faster when there are a lot of
+objects and you are zoomed in so that only a few are shown.</p>
+<p>Mouse Events:</p>
+<p>There are a full set of custom mouse events. They are just like the
+regular mouse events, but include an extra attribute: Event.GetCoords(),
+that returns the (x,y) position in world coordinates, as a length-2
+NumPy vector of Floats.</p>
+<p>There are also a full set of bindings to mouse events on objects, so
+that you can specify a given function be called when an object is
+clicked, mouse-over'd, etc.</p>
+<p>See the Demo for what it can do, and how to use it.</p>
+<p>Copyright: Christopher Barker
+License: Same as the version of wxPython you are using it with.</p>
+<p>TRAC site for some docs and updates:
+<a class="rst-reference" href="http://morticia.cs.dal.ca/FloatCanvas/">http://morticia.cs.dal.ca/FloatCanvas/</a></p>
+<p>SVN for latest code:
+svn://morticia.cs.dal.ca/FloatCanvas</p>
+<p>Mailing List:
+<a class="rst-reference" href="http://mail.mithis.com/cgi-bin/mailman/listinfo/floatcanvas">http://mail.mithis.com/cgi-bin/mailman/listinfo/floatcanvas</a></p>
+<p>Check for updates or answers to questions, send me an email.
+Please let me know if you're using this!!!
+Contact me at:</p>
+<p><a class="rst-reference" href="mailto:Chris.Barker&#64;noaa.gov">Chris.Barker&#64;noaa.gov</a></p>
+<hr/>
+
+<!-- =========== START OF SUBMODULES =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Submodules</th></tr>
+  <tr><td><ul>
+<li> <b><a href="wx.lib.floatcanvas.Resources-module.html"><code>Resources</code></a></b>
+<li> <b><a href="wx.lib.floatcanvas.Utilities-module.html"><code>Utilities</code></a></b>: <i>__init__ for the floatcanvas Utilities package</i>
+  </ul></td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.lib.floatcanvas-module.html#__version__"><code>__version__</code></a></b> = <span title="'0.9.18'"><code><span class="variable-quote">'</span>0.9.18<span class="variable-quote">'</span>                                   </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__version__"></a>
+<h3>__version__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'0.9.18'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>0.9.18<span class="variable-quote">'</span>                                                               </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:58:34 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

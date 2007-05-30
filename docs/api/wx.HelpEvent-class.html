@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.HelpEvent</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;HelpEvent
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.HelpEvent-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type HelpEvent</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+            
+         |            
+    <a href="wx.Object-class.html"><code>Object</code></a> --+        
+             |        
+         <a href="wx.Event-class.html"><code>Event</code></a> --+    
+                 |    
+      <a href="wx.CommandEvent-class.html"><code>CommandEvent</code></a> --+
+                     |
+                    <b>HelpEvent</b>
+</pre><br />
+
+<hr/>
+
+<p>A help event is sent when the user has requested context-sensitive
+help. This can either be caused by the application requesting
+context-sensitive help mode via wx.ContextHelp, or (on MS Windows) by
+the system generating a WM_HELP message when the user pressed F1 or
+clicked on the query button in a dialog caption.</p>
+<p>A help event is sent to the window that the user clicked on, and is
+propagated up the window hierarchy until the event is processed or
+there are no more event handlers. The application should call
+event.GetId to check the identity of the clicked-on window, and then
+either show some suitable help or call event.Skip if the identifier is
+unrecognised. Calling Skip is important because it allows wxWindows to
+generate further events for ancestors of the clicked-on
+window. Otherwise it would be impossible to show help for container
+windows, since processing would stop after the first window found.</p>
+<div class="rst-section" id="events">
+<h1 class="heading"><a name="rst-events">Events</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="25%" />
+<col class="rst" width="75%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">EVT_HELP</td>
+<td class="rst">Sent when the user has requested context-
+sensitive help.</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_HELP_RANGE</td>
+<td class="rst">Allows to catch EVT_HELP for a range of IDs</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+<p><b>See Also:</b> <p><a href="wx.ContextHelp-class.html" class="link"><code>wx.ContextHelp</code></a>, <a href="wx.ContextHelpButton-class.html" class="link"><code>wx.ContextHelpButton</code></a></p>
+</p>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">CommandEvent</font></td>
+  <td><code><span class="summary-sig"><a href="wx.HelpEvent-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>commandType</span>,
+          <span class=summary-sig-arg>winid</span>)</span></code>
+<br />
+This event class contains information about command events, which
+originate from a variety of simple controls, as well as menus and
+toolbars.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.HelpEvent-class.html#GetLink" class="summary-sig-name"><code>GetLink</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get an optional link to further help</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.HelpEvent-class.html#GetOrigin" class="summary-sig-name"><code>GetOrigin</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Optiononal indication of the source of the event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Point</font></td>
+  <td><code><span class="summary-sig"><a href="wx.HelpEvent-class.html#GetPosition" class="summary-sig-name"><code>GetPosition</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the left-click position of the mouse, in screen
+coordinates.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.HelpEvent-class.html#GetTarget" class="summary-sig-name"><code>GetTarget</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get an optional target to display help in.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.HelpEvent-class.html#SetLink" class="summary-sig-name"><code>SetLink</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>link</span>)</span></code>
+<br />
+Set an optional link to further help</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetOrigin"></a><span class="summary-sig"><span class="summary-sig-name">SetOrigin</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>origin</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.HelpEvent-class.html#SetPosition" class="summary-sig-name"><code>SetPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Sets the left-click position of the mouse, in screen coordinates.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.HelpEvent-class.html#SetTarget" class="summary-sig-name"><code>SetTarget</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>target</span>)</span></code>
+<br />
+Set an optional target to display help in.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.HelpEvent-class.html#Link"><code>Link</code></a></b>: See <a href="wx.HelpEvent-class.html#GetLink" class="link"><code>GetLink</code></a> and <a href="wx.HelpEvent-class.html#SetLink" class="link"><code>SetLink</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.HelpEvent-class.html#Origin"><code>Origin</code></a></b>: See <a href="wx.HelpEvent-class.html#GetOrigin" class="link"><code>GetOrigin</code></a> and <a href="wx.HelpEvent-class.html#SetOrigin" class="link"><code>SetOrigin</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.HelpEvent-class.html#Position"><code>Position</code></a></b>: See <a href="wx.HelpEvent-class.html#GetPosition" class="link"><code>GetPosition</code></a> and <a href="wx.HelpEvent-class.html#SetPosition" class="link"><code>SetPosition</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.HelpEvent-class.html#Target"><code>Target</code></a></b>: See <a href="wx.HelpEvent-class.html#GetTarget" class="link"><code>GetTarget</code></a> and <a href="wx.HelpEvent-class.html#SetTarget" class="link"><code>SetTarget</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.HelpEvent-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.HelpEvent-class.html#Origin_HelpButton"><code>Origin_HelpButton</code></a></b> = <span title="2">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.HelpEvent-class.html#Origin_Keyboard"><code>Origin_Keyboard</code></a></b> = <span title="1">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.HelpEvent-class.html#Origin_Unknown"><code>Origin_Unknown</code></a></b> = <span title="0">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>type</span>=<span class=sig-default>wxEVT_NULL</span>,
+          <span class=sig-arg>winid</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>pt</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>origin</span>=<span class=sig-default>Origin_Unknown</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>This event class contains information about command events, which
+originate from a variety of simple controls, as well as menus and
+toolbars.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>commandType</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=EventType)</i>
+<p/>
+      <dd><code><b>winid</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+CommandEvent      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.CommandEvent-class.html#__init__"><code>wx.CommandEvent.__init__</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLink"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLink</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get an optional link to further help</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetOrigin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetOrigin</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Optiononal indication of the source of the event.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPosition</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the left-click position of the mouse, in screen
+coordinates. This allows the application to position the help
+appropriately.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Point      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTarget"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTarget</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get an optional target to display help in. E.g. a window specification</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLink"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLink</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>link</span>)</span>
+  </h3>
+<p>Set an optional link to further help</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>link</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>Sets the left-click position of the mouse, in screen coordinates.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTarget"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTarget</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>target</span>)</span>
+  </h3>
+<p>Set an optional target to display help in. E.g. a window specification</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>target</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Link"></a>
+<h3>Link</h3>
+<p>See <a href="wx.HelpEvent-class.html#GetLink" class="link"><code>GetLink</code></a> and <a href="wx.HelpEvent-class.html#SetLink" class="link"><code>SetLink</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.HelpEvent-class.html#GetLink" class="summary-sig-name"><code>GetLink</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.HelpEvent-class.html#SetLink" class="summary-sig-name"><code>SetLink</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>link</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Origin"></a>
+<h3>Origin</h3>
+<p>See <a href="wx.HelpEvent-class.html#GetOrigin" class="link"><code>GetOrigin</code></a> and <a href="wx.HelpEvent-class.html#SetOrigin" class="link"><code>SetOrigin</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.HelpEvent-class.html#GetOrigin" class="summary-sig-name"><code>GetOrigin</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.HelpEvent-class.html#SetOrigin" class="summary-sig-name"><code>SetOrigin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>origin</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Position"></a>
+<h3>Position</h3>
+<p>See <a href="wx.HelpEvent-class.html#GetPosition" class="link"><code>GetPosition</code></a> and <a href="wx.HelpEvent-class.html#SetPosition" class="link"><code>SetPosition</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.HelpEvent-class.html#GetPosition" class="summary-sig-name"><code>GetPosition</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.HelpEvent-class.html#SetPosition" class="summary-sig-name"><code>SetPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Target"></a>
+<h3>Target</h3>
+<p>See <a href="wx.HelpEvent-class.html#GetTarget" class="link"><code>GetTarget</code></a> and <a href="wx.HelpEvent-class.html#SetTarget" class="link"><code>SetTarget</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.HelpEvent-class.html#GetTarget" class="summary-sig-name"><code>GetTarget</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.HelpEvent-class.html#SetTarget" class="summary-sig-name"><code>SetTarget</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>target</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="Origin_HelpButton"></a>
+<h3>Origin_HelpButton</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="2">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="Origin_Keyboard"></a>
+<h3>Origin_Keyboard</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="1">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="Origin_Unknown"></a>
+<h3>Origin_Unknown</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="0">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:59:34 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

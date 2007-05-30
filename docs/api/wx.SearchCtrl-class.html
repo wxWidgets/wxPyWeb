@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.SearchCtrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;SearchCtrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.SearchCtrl-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type SearchCtrl</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+               <a href="wx.Control-class.html"><code>Control</code></a> --+    
+                         |    
+                  <a href="wx.TextCtrl-class.html"><code>TextCtrl</code></a> --+
+                             |
+                            <b>SearchCtrl</b>
+</pre><br />
+
+<hr/>
+
+<p>A search control is a composite of a <a href="wx.TextCtrl-class.html" class="link"><code>wx.TextCtrl</code></a> with optional
+bitmap buttons and a drop-down menu.  Controls like this can typically
+be found on a toolbar of applications that support some form of search
+functionality.  On the Mac this control is implemented using the
+native HISearchField control, on the other platforms a generic control
+is used, although that may change in the future as more platforms
+introduce native search widgets.</p>
+<p>If you wish to use a drop-down menu with your wx.SearchCtrl then you
+will need to manage its content and handle the menu events yourself,
+but this is an easy thing to do.  Simply build the menu, pass it to
+<a href="wx.SearchCtrl-class.html#SetMenu" class="link"><code>SetMenu</code></a>, and also bind a handler for a range of EVT_MENU events.
+This gives you the flexibility to use the drop-down menu however you
+wish, such as for a history of searches, or as a way to select
+different kinds of searches.  The ToolBar.py sample in the demo shows
+one way to do this.</p>
+<p>Since the control derives from <a href="wx.TextCtrl-class.html" class="link"><code>wx.TextCtrl</code></a> it is convenient to use
+the styles and events designed for <a href="wx.TextCtrl-class.html" class="link"><code>wx.TextCtrl</code></a>.  For example you can
+use the <tt class="rst-docutils literal"><span class="pre">wx.TE_PROCESS_ENTER</span></tt> style and catch the
+<tt class="rst-docutils literal"><span class="pre">wx.EVT_TEXT_ENTER</span></tt> event to know when the user has pressed the
+Enter key in the control and wishes to start a search.</p>
+<div class="rst-section" id="events">
+<h1 class="heading"><a name="rst-events">Events</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="38%" />
+<col class="rst" width="62%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">EVT_SEARCHCTRL_SEARCH_BTN</td>
+<td class="rst">Sent when the search icon is clicked</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_SEARCHCTRL_CANCEL_BTN</td>
+<td class="rst">Sent when the cancel icon is clicked</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_TEXT</td>
+<td class="rst">Sent when the text changes</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_TEXT_ENTER</td>
+<td class="rst">Sent when the RETURN/ENTER key is pressed
+in the search control and the control has
+the wx.TE_PROCESS_ENTER style flag set.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SearchCtrl</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>value</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+A search control is a composite of a <a href="wx.TextCtrl-class.html" class="link"><code>wx.TextCtrl</code></a> with optional
+bitmap buttons and a drop-down menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#Create" class="summary-sig-name"><code>Create</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Do the 2nd phase and create the GUI control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#GetDescriptiveText" class="summary-sig-name"><code>GetDescriptiveText</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the text to be displayed when the user has not yet typed anything
+in the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Menu</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#GetMenu" class="summary-sig-name"><code>GetMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a pointer to the search control's menu object or None if there
+is no menu attached.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#IsCancelButtonVisible" class="summary-sig-name"><code>IsCancelButtonVisible</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Indicates whether the cancel button is visible.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#IsSearchButtonVisible" class="summary-sig-name"><code>IsSearchButtonVisible</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the search button visibility value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#SetCancelBitmap" class="summary-sig-name"><code>SetCancelBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bitmap</span>)</span></code>
+<br />
+Sets the bitmap to use for the cancel button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#SetDescriptiveText" class="summary-sig-name"><code>SetDescriptiveText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Set the text to be displayed when the user has not yet typed anything
+in the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#SetMenu" class="summary-sig-name"><code>SetMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menu</span>)</span></code>
+<br />
+Sets the search control's menu object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#SetSearchBitmap" class="summary-sig-name"><code>SetSearchBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bitmap</span>)</span></code>
+<br />
+Sets the bitmap to use for the search button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#SetSearchMenuBitmap" class="summary-sig-name"><code>SetSearchMenuBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bitmap</span>)</span></code>
+<br />
+Sets the bitmap to use for the search button when there is a drop-down
+menu associated with the search control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#ShowCancelButton" class="summary-sig-name"><code>ShowCancelButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span></code>
+<br />
+Shows or hides the cancel button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SearchCtrl-class.html#ShowSearchButton" class="summary-sig-name"><code>ShowSearchButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span></code>
+<br />
+Sets the search button visibility value on the search control.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SearchCtrl-class.html#CancelButtonVisible"><code>CancelButtonVisible</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SearchCtrl-class.html#DescriptiveText"><code>DescriptiveText</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SearchCtrl-class.html#Menu"><code>Menu</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SearchCtrl-class.html#SearchButtonVisible"><code>SearchButtonVisible</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SearchCtrl-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>wxEmptyString</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>validator</span>=<span class=sig-default>DefaultValidator</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>SearchCtrlNameStr</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>A search control is a composite of a <a href="wx.TextCtrl-class.html" class="link"><code>wx.TextCtrl</code></a> with optional
+bitmap buttons and a drop-down menu.  Controls like this can typically
+be found on a toolbar of applications that support some form of search
+functionality.  On the Mac this control is implemented using the
+native HISearchField control, on the other platforms a generic control
+is used, although that may change in the future as more platforms
+introduce native search widgets.</p>
+<p>If you wish to use a drop-down menu with your wx.SearchCtrl then you
+will need to manage its content and handle the menu events yourself,
+but this is an easy thing to do.  Simply build the menu, pass it to
+<a href="wx.SearchCtrl-class.html#SetMenu" class="link"><code>SetMenu</code></a>, and also bind a handler for a range of EVT_MENU events.
+This gives you the flexibility to use the drop-down menu however you
+wish, such as for a history of searches, or as a way to select
+different kinds of searches.  The ToolBar.py sample in the demo shows
+one way to do this.</p>
+<p>Since the control derives from <a href="wx.TextCtrl-class.html" class="link"><code>wx.TextCtrl</code></a> it is convenient to use
+the styles and events designed for <a href="wx.TextCtrl-class.html" class="link"><code>wx.TextCtrl</code></a>.  For example you can
+use the <tt class="rst-docutils literal"><span class="pre">wx.TE_PROCESS_ENTER</span></tt> style and catch the
+<tt class="rst-docutils literal"><span class="pre">wx.EVT_TEXT_ENTER</span></tt> event to know when the user has pressed the
+Enter key in the control and wishes to start a search.</p>
+<div class="rst-section" id="events">
+<h1 class="heading"><a name="rst-events">Events</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="38%" />
+<col class="rst" width="62%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">EVT_SEARCHCTRL_SEARCH_BTN</td>
+<td class="rst">Sent when the search icon is clicked</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_SEARCHCTRL_CANCEL_BTN</td>
+<td class="rst">Sent when the cancel icon is clicked</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_TEXT</td>
+<td class="rst">Sent when the text changes</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_TEXT_ENTER</td>
+<td class="rst">Sent when the RETURN/ENTER key is pressed
+in the search control and the control has
+the wx.TE_PROCESS_ENTER style flag set.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>validator</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Validator)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SearchCtrl      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.TextCtrl-class.html#__init__"><code>wx.TextCtrl.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>wxEmptyString</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>validator</span>=<span class=sig-default>DefaultValidator</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>SearchCtrlNameStr</span>)</span>
+  </h3>
+<p>Do the 2nd phase and create the GUI control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>validator</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Validator)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.TextCtrl-class.html#Create"><code>wx.TextCtrl.Create</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDescriptiveText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDescriptiveText</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the text to be displayed when the user has not yet typed anything
+in the control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a pointer to the search control's menu object or None if there
+is no menu attached.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Menu      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsCancelButtonVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsCancelButtonVisible</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Indicates whether the cancel button is visible.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsSearchButtonVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsSearchButtonVisible</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the search button visibility value. If there is a menu
+attached, the search button will be visible regardless of the search
+button visibility value.  This always returns false in Mac OS X v10.3</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCancelBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCancelBitmap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bitmap</span>)</span>
+  </h3>
+<p>Sets the bitmap to use for the cancel button.  This currently does not
+work on the Mac.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>bitmap</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDescriptiveText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDescriptiveText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Set the text to be displayed when the user has not yet typed anything
+in the control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>text</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menu</span>)</span>
+  </h3>
+<p>Sets the search control's menu object. If there is already a menu
+associated with the search control it is deleted.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>menu</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Menu)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSearchBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSearchBitmap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bitmap</span>)</span>
+  </h3>
+<p>Sets the bitmap to use for the search button.  This currently does not
+work on the Mac.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>bitmap</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSearchMenuBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSearchMenuBitmap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bitmap</span>)</span>
+  </h3>
+<p>Sets the bitmap to use for the search button when there is a drop-down
+menu associated with the search control.  This currently does not work
+on the Mac.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>bitmap</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowCancelButton"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowCancelButton</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>show</span>)</span>
+  </h3>
+<p>Shows or hides the cancel button.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>show</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowSearchButton"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowSearchButton</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>show</span>)</span>
+  </h3>
+<p>Sets the search button visibility value on the search control. If
+there is a menu attached, the search button will be visible regardless
+of the search button visibility value.  This has no effect in Mac OS X
+v10.3</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>show</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="CancelButtonVisible"></a>
+<h3>CancelButtonVisible</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SearchCtrl-class.html#IsCancelButtonVisible" class="summary-sig-name"><code>IsCancelButtonVisible</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SearchCtrl-class.html#ShowCancelButton" class="summary-sig-name"><code>ShowCancelButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DescriptiveText"></a>
+<h3>DescriptiveText</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SearchCtrl-class.html#GetDescriptiveText" class="summary-sig-name"><code>GetDescriptiveText</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SearchCtrl-class.html#SetDescriptiveText" class="summary-sig-name"><code>SetDescriptiveText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Menu"></a>
+<h3>Menu</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SearchCtrl-class.html#GetMenu" class="summary-sig-name"><code>GetMenu</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SearchCtrl-class.html#SetMenu" class="summary-sig-name"><code>SetMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menu</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SearchButtonVisible"></a>
+<h3>SearchButtonVisible</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SearchCtrl-class.html#IsSearchButtonVisible" class="summary-sig-name"><code>IsSearchButtonVisible</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SearchCtrl-class.html#ShowSearchButton" class="summary-sig-name"><code>ShowSearchButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:56:53 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

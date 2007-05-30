@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.py.editwindow.EditWindow</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.py-module.html">Package&nbsp;py</a> ::
+        <a href="wx.py.editwindow-module.html">Module&nbsp;editwindow</a> ::
+        Class&nbsp;EditWindow
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.py.editwindow.EditWindow-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type EditWindow</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+               <a href="wx.Control-class.html"><code>Control</code></a> --+    
+                         |    
+            <a href="wx.stc.StyledTextCtrl-class.html"><code>StyledTextCtrl</code></a> --+
+                             |
+                            <b>EditWindow</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.py.crust.Display-class.html"><code>Display</code></a>,
+    <a href="wx.py.editor.EditWindow-class.html"><code>EditWindow</code></a>,
+    <a href="wx.py.filling.FillingText-class.html"><code>FillingText</code></a>,
+    <a href="wx.py.shell.Shell-class.html"><code>Shell</code></a></dd></dl>
+
+<hr/>
+
+<p>EditWindow based on StyledTextCtrl.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.editwindow.EditWindow-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Create EditWindow instance.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.editwindow.EditWindow-class.html#CanCopy" class="summary-sig-name"><code>CanCopy</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return True if text is selected and can be copied.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.editwindow.EditWindow-class.html#CanCut" class="summary-sig-name"><code>CanCut</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return True if text is selected and can be cut.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.editwindow.EditWindow-class.html#CanEdit" class="summary-sig-name"><code>CanEdit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return True if editing should succeed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.editwindow.EditWindow-class.html#CanPaste" class="summary-sig-name"><code>CanPaste</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return True if pasting should succeed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DoFindNext"></a><span class="summary-sig"><span class="summary-sig-name">DoFindNext</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>findData</span>,
+          <span class=summary-sig-arg>findDlg</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetLastPosition"></a><span class="summary-sig"><span class="summary-sig-name">GetLastPosition</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetRange"></a><span class="summary-sig"><span class="summary-sig-name">GetRange</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>start</span>,
+          <span class=summary-sig-arg>end</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetSelection"></a><span class="summary-sig"><span class="summary-sig-name">GetSelection</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.editwindow.EditWindow-class.html#OnUpdateUI" class="summary-sig-name"><code>OnUpdateUI</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Check for matching braces.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="setDisplayLineNumbers"></a><span class="summary-sig"><span class="summary-sig-name">setDisplayLineNumbers</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>state</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.editwindow.EditWindow-class.html#setStyles" class="summary-sig-name"><code>setStyles</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>faces</span>)</span></code>
+<br />
+Configure font size, typeface and color for lexer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ShowPosition"></a><span class="summary-sig"><span class="summary-sig-name">ShowPosition</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.py.editwindow.EditWindow-class.html#revision"><code>revision</code></a></b> = <span title="'1.14'"><code><span class="variable-quote">'</span>1.14<span class="variable-quote">'</span>                                        </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>138412032</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Create EditWindow instance.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.stc.StyledTextCtrl-class.html#__init__"><code>wx.stc.StyledTextCtrl.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanCopy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanCopy</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return True if text is selected and can be copied.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanCut"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanCut</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return True if text is selected and can be cut.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanEdit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanEdit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return True if editing should succeed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanPaste"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanPaste</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return True if pasting should succeed.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.stc.StyledTextCtrl-class.html#CanPaste"><code>wx.stc.StyledTextCtrl.CanPaste</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnUpdateUI"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnUpdateUI</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Check for matching braces.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setStyles"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setStyles</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>faces</span>)</span>
+  </h3>
+<p>Configure font size, typeface and color for lexer.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="revision"></a>
+<h3>revision</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'1.14'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>1.14<span class="variable-quote">'</span>                                                                 </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:54:12 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

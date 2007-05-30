@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.RendererNative</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;RendererNative
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.RendererNative-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type RendererNative</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>RendererNative</b>
+</pre><br />
+
+<hr/>
+
+<p>One of the design principles of wxWidgets is to use the native
+widgets on every platform in order to be as close as possible to
+the native look and feel on every platform.  However there are
+still cases when some generic widgets are needed for various
+reasons, but it can sometimes take a lot of messy work to make
+them conform to the native LnF.</p>
+<p>The wx.RendererNative class is a collection of functions that have
+platform-specific implementations for drawing certain parts of
+genereic controls in ways that are as close to the native look as
+possible.</p>
+<p>Note that each drawing function restores the <a href="wx.DC-class.html" class="link"><code>wx.DC</code></a> attributes if it
+changes them, so it is safe to assume that the same pen, brush and
+colours that were active before the call to this function are still in
+effect after it.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#DrawCheckBox" class="summary-sig-name"><code>DrawCheckBox</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Draw a check button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#DrawComboBoxDropButton" class="summary-sig-name"><code>DrawComboBoxDropButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Draw a button like the one used by <a href="wx.ComboBox-class.html" class="link"><code>wx.ComboBox</code></a> to show a drop down
+window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#DrawDropArrow" class="summary-sig-name"><code>DrawDropArrow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Draw a drop down arrow that is suitable for use outside a combo
+box.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#DrawHeaderButton" class="summary-sig-name"><code>DrawHeaderButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>sortArrow</span>,
+          <span class=summary-sig-arg>params</span>)</span></code>
+<br />
+Draw a header control button (such as what is used by <a href="wx.ListCtrl-class.html" class="link"><code>wx.ListCtrl</code></a> in report
+mode.)  The optimal size of the label (text and icons) is returned.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#DrawHeaderButtonContents" class="summary-sig-name"><code>DrawHeaderButtonContents</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>sortArrow</span>,
+          <span class=summary-sig-arg>params</span>)</span></code>
+<br />
+Draw the contents of a header control button, (label, sort
+arrows, etc.)  Normally this is only called by <a href="wx.RendererNative-class.html#DrawHeaderButton" class="link"><code>DrawHeaderButton</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#DrawItemSelectionRect" class="summary-sig-name"><code>DrawItemSelectionRect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Draw rectangle indicating that an item in e.g.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#DrawPushButton" class="summary-sig-name"><code>DrawPushButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Draw a blank button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#DrawSplitterBorder" class="summary-sig-name"><code>DrawSplitterBorder</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Draw the border for a sash window: this border must be such that the
+sash drawn by <a href="wx.RendererNative-class.html#DrawSplitterSash" class="link"><code>DrawSplitterSash</code></a> blends into it well.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#DrawSplitterSash" class="summary-sig-name"><code>DrawSplitterSash</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>position</span>,
+          <span class=summary-sig-arg>orient</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Draw a sash.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#DrawTreeItemButton" class="summary-sig-name"><code>DrawTreeItemButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Draw the expanded/collapsed icon for a tree control item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RendererNative</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#Get" class="summary-sig-name"><code>Get</code></a>()</span></code>
+<br />
+Return the currently used renderer    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RendererNative</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#GetDefault" class="summary-sig-name"><code>GetDefault</code></a>()</span></code>
+<br />
+Return the default (native) implementation for this platform -- this
+is also the one used by default but this may be changed by calling
+<code>wx.RendererNative.Set</code> in which case the return value of this method
+may be different from the return value of <code>wx.RendererNative.Get</code>.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RendererNative</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#GetGeneric" class="summary-sig-name"><code>GetGeneric</code></a>()</span></code>
+<br />
+Return the generic implementation of the renderer.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#GetHeaderButtonHeight" class="summary-sig-name"><code>GetHeaderButtonHeight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>)</span></code>
+<br />
+Returns the default height of a header button, either a fixed platform
+height if available, or a generic height based on the window's font.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SplitterRenderParams</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#GetSplitterParams" class="summary-sig-name"><code>GetSplitterParams</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>)</span></code>
+<br />
+Get the splitter parameters, see <a href="wx.SplitterRenderParams-class.html" class="link"><code>wx.SplitterRenderParams</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RendererVersion</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#GetVersion" class="summary-sig-name"><code>GetVersion</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the version of the renderer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RendererNative</font></td>
+  <td><code><span class="summary-sig"><a href="wx.RendererNative-class.html#Set" class="summary-sig-name"><code>Set</code></a>(<span class=summary-sig-arg>renderer</span>)</span></code>
+<br />
+Set the renderer to use, passing None reverts to using the default
+renderer.    <i>(Static method)</i>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.RendererNative-class.html#SplitterParams"><code>SplitterParams</code></a></b>: See <a href="wx.RendererNative-class.html#GetSplitterParams" class="link"><code>GetSplitterParams</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.RendererNative-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.RendererNative-class.html#Version"><code>Version</code></a></b>: See <a href="wx.RendererNative-class.html#GetVersion" class="link"><code>GetVersion</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="DrawCheckBox"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawCheckBox</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Draw a check button.  Flags may use wx.CONTROL_CHECKED,
+wx.CONTROL_UNDETERMINED and wx.CONTROL_CURRENT.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawComboBoxDropButton"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawComboBoxDropButton</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Draw a button like the one used by <a href="wx.ComboBox-class.html" class="link"><code>wx.ComboBox</code></a> to show a drop down
+window. The usual appearance is a downwards pointing arrow.</p>
+<p>The <tt class="rst-docutils literal"><span class="pre">flags</span></tt> parameter may have the <tt class="rst-docutils literal"><span class="pre">wx.CONTROL_PRESSED</span></tt> or
+<tt class="rst-docutils literal"><span class="pre">wx.CONTROL_CURRENT</span></tt> bits set.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawDropArrow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawDropArrow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Draw a drop down arrow that is suitable for use outside a combo
+box. Arrow will have a transparent background.</p>
+<p><tt class="rst-docutils literal"><span class="pre">rect</span></tt> is not entirely filled by the arrow. Instead, you should use
+bounding rectangle of a drop down button which arrow matches the size
+you need. <tt class="rst-docutils literal"><span class="pre">flags</span></tt> may have the <tt class="rst-docutils literal"><span class="pre">wx.CONTROL_PRESSED</span></tt> or
+<tt class="rst-docutils literal"><span class="pre">wx.CONTROL_CURRENT</span></tt> bit set.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawHeaderButton"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawHeaderButton</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>sortArrow</span>=<span class=sig-default>HDR_SORT_ICON_NONE</span>,
+          <span class=sig-arg>params</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Draw a header control button (such as what is used by <a href="wx.ListCtrl-class.html" class="link"><code>wx.ListCtrl</code></a> in report
+mode.)  The optimal size of the label (text and icons) is returned.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>sortArrow</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>params</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=HeaderButtonParams)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawHeaderButtonContents"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawHeaderButtonContents</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>sortArrow</span>=<span class=sig-default>HDR_SORT_ICON_NONE</span>,
+          <span class=sig-arg>params</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Draw the contents of a header control button, (label, sort
+arrows, etc.)  Normally this is only called by <a href="wx.RendererNative-class.html#DrawHeaderButton" class="link"><code>DrawHeaderButton</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>sortArrow</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>params</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=HeaderButtonParams)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawItemSelectionRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawItemSelectionRect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Draw rectangle indicating that an item in e.g. a list control has been
+selected or focused</p>
+<p>The flags parameter may be:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="31%" />
+<col class="rst" width="69%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.CONTROL_SELECTED</td>
+<td class="rst">item is selected, e.g. draw background</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CONTROL_CURRENT</td>
+<td class="rst">item is the current item, e.g. dotted border</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CONTROL_FOCUSED</td>
+<td class="rst">the whole control has focus, e.g. blue
+background vs. grey otherwise</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawPushButton"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawPushButton</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Draw a blank button.  Flags may be wx.CONTROL_PRESSED, wx.CONTROL_CURRENT and
+wx.CONTROL_ISDEFAULT</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawSplitterBorder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawSplitterBorder</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Draw the border for a sash window: this border must be such that the
+sash drawn by <a href="wx.RendererNative-class.html#DrawSplitterSash" class="link"><code>DrawSplitterSash</code></a> blends into it well.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawSplitterSash"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawSplitterSash</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>size</span>,
+          <span class=sig-arg>position</span>,
+          <span class=sig-arg>orient</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Draw a sash. The orient parameter defines whether the sash should be
+vertical or horizontal and how the position should be interpreted.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>position</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>orient</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawTreeItemButton"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawTreeItemButton</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Draw the expanded/collapsed icon for a tree control item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHeaderButtonHeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHeaderButtonHeight</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>)</span>
+  </h3>
+<p>Returns the default height of a header button, either a fixed platform
+height if available, or a generic height based on the window's font.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSplitterParams"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSplitterParams</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>)</span>
+  </h3>
+<p>Get the splitter parameters, see <a href="wx.SplitterRenderParams-class.html" class="link"><code>wx.SplitterRenderParams</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SplitterRenderParams      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetVersion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetVersion</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the version of the renderer.  Will be used for ensuring
+compatibility of dynamically loaded renderers.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+RendererVersion      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="Get"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Get</span>()</span>
+  </h3>
+<p>Return the currently used renderer</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+RendererNative      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDefault"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDefault</span>()</span>
+  </h3>
+<p>Return the default (native) implementation for this platform -- this
+is also the one used by default but this may be changed by calling
+<code>wx.RendererNative.Set</code> in which case the return value of this method
+may be different from the return value of <code>wx.RendererNative.Get</code>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+RendererNative      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGeneric"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGeneric</span>()</span>
+  </h3>
+<p>Return the generic implementation of the renderer. Under some
+platforms, this is the default renderer implementation, others have
+platform-specific default renderer which can be retrieved by calling
+<code>wx.RendererNative.GetDefault</code>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+RendererNative      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Set"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Set</span>(<span class=sig-arg>renderer</span>)</span>
+  </h3>
+<p>Set the renderer to use, passing None reverts to using the default
+renderer.  Returns the previous renderer used with Set or None.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>renderer</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=RendererNative)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+RendererNative      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SplitterParams"></a>
+<h3>SplitterParams</h3>
+<p>See <a href="wx.RendererNative-class.html#GetSplitterParams" class="link"><code>GetSplitterParams</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.RendererNative-class.html#GetSplitterParams" class="summary-sig-name"><code>GetSplitterParams</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Version"></a>
+<h3>Version</h3>
+<p>See <a href="wx.RendererNative-class.html#GetVersion" class="link"><code>GetVersion</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.RendererNative-class.html#GetVersion" class="summary-sig-name"><code>GetVersion</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:55:55 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

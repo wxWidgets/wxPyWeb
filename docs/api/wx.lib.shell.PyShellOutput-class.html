@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.shell.PyShellOutput</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.shell-module.html">Module&nbsp;shell</a> ::
+        Class&nbsp;PyShellOutput
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.shell.PyShellOutput-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type PyShellOutput</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+
+                         |
+                        <b>PyShellOutput</b>
+</pre><br />
+
+<hr/>
+
+<p>PyShell output window</p>
+<p>for now, it is based on simple wxTextCtrl,
+but i'm looking at HTML classes to provide colorized output</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.shell.PyShellOutput-class.html#AddText" class="summary-sig-name"><code>AddText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+write text to output window</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.shell.PyShellOutput-class.html#BeginBatch" class="summary-sig-name"><code>BeginBatch</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+do not refresh display till EndBatch()</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.shell.PyShellOutput-class.html#EndBatch" class="summary-sig-name"><code>EndBatch</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+end batch; start updating display immediately</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.shell.PyShellOutput-class.html#flush" class="summary-sig-name"><code>flush</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+write out all that was left in line buffer</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.shell.PyShellOutput-class.html#OnIdle" class="summary-sig-name"><code>OnIdle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+when there's nothing to do, we can update display</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSize"></a><span class="summary-sig"><span class="summary-sig-name">OnSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.shell.PyShellOutput-class.html#UpdWindow" class="summary-sig-name"><code>UpdWindow</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+sync display with text buffer</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.shell.PyShellOutput-class.html#write" class="summary-sig-name"><code>write</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>str</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+stdout-like interface</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.shell.PyShellOutput-class.html#write_exc" class="summary-sig-name"><code>write_exc</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>str</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+write text in &quot;exception&quot; style</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.shell.PyShellOutput-class.html#write_in" class="summary-sig-name"><code>write_in</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>str</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+write text in &quot;input&quot; style</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>tuple</code></font></td>
+<td><b><a href="wx.lib.shell.PyShellOutput-class.html#erefs"><code>erefs</code></a></b> = <span title="(('&amp;', '&amp;amp;'), ('&gt;', '&amp;gt;'), ('&lt;', '&amp;lt;'), ('  ', '&amp;nbsp; '))"><code>(('&amp;',&nbsp;'&amp;amp;'),&nbsp;('&gt;',&nbsp;'&amp;gt;'),&nbsp;('&lt;',&nbsp;'&amp;lt;'),&nbsp;(<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>tuple</code></font></td>
+<td><b><a href="wx.lib.shell.PyShellOutput-class.html#exc_style"><code>exc_style</code></a></b> = <span title="('&lt;font color=&quot;#FF0000&quot;&gt;&lt;tt&gt;', '&lt;/tt&gt;&lt;/font&gt;\n', '&lt;br&gt;\n')"><code>('&lt;font&nbsp;color=&quot;#FF0000&quot;&gt;&lt;tt&gt;',&nbsp;'&lt;/tt&gt;&lt;/font&gt;<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.shell.PyShellOutput-class.html#html_debug"><code>html_debug</code></a></b> = <span title="0">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>tuple</code></font></td>
+<td><b><a href="wx.lib.shell.PyShellOutput-class.html#in_style"><code>in_style</code></a></b> = <span title="(' &lt;font color=&quot;#000080&quot;&gt;&lt;tt&gt;&amp;gt;&amp;gt;&amp;gt;&amp;nbsp;', '&lt;/tt&gt;&lt;/font&gt;&lt;br&gt;\n', '&lt;br&gt;\n...&amp;nbsp;')"><code>('&nbsp;&lt;font&nbsp;color=&quot;#000080&quot;&gt;&lt;tt&gt;&amp;gt;&amp;gt;&amp;gt;&amp;nbs<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.lib.shell.PyShellOutput-class.html#intro"><code>intro</code></a></b> = <span title="'&lt;H3&gt;wxPython Interactive Shell&lt;/H3&gt;\n'"><code><span class="variable-quote">'</span>&lt;H3&gt;wxPython&nbsp;Interactive&nbsp;Shell&lt;/H3&gt;\n<span class="variable-quote">'</span>          </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>tuple</code></font></td>
+<td><b><a href="wx.lib.shell.PyShellOutput-class.html#out_style"><code>out_style</code></a></b> = <span title="('&lt;tt&gt;', '&lt;/tt&gt;\n', '&lt;br&gt;\n')"><code>('&lt;tt&gt;',&nbsp;'&lt;/tt&gt;\n',&nbsp;'&lt;br&gt;\n')                </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="AddText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>write text to output window</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="BeginBatch"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">BeginBatch</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>do not refresh display till EndBatch()</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EndBatch"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EndBatch</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>end batch; start updating display immediately</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="flush"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">flush</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>write out all that was left in line buffer</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnIdle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnIdle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>when there's nothing to do, we can update display</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdWindow</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>sync display with text buffer</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="write"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">write</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>str</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>stdout-like interface</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="write_exc"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">write_exc</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>str</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>write text in &quot;exception&quot; style</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="write_in"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">write_in</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>str</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>write text in &quot;input&quot; style</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="erefs"></a>
+<h3>erefs</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>tuple</code>
+
+      </dd>
+<span title="(('&amp;', '&amp;amp;'), ('&gt;', '&amp;gt;'), ('&lt;', '&amp;lt;'), ('  ', '&amp;nbsp; '))">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+(('&amp;', '&amp;amp;'), ('&gt;', '&amp;gt;'), ('&lt;', '&amp;lt;'), ('  ', '&amp;nbsp; '))      </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="exc_style"></a>
+<h3>exc_style</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>tuple</code>
+
+      </dd>
+<span title="('&lt;font color=&quot;#FF0000&quot;&gt;&lt;tt&gt;', '&lt;/tt&gt;&lt;/font&gt;\n', '&lt;br&gt;\n')">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+('&lt;font color=&quot;#FF0000&quot;&gt;&lt;tt&gt;', '&lt;/tt&gt;&lt;/font&gt;\n', '&lt;br&gt;\n')             </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="html_debug"></a>
+<h3>html_debug</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="0">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="in_style"></a>
+<h3>in_style</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>tuple</code>
+
+      </dd>
+<span title="(' &lt;font color=&quot;#000080&quot;&gt;&lt;tt&gt;&amp;gt;&amp;gt;&amp;gt;&amp;nbsp;', '&lt;/tt&gt;&lt;/font&gt;&lt;br&gt;\n', '&lt;br&gt;\n...&amp;nbsp;')">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+(' &lt;font color=&quot;#000080&quot;&gt;&lt;tt&gt;&amp;gt;&amp;gt;&amp;gt;&amp;nbsp;',
+ '&lt;/tt&gt;&lt;/font&gt;&lt;br&gt;\n',
+ '&lt;br&gt;\n...&amp;nbsp;')                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="intro"></a>
+<h3>intro</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'&lt;H3&gt;wxPython Interactive Shell&lt;/H3&gt;\n'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'''</span>&lt;H3&gt;wxPython Interactive Shell&lt;/H3&gt;
+<span class="variable-quote">'''</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="out_style"></a>
+<h3>out_style</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>tuple</code>
+
+      </dd>
+<span title="('&lt;tt&gt;', '&lt;/tt&gt;\n', '&lt;br&gt;\n')">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+('&lt;tt&gt;', '&lt;/tt&gt;\n', '&lt;br&gt;\n')                                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:55:13 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.Colour</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;Colour
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.Colour-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Colour</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+    
+         |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+
+             |
+            <b>Colour</b>
+</pre><br />
+
+<hr/>
+
+<p>A colour is an object representing a combination of Red, Green, and
+Blue (RGB) intensity values, and is used to determine drawing colours,
+window colours, etc.  Valid RGB values are in the range 0 to 255.</p>
+<p>In wxPython there are typemaps that will automatically convert from a
+colour name, from a '#RRGGBB' colour hex value string, or from a 3
+integer tuple to a wx.Colour object when calling C++ methods that
+expect a wxColour.  This means that the following are all
+equivallent:</p>
+<pre class="rst-literal-block">
+win.SetBackgroundColour(wxColour(0,0,255))
+win.SetBackgroundColour('BLUE')
+win.SetBackgroundColour('#0000FF')
+win.SetBackgroundColour((0,0,255))
+</pre>
+<p>Additional colour names and their coresponding values can be added
+using <a href="wx.ColourDatabase-class.html" class="link"><code>wx.ColourDatabase</code></a>.  Various system colours (as set in the
+user's system preferences) can be retrieved with
+<code>wx.SystemSettings.GetColour</code>.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>red</span>,
+          <span class=summary-sig-arg>green</span>,
+          <span class=summary-sig-arg>blue</span>,
+          <span class=summary-sig-arg>alpha</span>)</span></code>
+<br />
+Constructs a colour from red, green and blue values.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1316952148"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#__eq__" class="summary-sig-name"><code>__eq__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>other</span>)</span></code>
+<br />
+Compare colours for equality.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__getitem__"></a><span class="summary-sig"><span class="summary-sig-name">__getitem__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__len__"></a><span class="summary-sig"><span class="summary-sig-name">__len__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#__ne__" class="summary-sig-name"><code>__ne__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>other</span>)</span></code>
+<br />
+Compare colours for inequality.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__nonzero__"></a><span class="summary-sig"><span class="summary-sig-name">__nonzero__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__reduce__"></a><span class="summary-sig"><span class="summary-sig-name">__reduce__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__repr__"></a><span class="summary-sig"><span class="summary-sig-name">__repr__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__str__"></a><span class="summary-sig"><span class="summary-sig-name">__str__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">byte</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#Alpha" class="summary-sig-name"><code>Alpha</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the Alpha value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#deprecatedWrapper" class="summary-sig-name"><code>asTuple</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+asTuple is deprecated, use <a href="wx.Colour-class.html#Get" class="link"><code>Get</code></a> instead</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">byte</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#Blue" class="summary-sig-name"><code>Blue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the blue intensity.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(r, g, b)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#Get" class="summary-sig-name"><code>Get</code></a>()</span></code>
+<br />
+Returns the RGB intensity values as a tuple.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#GetAsString" class="summary-sig-name"><code>GetAsString</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Return the colour as a string.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#GetPixel" class="summary-sig-name"><code>GetPixel</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a pixel value which is platform-dependent.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">unsigned long</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#GetRGB" class="summary-sig-name"><code>GetRGB</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the colour as a packed RGB value</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">byte</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#Green" class="summary-sig-name"><code>Green</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the green intensity.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#IsOk" class="summary-sig-name"><code>IsOk</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the colour object is valid (the colour has been
+initialised with RGB values).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#IsOk" class="summary-sig-name"><code>Ok</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the colour object is valid (the colour has been
+initialised with RGB values).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">byte</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#Red" class="summary-sig-name"><code>Red</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the red intensity.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#Set" class="summary-sig-name"><code>Set</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>red</span>,
+          <span class=summary-sig-arg>green</span>,
+          <span class=summary-sig-arg>blue</span>,
+          <span class=summary-sig-arg>alpha</span>)</span></code>
+<br />
+Sets the RGB intensity values.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#SetFromName" class="summary-sig-name"><code>SetFromName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colourName</span>)</span></code>
+<br />
+Sets the RGB intensity values using a colour name listed in
+<tt class="rst-docutils literal"><span class="pre">wx.TheColourDatabase</span></tt>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Colour-class.html#SetRGB" class="summary-sig-name"><code>SetRGB</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetRGB(self, unsigned long colRGB)</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Colour-class.html#Pixel"><code>Pixel</code></a></b>: See <a href="wx.Colour-class.html#GetPixel" class="link"><code>GetPixel</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Colour-class.html#RGB"><code>RGB</code></a></b>: See <a href="wx.Colour-class.html#GetRGB" class="link"><code>GetRGB</code></a> and <a href="wx.Colour-class.html#SetRGB" class="link"><code>SetRGB</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Colour-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>bool</code></font></td>
+<td><b><a href="wx.Colour-class.html#__safe_for_unpickling__"><code>__safe_for_unpickling__</code></a></b> = <span title="True"><code>True                           </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>red</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>green</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>blue</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>alpha</span>=<span class=sig-default>ALPHA_OPAQUE</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructs a colour from red, green and blue values.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>red</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>green</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>blue</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>alpha</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Colour      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Object-class.html#__init__"><code>wx.Object.__init__</code></a></dd>
+    </dl>
+<p><b>See Also:</b> <p>Alternate constructors <a href="wx-module.html#NamedColour" class="link"><code>wx.NamedColour</code></a> and <a href="wx-module.html#ColourRGB" class="link"><code>wx.ColourRGB</code></a>.</p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="__eq__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__eq__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>other</span>)</span>
+    <br /><i>(Equality operator)</i>
+  </h3>
+<p>Compare colours for equality.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>other</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__ne__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__ne__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>other</span>)</span>
+  </h3>
+<p>Compare colours for inequality.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>other</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Alpha"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Alpha</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the Alpha value.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+byte      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="deprecatedWrapper"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">asTuple</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>asTuple is deprecated, use <a href="wx.Colour-class.html#Get" class="link"><code>Get</code></a> instead</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Blue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Blue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the blue intensity.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+byte      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Get"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Get</span>()</span>
+  </h3>
+<p>Returns the RGB intensity values as a tuple.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(r, g, b)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAsString"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAsString</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>wxC2S_NAME|wxC2S_CSS_SYNTAX</span>)</span>
+  </h3>
+<p>Return the colour as a string.  Acceptable flags are:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="35%" />
+<col class="rst" width="65%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.C2S_NAME</td>
+<td class="rst">return colour name, when possible</td>
+</tr>
+<tr class="rst"><td class="rst">wx.C2S_CSS_SYNTAX</td>
+<td class="rst">return colour in rgb(r,g,b) syntax</td>
+</tr>
+<tr class="rst"><td class="rst">wx.C2S_HTML_SYNTAX</td>
+<td class="rst">return colour in #rrggbb syntax</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>flags</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPixel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPixel</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a pixel value which is platform-dependent. On Windows, a
+COLORREF is returned. On X, an allocated pixel value is returned.  -1
+is returned if the pixel is invalid (on X, unallocated).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+long      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRGB"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRGB</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the colour as a packed RGB value</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+unsigned long      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Green"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Green</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the green intensity.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+byte      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsOk"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsOk</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the colour object is valid (the colour has been
+initialised with RGB values).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsOk"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Ok</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the colour object is valid (the colour has been
+initialised with RGB values).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Red"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Red</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the red intensity.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+byte      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Set"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Set</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>red</span>,
+          <span class=sig-arg>green</span>,
+          <span class=sig-arg>blue</span>,
+          <span class=sig-arg>alpha</span>=<span class=sig-default>ALPHA_OPAQUE</span>)</span>
+  </h3>
+<p>Sets the RGB intensity values.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>red</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>green</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>blue</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      <dd><code><b>alpha</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=byte)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFromName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFromName</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colourName</span>)</span>
+  </h3>
+<p>Sets the RGB intensity values using a colour name listed in
+<tt class="rst-docutils literal"><span class="pre">wx.TheColourDatabase</span></tt>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>colourName</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRGB"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRGB</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetRGB(self, unsigned long colRGB)</p>
+<p>Sets the RGB intensity values from a packed RGB value.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Pixel"></a>
+<h3>Pixel</h3>
+<p>See <a href="wx.Colour-class.html#GetPixel" class="link"><code>GetPixel</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Colour-class.html#GetPixel" class="summary-sig-name"><code>GetPixel</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="RGB"></a>
+<h3>RGB</h3>
+<p>See <a href="wx.Colour-class.html#GetRGB" class="link"><code>GetRGB</code></a> and <a href="wx.Colour-class.html#SetRGB" class="link"><code>SetRGB</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Colour-class.html#GetRGB" class="summary-sig-name"><code>GetRGB</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Colour-class.html#SetRGB" class="summary-sig-name"><code>SetRGB</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__safe_for_unpickling__"></a>
+<h3>__safe_for_unpickling__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>bool</code>
+
+      </dd>
+<span title="True">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+True                                                                   </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:58:08 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

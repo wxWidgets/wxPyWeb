@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.evtmgr.EventManager</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.evtmgr-module.html">Module&nbsp;evtmgr</a> ::
+        Class&nbsp;EventManager
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.evtmgr.EventManager-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class EventManager</h2>
+
+<hr/>
+
+<p>This is the main class in the module, and is the only class that
+the application programmer needs to use.  There is a pre-created
+instance of this class called 'eventManager'.  It should not be
+necessary to create other instances.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.evtmgr.EventManager-class.html#Register" class="summary-sig-name"><code>Bind</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>listener</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>source</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Registers a listener function (or any callable object) to
+receive events of type event coming from the source window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.evtmgr.EventManager-class.html#DeregisterDeadTopics" class="summary-sig-name"><code>DeregisterDeadTopics</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Deregister any entries relating to dead
+wxPython objects.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.evtmgr.EventManager-class.html#DeregisterListener" class="summary-sig-name"><code>DeregisterListener</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>listener</span>)</span></code>
+<br />
+Deregister all event notifications for the given listener.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.evtmgr.EventManager-class.html#DeregisterWindow" class="summary-sig-name"><code>DeregisterWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>)</span></code>
+<br />
+Deregister all events coming from the given window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.evtmgr.EventManager-class.html#GetDeadTopics" class="summary-sig-name"><code>GetDeadTopics</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return a list of topics relating to dead wxPython
+objects.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.evtmgr.EventManager-class.html#GetStats" class="summary-sig-name"><code>GetStats</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return a dictionary with data about my state.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.evtmgr.EventManager-class.html#Register" class="summary-sig-name"><code>Register</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>listener</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>source</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Registers a listener function (or any callable object) to
+receive events of type event coming from the source window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.evtmgr.EventManager-class.html#Register" class="summary-sig-name"><code>Subscribe</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>listener</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>source</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Registers a listener function (or any callable object) to
+receive events of type event coming from the source window.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="Register"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Bind</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>listener</span>,
+          <span class=sig-arg>event</span>,
+          <span class=sig-arg>source</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>win</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Registers a listener function (or any callable object) to
+receive events of type event coming from the source window.
+For example:</p>
+<pre class="rst-literal-block">
+eventManager.Register(self.OnButton, EVT_BUTTON, theButton)
+</pre>
+<p>Alternatively, the specific window where the event is
+delivered, and/or the ID of the event source can be specified.
+For example:</p>
+<pre class="rst-literal-block">
+eventManager.Register(self.OnButton, EVT_BUTTON, win=self, id=ID_BUTTON)
+</pre>
+<p>or:</p>
+<pre class="rst-literal-block">
+eventManager.Register(self.OnButton, EVT_BUTTON, theButton, self)
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeregisterDeadTopics"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeregisterDeadTopics</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Deregister any entries relating to dead
+wxPython objects.  Not sure if this is an
+important issue; 1) My app code always de-registers
+listeners it doesn't need.  2) I don't think
+that lingering references to these dead objects
+is a problem.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeregisterListener"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeregisterListener</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>listener</span>)</span>
+  </h3>
+<p>Deregister all event notifications for the given listener.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeregisterWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeregisterWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>)</span>
+  </h3>
+<p>Deregister all events coming from the given window.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDeadTopics"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDeadTopics</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return a list of topics relating to dead wxPython
+objects.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetStats"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetStats</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return a dictionary with data about my state.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Register"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Register</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>listener</span>,
+          <span class=sig-arg>event</span>,
+          <span class=sig-arg>source</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>win</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Registers a listener function (or any callable object) to
+receive events of type event coming from the source window.
+For example:</p>
+<pre class="rst-literal-block">
+eventManager.Register(self.OnButton, EVT_BUTTON, theButton)
+</pre>
+<p>Alternatively, the specific window where the event is
+delivered, and/or the ID of the event source can be specified.
+For example:</p>
+<pre class="rst-literal-block">
+eventManager.Register(self.OnButton, EVT_BUTTON, win=self, id=ID_BUTTON)
+</pre>
+<p>or:</p>
+<pre class="rst-literal-block">
+eventManager.Register(self.OnButton, EVT_BUTTON, theButton, self)
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Register"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Subscribe</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>listener</span>,
+          <span class=sig-arg>event</span>,
+          <span class=sig-arg>source</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>win</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Registers a listener function (or any callable object) to
+receive events of type event coming from the source window.
+For example:</p>
+<pre class="rst-literal-block">
+eventManager.Register(self.OnButton, EVT_BUTTON, theButton)
+</pre>
+<p>Alternatively, the specific window where the event is
+delivered, and/or the ID of the event source can be specified.
+For example:</p>
+<pre class="rst-literal-block">
+eventManager.Register(self.OnButton, EVT_BUTTON, win=self, id=ID_BUTTON)
+</pre>
+<p>or:</p>
+<pre class="rst-literal-block">
+eventManager.Register(self.OnButton, EVT_BUTTON, theButton, self)
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:00:35 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

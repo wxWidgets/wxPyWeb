@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>distutils.command.install.install</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        Package&nbsp;distutils ::
+        Package&nbsp;command ::
+        Module&nbsp;install ::
+        Class&nbsp;install
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="distutils.command.install.install-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class install</h2>
+
+<pre class="base-tree">
+<a href="distutils.cmd.Command-class.html"><code>Command</code></a> --+
+          |
+         <b>install</b>
+</pre><br />
+
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="change_roots"></a><span class="summary-sig"><span class="summary-sig-name">change_roots</span>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*names</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="convert_paths"></a><span class="summary-sig"><span class="summary-sig-name">convert_paths</span>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*names</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="create_path_file"></a><span class="summary-sig"><span class="summary-sig-name">create_path_file</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="dump_dirs"></a><span class="summary-sig"><span class="summary-sig-name">dump_dirs</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="expand_basedirs"></a><span class="summary-sig"><span class="summary-sig-name">expand_basedirs</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="expand_dirs"></a><span class="summary-sig"><span class="summary-sig-name">expand_dirs</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.command.install.install-class.html#finalize_options" class="summary-sig-name"><code>finalize_options</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Set final values for all the options that this command supports.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="finalize_other"></a><span class="summary-sig"><span class="summary-sig-name">finalize_other</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="finalize_unix"></a><span class="summary-sig"><span class="summary-sig-name">finalize_unix</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="get_inputs"></a><span class="summary-sig"><span class="summary-sig-name">get_inputs</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="get_outputs"></a><span class="summary-sig"><span class="summary-sig-name">get_outputs</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="handle_extra_path"></a><span class="summary-sig"><span class="summary-sig-name">handle_extra_path</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="has_data"></a><span class="summary-sig"><span class="summary-sig-name">has_data</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="has_headers"></a><span class="summary-sig"><span class="summary-sig-name">has_headers</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.command.install.install-class.html#has_lib" class="summary-sig-name"><code>has_lib</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return true if the current distribution has any Python
+modules to install.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="has_scripts"></a><span class="summary-sig"><span class="summary-sig-name">has_scripts</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.command.install.install-class.html#initialize_options" class="summary-sig-name"><code>initialize_options</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Set default values for all the options that this command
+supports.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.command.install.install-class.html#run" class="summary-sig-name"><code>run</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+A command's raison d'etre: carry out the action it exists to
+perform, controlled by the options initialized in
+'initialize_options()', customized by other commands, the setup
+script, the command-line, and config files, and finalized in
+'finalize_options()'.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="select_scheme"></a><span class="summary-sig"><span class="summary-sig-name">select_scheme</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>list</code></font></td>
+<td><b><a href="distutils.command.install.install-class.html#boolean_options"><code>boolean_options</code></a></b> = <span title="['compile', 'force', 'skip-build']"><code>['compile',&nbsp;'force',&nbsp;'skip-build']     </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="distutils.command.install.install-class.html#description"><code>description</code></a></b> = <span title="'install everything from build directory'"><code><span class="variable-quote">'</span>install&nbsp;everything&nbsp;from&nbsp;build&nbsp;directory<span class="variable-quote">'</span>  </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="distutils.command.install.install-class.html#negative_opt"><code>negative_opt</code></a></b> = <span title="{'no-compile': 'compile'}"><code>{'no-compile':&nbsp;'compile'}                 </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>list</code></font></td>
+<td><b><a href="distutils.command.install.install-class.html#sub_commands"><code>sub_commands</code></a></b> = <span title="[('install_lib', &lt;function has_lib at 0xb7758ca4&gt;), ('install_headers', &lt;function has_headers at 0xb7758cdc&gt;), ('install_scripts', &lt;function has_scripts at 0xb7758d14&gt;), ('install_data', &lt;function has_data at 0xb7758d4c&gt;)]"><code>[('install_lib',&nbsp;&lt;function&nbsp;has_lib&nbsp;at&nbsp;0xb<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>list</code></font></td>
+<td><b><a href="distutils.command.install.install-class.html#user_options"><code>user_options</code></a></b> = <span title="[('prefix=', None, 'installation prefix'), ('exec-prefix=', None, '(Unix only) prefix for platform-specific files'), ('home=', None, '(Unix only) home directory to install under'), ('install-base=', None, 'base installation directory (instead of --prefix or --home)'), ('install-platbase=', None, 'base installation directory for platform-specific files (instead of --exec-prefix or --home)'), ('root=', None, 'install everything relative to this alternate root directory'), ('install-purelib=', None, 'installation directory for pure Python module distributions'), ('install-platlib=', None, 'ins..."><code>[('prefix=',&nbsp;None,&nbsp;'installation&nbsp;prefix')<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="finalize_options"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">finalize_options</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Set final values for all the options that this command supports.
+This is always called as late as possible, ie.  after any option
+assignments from the command-line or from other commands have been
+done.  Thus, this is the place to code option dependencies: if
+'foo' depends on 'bar', then it is safe to set 'foo' from 'bar' as
+long as 'foo' still has the same value it was assigned in
+'initialize_options()'.</p>
+<p>This method must be implemented by all command classes.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="distutils.cmd.Command-class.html#finalize_options"><code>distutils.cmd.Command.finalize_options</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="has_lib"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">has_lib</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return true if the current distribution has any Python
+modules to install.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="initialize_options"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">initialize_options</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Set default values for all the options that this command
+supports.  Note that these defaults may be overridden by other
+commands, by the setup script, by config files, or by the
+command-line.  Thus, this is not the place to code dependencies
+between options; generally, 'initialize_options()' implementations
+are just a bunch of &quot;self.foo = None&quot; assignments.</p>
+<p>This method must be implemented by all command classes.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="distutils.cmd.Command-class.html#initialize_options"><code>distutils.cmd.Command.initialize_options</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="run"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">run</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>A command's raison d'etre: carry out the action it exists to
+perform, controlled by the options initialized in
+'initialize_options()', customized by other commands, the setup
+script, the command-line, and config files, and finalized in
+'finalize_options()'.  All terminal output and filesystem
+interaction should be done by 'run()'.</p>
+<p>This method must be implemented by all command classes.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="distutils.cmd.Command-class.html#run"><code>distutils.cmd.Command.run</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="boolean_options"></a>
+<h3>boolean_options</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>list</code>
+
+      </dd>
+<span title="['compile', 'force', 'skip-build']">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+['compile', 'force', 'skip-build']                                     </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="description"></a>
+<h3>description</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'install everything from build directory'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>install everything from build directory<span class="variable-quote">'</span>                              </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="negative_opt"></a>
+<h3>negative_opt</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{'no-compile': 'compile'}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{'no-compile': 'compile'}                                              </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="sub_commands"></a>
+<h3>sub_commands</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>list</code>
+
+      </dd>
+<span title="[('install_lib', &lt;function has_lib at 0xb7758ca4&gt;), ('install_headers', &lt;function has_headers at 0xb7758cdc&gt;), ('install_scripts', &lt;function has_scripts at 0xb7758d14&gt;), ('install_data', &lt;function has_data at 0xb7758d4c&gt;)]">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+[('install_lib', &lt;function has_lib at 0xb7758ca4&gt;),
+ ('install_headers', &lt;function has_headers at 0xb7758cdc&gt;),
+ ('install_scripts', &lt;function has_scripts at 0xb7758d14&gt;),
+ ('install_data', &lt;function has_data at 0xb7758d4c&gt;)]                  </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="user_options"></a>
+<h3>user_options</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>list</code>
+
+      </dd>
+<span title="[('prefix=', None, 'installation prefix'), ('exec-prefix=', None, '(Unix only) prefix for platform-specific files'), ('home=', None, '(Unix only) home directory to install under'), ('install-base=', None, 'base installation directory (instead of --prefix or --home)'), ('install-platbase=', None, 'base installation directory for platform-specific files (instead of --exec-prefix or --home)'), ('root=', None, 'install everything relative to this alternate root directory'), ('install-purelib=', None, 'installation directory for pure Python module distributions'), ('install-platlib=', None, 'ins...">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+[('prefix=', None, 'installation prefix'),
+ ('exec-prefix=', None, '(Unix only) prefix for platform-specific file<span class="variable-linewrap">\</span>
+s'),
+ ('home=', None, '(Unix only) home directory to install under'),
+ ('install-base=',
+  None,
+  'base installation directory (instead of --prefix or --home)'),
+ ('install-platbase=',
+<span class="variable-ellipsis">...</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:59:34 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

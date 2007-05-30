@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.PyApp</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;PyApp
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.PyApp-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type PyApp</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+
+                 |
+                <b>PyApp</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.App-class.html"><code>App</code></a></dd></dl>
+
+<hr/>
+
+<p>The <tt class="rst-docutils literal"><span class="pre">wx.PyApp</span></tt> class is an <em>implementation detail</em>, please use the
+<a href="wx.App-class.html" class="link"><code>wx.App</code></a> class (or some other derived class) instead.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyApp</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Create a new application object, starting the bootstrap process.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1286228532"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#Dispatch" class="summary-sig-name"><code>Dispatch</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Process the first event in the event queue (blocks until an event
+appears if there are none currently)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#Exit" class="summary-sig-name"><code>Exit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Exit the main loop thus terminating the application.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#ExitMainLoop" class="summary-sig-name"><code>ExitMainLoop</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Exit the main GUI loop during the next iteration of the main
+loop, (i.e.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#GetAppName" class="summary-sig-name"><code>GetAppName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the application name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#GetAssertMode" class="summary-sig-name"><code>GetAssertMode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the current OnAssert behaviour setting.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#GetClassName" class="summary-sig-name"><code>GetClassName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the application's class name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#GetComCtl32Version" class="summary-sig-name"><code>GetComCtl32Version</code></a>()</span></code>
+<br />
+Returns 400, 470, 471, etc.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#GetExitOnFrameDelete" class="summary-sig-name"><code>GetExitOnFrameDelete</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the current exit behaviour setting.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#GetLayoutDirection" class="summary-sig-name"><code>GetLayoutDirection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the layout direction for the current locale.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><a name="GetMacAboutMenuItemId"></a><span class="summary-sig"><span class="summary-sig-name">GetMacAboutMenuItemId</span>()</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><a name="GetMacExitMenuItemId"></a><span class="summary-sig"><span class="summary-sig-name">GetMacExitMenuItemId</span>()</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="GetMacHelpMenuTitleName"></a><span class="summary-sig"><span class="summary-sig-name">GetMacHelpMenuTitleName</span>()</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><a name="GetMacPreferencesMenuItemId"></a><span class="summary-sig"><span class="summary-sig-name">GetMacPreferencesMenuItemId</span>()</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="GetMacSupportPCMenuShortcuts"></a><span class="summary-sig"><span class="summary-sig-name">GetMacSupportPCMenuShortcuts</span>()</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetPrintMode"></a><span class="summary-sig"><span class="summary-sig-name">GetPrintMode</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#GetTopWindow" class="summary-sig-name"><code>GetTopWindow</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the <em>main</em> top level window (if it hadn't been set previously
+with SetTopWindow(), will return just some top level window and, if
+there not any, will return None)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxAppTraits</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#GetTraits" class="summary-sig-name"><code>GetTraits</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return (and create if necessary) the app traits object to which we
+delegate for everything which either should be configurable by the
+user (then he can change the default behaviour simply by overriding
+CreateTraits() and returning his own traits object) or which is
+GUI/console dependent as then wx.AppTraits allows us to abstract the
+differences behind the common facade.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#GetUseBestVisual" class="summary-sig-name"><code>GetUseBestVisual</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get current UseBestVisual setting.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#GetVendorName" class="summary-sig-name"><code>GetVendorName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the application's vendor name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#IsActive" class="summary-sig-name"><code>IsActive</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return True if our app has focus.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#IsDisplayAvailable" class="summary-sig-name"><code>IsDisplayAvailable</code></a>()</span></code>
+<br />
+Tests if it is possible to create a GUI in the current environment.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#IsMainLoopRunning" class="summary-sig-name"><code>IsMainLoopRunning</code></a>()</span></code>
+<br />
+Returns True if we're running the main loop, i.e.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#MainLoop" class="summary-sig-name"><code>MainLoop</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Execute the main GUI loop, the function doesn't normally return until
+all top level windows have been closed and destroyed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#Pending" class="summary-sig-name"><code>Pending</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if there are unprocessed events in the event queue.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#ProcessIdle" class="summary-sig-name"><code>ProcessIdle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Called from the MainLoop when the application becomes idle (there are
+no pending events) and sends a <a href="wx.IdleEvent-class.html" class="link"><code>wx.IdleEvent</code></a> to all interested
+parties.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#ProcessPendingEvents" class="summary-sig-name"><code>ProcessPendingEvents</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Process all events in the Pending Events list -- it is necessary to
+call this function to process posted events.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#SendIdleEvents" class="summary-sig-name"><code>SendIdleEvents</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Send idle event to window and all subwindows.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#SetAppName" class="summary-sig-name"><code>SetAppName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Set the application name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#SetAssertMode" class="summary-sig-name"><code>SetAssertMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+Set the OnAssert behaviour for debug and hybrid builds.The following flags may be or'd together:</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#SetClassName" class="summary-sig-name"><code>SetClassName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Set the application's class name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#SetExitOnFrameDelete" class="summary-sig-name"><code>SetExitOnFrameDelete</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>flag</span>)</span></code>
+<br />
+Control the exit behaviour: by default, the program will exit the main
+loop (and so, usually, terminate) when the last top-level program
+window is deleted.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMacAboutMenuItemId"></a><span class="summary-sig"><span class="summary-sig-name">SetMacAboutMenuItemId</span>(<span class=summary-sig-arg>val</span>)</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMacExitMenuItemId"></a><span class="summary-sig"><span class="summary-sig-name">SetMacExitMenuItemId</span>(<span class=summary-sig-arg>val</span>)</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMacHelpMenuTitleName"></a><span class="summary-sig"><span class="summary-sig-name">SetMacHelpMenuTitleName</span>(<span class=summary-sig-arg>val</span>)</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMacPreferencesMenuItemId"></a><span class="summary-sig"><span class="summary-sig-name">SetMacPreferencesMenuItemId</span>(<span class=summary-sig-arg>val</span>)</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMacSupportPCMenuShortcuts"></a><span class="summary-sig"><span class="summary-sig-name">SetMacSupportPCMenuShortcuts</span>(<span class=summary-sig-arg>val</span>)</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetPrintMode"></a><span class="summary-sig"><span class="summary-sig-name">SetPrintMode</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#SetTopWindow" class="summary-sig-name"><code>SetTopWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>)</span></code>
+<br />
+Set the <em>main</em> top level window</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#SetUseBestVisual" class="summary-sig-name"><code>SetUseBestVisual</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>flag</span>,
+          <span class=summary-sig-arg>forceTrueColour</span>)</span></code>
+<br />
+Set whether the app should try to use the best available visual on
+systems where more than one is available, (Sun, SGI, XFree86 4, etc.)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#SetVendorName" class="summary-sig-name"><code>SetVendorName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Set the application's vendor name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#WakeUpIdle" class="summary-sig-name"><code>WakeUpIdle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Make sure that idle events are sent again.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PyApp-class.html#Yield" class="summary-sig-name"><code>Yield</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>onlyIfNeeded</span>)</span></code>
+<br />
+Process all currently pending events right now, instead of waiting
+until return to the event loop.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#Active"><code>Active</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#AppName"><code>AppName</code></a></b>: See <a href="wx.PyApp-class.html#GetAppName" class="link"><code>GetAppName</code></a> and <a href="wx.PyApp-class.html#SetAppName" class="link"><code>SetAppName</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#AssertMode"><code>AssertMode</code></a></b>: See <a href="wx.PyApp-class.html#GetAssertMode" class="link"><code>GetAssertMode</code></a> and <a href="wx.PyApp-class.html#SetAssertMode" class="link"><code>SetAssertMode</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#ClassName"><code>ClassName</code></a></b>: See <a href="wx.PyApp-class.html#GetClassName" class="link"><code>GetClassName</code></a> and <a href="wx.PyApp-class.html#SetClassName" class="link"><code>SetClassName</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#ExitOnFrameDelete"><code>ExitOnFrameDelete</code></a></b>: See <a href="wx.PyApp-class.html#GetExitOnFrameDelete" class="link"><code>GetExitOnFrameDelete</code></a> and <a href="wx.PyApp-class.html#SetExitOnFrameDelete" class="link"><code>SetExitOnFrameDelete</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#LayoutDirection"><code>LayoutDirection</code></a></b>: See <a href="wx.PyApp-class.html#GetLayoutDirection" class="link"><code>GetLayoutDirection</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#PrintMode"><code>PrintMode</code></a></b>: See <a href="wx.PyApp-class.html#GetPrintMode" class="link"><code>GetPrintMode</code></a> and <a href="wx.PyApp-class.html#SetPrintMode" class="link"><code>SetPrintMode</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#TopWindow"><code>TopWindow</code></a></b>: See <a href="wx.PyApp-class.html#GetTopWindow" class="link"><code>GetTopWindow</code></a> and <a href="wx.PyApp-class.html#SetTopWindow" class="link"><code>SetTopWindow</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#Traits"><code>Traits</code></a></b>: See <a href="wx.PyApp-class.html#GetTraits" class="link"><code>GetTraits</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#UseBestVisual"><code>UseBestVisual</code></a></b>: See <a href="wx.PyApp-class.html#GetUseBestVisual" class="link"><code>GetUseBestVisual</code></a> and <a href="wx.PyApp-class.html#SetUseBestVisual" class="link"><code>SetUseBestVisual</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PyApp-class.html#VendorName"><code>VendorName</code></a></b>: See <a href="wx.PyApp-class.html#GetVendorName" class="link"><code>GetVendorName</code></a> and <a href="wx.PyApp-class.html#SetVendorName" class="link"><code>SetVendorName</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Create a new application object, starting the bootstrap process.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyApp      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.EvtHandler-class.html#__init__"><code>wx.EvtHandler.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Dispatch"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Dispatch</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Process the first event in the event queue (blocks until an event
+appears if there are none currently)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Exit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Exit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Exit the main loop thus terminating the application.
+:see: <a href="wx-module.html#Exit" class="link"><code>wx.Exit</code></a></p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ExitMainLoop"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ExitMainLoop</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Exit the main GUI loop during the next iteration of the main
+loop, (i.e. it does not stop the program immediately!)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAppName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAppName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the application name.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAssertMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAssertMode</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the current OnAssert behaviour setting.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetClassName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClassName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the application's class name.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Object-class.html#GetClassName"><code>wx.Object.GetClassName</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetExitOnFrameDelete"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetExitOnFrameDelete</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the current exit behaviour setting.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLayoutDirection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLayoutDirection</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the layout direction for the current locale.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTopWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTopWindow</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the <em>main</em> top level window (if it hadn't been set previously
+with SetTopWindow(), will return just some top level window and, if
+there not any, will return None)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Window      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTraits"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTraits</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return (and create if necessary) the app traits object to which we
+delegate for everything which either should be configurable by the
+user (then he can change the default behaviour simply by overriding
+CreateTraits() and returning his own traits object) or which is
+GUI/console dependent as then wx.AppTraits allows us to abstract the
+differences behind the common facade.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+wxAppTraits      </dd>
+    </dl>
+<p><b>To Do:</b> <p>Add support for overriding CreateAppTraits in wxPython.</p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetUseBestVisual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetUseBestVisual</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get current UseBestVisual setting.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetVendorName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetVendorName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the application's vendor name.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsActive"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsActive</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return True if our app has focus.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MainLoop"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MainLoop</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Execute the main GUI loop, the function doesn't normally return until
+all top level windows have been closed and destroyed.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Pending"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Pending</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if there are unprocessed events in the event queue.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessIdle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessIdle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Called from the MainLoop when the application becomes idle (there are
+no pending events) and sends a <a href="wx.IdleEvent-class.html" class="link"><code>wx.IdleEvent</code></a> to all interested
+parties.  Returns True if more idle events are needed, False if not.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessPendingEvents"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessPendingEvents</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Process all events in the Pending Events list -- it is necessary to
+call this function to process posted events. This normally happens
+during each event loop iteration.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.EvtHandler-class.html#ProcessPendingEvents"><code>wx.EvtHandler.ProcessPendingEvents</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SendIdleEvents"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SendIdleEvents</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Send idle event to window and all subwindows.  Returns True if more
+idle time is requested.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>event</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=IdleEvent)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAppName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAppName</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Set the application name. This value may be used automatically by
+<a href="wx.Config-class.html" class="link"><code>wx.Config</code></a> and such.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAssertMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAssertMode</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mode</span>)</span>
+  </h3>
+<p>Set the OnAssert behaviour for debug and hybrid builds.The following flags may be or'd together:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="37%" />
+<col class="rst" width="63%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.PYAPP_ASSERT_SUPPRESS</td>
+<td class="rst">Don't do anything</td>
+</tr>
+<tr class="rst"><td class="rst">wx.PYAPP_ASSERT_EXCEPTION</td>
+<td class="rst">Turn it into a Python exception if possible
+(default)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.PYAPP_ASSERT_DIALOG</td>
+<td class="rst">Display a message dialog</td>
+</tr>
+<tr class="rst"><td class="rst">wx.PYAPP_ASSERT_LOG</td>
+<td class="rst">Write the assertion info to the wx.Log</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>mode</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetClassName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetClassName</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Set the application's class name. This value may be used for
+X-resources if applicable for the platform</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetExitOnFrameDelete"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetExitOnFrameDelete</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>flag</span>)</span>
+  </h3>
+<p>Control the exit behaviour: by default, the program will exit the main
+loop (and so, usually, terminate) when the last top-level program
+window is deleted.  Beware that if you disable this behaviour (with
+SetExitOnFrameDelete(False)), you'll have to call ExitMainLoop()
+explicitly from somewhere.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>flag</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTopWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTopWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>)</span>
+  </h3>
+<p>Set the <em>main</em> top level window</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetUseBestVisual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetUseBestVisual</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>flag</span>,
+          <span class=sig-arg>forceTrueColour</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Set whether the app should try to use the best available visual on
+systems where more than one is available, (Sun, SGI, XFree86 4, etc.)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>flag</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      <dd><code><b>forceTrueColour</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetVendorName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetVendorName</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Set the application's vendor name. This value may be used
+automatically by <a href="wx.Config-class.html" class="link"><code>wx.Config</code></a> and such.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="WakeUpIdle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">WakeUpIdle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Make sure that idle events are sent again.
+:see: <a href="wx-module.html#WakeUpIdle" class="link"><code>wx.WakeUpIdle</code></a></p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Yield"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Yield</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>onlyIfNeeded</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Process all currently pending events right now, instead of waiting
+until return to the event loop.  It is an error to call <tt class="rst-docutils literal"><span class="pre">Yield</span></tt>
+recursively unless the value of <tt class="rst-docutils literal"><span class="pre">onlyIfNeeded</span></tt> is True.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>onlyIfNeeded</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+<p><b>Warning:</b> <p>This function is dangerous as it can lead to unexpected
+reentrancies (i.e. when called from an event handler it may
+result in calling the same event handler again), use with
+extreme care or, better, don't use at all!</p>
+</p>
+
+<p><b>See Also:</b> <p><a href="wx-module.html#Yield" class="link"><code>wx.Yield</code></a>, <a href="wx-module.html#YieldIfNeeded" class="link"><code>wx.YieldIfNeeded</code></a>, <a href="wx-module.html#SafeYield" class="link"><code>wx.SafeYield</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="GetComCtl32Version"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetComCtl32Version</span>()</span>
+  </h3>
+<p>Returns 400, 470, 471, etc. for comctl32.dll 4.00, 4.70, 4.71 or 0 if
+it wasn't found at all.  Raises an exception on non-Windows platforms.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsDisplayAvailable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsDisplayAvailable</span>()</span>
+  </h3>
+<p>Tests if it is possible to create a GUI in the current environment.
+This will mean different things on the different platforms.</p>
+<blockquote>
+<ul class="rst-simple">
+<li>On X Windows systems this function will return <tt class="rst-docutils literal"><span class="pre">False</span></tt> if it is
+not able to open a connection to the X display, which can happen
+if $DISPLAY is not set, or is not set correctly.</li>
+<li>On Mac OS X a <tt class="rst-docutils literal"><span class="pre">False</span></tt> return value will mean that wx is not
+able to access the window manager, which can happen if logged in
+remotely or if running from the normal version of python instead
+of the framework version, (i.e., pythonw.)</li>
+<li>On MS Windows...</li>
+</ul>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsMainLoopRunning"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsMainLoopRunning</span>()</span>
+  </h3>
+<p>Returns True if we're running the main loop, i.e. if the events can
+currently be dispatched.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Active"></a>
+<h3>Active</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#IsActive" class="summary-sig-name"><code>IsActive</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="AppName"></a>
+<h3>AppName</h3>
+<p>See <a href="wx.PyApp-class.html#GetAppName" class="link"><code>GetAppName</code></a> and <a href="wx.PyApp-class.html#SetAppName" class="link"><code>SetAppName</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#GetAppName" class="summary-sig-name"><code>GetAppName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#SetAppName" class="summary-sig-name"><code>SetAppName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="AssertMode"></a>
+<h3>AssertMode</h3>
+<p>See <a href="wx.PyApp-class.html#GetAssertMode" class="link"><code>GetAssertMode</code></a> and <a href="wx.PyApp-class.html#SetAssertMode" class="link"><code>SetAssertMode</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#GetAssertMode" class="summary-sig-name"><code>GetAssertMode</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#SetAssertMode" class="summary-sig-name"><code>SetAssertMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ClassName"></a>
+<h3>ClassName</h3>
+<p>See <a href="wx.PyApp-class.html#GetClassName" class="link"><code>GetClassName</code></a> and <a href="wx.PyApp-class.html#SetClassName" class="link"><code>SetClassName</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#GetClassName" class="summary-sig-name"><code>GetClassName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#SetClassName" class="summary-sig-name"><code>SetClassName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ExitOnFrameDelete"></a>
+<h3>ExitOnFrameDelete</h3>
+<p>See <a href="wx.PyApp-class.html#GetExitOnFrameDelete" class="link"><code>GetExitOnFrameDelete</code></a> and <a href="wx.PyApp-class.html#SetExitOnFrameDelete" class="link"><code>SetExitOnFrameDelete</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#GetExitOnFrameDelete" class="summary-sig-name"><code>GetExitOnFrameDelete</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#SetExitOnFrameDelete" class="summary-sig-name"><code>SetExitOnFrameDelete</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>flag</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="LayoutDirection"></a>
+<h3>LayoutDirection</h3>
+<p>See <a href="wx.PyApp-class.html#GetLayoutDirection" class="link"><code>GetLayoutDirection</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#GetLayoutDirection" class="summary-sig-name"><code>GetLayoutDirection</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="PrintMode"></a>
+<h3>PrintMode</h3>
+<p>See <a href="wx.PyApp-class.html#GetPrintMode" class="link"><code>GetPrintMode</code></a> and <a href="wx.PyApp-class.html#SetPrintMode" class="link"><code>SetPrintMode</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#GetPrintMode" class="summary-sig-name"><code>GetPrintMode</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#SetPrintMode" class="summary-sig-name"><code>SetPrintMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="TopWindow"></a>
+<h3>TopWindow</h3>
+<p>See <a href="wx.PyApp-class.html#GetTopWindow" class="link"><code>GetTopWindow</code></a> and <a href="wx.PyApp-class.html#SetTopWindow" class="link"><code>SetTopWindow</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#GetTopWindow" class="summary-sig-name"><code>GetTopWindow</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#SetTopWindow" class="summary-sig-name"><code>SetTopWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Traits"></a>
+<h3>Traits</h3>
+<p>See <a href="wx.PyApp-class.html#GetTraits" class="link"><code>GetTraits</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#GetTraits" class="summary-sig-name"><code>GetTraits</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="UseBestVisual"></a>
+<h3>UseBestVisual</h3>
+<p>See <a href="wx.PyApp-class.html#GetUseBestVisual" class="link"><code>GetUseBestVisual</code></a> and <a href="wx.PyApp-class.html#SetUseBestVisual" class="link"><code>SetUseBestVisual</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#GetUseBestVisual" class="summary-sig-name"><code>GetUseBestVisual</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#SetUseBestVisual" class="summary-sig-name"><code>SetUseBestVisual</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>flag</span>,
+          <span class=summary-sig-arg>forceTrueColour</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="VendorName"></a>
+<h3>VendorName</h3>
+<p>See <a href="wx.PyApp-class.html#GetVendorName" class="link"><code>GetVendorName</code></a> and <a href="wx.PyApp-class.html#SetVendorName" class="link"><code>SetVendorName</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#GetVendorName" class="summary-sig-name"><code>GetVendorName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PyApp-class.html#SetVendorName" class="summary-sig-name"><code>SetVendorName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:56:50 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

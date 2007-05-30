@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.ToolBarToolBase</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;ToolBarToolBase
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.ToolBarToolBase-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type ToolBarToolBase</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+    
+         |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+
+             |
+            <b>ToolBarToolBase</b>
+</pre><br />
+
+<hr/>
+
+<p>Proxy of C++ ToolBarToolBase class</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Attach"></a><span class="summary-sig"><span class="summary-sig-name">Attach</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>tbar</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="CanBeToggled"></a><span class="summary-sig"><span class="summary-sig-name">CanBeToggled</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Detach"></a><span class="summary-sig"><span class="summary-sig-name">Detach</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="Enable"></a><span class="summary-sig"><span class="summary-sig-name">Enable</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><a name="GetBitmap"></a><span class="summary-sig"><span class="summary-sig-name">GetBitmap</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><a name="GetNormalBitmap"></a><span class="summary-sig"><span class="summary-sig-name">GetBitmap1</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><a name="GetDisabledBitmap"></a><span class="summary-sig"><span class="summary-sig-name">GetBitmap2</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><a name="GetClientData"></a><span class="summary-sig"><span class="summary-sig-name">GetClientData</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Control</font></td>
+  <td><code><a name="GetControl"></a><span class="summary-sig"><span class="summary-sig-name">GetControl</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><a name="GetDisabledBitmap"></a><span class="summary-sig"><span class="summary-sig-name">GetDisabledBitmap</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetId"></a><span class="summary-sig"><span class="summary-sig-name">GetId</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetKind"></a><span class="summary-sig"><span class="summary-sig-name">GetKind</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="GetLabel"></a><span class="summary-sig"><span class="summary-sig-name">GetLabel</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="GetLongHelp"></a><span class="summary-sig"><span class="summary-sig-name">GetLongHelp</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><a name="GetNormalBitmap"></a><span class="summary-sig"><span class="summary-sig-name">GetNormalBitmap</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="GetShortHelp"></a><span class="summary-sig"><span class="summary-sig-name">GetShortHelp</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetStyle"></a><span class="summary-sig"><span class="summary-sig-name">GetStyle</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">ToolBarBase</font></td>
+  <td><code><a name="GetToolBar"></a><span class="summary-sig"><span class="summary-sig-name">GetToolBar</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="IsButton"></a><span class="summary-sig"><span class="summary-sig-name">IsButton</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="IsControl"></a><span class="summary-sig"><span class="summary-sig-name">IsControl</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsEnabled"></a><span class="summary-sig"><span class="summary-sig-name">IsEnabled</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="IsSeparator"></a><span class="summary-sig"><span class="summary-sig-name">IsSeparator</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsToggled"></a><span class="summary-sig"><span class="summary-sig-name">IsToggled</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetNormalBitmap"></a><span class="summary-sig"><span class="summary-sig-name">SetBitmap1</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDisabledBitmap"></a><span class="summary-sig"><span class="summary-sig-name">SetBitmap2</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetClientData"></a><span class="summary-sig"><span class="summary-sig-name">SetClientData</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>clientData</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDisabledBitmap"></a><span class="summary-sig"><span class="summary-sig-name">SetDisabledBitmap</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetLabel"></a><span class="summary-sig"><span class="summary-sig-name">SetLabel</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>label</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="SetLongHelp"></a><span class="summary-sig"><span class="summary-sig-name">SetLongHelp</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>help</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetNormalBitmap"></a><span class="summary-sig"><span class="summary-sig-name">SetNormalBitmap</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="SetShortHelp"></a><span class="summary-sig"><span class="summary-sig-name">SetShortHelp</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>help</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="SetToggle"></a><span class="summary-sig"><span class="summary-sig-name">SetToggle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>toggle</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Toggle"></a><span class="summary-sig"><span class="summary-sig-name">Toggle</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#Bitmap"><code>Bitmap</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetBitmap" class="link"><code>GetBitmap</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#ClientData"><code>ClientData</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetClientData" class="link"><code>GetClientData</code></a> and <a href="wx.ToolBarToolBase-class.html#SetClientData" class="link"><code>SetClientData</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#Control"><code>Control</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetControl" class="link"><code>GetControl</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#DisabledBitmap"><code>DisabledBitmap</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetDisabledBitmap" class="link"><code>GetDisabledBitmap</code></a> and <a href="wx.ToolBarToolBase-class.html#SetDisabledBitmap" class="link"><code>SetDisabledBitmap</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#Id"><code>Id</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetId" class="link"><code>GetId</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#Kind"><code>Kind</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetKind" class="link"><code>GetKind</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#Label"><code>Label</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetLabel" class="link"><code>GetLabel</code></a> and <a href="wx.ToolBarToolBase-class.html#SetLabel" class="link"><code>SetLabel</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#LongHelp"><code>LongHelp</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetLongHelp" class="link"><code>GetLongHelp</code></a> and <a href="wx.ToolBarToolBase-class.html#SetLongHelp" class="link"><code>SetLongHelp</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#NormalBitmap"><code>NormalBitmap</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetNormalBitmap" class="link"><code>GetNormalBitmap</code></a> and <a href="wx.ToolBarToolBase-class.html#SetNormalBitmap" class="link"><code>SetNormalBitmap</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#ShortHelp"><code>ShortHelp</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetShortHelp" class="link"><code>GetShortHelp</code></a> and <a href="wx.ToolBarToolBase-class.html#SetShortHelp" class="link"><code>SetShortHelp</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#Style"><code>Style</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetStyle" class="link"><code>GetStyle</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ToolBarToolBase-class.html#ToolBar"><code>ToolBar</code></a></b>: See <a href="wx.ToolBarToolBase-class.html#GetToolBar" class="link"><code>GetToolBar</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Bitmap"></a>
+<h3>Bitmap</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetBitmap" class="link"><code>GetBitmap</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetBitmap" class="summary-sig-name"><code>GetBitmap</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ClientData"></a>
+<h3>ClientData</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetClientData" class="link"><code>GetClientData</code></a> and <a href="wx.ToolBarToolBase-class.html#SetClientData" class="link"><code>SetClientData</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetClientData" class="summary-sig-name"><code>GetClientData</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#SetClientData" class="summary-sig-name"><code>SetClientData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>clientData</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Control"></a>
+<h3>Control</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetControl" class="link"><code>GetControl</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetControl" class="summary-sig-name"><code>GetControl</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DisabledBitmap"></a>
+<h3>DisabledBitmap</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetDisabledBitmap" class="link"><code>GetDisabledBitmap</code></a> and <a href="wx.ToolBarToolBase-class.html#SetDisabledBitmap" class="link"><code>SetDisabledBitmap</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetDisabledBitmap" class="summary-sig-name"><code>GetDisabledBitmap</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#SetDisabledBitmap" class="summary-sig-name"><code>SetDisabledBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Id"></a>
+<h3>Id</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetId" class="link"><code>GetId</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetId" class="summary-sig-name"><code>GetId</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Kind"></a>
+<h3>Kind</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetKind" class="link"><code>GetKind</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetKind" class="summary-sig-name"><code>GetKind</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Label"></a>
+<h3>Label</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetLabel" class="link"><code>GetLabel</code></a> and <a href="wx.ToolBarToolBase-class.html#SetLabel" class="link"><code>SetLabel</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetLabel" class="summary-sig-name"><code>GetLabel</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#SetLabel" class="summary-sig-name"><code>SetLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>label</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="LongHelp"></a>
+<h3>LongHelp</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetLongHelp" class="link"><code>GetLongHelp</code></a> and <a href="wx.ToolBarToolBase-class.html#SetLongHelp" class="link"><code>SetLongHelp</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetLongHelp" class="summary-sig-name"><code>GetLongHelp</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#SetLongHelp" class="summary-sig-name"><code>SetLongHelp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>help</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NormalBitmap"></a>
+<h3>NormalBitmap</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetNormalBitmap" class="link"><code>GetNormalBitmap</code></a> and <a href="wx.ToolBarToolBase-class.html#SetNormalBitmap" class="link"><code>SetNormalBitmap</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetNormalBitmap" class="summary-sig-name"><code>GetNormalBitmap</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#SetNormalBitmap" class="summary-sig-name"><code>SetNormalBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ShortHelp"></a>
+<h3>ShortHelp</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetShortHelp" class="link"><code>GetShortHelp</code></a> and <a href="wx.ToolBarToolBase-class.html#SetShortHelp" class="link"><code>SetShortHelp</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetShortHelp" class="summary-sig-name"><code>GetShortHelp</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#SetShortHelp" class="summary-sig-name"><code>SetShortHelp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>help</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Style"></a>
+<h3>Style</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetStyle" class="link"><code>GetStyle</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetStyle" class="summary-sig-name"><code>GetStyle</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ToolBar"></a>
+<h3>ToolBar</h3>
+<p>See <a href="wx.ToolBarToolBase-class.html#GetToolBar" class="link"><code>GetToolBar</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ToolBarToolBase-class.html#GetToolBar" class="summary-sig-name"><code>GetToolBar</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:00:12 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

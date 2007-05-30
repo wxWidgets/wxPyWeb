@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.ProgressDialog</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;ProgressDialog
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.ProgressDialog-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type ProgressDialog</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+        <a href="wx.TopLevelWindow-class.html"><code>TopLevelWindow</code></a> --+    
+                         |    
+                     <a href="wx.Frame-class.html"><code>Frame</code></a> --+
+                             |
+                            <b>ProgressDialog</b>
+</pre><br />
+
+<hr/>
+
+<p>A dialog that shows a short message and a progress bar. Optionally, it
+can display an ABORT button.</p>
+<div class="rst-section" id="window-styles">
+<h1 class="heading"><a name="rst-window-styles">Window Styles</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="29%" />
+<col class="rst" width="71%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.PD_APP_MODAL</td>
+<td class="rst">Make the progress dialog modal. If this flag is
+not given, it is only &quot;locally&quot; modal -
+that is the input to the parent window is
+disabled, but not to the other ones.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.PD_AUTO_HIDE</td>
+<td class="rst">Causes the progress dialog to disappear from
+screen as soon as the maximum value of the
+progress meter has been reached.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.PD_CAN_ABORT</td>
+<td class="rst">This flag tells the dialog that it should have
+a &quot;Cancel&quot; button which the user may press. If
+this happens, the next call to Update() will
+return False in the first component of its return
+value.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.PD_CAN_SKIP</td>
+<td class="rst">This flag tells the dialog that it should have a
+&quot;Skip&quot; button which the user may press. If this
+happens, the next call to Update() will return
+True in the second component of its return value.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.PD_ELAPSED_TIME</td>
+<td class="rst">This flag tells the dialog that it should show
+elapsed time (since creating the dialog).</td>
+</tr>
+<tr class="rst"><td class="rst">wx.PD_ESTIMATED_TIME</td>
+<td class="rst">This flag tells the dialog that it should show
+estimated time.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.PD_REMAINING_TIME</td>
+<td class="rst">This flag tells the dialog that it should show
+remaining time.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.PD_SMOOTH</td>
+<td class="rst">Uses the wx.GA_SMOOTH style on the embedded
+wx.Gauge widget.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">ProgressDialog</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ProgressDialog-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>title</span>,
+          <span class=summary-sig-arg>message</span>,
+          <span class=summary-sig-arg>maximum</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ProgressDialog-class.html#Pulse" class="summary-sig-name"><code>Pulse</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Pulse(self, String newmsg) --&gt; (continue, skip)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ProgressDialog-class.html#Resume" class="summary-sig-name"><code>Resume</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Can be used to continue with the dialog, after the user had chosen to
+abort.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ProgressDialog-class.html#Update" class="summary-sig-name"><code>Update</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Update(self, int value, String newmsg) --&gt; (continue, skip)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ProgressDialog-class.html#Pulse" class="summary-sig-name"><code>UpdatePulse</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Pulse(self, String newmsg) --&gt; (continue, skip)</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ProgressDialog-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>title</span>,
+          <span class=sig-arg>message</span>,
+          <span class=sig-arg>maximum</span>=<span class=sig-default>100</span>,
+          <span class=sig-arg>parent</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>wxPD_AUTO_HIDE|wxPD_APP_MODAL</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor. Creates the dialog, displays it and disables user input
+for other windows, or, if wx.PD_APP_MODAL flag is not given, for its
+parent window only.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>title</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>message</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>maximum</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+ProgressDialog      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Frame-class.html#__init__"><code>wx.Frame.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Pulse"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Pulse</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Pulse(self, String newmsg) --&gt; (continue, skip)</p>
+<p>Just like <a href="wx.ProgressDialog-class.html#Update" class="link"><code>Update</code></a> but switches the dialog to use a gauge in
+interminante mode and calls <a href="wx.Gauge-class.html#Pulse" class="link"><code>wx.Gauge.Pulse</code></a> to show the user a bit of
+progress.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Resume"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Resume</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Can be used to continue with the dialog, after the user had chosen to
+abort.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Update"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Update</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Update(self, int value, String newmsg) --&gt; (continue, skip)</p>
+<p>Updates the dialog, setting the progress bar to the new value and, if
+given changes the message above it. The value given should be less
+than or equal to the maximum value given to the constructor and the
+dialog is closed if it is equal to the maximum.  Returns a tuple of
+boolean values, <tt class="rst-docutils literal"><span class="pre">(continue,</span> <span class="pre">skip)</span></tt> where <tt class="rst-docutils literal"><span class="pre">continue</span></tt> is <tt class="rst-docutils literal"><span class="pre">True</span></tt>
+unless the Cancel button has been pressed, and <tt class="rst-docutils literal"><span class="pre">skip</span></tt> is <tt class="rst-docutils literal"><span class="pre">False</span></tt>
+unless the Skip button (if any) has been pressed.</p>
+<p>If the <tt class="rst-docutils literal"><span class="pre">continue</span></tt> return value is <tt class="rst-docutils literal"><span class="pre">False</span></tt>, the application can either
+immediately destroy the dialog or ask the user for confirmation, and if the
+abort is not confirmed the dialog may be resumed with <a href="wx.ProgressDialog-class.html#Resume" class="link"><code>Resume</code></a> function.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#Update"><code>wx.Window.Update</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Pulse"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdatePulse</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Pulse(self, String newmsg) --&gt; (continue, skip)</p>
+<p>Just like <a href="wx.ProgressDialog-class.html#Update" class="link"><code>Update</code></a> but switches the dialog to use a gauge in
+interminante mode and calls <a href="wx.Gauge-class.html#Pulse" class="link"><code>wx.Gauge.Pulse</code></a> to show the user a bit of
+progress.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:56:55 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

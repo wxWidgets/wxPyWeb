@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.ArtProvider</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;ArtProvider
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.ArtProvider-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type ArtProvider</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>ArtProvider</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.art.img2pyartprov.Img2PyArtProvider-class.html"><code>Img2PyArtProvider</code></a></dd></dl>
+
+<hr/>
+
+<p>The wx.ArtProvider class is used to customize the look of wxWidgets
+application. When wxWidgets needs to display an icon or a bitmap (e.g.
+in the standard file dialog), it does not use hard-coded resource but
+asks wx.ArtProvider for it instead. This way the users can plug in
+their own wx.ArtProvider class and easily replace standard art with
+his/her own version. It is easy thing to do: all that is needed is
+to derive a class from wx.ArtProvider, override it's CreateBitmap
+method and register the provider with <code>wx.ArtProvider.Push</code>:</p>
+<pre class="rst-literal-block">
+class MyArtProvider(wx.ArtProvider):
+    def __init__(self):
+        wx.ArtProvider.__init__(self)
+
+    def CreateBitmap(self, artid, client, size):
+        ...
+        return bmp
+</pre>
+<div class="rst-section" id="identifying-art-resources">
+<h1 class="heading"><a name="rst-identifying-art-resources">Identifying art resources</a></h1>
+<p>Every bitmap is known to wx.ArtProvider under an unique ID that is
+used when requesting a resource from it. The IDs can have one of the
+following predefined values.  Additionally, any string recognized by
+custom art providers registered using <a href="wx.ArtProvider-class.html#Push" class="link"><code>Push</code></a> may be used.</p>
+</div>
+<div class="rst-section" id="gtk-note">
+<h1 class="heading"><a name="rst-gtk-note">GTK+ Note</a></h1>
+<p>When running under GTK+ 2, GTK+ stock item IDs (e.g. 'gtk-cdrom') may be used
+as well.  Additionally, if wxGTK was compiled against GTK+ &gt;= 2.4, then it is
+also possible to load icons from current icon theme by specifying their name
+without the extension and directory components. Icon themes recognized by GTK+
+follow the freedesktop.org Icon Themes specification.  Note that themes are
+not guaranteed to contain all icons, so wx.ArtProvider may return wx.NullBitmap
+or wx.NullIcon.  The default theme is typically installed in /usr/share/icons/hicolor.</p>
+<blockquote>
+<ul class="rst-simple">
+<li>wx.ART_ADD_BOOKMARK</li>
+<li>wx.ART_DEL_BOOKMARK</li>
+<li>wx.ART_HELP_SIDE_PANEL</li>
+<li>wx.ART_HELP_SETTINGS</li>
+<li>wx.ART_HELP_BOOK</li>
+<li>wx.ART_HELP_FOLDER</li>
+<li>wx.ART_HELP_PAGE</li>
+<li>wx.ART_GO_BACK</li>
+<li>wx.ART_GO_FORWARD</li>
+<li>wx.ART_GO_UP</li>
+<li>wx.ART_GO_DOWN</li>
+<li>wx.ART_GO_TO_PARENT</li>
+<li>wx.ART_GO_HOME</li>
+<li>wx.ART_FILE_OPEN</li>
+<li>wx.ART_FILE_SAVE</li>
+<li>wx.ART_FILE_SAVE_AS</li>
+<li>wx.ART_PRINT</li>
+<li>wx.ART_HELP</li>
+<li>wx.ART_TIP</li>
+<li>wx.ART_REPORT_VIEW</li>
+<li>wx.ART_LIST_VIEW</li>
+<li>wx.ART_NEW_DIR</li>
+<li>wx.ART_HARDDISK</li>
+<li>wx.ART_FLOPPY</li>
+<li>wx.ART_CDROM</li>
+<li>wx.ART_REMOVABLE</li>
+<li>wx.ART_FOLDER</li>
+<li>wx.ART_FOLDER_OPEN</li>
+<li>wx.ART_GO_DIR_UP</li>
+<li>wx.ART_EXECUTABLE_FILE</li>
+<li>wx.ART_NORMAL_FILE</li>
+<li>wx.ART_TICK_MARK</li>
+<li>wx.ART_CROSS_MARK</li>
+<li>wx.ART_ERROR</li>
+<li>wx.ART_QUESTION</li>
+<li>wx.ART_WARNING</li>
+<li>wx.ART_INFORMATION</li>
+<li>wx.ART_MISSING_IMAGE</li>
+<li>wx.ART_COPY</li>
+<li>wx.ART_CUT</li>
+<li>wx.ART_PASTE</li>
+<li>wx.ART_DELETE</li>
+<li>wx.ART_NEW</li>
+<li>wx.ART_UNDO</li>
+<li>wx.ART_REDO</li>
+<li>wx.ART_QUIT</li>
+<li>wx.ART_FIND</li>
+<li>wx.ART_FIND_AND_REPLACE</li>
+</ul>
+</blockquote>
+</div>
+<div class="rst-section" id="clients">
+<h1 class="heading"><a name="rst-clients">Clients</a></h1>
+<p>The Client is the entity that calls wx.ArtProvider's <a href="wx.ArtProvider-class.html#GetBitmap" class="link"><code>GetBitmap</code></a> or
+<a href="wx.ArtProvider-class.html#GetIcon" class="link"><code>GetIcon</code></a> function.  Client IDs serve as a hint to wx.ArtProvider
+that is supposed to help it to choose the best looking bitmap. For
+example it is often desirable to use slightly different icons in menus
+and toolbars even though they represent the same action (e.g.
+wx.ART_FILE_OPEN). Remember that this is really only a hint for
+wx.ArtProvider -- it is common that <code>wx.ArtProvider.GetBitmap</code> returns
+identical bitmap for different client values!</p>
+<blockquote>
+<ul class="rst-simple">
+<li>wx.ART_TOOLBAR</li>
+<li>wx.ART_MENU</li>
+<li>wx.ART_FRAME_ICON</li>
+<li>wx.ART_CMN_DIALOG</li>
+<li>wx.ART_HELP_BROWSER</li>
+<li>wx.ART_MESSAGE_BOX</li>
+<li>wx.ART_BUTTON</li>
+<li>wx.ART_OTHER (used for all requests that don't fit into any
+of the categories above)</li>
+</ul>
+</blockquote>
+</div>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">ArtProvider</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+The wx.ArtProvider class is used to customize the look of wxWidgets
+application.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1288351260"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#Delete" class="summary-sig-name"><code>Delete</code></a>(<span class=summary-sig-arg>provider</span>)</span></code>
+<br />
+Remove provider.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Destroy"></a><span class="summary-sig"><span class="summary-sig-name">Destroy</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#GetBitmap" class="summary-sig-name"><code>GetBitmap</code></a>(<span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>client</span>,
+          <span class=summary-sig-arg>size</span>)</span></code>
+<br />
+Query the providers for bitmap with given ID and return it.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Icon</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#GetIcon" class="summary-sig-name"><code>GetIcon</code></a>(<span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>client</span>,
+          <span class=summary-sig-arg>size</span>)</span></code>
+<br />
+Query the providers for icon with given ID and return it.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#GetSizeHint" class="summary-sig-name"><code>GetSizeHint</code></a>(<span class=summary-sig-arg>client</span>,
+          <span class=summary-sig-arg>platform_dependent</span>)</span></code>
+<br />
+Get the size hint of an icon from a specific Art Client, queries the
+topmost provider if platform_dependent = false    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#Insert" class="summary-sig-name"><code>Insert</code></a>(<span class=summary-sig-arg>provider</span>)</span></code>
+<br />
+Add new provider to the bottom of providers stack.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#InsertProvider" class="summary-sig-name"><code>InsertProvider</code></a>(<span class=summary-sig-arg>provider</span>)</span></code>
+<br />
+Add new provider to the bottom of providers stack.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#Pop" class="summary-sig-name"><code>Pop</code></a>()</span></code>
+<br />
+Remove latest added provider and delete it.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#PopProvider" class="summary-sig-name"><code>PopProvider</code></a>()</span></code>
+<br />
+Remove latest added provider and delete it.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#Push" class="summary-sig-name"><code>Push</code></a>(<span class=summary-sig-arg>provider</span>)</span></code>
+<br />
+Add new provider to the top of providers stack.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#PushProvider" class="summary-sig-name"><code>PushProvider</code></a>(<span class=summary-sig-arg>provider</span>)</span></code>
+<br />
+Add new provider to the top of providers stack.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ArtProvider-class.html#RemoveProvider" class="summary-sig-name"><code>RemoveProvider</code></a>(<span class=summary-sig-arg>provider</span>)</span></code>
+<br />
+Remove provider.    <i>(Static method)</i>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ArtProvider-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>The wx.ArtProvider class is used to customize the look of wxWidgets
+application. When wxWidgets needs to display an icon or a bitmap (e.g.
+in the standard file dialog), it does not use hard-coded resource but
+asks wx.ArtProvider for it instead. This way the users can plug in
+their own wx.ArtProvider class and easily replace standard art with
+his/her own version. It is easy thing to do: all that is needed is
+to derive a class from wx.ArtProvider, override it's CreateBitmap
+method and register the provider with <code>wx.ArtProvider.Push</code>:</p>
+<pre class="rst-literal-block">
+class MyArtProvider(wx.ArtProvider):
+    def __init__(self):
+        wx.ArtProvider.__init__(self)
+
+    def CreateBitmap(self, artid, client, size):
+        ...
+        return bmp
+</pre>
+<div class="rst-section" id="identifying-art-resources">
+<h1 class="heading"><a name="rst-identifying-art-resources">Identifying art resources</a></h1>
+<p>Every bitmap is known to wx.ArtProvider under an unique ID that is
+used when requesting a resource from it. The IDs can have one of the
+following predefined values.  Additionally, any string recognized by
+custom art providers registered using <a href="wx.ArtProvider-class.html#Push" class="link"><code>Push</code></a> may be used.</p>
+</div>
+<div class="rst-section" id="gtk-note">
+<h1 class="heading"><a name="rst-gtk-note">GTK+ Note</a></h1>
+<p>When running under GTK+ 2, GTK+ stock item IDs (e.g. 'gtk-cdrom') may be used
+as well.  Additionally, if wxGTK was compiled against GTK+ &gt;= 2.4, then it is
+also possible to load icons from current icon theme by specifying their name
+without the extension and directory components. Icon themes recognized by GTK+
+follow the freedesktop.org Icon Themes specification.  Note that themes are
+not guaranteed to contain all icons, so wx.ArtProvider may return wx.NullBitmap
+or wx.NullIcon.  The default theme is typically installed in /usr/share/icons/hicolor.</p>
+<blockquote>
+<ul class="rst-simple">
+<li>wx.ART_ADD_BOOKMARK</li>
+<li>wx.ART_DEL_BOOKMARK</li>
+<li>wx.ART_HELP_SIDE_PANEL</li>
+<li>wx.ART_HELP_SETTINGS</li>
+<li>wx.ART_HELP_BOOK</li>
+<li>wx.ART_HELP_FOLDER</li>
+<li>wx.ART_HELP_PAGE</li>
+<li>wx.ART_GO_BACK</li>
+<li>wx.ART_GO_FORWARD</li>
+<li>wx.ART_GO_UP</li>
+<li>wx.ART_GO_DOWN</li>
+<li>wx.ART_GO_TO_PARENT</li>
+<li>wx.ART_GO_HOME</li>
+<li>wx.ART_FILE_OPEN</li>
+<li>wx.ART_FILE_SAVE</li>
+<li>wx.ART_FILE_SAVE_AS</li>
+<li>wx.ART_PRINT</li>
+<li>wx.ART_HELP</li>
+<li>wx.ART_TIP</li>
+<li>wx.ART_REPORT_VIEW</li>
+<li>wx.ART_LIST_VIEW</li>
+<li>wx.ART_NEW_DIR</li>
+<li>wx.ART_HARDDISK</li>
+<li>wx.ART_FLOPPY</li>
+<li>wx.ART_CDROM</li>
+<li>wx.ART_REMOVABLE</li>
+<li>wx.ART_FOLDER</li>
+<li>wx.ART_FOLDER_OPEN</li>
+<li>wx.ART_GO_DIR_UP</li>
+<li>wx.ART_EXECUTABLE_FILE</li>
+<li>wx.ART_NORMAL_FILE</li>
+<li>wx.ART_TICK_MARK</li>
+<li>wx.ART_CROSS_MARK</li>
+<li>wx.ART_ERROR</li>
+<li>wx.ART_QUESTION</li>
+<li>wx.ART_WARNING</li>
+<li>wx.ART_INFORMATION</li>
+<li>wx.ART_MISSING_IMAGE</li>
+<li>wx.ART_COPY</li>
+<li>wx.ART_CUT</li>
+<li>wx.ART_PASTE</li>
+<li>wx.ART_DELETE</li>
+<li>wx.ART_NEW</li>
+<li>wx.ART_UNDO</li>
+<li>wx.ART_REDO</li>
+<li>wx.ART_QUIT</li>
+<li>wx.ART_FIND</li>
+<li>wx.ART_FIND_AND_REPLACE</li>
+</ul>
+</blockquote>
+</div>
+<div class="rst-section" id="clients">
+<h1 class="heading"><a name="rst-clients">Clients</a></h1>
+<p>The Client is the entity that calls wx.ArtProvider's <a href="wx.ArtProvider-class.html#GetBitmap" class="link"><code>GetBitmap</code></a> or
+<a href="wx.ArtProvider-class.html#GetIcon" class="link"><code>GetIcon</code></a> function.  Client IDs serve as a hint to wx.ArtProvider
+that is supposed to help it to choose the best looking bitmap. For
+example it is often desirable to use slightly different icons in menus
+and toolbars even though they represent the same action (e.g.
+wx.ART_FILE_OPEN). Remember that this is really only a hint for
+wx.ArtProvider -- it is common that <code>wx.ArtProvider.GetBitmap</code> returns
+identical bitmap for different client values!</p>
+<blockquote>
+<ul class="rst-simple">
+<li>wx.ART_TOOLBAR</li>
+<li>wx.ART_MENU</li>
+<li>wx.ART_FRAME_ICON</li>
+<li>wx.ART_CMN_DIALOG</li>
+<li>wx.ART_HELP_BROWSER</li>
+<li>wx.ART_MESSAGE_BOX</li>
+<li>wx.ART_BUTTON</li>
+<li>wx.ART_OTHER (used for all requests that don't fit into any
+of the categories above)</li>
+</ul>
+</blockquote>
+</div>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+ArtProvider      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="__builtin__.object-class.html#__init__"><code>__builtin__.object.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="Delete"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Delete</span>(<span class=sig-arg>provider</span>)</span>
+  </h3>
+<p>Remove provider. The provider must have been added previously!  The
+provider is _not_ deleted.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>provider</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=ArtProvider)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBitmap</span>(<span class=sig-arg>id</span>,
+          <span class=sig-arg>client</span>=<span class=sig-default>ART_OTHER</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>)</span>
+  </h3>
+<p>Query the providers for bitmap with given ID and return it. Return
+wx.NullBitmap if no provider provides it.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>client</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Bitmap      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetIcon</span>(<span class=sig-arg>id</span>,
+          <span class=sig-arg>client</span>=<span class=sig-default>ART_OTHER</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>)</span>
+  </h3>
+<p>Query the providers for icon with given ID and return it.  Return
+wx.NullIcon if no provider provides it.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>client</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Icon      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSizeHint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSizeHint</span>(<span class=sig-arg>client</span>,
+          <span class=sig-arg>platform_dependent</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Get the size hint of an icon from a specific Art Client, queries the
+topmost provider if platform_dependent = false</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>client</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>platform_dependent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Size      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Insert"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Insert</span>(<span class=sig-arg>provider</span>)</span>
+  </h3>
+<p>Add new provider to the bottom of providers stack.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>provider</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=ArtProvider)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertProvider"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertProvider</span>(<span class=sig-arg>provider</span>)</span>
+  </h3>
+<p>Add new provider to the bottom of providers stack.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>provider</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=ArtProvider)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Pop"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Pop</span>()</span>
+  </h3>
+<p>Remove latest added provider and delete it.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PopProvider"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PopProvider</span>()</span>
+  </h3>
+<p>Remove latest added provider and delete it.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Push"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Push</span>(<span class=sig-arg>provider</span>)</span>
+  </h3>
+<p>Add new provider to the top of providers stack.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>provider</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=ArtProvider)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PushProvider"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PushProvider</span>(<span class=sig-arg>provider</span>)</span>
+  </h3>
+<p>Add new provider to the top of providers stack.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>provider</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=ArtProvider)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveProvider"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveProvider</span>(<span class=sig-arg>provider</span>)</span>
+  </h3>
+<p>Remove provider. The provider must have been added previously!  The
+provider is _not_ deleted.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>provider</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=ArtProvider)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:58:00 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.SplitterWindow</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;SplitterWindow
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.SplitterWindow-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type SplitterWindow</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+            
+         |            
+    <a href="wx.Object-class.html"><code>Object</code></a> --+        
+             |        
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+    
+                 |    
+            <a href="wx.Window-class.html"><code>Window</code></a> --+
+                     |
+                    <b>SplitterWindow</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.py.crust.Crust-class.html"><code>Crust</code></a>,
+    <a href="wx.py.filling.Filling-class.html"><code>Filling</code></a>,
+    <a href="wx.gizmos.ThinSplitterWindow-class.html"><code>ThinSplitterWindow</code></a></dd></dl>
+
+<hr/>
+
+<p>wx.SplitterWindow manages up to two subwindows or panes, with an
+optional vertical or horizontal split which can be used with the mouse
+or programmatically.</p>
+<div class="rst-section" id="styles">
+<h1 class="heading"><a name="rst-styles">Styles</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="34%" />
+<col class="rst" width="66%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.SP_3D</td>
+<td class="rst">Draws a 3D effect border and sash.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.SP_3DSASH</td>
+<td class="rst">Draws a 3D effect sash.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.SP_3DBORDER</td>
+<td class="rst">Synonym for wxSP_BORDER.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.SP_BORDER</td>
+<td class="rst">Draws a standard border.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.SP_NOBORDER</td>
+<td class="rst">No border (default).</td>
+</tr>
+<tr class="rst"><td class="rst">wx.SP_NO_XP_THEME</td>
+<td class="rst">Under Windows XP, switches off the
+attempt to draw the splitter
+using Windows XP theming, so the
+borders and sash will take on the
+pre-XP look.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.SP_PERMIT_UNSPLIT</td>
+<td class="rst">Always allow to unsplit, even with
+the minimum pane size other than zero.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.SP_LIVE_UPDATE</td>
+<td class="rst">Don't draw XOR line but resize the
+child windows immediately.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="rst-section" id="events">
+<h1 class="heading"><a name="rst-events">Events</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="43%" />
+<col class="rst" width="57%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">EVT_SPLITTER_SASH_POS_CHANGING</td>
+<td class="rst">The sash position is in the
+process of being changed. May be
+used to modify the position of
+the tracking bar to properly
+reflect the position that would
+be set if the drag were to be
+completed at this point.</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_SPLITTER_SASH_POS_CHANGED</td>
+<td class="rst">The sash position was
+changed. May be used to modify
+the sash position before it is
+set, or to prevent the change
+from taking place.</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_SPLITTER_UNSPLIT</td>
+<td class="rst">The splitter has been just unsplit.</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_SPLITTER_DCLICK</td>
+<td class="rst">The sash was double clicked. The
+default behaviour is to unsplit
+the window when this happens
+(unless the minimum pane size has
+been set to a value greater than
+zero.)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SplitterWindow</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#Create" class="summary-sig-name"><code>Create</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Create the GUI part of the SplitterWindow for the 2-phase create.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetBorderSize" class="summary-sig-name"><code>GetBorderSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the border size</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">VisualAttributes</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetClassDefaultAttributes" class="summary-sig-name"><code>GetClassDefaultAttributes</code></a>(<span class=summary-sig-arg>variant</span>)</span></code>
+<br />
+Get the default attributes for this class.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetMinimumPaneSize" class="summary-sig-name"><code>GetMinimumPaneSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the minimum pane size in pixels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="GetNeedUpdating"></a><span class="summary-sig"><span class="summary-sig-name">GetNeedUpdating</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">double</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetSashGravity" class="summary-sig-name"><code>GetSashGravity</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the sash gravity.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetSashPosition" class="summary-sig-name"><code>GetSashPosition</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the surrent sash position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetSashSize" class="summary-sig-name"><code>GetSashSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the sash size</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetSplitMode" class="summary-sig-name"><code>GetSplitMode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the split mode</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetWindow1" class="summary-sig-name"><code>GetWindow1</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the only or left/top pane.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetWindow2" class="summary-sig-name"><code>GetWindow2</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the right/bottom pane.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#Initialize" class="summary-sig-name"><code>Initialize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window</span>)</span></code>
+<br />
+Initializes the splitter window to have one pane.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#IsSplit" class="summary-sig-name"><code>IsSplit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Is the window split?</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#ReplaceWindow" class="summary-sig-name"><code>ReplaceWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>winOld</span>,
+          <span class=summary-sig-arg>winNew</span>)</span></code>
+<br />
+This function replaces one of the windows managed by the
+SplitterWindow with another one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SashHitTest" class="summary-sig-name"><code>SashHitTest</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>tolerance</span>)</span></code>
+<br />
+Tests for x, y over the sash</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetBorderSize" class="summary-sig-name"><code>SetBorderSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+<br />
+Sets the border size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetMinimumPaneSize" class="summary-sig-name"><code>SetMinimumPaneSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>min</span>)</span></code>
+<br />
+Sets the minimum pane size in pixels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetNeedUpdating"></a><span class="summary-sig"><span class="summary-sig-name">SetNeedUpdating</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>needUpdating</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetSashGravity" class="summary-sig-name"><code>SetSashGravity</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>gravity</span>)</span></code>
+<br />
+Set the sash gravity.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetSashPosition" class="summary-sig-name"><code>SetSashPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>position</span>,
+          <span class=summary-sig-arg>redraw</span>)</span></code>
+<br />
+Sets the sash position, in pixels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetSashSize" class="summary-sig-name"><code>SetSashSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+<br />
+Sets the sash size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetSplitMode" class="summary-sig-name"><code>SetSplitMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+Sets the split mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SizeWindows" class="summary-sig-name"><code>SizeWindows</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Resizes subwindows</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SplitHorizontally" class="summary-sig-name"><code>SplitHorizontally</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window1</span>,
+          <span class=summary-sig-arg>window2</span>,
+          <span class=summary-sig-arg>sashPosition</span>)</span></code>
+<br />
+Initializes the top and bottom panes of the splitter window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SplitVertically" class="summary-sig-name"><code>SplitVertically</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window1</span>,
+          <span class=summary-sig-arg>window2</span>,
+          <span class=summary-sig-arg>sashPosition</span>)</span></code>
+<br />
+Initializes the left and right panes of the splitter window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#Unsplit" class="summary-sig-name"><code>Unsplit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>toRemove</span>)</span></code>
+<br />
+Unsplits the window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SplitterWindow-class.html#UpdateSize" class="summary-sig-name"><code>UpdateSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Causes any pending sizing of the sash and child panes to take place
+immediately.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SplitterWindow-class.html#BorderSize"><code>BorderSize</code></a></b>: See <a href="wx.SplitterWindow-class.html#GetBorderSize" class="link"><code>GetBorderSize</code></a> and <a href="wx.SplitterWindow-class.html#SetBorderSize" class="link"><code>SetBorderSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SplitterWindow-class.html#MinimumPaneSize"><code>MinimumPaneSize</code></a></b>: See <a href="wx.SplitterWindow-class.html#GetMinimumPaneSize" class="link"><code>GetMinimumPaneSize</code></a> and <a href="wx.SplitterWindow-class.html#SetMinimumPaneSize" class="link"><code>SetMinimumPaneSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SplitterWindow-class.html#NeedUpdating"><code>NeedUpdating</code></a></b>: See <a href="wx.SplitterWindow-class.html#GetNeedUpdating" class="link"><code>GetNeedUpdating</code></a> and <a href="wx.SplitterWindow-class.html#SetNeedUpdating" class="link"><code>SetNeedUpdating</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SplitterWindow-class.html#SashGravity"><code>SashGravity</code></a></b>: See <a href="wx.SplitterWindow-class.html#GetSashGravity" class="link"><code>GetSashGravity</code></a> and <a href="wx.SplitterWindow-class.html#SetSashGravity" class="link"><code>SetSashGravity</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SplitterWindow-class.html#SashPosition"><code>SashPosition</code></a></b>: See <a href="wx.SplitterWindow-class.html#GetSashPosition" class="link"><code>GetSashPosition</code></a> and <a href="wx.SplitterWindow-class.html#SetSashPosition" class="link"><code>SetSashPosition</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SplitterWindow-class.html#SashSize"><code>SashSize</code></a></b>: See <a href="wx.SplitterWindow-class.html#GetSashSize" class="link"><code>GetSashSize</code></a> and <a href="wx.SplitterWindow-class.html#SetSashSize" class="link"><code>SetSashSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SplitterWindow-class.html#SplitMode"><code>SplitMode</code></a></b>: See <a href="wx.SplitterWindow-class.html#GetSplitMode" class="link"><code>GetSplitMode</code></a> and <a href="wx.SplitterWindow-class.html#SetSplitMode" class="link"><code>SetSplitMode</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SplitterWindow-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SplitterWindow-class.html#Window1"><code>Window1</code></a></b>: See <a href="wx.SplitterWindow-class.html#GetWindow1" class="link"><code>GetWindow1</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SplitterWindow-class.html#Window2"><code>Window2</code></a></b>: See <a href="wx.SplitterWindow-class.html#GetWindow2" class="link"><code>GetWindow2</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>SP_3D</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>SplitterNameStr</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor.  Creates and shows a SplitterWindow.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SplitterWindow      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#__init__"><code>wx.Window.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>SP_3D</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>SplitterNameStr</span>)</span>
+  </h3>
+<p>Create the GUI part of the SplitterWindow for the 2-phase create.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#Create"><code>wx.Window.Create</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBorderSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBorderSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the border size</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMinimumPaneSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMinimumPaneSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the minimum pane size in pixels.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSashGravity"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSashGravity</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the sash gravity.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+double      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.SplitterWindow-class.html#SetSashGravity" class="link"><code>SetSashGravity</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSashPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSashPosition</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the surrent sash position.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSashSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSashSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the sash size</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSplitMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSplitMode</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the split mode</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetWindow1"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetWindow1</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the only or left/top pane.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Window      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetWindow2"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetWindow2</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the right/bottom pane.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Window      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Initialize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Initialize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window</span>)</span>
+  </h3>
+<p>Initializes the splitter window to have one pane.  This should be
+called if you wish to initially view only a single pane in the
+splitter window.  The child window is shown if it is currently hidden.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>window</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsSplit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsSplit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Is the window split?</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ReplaceWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ReplaceWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>winOld</span>,
+          <span class=sig-arg>winNew</span>)</span>
+  </h3>
+<p>This function replaces one of the windows managed by the
+SplitterWindow with another one. It is in general better to use it
+instead of calling Unsplit() and then resplitting the window back
+because it will provoke much less flicker. It is valid to call this
+function whether the splitter has two windows or only one.</p>
+<p>Both parameters should be non-None and winOld must specify one of the
+windows managed by the splitter. If the parameters are incorrect or
+the window couldn't be replaced, False is returned. Otherwise the
+function will return True, but please notice that it will not Destroy
+the replaced window and you may wish to do it yourself.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>winOld</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>winNew</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SashHitTest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SashHitTest</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>tolerance</span>=<span class=sig-default>5</span>)</span>
+  </h3>
+<p>Tests for x, y over the sash</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>tolerance</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBorderSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBorderSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>width</span>)</span>
+  </h3>
+<p>Sets the border size. Currently a NOP.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMinimumPaneSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMinimumPaneSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>min</span>)</span>
+  </h3>
+<p>Sets the minimum pane size in pixels.</p>
+<p>The default minimum pane size is zero, which means that either pane
+can be reduced to zero by dragging the sash, thus removing one of the
+panes. To prevent this behaviour (and veto out-of-range sash
+dragging), set a minimum size, for example 20 pixels. If the
+wx.SP_PERMIT_UNSPLIT style is used when a splitter window is created,
+the window may be unsplit even if minimum size is non-zero.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>min</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSashGravity"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSashGravity</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>gravity</span>)</span>
+  </h3>
+<p>Set the sash gravity.  Gravity is a floating-point factor between 0.0
+and 1.0 which controls position of sash while resizing the
+<a href="wx.SplitterWindow-class.html" class="link"><code>wx.SplitterWindow</code></a>.  The gravity specifies how much the left/top
+window will grow while resizing.</p>
+<p>Example values:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="15%" />
+<col class="rst" width="85%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">0.0</td>
+<td class="rst">Only the bottom or right window is
+automaticaly resized.</td>
+</tr>
+<tr class="rst"><td class="rst">0.5</td>
+<td class="rst">Both windows grow equally.</td>
+</tr>
+<tr class="rst"><td class="rst">1.0</td>
+<td class="rst">Only left/top window grows.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>The default value of sash gravity is 0.0. That value is compatible
+with the previous (before gravity was introduced) behaviour of the 
+<a href="wx.SplitterWindow-class.html" class="link"><code>wx.SplitterWindow</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>gravity</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSashPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSashPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>position</span>,
+          <span class=sig-arg>redraw</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Sets the sash position, in pixels.  If redraw is Ttrue then the panes
+are resized and the sash and border are redrawn.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>position</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>redraw</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSashSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSashSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>width</span>)</span>
+  </h3>
+<p>Sets the sash size.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSplitMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSplitMode</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mode</span>)</span>
+  </h3>
+<p>Sets the split mode.  The mode can be wx.SPLIT_VERTICAL or
+wx.SPLIT_HORIZONTAL.  This only sets the internal variable; does not
+update the display.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>mode</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SizeWindows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SizeWindows</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Resizes subwindows</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SplitHorizontally"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SplitHorizontally</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window1</span>,
+          <span class=sig-arg>window2</span>,
+          <span class=sig-arg>sashPosition</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Initializes the top and bottom panes of the splitter window.  The
+child windows are shown if they are currently hidden.</p>
+<blockquote>
+</blockquote>
+<p>Returns True if successful, False otherwise (the window was already
+split).</p>
+<p>SplitHorizontally should be called if you wish to initially view two
+panes. It can also be called at any subsequent time, but the
+application should check that the window is not currently split using
+<a href="wx.SplitterWindow-class.html#IsSplit" class="link"><code>IsSplit</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>window1</b></code> -
+ The top pane.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>window2</b></code> -
+ The bottom pane.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>sashPosition</b></code> -
+ The initial position of the sash. If this
+value is positive, it specifies the size of the
+upper pane. If it is negative, its absolute value
+gives the size of the lower pane. Finally, specify 0
+(default) to choose the default position (half of
+the total window height).
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SplitVertically"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SplitVertically</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window1</span>,
+          <span class=sig-arg>window2</span>,
+          <span class=sig-arg>sashPosition</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Initializes the left and right panes of the splitter window.  The
+child windows are shown if they are currently hidden.</p>
+<blockquote>
+</blockquote>
+<p>Returns True if successful, False otherwise (the window was already
+split).</p>
+<p>SplitVertically should be called if you wish to initially view two
+panes. It can also be called at any subsequent time, but the
+application should check that the window is not currently split using
+<a href="wx.SplitterWindow-class.html#IsSplit" class="link"><code>IsSplit</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>window1</b></code> -
+ The left pane.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>window2</b></code> -
+ The right pane.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>sashPosition</b></code> -
+ The initial position of the sash. If this
+value is positive, it specifies the size of the left
+pane. If it is negative, its absolute value gives
+the size of the right pane. Finally, specify 0
+(default) to choose the default position (half of
+the total window width).
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Unsplit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Unsplit</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>toRemove</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Unsplits the window.  Pass the pane to remove, or None to remove the
+right or bottom pane.  Returns True if successful, False otherwise (the
+window was not split).</p>
+<p>This function will not actually delete the pane being
+removed; it sends EVT_SPLITTER_UNSPLIT which can be handled
+for the desired behaviour. By default, the pane being
+removed is only hidden.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>toRemove</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Causes any pending sizing of the sash and child panes to take place
+immediately.</p>
+<p>Such resizing normally takes place in idle time, in order to wait for
+layout to be completed. However, this can cause unacceptable flicker
+as the panes are resized after the window has been shown. To work
+around this, you can perform window layout (for example by sending a
+size event to the parent window), and then call this function, before
+showing the top-level window.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="GetClassDefaultAttributes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClassDefaultAttributes</span>(<span class=sig-arg>variant</span>=<span class=sig-default>WINDOW_VARIANT_NORMAL</span>)</span>
+  </h3>
+<p>Get the default attributes for this class.  This is useful if you want
+to use the same font or colour in your own control as in a standard
+control -- which is a much better idea than hard coding specific
+colours or fonts which might look completely out of place on the
+user's system, especially if it uses themes.</p>
+<p>The variant parameter is only relevant under Mac currently and is
+ignore under other platforms. Under Mac, it will change the size of
+the returned font. See <a href="wx.Window-class.html#SetWindowVariant" class="link"><code>wx.Window.SetWindowVariant</code></a> for more about
+this.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>variant</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+VisualAttributes      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BorderSize"></a>
+<h3>BorderSize</h3>
+<p>See <a href="wx.SplitterWindow-class.html#GetBorderSize" class="link"><code>GetBorderSize</code></a> and <a href="wx.SplitterWindow-class.html#SetBorderSize" class="link"><code>SetBorderSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetBorderSize" class="summary-sig-name"><code>GetBorderSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetBorderSize" class="summary-sig-name"><code>SetBorderSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="MinimumPaneSize"></a>
+<h3>MinimumPaneSize</h3>
+<p>See <a href="wx.SplitterWindow-class.html#GetMinimumPaneSize" class="link"><code>GetMinimumPaneSize</code></a> and <a href="wx.SplitterWindow-class.html#SetMinimumPaneSize" class="link"><code>SetMinimumPaneSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetMinimumPaneSize" class="summary-sig-name"><code>GetMinimumPaneSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetMinimumPaneSize" class="summary-sig-name"><code>SetMinimumPaneSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>min</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NeedUpdating"></a>
+<h3>NeedUpdating</h3>
+<p>See <a href="wx.SplitterWindow-class.html#GetNeedUpdating" class="link"><code>GetNeedUpdating</code></a> and <a href="wx.SplitterWindow-class.html#SetNeedUpdating" class="link"><code>SetNeedUpdating</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetNeedUpdating" class="summary-sig-name"><code>GetNeedUpdating</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetNeedUpdating" class="summary-sig-name"><code>SetNeedUpdating</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>needUpdating</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SashGravity"></a>
+<h3>SashGravity</h3>
+<p>See <a href="wx.SplitterWindow-class.html#GetSashGravity" class="link"><code>GetSashGravity</code></a> and <a href="wx.SplitterWindow-class.html#SetSashGravity" class="link"><code>SetSashGravity</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetSashGravity" class="summary-sig-name"><code>GetSashGravity</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetSashGravity" class="summary-sig-name"><code>SetSashGravity</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>gravity</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SashPosition"></a>
+<h3>SashPosition</h3>
+<p>See <a href="wx.SplitterWindow-class.html#GetSashPosition" class="link"><code>GetSashPosition</code></a> and <a href="wx.SplitterWindow-class.html#SetSashPosition" class="link"><code>SetSashPosition</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetSashPosition" class="summary-sig-name"><code>GetSashPosition</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetSashPosition" class="summary-sig-name"><code>SetSashPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>position</span>,
+          <span class=summary-sig-arg>redraw</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SashSize"></a>
+<h3>SashSize</h3>
+<p>See <a href="wx.SplitterWindow-class.html#GetSashSize" class="link"><code>GetSashSize</code></a> and <a href="wx.SplitterWindow-class.html#SetSashSize" class="link"><code>SetSashSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetSashSize" class="summary-sig-name"><code>GetSashSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetSashSize" class="summary-sig-name"><code>SetSashSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SplitMode"></a>
+<h3>SplitMode</h3>
+<p>See <a href="wx.SplitterWindow-class.html#GetSplitMode" class="link"><code>GetSplitMode</code></a> and <a href="wx.SplitterWindow-class.html#SetSplitMode" class="link"><code>SetSplitMode</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetSplitMode" class="summary-sig-name"><code>GetSplitMode</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#SetSplitMode" class="summary-sig-name"><code>SetSplitMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Window1"></a>
+<h3>Window1</h3>
+<p>See <a href="wx.SplitterWindow-class.html#GetWindow1" class="link"><code>GetWindow1</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetWindow1" class="summary-sig-name"><code>GetWindow1</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Window2"></a>
+<h3>Window2</h3>
+<p>See <a href="wx.SplitterWindow-class.html#GetWindow2" class="link"><code>GetWindow2</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.SplitterWindow-class.html#GetWindow2" class="summary-sig-name"><code>GetWindow2</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:55:55 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

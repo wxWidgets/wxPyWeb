@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.colourchooser.pycolourchooser.PyColourChooser</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.colourchooser-module.html">Package&nbsp;colourchooser</a> ::
+        <a href="wx.lib.colourchooser.pycolourchooser-module.html">Module&nbsp;pycolourchooser</a> ::
+        Class&nbsp;PyColourChooser
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type PyColourChooser</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+
+                         |
+                        <b>PyColourChooser</b>
+</pre><br />
+
+<hr/>
+
+<p>A Pure-Python implementation of the colour chooser dialog.</p>
+<p>The PyColourChooser is a pure python implementation of the colour
+chooser dialog. It's useful for embedding the colour choosing functionality
+inside other widgets, when the pop-up dialog is undesirable. It can also
+be used as a drop-in replacement on the GTK platform, as the native
+dialog is kind of ugly.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Creates an instance of the colour chooser.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#doPaletteClick" class="summary-sig-name"><code>doPaletteClick</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>m_x</span>,
+          <span class=summary-sig-arg>m_y</span>)</span></code>
+<br />
+Updates the colour values based on the mouse location
+over the palette.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a wxColour object indicating the current colour choice.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#InitColours" class="summary-sig-name"><code>InitColours</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Initializes the pre-set palette colours.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#onAddCustom" class="summary-sig-name"><code>onAddCustom</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Adds a custom colour to the custom colour box set.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#onBasicClick" class="summary-sig-name"><code>onBasicClick</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>box</span>)</span></code>
+<br />
+Highlights the selected colour box and updates the solid colour
+display and colour slider to reflect the choice.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#onCustomClick" class="summary-sig-name"><code>onCustomClick</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>box</span>)</span></code>
+<br />
+Highlights the selected custom colour box and updates the solid
+colour display and colour slider to reflect the choice.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#onPaletteDown" class="summary-sig-name"><code>onPaletteDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Stores state that the mouse has been pressed and updates
+the selected colour values.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#onPaletteMotion" class="summary-sig-name"><code>onPaletteMotion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the colour values during mouse motion while the
+mouse button is depressed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#onPaletteUp" class="summary-sig-name"><code>onPaletteUp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Stores state that the mouse is no longer depressed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#onScroll" class="summary-sig-name"><code>onScroll</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Updates the solid colour display to reflect the changing slider.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#setCustomColour" class="summary-sig-name"><code>setCustomColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>,
+          <span class=summary-sig-arg>true_colour</span>,
+          <span class=summary-sig-arg>base_colour</span>,
+          <span class=summary-sig-arg>slidepos</span>)</span></code>
+<br />
+Sets the custom colour at the given index.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#SetValue" class="summary-sig-name"><code>SetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Updates the colour chooser to reflect the given wxColour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#UpdateColour" class="summary-sig-name"><code>UpdateColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Performs necessary updates for when the colour selection has
+changed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#UpdateEntries" class="summary-sig-name"><code>UpdateEntries</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Updates the color levels to display the new values.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>list</code></font></td>
+<td><b><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#colour_names"><code>colour_names</code></a></b> = <span title="['ORANGE', 'GOLDENROD', 'WHEAT', 'SPRING GREEN', 'SKY BLUE', 'SLATE BLUE', 'MEDIUM VIOLET RED', 'PURPLE', 'RED', 'YELLOW', 'MEDIUM SPRING GREEN', 'PALE GREEN', 'CYAN', 'LIGHT STEEL BLUE', 'ORCHID', 'LIGHT MAGENTA', 'BROWN', 'YELLOW', 'GREEN', 'CADET BLUE', 'MEDIUM BLUE', 'MAGENTA', 'MAROON', 'ORANGE RED', 'FIREBRICK', 'CORAL', 'FOREST GREEN', 'AQUAMARINE', 'BLUE', 'NAVY', 'THISTLE', 'MEDIUM VIOLET RED', 'INDIAN RED', 'GOLD', 'MEDIUM SEA GREEN', 'MEDIUM BLUE', 'MIDNIGHT BLUE', 'GREY', 'PURPLE', 'KHAKI', 'BLACK', 'MEDIUM FOREST GREEN', 'KHAKI', 'DARK GREY', 'SEA GREEN', 'LIGHT GREY', 'MEDIUM ..."><code>['ORANGE',&nbsp;'GOLDENROD',&nbsp;'WHEAT',&nbsp;'SPRING&nbsp;<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>list</code></font></td>
+<td><b><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#custom_colours"><code>custom_colours</code></a></b> = <span title="[(wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86)]"><code>[(wx.Colour(255,&nbsp;255,&nbsp;255,&nbsp;255),&nbsp;86),&nbsp;(<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#idADD_CUSTOM"><code>idADD_CUSTOM</code></a></b> = <span title="129">129&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#idSCROLL"><code>idSCROLL</code></a></b> = <span title="130">130&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#last_custom"><code>last_custom</code></a></b> = <span title="0">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.colourchooser.pycolourchooser.PyColourChooser-class.html#NO_CUSTOM_COLOURS"><code>NO_CUSTOM_COLOURS</code></a></b> = <span title="16">16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Creates an instance of the colour chooser. Note that it is best to
+accept the given size of the colour chooser as it is currently not
+resizeable.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Panel-class.html#__init__"><code>wx.Panel.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="doPaletteClick"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">doPaletteClick</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>m_x</span>,
+          <span class=sig-arg>m_y</span>)</span>
+  </h3>
+<p>Updates the colour values based on the mouse location
+over the palette.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a wxColour object indicating the current colour choice.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InitColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InitColours</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Initializes the pre-set palette colours.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="onAddCustom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">onAddCustom</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Adds a custom colour to the custom colour box set. Boxes are
+chosen in a round-robin fashion, eventually overwriting previously
+added colours.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="onBasicClick"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">onBasicClick</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>,
+          <span class=sig-arg>box</span>)</span>
+  </h3>
+<p>Highlights the selected colour box and updates the solid colour
+display and colour slider to reflect the choice.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="onCustomClick"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">onCustomClick</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>,
+          <span class=sig-arg>box</span>)</span>
+  </h3>
+<p>Highlights the selected custom colour box and updates the solid
+colour display and colour slider to reflect the choice.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="onPaletteDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">onPaletteDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Stores state that the mouse has been pressed and updates
+the selected colour values.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="onPaletteMotion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">onPaletteMotion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the colour values during mouse motion while the
+mouse button is depressed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="onPaletteUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">onPaletteUp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Stores state that the mouse is no longer depressed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="onScroll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">onScroll</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Updates the solid colour display to reflect the changing slider.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setCustomColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setCustomColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>,
+          <span class=sig-arg>true_colour</span>,
+          <span class=sig-arg>base_colour</span>,
+          <span class=sig-arg>slidepos</span>)</span>
+  </h3>
+<p>Sets the custom colour at the given index. true_colour is wxColour
+object containing the actual rgb value of the custom colour.
+base_colour (wxColour) and slidepos (int) are used to configure the
+colour slider and set everything to its original position.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Updates the colour chooser to reflect the given wxColour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Performs necessary updates for when the colour selection has
+changed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateEntries"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateEntries</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Updates the color levels to display the new values.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="colour_names"></a>
+<h3>colour_names</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>list</code>
+
+      </dd>
+<span title="['ORANGE', 'GOLDENROD', 'WHEAT', 'SPRING GREEN', 'SKY BLUE', 'SLATE BLUE', 'MEDIUM VIOLET RED', 'PURPLE', 'RED', 'YELLOW', 'MEDIUM SPRING GREEN', 'PALE GREEN', 'CYAN', 'LIGHT STEEL BLUE', 'ORCHID', 'LIGHT MAGENTA', 'BROWN', 'YELLOW', 'GREEN', 'CADET BLUE', 'MEDIUM BLUE', 'MAGENTA', 'MAROON', 'ORANGE RED', 'FIREBRICK', 'CORAL', 'FOREST GREEN', 'AQUAMARINE', 'BLUE', 'NAVY', 'THISTLE', 'MEDIUM VIOLET RED', 'INDIAN RED', 'GOLD', 'MEDIUM SEA GREEN', 'MEDIUM BLUE', 'MIDNIGHT BLUE', 'GREY', 'PURPLE', 'KHAKI', 'BLACK', 'MEDIUM FOREST GREEN', 'KHAKI', 'DARK GREY', 'SEA GREEN', 'LIGHT GREY', 'MEDIUM ...">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+['ORANGE',
+ 'GOLDENROD',
+ 'WHEAT',
+ 'SPRING GREEN',
+ 'SKY BLUE',
+ 'SLATE BLUE',
+ 'MEDIUM VIOLET RED',
+ 'PURPLE',
+<span class="variable-ellipsis">...</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="custom_colours"></a>
+<h3>custom_colours</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>list</code>
+
+      </dd>
+<span title="[(wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86), (wx.Colour(255, 255, 255, 255), 86)]">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+[(wx.Colour(255, 255, 255, 255), 86),
+ (wx.Colour(255, 255, 255, 255), 86),
+ (wx.Colour(255, 255, 255, 255), 86),
+ (wx.Colour(255, 255, 255, 255), 86),
+ (wx.Colour(255, 255, 255, 255), 86),
+ (wx.Colour(255, 255, 255, 255), 86),
+ (wx.Colour(255, 255, 255, 255), 86),
+ (wx.Colour(255, 255, 255, 255), 86),
+<span class="variable-ellipsis">...</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="idADD_CUSTOM"></a>
+<h3>idADD_CUSTOM</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="129">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+129&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="idSCROLL"></a>
+<h3>idSCROLL</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="130">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+130&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="last_custom"></a>
+<h3>last_custom</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="0">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="NO_CUSTOM_COLOURS"></a>
+<h3>NO_CUSTOM_COLOURS</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="16">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:58:18 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

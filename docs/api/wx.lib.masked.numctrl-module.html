@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.masked.numctrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.masked-module.html">Package&nbsp;masked</a> ::
+        Module&nbsp;numctrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.masked.numctrl-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.masked.numctrl</h2>
+
+<dl class="rst-docutils">
+<dt>masked.NumCtrl:</dt>
+<dd><ul class="first rst-simple">
+<li>allows you to get and set integer or floating point numbers as value,&lt;/LI&gt;</li>
+<li>provides bounds support and optional value limiting,&lt;/LI&gt;</li>
+<li>has the right-insert input style that MaskedTextCtrl supports,&lt;/LI&gt;</li>
+<li>provides optional automatic grouping, sign control and format, grouping and decimal
+character selection, etc. etc.&lt;/LI&gt;</li>
+</ul>
+<p>Being derived from masked.TextCtrl, the control only allows
+fixed-point  notation.  That is, it has a fixed (though reconfigurable)
+maximum width for the integer portion and optional fixed width
+fractional portion.</p>
+<p>Here's the API:</p>
+<pre class="rst-literal-block">
+from wx.lib.masked import NumCtrl
+
+NumCtrl(
+     parent, id = -1,
+     value = 0,
+     pos = wx.DefaultPosition,
+     size = wx.DefaultSize,
+     style = 0,
+     validator = wx.DefaultValidator,
+     name = &quot;masked.number&quot;,
+     integerWidth = 10,
+     fractionWidth = 0,
+     allowNone = False,
+     allowNegative = True,
+     useParensForNegatives = False,
+     groupDigits = False,
+     groupChar = ',',
+     decimalChar = '.',
+     min = None,
+     max = None,
+     limited = False,
+     limitOnFieldChange = False,
+     selectOnEntry = True,
+     foregroundColour = &quot;Black&quot;,
+     signedForegroundColour = &quot;Red&quot;,
+     emptyBackgroundColour = &quot;White&quot;,
+     validBackgroundColour = &quot;White&quot;,
+     invalidBackgroundColour = &quot;Yellow&quot;,
+     autoSize = True
+     )
+</pre>
+<dl class="last rst-docutils">
+<dt>value</dt>
+<dd>If no initial value is set, the default will be zero, or
+the minimum value, if specified.  If an illegal string is specified,
+a ValueError will result. (You can always later set the initial
+value with SetValue() after instantiation of the control.)</dd>
+<dt>integerWidth</dt>
+<dd>Indicates how many places to the right of any decimal point
+should be allowed in the control.  This will, perforce, limit
+the size of the values that can be entered. This number need
+not include space for grouping characters or the sign, if either
+of these options are enabled, as the resulting underlying
+mask is automatically by the control.  The default of 10
+will allow any 32 bit integer value.  The minimum value
+for integerWidth is 1.</dd>
+<dt>fractionWidth</dt>
+<dd>Indicates how many decimal places to show for numeric value.
+If default (0), then the control will display and return only
+integer or long values.</dd>
+<dt>allowNone</dt>
+<dd>Boolean indicating whether or not the control is allowed to be
+empty, representing a value of None for the control.</dd>
+<dt>allowNegative</dt>
+<dd>Boolean indicating whether or not control is allowed to hold
+negative numbers.</dd>
+<dt>useParensForNegatives</dt>
+<dd>If true, this will cause negative numbers to be displayed with ()s
+rather than -, (although '-' will still trigger a negative number.)</dd>
+<dt>groupDigits</dt>
+<dd>Indicates whether or not grouping characters should be allowed and/or
+inserted when leaving the control or the decimal character is entered.</dd>
+<dt>groupChar</dt>
+<dd>What grouping character will be used if allowed. (By default ',')</dd>
+<dt>decimalChar</dt>
+<dd>If fractionWidth is &gt; 0, what character will be used to represent
+the decimal point.  (By default '.')</dd>
+<dt>min</dt>
+<dd>The minimum value that the control should allow.  This can be also be
+adjusted with SetMin().  If the control is not limited, any value
+below this bound will result in a background colored with the current
+invalidBackgroundColour.  If the min specified will not fit into the
+control, the min setting will be ignored.</dd>
+<dt>max</dt>
+<dd>The maximum value that the control should allow.  This can be
+adjusted with SetMax().  If the control is not limited, any value
+above this bound will result in a background colored with the current
+invalidBackgroundColour.  If the max specified will not fit into the
+control, the max setting will be ignored.</dd>
+<dt>limited</dt>
+<dd>Boolean indicating whether the control prevents values from
+exceeding the currently set minimum and maximum values (bounds).
+If False and bounds are set, out-of-bounds values will
+result in a background colored with the current invalidBackgroundColour.</dd>
+<dt>limitOnFieldChange</dt>
+<dd>An alternative to limited, this boolean indicates whether or not a
+field change should be allowed if the value in the control
+is out of bounds.  If True, and control focus is lost, this will also
+cause the control to take on the nearest bound value.</dd>
+<dt>selectOnEntry</dt>
+<dd>Boolean indicating whether or not the value in each field of the
+control should be automatically selected (for replacement) when
+that field is entered, either by cursor movement or tabbing.
+This can be desirable when using these controls for rapid data entry.</dd>
+<dt>foregroundColour</dt>
+<dd>Color value used for positive values of the control.</dd>
+<dt>signedForegroundColour</dt>
+<dd>Color value used for negative values of the control.</dd>
+<dt>emptyBackgroundColour</dt>
+<dd>What background color to use when the control is considered
+&quot;empty.&quot; (allow_none must be set to trigger this behavior.)</dd>
+<dt>validBackgroundColour</dt>
+<dd>What background color to use when the control value is
+considered valid.</dd>
+<dt>invalidBackgroundColour</dt>
+<dd>Color value used for illegal values or values out-of-bounds of the
+control when the bounds are set but the control is not limited.</dd>
+<dt>autoSize</dt>
+<dd>Boolean indicating whether or not the control should set its own
+width based on the integer and fraction widths.  True by default.
+&lt;I&gt;Note:&lt;/I&gt; Setting this to False will produce seemingly odd
+behavior unless the control is large enough to hold the maximum
+specified value given the widths and the sign positions; if not,
+the control will appear to &quot;jump around&quot; as the contents scroll.
+(ie. autoSize is highly recommended.)</dd>
+</dl>
+</dd>
+</dl>
+<hr class="rst-docutils" />
+<dl class="rst-docutils">
+<dt>masked.EVT_NUM(win, id, func)</dt>
+<dd>Respond to a EVT_COMMAND_MASKED_NUMBER_UPDATED event, generated when
+the value changes. Notice that this event will always be sent when the
+control's contents changes - whether this is due to user input or
+comes from the program itself (for example, if SetValue() is called.)</dd>
+<dt>SetValue(int|long|float|string)</dt>
+<dd>Sets the value of the control to the value specified, if
+possible.  The resulting actual value of the control may be
+altered to conform to the format of the control, changed
+to conform with the bounds set on the control if limited,
+or colored if not limited but the value is out-of-bounds.
+A ValueError exception will be raised if an invalid value
+is specified.</dd>
+<dt>GetValue()</dt>
+<dd>Retrieves the numeric value from the control.  The value
+retrieved will be either be returned as a long if the
+fractionWidth is 0, or a float otherwise.</dd>
+<dt>SetParameters(**kwargs)</dt>
+<dd>Allows simultaneous setting of various attributes
+of the control after construction.  Keyword arguments
+allowed are the same parameters as supported in the constructor.</dd>
+<dt>SetIntegerWidth(value)</dt>
+<dd>Resets the width of the integer portion of the control.  The
+value must be &gt;= 1, or an AttributeError exception will result.
+This value should account for any grouping characters that might
+be inserted (if grouping is enabled), but does not need to account
+for the sign, as that is handled separately by the control.</dd>
+<dt>GetIntegerWidth()</dt>
+<dd>Returns the current width of the integer portion of the control,
+not including any reserved sign position.</dd>
+<dt>SetFractionWidth(value)</dt>
+<dd>Resets the width of the fractional portion of the control.  The
+value must be &gt;= 0, or an AttributeError exception will result.  If
+0, the current value of the control will be truncated to an integer
+value.</dd>
+<dt>GetFractionWidth()</dt>
+<dd>Returns the current width of the fractional portion of the control.</dd>
+<dt>SetMin(min=None)</dt>
+<dd><p class="first">Resets the minimum value of the control.  If a value of &lt;I&gt;None&lt;/I&gt;
+is provided, then the control will have no explicit minimum value.
+If the value specified is greater than the current maximum value,
+then the function returns False and the minimum will not change from
+its current setting.  On success, the function returns True.</p>
+<p>If successful and the current value is lower than the new lower
+bound, if the control is limited, the value will be automatically
+adjusted to the new minimum value; if not limited, the value in the
+control will be colored as invalid.</p>
+<p class="last">If min &gt; the max value allowed by the width of the control,
+the function will return False, and the min will not be set.</p>
+</dd>
+<dt>GetMin()</dt>
+<dd>Gets the current lower bound value for the control.
+It will return None if no lower bound is currently specified.</dd>
+<dt>SetMax(max=None)</dt>
+<dd><p class="first">Resets the maximum value of the control. If a value of &lt;I&gt;None&lt;/I&gt;
+is provided, then the control will have no explicit maximum value.
+If the value specified is less than the current minimum value, then
+the function returns False and the maximum will not change from its
+current setting. On success, the function returns True.</p>
+<p>If successful and the current value is greater than the new upper
+bound, if the control is limited the value will be automatically
+adjusted to this maximum value; if not limited, the value in the
+control will be colored as invalid.</p>
+<p class="last">If max &gt; the max value allowed by the width of the control,
+the function will return False, and the max will not be set.</p>
+</dd>
+<dt>GetMax()</dt>
+<dd>Gets the current upper bound value for the control.
+It will return None if no upper bound is currently specified.</dd>
+<dt>SetBounds(min=None,max=None)</dt>
+<dd>This function is a convenience function for setting the min and max
+values at the same time.  The function only applies the maximum bound
+if setting the minimum bound is successful, and returns True
+only if both operations succeed.  &lt;B&gt;&lt;I&gt;Note:&lt;/I&gt; leaving out an argument
+will remove the corresponding bound.</dd>
+<dt>GetBounds()</dt>
+<dd>This function returns a two-tuple (min,max), indicating the
+current bounds of the control.  Each value can be None if
+that bound is not set.</dd>
+<dt>IsInBounds(value=None)</dt>
+<dd>Returns &lt;I&gt;True&lt;/I&gt; if no value is specified and the current value
+of the control falls within the current bounds.  This function can also
+be called with a value to see if that value would fall within the current
+bounds of the given control.</dd>
+<dt>SetLimited(bool)</dt>
+<dd>If called with a value of True, this function will cause the control
+to limit the value to fall within the bounds currently specified.
+If the control's value currently exceeds the bounds, it will then
+be limited accordingly.
+If called with a value of False, this function will disable value
+limiting, but coloring of out-of-bounds values will still take
+place if bounds have been set for the control.</dd>
+</dl>
+<p>GetLimited()</p>
+<dl class="rst-docutils">
+<dt>IsLimited()</dt>
+<dd>Returns &lt;I&gt;True&lt;/I&gt; if the control is currently limiting the
+value to fall within the current bounds.</dd>
+<dt>SetLimitOnFieldChange()</dt>
+<dd>If called with a value of True, will cause the control to allow
+out-of-bounds values, but will prevent field change if attempted
+via navigation, and if the control loses focus, it will change
+the value to the nearest bound.</dd>
+</dl>
+<p>GetLimitOnFieldChange()</p>
+<dl class="rst-docutils">
+<dt>IsLimitedOnFieldChange()</dt>
+<dd>Returns &lt;I&gt;True&lt;/I&gt; if the control is currently limiting the
+value on field change.</dd>
+<dt>SetAllowNone(bool)</dt>
+<dd>If called with a value of True, this function will cause the control
+to allow the value to be empty, representing a value of None.
+If called with a value of False, this function will prevent the value
+from being None.  If the value of the control is currently None,
+ie. the control is empty, then the value will be changed to that
+of the lower bound of the control, or 0 if no lower bound is set.</dd>
+</dl>
+<p>GetAllowNone()</p>
+<dl class="rst-docutils">
+<dt>IsNoneAllowed()</dt>
+<dd>Returns &lt;I&gt;True&lt;/I&gt; if the control currently allows its
+value to be None.</dd>
+<dt>SetAllowNegative(bool)</dt>
+<dd>If called with a value of True, this function will cause the
+control to allow the value to be negative (and reserve space for
+displaying the sign. If called with a value of False, and the
+value of the control is currently negative, the value of the
+control will be converted to the absolute value, and then
+limited appropriately based on the existing bounds of the control
+(if any).</dd>
+</dl>
+<p>GetAllowNegative()</p>
+<dl class="rst-docutils">
+<dt>IsNegativeAllowed()</dt>
+<dd>Returns &lt;I&gt;True&lt;/I&gt; if the control currently permits values
+to be negative.</dd>
+<dt>SetGroupDigits(bool)</dt>
+<dd>If called with a value of True, this will make the control
+automatically add and manage grouping characters to the presented
+value in integer portion of the control.</dd>
+</dl>
+<p>GetGroupDigits()</p>
+<dl class="rst-docutils">
+<dt>IsGroupingAllowed()</dt>
+<dd>Returns &lt;I&gt;True&lt;/I&gt; if the control is currently set to group digits.</dd>
+<dt>SetGroupChar()</dt>
+<dd>Sets the grouping character for the integer portion of the
+control.  (The default grouping character this is ','.</dd>
+<dt>GetGroupChar()</dt>
+<dd>Returns the current grouping character for the control.</dd>
+<dt>SetSelectOnEntry()</dt>
+<dd>If called with a value of &lt;I&gt;True&lt;/I&gt;, this will make the control
+automatically select the contents of each field as it is entered
+within the control.  (The default is True.)
+GetSelectOnEntry()
+Returns &lt;I&gt;True&lt;/I&gt; if the control currently auto selects
+the field values on entry.</dd>
+<dt>SetAutoSize(bool)</dt>
+<dd>Resets the autoSize attribute of the control.</dd>
+<dt>GetAutoSize()</dt>
+<dd>Returns the current state of the autoSize attribute for the control.</dd>
+</dl>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.masked.numctrl.NumberUpdatedEvent-class.html"><code>NumberUpdatedEvent</code></a></b></td>
+  <td>Used to fire an EVT_NUM event whenever the value in a NumCtrl changes.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.masked.numctrl.NumCtrl-class.html"><code>NumCtrl</code></a></b></td>
+  <td>Masked edit control supporting &quot;native&quot; numeric values, ie.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.masked.numctrl.NumCtrlAccessorsMixin-class.html"><code>NumCtrlAccessorsMixin</code></a></b></td>
+  <td>Defines masked.NumCtrl's list of attributes having their own
+Get/Set functions, ignoring those that make no sense for
+a numeric control.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>PyEventBinder</code></font></td>
+<td><b><a href="wx.lib.masked.numctrl-module.html#EVT_NUM"><code>EVT_NUM</code></a></b> = <span title="&lt;wx._core.PyEventBinder object at 0xb77abc6c&gt;"><code>&lt;wx._core.PyEventBinder&nbsp;object&nbsp;at&nbsp;0xb77abc6c&gt;  </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.masked.numctrl-module.html#MININT"><code>MININT</code></a></b> = <span title="-2147483648">-2147483648&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.masked.numctrl-module.html#wxEVT_COMMAND_MASKED_NUMBER_UPDATED"><code>wxEVT_COMMAND_MASKED_NUMBER_UPDATED</code></a></b> = <span title="10286">10286&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EVT_NUM"></a>
+<h3>EVT_NUM</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>PyEventBinder</code>
+
+      </dd>
+<span title="&lt;wx._core.PyEventBinder object at 0xb77abc6c&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx._core.PyEventBinder object at 0xb77abc6c&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="MININT"></a>
+<h3>MININT</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="-2147483648">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+-2147483648&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="wxEVT_COMMAND_MASKED_NUMBER_UPDATED"></a>
+<h3>wxEVT_COMMAND_MASKED_NUMBER_UPDATED</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="10286">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+10286&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:58:57 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

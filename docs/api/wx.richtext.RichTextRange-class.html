@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.richtext.RichTextRange</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.richtext-module.html">Module&nbsp;richtext</a> ::
+        Class&nbsp;RichTextRange
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.richtext.RichTextRange-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type RichTextRange</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>RichTextRange</b>
+</pre><br />
+
+<hr/>
+
+<p>RichTextRange is a data structure that represents a range of text
+within a <a href="wx.richtext.RichTextCtrl-class.html" class="link"><code>RichTextCtrl</code></a>.  It simply contains integer <tt class="rst-docutils literal"><span class="pre">start</span></tt> and
+<tt class="rst-docutils literal"><span class="pre">end</span></tt> properties and a few operations useful for dealing with
+ranges.  In most places in wxPython where a RichTextRange is expected a
+2-tuple containing (start, end) can be used instead.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextRange</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>start</span>,
+          <span class=summary-sig-arg>end</span>)</span></code>
+<br />
+Creates a new range object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextRange</font></td>
+  <td><code><a name="__add__"></a><span class="summary-sig"><span class="summary-sig-name">__add__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1589591700"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#__eq__" class="summary-sig-name"><code>__eq__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>other</span>)</span></code>
+<br />
+Test for equality of RichTextRange objects.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__getitem__"></a><span class="summary-sig"><span class="summary-sig-name">__getitem__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__len__"></a><span class="summary-sig"><span class="summary-sig-name">__len__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__nonzero__"></a><span class="summary-sig"><span class="summary-sig-name">__nonzero__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__reduce__"></a><span class="summary-sig"><span class="summary-sig-name">__reduce__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__repr__"></a><span class="summary-sig"><span class="summary-sig-name">__repr__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__setitem__"></a><span class="summary-sig"><span class="summary-sig-name">__setitem__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>,
+          <span class=summary-sig-arg>val</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__str__"></a><span class="summary-sig"><span class="summary-sig-name">__str__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextRange</font></td>
+  <td><code><a name="__sub__"></a><span class="summary-sig"><span class="summary-sig-name">__sub__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#Contains" class="summary-sig-name"><code>Contains</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Returns true if the given position is within this range.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(start,end)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#Get" class="summary-sig-name"><code>Get</code></a>()</span></code>
+<br />
+Returns the start and end properties as a tuple.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><a name="GetEnd"></a><span class="summary-sig"><span class="summary-sig-name">GetEnd</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#GetLength" class="summary-sig-name"><code>GetLength</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the length of the range</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><a name="GetStart"></a><span class="summary-sig"><span class="summary-sig-name">GetStart</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#IsOutside" class="summary-sig-name"><code>IsOutside</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>)</span></code>
+<br />
+Returns true if this range is completely outside 'range'</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#IsWithin" class="summary-sig-name"><code>IsWithin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>)</span></code>
+<br />
+Returns true if this range is completely within 'range'</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#LimitTo" class="summary-sig-name"><code>LimitTo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>)</span></code>
+<br />
+Limit this range to be within 'range'</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetEnd"></a><span class="summary-sig"><span class="summary-sig-name">SetEnd</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>end</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRange"></a><span class="summary-sig"><span class="summary-sig-name">SetRange</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>start</span>,
+          <span class=summary-sig-arg>end</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetStart"></a><span class="summary-sig"><span class="summary-sig-name">SetStart</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>start</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#Swap" class="summary-sig-name"><code>Swap</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Swaps the start and end</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextRange-class.html#End"><code>End</code></a></b>: See <a href="wx.richtext.RichTextRange-class.html#GetEnd" class="link"><code>GetEnd</code></a> and <a href="wx.richtext.RichTextRange-class.html#SetEnd" class="link"><code>SetEnd</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextRange-class.html#end"><code>end</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextRange-class.html#Length"><code>Length</code></a></b>: See <a href="wx.richtext.RichTextRange-class.html#GetLength" class="link"><code>GetLength</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextRange-class.html#Start"><code>Start</code></a></b>: See <a href="wx.richtext.RichTextRange-class.html#GetStart" class="link"><code>GetStart</code></a> and <a href="wx.richtext.RichTextRange-class.html#SetStart" class="link"><code>SetStart</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextRange-class.html#start"><code>start</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextRange-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>bool</code></font></td>
+<td><b><a href="wx.richtext.RichTextRange-class.html#__safe_for_unpickling__"><code>__safe_for_unpickling__</code></a></b> = <span title="True"><code>True                           </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>start</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>end</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Creates a new range object.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>start</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>end</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+RichTextRange      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="__builtin__.object-class.html#__init__"><code>__builtin__.object.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__eq__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__eq__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>other</span>)</span>
+    <br /><i>(Equality operator)</i>
+  </h3>
+<p>Test for equality of RichTextRange objects.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>other</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Contains"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Contains</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>Returns true if the given position is within this range. Allow for the
+possibility of an empty range - assume the position is within this
+empty range.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Get"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Get</span>()</span>
+  </h3>
+<p>Returns the start and end properties as a tuple.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(start,end)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLength"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLength</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the length of the range</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+long      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsOutside"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsOutside</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>range</span>)</span>
+  </h3>
+<p>Returns true if this range is completely outside 'range'</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>range</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=RichTextRange)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsWithin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsWithin</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>range</span>)</span>
+  </h3>
+<p>Returns true if this range is completely within 'range'</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>range</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=RichTextRange)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LimitTo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LimitTo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>range</span>)</span>
+  </h3>
+<p>Limit this range to be within 'range'</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>range</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=RichTextRange)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Swap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Swap</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Swaps the start and end</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="End"></a>
+<h3>End</h3>
+<p>See <a href="wx.richtext.RichTextRange-class.html#GetEnd" class="link"><code>GetEnd</code></a> and <a href="wx.richtext.RichTextRange-class.html#SetEnd" class="link"><code>SetEnd</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#GetEnd" class="summary-sig-name"><code>GetEnd</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#SetEnd" class="summary-sig-name"><code>SetEnd</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>end</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="end"></a>
+<h3>end</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#GetEnd" class="summary-sig-name"><code>GetEnd</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#SetEnd" class="summary-sig-name"><code>SetEnd</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>end</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Length"></a>
+<h3>Length</h3>
+<p>See <a href="wx.richtext.RichTextRange-class.html#GetLength" class="link"><code>GetLength</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#GetLength" class="summary-sig-name"><code>GetLength</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Start"></a>
+<h3>Start</h3>
+<p>See <a href="wx.richtext.RichTextRange-class.html#GetStart" class="link"><code>GetStart</code></a> and <a href="wx.richtext.RichTextRange-class.html#SetStart" class="link"><code>SetStart</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#GetStart" class="summary-sig-name"><code>GetStart</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#SetStart" class="summary-sig-name"><code>SetStart</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>start</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="start"></a>
+<h3>start</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#GetStart" class="summary-sig-name"><code>GetStart</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#SetStart" class="summary-sig-name"><code>SetStart</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>start</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1274607716</span>(...)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1274607660</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__safe_for_unpickling__"></a>
+<h3>__safe_for_unpickling__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>bool</code>
+
+      </dd>
+<span title="True">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+True                                                                   </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:55:31 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

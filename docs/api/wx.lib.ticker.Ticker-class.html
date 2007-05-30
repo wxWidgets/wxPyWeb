@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.ticker.Ticker</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.ticker-module.html">Module&nbsp;ticker</a> ::
+        Class&nbsp;Ticker
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.ticker.Ticker-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Ticker</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+               <a href="wx.Control-class.html"><code>Control</code></a> --+    
+                         |    
+                 <a href="wx.PyControl-class.html"><code>PyControl</code></a> --+
+                             |
+                            <b>Ticker</b>
+</pre><br />
+
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>fgcolor</span>,
+          <span class=summary-sig-arg>bgcolor</span>,
+          <span class=summary-sig-arg>start</span>,
+          <span class=summary-sig-arg>ppf</span>,
+          <span class=summary-sig-arg>fps</span>,
+          <span class=summary-sig-arg>direction</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#AcceptsFocus" class="summary-sig-name"><code>AcceptsFocus</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Non-interactive, so don't accept focus</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#DoGetBestSize" class="summary-sig-name"><code>DoGetBestSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Width we don't care about, height is either -1, or the character
+height of our text with a little extra padding</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#DrawText" class="summary-sig-name"><code>DrawText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Draws the ticker text at the current offset using the provided DC</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetDirection"></a><span class="summary-sig"><span class="summary-sig-name">GetDirection</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#GetFPS" class="summary-sig-name"><code>GetFPS</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Update speed of the ticker</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#GetPPF" class="summary-sig-name"><code>GetPPF</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Pixels per frame</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetText"></a><span class="summary-sig"><span class="summary-sig-name">GetText</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#IsTicking" class="summary-sig-name"><code>IsTicking</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Is the ticker ticking? ie, is the text moving?</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#OnErase" class="summary-sig-name"><code>OnErase</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+Noop because of double buffering</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnPaint"></a><span class="summary-sig"><span class="summary-sig-name">OnPaint</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnTick"></a><span class="summary-sig"><span class="summary-sig-name">OnTick</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#SetDirection" class="summary-sig-name"><code>SetDirection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dir</span>)</span></code>
+<br />
+Sets the direction of the ticker: right to left(rtl) or left to right (ltr)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetFont"></a><span class="summary-sig"><span class="summary-sig-name">SetFont</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#SetFPS" class="summary-sig-name"><code>SetFPS</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fps</span>)</span></code>
+<br />
+Adjust the update speed of the ticker</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#SetPPF" class="summary-sig-name"><code>SetPPF</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>ppf</span>)</span></code>
+<br />
+Set the number of pixels per frame the ticker moves - ie, how &quot;jumpy&quot; it is</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#SetText" class="summary-sig-name"><code>SetText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Set the ticker text.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#ShouldInheritColours" class="summary-sig-name"><code>ShouldInheritColours</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Don't get colours from our parent...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#Start" class="summary-sig-name"><code>Start</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Starts the text moving</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#Stop" class="summary-sig-name"><code>Stop</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Stop moving the text</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ticker.Ticker-class.html#UpdateExtent" class="summary-sig-name"><code>UpdateExtent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Updates the cached text extent if needed</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="AcceptsFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AcceptsFocus</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Non-interactive, so don't accept focus</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#AcceptsFocus"><code>wx.Window.AcceptsFocus</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoGetBestSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoGetBestSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Width we don't care about, height is either -1, or the character
+height of our text with a little extra padding</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyControl-class.html#DoGetBestSize"><code>wx.PyControl.DoGetBestSize</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Draws the ticker text at the current offset using the provided DC</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFPS"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFPS</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Update speed of the ticker</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPPF"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPPF</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Pixels per frame</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsTicking"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsTicking</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Is the ticker ticking? ie, is the text moving?</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnErase"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnErase</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>)</span>
+  </h3>
+<p>Noop because of double buffering</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDirection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDirection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dir</span>)</span>
+  </h3>
+<p>Sets the direction of the ticker: right to left(rtl) or left to right (ltr)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFPS"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFPS</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fps</span>)</span>
+  </h3>
+<p>Adjust the update speed of the ticker</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPPF"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPPF</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>ppf</span>)</span>
+  </h3>
+<p>Set the number of pixels per frame the ticker moves - ie, how &quot;jumpy&quot; it is</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Set the ticker text.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShouldInheritColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShouldInheritColours</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Don't get colours from our parent...</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#ShouldInheritColours"><code>wx.Window.ShouldInheritColours</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Start"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Start</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Starts the text moving</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Stop"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Stop</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Stop moving the text</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateExtent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateExtent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Updates the cached text extent if needed</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:21 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

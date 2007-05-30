@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.CommandEvent</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;CommandEvent
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.CommandEvent-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type CommandEvent</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+         <a href="wx.Event-class.html"><code>Event</code></a> --+
+                 |
+                <b>CommandEvent</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.ChildFocusEvent-class.html"><code>ChildFocusEvent</code></a>,
+    <a href="wx.ClipboardTextEvent-class.html"><code>ClipboardTextEvent</code></a>,
+    <a href="wx.CollapsiblePaneEvent-class.html"><code>CollapsiblePaneEvent</code></a>,
+    <a href="wx.ColourPickerEvent-class.html"><code>ColourPickerEvent</code></a>,
+    <a href="wx.ContextMenuEvent-class.html"><code>ContextMenuEvent</code></a>,
+    <a href="wx.DateEvent-class.html"><code>DateEvent</code></a>,
+    <a href="wx.gizmos.DynamicSashSplitEvent-class.html"><code>DynamicSashSplitEvent</code></a>,
+    <a href="wx.gizmos.DynamicSashUnifyEvent-class.html"><code>DynamicSashUnifyEvent</code></a>,
+    <a href="wx.FileDirPickerEvent-class.html"><code>FileDirPickerEvent</code></a>,
+    <a href="wx.FindDialogEvent-class.html"><code>FindDialogEvent</code></a>,
+    <a href="wx.FontPickerEvent-class.html"><code>FontPickerEvent</code></a>,
+    <a href="wx.grid.GridEditorCreatedEvent-class.html"><code>GridEditorCreatedEvent</code></a>,
+    <a href="wx.HelpEvent-class.html"><code>HelpEvent</code></a>,
+    <a href="wx.html.HtmlCellEvent-class.html"><code>HtmlCellEvent</code></a>,
+    <a href="wx.html.HtmlLinkEvent-class.html"><code>HtmlLinkEvent</code></a>,
+    <a href="wx.HyperlinkEvent-class.html"><code>HyperlinkEvent</code></a>,
+    <a href="wx.NotifyEvent-class.html"><code>NotifyEvent</code></a>,
+    <a href="wx.PyCommandEvent-class.html"><code>PyCommandEvent</code></a>,
+    <a href="wx.SashEvent-class.html"><code>SashEvent</code></a>,
+    <a href="wx.ScrollEvent-class.html"><code>ScrollEvent</code></a>,
+    <a href="wx.stc.StyledTextEvent-class.html"><code>StyledTextEvent</code></a>,
+    <a href="wx.TextUrlEvent-class.html"><code>TextUrlEvent</code></a>,
+    <a href="wx.UpdateUIEvent-class.html"><code>UpdateUIEvent</code></a>,
+    <a href="wx.webkit.WebKitBeforeLoadEvent-class.html"><code>WebKitBeforeLoadEvent</code></a>,
+    <a href="wx.webkit.WebKitStateChangedEvent-class.html"><code>WebKitStateChangedEvent</code></a>,
+    <a href="wx.WindowCreateEvent-class.html"><code>WindowCreateEvent</code></a>,
+    <a href="wx.WindowDestroyEvent-class.html"><code>WindowDestroyEvent</code></a></dd></dl>
+
+<hr/>
+
+<p>This event class contains information about command events, which
+originate from a variety of simple controls, as well as menus and
+toolbars.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">CommandEvent</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>commandType</span>,
+          <span class=summary-sig-arg>winid</span>)</span></code>
+<br />
+This event class contains information about command events, which
+originate from a variety of simple controls, as well as menus and
+toolbars.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#IsChecked" class="summary-sig-name"><code>Checked</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+This method can be used with checkbox and menu events: for the
+checkboxes, the method returns true for a selection event and false
+for a deselection one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Event</font></td>
+  <td><code><a name="Clone"></a><span class="summary-sig"><span class="summary-sig-name">Clone</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetClientData" class="summary-sig-name"><code>GetClientData</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the client data object for a listbox or choice selection event, (if any.)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetClientData" class="summary-sig-name"><code>GetClientObject</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the client data object for a listbox or choice selection event, (if any.)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetExtraLong" class="summary-sig-name"><code>GetExtraLong</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns extra information dependant on the event objects type.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetInt" class="summary-sig-name"><code>GetInt</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the integer identifier corresponding to a listbox, choice or
+radiobox selection (only if the event was a selection, not a
+deselection), or a boolean value representing the value of a checkbox.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetSelection" class="summary-sig-name"><code>GetSelection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns item index for a listbox or choice selection event (not valid
+for a deselection).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetString" class="summary-sig-name"><code>GetString</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns item string for a listbox or choice selection event (not valid
+for a deselection).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#IsChecked" class="summary-sig-name"><code>IsChecked</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+This method can be used with checkbox and menu events: for the
+checkboxes, the method returns true for a selection event and false
+for a deselection one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#IsSelection" class="summary-sig-name"><code>IsSelection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+For a listbox or similar event, returns true if it is a selection,
+false if it is a deselection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#SetClientData" class="summary-sig-name"><code>SetClientData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>clientData</span>)</span></code>
+<br />
+Associate the given client data with the item at position n.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CommandEvent-class.html#SetClientData" class="summary-sig-name"><code>SetClientObject</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>clientData</span>)</span></code>
+<br />
+Associate the given client data with the item at position n.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetExtraLong"></a><span class="summary-sig"><span class="summary-sig-name">SetExtraLong</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>extraLong</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetInt"></a><span class="summary-sig"><span class="summary-sig-name">SetInt</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>i</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetString"></a><span class="summary-sig"><span class="summary-sig-name">SetString</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>s</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CommandEvent-class.html#ClientData"><code>ClientData</code></a></b>: See <a href="wx.CommandEvent-class.html#GetClientData" class="link"><code>GetClientData</code></a> and <a href="wx.CommandEvent-class.html#SetClientData" class="link"><code>SetClientData</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CommandEvent-class.html#ClientObject"><code>ClientObject</code></a></b>: See <a href="wx.CommandEvent-class.html#GetClientData" class="link"><code>GetClientObject</code></a> and <a href="wx.CommandEvent-class.html#SetClientData" class="link"><code>SetClientObject</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CommandEvent-class.html#ExtraLong"><code>ExtraLong</code></a></b>: See <a href="wx.CommandEvent-class.html#GetExtraLong" class="link"><code>GetExtraLong</code></a> and <a href="wx.CommandEvent-class.html#SetExtraLong" class="link"><code>SetExtraLong</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CommandEvent-class.html#Int"><code>Int</code></a></b>: See <a href="wx.CommandEvent-class.html#GetInt" class="link"><code>GetInt</code></a> and <a href="wx.CommandEvent-class.html#SetInt" class="link"><code>SetInt</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CommandEvent-class.html#Selection"><code>Selection</code></a></b>: See <a href="wx.CommandEvent-class.html#GetSelection" class="link"><code>GetSelection</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CommandEvent-class.html#String"><code>String</code></a></b>: See <a href="wx.CommandEvent-class.html#GetString" class="link"><code>GetString</code></a> and <a href="wx.CommandEvent-class.html#SetString" class="link"><code>SetString</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CommandEvent-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>commandType</span>=<span class=sig-default>wxEVT_NULL</span>,
+          <span class=sig-arg>winid</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>This event class contains information about command events, which
+originate from a variety of simple controls, as well as menus and
+toolbars.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>commandType</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=EventType)</i>
+<p/>
+      <dd><code><b>winid</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+CommandEvent      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Event-class.html#__init__"><code>wx.Event.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsChecked"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Checked</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>This method can be used with checkbox and menu events: for the
+checkboxes, the method returns true for a selection event and false
+for a deselection one. For the menu events, this method indicates if
+the menu item just has become checked or unchecked (and thus only
+makes sense for checkable menu items).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetClientData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClientData</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the client data object for a listbox or choice selection event, (if any.)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyObject      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetClientData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClientObject</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the client data object for a listbox or choice selection event, (if any.)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyObject      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetExtraLong"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetExtraLong</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns extra information dependant on the event objects type. If the
+event comes from a listbox selection, it is a boolean determining
+whether the event was a selection (true) or a deselection (false). A
+listbox deselection only occurs for multiple-selection boxes, and in
+this case the index and string values are indeterminate and the
+listbox must be examined by the application.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+long      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetInt"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetInt</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the integer identifier corresponding to a listbox, choice or
+radiobox selection (only if the event was a selection, not a
+deselection), or a boolean value representing the value of a checkbox.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSelection</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns item index for a listbox or choice selection event (not valid
+for a deselection).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetString"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetString</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns item string for a listbox or choice selection event (not valid
+for a deselection).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsChecked"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsChecked</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>This method can be used with checkbox and menu events: for the
+checkboxes, the method returns true for a selection event and false
+for a deselection one. For the menu events, this method indicates if
+the menu item just has become checked or unchecked (and thus only
+makes sense for checkable menu items).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsSelection</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>For a listbox or similar event, returns true if it is a selection,
+false if it is a deselection.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetClientData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetClientData</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>clientData</span>)</span>
+  </h3>
+<p>Associate the given client data with the item at position n.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>clientData</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetClientData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetClientObject</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>clientData</span>)</span>
+  </h3>
+<p>Associate the given client data with the item at position n.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>clientData</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ClientData"></a>
+<h3>ClientData</h3>
+<p>See <a href="wx.CommandEvent-class.html#GetClientData" class="link"><code>GetClientData</code></a> and <a href="wx.CommandEvent-class.html#SetClientData" class="link"><code>SetClientData</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetClientData" class="summary-sig-name"><code>GetClientData</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CommandEvent-class.html#SetClientData" class="summary-sig-name"><code>SetClientData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>clientData</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ClientObject"></a>
+<h3>ClientObject</h3>
+<p>See <a href="wx.CommandEvent-class.html#GetClientData" class="link"><code>GetClientObject</code></a> and <a href="wx.CommandEvent-class.html#SetClientData" class="link"><code>SetClientObject</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetClientData" class="summary-sig-name"><code>GetClientData</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CommandEvent-class.html#SetClientData" class="summary-sig-name"><code>SetClientData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>clientData</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ExtraLong"></a>
+<h3>ExtraLong</h3>
+<p>See <a href="wx.CommandEvent-class.html#GetExtraLong" class="link"><code>GetExtraLong</code></a> and <a href="wx.CommandEvent-class.html#SetExtraLong" class="link"><code>SetExtraLong</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetExtraLong" class="summary-sig-name"><code>GetExtraLong</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CommandEvent-class.html#SetExtraLong" class="summary-sig-name"><code>SetExtraLong</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>extraLong</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Int"></a>
+<h3>Int</h3>
+<p>See <a href="wx.CommandEvent-class.html#GetInt" class="link"><code>GetInt</code></a> and <a href="wx.CommandEvent-class.html#SetInt" class="link"><code>SetInt</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetInt" class="summary-sig-name"><code>GetInt</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CommandEvent-class.html#SetInt" class="summary-sig-name"><code>SetInt</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>i</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Selection"></a>
+<h3>Selection</h3>
+<p>See <a href="wx.CommandEvent-class.html#GetSelection" class="link"><code>GetSelection</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetSelection" class="summary-sig-name"><code>GetSelection</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="String"></a>
+<h3>String</h3>
+<p>See <a href="wx.CommandEvent-class.html#GetString" class="link"><code>GetString</code></a> and <a href="wx.CommandEvent-class.html#SetString" class="link"><code>SetString</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CommandEvent-class.html#GetString" class="summary-sig-name"><code>GetString</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CommandEvent-class.html#SetString" class="summary-sig-name"><code>SetString</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>s</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:53:44 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

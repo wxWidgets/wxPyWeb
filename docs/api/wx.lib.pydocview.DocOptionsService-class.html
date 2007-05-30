@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.pydocview.DocOptionsService</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.pydocview-module.html">Module&nbsp;pydocview</a> ::
+        Class&nbsp;DocOptionsService
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.pydocview.DocOptionsService-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type DocOptionsService</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+            
+         |            
+    <a href="wx.Object-class.html"><code>Object</code></a> --+        
+             |        
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+    
+                 |    
+        <a href="wx.lib.pydocview.DocService-class.html"><code>DocService</code></a> --+
+                     |
+                    <b>DocOptionsService</b>
+</pre><br />
+
+<hr/>
+
+<p>A service that implements an options menu item and an options dialog with
+notebook tabs.  New tabs can be added by other services by calling the
+&quot;AddOptionsPanel&quot; method.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocOptionsService-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>showGeneralOptions</span>,
+          <span class=summary-sig-arg>supportedModes</span>)</span></code>
+<br />
+Initializes the options service with the option of suppressing the default
+general options pane that is included with the options service by setting
+showGeneralOptions to False.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocOptionsService-class.html#AddOptionsPanel" class="summary-sig-name"><code>AddOptionsPanel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>optionsPanel</span>)</span></code>
+<br />
+Adds an options panel to the options dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocOptionsService-class.html#ClearOptionsPanels" class="summary-sig-name"><code>ClearOptionsPanels</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Clears all of the options panels that have been added into the
+options dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocOptionsService-class.html#GetSupportedModes" class="summary-sig-name"><code>GetSupportedModes</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the modes supported by the application.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocOptionsService-class.html#InstallControls" class="summary-sig-name"><code>InstallControls</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>frame</span>,
+          <span class=summary-sig-arg>menuBar</span>,
+          <span class=summary-sig-arg>toolBar</span>,
+          <span class=summary-sig-arg>statusBar</span>,
+          <span class=summary-sig-arg>document</span>)</span></code>
+<br />
+Installs a &quot;Tools&quot; menu with an &quot;Options&quot; menu item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocOptionsService-class.html#OnOptions" class="summary-sig-name"><code>OnOptions</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Shows the options dialog, called when the &quot;Options&quot; menu item is selected.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocOptionsService-class.html#ProcessEvent" class="summary-sig-name"><code>ProcessEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Checks to see if the &quot;Options&quot; menu item has been selected.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocOptionsService-class.html#SetSupportedModes" class="summary-sig-name"><code>SetSupportedModes</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>_supportedModessupportedModes</span>)</span></code>
+<br />
+Sets the modes supported by the application.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>showGeneralOptions</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>supportedModes</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Initializes the options service with the option of suppressing the default
+general options pane that is included with the options service by setting
+showGeneralOptions to False.  It allowModeChanges is set to False, the
+default general options pane will allow users to change the document
+interface mode between SDI and MDI modes.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.pydocview.DocService-class.html#__init__"><code>wx.lib.pydocview.DocService.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddOptionsPanel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddOptionsPanel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>optionsPanel</span>)</span>
+  </h3>
+<p>Adds an options panel to the options dialog.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClearOptionsPanels"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClearOptionsPanels</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Clears all of the options panels that have been added into the
+options dialog.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSupportedModes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSupportedModes</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the modes supported by the application.  Use docview.DOC_SDI and
+docview.DOC_MDI flags to check if SDI and/or MDI modes are supported.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InstallControls"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InstallControls</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>frame</span>,
+          <span class=sig-arg>menuBar</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>toolBar</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>statusBar</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>document</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Installs a &quot;Tools&quot; menu with an &quot;Options&quot; menu item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.pydocview.DocService-class.html#InstallControls"><code>wx.lib.pydocview.DocService.InstallControls</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnOptions"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnOptions</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Shows the options dialog, called when the &quot;Options&quot; menu item is selected.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Checks to see if the &quot;Options&quot; menu item has been selected.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.pydocview.DocService-class.html#ProcessEvent"><code>wx.lib.pydocview.DocService.ProcessEvent</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSupportedModes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSupportedModes</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>_supportedModessupportedModes</span>)</span>
+  </h3>
+<p>Sets the modes supported by the application.  Use docview.DOC_SDI and
+docview.DOC_MDI flags to set if SDI and/or MDI modes are supported.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:58:44 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

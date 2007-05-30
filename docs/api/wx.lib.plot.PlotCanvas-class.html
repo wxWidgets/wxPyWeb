@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.plot.PlotCanvas</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.plot-module.html">Module&nbsp;plot</a> ::
+        Class&nbsp;PlotCanvas
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.plot.PlotCanvas-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type PlotCanvas</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+
+                         |
+                        <b>PlotCanvas</b>
+</pre><br />
+
+<hr/>
+
+<p>Subclass of a wx.Panel which holds two scrollbars and the actual
+plotting canvas (self.canvas). It allows for simple general plotting
+of data with zoom, labels, and automatic axis scaling.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Constructs a panel, which can be a child of a frame or
+any other non-control window</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#Clear" class="summary-sig-name"><code>Clear</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Erase the window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#Draw" class="summary-sig-name"><code>Draw</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>graphics</span>,
+          <span class=summary-sig-arg>xAxis</span>,
+          <span class=summary-sig-arg>yAxis</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Wrapper around _Draw, which handles log axes</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetClosestPoint" class="summary-sig-name"><code>GetClosestPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pntXY</span>,
+          <span class=summary-sig-arg>pointScaled</span>)</span></code>
+<br />
+Returns list with
+[curveNumber, legend, index of closest point, pointXY, scaledXY, distance]
+list for only the closest curve.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetClosestPoints" class="summary-sig-name"><code>GetClosestPoints</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pntXY</span>,
+          <span class=summary-sig-arg>pointScaled</span>)</span></code>
+<br />
+Returns list with
+[curveNumber, legend, index of closest point, pointXY, scaledXY, distance]
+list for each curve.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetClosestPoint" class="summary-sig-name"><code>GetClosetPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pntXY</span>,
+          <span class=summary-sig-arg>pointScaled</span>)</span></code>
+<br />
+Returns list with
+[curveNumber, legend, index of closest point, pointXY, scaledXY, distance]
+list for only the closest curve.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetEnableDrag"></a><span class="summary-sig"><span class="summary-sig-name">GetEnableDrag</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetEnableGrid" class="summary-sig-name"><code>GetEnableGrid</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+True if grid enabled.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetEnableLegend" class="summary-sig-name"><code>GetEnableLegend</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+True if Legend enabled.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetEnablePointLabel" class="summary-sig-name"><code>GetEnablePointLabel</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+True if pointLabel enabled.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetEnableTitle" class="summary-sig-name"><code>GetEnableTitle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+True if title enabled.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetEnableZoom" class="summary-sig-name"><code>GetEnableZoom</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+True if zooming enabled.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetFontSizeAxis" class="summary-sig-name"><code>GetFontSizeAxis</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get current tick and axis label font size in points</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetFontSizeLegend" class="summary-sig-name"><code>GetFontSizeLegend</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get current Legend font size in points</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetFontSizeTitle" class="summary-sig-name"><code>GetFontSizeTitle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get current Title font size in points</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetGridColour"></a><span class="summary-sig"><span class="summary-sig-name">GetGridColour</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="getLogScale"></a><span class="summary-sig"><span class="summary-sig-name">getLogScale</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetPointLabelFunc" class="summary-sig-name"><code>GetPointLabelFunc</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns pointLabel Drawing Function</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetShowScrollbars" class="summary-sig-name"><code>GetShowScrollbars</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Set True to show scrollbars</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetUseScientificNotation"></a><span class="summary-sig"><span class="summary-sig-name">GetUseScientificNotation</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetXCurrentRange"></a><span class="summary-sig"><span class="summary-sig-name">GetXCurrentRange</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetXMaxRange"></a><span class="summary-sig"><span class="summary-sig-name">GetXMaxRange</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetXSpec" class="summary-sig-name"><code>GetXSpec</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns current XSpec for axis</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetXY" class="summary-sig-name"><code>GetXY</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Wrapper around _getXY, which handles log scales</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetYCurrentRange"></a><span class="summary-sig"><span class="summary-sig-name">GetYCurrentRange</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetYMaxRange"></a><span class="summary-sig"><span class="summary-sig-name">GetYMaxRange</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#GetYSpec" class="summary-sig-name"><code>GetYSpec</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns current YSpec for axis</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#OnLeave" class="summary-sig-name"><code>OnLeave</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Used to erase pointLabel when mouse outside window</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMotion"></a><span class="summary-sig"><span class="summary-sig-name">OnMotion</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMouseDoubleClick"></a><span class="summary-sig"><span class="summary-sig-name">OnMouseDoubleClick</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMouseLeftDown"></a><span class="summary-sig"><span class="summary-sig-name">OnMouseLeftDown</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMouseLeftUp"></a><span class="summary-sig"><span class="summary-sig-name">OnMouseLeftUp</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMouseRightDown"></a><span class="summary-sig"><span class="summary-sig-name">OnMouseRightDown</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnPaint"></a><span class="summary-sig"><span class="summary-sig-name">OnPaint</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnScroll"></a><span class="summary-sig"><span class="summary-sig-name">OnScroll</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSize"></a><span class="summary-sig"><span class="summary-sig-name">OnSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#PageSetup" class="summary-sig-name"><code>PageSetup</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Brings up the page setup dialog</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#PositionScreenToUser" class="summary-sig-name"><code>PositionScreenToUser</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pntXY</span>)</span></code>
+<br />
+Converts Screen position to User Coordinates</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#PositionUserToScreen" class="summary-sig-name"><code>PositionUserToScreen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pntXY</span>)</span></code>
+<br />
+Converts User position to Screen Coordinates</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#Printout" class="summary-sig-name"><code>Printout</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>paper</span>)</span></code>
+<br />
+Print current plot.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#PrintPreview" class="summary-sig-name"><code>PrintPreview</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Print-preview current plot.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#Redraw" class="summary-sig-name"><code>Redraw</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Redraw the existing plot.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#Reset" class="summary-sig-name"><code>Reset</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Unzoom the plot.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SaveFile" class="summary-sig-name"><code>SaveFile</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fileName</span>)</span></code>
+<br />
+Saves the file to the type specified in the extension.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#ScrollRight" class="summary-sig-name"><code>ScrollRight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>units</span>)</span></code>
+<br />
+Move view right number of axis units.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#ScrollUp" class="summary-sig-name"><code>ScrollUp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>units</span>)</span></code>
+<br />
+Move view up number of axis units.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCursor"></a><span class="summary-sig"><span class="summary-sig-name">SetCursor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cursor</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetEnableDrag" class="summary-sig-name"><code>SetEnableDrag</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Set True to enable drag.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetEnableGrid" class="summary-sig-name"><code>SetEnableGrid</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Set True to enable grid.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetEnableLegend" class="summary-sig-name"><code>SetEnableLegend</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Set True to enable legend.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetEnablePointLabel" class="summary-sig-name"><code>SetEnablePointLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Set True to enable pointLabel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetEnableTitle" class="summary-sig-name"><code>SetEnableTitle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Set True to enable title.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetEnableZoom" class="summary-sig-name"><code>SetEnableZoom</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Set True to enable zooming.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetFontSizeAxis" class="summary-sig-name"><code>SetFontSizeAxis</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>point</span>)</span></code>
+<br />
+Set the tick and axis label font size (default is 10 point)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetFontSizeLegend" class="summary-sig-name"><code>SetFontSizeLegend</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>point</span>)</span></code>
+<br />
+Set Legend font size (default is 7 point)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetFontSizeTitle" class="summary-sig-name"><code>SetFontSizeTitle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>point</span>)</span></code>
+<br />
+Set Title font size (default is 15 point)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetGridColour"></a><span class="summary-sig"><span class="summary-sig-name">SetGridColour</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="setLogScale"></a><span class="summary-sig"><span class="summary-sig-name">setLogScale</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>logscale</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetPointLabelFunc" class="summary-sig-name"><code>SetPointLabelFunc</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>func</span>)</span></code>
+<br />
+Sets the function with custom code for pointLabel drawing
+<strong>****</strong> more info needed <strong>***********</strong></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetShowScrollbars" class="summary-sig-name"><code>SetShowScrollbars</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Set True to show scrollbars</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetUseScientificNotation"></a><span class="summary-sig"><span class="summary-sig-name">SetUseScientificNotation</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>useScientificNotation</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetXSpec" class="summary-sig-name"><code>SetXSpec</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>type</span>)</span></code>
+<br />
+xSpec- defines x axis type.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#SetYSpec" class="summary-sig-name"><code>SetYSpec</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>type</span>)</span></code>
+<br />
+ySpec- defines x axis type.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#UpdatePointLabel" class="summary-sig-name"><code>UpdatePointLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mDataDict</span>)</span></code>
+<br />
+Updates the pointLabel point on screen with data contained in
+mDataDict.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.plot.PlotCanvas-class.html#Zoom" class="summary-sig-name"><code>Zoom</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Center</span>,
+          <span class=summary-sig-arg>Ratio</span>)</span></code>
+<br />
+Zoom on the plot
+Centers on the X,Y coords given in Center
+Zooms by the Ratio = (Xratio, Yratio) given</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>'plotCanvas'</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructs a panel, which can be a child of a frame or
+any other non-control window</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Panel-class.html#__init__"><code>wx.Panel.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Clear"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Clear</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Erase the window.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Draw"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Draw</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>graphics</span>,
+          <span class=sig-arg>xAxis</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>yAxis</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>dc</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Wrapper around _Draw, which handles log axes</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetClosestPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClosestPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pntXY</span>,
+          <span class=sig-arg>pointScaled</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Returns list with
+[curveNumber, legend, index of closest point, pointXY, scaledXY, distance]
+list for only the closest curve.
+Returns [] if no curves are being plotted.</p>
+<p>x, y in user coords
+if pointScaled == True based on screen coords
+if pointScaled == False based on user coords</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetClosestPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClosestPoints</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pntXY</span>,
+          <span class=sig-arg>pointScaled</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Returns list with
+[curveNumber, legend, index of closest point, pointXY, scaledXY, distance]
+list for each curve.
+Returns [] if no curves are being plotted.</p>
+<p>x, y in user coords
+if pointScaled == True based on screen coords
+if pointScaled == False based on user coords</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetClosestPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClosetPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pntXY</span>,
+          <span class=sig-arg>pointScaled</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Returns list with
+[curveNumber, legend, index of closest point, pointXY, scaledXY, distance]
+list for only the closest curve.
+Returns [] if no curves are being plotted.</p>
+<p>x, y in user coords
+if pointScaled == True based on screen coords
+if pointScaled == False based on user coords</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEnableGrid"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEnableGrid</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>True if grid enabled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEnableLegend"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEnableLegend</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>True if Legend enabled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEnablePointLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEnablePointLabel</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>True if pointLabel enabled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEnableTitle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEnableTitle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>True if title enabled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEnableZoom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEnableZoom</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>True if zooming enabled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFontSizeAxis"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFontSizeAxis</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get current tick and axis label font size in points</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFontSizeLegend"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFontSizeLegend</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get current Legend font size in points</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFontSizeTitle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFontSizeTitle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get current Title font size in points</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPointLabelFunc"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPointLabelFunc</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns pointLabel Drawing Function</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetShowScrollbars"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetShowScrollbars</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Set True to show scrollbars</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetXSpec"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetXSpec</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns current XSpec for axis</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetXY"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetXY</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Wrapper around _getXY, which handles log scales</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetYSpec"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetYSpec</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns current YSpec for axis</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnLeave"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnLeave</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Used to erase pointLabel when mouse outside window</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PageSetup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PageSetup</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Brings up the page setup dialog</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PositionScreenToUser"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PositionScreenToUser</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pntXY</span>)</span>
+  </h3>
+<p>Converts Screen position to User Coordinates</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PositionUserToScreen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PositionUserToScreen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pntXY</span>)</span>
+  </h3>
+<p>Converts User position to Screen Coordinates</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Printout"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Printout</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>paper</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Print current plot.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PrintPreview"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PrintPreview</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Print-preview current plot.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Redraw"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Redraw</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Redraw the existing plot.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Reset"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Reset</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Unzoom the plot.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SaveFile"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SaveFile</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fileName</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+<p>Saves the file to the type specified in the extension. If no file
+name is specified a dialog box is provided.  Returns True if sucessful,
+otherwise False.</p>
+<p>.bmp  Save a Windows bitmap file.
+.xbm  Save an X bitmap file.
+.xpm  Save an XPM bitmap file.
+.png  Save a Portable Network Graphics file.
+.jpg  Save a Joint Photographic Experts Group file.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ScrollRight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ScrollRight</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>units</span>)</span>
+  </h3>
+<p>Move view right number of axis units.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ScrollUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ScrollUp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>units</span>)</span>
+  </h3>
+<p>Move view up number of axis units.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEnableDrag"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEnableDrag</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Set True to enable drag.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEnableGrid"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEnableGrid</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Set True to enable grid.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEnableLegend"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEnableLegend</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Set True to enable legend.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEnablePointLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEnablePointLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Set True to enable pointLabel.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEnableTitle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEnableTitle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Set True to enable title.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEnableZoom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEnableZoom</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Set True to enable zooming.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFontSizeAxis"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFontSizeAxis</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>point</span>=<span class=sig-default>10</span>)</span>
+  </h3>
+<p>Set the tick and axis label font size (default is 10 point)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFontSizeLegend"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFontSizeLegend</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>point</span>=<span class=sig-default>7</span>)</span>
+  </h3>
+<p>Set Legend font size (default is 7 point)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFontSizeTitle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFontSizeTitle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>point</span>=<span class=sig-default>15</span>)</span>
+  </h3>
+<p>Set Title font size (default is 15 point)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPointLabelFunc"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPointLabelFunc</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>func</span>)</span>
+  </h3>
+<p>Sets the function with custom code for pointLabel drawing
+<strong>****</strong> more info needed <strong>***********</strong></p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetShowScrollbars"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetShowScrollbars</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Set True to show scrollbars</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetXSpec"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetXSpec</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>type</span>=<span class=sig-default>'auto'</span>)</span>
+  </h3>
+<pre class="literalblock">
+xSpec- defines x axis type. Can be 'none', 'min' or 'auto'
+where:
+    'none' - shows no axis or tick mark values
+    'min' - shows min bounding box values
+    'auto' - rounds axis range to sensible values
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetYSpec"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetYSpec</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>type</span>=<span class=sig-default>'auto'</span>)</span>
+  </h3>
+<pre class="literalblock">
+ySpec- defines x axis type. Can be 'none', 'min' or 'auto'
+where:
+    'none' - shows no axis or tick mark values
+    'min' - shows min bounding box values
+    'auto' - rounds axis range to sensible values
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdatePointLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdatePointLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mDataDict</span>)</span>
+  </h3>
+<p>Updates the pointLabel point on screen with data contained in
+mDataDict.</p>
+<p>mDataDict will be passed to your function set by
+SetPointLabelFunc.  It can contain anything you
+want to display on the screen at the scaledXY point
+you specify.</p>
+<p>This function can be called from parent window with onClick,
+onMotion events etc.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Zoom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Zoom</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>Center</span>,
+          <span class=sig-arg>Ratio</span>)</span>
+  </h3>
+<p>Zoom on the plot
+Centers on the X,Y coords given in Center
+Zooms by the Ratio = (Xratio, Yratio) given</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:56:27 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

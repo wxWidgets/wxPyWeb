@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.Cursor</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;Cursor
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.Cursor-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Cursor</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+     <a href="wx.GDIObject-class.html"><code>GDIObject</code></a> --+
+                 |
+                <b>Cursor</b>
+</pre><br />
+
+<hr/>
+
+<p>A cursor is a small bitmap usually used for denoting where the mouse
+pointer is, with a picture that might indicate the interpretation of a
+mouse click.</p>
+<p>A single cursor object may be used in many windows (any subwindow
+type). The wxWindows convention is to set the cursor for a window, as
+in X, rather than to set it globally as in MS Windows, although a
+global <a href="wx-module.html#SetCursor" class="link"><code>wx.SetCursor</code></a> function is also available for use on MS Windows.</p>
+<div class="rst-section" id="stock-cursor-ids">
+<h1 class="heading"><a name="rst-stock-cursor-ids">Stock Cursor IDs</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="30%" />
+<col class="rst" width="70%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.CURSOR_ARROW</td>
+<td class="rst">A standard arrow cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_RIGHT_ARROW</td>
+<td class="rst">A standard arrow cursor pointing to the right.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_BLANK</td>
+<td class="rst">Transparent cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_BULLSEYE</td>
+<td class="rst">Bullseye cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_CHAR</td>
+<td class="rst">Rectangular character cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_CROSS</td>
+<td class="rst">A cross cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_HAND</td>
+<td class="rst">A hand cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_IBEAM</td>
+<td class="rst">An I-beam cursor (vertical line).</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_LEFT_BUTTON</td>
+<td class="rst">Represents a mouse with the left button depressed.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_MAGNIFIER</td>
+<td class="rst">A magnifier icon.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_MIDDLE_BUTTON</td>
+<td class="rst">Represents a mouse with the middle button depressed.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_NO_ENTRY</td>
+<td class="rst">A no-entry sign cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_PAINT_BRUSH</td>
+<td class="rst">A paintbrush cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_PENCIL</td>
+<td class="rst">A pencil cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_POINT_LEFT</td>
+<td class="rst">A cursor that points left.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_POINT_RIGHT</td>
+<td class="rst">A cursor that points right.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_QUESTION_ARROW</td>
+<td class="rst">An arrow and question mark.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_RIGHT_BUTTON</td>
+<td class="rst">Represents a mouse with the right button depressed.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_SIZENESW</td>
+<td class="rst">A sizing cursor pointing NE-SW.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_SIZENS</td>
+<td class="rst">A sizing cursor pointing N-S.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_SIZENWSE</td>
+<td class="rst">A sizing cursor pointing NW-SE.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_SIZEWE</td>
+<td class="rst">A sizing cursor pointing W-E.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_SIZING</td>
+<td class="rst">A general sizing cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_SPRAYCAN</td>
+<td class="rst">A spraycan cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_WAIT</td>
+<td class="rst">A wait cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_WATCH</td>
+<td class="rst">A watch cursor.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CURSOR_ARROWWAIT</td>
+<td class="rst">A cursor with both an arrow and an hourglass, (windows.)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Cursor</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Cursor-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cursorName</span>,
+          <span class=summary-sig-arg>type</span>,
+          <span class=summary-sig-arg>hotSpotX</span>,
+          <span class=summary-sig-arg>hotSpotY</span>)</span></code>
+<br />
+Construct a Cursor from a file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1324087620"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__nonzero__"></a><span class="summary-sig"><span class="summary-sig-name">__nonzero__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsOk"></a><span class="summary-sig"><span class="summary-sig-name">IsOk</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsOk"></a><span class="summary-sig"><span class="summary-sig-name">Ok</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Cursor-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>cursorName</span>,
+          <span class=sig-arg>type</span>,
+          <span class=sig-arg>hotSpotX</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>hotSpotY</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Construct a Cursor from a file.  Specify the type of file using
+wx.BITAMP_TYPE* constants, and specify the hotspot if not using a .cur
+file.
+:see: Alternate constructors <a href="wx-module.html#StockCursor" class="link"><code>wx.StockCursor</code></a>,`wx.CursorFromImage`</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>cursorName</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>type</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>hotSpotX</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>hotSpotY</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Cursor      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.GDIObject-class.html#__init__"><code>wx.GDIObject.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:01:10 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

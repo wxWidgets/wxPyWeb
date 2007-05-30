@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.throbber.Throbber</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.throbber-module.html">Module&nbsp;throbber</a> ::
+        Class&nbsp;Throbber
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.throbber.Throbber-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Throbber</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+    
+                         |    
+                   <a href="wx.PyPanel-class.html"><code>PyPanel</code></a> --+
+                             |
+                            <b>Throbber</b>
+</pre><br />
+
+<hr/>
+
+<p>The first argument is either the name of a file that will be split into frames
+(a composite image) or a list of  strings of image names that will be treated
+as individual frames.  If a single (composite) image is given, then additional
+information must be provided: the number of frames in the image and the width
+of each frame.  The first frame is treated as the &quot;at rest&quot; frame (it is not
+shown during animation, but only when Throbber.Rest() is called.
+A second, single image may be optionally specified to overlay on top of the
+animation. A label may also be specified to show on top of the animation.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>bitmap</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>frameDelay</span>,
+          <span class=summary-sig-arg>frames</span>,
+          <span class=summary-sig-arg>frameWidth</span>,
+          <span class=summary-sig-arg>label</span>,
+          <span class=summary-sig-arg>overlay</span>,
+          <span class=summary-sig-arg>reverse</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>rest</span>,
+          <span class=summary-sig-arg>current</span>,
+          <span class=summary-sig-arg>direction</span>,
+          <span class=summary-sig-arg>sequence</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#Decrement" class="summary-sig-name"><code>Decrement</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Display previous image in sequence</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DoGetBestSize"></a><span class="summary-sig"><span class="summary-sig-name">DoGetBestSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Draw"></a><span class="summary-sig"><span class="summary-sig-name">Draw</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#Increment" class="summary-sig-name"><code>Increment</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Display next image in sequence</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#Next" class="summary-sig-name"><code>Next</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Display next image in sequence according to direction</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDestroyWindow"></a><span class="summary-sig"><span class="summary-sig-name">OnDestroyWindow</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnPaint"></a><span class="summary-sig"><span class="summary-sig-name">OnPaint</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnTimer"></a><span class="summary-sig"><span class="summary-sig-name">OnTimer</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#Previous" class="summary-sig-name"><code>Previous</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Display previous image in sequence according to direction</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#Rest" class="summary-sig-name"><code>Rest</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Stop the animation and return to frame 0</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#Reverse" class="summary-sig-name"><code>Reverse</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Change the direction of the animation</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#Running" class="summary-sig-name"><code>Running</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the animation is running</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#SetCurrent" class="summary-sig-name"><code>SetCurrent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>current</span>)</span></code>
+<br />
+Set current image</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#SetFont" class="summary-sig-name"><code>SetFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+<br />
+Set the font for the label</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#SetFrameDelay" class="summary-sig-name"><code>SetFrameDelay</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>frameDelay</span>)</span></code>
+<br />
+Delay between each frame</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#SetLabel" class="summary-sig-name"><code>SetLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>label</span>)</span></code>
+<br />
+Change the text of the label</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#SetRest" class="summary-sig-name"><code>SetRest</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rest</span>)</span></code>
+<br />
+Set rest image</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#SetSequence" class="summary-sig-name"><code>SetSequence</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sequence</span>)</span></code>
+<br />
+Order to display images</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#Start" class="summary-sig-name"><code>Start</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Start the animation</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#Stop" class="summary-sig-name"><code>Stop</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Stop the animation</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#ToggleLabel" class="summary-sig-name"><code>ToggleLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>state</span>)</span></code>
+<br />
+Toggle the label</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.throbber.Throbber-class.html#ToggleOverlay" class="summary-sig-name"><code>ToggleOverlay</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>state</span>)</span></code>
+<br />
+Toggle the overlay image</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Update"></a><span class="summary-sig"><span class="summary-sig-name">Update</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Wrap"></a><span class="summary-sig"><span class="summary-sig-name">Wrap</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="Decrement"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Decrement</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Display previous image in sequence</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Increment"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Increment</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Display next image in sequence</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Next"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Next</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Display next image in sequence according to direction</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Previous"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Previous</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Display previous image in sequence according to direction</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Rest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Rest</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Stop the animation and return to frame 0</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Reverse"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Reverse</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Change the direction of the animation</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Running"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Running</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the animation is running</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCurrent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCurrent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>current</span>)</span>
+  </h3>
+<p>Set current image</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>font</span>)</span>
+  </h3>
+<p>Set the font for the label</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetFont"><code>wx.Window.SetFont</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFrameDelay"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFrameDelay</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>frameDelay</span>=<span class=sig-default>0.050000000000000003</span>)</span>
+  </h3>
+<p>Delay between each frame</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>label</span>)</span>
+  </h3>
+<p>Change the text of the label</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetLabel"><code>wx.Window.SetLabel</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRest</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rest</span>)</span>
+  </h3>
+<p>Set rest image</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSequence"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSequence</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sequence</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Order to display images</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Start"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Start</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Start the animation</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Stop"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Stop</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Stop the animation</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ToggleLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ToggleLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>state</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Toggle the label</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ToggleOverlay"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ToggleOverlay</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>state</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Toggle the overlay image</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:46 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

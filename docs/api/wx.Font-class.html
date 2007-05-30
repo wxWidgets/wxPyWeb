@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.Font</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;Font
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.Font-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Font</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+     <a href="wx.GDIObject-class.html"><code>GDIObject</code></a> --+
+                 |
+                <b>Font</b>
+</pre><br />
+
+<hr/>
+
+<p>A font is an object which determines the appearance of text. Fonts are
+used for drawing text to a device context, and setting the appearance
+of a window's text.</p>
+<p>You can retrieve the current system font settings with <a href="wx.SystemSettings-class.html" class="link"><code>wx.SystemSettings</code></a>.</p>
+<p>The possible values for the family parameter of wx.Font constructor are:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="45%" />
+<col class="rst" width="55%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.FONTFAMILY_DEFAULT</td>
+<td class="rst">Chooses a default font.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTFAMILY_DECORATIVE</td>
+<td class="rst">A decorative font.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTFAMILY_ROMAN</td>
+<td class="rst">A formal, serif font.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTFAMILY_SCRIPT</td>
+<td class="rst">A handwriting font.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTFAMILY_SWISS</td>
+<td class="rst">A sans-serif font.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTFAMILY_MODERN</td>
+<td class="rst">Usually a fixed pitch font.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTFAMILY_TELETYPE</td>
+<td class="rst">A teletype font.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>The possible values for the weight parameter are:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="91%" />
+<col class="rst" width="9%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.FONTWEIGHT_NORMAL</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTWEIGHT_LIGHT</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTWEIGHT_BOLD</td>
+<td class="rst">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>The known font encodings are:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="42%" />
+<col class="rst" width="58%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.FONTENCODING_SYSTEM</td>
+<td class="rst">system default</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_DEFAULT</td>
+<td class="rst">current default encoding</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_1</td>
+<td class="rst">West European (Latin1)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_2</td>
+<td class="rst">Central and East European (Latin2)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_3</td>
+<td class="rst">Esperanto (Latin3)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_4</td>
+<td class="rst">Baltic (old) (Latin4)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_5</td>
+<td class="rst">Cyrillic</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_6</td>
+<td class="rst">Arabic</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_7</td>
+<td class="rst">Greek</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_8</td>
+<td class="rst">Hebrew</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_9</td>
+<td class="rst">Turkish (Latin5)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_10</td>
+<td class="rst">Variation of Latin4 (Latin6)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_11</td>
+<td class="rst">Thai</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_12</td>
+<td class="rst">doesn't exist currently, but put it
+here anyhow to make all ISO8859
+consecutive numbers</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_13</td>
+<td class="rst">Baltic (Latin7)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_14</td>
+<td class="rst">Latin8</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ISO8859_15</td>
+<td class="rst">Latin9 (a.k.a. Latin0, includes euro)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_KOI8</td>
+<td class="rst">Cyrillic charset</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_ALTERNATIVE</td>
+<td class="rst">same as MS-DOS CP866</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_BULGARIAN</td>
+<td class="rst">used under Linux in Bulgaria</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP437</td>
+<td class="rst">original MS-DOS codepage</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP850</td>
+<td class="rst">CP437 merged with Latin1</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP852</td>
+<td class="rst">CP437 merged with Latin2</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP855</td>
+<td class="rst">another cyrillic encoding</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP866</td>
+<td class="rst">and another one</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP874</td>
+<td class="rst">WinThai</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP1250</td>
+<td class="rst">WinLatin2</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP1251</td>
+<td class="rst">WinCyrillic</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP1252</td>
+<td class="rst">WinLatin1</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP1253</td>
+<td class="rst">WinGreek (8859-7)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP1254</td>
+<td class="rst">WinTurkish</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP1255</td>
+<td class="rst">WinHebrew</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP1256</td>
+<td class="rst">WinArabic</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_CP1257</td>
+<td class="rst">WinBaltic (same as Latin 7)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_UTF7</td>
+<td class="rst">UTF-7 Unicode encoding</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FONTENCODING_UTF8</td>
+<td class="rst">UTF-8 Unicode encoding</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Font</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pointSize</span>,
+          <span class=summary-sig-arg>family</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>weight</span>,
+          <span class=summary-sig-arg>underline</span>,
+          <span class=summary-sig-arg>face</span>,
+          <span class=summary-sig-arg>encoding</span>)</span></code>
+<br />
+Creates a font object with the specified attributes.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1337291084"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="__eq__"></a><span class="summary-sig"><span class="summary-sig-name">__eq__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>other</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="__ne__"></a><span class="summary-sig"><span class="summary-sig-name">__ne__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>other</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__nonzero__"></a><span class="summary-sig"><span class="summary-sig-name">__nonzero__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetDefaultEncoding" class="summary-sig-name"><code>GetDefaultEncoding</code></a>()</span></code>
+<br />
+Returns the encoding used for all fonts created with an encoding of
+<tt class="rst-docutils literal"><span class="pre">wx.FONTENCODING_DEFAULT</span></tt>.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetEncoding" class="summary-sig-name"><code>GetEncoding</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the font's encoding.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetFaceName" class="summary-sig-name"><code>GetFaceName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the typeface name associated with the font, or the empty
+string if there is no typeface information.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetFamily" class="summary-sig-name"><code>GetFamily</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the font family.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetFamilyString" class="summary-sig-name"><code>GetFamilyString</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a string representation of the font family.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">NativeFontInfo</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetNativeFontInfo" class="summary-sig-name"><code>GetNativeFontInfo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Constructs a <a href="wx.NativeFontInfo-class.html" class="link"><code>wx.NativeFontInfo</code></a> object from this font.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetNativeFontInfoDesc" class="summary-sig-name"><code>GetNativeFontInfoDesc</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the platform-dependent string completely describing this font
+or an empty string if the font isn't valid.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetNativeFontInfoUserDesc" class="summary-sig-name"><code>GetNativeFontInfoUserDesc</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a human readable version of <a href="wx.Font-class.html#GetNativeFontInfoDesc" class="link"><code>GetNativeFontInfoDesc</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="GetNoAntiAliasing"></a><span class="summary-sig"><span class="summary-sig-name">GetNoAntiAliasing</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetPixelSize" class="summary-sig-name"><code>GetPixelSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the size in pixels if the font was constructed with a pixel
+size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetPointSize" class="summary-sig-name"><code>GetPointSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the point size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetStyle" class="summary-sig-name"><code>GetStyle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the font style.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetStyleString" class="summary-sig-name"><code>GetStyleString</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a string representation of the font style.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetUnderlined" class="summary-sig-name"><code>GetUnderlined</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the font is underlined, <tt class="rst-docutils literal"><span class="pre">False</span></tt> otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetWeight" class="summary-sig-name"><code>GetWeight</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the font weight.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#GetWeightString" class="summary-sig-name"><code>GetWeightString</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return a string representation of the font weight.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#IsFixedWidth" class="summary-sig-name"><code>IsFixedWidth</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if the font is a fixed width (or monospaced) font, false
+if it is a proportional one or font is invalid.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#IsOk" class="summary-sig-name"><code>IsOk</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if this font was successfully created.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#IsUsingSizeInPixels" class="summary-sig-name"><code>IsUsingSizeInPixels</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the font is using a pixelSize.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#IsOk" class="summary-sig-name"><code>Ok</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if this font was successfully created.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetDefaultEncoding" class="summary-sig-name"><code>SetDefaultEncoding</code></a>(<span class=summary-sig-arg>encoding</span>)</span></code>
+<br />
+Sets the default font encoding.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetEncoding" class="summary-sig-name"><code>SetEncoding</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>encoding</span>)</span></code>
+<br />
+Set the font encoding.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetFaceName" class="summary-sig-name"><code>SetFaceName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>faceName</span>)</span></code>
+<br />
+Sets the facename for the font.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetFamily" class="summary-sig-name"><code>SetFamily</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>family</span>)</span></code>
+<br />
+Sets the font family.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetNativeFontInfo" class="summary-sig-name"><code>SetNativeFontInfo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>info</span>)</span></code>
+<br />
+Set the font's attributes from a <a href="wx.NativeFontInfo-class.html" class="link"><code>wx.NativeFontInfo</code></a> object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetNativeFontInfoFromString" class="summary-sig-name"><code>SetNativeFontInfoFromString</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>info</span>)</span></code>
+<br />
+Set the font's attributes from string representation of a
+<a href="wx.NativeFontInfo-class.html" class="link"><code>wx.NativeFontInfo</code></a> object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetNativeFontInfoUserDesc" class="summary-sig-name"><code>SetNativeFontInfoUserDesc</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>info</span>)</span></code>
+<br />
+Set the font's attributes from a string formerly returned from
+<a href="wx.Font-class.html#GetNativeFontInfoDesc" class="link"><code>GetNativeFontInfoDesc</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetNoAntiAliasing"></a><span class="summary-sig"><span class="summary-sig-name">SetNoAntiAliasing</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>no</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetPixelSize" class="summary-sig-name"><code>SetPixelSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pixelSize</span>)</span></code>
+<br />
+Sets the size in pixels rather than points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetPointSize" class="summary-sig-name"><code>SetPointSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pointSize</span>)</span></code>
+<br />
+Sets the point size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetStyle" class="summary-sig-name"><code>SetStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Sets the font style.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetUnderlined" class="summary-sig-name"><code>SetUnderlined</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>underlined</span>)</span></code>
+<br />
+Sets underlining.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Font-class.html#SetWeight" class="summary-sig-name"><code>SetWeight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>weight</span>)</span></code>
+<br />
+Sets the font weight.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#Encoding"><code>Encoding</code></a></b>: See <a href="wx.Font-class.html#GetEncoding" class="link"><code>GetEncoding</code></a> and <a href="wx.Font-class.html#SetEncoding" class="link"><code>SetEncoding</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#FaceName"><code>FaceName</code></a></b>: See <a href="wx.Font-class.html#GetFaceName" class="link"><code>GetFaceName</code></a> and <a href="wx.Font-class.html#SetFaceName" class="link"><code>SetFaceName</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#Family"><code>Family</code></a></b>: See <a href="wx.Font-class.html#GetFamily" class="link"><code>GetFamily</code></a> and <a href="wx.Font-class.html#SetFamily" class="link"><code>SetFamily</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#FamilyString"><code>FamilyString</code></a></b>: See <a href="wx.Font-class.html#GetFamilyString" class="link"><code>GetFamilyString</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#NativeFontInfo"><code>NativeFontInfo</code></a></b>: See <a href="wx.Font-class.html#GetNativeFontInfo" class="link"><code>GetNativeFontInfo</code></a> and <a href="wx.Font-class.html#SetNativeFontInfo" class="link"><code>SetNativeFontInfo</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#NativeFontInfoDesc"><code>NativeFontInfoDesc</code></a></b>: See <a href="wx.Font-class.html#GetNativeFontInfoDesc" class="link"><code>GetNativeFontInfoDesc</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#NativeFontInfoUserDesc"><code>NativeFontInfoUserDesc</code></a></b>: See <a href="wx.Font-class.html#GetNativeFontInfoUserDesc" class="link"><code>GetNativeFontInfoUserDesc</code></a> and <a href="wx.Font-class.html#SetNativeFontInfoUserDesc" class="link"><code>SetNativeFontInfoUserDesc</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#NoAntiAliasing"><code>NoAntiAliasing</code></a></b>: See <a href="wx.Font-class.html#GetNoAntiAliasing" class="link"><code>GetNoAntiAliasing</code></a> and <a href="wx.Font-class.html#SetNoAntiAliasing" class="link"><code>SetNoAntiAliasing</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#PixelSize"><code>PixelSize</code></a></b>: See <a href="wx.Font-class.html#GetPixelSize" class="link"><code>GetPixelSize</code></a> and <a href="wx.Font-class.html#SetPixelSize" class="link"><code>SetPixelSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#PointSize"><code>PointSize</code></a></b>: See <a href="wx.Font-class.html#GetPointSize" class="link"><code>GetPointSize</code></a> and <a href="wx.Font-class.html#SetPointSize" class="link"><code>SetPointSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#Style"><code>Style</code></a></b>: See <a href="wx.Font-class.html#GetStyle" class="link"><code>GetStyle</code></a> and <a href="wx.Font-class.html#SetStyle" class="link"><code>SetStyle</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#StyleString"><code>StyleString</code></a></b>: See <a href="wx.Font-class.html#GetStyleString" class="link"><code>GetStyleString</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#Underlined"><code>Underlined</code></a></b>: See <a href="wx.Font-class.html#GetUnderlined" class="link"><code>GetUnderlined</code></a> and <a href="wx.Font-class.html#SetUnderlined" class="link"><code>SetUnderlined</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#Weight"><code>Weight</code></a></b>: See <a href="wx.Font-class.html#GetWeight" class="link"><code>GetWeight</code></a> and <a href="wx.Font-class.html#SetWeight" class="link"><code>SetWeight</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Font-class.html#WeightString"><code>WeightString</code></a></b>: See <a href="wx.Font-class.html#GetWeightString" class="link"><code>GetWeightString</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pointSize</span>,
+          <span class=sig-arg>family</span>,
+          <span class=sig-arg>style</span>,
+          <span class=sig-arg>weight</span>,
+          <span class=sig-arg>underline</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>face</span>=<span class=sig-default>EmptyString</span>,
+          <span class=sig-arg>encoding</span>=<span class=sig-default>FONTENCODING_DEFAULT</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Creates a font object with the specified attributes.</p>
+<blockquote>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pointSize</b></code> -
+ The size of the font in points.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>family</b></code> -
+ Font family.  A generic way of referring to fonts
+without specifying actual facename.  It can be One of 
+the <tt class="rst-docutils literal"><span class="pre">wx.FONTFAMILY_xxx</span></tt> constants.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>style</b></code> -
+ One of the <tt class="rst-docutils literal"><span class="pre">wx.FONTSTYLE_xxx</span></tt> constants.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>weight</b></code> -
+ Font weight, sometimes also referred to as font
+boldness. One of the <tt class="rst-docutils literal"><span class="pre">wx.FONTWEIGHT_xxx</span></tt> constants.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>underline</b></code> -
+ The value can be <tt class="rst-docutils literal"><span class="pre">True</span></tt> or <tt class="rst-docutils literal"><span class="pre">False</span></tt> and
+indicates whether the font will include an underline.  This
+may not be supported on all platforms.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      <dd><code><b>face</b></code> -
+ An optional string specifying the actual typeface to
+be used. If it is an empty string, a default typeface will be
+chosen based on the family.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>encoding</b></code> -
+ An encoding which may be one of the
+<tt class="rst-docutils literal"><span class="pre">wx.FONTENCODING_xxx</span></tt> constants.  If the specified encoding isn't
+available, no font is created.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Font      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.GDIObject-class.html#__init__"><code>wx.GDIObject.__init__</code></a></dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx-module.html#FFont" class="link"><code>wx.FFont</code></a>, <a href="wx-module.html#FontFromPixelSize" class="link"><code>wx.FontFromPixelSize</code></a>, <a href="wx-module.html#FFontFromPixelSize" class="link"><code>wx.FFontFromPixelSize</code></a>,
+<a href="wx-module.html#FontFromNativeInfoString" class="link"><code>wx.FontFromNativeInfoString</code></a>, <a href="wx-module.html#FontFromNativeInfo" class="link"><code>wx.FontFromNativeInfo</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEncoding"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEncoding</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the font's encoding.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFaceName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFaceName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the typeface name associated with the font, or the empty
+string if there is no typeface information.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFamily"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFamily</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the font family.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFamilyString"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFamilyString</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a string representation of the font family.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNativeFontInfo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNativeFontInfo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Constructs a <a href="wx.NativeFontInfo-class.html" class="link"><code>wx.NativeFontInfo</code></a> object from this font.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+NativeFontInfo      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNativeFontInfoDesc"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNativeFontInfoDesc</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the platform-dependent string completely describing this font
+or an empty string if the font isn't valid.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNativeFontInfoUserDesc"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNativeFontInfoUserDesc</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a human readable version of <a href="wx.Font-class.html#GetNativeFontInfoDesc" class="link"><code>GetNativeFontInfoDesc</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPixelSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPixelSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the size in pixels if the font was constructed with a pixel
+size.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Size      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPointSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPointSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the point size.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetStyle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the font style.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetStyleString"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetStyleString</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a string representation of the font style.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetUnderlined"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetUnderlined</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the font is underlined, <tt class="rst-docutils literal"><span class="pre">False</span></tt> otherwise.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetWeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetWeight</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the font weight.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetWeightString"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetWeightString</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return a string representation of the font weight.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsFixedWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsFixedWidth</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if the font is a fixed width (or monospaced) font, false
+if it is a proportional one or font is invalid.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsOk"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsOk</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if this font was successfully created.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsUsingSizeInPixels"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsUsingSizeInPixels</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the font is using a pixelSize.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsOk"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Ok</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if this font was successfully created.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEncoding"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEncoding</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>encoding</span>)</span>
+  </h3>
+<p>Set the font encoding.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>encoding</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFaceName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFaceName</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>faceName</span>)</span>
+  </h3>
+<p>Sets the facename for the font.  The facename, which should be a valid
+font installed on the end-user's system.</p>
+<p>To avoid portability problems, don't rely on a specific face, but
+specify the font family instead or as well. A suitable font will be
+found on the end-user's system. If both the family and the facename
+are specified, wxWidgets will first search for the specific face, and
+then for a font belonging to the same family.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>faceName</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFamily"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFamily</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>family</span>)</span>
+  </h3>
+<p>Sets the font family.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>family</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetNativeFontInfo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetNativeFontInfo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>info</span>)</span>
+  </h3>
+<p>Set the font's attributes from a <a href="wx.NativeFontInfo-class.html" class="link"><code>wx.NativeFontInfo</code></a> object.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>info</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=NativeFontInfo)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetNativeFontInfoFromString"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetNativeFontInfoFromString</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>info</span>)</span>
+  </h3>
+<p>Set the font's attributes from string representation of a
+<a href="wx.NativeFontInfo-class.html" class="link"><code>wx.NativeFontInfo</code></a> object.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>info</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetNativeFontInfoUserDesc"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetNativeFontInfoUserDesc</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>info</span>)</span>
+  </h3>
+<p>Set the font's attributes from a string formerly returned from
+<a href="wx.Font-class.html#GetNativeFontInfoDesc" class="link"><code>GetNativeFontInfoDesc</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>info</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPixelSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPixelSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pixelSize</span>)</span>
+  </h3>
+<p>Sets the size in pixels rather than points.  If there is platform API
+support for this then it is used, otherwise a font with the closest
+size is found using a binary search.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pixelSize</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPointSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPointSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pointSize</span>)</span>
+  </h3>
+<p>Sets the point size.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pointSize</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetStyle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>style</span>)</span>
+  </h3>
+<p>Sets the font style.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetUnderlined"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetUnderlined</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>underlined</span>)</span>
+  </h3>
+<p>Sets underlining.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>underlined</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetWeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetWeight</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>weight</span>)</span>
+  </h3>
+<p>Sets the font weight.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>weight</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="GetDefaultEncoding"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDefaultEncoding</span>()</span>
+  </h3>
+<p>Returns the encoding used for all fonts created with an encoding of
+<tt class="rst-docutils literal"><span class="pre">wx.FONTENCODING_DEFAULT</span></tt>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDefaultEncoding"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDefaultEncoding</span>(<span class=sig-arg>encoding</span>)</span>
+  </h3>
+<p>Sets the default font encoding.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>encoding</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Encoding"></a>
+<h3>Encoding</h3>
+<p>See <a href="wx.Font-class.html#GetEncoding" class="link"><code>GetEncoding</code></a> and <a href="wx.Font-class.html#SetEncoding" class="link"><code>SetEncoding</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetEncoding" class="summary-sig-name"><code>GetEncoding</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#SetEncoding" class="summary-sig-name"><code>SetEncoding</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>encoding</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="FaceName"></a>
+<h3>FaceName</h3>
+<p>See <a href="wx.Font-class.html#GetFaceName" class="link"><code>GetFaceName</code></a> and <a href="wx.Font-class.html#SetFaceName" class="link"><code>SetFaceName</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetFaceName" class="summary-sig-name"><code>GetFaceName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#SetFaceName" class="summary-sig-name"><code>SetFaceName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>faceName</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Family"></a>
+<h3>Family</h3>
+<p>See <a href="wx.Font-class.html#GetFamily" class="link"><code>GetFamily</code></a> and <a href="wx.Font-class.html#SetFamily" class="link"><code>SetFamily</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetFamily" class="summary-sig-name"><code>GetFamily</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#SetFamily" class="summary-sig-name"><code>SetFamily</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>family</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="FamilyString"></a>
+<h3>FamilyString</h3>
+<p>See <a href="wx.Font-class.html#GetFamilyString" class="link"><code>GetFamilyString</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetFamilyString" class="summary-sig-name"><code>GetFamilyString</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NativeFontInfo"></a>
+<h3>NativeFontInfo</h3>
+<p>See <a href="wx.Font-class.html#GetNativeFontInfo" class="link"><code>GetNativeFontInfo</code></a> and <a href="wx.Font-class.html#SetNativeFontInfo" class="link"><code>SetNativeFontInfo</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetNativeFontInfo" class="summary-sig-name"><code>GetNativeFontInfo</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#SetNativeFontInfo" class="summary-sig-name"><code>SetNativeFontInfo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>info</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NativeFontInfoDesc"></a>
+<h3>NativeFontInfoDesc</h3>
+<p>See <a href="wx.Font-class.html#GetNativeFontInfoDesc" class="link"><code>GetNativeFontInfoDesc</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetNativeFontInfoDesc" class="summary-sig-name"><code>GetNativeFontInfoDesc</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NativeFontInfoUserDesc"></a>
+<h3>NativeFontInfoUserDesc</h3>
+<p>See <a href="wx.Font-class.html#GetNativeFontInfoUserDesc" class="link"><code>GetNativeFontInfoUserDesc</code></a> and <a href="wx.Font-class.html#SetNativeFontInfoUserDesc" class="link"><code>SetNativeFontInfoUserDesc</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetNativeFontInfoUserDesc" class="summary-sig-name"><code>GetNativeFontInfoUserDesc</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#SetNativeFontInfoUserDesc" class="summary-sig-name"><code>SetNativeFontInfoUserDesc</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>info</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NoAntiAliasing"></a>
+<h3>NoAntiAliasing</h3>
+<p>See <a href="wx.Font-class.html#GetNoAntiAliasing" class="link"><code>GetNoAntiAliasing</code></a> and <a href="wx.Font-class.html#SetNoAntiAliasing" class="link"><code>SetNoAntiAliasing</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetNoAntiAliasing" class="summary-sig-name"><code>GetNoAntiAliasing</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#SetNoAntiAliasing" class="summary-sig-name"><code>SetNoAntiAliasing</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>no</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="PixelSize"></a>
+<h3>PixelSize</h3>
+<p>See <a href="wx.Font-class.html#GetPixelSize" class="link"><code>GetPixelSize</code></a> and <a href="wx.Font-class.html#SetPixelSize" class="link"><code>SetPixelSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetPixelSize" class="summary-sig-name"><code>GetPixelSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#SetPixelSize" class="summary-sig-name"><code>SetPixelSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pixelSize</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="PointSize"></a>
+<h3>PointSize</h3>
+<p>See <a href="wx.Font-class.html#GetPointSize" class="link"><code>GetPointSize</code></a> and <a href="wx.Font-class.html#SetPointSize" class="link"><code>SetPointSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetPointSize" class="summary-sig-name"><code>GetPointSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#SetPointSize" class="summary-sig-name"><code>SetPointSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pointSize</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Style"></a>
+<h3>Style</h3>
+<p>See <a href="wx.Font-class.html#GetStyle" class="link"><code>GetStyle</code></a> and <a href="wx.Font-class.html#SetStyle" class="link"><code>SetStyle</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetStyle" class="summary-sig-name"><code>GetStyle</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#SetStyle" class="summary-sig-name"><code>SetStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="StyleString"></a>
+<h3>StyleString</h3>
+<p>See <a href="wx.Font-class.html#GetStyleString" class="link"><code>GetStyleString</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetStyleString" class="summary-sig-name"><code>GetStyleString</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Underlined"></a>
+<h3>Underlined</h3>
+<p>See <a href="wx.Font-class.html#GetUnderlined" class="link"><code>GetUnderlined</code></a> and <a href="wx.Font-class.html#SetUnderlined" class="link"><code>SetUnderlined</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetUnderlined" class="summary-sig-name"><code>GetUnderlined</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#SetUnderlined" class="summary-sig-name"><code>SetUnderlined</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>underlined</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Weight"></a>
+<h3>Weight</h3>
+<p>See <a href="wx.Font-class.html#GetWeight" class="link"><code>GetWeight</code></a> and <a href="wx.Font-class.html#SetWeight" class="link"><code>SetWeight</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetWeight" class="summary-sig-name"><code>GetWeight</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#SetWeight" class="summary-sig-name"><code>SetWeight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>weight</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="WeightString"></a>
+<h3>WeightString</h3>
+<p>See <a href="wx.Font-class.html#GetWeightString" class="link"><code>GetWeightString</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Font-class.html#GetWeightString" class="summary-sig-name"><code>GetWeightString</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:04:25 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

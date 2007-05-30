@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.pubsub.PublisherClass</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.pubsub-module.html">Module&nbsp;pubsub</a> ::
+        Class&nbsp;PublisherClass
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.pubsub.PublisherClass-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class PublisherClass</h2>
+
+<hr/>
+
+<p>The publish/subscribe manager.  It keeps track of which listeners
+are interested in which topics (see subscribe()), and sends a
+Message for a given topic to listeners that have subscribed to
+that topic, with optional user data (see sendMessage()).</p>
+<p>The three important concepts for Publisher are:</p>
+<ul>
+<li><p class="first">listener: a function, bound method or
+callable object that can be called with one parameter
+(not counting 'self' in the case of methods). The parameter
+will be a reference to a Message object. E.g., these listeners
+are ok:</p>
+<pre class="rst-literal-block">
+class Foo:
+    def __call__(self, a, b=1): pass # can be called with only one arg
+    def meth(self,  a):         pass # takes only one arg
+    def meth2(self, a=2, b=''): pass # can be called with one arg
+
+def func(a, b=''): pass
+
+Foo foo
+Publisher().subscribe(foo)           # functor
+Publisher().subscribe(foo.meth)      # bound method
+Publisher().subscribe(foo.meth2)     # bound method
+Publisher().subscribe(func)          # function
+</pre>
+<p>The three types of callables all have arguments that allow a call 
+with only one argument. In every case, the parameter 'a' will contain
+the message.</p>
+</li>
+<li><p class="first">topic: a single word, a tuple of words, or a string containing a
+set of words separated by dots, for example: 'sports.baseball'.
+A tuple or a dotted notation string denotes a hierarchy of
+topics from most general to least. For example, a listener of
+this topic:</p>
+<pre class="rst-literal-block">
+('sports','baseball')
+</pre>
+<p>would receive messages for these topics:</p>
+<pre class="rst-literal-block">
+('sports', 'baseball')                 # because same
+('sports', 'baseball', 'highscores')   # because more specific
+</pre>
+<p>but not these:</p>
+<pre class="rst-literal-block">
+ 'sports'      # because more general
+('sports',)    # because more general
+() or ('')     # because only for those listening to 'all' topics
+('news')       # because different topic
+</pre>
+</li>
+<li><p class="first">message: this is an instance of Message, containing the topic for 
+which the message was sent, and any data the sender specified.</p>
+</li>
+</ul>
+<hr/>
+
+<p><b>Note:</b> <p>This class is visible to importers of pubsub only as a
+Singleton. I.e., every time you execute 'Publisher()', it's
+actually the same instance of PublisherClass that is
+returned. So to use, just do'Publisher().method()'.</p>
+</p>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>singletonKey</span>)</span></code>
+<br />
+Construct a Publisher.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#__call__" class="summary-sig-name"><code>__call__</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Allows for singleton</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__str__"></a><span class="summary-sig"><span class="summary-sig-name">__str__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#getAssociatedTopics" class="summary-sig-name"><code>getAssociatedTopics</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>listener</span>)</span></code>
+<br />
+Return a list of topics the given listener is registered with.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#getDeliveryCount" class="summary-sig-name"><code>getDeliveryCount</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+How many listeners have received a message since beginning of run</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#getMessageCount" class="summary-sig-name"><code>getMessageCount</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+How many times sendMessage() was called since beginning of run</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#isSubscribed" class="summary-sig-name"><code>isSubscribed</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>listener</span>,
+          <span class=summary-sig-arg>topic</span>)</span></code>
+<br />
+Return true if listener has subscribed to topic specified.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#isValid" class="summary-sig-name"><code>isValid</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>listener</span>)</span></code>
+<br />
+Return true only if listener will be able to subscribe to 
+Publisher.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#sendMessage" class="summary-sig-name"><code>sendMessage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>topic</span>,
+          <span class=summary-sig-arg>data</span>,
+          <span class=summary-sig-arg>onTopicNeverCreated</span>)</span></code>
+<br />
+Send a message for given topic, with optional data, to
+subscribed listeners.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#subscribe" class="summary-sig-name"><code>subscribe</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>listener</span>,
+          <span class=summary-sig-arg>topic</span>)</span></code>
+<br />
+Subscribe listener for given topic.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#unsubAll" class="summary-sig-name"><code>unsubAll</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>topics</span>,
+          <span class=summary-sig-arg>onNoSuchTopic</span>)</span></code>
+<br />
+Unsubscribe all listeners subscribed for topics.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#unsubscribe" class="summary-sig-name"><code>unsubscribe</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>listener</span>,
+          <span class=summary-sig-arg>topics</span>)</span></code>
+<br />
+Unsubscribe listener.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pubsub.PublisherClass-class.html#validate" class="summary-sig-name"><code>validate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>listener</span>)</span></code>
+<br />
+Similar to isValid(), but raises a TypeError exception if not valid</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>singletonKey</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Construct a Publisher. This can only be done by the pubsub 
+module. You just use pubsub.Publisher().</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__call__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__call__</span>(<span class=sig-arg>self</span>)</span>
+    <br /><i>(Call operator)</i>
+  </h3>
+<p>Allows for singleton</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getAssociatedTopics"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getAssociatedTopics</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>listener</span>)</span>
+  </h3>
+<p>Return a list of topics the given listener is registered with. 
+Returns [] if listener never subscribed.</p>
+  <dl><dt></dt><dd>
+<p><b>Attention:</b> <p>when using the return of this method to compare to
+expected list of topics, remember that topics that are
+not in the form of a tuple appear as a one-tuple in
+the return. E.g. if you have subscribed a listener to
+'topic1' and ('topic2','subtopic2'), this method
+returns:</p>
+<p>associatedTopics = [('topic1',), ('topic2','subtopic2')]</p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="getDeliveryCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getDeliveryCount</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>How many listeners have received a message since beginning of run</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getMessageCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getMessageCount</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>How many times sendMessage() was called since beginning of run</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="isSubscribed"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">isSubscribed</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>listener</span>,
+          <span class=sig-arg>topic</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Return true if listener has subscribed to topic specified. 
+If no topic specified, return true if subscribed to something.
+Use topic=getStrAllTopics() to determine if a listener will receive 
+messages for all topics.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="isValid"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">isValid</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>listener</span>)</span>
+  </h3>
+<p>Return true only if listener will be able to subscribe to 
+Publisher.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="sendMessage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">sendMessage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>topic</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>data</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>onTopicNeverCreated</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Send a message for given topic, with optional data, to
+subscribed listeners. If topic is not specified, only the
+listeners that are interested in all topics will receive message. 
+The onTopicNeverCreated is an optional callback of your choice that 
+will be called if the topic given was never created (i.e. it, or 
+one of its subtopics, was never subscribed to by any listener). 
+It will be called as onTopicNeverCreated(topic).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="subscribe"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">subscribe</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>listener</span>,
+          <span class=sig-arg>topic</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+<p>Subscribe listener for given topic. If topic is not specified,
+listener will be subscribed for all topics (that listener will 
+receive a Message for any topic for which a message is generated).</p>
+<p>This method may be called multiple times for one listener,
+registering it with many topics.  It can also be invoked many
+times for a particular topic, each time with a different
+listener.  See the class doc for requirements on listener and
+topic.</p>
+  <dl><dt></dt><dd>
+<p><b>Notes:</b>
+<ul>
+  <li><p>The listener is held by Publisher() only by <em>weak</em>
+reference.  This means you must ensure you have at
+least one strong reference to listener, otherwise it
+will be DOA (&quot;dead on arrival&quot;). This is particularly
+easy to forget when wrapping a listener method in a
+proxy object (e.g. to bind some of its parameters),
+e.g.:</p>
+<pre class="rst-literal-block">
+class Foo: 
+    def listener(self, event): pass
+class Wrapper:
+    def __init__(self, fun): self.fun = fun
+    def __call__(self, *args): self.fun(*args)
+foo = Foo()
+Publisher().subscribe( Wrapper(foo.listener) ) # whoops: DOA!
+wrapper = Wrapper(foo.listener)
+Publisher().subscribe(wrapper) # good!
+</pre>
+</li>
+  <li><p>Calling this method for the same listener, with two
+topics in the same branch of the topic hierarchy, will
+cause the listener to be notified twice when a message
+for the deepest topic is sent. E.g.
+subscribe(listener, 't1') and then subscribe(listener,
+('t1','t2')) means that when calling sendMessage('t1'),
+listener gets one message, but when calling
+sendMessage(('t1','t2')), listener gets message twice.</p>
+
+  </li>
+</ul></p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="unsubAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">unsubAll</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>topics</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>onNoSuchTopic</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Unsubscribe all listeners subscribed for topics. Topics can 
+be a single topic (string or tuple) or a list of topics (ie 
+list containing strings and/or tuples). If topics is not 
+specified, all listeners for all topics will be unsubscribed, 
+ie. the Publisher singleton will have no topics and no listeners
+left. If onNoSuchTopic is given, it will be called as 
+onNoSuchTopic(topic) for each topic that is unknown.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="unsubscribe"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">unsubscribe</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>listener</span>,
+          <span class=sig-arg>topics</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Unsubscribe listener. If topics not specified, listener is
+completely unsubscribed. Otherwise, it is unsubscribed only 
+for the topic (the usual tuple) or list of topics (ie a list
+of tuples) specified. Nothing happens if listener is not actually
+subscribed to any of the topics.</p>
+<p>Note that if listener subscribed for two topics (a,b) and (a,c), 
+then unsubscribing for topic (a) will do nothing. You must 
+use getAssociatedTopics(listener) and give unsubscribe() the returned 
+list (or a subset thereof).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="validate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">validate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>listener</span>)</span>
+  </h3>
+<p>Similar to isValid(), but raises a TypeError exception if not valid</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:03:26 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

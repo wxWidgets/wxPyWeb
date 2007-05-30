@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.mixins.treemixin.VirtualTree</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.mixins-module.html">Package&nbsp;mixins</a> ::
+        <a href="wx.lib.mixins.treemixin-module.html">Module&nbsp;treemixin</a> ::
+        Class&nbsp;VirtualTree
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.mixins.treemixin.VirtualTree-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type VirtualTree</h2>
+
+<pre class="base-tree">
+       <a href="__builtin__.object-class.html"><code>object</code></a> --+    
+                |    
+<a href="wx.lib.mixins.treemixin.TreeAPIHarmonizer-class.html"><code>TreeAPIHarmonizer</code></a> --+
+                    |
+       <a href="__builtin__.object-class.html"><code>object</code></a> --+   |
+                |   |
+       <a href="wx.lib.mixins.treemixin.TreeHelper-class.html"><code>TreeHelper</code></a> --+
+                    |
+                   <b>VirtualTree</b>
+</pre><br />
+
+<hr/>
+
+<pre class="literalblock">
+This is a mixin class that can be used to allow for virtual tree
+controls. It can be mixed in with wx.TreeCtrl, wx.gizmos.TreeListCtrl, 
+wx.lib.customtree.CustomTreeCtrl.
+
+To use it derive a new class from this class and one of the tree
+controls, e.g.:
+class MyTree(VirtualTree, wx.TreeCtrl):
+    ...
+
+VirtualTree uses several callbacks (such as OnGetItemText) to 
+retrieve information needed to construct the tree and render the 
+items. To specify what item the callback needs information about,
+the callback passes an item index. Whereas for list controls a simple
+integer index can be used, for tree controls indicating a specific
+item is a little bit more complicated. See below for a more detailed 
+explanation of the how index works.
+
+Note that VirtualTree forces the wx.TR_HIDE_ROOT style.
+
+In your subclass you *must* override OnGetItemText and 
+OnGetChildrenCount. These two methods are the minimum needed to 
+construct the tree and render the item labels. If you want to add 
+images, change fonts our colours, etc., you need to override the 
+appropriate OnGetXXX method as well.
+
+About indices: your callbacks are passed a tuple of integers that 
+identifies the item the VirtualTree wants information about. An 
+empty tuple, i.e. (), represents the hidden root item.  A tuple with 
+one integer, e.g. (3,), represents a visible root item, in this case 
+the fourth one. A tuple with two integers, e.g. (3,0), represents a 
+child of a visible root item, in this case the first child of the 
+fourth root item.
+</pre>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ChildIndices"></a><span class="summary-sig"><span class="summary-sig-name">ChildIndices</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>itemIndex</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#DoRefreshItem" class="summary-sig-name"><code>DoRefreshItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>index</span>,
+          <span class=summary-sig-arg>hasChildren</span>)</span></code>
+<br />
+Refresh one item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#OnGetChildrenCount" class="summary-sig-name"><code>OnGetChildrenCount</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+This function <em>must</em> be overloaded in the derived class.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#OnGetItemBackgroundColour" class="summary-sig-name"><code>OnGetItemBackgroundColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+This function may be overloaded in the derived class.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#OnGetItemChecked" class="summary-sig-name"><code>OnGetItemChecked</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+This function may be overloaded in the derived class, but
+that only makes sense when this class is mixed in with a tree 
+control that supports checkable items, i.e.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#OnGetItemFont" class="summary-sig-name"><code>OnGetItemFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+This function may be overloaded in the derived class.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#OnGetItemImage" class="summary-sig-name"><code>OnGetItemImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>,
+          <span class=summary-sig-arg>which</span>,
+          <span class=summary-sig-arg>column</span>)</span></code>
+<br />
+This function may be overloaded in the derived class.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#OnGetItemText" class="summary-sig-name"><code>OnGetItemText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>,
+          <span class=summary-sig-arg>column</span>)</span></code>
+<br />
+This function <em>must</em> be overloaded in the derived class.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#OnGetItemTextColour" class="summary-sig-name"><code>OnGetItemTextColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+This function may be overloaded in the derived class.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#OnGetItemType" class="summary-sig-name"><code>OnGetItemType</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+This function may be overloaded in the derived class, but
+that only makes sense when this class is mixed in with a tree 
+control that supports checkable items, i.e.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnItemCollapsed"></a><span class="summary-sig"><span class="summary-sig-name">OnItemCollapsed</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnItemExpanding"></a><span class="summary-sig"><span class="summary-sig-name">OnItemExpanding</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RefreshBackgroundColour"></a><span class="summary-sig"><span class="summary-sig-name">RefreshBackgroundColour</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RefreshCheckedState"></a><span class="summary-sig"><span class="summary-sig-name">RefreshCheckedState</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#RefreshChildrenRecursively" class="summary-sig-name"><code>RefreshChildrenRecursively</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>itemIndex</span>)</span></code>
+<br />
+Refresh the children of item, reusing as much of the
+existing items in the tree as possible.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RefreshColumns"></a><span class="summary-sig"><span class="summary-sig-name">RefreshColumns</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#RefreshItem" class="summary-sig-name"><code>RefreshItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+Redraws the item with the specified index.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RefreshItemFont"></a><span class="summary-sig"><span class="summary-sig-name">RefreshItemFont</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RefreshItemImage"></a><span class="summary-sig"><span class="summary-sig-name">RefreshItemImage</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>index</span>,
+          <span class=summary-sig-arg>hasChildren</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#RefreshItemRecursively" class="summary-sig-name"><code>RefreshItemRecursively</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>itemIndex</span>)</span></code>
+<br />
+Refresh the item and its children recursively.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.treemixin.VirtualTree-class.html#RefreshItems" class="summary-sig-name"><code>RefreshItems</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Redraws all visible items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RefreshItemText"></a><span class="summary-sig"><span class="summary-sig-name">RefreshItemText</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RefreshItemType"></a><span class="summary-sig"><span class="summary-sig-name">RefreshItemType</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RefreshTextColour"></a><span class="summary-sig"><span class="summary-sig-name">RefreshTextColour</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="DoRefreshItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoRefreshItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>index</span>,
+          <span class=sig-arg>hasChildren</span>)</span>
+  </h3>
+<p>Refresh one item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnGetChildrenCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnGetChildrenCount</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>)</span>
+  </h3>
+<p>This function <em>must</em> be overloaded in the derived class.
+It should return the number of child items of the item with the 
+provided index. If index == () it should return the number of 
+root items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnGetItemBackgroundColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnGetItemBackgroundColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>)</span>
+  </h3>
+<p>This function may be overloaded in the derived class. It 
+should return the wx.Colour to be used as background colour for 
+the specified item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnGetItemChecked"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnGetItemChecked</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>)</span>
+  </h3>
+<p>This function may be overloaded in the derived class, but
+that only makes sense when this class is mixed in with a tree 
+control that supports checkable items, i.e. CustomTreeCtrl. 
+This method should return whether the item is to be checked. 
+Note that OnGetItemType should return 1 (checkbox) or 2
+(radiobutton) for this item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnGetItemFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnGetItemFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>)</span>
+  </h3>
+<p>This function may be overloaded in the derived class. It 
+should return the wx.Font to be used for the specified item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnGetItemImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnGetItemImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>,
+          <span class=sig-arg>which</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>column</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>This function may be overloaded in the derived class. It 
+should return the index of the image to be used. Don't forget
+to associate an ImageList with the tree control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnGetItemText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnGetItemText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>,
+          <span class=sig-arg>column</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>This function <em>must</em> be overloaded in the derived class. It 
+should return the string containing the text of the specified
+item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnGetItemTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnGetItemTextColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>)</span>
+  </h3>
+<p>This function may be overloaded in the derived class. It 
+should return the wx.Colour to be used as text colour for the 
+specified item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnGetItemType"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnGetItemType</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>)</span>
+  </h3>
+<p>This function may be overloaded in the derived class, but
+that only makes sense when this class is mixed in with a tree 
+control that supports checkable items, i.e. CustomTreeCtrl. 
+This method should return whether the item is to be normal (0,
+the default), a checkbox (1) or a radiobutton (2). 
+Note that OnGetItemChecked needs to be implemented as well; it
+should return whether the item is actually checked.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RefreshChildrenRecursively"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RefreshChildrenRecursively</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>itemIndex</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Refresh the children of item, reusing as much of the
+existing items in the tree as possible.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RefreshItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RefreshItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>)</span>
+  </h3>
+<p>Redraws the item with the specified index.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RefreshItemRecursively"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RefreshItemRecursively</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>itemIndex</span>)</span>
+  </h3>
+<p>Refresh the item and its children recursively.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RefreshItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RefreshItems</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Redraws all visible items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:47 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

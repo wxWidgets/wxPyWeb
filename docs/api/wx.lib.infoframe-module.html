@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.infoframe</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        Module&nbsp;infoframe
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.infoframe-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.infoframe</h2>
+
+<pre class="literalblock">
+infoframe.py
+Released under wxWindows license etc.
+
+This is a fairly rudimentary, but slightly fancier tha
+wxPyOnDemandOutputWindow (on which it's based; thanks Robin), version
+of the same sort of thing: a file-like class called
+wxInformationalMessagesFrame. This window also has a status bar with a
+couple of buttons for controlling the echoing of all output to a file
+with a randomly-chosen filename...
+
+The class behaves similarly to wxPyOnDemandOutputWindow in that (at
+least by default) the frame does not appear until written to, but is
+somewhat different in that, either under programmatic (the
+DisableOutput method) or user (the frame's close button, it's status
+bar's &quot;Dismiss&quot; button, or a &quot;Disable output&quot; item of some menu,
+perhaps of some other frame), the frame will be destroyed, an
+associated file closed, and writing to it will then do nothing.  This
+can be reversed: either under programmatic (the EnableOutput method)
+or user (an &quot;Enable output&quot; item of some menu), a new frame will be
+opened,And an associated file (with a &quot;randomly&quot;selected filename)
+opened for writing [to which all subsequent displayed messages will be
+echoed].
+
+Please note that, like wxPyOnDemandOutputWindow, the instance is not
+itself a subclass of wxWindow: when the window is open (and ONLY
+then), it's &quot;frame&quot; attribute is the actual instance of wFrame...
+
+Typical usage::
+
+    from wxPython.lib.infoframe import *
+    ... # ... modify your wxApp as follows:
+    class myApp(wxApp):
+        outputWindowClass = PyInformationalMessagesFrame
+        ...
+        
+If you're running on Linux, you'll also have to supply an argument 1 to your
+constructor of myApp to redirect stdout/stderr to this window (it's done
+automatically for you on Windows).
+
+If you don't want to redirect stdout/stderr, but use the class directly: do
+it this way::
+
+ InformationalMessagesFrame = PyInformationalMessagesFrame                                         ([options from progname (default &quot;&quot;),
+                                           txt (default &quot;informational messages&quot;])
+                                          
+#^^^^ early in the program
+...
+InformationalMessagesFrame([comma-separated list of items to
+                             display.  Note that these will never
+                             be separated by spaces as they may
+                             be when used in the Python 'print'
+                             command])
+
+The latter statement, of course, may be repeated arbitrarily often.
+The window will not appear until it is written to, and it may be
+manually closed by the user, after which it will reappear again until
+written to... Also note that all output is echoed to a file with a
+randomly-generated name [see the mktemp module in the standard
+library], in the directory given as the 'dir' keyword argument to the
+InformationalMessagesFrame constructor [which has a default value of
+'.'), or set via the method SetOutputDirectory... This file will be
+closed with the window--a new one will be created [by default] upon
+each subsequent reopening.
+
+Please also note the methods EnableOutput and DisableOutput, and the
+possible arguments for the constructor in the code below... (* TO DO:
+explain this here...*) Neither of these methods need be used at all,
+and in this case the frame will only be displayed once it has been
+written to, like wxPyOnDemandOutputWindow.
+
+The former, EnableOutput, displays the frame with an introductory
+message, opens a random file to which future displayed output also
+goes (unless the nofile attribute is present), and sets the __debug__
+variable of each module to 1 (unless the no __debug__ attribute is
+present].  This is so that you can say, in any module whatsoever,
+
+    if __debug__:
+        InformationalMessagesFrame(&quot;... with lots of %&lt;Character&gt; constructs&quot;
+                                    % TUPLE)
+
+without worrying about the overhead of evaluating the arguments, and
+calling the wxInformationalMessagesFrame instance, in the case where
+debugging is not turned on.  (This won't happen if the instance has an
+attribute no__debug__; you can arrange this by sub-classing...)
+
+&quot;Debug mode&quot; can also be turned on by selecting the item-&quot;Enable
+output&quot; from the &quot;Debug&quot; menu [the default--see the optional arguments
+to the SetOtherMenuBar method] of a frame which has been either passed
+appropriately to the constructor of the wxInformationalMessagesFrame
+(see the code), or set via the SetOtherMenuBar method thereof.  This
+also writes an empty string to the instance, meaning that the frame
+will open (unless DisablOutput has been called) with an appropriate
+introductory message (which will vary according to whether the
+instance/class has the &quot;no __debug__&quot; attribute)^  I have found this to
+be an extremely useful tool, in lieu of a full wxPython debugger...
+
+Following this, the menu item is also disabled, and an item &quot;Disable
+output&quot; (again, by default) is enabled.  Note that these need not be
+done: e.g., you don't NEED to have a menu with appropriate items; in
+this case simply do not call the SetOtherMenuBar method or use the
+othermenubar keyword argument of the class instance constructor.
+
+The DisableOutput method does the reverse of this; it closes the
+window (and associated file), and sets the __debug__ variable of each
+module whose name begins with a capital letter {this happens to be the
+author's personal practice; all my python module start with capital
+letters} to 0.  It also enables/disabled the appropriate menu items,
+if this was done previously (or SetOtherMenuBar has been called...).
+Note too that after a call to DisableOutput, nothing further will be
+done upon subsequent write()'s, until the EnableOutput method is
+called, either explicitly or by the menu selection above...
+
+Finally, note that the file-like method close() destroys the window
+(and closes any associated file) and there is a file-like method
+write() which displays it's argument.
+
+All (well, most) of this is made clear by the example code at the end
+of this file, which is run if the file is run by itself; otherwise,
+see the appropriate &quot;stub&quot; file in the wxPython demo.
+</pre>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.infoframe.Dummy_PyInformationalMessagesFrame-class.html"><code>Dummy_PyInformationalMessagesFrame</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.infoframe.PyInformationalMessagesFrame-class.html"><code>PyInformationalMessagesFrame</code></a></b></td>
+  <td>&nbsp;</td></tr>
+</table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:36 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

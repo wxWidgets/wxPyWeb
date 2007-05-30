@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.App</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;App
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.App-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type App</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+            
+         |            
+    <a href="wx.Object-class.html"><code>Object</code></a> --+        
+             |        
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+    
+                 |    
+             <a href="wx.PyApp-class.html"><code>PyApp</code></a> --+
+                     |
+                    <b>App</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.py.PyAlaCarte.App-class.html"><code>App</code></a>,
+    <a href="wx.py.PyAlaMode.App-class.html"><code>App</code></a>,
+    <a href="wx.py.PyAlaModeTest.App-class.html"><code>App</code></a>,
+    <a href="wx.py.PyCrust.App-class.html"><code>App</code></a>,
+    <a href="wx.py.PyShell.App-class.html"><code>App</code></a>,
+    <a href="wx.py.filling.App-class.html"><code>App</code></a>,
+    <a href="wx.lib.mixins.inspection.InspectableApp-class.html"><code>InspectableApp</code></a>,
+    <a href="wx.PySimpleApp-class.html"><code>PySimpleApp</code></a>,
+    <a href="wx.PyWidgetTester-class.html"><code>PyWidgetTester</code></a></dd></dl>
+
+<hr/>
+
+<p>The <tt class="rst-docutils literal"><span class="pre">wx.App</span></tt> class represents the application and is used to:</p>
+<blockquote>
+<ul class="rst-simple">
+<li>bootstrap the wxPython system and initialize the underlying
+gui toolkit</li>
+<li>set and get application-wide properties</li>
+<li>implement the windowing system main message or event loop,
+and to dispatch events to window instances</li>
+<li>etc.</li>
+</ul>
+</blockquote>
+<p>Every application must have a <tt class="rst-docutils literal"><span class="pre">wx.App</span></tt> instance, and all
+creation of UI objects should be delayed until after the
+<tt class="rst-docutils literal"><span class="pre">wx.App</span></tt> object has been created in order to ensure that the gui
+platform and wxWidgets have been fully initialized.</p>
+<p>Normally you would derive from this class and implement an
+<tt class="rst-docutils literal"><span class="pre">OnInit</span></tt> method that creates a frame and then calls
+<tt class="rst-docutils literal"><span class="pre">self.SetTopWindow(frame)</span></tt>.</p>
+<hr/>
+
+<p><b>See Also:</b> <p><a href="wx.PySimpleApp-class.html" class="link"><code>wx.PySimpleApp</code></a> for a simpler app class that can be used
+directly.</p>
+</p>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.App-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>redirect</span>,
+          <span class=summary-sig-arg>filename</span>,
+          <span class=summary-sig-arg>useBestVisual</span>,
+          <span class=summary-sig-arg>clearSigInt</span>)</span></code>
+<br />
+Construct a <tt class="rst-docutils literal"><span class="pre">wx.App</span></tt> object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__del__"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>destroy</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Destroy"></a><span class="summary-sig"><span class="summary-sig-name">Destroy</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.App-class.html#MainLoop" class="summary-sig-name"><code>MainLoop</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Execute the main GUI event loop</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.App-class.html#OnPreInit" class="summary-sig-name"><code>OnPreInit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Things that must be done after _BootstrapApp has done its
+thing, but would be nice if they were already done by the time
+that OnInit is called.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.App-class.html#RedirectStdio" class="summary-sig-name"><code>RedirectStdio</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filename</span>)</span></code>
+<br />
+Redirect sys.stdout and sys.stderr to a file or a popup window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RestoreStdio"></a><span class="summary-sig"><span class="summary-sig-name">RestoreStdio</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.App-class.html#SetOutputWindowAttributes" class="summary-sig-name"><code>SetOutputWindowAttributes</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>title</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>)</span></code>
+<br />
+Set the title, position and/or size of the output window if
+the stdio has been redirected.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.App-class.html#SetTopWindow" class="summary-sig-name"><code>SetTopWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>frame</span>)</span></code>
+<br />
+Set the &quot;main&quot; top level window</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>classobj</code></font></td>
+  <td><a name="outputWindowClass"></a><b><code>outputWindowClass</code></b> = <a href="wx.PyOnDemandOutputWindow-class.html"><code>wx.PyOnDemandOutputWindow</code></a></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>redirect</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>filename</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>useBestVisual</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>clearSigInt</span>=<span class=sig-default>True</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Construct a <tt class="rst-docutils literal"><span class="pre">wx.App</span></tt> object.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>redirect</b></code> -
+ Should <tt class="rst-docutils literal"><span class="pre">sys.stdout</span></tt> and <tt class="rst-docutils literal"><span class="pre">sys.stderr</span></tt> be
+redirected?  Defaults to True on Windows and Mac, False
+otherwise.  If <a href="wx.App-class.html#__init__" class="link"><code>filename</code></a> is None then output will be
+redirected to a window that pops up as needed.  (You can
+control what kind of window is created for the output by
+resetting the class variable <tt class="rst-docutils literal"><span class="pre">outputWindowClass</span></tt> to a
+class of your choosing.)
+<p/>
+      <dd><code><b>filename</b></code> -
+ The name of a file to redirect output to, if
+redirect is True.
+<p/>
+      <dd><code><b>useBestVisual</b></code> -
+ Should the app try to use the best
+available visual provided by the system (only relevant on
+systems that have more than one visual.)  This parameter
+must be used instead of calling <a href="wx.PyApp-class.html#SetUseBestVisual" class="link"><code>SetUseBestVisual</code></a> later
+on because it must be set before the underlying GUI
+toolkit is initialized.
+<p/>
+      <dd><code><b>clearSigInt</b></code> -
+ Should SIGINT be cleared?  This allows the
+app to terminate upon a Ctrl-C in the console like other
+GUI apps will.
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyApp-class.html#__init__"><code>wx.PyApp.__init__</code></a></dd>
+    </dl>
+<p><b>Note:</b> <p>You should override OnInit to do applicaition
+initialization to ensure that the system, toolkit and
+wxWidgets are fully initialized.</p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="MainLoop"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MainLoop</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Execute the main GUI event loop</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyApp-class.html#MainLoop"><code>wx.PyApp.MainLoop</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPreInit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPreInit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Things that must be done after _BootstrapApp has done its
+thing, but would be nice if they were already done by the time
+that OnInit is called.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RedirectStdio"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RedirectStdio</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>filename</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Redirect sys.stdout and sys.stderr to a file or a popup window.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetOutputWindowAttributes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetOutputWindowAttributes</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>title</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Set the title, position and/or size of the output window if
+the stdio has been redirected.  This should be called before
+any output would cause the output window to be created.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTopWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTopWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>frame</span>)</span>
+  </h3>
+<p>Set the &quot;main&quot; top level window</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyApp-class.html#SetTopWindow"><code>wx.PyApp.SetTopWindow</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:56:13 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

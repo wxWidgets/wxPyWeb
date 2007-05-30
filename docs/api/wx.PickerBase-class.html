@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.PickerBase</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;PickerBase
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.PickerBase-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type PickerBase</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+               <a href="wx.Control-class.html"><code>Control</code></a> --+
+                         |
+                        <b>PickerBase</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.ColourPickerCtrl-class.html"><code>ColourPickerCtrl</code></a>,
+    <a href="wx.DirPickerCtrl-class.html"><code>DirPickerCtrl</code></a>,
+    <a href="wx.FilePickerCtrl-class.html"><code>FilePickerCtrl</code></a>,
+    <a href="wx.FontPickerCtrl-class.html"><code>FontPickerCtrl</code></a></dd></dl>
+
+<hr/>
+
+<p>Base abstract class for all pickers which support an auxiliary text
+control. This class handles all positioning and sizing of the text
+control like a an horizontal <a href="wx.BoxSizer-class.html" class="link"><code>wx.BoxSizer</code></a> would do, with the text
+control on the left of the picker button and the proportion of the
+picker fixed to value 1.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="CreateBase"></a><span class="summary-sig"><span class="summary-sig-name">CreateBase</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PickerBase-class.html#GetInternalMargin" class="summary-sig-name"><code>GetInternalMargin</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the margin (in pixels) between the picker and the text
+control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Control</font></td>
+  <td><code><a name="GetPickerCtrl"></a><span class="summary-sig"><span class="summary-sig-name">GetPickerCtrl</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PickerBase-class.html#GetPickerCtrlProportion" class="summary-sig-name"><code>GetPickerCtrlProportion</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the proportion value of the picker.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">TextCtrl</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PickerBase-class.html#GetTextCtrl" class="summary-sig-name"><code>GetTextCtrl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a pointer to the text control handled by this class or None if
+the wx.PB_USE_TEXTCTRL style was not specified when this control was
+created.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PickerBase-class.html#GetTextCtrlProportion" class="summary-sig-name"><code>GetTextCtrlProportion</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the proportion between the text control and the picker.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PickerBase-class.html#HasTextCtrl" class="summary-sig-name"><code>HasTextCtrl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if this class has a valid text control (i.e.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsPickerCtrlGrowable"></a><span class="summary-sig"><span class="summary-sig-name">IsPickerCtrlGrowable</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsTextCtrlGrowable"></a><span class="summary-sig"><span class="summary-sig-name">IsTextCtrlGrowable</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PickerBase-class.html#SetInternalMargin" class="summary-sig-name"><code>SetInternalMargin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>newmargin</span>)</span></code>
+<br />
+Sets the margin (in pixels) between the picker and the text control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetPickerCtrlGrowable"></a><span class="summary-sig"><span class="summary-sig-name">SetPickerCtrlGrowable</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>grow</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PickerBase-class.html#SetPickerCtrlProportion" class="summary-sig-name"><code>SetPickerCtrlProportion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>prop</span>)</span></code>
+<br />
+Sets the proportion value of the picker.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetTextCtrlGrowable"></a><span class="summary-sig"><span class="summary-sig-name">SetTextCtrlGrowable</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>grow</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PickerBase-class.html#SetTextCtrlProportion" class="summary-sig-name"><code>SetTextCtrlProportion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>prop</span>)</span></code>
+<br />
+Sets the proportion between the text control and the picker button.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PickerBase-class.html#InternalMargin"><code>InternalMargin</code></a></b>: See <a href="wx.PickerBase-class.html#GetInternalMargin" class="link"><code>GetInternalMargin</code></a> and <a href="wx.PickerBase-class.html#SetInternalMargin" class="link"><code>SetInternalMargin</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PickerBase-class.html#PickerCtrl"><code>PickerCtrl</code></a></b>: See <a href="wx.PickerBase-class.html#GetPickerCtrl" class="link"><code>GetPickerCtrl</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PickerBase-class.html#PickerCtrlGrowable"><code>PickerCtrlGrowable</code></a></b>: See <a href="wx.PickerBase-class.html#IsPickerCtrlGrowable" class="link"><code>IsPickerCtrlGrowable</code></a> and <a href="wx.PickerBase-class.html#SetPickerCtrlGrowable" class="link"><code>SetPickerCtrlGrowable</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PickerBase-class.html#PickerCtrlProportion"><code>PickerCtrlProportion</code></a></b>: See <a href="wx.PickerBase-class.html#GetPickerCtrlProportion" class="link"><code>GetPickerCtrlProportion</code></a> and <a href="wx.PickerBase-class.html#SetPickerCtrlProportion" class="link"><code>SetPickerCtrlProportion</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PickerBase-class.html#TextCtrl"><code>TextCtrl</code></a></b>: See <a href="wx.PickerBase-class.html#GetTextCtrl" class="link"><code>GetTextCtrl</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PickerBase-class.html#TextCtrlGrowable"><code>TextCtrlGrowable</code></a></b>: See <a href="wx.PickerBase-class.html#IsTextCtrlGrowable" class="link"><code>IsTextCtrlGrowable</code></a> and <a href="wx.PickerBase-class.html#SetTextCtrlGrowable" class="link"><code>SetTextCtrlGrowable</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PickerBase-class.html#TextCtrlProportion"><code>TextCtrlProportion</code></a></b>: See <a href="wx.PickerBase-class.html#GetTextCtrlProportion" class="link"><code>GetTextCtrlProportion</code></a> and <a href="wx.PickerBase-class.html#SetTextCtrlProportion" class="link"><code>SetTextCtrlProportion</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PickerBase-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="GetInternalMargin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetInternalMargin</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the margin (in pixels) between the picker and the text
+control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPickerCtrlProportion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPickerCtrlProportion</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the proportion value of the picker.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTextCtrl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTextCtrl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a pointer to the text control handled by this class or None if
+the wx.PB_USE_TEXTCTRL style was not specified when this control was
+created.</p>
+<p>Very important: the contents of the text control could be containing
+an invalid representation of the entity which can be chosen through
+the picker (e.g. the user entered an invalid colour syntax because of
+a typo). Thus you should never parse the content of the textctrl to
+get the user's input; rather use the derived-class getter
+(e.g. <a href="wx.ColourPickerCtrl-class.html#GetColour" class="link"><code>wx.ColourPickerCtrl.GetColour</code></a>, <a href="wx.FilePickerCtrl-class.html#GetPath" class="link"><code>wx.FilePickerCtrl.GetPath</code></a>,
+etc).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+TextCtrl      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTextCtrlProportion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTextCtrlProportion</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the proportion between the text control and the picker.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasTextCtrl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasTextCtrl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if this class has a valid text control (i.e. if the
+wx.PB_USE_TEXTCTRL style was given when creating this control).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetInternalMargin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetInternalMargin</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>newmargin</span>)</span>
+  </h3>
+<p>Sets the margin (in pixels) between the picker and the text control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>newmargin</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPickerCtrlProportion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPickerCtrlProportion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>prop</span>)</span>
+  </h3>
+<p>Sets the proportion value of the picker.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>prop</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTextCtrlProportion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTextCtrlProportion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>prop</span>)</span>
+  </h3>
+<p>Sets the proportion between the text control and the picker button.
+This is used to set relative sizes of the text contorl and the picker.
+The value passed to this function must be &gt;= 1.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>prop</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="InternalMargin"></a>
+<h3>InternalMargin</h3>
+<p>See <a href="wx.PickerBase-class.html#GetInternalMargin" class="link"><code>GetInternalMargin</code></a> and <a href="wx.PickerBase-class.html#SetInternalMargin" class="link"><code>SetInternalMargin</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#GetInternalMargin" class="summary-sig-name"><code>GetInternalMargin</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#SetInternalMargin" class="summary-sig-name"><code>SetInternalMargin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>newmargin</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="PickerCtrl"></a>
+<h3>PickerCtrl</h3>
+<p>See <a href="wx.PickerBase-class.html#GetPickerCtrl" class="link"><code>GetPickerCtrl</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#GetPickerCtrl" class="summary-sig-name"><code>GetPickerCtrl</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="PickerCtrlGrowable"></a>
+<h3>PickerCtrlGrowable</h3>
+<p>See <a href="wx.PickerBase-class.html#IsPickerCtrlGrowable" class="link"><code>IsPickerCtrlGrowable</code></a> and <a href="wx.PickerBase-class.html#SetPickerCtrlGrowable" class="link"><code>SetPickerCtrlGrowable</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#IsPickerCtrlGrowable" class="summary-sig-name"><code>IsPickerCtrlGrowable</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#SetPickerCtrlGrowable" class="summary-sig-name"><code>SetPickerCtrlGrowable</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>grow</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="PickerCtrlProportion"></a>
+<h3>PickerCtrlProportion</h3>
+<p>See <a href="wx.PickerBase-class.html#GetPickerCtrlProportion" class="link"><code>GetPickerCtrlProportion</code></a> and <a href="wx.PickerBase-class.html#SetPickerCtrlProportion" class="link"><code>SetPickerCtrlProportion</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#GetPickerCtrlProportion" class="summary-sig-name"><code>GetPickerCtrlProportion</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#SetPickerCtrlProportion" class="summary-sig-name"><code>SetPickerCtrlProportion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>prop</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="TextCtrl"></a>
+<h3>TextCtrl</h3>
+<p>See <a href="wx.PickerBase-class.html#GetTextCtrl" class="link"><code>GetTextCtrl</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#GetTextCtrl" class="summary-sig-name"><code>GetTextCtrl</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="TextCtrlGrowable"></a>
+<h3>TextCtrlGrowable</h3>
+<p>See <a href="wx.PickerBase-class.html#IsTextCtrlGrowable" class="link"><code>IsTextCtrlGrowable</code></a> and <a href="wx.PickerBase-class.html#SetTextCtrlGrowable" class="link"><code>SetTextCtrlGrowable</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#IsTextCtrlGrowable" class="summary-sig-name"><code>IsTextCtrlGrowable</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#SetTextCtrlGrowable" class="summary-sig-name"><code>SetTextCtrlGrowable</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>grow</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="TextCtrlProportion"></a>
+<h3>TextCtrlProportion</h3>
+<p>See <a href="wx.PickerBase-class.html#GetTextCtrlProportion" class="link"><code>GetTextCtrlProportion</code></a> and <a href="wx.PickerBase-class.html#SetTextCtrlProportion" class="link"><code>SetTextCtrlProportion</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#GetTextCtrlProportion" class="summary-sig-name"><code>GetTextCtrlProportion</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PickerBase-class.html#SetTextCtrlProportion" class="summary-sig-name"><code>SetTextCtrlProportion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>prop</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:00:49 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

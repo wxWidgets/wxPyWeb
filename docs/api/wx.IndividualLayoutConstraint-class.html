@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.IndividualLayoutConstraint</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;IndividualLayoutConstraint
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.IndividualLayoutConstraint-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type IndividualLayoutConstraint</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+    
+         |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+
+             |
+            <b>IndividualLayoutConstraint</b>
+</pre><br />
+
+<hr/>
+
+<p>Objects of this class are stored in the <a href="wx.LayoutConstraints-class.html" class="link"><code>wx.LayoutConstraints</code></a> class as
+one of eight possible constraints that a window can be involved in.
+You will never need to create an instance of
+wx.IndividualLayoutConstraint, rather you should create a
+<a href="wx.LayoutConstraints-class.html" class="link"><code>wx.LayoutConstraints</code></a> instance and use the individual contstraints
+that it contains.</p>
+<p>Constraints are initially set to have the relationship
+wx.Unconstrained, which means that their values should be calculated
+by looking at known constraints.</p>
+<p>The Edge specifies the type of edge or dimension of a window.</p>
+<div class="rst-section" id="edges">
+<h1 class="heading"><a name="rst-edges">Edges</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="28%" />
+<col class="rst" width="72%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.Left</td>
+<td class="rst">The left edge.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.Top</td>
+<td class="rst">The top edge.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.Right</td>
+<td class="rst">The right edge.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.Bottom</td>
+<td class="rst">The bottom edge.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CentreX</td>
+<td class="rst">The x-coordinate of the centre of the window.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CentreY</td>
+<td class="rst">The y-coordinate of the centre of the window.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>The Relationship specifies the relationship that this edge or
+dimension has with another specified edge or dimension. Normally, the
+user doesn't use these directly because functions such as Below and
+RightOf are a convenience for using the more general Set function.</p>
+</div>
+<div class="rst-section" id="relationships">
+<h1 class="heading"><a name="rst-relationships">Relationships</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="24%" />
+<col class="rst" width="76%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.Unconstrained</td>
+<td class="rst">The edge or dimension is unconstrained
+(the default for edges.)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.AsIs</td>
+<td class="rst">The edge or dimension is to be taken from the current
+window position or size (the default for dimensions.)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.Above</td>
+<td class="rst">The edge should be above another edge.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.Below</td>
+<td class="rst">The edge should be below another edge.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.LeftOf</td>
+<td class="rst">The edge should be to the left of another edge.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.RightOf</td>
+<td class="rst">The edge should be to the right of another edge.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.SameAs</td>
+<td class="rst">The edge or dimension should be the same as another edge
+or dimension.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.PercentOf</td>
+<td class="rst">The edge or dimension should be a percentage of another
+edge or dimension.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.Absolute</td>
+<td class="rst">The edge or dimension should be a given absolute value.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+<p><b>See Also:</b> <p><a href="wx.LayoutConstraints-class.html" class="link"><code>wx.LayoutConstraints</code></a>, <a href="wx.Window-class.html#SetConstraints" class="link"><code>wx.Window.SetConstraints</code></a></p>
+</p>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#Above" class="summary-sig-name"><code>Above</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sibling</span>,
+          <span class=summary-sig-arg>marg</span>)</span></code>
+<br />
+Constrains this edge to be above the given window, with an optional
+margin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#Absolute" class="summary-sig-name"><code>Absolute</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>val</span>)</span></code>
+<br />
+Constrains this edge or dimension to be the given absolute value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#AsIs" class="summary-sig-name"><code>AsIs</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets this edge or constraint to be whatever the window's value is at
+the moment.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#Below" class="summary-sig-name"><code>Below</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sibling</span>,
+          <span class=summary-sig-arg>marg</span>)</span></code>
+<br />
+Constrains this edge to be below the given window, with an optional
+margin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="GetDone"></a><span class="summary-sig"><span class="summary-sig-name">GetDone</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#GetEdge" class="summary-sig-name"><code>GetEdge</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>which</span>,
+          <span class=summary-sig-arg>thisWin</span>,
+          <span class=summary-sig-arg>other</span>)</span></code>
+<br />
+Get the value of this edge or dimension, or if this
+is not determinable, -1.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetMargin"></a><span class="summary-sig"><span class="summary-sig-name">GetMargin</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetMyEdge"></a><span class="summary-sig"><span class="summary-sig-name">GetMyEdge</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetOtherEdge"></a><span class="summary-sig"><span class="summary-sig-name">GetOtherEdge</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><a name="GetOtherWindow"></a><span class="summary-sig"><span class="summary-sig-name">GetOtherWindow</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetPercent"></a><span class="summary-sig"><span class="summary-sig-name">GetPercent</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetRelationship"></a><span class="summary-sig"><span class="summary-sig-name">GetRelationship</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetValue"></a><span class="summary-sig"><span class="summary-sig-name">GetValue</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#LeftOf" class="summary-sig-name"><code>LeftOf</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sibling</span>,
+          <span class=summary-sig-arg>marg</span>)</span></code>
+<br />
+Constrains this edge to be to the left of the given window, with an
+optional margin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#PercentOf" class="summary-sig-name"><code>PercentOf</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>otherW</span>,
+          <span class=summary-sig-arg>wh</span>,
+          <span class=summary-sig-arg>per</span>)</span></code>
+<br />
+Constrains this edge or dimension to be to a percentage of the given
+window, with an optional margin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#ResetIfWin" class="summary-sig-name"><code>ResetIfWin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>otherW</span>)</span></code>
+<br />
+Reset constraint if it mentions otherWin</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#RightOf" class="summary-sig-name"><code>RightOf</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sibling</span>,
+          <span class=summary-sig-arg>marg</span>)</span></code>
+<br />
+Constrains this edge to be to the right of the given window, with an
+optional margin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#SameAs" class="summary-sig-name"><code>SameAs</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>otherW</span>,
+          <span class=summary-sig-arg>edge</span>,
+          <span class=summary-sig-arg>marg</span>)</span></code>
+<br />
+Constrains this edge or dimension to be to the same as the edge of the
+given window, with an optional margin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#SatisfyConstraint" class="summary-sig-name"><code>SatisfyConstraint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>constraints</span>,
+          <span class=summary-sig-arg>win</span>)</span></code>
+<br />
+Try to satisfy constraint</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#Set" class="summary-sig-name"><code>Set</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rel</span>,
+          <span class=summary-sig-arg>otherW</span>,
+          <span class=summary-sig-arg>otherE</span>,
+          <span class=summary-sig-arg>val</span>,
+          <span class=summary-sig-arg>marg</span>)</span></code>
+<br />
+Sets the properties of the constraint.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDone"></a><span class="summary-sig"><span class="summary-sig-name">SetDone</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>d</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetEdge"></a><span class="summary-sig"><span class="summary-sig-name">SetEdge</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>which</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMargin"></a><span class="summary-sig"><span class="summary-sig-name">SetMargin</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>m</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRelationship"></a><span class="summary-sig"><span class="summary-sig-name">SetRelationship</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>r</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetValue"></a><span class="summary-sig"><span class="summary-sig-name">SetValue</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>v</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#Unconstrained" class="summary-sig-name"><code>Unconstrained</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets this edge or dimension to be unconstrained, that is, dependent on
+other edges and dimensions from which this value can be deduced.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.IndividualLayoutConstraint-class.html#Done"><code>Done</code></a></b>: See <a href="wx.IndividualLayoutConstraint-class.html#GetDone" class="link"><code>GetDone</code></a> and <a href="wx.IndividualLayoutConstraint-class.html#SetDone" class="link"><code>SetDone</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.IndividualLayoutConstraint-class.html#Margin"><code>Margin</code></a></b>: See <a href="wx.IndividualLayoutConstraint-class.html#GetMargin" class="link"><code>GetMargin</code></a> and <a href="wx.IndividualLayoutConstraint-class.html#SetMargin" class="link"><code>SetMargin</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.IndividualLayoutConstraint-class.html#MyEdge"><code>MyEdge</code></a></b>: See <a href="wx.IndividualLayoutConstraint-class.html#GetMyEdge" class="link"><code>GetMyEdge</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.IndividualLayoutConstraint-class.html#OtherEdge"><code>OtherEdge</code></a></b>: See <a href="wx.IndividualLayoutConstraint-class.html#GetOtherEdge" class="link"><code>GetOtherEdge</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.IndividualLayoutConstraint-class.html#OtherWindow"><code>OtherWindow</code></a></b>: See <a href="wx.IndividualLayoutConstraint-class.html#GetOtherWindow" class="link"><code>GetOtherWindow</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.IndividualLayoutConstraint-class.html#Percent"><code>Percent</code></a></b>: See <a href="wx.IndividualLayoutConstraint-class.html#GetPercent" class="link"><code>GetPercent</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.IndividualLayoutConstraint-class.html#Relationship"><code>Relationship</code></a></b>: See <a href="wx.IndividualLayoutConstraint-class.html#GetRelationship" class="link"><code>GetRelationship</code></a> and <a href="wx.IndividualLayoutConstraint-class.html#SetRelationship" class="link"><code>SetRelationship</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.IndividualLayoutConstraint-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.IndividualLayoutConstraint-class.html#Value"><code>Value</code></a></b>: See <a href="wx.IndividualLayoutConstraint-class.html#GetValue" class="link"><code>GetValue</code></a> and <a href="wx.IndividualLayoutConstraint-class.html#SetValue" class="link"><code>SetValue</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="Above"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Above</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sibling</span>,
+          <span class=sig-arg>marg</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Constrains this edge to be above the given window, with an optional
+margin. Implicitly, this is relative to the top edge of the other
+window.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>sibling</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>marg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Absolute"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Absolute</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>val</span>)</span>
+  </h3>
+<p>Constrains this edge or dimension to be the given absolute value.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>val</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AsIs"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AsIs</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets this edge or constraint to be whatever the window's value is at
+the moment. If either of the width and height constraints are <em>as is</em>,
+the window will not be resized, but moved instead. This is important
+when considering panel items which are intended to have a default
+size, such as a button, which may take its size from the size of the
+button label.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Below"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Below</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sibling</span>,
+          <span class=sig-arg>marg</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Constrains this edge to be below the given window, with an optional
+margin. Implicitly, this is relative to the bottom edge of the other
+window.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>sibling</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>marg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEdge"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEdge</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>which</span>,
+          <span class=sig-arg>thisWin</span>,
+          <span class=sig-arg>other</span>)</span>
+  </h3>
+<p>Get the value of this edge or dimension, or if this
+is not determinable, -1.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>which</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>thisWin</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>other</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LeftOf"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LeftOf</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sibling</span>,
+          <span class=sig-arg>marg</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Constrains this edge to be to the left of the given window, with an
+optional margin. Implicitly, this is relative to the left edge of the
+other window.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>sibling</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>marg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PercentOf"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PercentOf</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>otherW</span>,
+          <span class=sig-arg>wh</span>,
+          <span class=sig-arg>per</span>)</span>
+  </h3>
+<p>Constrains this edge or dimension to be to a percentage of the given
+window, with an optional margin.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>otherW</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>wh</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>per</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetIfWin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetIfWin</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>otherW</span>)</span>
+  </h3>
+<p>Reset constraint if it mentions otherWin</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>otherW</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RightOf"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RightOf</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sibling</span>,
+          <span class=sig-arg>marg</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Constrains this edge to be to the right of the given window, with an
+optional margin. Implicitly, this is relative to the right edge of the
+other window.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>sibling</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>marg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SameAs"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SameAs</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>otherW</span>,
+          <span class=sig-arg>edge</span>,
+          <span class=sig-arg>marg</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Constrains this edge or dimension to be to the same as the edge of the
+given window, with an optional margin.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>otherW</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>edge</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>marg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SatisfyConstraint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SatisfyConstraint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>constraints</span>,
+          <span class=sig-arg>win</span>)</span>
+  </h3>
+<p>Try to satisfy constraint</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>constraints</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=LayoutConstraints)</i>
+<p/>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Set"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Set</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rel</span>,
+          <span class=sig-arg>otherW</span>,
+          <span class=sig-arg>otherE</span>,
+          <span class=sig-arg>val</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>marg</span>=<span class=sig-default>wxLAYOUT_DEFAULT_MARGIN</span>)</span>
+  </h3>
+<p>Sets the properties of the constraint. Normally called by one of the
+convenience functions such as Above, RightOf, SameAs.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rel</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>otherW</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>otherE</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>val</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>marg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Unconstrained"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Unconstrained</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets this edge or dimension to be unconstrained, that is, dependent on
+other edges and dimensions from which this value can be deduced.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Done"></a>
+<h3>Done</h3>
+<p>See <a href="wx.IndividualLayoutConstraint-class.html#GetDone" class="link"><code>GetDone</code></a> and <a href="wx.IndividualLayoutConstraint-class.html#SetDone" class="link"><code>SetDone</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#GetDone" class="summary-sig-name"><code>GetDone</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#SetDone" class="summary-sig-name"><code>SetDone</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>d</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Margin"></a>
+<h3>Margin</h3>
+<p>See <a href="wx.IndividualLayoutConstraint-class.html#GetMargin" class="link"><code>GetMargin</code></a> and <a href="wx.IndividualLayoutConstraint-class.html#SetMargin" class="link"><code>SetMargin</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#GetMargin" class="summary-sig-name"><code>GetMargin</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#SetMargin" class="summary-sig-name"><code>SetMargin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>m</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="MyEdge"></a>
+<h3>MyEdge</h3>
+<p>See <a href="wx.IndividualLayoutConstraint-class.html#GetMyEdge" class="link"><code>GetMyEdge</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#GetMyEdge" class="summary-sig-name"><code>GetMyEdge</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="OtherEdge"></a>
+<h3>OtherEdge</h3>
+<p>See <a href="wx.IndividualLayoutConstraint-class.html#GetOtherEdge" class="link"><code>GetOtherEdge</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#GetOtherEdge" class="summary-sig-name"><code>GetOtherEdge</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="OtherWindow"></a>
+<h3>OtherWindow</h3>
+<p>See <a href="wx.IndividualLayoutConstraint-class.html#GetOtherWindow" class="link"><code>GetOtherWindow</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#GetOtherWindow" class="summary-sig-name"><code>GetOtherWindow</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Percent"></a>
+<h3>Percent</h3>
+<p>See <a href="wx.IndividualLayoutConstraint-class.html#GetPercent" class="link"><code>GetPercent</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#GetPercent" class="summary-sig-name"><code>GetPercent</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Relationship"></a>
+<h3>Relationship</h3>
+<p>See <a href="wx.IndividualLayoutConstraint-class.html#GetRelationship" class="link"><code>GetRelationship</code></a> and <a href="wx.IndividualLayoutConstraint-class.html#SetRelationship" class="link"><code>SetRelationship</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#GetRelationship" class="summary-sig-name"><code>GetRelationship</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#SetRelationship" class="summary-sig-name"><code>SetRelationship</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>r</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Value"></a>
+<h3>Value</h3>
+<p>See <a href="wx.IndividualLayoutConstraint-class.html#GetValue" class="link"><code>GetValue</code></a> and <a href="wx.IndividualLayoutConstraint-class.html#SetValue" class="link"><code>SetValue</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.IndividualLayoutConstraint-class.html#SetValue" class="summary-sig-name"><code>SetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>v</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:56:03 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

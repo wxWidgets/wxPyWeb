@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.FlexGridSizer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;FlexGridSizer
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.FlexGridSizer-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type FlexGridSizer</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+            
+         |            
+    <a href="wx.Object-class.html"><code>Object</code></a> --+        
+             |        
+         <a href="wx.Sizer-class.html"><code>Sizer</code></a> --+    
+                 |    
+         <a href="wx.GridSizer-class.html"><code>GridSizer</code></a> --+
+                     |
+                    <b>FlexGridSizer</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.GridBagSizer-class.html"><code>GridBagSizer</code></a></dd></dl>
+
+<hr/>
+
+<p>A flex grid sizer is a sizer which lays out its children in a
+two-dimensional table with all table cells in one row having the same
+height and all cells in one column having the same width, but all
+rows or all columns are not necessarily the same height or width as in
+the <a href="wx.GridSizer-class.html" class="link"><code>wx.GridSizer</code></a>.</p>
+<p>wx.FlexGridSizer can also size items equally in one direction but
+unequally (&quot;flexibly&quot;) in the other. If the sizer is only flexible
+in one direction (this can be changed using <a href="wx.FlexGridSizer-class.html#SetFlexibleDirection" class="link"><code>SetFlexibleDirection</code></a>), it
+needs to be decided how the sizer should grow in the other (&quot;non
+flexible&quot;) direction in order to fill the available space. The
+<a href="wx.FlexGridSizer-class.html#SetNonFlexibleGrowMode" class="link"><code>SetNonFlexibleGrowMode</code></a> method serves this purpose.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">FlexGridSizer</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rows</span>,
+          <span class=summary-sig-arg>cols</span>,
+          <span class=summary-sig-arg>vgap</span>,
+          <span class=summary-sig-arg>hgap</span>)</span></code>
+<br />
+Constructor for a wx.FlexGridSizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#AddGrowableCol" class="summary-sig-name"><code>AddGrowableCol</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>idx</span>,
+          <span class=summary-sig-arg>proportion</span>)</span></code>
+<br />
+Specifies that column <em>idx</em> (starting from zero) should be grown if
+there is extra space available to the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#AddGrowableRow" class="summary-sig-name"><code>AddGrowableRow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>idx</span>,
+          <span class=summary-sig-arg>proportion</span>)</span></code>
+<br />
+Specifies that row <em>idx</em> (starting from zero) should be grown if there
+is extra space available to the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">list</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#GetColWidths" class="summary-sig-name"><code>GetColWidths</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a list of integers representing the widths of each of the
+columns in the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#GetFlexibleDirection" class="summary-sig-name"><code>GetFlexibleDirection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a value that specifies whether the sizer
+flexibly resizes its columns, rows, or both (default).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#GetNonFlexibleGrowMode" class="summary-sig-name"><code>GetNonFlexibleGrowMode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the value that specifies how the sizer grows in the
+non-flexible direction if there is one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">list</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#GetRowHeights" class="summary-sig-name"><code>GetRowHeights</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a list of integers representing the heights of each of the
+rows in the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#RemoveGrowableCol" class="summary-sig-name"><code>RemoveGrowableCol</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>idx</span>)</span></code>
+<br />
+Specifies that column <em>idx</em> is no longer growable.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#RemoveGrowableRow" class="summary-sig-name"><code>RemoveGrowableRow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>idx</span>)</span></code>
+<br />
+Specifies that row <em>idx</em> is no longer growable.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#SetFlexibleDirection" class="summary-sig-name"><code>SetFlexibleDirection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>direction</span>)</span></code>
+<br />
+Specifies whether the sizer should flexibly resize its columns, rows,
+or both.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#SetNonFlexibleGrowMode" class="summary-sig-name"><code>SetNonFlexibleGrowMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+Specifies how the sizer should grow in the non-flexible direction if
+there is one (so <a href="wx.FlexGridSizer-class.html#SetFlexibleDirection" class="link"><code>SetFlexibleDirection</code></a> must have been called
+previously).</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FlexGridSizer-class.html#ColWidths"><code>ColWidths</code></a></b>: See <a href="wx.FlexGridSizer-class.html#GetColWidths" class="link"><code>GetColWidths</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FlexGridSizer-class.html#FlexibleDirection"><code>FlexibleDirection</code></a></b>: See <a href="wx.FlexGridSizer-class.html#GetFlexibleDirection" class="link"><code>GetFlexibleDirection</code></a> and <a href="wx.FlexGridSizer-class.html#SetFlexibleDirection" class="link"><code>SetFlexibleDirection</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FlexGridSizer-class.html#NonFlexibleGrowMode"><code>NonFlexibleGrowMode</code></a></b>: See <a href="wx.FlexGridSizer-class.html#GetNonFlexibleGrowMode" class="link"><code>GetNonFlexibleGrowMode</code></a> and <a href="wx.FlexGridSizer-class.html#SetNonFlexibleGrowMode" class="link"><code>SetNonFlexibleGrowMode</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FlexGridSizer-class.html#RowHeights"><code>RowHeights</code></a></b>: See <a href="wx.FlexGridSizer-class.html#GetRowHeights" class="link"><code>GetRowHeights</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FlexGridSizer-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rows</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>cols</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>vgap</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>hgap</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor for a wx.FlexGridSizer. <em>rows</em> and <em>cols</em> determine the
+number of columns and rows in the sizer - if either of the parameters
+is zero, it will be calculated to from the total number of children in
+the sizer, thus making the sizer grow dynamically. <em>vgap</em> and <em>hgap</em>
+define extra space between all children.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rows</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>cols</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>vgap</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>hgap</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+FlexGridSizer      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.GridSizer-class.html#__init__"><code>wx.GridSizer.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddGrowableCol"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddGrowableCol</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>idx</span>,
+          <span class=sig-arg>proportion</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Specifies that column <em>idx</em> (starting from zero) should be grown if
+there is extra space available to the sizer.</p>
+<p>The <em>proportion</em> parameter has the same meaning as the stretch factor
+for the box sizers except that if all proportions are 0, then all
+columns are resized equally (instead of not being resized at all).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>idx</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=size_t)</i>
+<p/>
+      <dd><code><b>proportion</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddGrowableRow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddGrowableRow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>idx</span>,
+          <span class=sig-arg>proportion</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Specifies that row <em>idx</em> (starting from zero) should be grown if there
+is extra space available to the sizer.</p>
+<p>The <em>proportion</em> parameter has the same meaning as the stretch factor
+for the box sizers except that if all proportions are 0, then all
+columns are resized equally (instead of not being resized at all).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>idx</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=size_t)</i>
+<p/>
+      <dd><code><b>proportion</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetColWidths"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetColWidths</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a list of integers representing the widths of each of the
+columns in the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+list      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFlexibleDirection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFlexibleDirection</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a value that specifies whether the sizer
+flexibly resizes its columns, rows, or both (default).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.FlexGridSizer-class.html#SetFlexibleDirection" class="link"><code>SetFlexibleDirection</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNonFlexibleGrowMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNonFlexibleGrowMode</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the value that specifies how the sizer grows in the
+non-flexible direction if there is one.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.FlexGridSizer-class.html#SetNonFlexibleGrowMode" class="link"><code>SetNonFlexibleGrowMode</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRowHeights"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRowHeights</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a list of integers representing the heights of each of the
+rows in the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+list      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveGrowableCol"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveGrowableCol</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>idx</span>)</span>
+  </h3>
+<p>Specifies that column <em>idx</em> is no longer growable.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>idx</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=size_t)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveGrowableRow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveGrowableRow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>idx</span>)</span>
+  </h3>
+<p>Specifies that row <em>idx</em> is no longer growable.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>idx</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=size_t)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFlexibleDirection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFlexibleDirection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>direction</span>)</span>
+  </h3>
+<p>Specifies whether the sizer should flexibly resize its columns, rows,
+or both. Argument <em>direction</em> can be one of the following values.  Any
+other value is ignored.</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="26%" />
+<col class="rst" width="74%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.VERTICAL</td>
+<td class="rst">Rows are flexibly sized.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.HORIZONTAL</td>
+<td class="rst">Columns are flexibly sized.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BOTH</td>
+<td class="rst">Both rows and columns are flexibly sized
+(this is the default value).</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>Note that this method does not trigger relayout.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>direction</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetNonFlexibleGrowMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetNonFlexibleGrowMode</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mode</span>)</span>
+  </h3>
+<p>Specifies how the sizer should grow in the non-flexible direction if
+there is one (so <a href="wx.FlexGridSizer-class.html#SetFlexibleDirection" class="link"><code>SetFlexibleDirection</code></a> must have been called
+previously). Argument <em>mode</em> can be one of the following values:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="35%" />
+<col class="rst" width="65%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.FLEX_GROWMODE_NONE</td>
+<td class="rst">Sizer doesn't grow in the non flexible direction.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FLEX_GROWMODE_SPECIFIED</td>
+<td class="rst">Sizer honors growable columns/rows set with
+<a href="wx.FlexGridSizer-class.html#AddGrowableCol" class="link"><code>AddGrowableCol</code></a> and <a href="wx.FlexGridSizer-class.html#AddGrowableRow" class="link"><code>AddGrowableRow</code></a>. In this
+case equal sizing applies to minimum sizes of
+columns or rows (this is the default value).</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FLEX_GROWMODE_ALL</td>
+<td class="rst">Sizer equally stretches all columns or rows in
+the non flexible direction, whether they are
+growable or not in the flexbile direction.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>Note that this method does not trigger relayout.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>mode</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ColWidths"></a>
+<h3>ColWidths</h3>
+<p>See <a href="wx.FlexGridSizer-class.html#GetColWidths" class="link"><code>GetColWidths</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#GetColWidths" class="summary-sig-name"><code>GetColWidths</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="FlexibleDirection"></a>
+<h3>FlexibleDirection</h3>
+<p>See <a href="wx.FlexGridSizer-class.html#GetFlexibleDirection" class="link"><code>GetFlexibleDirection</code></a> and <a href="wx.FlexGridSizer-class.html#SetFlexibleDirection" class="link"><code>SetFlexibleDirection</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#GetFlexibleDirection" class="summary-sig-name"><code>GetFlexibleDirection</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#SetFlexibleDirection" class="summary-sig-name"><code>SetFlexibleDirection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>direction</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NonFlexibleGrowMode"></a>
+<h3>NonFlexibleGrowMode</h3>
+<p>See <a href="wx.FlexGridSizer-class.html#GetNonFlexibleGrowMode" class="link"><code>GetNonFlexibleGrowMode</code></a> and <a href="wx.FlexGridSizer-class.html#SetNonFlexibleGrowMode" class="link"><code>SetNonFlexibleGrowMode</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#GetNonFlexibleGrowMode" class="summary-sig-name"><code>GetNonFlexibleGrowMode</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#SetNonFlexibleGrowMode" class="summary-sig-name"><code>SetNonFlexibleGrowMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="RowHeights"></a>
+<h3>RowHeights</h3>
+<p>See <a href="wx.FlexGridSizer-class.html#GetRowHeights" class="link"><code>GetRowHeights</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FlexGridSizer-class.html#GetRowHeights" class="summary-sig-name"><code>GetRowHeights</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:03:07 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

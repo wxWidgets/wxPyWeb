@@ -1,0 +1,1415 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.ConfigBase</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;ConfigBase
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.ConfigBase-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type ConfigBase</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>ConfigBase</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.Config-class.html"><code>Config</code></a>,
+    <a href="wx.FileConfig-class.html"><code>FileConfig</code></a></dd></dl>
+
+<hr/>
+
+<p>wx.ConfigBase class defines the basic interface of all config
+classes. It can not be used by itself (it is an abstract base class)
+and you will always use one of its derivations: wx.Config or
+wx.FileConfig.</p>
+<p>wx.ConfigBase organizes the items in a tree-like structure, modeled
+after the Unix/Dos filesystem. There are groups that act like
+directories and entries, key/value pairs that act like files.  There
+is always one current group given by the current path.  As in the file
+system case, to specify a key in the config class you must use a path
+to it.  Config classes also support the notion of the current group,
+which makes it possible to use relative paths.</p>
+<p>Keys are pairs &quot;key_name = value&quot; where value may be of string,
+integer floating point or boolean, you can not store binary data
+without first encoding it as a string.  For performance reasons items
+should be kept small, no more than a couple kilobytes.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1321657892"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">ConfigBase</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#Create" class="summary-sig-name"><code>Create</code></a>()</span></code>
+<br />
+Create and return a new global config object.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#DeleteAll" class="summary-sig-name"><code>DeleteAll</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Delete the whole underlying object (disk file, registry key, ...)
+primarly intended for use by deinstallation routine.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#DeleteEntry" class="summary-sig-name"><code>DeleteEntry</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>deleteGroupIfEmpty</span>)</span></code>
+<br />
+Deletes the specified entry and the group it belongs to if it was the
+last key in it and the second parameter is True</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#DeleteGroup" class="summary-sig-name"><code>DeleteGroup</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>)</span></code>
+<br />
+Delete the group (with all subgroups)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#DontCreateOnDemand" class="summary-sig-name"><code>DontCreateOnDemand</code></a>()</span></code>
+<br />
+Should Get() try to create a new log object if there isn't a current
+one?    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#Exists" class="summary-sig-name"><code>Exists</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Returns True if either a group or an entry with a given name exists</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#ExpandEnvVars" class="summary-sig-name"><code>ExpandEnvVars</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>str</span>)</span></code>
+<br />
+Expand any environment variables in str and return the result</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#Flush" class="summary-sig-name"><code>Flush</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>currentOnly</span>)</span></code>
+<br />
+permanently writes all changes</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">ConfigBase</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#Get" class="summary-sig-name"><code>Get</code></a>(<span class=summary-sig-arg>createOnDemand</span>)</span></code>
+<br />
+Returns the current global config object, creating one if neccessary.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="GetAppName"></a><span class="summary-sig"><span class="summary-sig-name">GetAppName</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetEntryType" class="summary-sig-name"><code>GetEntryType</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Get the type of the entry.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(more, value, index)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetFirstEntry" class="summary-sig-name"><code>GetFirstEntry</code></a>()</span></code>
+<br />
+Allows enumerating the entries in the current group in a config
+object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(more, value, index)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetFirstGroup" class="summary-sig-name"><code>GetFirstGroup</code></a>()</span></code>
+<br />
+Allows enumerating the subgroups in a config object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(more, value, index)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetNextEntry" class="summary-sig-name"><code>GetNextEntry</code></a>(<span class=summary-sig-arg>index</span>)</span></code>
+<br />
+Allows enumerating the entries in the current group in a config
+object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(more, value, index)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetNextGroup" class="summary-sig-name"><code>GetNextGroup</code></a>(<span class=summary-sig-arg>index</span>)</span></code>
+<br />
+Allows enumerating the subgroups in a config object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">size_t</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetNumberOfEntries" class="summary-sig-name"><code>GetNumberOfEntries</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+<br />
+Get the number of entries in the current group, with or without its
+subgroups.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">size_t</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetNumberOfGroups" class="summary-sig-name"><code>GetNumberOfGroups</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+<br />
+Get the number of subgroups in the current group, with or without its
+subgroups.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetPath" class="summary-sig-name"><code>GetPath</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Retrieve the current path (always as absolute path)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><a name="GetStyle"></a><span class="summary-sig"><span class="summary-sig-name">GetStyle</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="GetVendorName"></a><span class="summary-sig"><span class="summary-sig-name">GetVendorName</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#HasEntry" class="summary-sig-name"><code>HasEntry</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Returns True if the entry by this name exists</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#HasGroup" class="summary-sig-name"><code>HasGroup</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Returns True if the group by this name exists</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#IsExpandingEnvVars" class="summary-sig-name"><code>IsExpandingEnvVars</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Are we currently expanding environment variables?</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#IsRecordingDefaults" class="summary-sig-name"><code>IsRecordingDefaults</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Are we currently recording default values?</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#Read" class="summary-sig-name"><code>Read</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>defaultVal</span>)</span></code>
+<br />
+Returns the value of key if it exists, defaultVal otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#ReadBool" class="summary-sig-name"><code>ReadBool</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>defaultVal</span>)</span></code>
+<br />
+Returns the value of key if it exists, defaultVal otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">double</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#ReadFloat" class="summary-sig-name"><code>ReadFloat</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>defaultVal</span>)</span></code>
+<br />
+Returns the value of key if it exists, defaultVal otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#ReadInt" class="summary-sig-name"><code>ReadInt</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>defaultVal</span>)</span></code>
+<br />
+Returns the value of key if it exists, defaultVal otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#RenameEntry" class="summary-sig-name"><code>RenameEntry</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>oldName</span>,
+          <span class=summary-sig-arg>newName</span>)</span></code>
+<br />
+Rename an entry.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#RenameGroup" class="summary-sig-name"><code>RenameGroup</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>oldName</span>,
+          <span class=summary-sig-arg>newName</span>)</span></code>
+<br />
+Rename a group.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">ConfigBase</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#Set" class="summary-sig-name"><code>Set</code></a>(<span class=summary-sig-arg>config</span>)</span></code>
+<br />
+Sets the global config object (the one returned by Get) and returns a
+reference to the previous global config object.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAppName"></a><span class="summary-sig"><span class="summary-sig-name">SetAppName</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>appName</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#SetExpandEnvVars" class="summary-sig-name"><code>SetExpandEnvVars</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doIt</span>)</span></code>
+<br />
+We can automatically expand environment variables in the config
+entries this option is on by default, you can turn it on/off at any
+time)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#SetPath" class="summary-sig-name"><code>SetPath</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>)</span></code>
+<br />
+Set current path: if the first character is '/', it's the absolute
+path, otherwise it's a relative path.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#SetRecordDefaults" class="summary-sig-name"><code>SetRecordDefaults</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doIt</span>)</span></code>
+<br />
+Set whether the config objec should record default values.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetStyle"></a><span class="summary-sig"><span class="summary-sig-name">SetStyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetVendorName"></a><span class="summary-sig"><span class="summary-sig-name">SetVendorName</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>vendorName</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#Write" class="summary-sig-name"><code>Write</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+write the value (return True on success)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#WriteBool" class="summary-sig-name"><code>WriteBool</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+write the value (return True on success)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#WriteFloat" class="summary-sig-name"><code>WriteFloat</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+write the value (return True on success)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.ConfigBase-class.html#WriteInt" class="summary-sig-name"><code>WriteInt</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+write the value (return True on success)</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#AppName"><code>AppName</code></a></b>: See <a href="wx.ConfigBase-class.html#GetAppName" class="link"><code>GetAppName</code></a> and <a href="wx.ConfigBase-class.html#SetAppName" class="link"><code>SetAppName</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#EntryType"><code>EntryType</code></a></b>: See <a href="wx.ConfigBase-class.html#GetEntryType" class="link"><code>GetEntryType</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#FirstEntry"><code>FirstEntry</code></a></b>: See <a href="wx.ConfigBase-class.html#GetFirstEntry" class="link"><code>GetFirstEntry</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#FirstGroup"><code>FirstGroup</code></a></b>: See <a href="wx.ConfigBase-class.html#GetFirstGroup" class="link"><code>GetFirstGroup</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#NextEntry"><code>NextEntry</code></a></b>: See <a href="wx.ConfigBase-class.html#GetNextEntry" class="link"><code>GetNextEntry</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#NextGroup"><code>NextGroup</code></a></b>: See <a href="wx.ConfigBase-class.html#GetNextGroup" class="link"><code>GetNextGroup</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#NumberOfEntries"><code>NumberOfEntries</code></a></b>: See <a href="wx.ConfigBase-class.html#GetNumberOfEntries" class="link"><code>GetNumberOfEntries</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#NumberOfGroups"><code>NumberOfGroups</code></a></b>: See <a href="wx.ConfigBase-class.html#GetNumberOfGroups" class="link"><code>GetNumberOfGroups</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#Path"><code>Path</code></a></b>: See <a href="wx.ConfigBase-class.html#GetPath" class="link"><code>GetPath</code></a> and <a href="wx.ConfigBase-class.html#SetPath" class="link"><code>SetPath</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#Style"><code>Style</code></a></b>: See <a href="wx.ConfigBase-class.html#GetStyle" class="link"><code>GetStyle</code></a> and <a href="wx.ConfigBase-class.html#SetStyle" class="link"><code>SetStyle</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.ConfigBase-class.html#VendorName"><code>VendorName</code></a></b>: See <a href="wx.ConfigBase-class.html#GetVendorName" class="link"><code>GetVendorName</code></a> and <a href="wx.ConfigBase-class.html#SetVendorName" class="link"><code>SetVendorName</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.ConfigBase-class.html#Type_Boolean"><code>Type_Boolean</code></a></b> = <span title="2">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.ConfigBase-class.html#Type_Float"><code>Type_Float</code></a></b> = <span title="4">4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.ConfigBase-class.html#Type_Integer"><code>Type_Integer</code></a></b> = <span title="3">3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.ConfigBase-class.html#Type_String"><code>Type_String</code></a></b> = <span title="1">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.ConfigBase-class.html#Type_Unknown"><code>Type_Unknown</code></a></b> = <span title="0">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="DeleteAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteAll</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Delete the whole underlying object (disk file, registry key, ...)
+primarly intended for use by deinstallation routine.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteEntry"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteEntry</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>key</span>,
+          <span class=sig-arg>deleteGroupIfEmpty</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Deletes the specified entry and the group it belongs to if it was the
+last key in it and the second parameter is True</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>key</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>deleteGroupIfEmpty</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteGroup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteGroup</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>key</span>)</span>
+  </h3>
+<p>Delete the group (with all subgroups)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>key</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Exists"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Exists</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Returns True if either a group or an entry with a given name exists</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ExpandEnvVars"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ExpandEnvVars</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>str</span>)</span>
+  </h3>
+<p>Expand any environment variables in str and return the result</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>str</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Flush"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Flush</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>currentOnly</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>permanently writes all changes</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>currentOnly</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEntryType"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEntryType</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Get the type of the entry.  Returns one of the wx.Config.Type_XXX values.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFirstEntry"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFirstEntry</span>()</span>
+  </h3>
+<p>Allows enumerating the entries in the current group in a config
+object.  Returns a tuple containing a flag indicating there are more
+items, the name of the current item, and an index to pass to
+GetNextGroup to fetch the next item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(more, value, index)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFirstGroup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFirstGroup</span>()</span>
+  </h3>
+<p>Allows enumerating the subgroups in a config object.  Returns a tuple
+containing a flag indicating there are more items, the name of the
+current item, and an index to pass to GetNextGroup to fetch the next
+item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(more, value, index)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNextEntry"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNextEntry</span>(<span class=sig-arg>index</span>)</span>
+  </h3>
+<p>Allows enumerating the entries in the current group in a config
+object.  Returns a tuple containing a flag indicating there are more
+items, the name of the current item, and an index to pass to
+GetNextGroup to fetch the next item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>index</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(more, value, index)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNextGroup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNextGroup</span>(<span class=sig-arg>index</span>)</span>
+  </h3>
+<p>Allows enumerating the subgroups in a config object.  Returns a tuple
+containing a flag indicating there are more items, the name of the
+current item, and an index to pass to GetNextGroup to fetch the next
+item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>index</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(more, value, index)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNumberOfEntries"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNumberOfEntries</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>recursive</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Get the number of entries in the current group, with or without its
+subgroups.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>recursive</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+size_t      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNumberOfGroups"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNumberOfGroups</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>recursive</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Get the number of subgroups in the current group, with or without its
+subgroups.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>recursive</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+size_t      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPath</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Retrieve the current path (always as absolute path)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasEntry"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasEntry</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Returns True if the entry by this name exists</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasGroup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasGroup</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Returns True if the group by this name exists</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsExpandingEnvVars"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsExpandingEnvVars</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Are we currently expanding environment variables?</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsRecordingDefaults"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsRecordingDefaults</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Are we currently recording default values?</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Read"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Read</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>key</span>,
+          <span class=sig-arg>defaultVal</span>=<span class=sig-default>EmptyString</span>)</span>
+  </h3>
+<p>Returns the value of key if it exists, defaultVal otherwise.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>key</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>defaultVal</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ReadBool"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ReadBool</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>key</span>,
+          <span class=sig-arg>defaultVal</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Returns the value of key if it exists, defaultVal otherwise.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>key</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>defaultVal</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ReadFloat"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ReadFloat</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>key</span>,
+          <span class=sig-arg>defaultVal</span>=<span class=sig-default>0.0</span>)</span>
+  </h3>
+<p>Returns the value of key if it exists, defaultVal otherwise.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>key</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>defaultVal</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+double      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ReadInt"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ReadInt</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>key</span>,
+          <span class=sig-arg>defaultVal</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Returns the value of key if it exists, defaultVal otherwise.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>key</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>defaultVal</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+long      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RenameEntry"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RenameEntry</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>oldName</span>,
+          <span class=sig-arg>newName</span>)</span>
+  </h3>
+<p>Rename an entry.  Returns False on failure (probably because the new
+name is already taken by an existing entry)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>oldName</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>newName</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RenameGroup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RenameGroup</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>oldName</span>,
+          <span class=sig-arg>newName</span>)</span>
+  </h3>
+<p>Rename a group.  Returns False on failure (probably because the new
+name is already taken by an existing entry)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>oldName</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>newName</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetExpandEnvVars"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetExpandEnvVars</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doIt</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>We can automatically expand environment variables in the config
+entries this option is on by default, you can turn it on/off at any
+time)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>doIt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPath</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>)</span>
+  </h3>
+<p>Set current path: if the first character is '/', it's the absolute
+path, otherwise it's a relative path. '..' is supported. If the
+strPath doesn't exist it is created.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>path</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRecordDefaults"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRecordDefaults</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doIt</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Set whether the config objec should record default values.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>doIt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Write"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Write</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>key</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>write the value (return True on success)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>key</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="WriteBool"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">WriteBool</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>key</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>write the value (return True on success)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>key</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="WriteFloat"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">WriteFloat</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>key</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>write the value (return True on success)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>key</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="WriteInt"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">WriteInt</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>key</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>write the value (return True on success)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>key</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>value</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>()</span>
+  </h3>
+<p>Create and return a new global config object.  This function will
+create the &quot;best&quot; implementation of wx.Config available for the
+current platform.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+ConfigBase      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DontCreateOnDemand"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DontCreateOnDemand</span>()</span>
+  </h3>
+<p>Should Get() try to create a new log object if there isn't a current
+one?</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Get"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Get</span>(<span class=sig-arg>createOnDemand</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Returns the current global config object, creating one if neccessary.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>createOnDemand</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+ConfigBase      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Set"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Set</span>(<span class=sig-arg>config</span>)</span>
+  </h3>
+<p>Sets the global config object (the one returned by Get) and returns a
+reference to the previous global config object.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>config</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=ConfigBase)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+ConfigBase      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="AppName"></a>
+<h3>AppName</h3>
+<p>See <a href="wx.ConfigBase-class.html#GetAppName" class="link"><code>GetAppName</code></a> and <a href="wx.ConfigBase-class.html#SetAppName" class="link"><code>SetAppName</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetAppName" class="summary-sig-name"><code>GetAppName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#SetAppName" class="summary-sig-name"><code>SetAppName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>appName</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="EntryType"></a>
+<h3>EntryType</h3>
+<p>See <a href="wx.ConfigBase-class.html#GetEntryType" class="link"><code>GetEntryType</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetEntryType" class="summary-sig-name"><code>GetEntryType</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="FirstEntry"></a>
+<h3>FirstEntry</h3>
+<p>See <a href="wx.ConfigBase-class.html#GetFirstEntry" class="link"><code>GetFirstEntry</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetFirstEntry" class="summary-sig-name"><code>GetFirstEntry</code></a>()</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="FirstGroup"></a>
+<h3>FirstGroup</h3>
+<p>See <a href="wx.ConfigBase-class.html#GetFirstGroup" class="link"><code>GetFirstGroup</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetFirstGroup" class="summary-sig-name"><code>GetFirstGroup</code></a>()</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NextEntry"></a>
+<h3>NextEntry</h3>
+<p>See <a href="wx.ConfigBase-class.html#GetNextEntry" class="link"><code>GetNextEntry</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetNextEntry" class="summary-sig-name"><code>GetNextEntry</code></a>(<span class=summary-sig-arg>index</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NextGroup"></a>
+<h3>NextGroup</h3>
+<p>See <a href="wx.ConfigBase-class.html#GetNextGroup" class="link"><code>GetNextGroup</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetNextGroup" class="summary-sig-name"><code>GetNextGroup</code></a>(<span class=summary-sig-arg>index</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NumberOfEntries"></a>
+<h3>NumberOfEntries</h3>
+<p>See <a href="wx.ConfigBase-class.html#GetNumberOfEntries" class="link"><code>GetNumberOfEntries</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetNumberOfEntries" class="summary-sig-name"><code>GetNumberOfEntries</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>recursive</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NumberOfGroups"></a>
+<h3>NumberOfGroups</h3>
+<p>See <a href="wx.ConfigBase-class.html#GetNumberOfGroups" class="link"><code>GetNumberOfGroups</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetNumberOfGroups" class="summary-sig-name"><code>GetNumberOfGroups</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>recursive</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Path"></a>
+<h3>Path</h3>
+<p>See <a href="wx.ConfigBase-class.html#GetPath" class="link"><code>GetPath</code></a> and <a href="wx.ConfigBase-class.html#SetPath" class="link"><code>SetPath</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetPath" class="summary-sig-name"><code>GetPath</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#SetPath" class="summary-sig-name"><code>SetPath</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Style"></a>
+<h3>Style</h3>
+<p>See <a href="wx.ConfigBase-class.html#GetStyle" class="link"><code>GetStyle</code></a> and <a href="wx.ConfigBase-class.html#SetStyle" class="link"><code>SetStyle</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetStyle" class="summary-sig-name"><code>GetStyle</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#SetStyle" class="summary-sig-name"><code>SetStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="VendorName"></a>
+<h3>VendorName</h3>
+<p>See <a href="wx.ConfigBase-class.html#GetVendorName" class="link"><code>GetVendorName</code></a> and <a href="wx.ConfigBase-class.html#SetVendorName" class="link"><code>SetVendorName</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#GetVendorName" class="summary-sig-name"><code>GetVendorName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.ConfigBase-class.html#SetVendorName" class="summary-sig-name"><code>SetVendorName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>vendorName</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="Type_Boolean"></a>
+<h3>Type_Boolean</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="2">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="Type_Float"></a>
+<h3>Type_Float</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="4">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="Type_Integer"></a>
+<h3>Type_Integer</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="3">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="Type_String"></a>
+<h3>Type_String</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="1">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="Type_Unknown"></a>
+<h3>Type_Unknown</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="0">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:00:11 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

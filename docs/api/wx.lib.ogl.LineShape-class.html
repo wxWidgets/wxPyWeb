@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.ogl.LineShape</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.ogl-module.html">Package&nbsp;ogl</a> ::
+        Class&nbsp;LineShape
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.ogl.LineShape-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type LineShape</h2>
+
+<pre class="base-tree">
+     <a href="__builtin__.object-class.html"><code>object</code></a> --+        
+              |        
+<a href="wx.lib.ogl.ShapeEvtHandler-class.html"><code>ShapeEvtHandler</code></a> --+    
+                  |    
+              <a href="wx.lib.ogl.Shape-class.html"><code>Shape</code></a> --+
+                      |
+                     <b>LineShape</b>
+</pre><br />
+
+<hr/>
+
+<p>LineShape may be attached to two nodes;
+it may be segmented, in which case a control point is drawn for each joint.</p>
+<p>A wxLineShape may have arrows at the beginning, end and centre.</p>
+<dl class="rst-docutils">
+<dt>Derived from:</dt>
+<dd>Shape</dd>
+</dl>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#AddArrow" class="summary-sig-name"><code>AddArrow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>type</span>,
+          <span class=summary-sig-arg>end</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>xOffset</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>mf</span>,
+          <span class=summary-sig-arg>arrowId</span>)</span></code>
+<br />
+Add an arrow (or annotation) to the line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#AddArrowOrdered" class="summary-sig-name"><code>AddArrowOrdered</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>arrow</span>,
+          <span class=summary-sig-arg>referenceList</span>,
+          <span class=summary-sig-arg>end</span>)</span></code>
+<br />
+Add an arrowhead in the position indicated by the reference list
+of arrowheads, which contains all legal arrowheads for this line, in
+the correct order.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#ClearArrow" class="summary-sig-name"><code>ClearArrow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Delete the arrow with the given name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#ClearArrowsAtPosition" class="summary-sig-name"><code>ClearArrowsAtPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>end</span>)</span></code>
+<br />
+Delete the arrows at the specified position, or at any position
+if position is -1.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#DeleteArrowHead" class="summary-sig-name"><code>DeleteArrowHead</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>position</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Delete arrowhead by position and name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#DeleteArrowHeadId" class="summary-sig-name"><code>DeleteArrowHeadId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Delete arrowhead by id.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#DeleteLineControlPoint" class="summary-sig-name"><code>DeleteLineControlPoint</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Delete an arbitary point on the line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#Draggable" class="summary-sig-name"><code>Draggable</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if the shape may be dragged by the user.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#DrawArrow" class="summary-sig-name"><code>DrawArrow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>arrow</span>,
+          <span class=summary-sig-arg>XOffset</span>,
+          <span class=summary-sig-arg>proportionalOffset</span>)</span></code>
+<br />
+Draw the given arrowhead (or annotation).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#DrawArrows" class="summary-sig-name"><code>DrawArrows</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Draw all arrows.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#DrawRegion" class="summary-sig-name"><code>DrawRegion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>region</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Format one region at this position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#EraseRegion" class="summary-sig-name"><code>EraseRegion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>region</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Erase one region at this position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#FindArrowHead" class="summary-sig-name"><code>FindArrowHead</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>position</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Find arrowhead by position and name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#FindArrowHeadId" class="summary-sig-name"><code>FindArrowHeadId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>arrowId</span>)</span></code>
+<br />
+Find arrowhead by id.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#FindLineEndPoints" class="summary-sig-name"><code>FindLineEndPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Finds the x, y points at the two ends of the line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#FindLinePosition" class="summary-sig-name"><code>FindLinePosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Find which position we're talking about at this x, y.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#FindMinimumWidth" class="summary-sig-name"><code>FindMinimumWidth</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Find the horizontal width for drawing a line with arrows in
+minimum space.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#FindNth" class="summary-sig-name"><code>FindNth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>incoming</span>)</span></code>
+<br />
+Find the position of the line on the given object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#FormatText" class="summary-sig-name"><code>FormatText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>s</span>,
+          <span class=summary-sig-arg>i</span>)</span></code>
+<br />
+Format a text string according to the region size, adding
+strings with positions to region text list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetAlignmentEnd"></a><span class="summary-sig"><span class="summary-sig-name">GetAlignmentEnd</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetAlignmentOrientation"></a><span class="summary-sig"><span class="summary-sig-name">GetAlignmentOrientation</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>isEnd</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetAlignmentStart"></a><span class="summary-sig"><span class="summary-sig-name">GetAlignmentStart</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetAlignmentType"></a><span class="summary-sig"><span class="summary-sig-name">GetAlignmentType</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>isEnd</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetArrows"></a><span class="summary-sig"><span class="summary-sig-name">GetArrows</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#GetAttachmentFrom" class="summary-sig-name"><code>GetAttachmentFrom</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the attachment point on the 'from' node.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#GetAttachmentTo" class="summary-sig-name"><code>GetAttachmentTo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the attachment point on the 'to' node.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#GetBoundingBoxMin" class="summary-sig-name"><code>GetBoundingBoxMin</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the minimum bounding box for the shape, that defines the area
+available for drawing the contents (such as text).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#GetEnds" class="summary-sig-name"><code>GetEnds</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the visible endpoints of the lines for drawing between two objects.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#GetFrom" class="summary-sig-name"><code>GetFrom</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the 'from' object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#GetLabelPosition" class="summary-sig-name"><code>GetLabelPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>position</span>)</span></code>
+<br />
+Get the reference point for a label.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetLineControlPoints"></a><span class="summary-sig"><span class="summary-sig-name">GetLineControlPoints</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#GetNextControlPoint" class="summary-sig-name"><code>GetNextControlPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>shape</span>)</span></code>
+<br />
+Find the next control point in the line after the start / end point,
+depending on whether the shape is at the start or end.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#GetTo" class="summary-sig-name"><code>GetTo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the 'to' object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#HitTest" class="summary-sig-name"><code>HitTest</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Given a point on a canvas, returns TRUE if the point was on the
+shape, and returns the nearest attachment point and distance from
+the given point and target.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#Initialise" class="summary-sig-name"><code>Initialise</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Initialise the line object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#InsertLineControlPoint" class="summary-sig-name"><code>InsertLineControlPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>point</span>)</span></code>
+<br />
+Insert a control point at an optional given position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#IsEnd" class="summary-sig-name"><code>IsEnd</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>nodeObject</span>)</span></code>
+<br />
+TRUE if shape is at the end of the line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#IsSpline" class="summary-sig-name"><code>IsSpline</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if a spline is drawn through the control points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#MakeControlPoints" class="summary-sig-name"><code>MakeControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Make handle control points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#MakeLineControlPoints" class="summary-sig-name"><code>MakeLineControlPoints</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>n</span>)</span></code>
+<br />
+Make a given number of control points (minimum of two).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnBeginDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnBeginDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnCreateLabelShape"></a><span class="summary-sig"><span class="summary-sig-name">OnCreateLabelShape</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>region</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>draw</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDraw"></a><span class="summary-sig"><span class="summary-sig-name">OnDraw</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawContents"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawContents</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawControlPoints"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawControlPoints</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawOutline"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawOutline</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnEndDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnEndDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnErase"></a><span class="summary-sig"><span class="summary-sig-name">OnErase</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnEraseControlPoints"></a><span class="summary-sig"><span class="summary-sig-name">OnEraseControlPoints</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnLabelMovePre"></a><span class="summary-sig"><span class="summary-sig-name">OnLabelMovePre</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>labelShape</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>old_x</span>,
+          <span class=summary-sig-arg>old_y</span>,
+          <span class=summary-sig-arg>display</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#OnMoveLink" class="summary-sig-name"><code>OnMoveLink</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>moveControlPoints</span>)</span></code>
+<br />
+Called when a connected object has moved, to move the link to
+correct position</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMoveMiddleControlPoint"></a><span class="summary-sig"><span class="summary-sig-name">OnMoveMiddleControlPoint</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>lpt</span>,
+          <span class=summary-sig-arg>pt</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMovePre"></a><span class="summary-sig"><span class="summary-sig-name">OnMovePre</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>old_x</span>,
+          <span class=summary-sig-arg>old_y</span>,
+          <span class=summary-sig-arg>display</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSizingBeginDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnSizingBeginDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSizingDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnSizingDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>draw</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSizingEndDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnSizingEndDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#ResetControlPoints" class="summary-sig-name"><code>ResetControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Reset the positions of the control points (for instance when the
+shape's shape has changed).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#Select" class="summary-sig-name"><code>Select</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>select</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Select or deselect the given shape, drawing or erasing control points
+(handles) as necessary.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAlignmentOrientation"></a><span class="summary-sig"><span class="summary-sig-name">SetAlignmentOrientation</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>isEnd</span>,
+          <span class=summary-sig-arg>isHoriz</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAlignmentType"></a><span class="summary-sig"><span class="summary-sig-name">SetAlignmentType</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>isEnd</span>,
+          <span class=summary-sig-arg>alignType</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#SetAttachmentFrom" class="summary-sig-name"><code>SetAttachmentFrom</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attach</span>)</span></code>
+<br />
+Set the 'from' shape attachment.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#SetAttachments" class="summary-sig-name"><code>SetAttachments</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>from_attach</span>,
+          <span class=summary-sig-arg>to_attach</span>)</span></code>
+<br />
+Specify which object attachment points should be used at each end
+of the line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#SetAttachmentTo" class="summary-sig-name"><code>SetAttachmentTo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attach</span>)</span></code>
+<br />
+Set the 'to' shape attachment.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#SetEnds" class="summary-sig-name"><code>SetEnds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x1</span>,
+          <span class=summary-sig-arg>y1</span>,
+          <span class=summary-sig-arg>x2</span>,
+          <span class=summary-sig-arg>y2</span>)</span></code>
+<br />
+Set the end positions of the line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#SetFrom" class="summary-sig-name"><code>SetFrom</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>object</span>)</span></code>
+<br />
+Set the 'from' object for the line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#SetIgnoreOffsets" class="summary-sig-name"><code>SetIgnoreOffsets</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>ignore</span>)</span></code>
+<br />
+Set whether to ignore offsets from the end of the line when drawing.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#SetSpline" class="summary-sig-name"><code>SetSpline</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>spline</span>)</span></code>
+<br />
+Specifies whether a spline is to be drawn through the control points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#SetTo" class="summary-sig-name"><code>SetTo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>object</span>)</span></code>
+<br />
+Set the 'to' object for the line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#Straighten" class="summary-sig-name"><code>Straighten</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Straighten verticals and horizontals.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.LineShape-class.html#Unlink" class="summary-sig-name"><code>Unlink</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Unlink the line from the nodes at either end.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="AddArrow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddArrow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>type</span>,
+          <span class=sig-arg>end</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>10.0</span>,
+          <span class=sig-arg>xOffset</span>=<span class=sig-default>0.0</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>mf</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>arrowId</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Add an arrow (or annotation) to the line.</p>
+<p>type may currently be one of:</p>
+<dl class="rst-docutils">
+<dt>ARROW_HOLLOW_CIRCLE</dt>
+<dd>Hollow circle.</dd>
+<dt>ARROW_FILLED_CIRCLE</dt>
+<dd>Filled circle.</dd>
+<dt>ARROW_ARROW</dt>
+<dd>Conventional arrowhead.</dd>
+<dt>ARROW_SINGLE_OBLIQUE</dt>
+<dd>Single oblique stroke.</dd>
+<dt>ARROW_DOUBLE_OBLIQUE</dt>
+<dd>Double oblique stroke.</dd>
+<dt>ARROW_DOUBLE_METAFILE</dt>
+<dd>Custom arrowhead.</dd>
+</dl>
+<p>end may currently be one of:</p>
+<dl class="rst-docutils">
+<dt>ARROW_POSITION_END</dt>
+<dd>Arrow appears at the end.</dd>
+<dt>ARROW_POSITION_START</dt>
+<dd>Arrow appears at the start.</dd>
+</dl>
+<p>arrowSize specifies the length of the arrow.</p>
+<p>xOffset specifies the offset from the end of the line.</p>
+<p>name specifies a name for the arrow.</p>
+<p>mf can be a wxPseduoMetaFile, perhaps loaded from a simple Windows
+metafile.</p>
+<p>arrowId is the id for the arrow.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddArrowOrdered"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddArrowOrdered</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>arrow</span>,
+          <span class=sig-arg>referenceList</span>,
+          <span class=sig-arg>end</span>)</span>
+  </h3>
+<p>Add an arrowhead in the position indicated by the reference list
+of arrowheads, which contains all legal arrowheads for this line, in
+the correct order. E.g.</p>
+<p>Reference list:      a b c d e
+Current line list:   a d</p>
+<p>Add c, then line list is: a c d.</p>
+<p>If no legal arrowhead position, return FALSE. Assume reference list
+is for one end only, since it potentially defines the ordering for
+any one of the 3 positions. So we don't check the reference list for
+arrowhead position.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClearArrow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClearArrow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Delete the arrow with the given name.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClearArrowsAtPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClearArrowsAtPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>end</span>)</span>
+  </h3>
+<p>Delete the arrows at the specified position, or at any position
+if position is -1.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteArrowHead"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteArrowHead</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>position</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Delete arrowhead by position and name.</p>
+<p>if position is -1, matches any position.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteArrowHeadId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteArrowHeadId</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>)</span>
+  </h3>
+<p>Delete arrowhead by id.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteLineControlPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteLineControlPoint</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Delete an arbitary point on the line.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Draggable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Draggable</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if the shape may be dragged by the user.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#Draggable"><code>wx.lib.ogl.Shape.Draggable</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawArrow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawArrow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>arrow</span>,
+          <span class=sig-arg>XOffset</span>,
+          <span class=sig-arg>proportionalOffset</span>)</span>
+  </h3>
+<p>Draw the given arrowhead (or annotation).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawArrows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawArrows</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Draw all arrows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRegion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRegion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>region</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Format one region at this position.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EraseRegion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EraseRegion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>region</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Erase one region at this position.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindArrowHead"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindArrowHead</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>position</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Find arrowhead by position and name.</p>
+<p>if position is -1, matches any position.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindArrowHeadId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindArrowHeadId</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>arrowId</span>)</span>
+  </h3>
+<p>Find arrowhead by id.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindLineEndPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindLineEndPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Finds the x, y points at the two ends of the line.</p>
+<p>This function can be used by e.g. line-routing routines to
+get the actual points on the two node images where the lines will be
+drawn to / from.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindLinePosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindLinePosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Find which position we're talking about at this x, y.</p>
+<p>Returns ARROW_POSITION_START, ARROW_POSITION_MIDDLE, ARROW_POSITION_END.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindMinimumWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindMinimumWidth</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Find the horizontal width for drawing a line with arrows in
+minimum space. Assume arrows at end only.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindNth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindNth</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>image</span>,
+          <span class=sig-arg>incoming</span>)</span>
+  </h3>
+<p>Find the position of the line on the given object.</p>
+<p>Specify whether incoming or outgoing lines are being considered
+with incoming.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FormatText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FormatText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>s</span>,
+          <span class=sig-arg>i</span>)</span>
+  </h3>
+<p>Format a text string according to the region size, adding
+strings with positions to region text list.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#FormatText"><code>wx.lib.ogl.Shape.FormatText</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAttachmentFrom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAttachmentFrom</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the attachment point on the 'from' node.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAttachmentTo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAttachmentTo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the attachment point on the 'to' node.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBoundingBoxMin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBoundingBoxMin</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the minimum bounding box for the shape, that defines the area
+available for drawing the contents (such as text).</p>
+<p>Must be overridden.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#GetBoundingBoxMin"><code>wx.lib.ogl.Shape.GetBoundingBoxMin</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEnds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEnds</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the visible endpoints of the lines for drawing between two objects.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFrom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFrom</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the 'from' object.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLabelPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLabelPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>position</span>)</span>
+  </h3>
+<p>Get the reference point for a label.</p>
+<p>Region x and y are offsets from this.
+position is 0 (middle), 1 (start), 2 (end).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNextControlPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNextControlPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>shape</span>)</span>
+  </h3>
+<p>Find the next control point in the line after the start / end point,
+depending on whether the shape is at the start or end.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the 'to' object.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HitTest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HitTest</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Given a point on a canvas, returns TRUE if the point was on the
+shape, and returns the nearest attachment point and distance from
+the given point and target.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#HitTest"><code>wx.lib.ogl.Shape.HitTest</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Initialise"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Initialise</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Initialise the line object.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertLineControlPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertLineControlPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>point</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Insert a control point at an optional given position.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsEnd"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsEnd</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>nodeObject</span>)</span>
+  </h3>
+<p>TRUE if shape is at the end of the line.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsSpline"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsSpline</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if a spline is drawn through the control points.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Make handle control points.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#MakeControlPoints"><code>wx.lib.ogl.Shape.MakeControlPoints</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeLineControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeLineControlPoints</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>n</span>)</span>
+  </h3>
+<p>Make a given number of control points (minimum of two).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMoveLink"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMoveLink</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>moveControlPoints</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Called when a connected object has moved, to move the link to
+correct position</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.ShapeEvtHandler-class.html#OnMoveLink"><code>wx.lib.ogl.ShapeEvtHandler.OnMoveLink</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Reset the positions of the control points (for instance when the
+shape's shape has changed).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#ResetControlPoints"><code>wx.lib.ogl.Shape.ResetControlPoints</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Select"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Select</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>select</span>,
+          <span class=sig-arg>dc</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Select or deselect the given shape, drawing or erasing control points
+(handles) as necessary.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#Select"><code>wx.lib.ogl.Shape.Select</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAttachmentFrom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAttachmentFrom</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attach</span>)</span>
+  </h3>
+<p>Set the 'from' shape attachment.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAttachments"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAttachments</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>from_attach</span>,
+          <span class=sig-arg>to_attach</span>)</span>
+  </h3>
+<p>Specify which object attachment points should be used at each end
+of the line.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAttachmentTo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAttachmentTo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attach</span>)</span>
+  </h3>
+<p>Set the 'to' shape attachment.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEnds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEnds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x1</span>,
+          <span class=sig-arg>y1</span>,
+          <span class=sig-arg>x2</span>,
+          <span class=sig-arg>y2</span>)</span>
+  </h3>
+<p>Set the end positions of the line.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFrom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFrom</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>object</span>)</span>
+  </h3>
+<p>Set the 'from' object for the line.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetIgnoreOffsets"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetIgnoreOffsets</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>ignore</span>)</span>
+  </h3>
+<p>Set whether to ignore offsets from the end of the line when drawing.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSpline"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSpline</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>spline</span>)</span>
+  </h3>
+<p>Specifies whether a spline is to be drawn through the control points.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>object</span>)</span>
+  </h3>
+<p>Set the 'to' object for the line.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Straighten"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Straighten</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Straighten verticals and horizontals.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Unlink"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Unlink</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Unlink the line from the nodes at either end.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:45 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

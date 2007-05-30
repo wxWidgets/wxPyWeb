@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.mixins.treemixin</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.mixins-module.html">Package&nbsp;mixins</a> ::
+        Module&nbsp;treemixin
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.mixins.treemixin-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.mixins.treemixin</h2>
+
+<p>treemixin.py</p>
+<p>This module provides three mixin classes that can be used with tree
+controls:</p>
+<ul class="rst-simple">
+<li>VirtualTree is a class that, when mixed in with a tree control,
+makes the tree control virtual, similar to a ListCtrl in virtual mode. 
+A virtual tree control builds the tree itself by means of callbacks,
+so the programmer is freed from the burden of building the tree herself.</li>
+<li>DragAndDrop is a mixin class that helps with dragging and dropping of
+items. The graphical part of dragging and dropping tree items is done by
+this mixin class. You only need to implement the OnDrop method that is
+called when the drop happens.</li>
+<li>ExpansionState is a mixin that can be queried for the expansion state of
+all items in the tree to restore it later.</li>
+</ul>
+<p>All mixin classes work with wx.TreeCtrl, wx.gizmos.TreeListCtrl, 
+and wx.lib.customtreectrl.CustomTreeCtrl. They can be used together or 
+separately.</p>
+<p>The VirtualTree and DragAndDrop mixins force the wx.TR_HIDE_ROOT style.</p>
+<p>Author: Frank Niessink &lt;<a class="rst-reference" href="mailto:frank&#64;niessink.com">frank&#64;niessink.com</a>&gt;
+License: wxWidgets license
+Version: 1.0
+Date: 15 April 2007</p>
+<p>ExpansionState is based on code and ideas from Karsten Hilbert.
+Andrea Gavana provided help with the CustomTreeCtrl integration.</p>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mixins.treemixin.DragAndDrop-class.html"><code>DragAndDrop</code></a></b></td>
+  <td>This is a mixin class that can be used to easily implement
+dragging and dropping of tree items.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mixins.treemixin.ExpansionState-class.html"><code>ExpansionState</code></a></b></td>
+  <td>This is a mixin class that can be used to save and restore
+the expansion state (i.e.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mixins.treemixin.TreeAPIHarmonizer-class.html"><code>TreeAPIHarmonizer</code></a></b></td>
+  <td>This class attempts to hide the differences in API between the
+different tree controls that are part of wxPython.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mixins.treemixin.TreeHelper-class.html"><code>TreeHelper</code></a></b></td>
+  <td>This class provides methods that are not part of the API of any 
+tree control, but are convenient to have available.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mixins.treemixin.VirtualTree-class.html"><code>VirtualTree</code></a></b></td>
+  <td>This is a mixin class that can be used to allow for virtual tree
+controls.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:57:11 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

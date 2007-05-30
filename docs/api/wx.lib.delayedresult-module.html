@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.delayedresult</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        Module&nbsp;delayedresult
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.delayedresult-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.delayedresult</h2>
+
+<p>This module supports the thread-safe, asynchronous transmission of data 
+('delayed results') from a worker (non-GUI) thread to the main thread. Ie you don't 
+need to mutex lock any data, the worker thread doesn't wait (or even check) 
+for the result to be received, and the main thread doesn't wait for the 
+worker thread to send the result. Instead, the consumer will be called 
+automatically by the wx app when the worker thread result is available.</p>
+<p>In most cases you just need to use startWorker() with the correct parameters
+(your worker function and your 'consumer' in the simplest of cases). The 
+only requirement on consumer is that it must accept a DelayedResult instance 
+as first arg.</p>
+<p>In the following example, this will call consumer(delayedResult) with the 
+return value from workerFn:</p>
+<pre class="rst-literal-block">
+from delayedresult import startWorker
+startWorker(consumer, workerFn)
+</pre>
+<p>More advanced uses:</p>
+<ul class="rst-simple">
+<li>The other parameters to startWorker()</li>
+<li>Derive from Producer to override _extraInfo (e.g. to provide traceback info)</li>
+<li>Create your own worker-function-thread wrapper instead of using Producer</li>
+<li>Create your own Handler-like wrapper to pre- or post-process the result 
+(see PreProcessChain)</li>
+<li>Derive from Sender to use your own way of making result hop over the 
+&quot;thread boundary&quot; (from non-main thread to main thread), e.g. using Queue</li>
+</ul>
+<p>Thanks to Josiah Carlson for critical feedback/ideas that helped me 
+improve this module.</p>
+<hr/>
+<p><b>Version:</b> <p>1.0</p>
+</p>
+
+<p><b>Copyright:</b> <ol class="rst-loweralpha simple" start="3">
+<li>2006 by Oliver Schoenborn</li>
+</ol>
+</p>
+
+<p><b>License:</b> <p>wxWidgets license</p>
+</p>
+
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.delayedresult.DelayedResult-class.html"><code>DelayedResult</code></a></b></td>
+  <td>Represent the actual delayed result coming from the non-main thread.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.delayedresult.Handler-class.html"><code>Handler</code></a></b></td>
+  <td>Bind some of the arguments and keyword arguments of a callable ('listener').</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.delayedresult.PreProcessChain-class.html"><code>PreProcessChain</code></a></b></td>
+  <td>Represent a 'delayed result pre-processing chain', a kind of Handler.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.delayedresult.Producer-class.html"><code>Producer</code></a></b></td>
+  <td>Represent the worker thread that produces delayed results.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.delayedresult.Sender-class.html"><code>Sender</code></a></b></td>
+  <td>Base class for various kinds of senders.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.delayedresult.SenderCallAfter-class.html"><code>SenderCallAfter</code></a></b></td>
+  <td>This sender sends the delayed result produced in the worker thread
+to a callable in the main thread, via wx.CallAfter.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.delayedresult.SenderNoWx-class.html"><code>SenderNoWx</code></a></b></td>
+  <td>Sender that works without wx.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.delayedresult.SenderWxEvent-class.html"><code>SenderWxEvent</code></a></b></td>
+  <td>This sender sends the delayed result produced in the worker thread
+to an event handler in the main thread, via a wx event of class 
+<em>eventClass</em>.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.delayedresult-module.html#startWorker" class="summary-sig-name"><code>startWorker</code></a>(<span class=summary-sig-arg>consumer</span>,
+          <span class=summary-sig-arg>workerFn</span>,
+          <span class=summary-sig-arg>cargs</span>,
+          <span class=summary-sig-arg>ckwargs</span>,
+          <span class=summary-sig-arg>wargs</span>,
+          <span class=summary-sig-arg>wkwargs</span>,
+          <span class=summary-sig-arg>jobID</span>,
+          <span class=summary-sig-arg>group</span>,
+          <span class=summary-sig-arg>daemon</span>,
+          <span class=summary-sig-arg>sendReturn</span>,
+          <span class=summary-sig-arg>senderArg</span>)</span></code>
+<br />
+Convenience function to send data produced by workerFn(<a href="#id1" name="id2"><span class="rst-problematic" id="id2">*</span></a>wargs, <a href="#id3" name="id4"><span class="rst-problematic" id="id4">**</span></a>wkwargs) 
+running in separate thread, to a consumer(<a href="#id5" name="id6"><span class="rst-problematic" id="id6">*</span></a>cargs, <a href="#id7" name="id8"><span class="rst-problematic" id="id8">**</span></a>ckwargs) running in
+the main thread.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Function Details</th></tr>
+</table>
+
+<a name="startWorker"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">startWorker</span>(<span class=sig-arg>consumer</span>,
+          <span class=sig-arg>workerFn</span>,
+          <span class=sig-arg>cargs</span>=<span class=sig-default>()</span>,
+          <span class=sig-arg>ckwargs</span>=<span class=sig-default>{}</span>,
+          <span class=sig-arg>wargs</span>=<span class=sig-default>()</span>,
+          <span class=sig-arg>wkwargs</span>=<span class=sig-default>{}</span>,
+          <span class=sig-arg>jobID</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>group</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>daemon</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>sendReturn</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>senderArg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Convenience function to send data produced by workerFn(<a href="#id1" name="id2"><span class="rst-problematic" id="id2">*</span></a>wargs, <a href="#id3" name="id4"><span class="rst-problematic" id="id4">**</span></a>wkwargs) 
+running in separate thread, to a consumer(<a href="#id5" name="id6"><span class="rst-problematic" id="id6">*</span></a>cargs, <a href="#id7" name="id8"><span class="rst-problematic" id="id8">**</span></a>ckwargs) running in
+the main thread. This function merely creates a SenderCallAfter (or a
+SenderWxEvent, if consumer derives from wx.EvtHandler), and a Producer,
+and returns immediately after starting the Producer thread. The jobID
+is used for the Sender and as name for the Producer thread. Returns the 
+thread created, in case caller needs join/etc.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:55:04 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

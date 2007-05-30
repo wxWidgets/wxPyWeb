@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.docview.CommandProcessor</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.docview-module.html">Module&nbsp;docview</a> ::
+        Class&nbsp;CommandProcessor
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.docview.CommandProcessor-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type CommandProcessor</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+    
+         |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+
+             |
+            <b>CommandProcessor</b>
+</pre><br />
+
+<hr/>
+
+<p>wxCommandProcessor is a class that maintains a history of wxCommands, with
+undo/redo functionality built-in. Derive a new class from this if you want
+different behaviour.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>maxCommands</span>)</span></code>
+<br />
+Constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#CanRedo" class="summary-sig-name"><code>CanRedo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if the currently-active command can be redone, false
+otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#CanUndo" class="summary-sig-name"><code>CanUndo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if the currently-active command can be undone, false
+otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#ClearCommands" class="summary-sig-name"><code>ClearCommands</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Deletes all the commands in the list and sets the current command
+pointer to None.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#GetCommands" class="summary-sig-name"><code>GetCommands</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the list of commands.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#GetEditMenu" class="summary-sig-name"><code>GetEditMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the edit menu associated with the command processor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#GetMaxCommands" class="summary-sig-name"><code>GetMaxCommands</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the maximum number of commands that the command processor
+stores.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#GetRedoAccelerator" class="summary-sig-name"><code>GetRedoAccelerator</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the string that will be appended to the Redo menu item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#GetUndoAccelerator" class="summary-sig-name"><code>GetUndoAccelerator</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the string that will be appended to the Undo menu item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#Redo" class="summary-sig-name"><code>Redo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Redoes the command just undone.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#SetEditMenu" class="summary-sig-name"><code>SetEditMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menu</span>)</span></code>
+<br />
+Tells the command processor to update the Undo and Redo items on this
+menu as appropriate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#SetMenuStrings" class="summary-sig-name"><code>SetMenuStrings</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets the menu labels according to the currently set menu and the
+current command state.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#SetRedoAccelerator" class="summary-sig-name"><code>SetRedoAccelerator</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>accel</span>)</span></code>
+<br />
+Sets the string that will be appended to the Redo menu item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#SetUndoAccelerator" class="summary-sig-name"><code>SetUndoAccelerator</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>accel</span>)</span></code>
+<br />
+Sets the string that will be appended to the Redo menu item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#Submit" class="summary-sig-name"><code>Submit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>,
+          <span class=summary-sig-arg>storeIt</span>)</span></code>
+<br />
+Submits a new command to the command processor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.CommandProcessor-class.html#Undo" class="summary-sig-name"><code>Undo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Undoes the command just executed.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>maxCommands</span>=<span class=sig-default>-1</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor.  maxCommands may be set to a positive integer to limit
+the number of commands stored to it, otherwise (and by default) the
+list of commands can grow arbitrarily.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Object-class.html#__init__"><code>wx.Object.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanRedo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanRedo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if the currently-active command can be redone, false
+otherwise.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanUndo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanUndo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if the currently-active command can be undone, false
+otherwise.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClearCommands"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClearCommands</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Deletes all the commands in the list and sets the current command
+pointer to None.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCommands"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCommands</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the list of commands.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEditMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEditMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the edit menu associated with the command processor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMaxCommands"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMaxCommands</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the maximum number of commands that the command processor
+stores.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRedoAccelerator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRedoAccelerator</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the string that will be appended to the Redo menu item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetUndoAccelerator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetUndoAccelerator</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the string that will be appended to the Undo menu item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Redo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Redo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Redoes the command just undone.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEditMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEditMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menu</span>)</span>
+  </h3>
+<p>Tells the command processor to update the Undo and Redo items on this
+menu as appropriate. Set this to NULL if the menu is about to be
+destroyed and command operations may still be performed, or the
+command processor may try to access an invalid pointer.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMenuStrings"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMenuStrings</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets the menu labels according to the currently set menu and the
+current command state.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRedoAccelerator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRedoAccelerator</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>accel</span>)</span>
+  </h3>
+<p>Sets the string that will be appended to the Redo menu item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetUndoAccelerator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetUndoAccelerator</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>accel</span>)</span>
+  </h3>
+<p>Sets the string that will be appended to the Redo menu item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Submit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Submit</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>command</span>,
+          <span class=sig-arg>storeIt</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Submits a new command to the command processor. The command processor
+calls wxCommand::Do to execute the command; if it succeeds, the
+command is stored in the history list, and the associated edit menu
+(if any) updated appropriately. If it fails, the command is deleted
+immediately. Once Submit has been called, the passed command should
+not be deleted directly by the application.</p>
+<p>storeIt indicates whether the successful command should be stored in
+the history list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Undo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Undo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Undoes the command just executed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:58:32 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

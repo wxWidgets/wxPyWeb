@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.BufferedDC</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;BufferedDC
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.BufferedDC-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type BufferedDC</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+            <a href="wx.DC-class.html"><code>DC</code></a> --+        
+                 |        
+          <a href="wx.WindowDC-class.html"><code>WindowDC</code></a> --+    
+                     |    
+              <a href="wx.MemoryDC-class.html"><code>MemoryDC</code></a> --+
+                         |
+                        <b>BufferedDC</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.BufferedPaintDC-class.html"><code>BufferedPaintDC</code></a></dd></dl>
+
+<hr/>
+
+<p>This simple class provides a simple way to avoid flicker: when drawing
+on it, everything is in fact first drawn on an in-memory buffer (a
+<a href="wx.Bitmap-class.html" class="link"><code>wx.Bitmap</code></a>) and then copied to the screen only once, when this object
+is destroyed.  You can either provide a buffer bitmap yourself, and
+reuse it the next time something needs painted, or you can let the
+buffered DC create and provide a buffer bitmap itself.</p>
+<p>Buffered DCs can be used in the same way as any other device context.
+wx.BufferedDC itself typically replaces <a href="wx.ClientDC-class.html" class="link"><code>wx.ClientDC</code></a>, if you want to
+use it in your EVT_PAINT handler, you should look at
+<a href="wx.BufferedPaintDC-class.html" class="link"><code>wx.BufferedPaintDC</code></a>.  You can also use a wx.BufferedDC without
+providing a target DC.  In this case the operations done on the dc
+will only be written to the buffer bitmap and <em>not</em> to any window, so
+you will want to have provided the buffer bitmap and then reuse it
+when it needs painted to the window.</p>
+<p>Please note that GTK+ 2.0 and OS X provide double buffering themselves
+natively.  You may want to use <a href="wx.Window-class.html#IsDoubleBuffered" class="link"><code>wx.Window.IsDoubleBuffered</code></a> to
+determine whether you need to use buffering or not, or use
+<a href="wx.AutoBufferedPaintDC-class.html" class="link"><code>wx.AutoBufferedPaintDC</code></a> to avoid needless double buffering on systems
+that already do it automatically.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">BufferedDC</font></td>
+  <td><code><span class="summary-sig"><a href="wx.BufferedDC-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>buffer</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+__init__(self, DC dc, Size area, int style=BUFFER_CLIENT_AREA) -&gt; BufferedDC</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1311465348"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetStyle"></a><span class="summary-sig"><span class="summary-sig-name">GetStyle</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetStyle"></a><span class="summary-sig"><span class="summary-sig-name">SetStyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.BufferedDC-class.html#UnMask" class="summary-sig-name"><code>UnMask</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Blits the buffer to the dc, and detaches the dc from the buffer (so it
+can be effectively used once only).</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.BufferedDC-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>buffer</span>=<span class=sig-default>NullBitmap</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>BUFFER_CLIENT_AREA</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>__init__(self, DC dc, Size area, int style=BUFFER_CLIENT_AREA) -&gt; BufferedDC</p>
+<p>Constructs a buffered DC.</p>
+<blockquote>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dc</b></code> -
+ The underlying DC: everything drawn to this object will
+be flushed to this DC when this object is destroyed. You may
+pass <tt class="rst-docutils literal"><span class="pre">None</span></tt> in order to just initialize the buffer, and not
+flush it.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>buffer</b></code> -
+ If a <a href="wx.Size-class.html" class="link"><code>wx.Size</code></a> object is passed as the 2nd arg then
+it is the size of the bitmap that will be created internally
+and used for an implicit buffer. If the 2nd arg is a
+<a href="wx.Bitmap-class.html" class="link"><code>wx.Bitmap</code></a> then it is the explicit buffer that will be
+used. Using an explicit buffer is the most efficient solution
+as the bitmap doesn't have to be recreated each time but it
+also requires more memory as the bitmap is never freed. The
+bitmap should have appropriate size, anything drawn outside of
+its bounds is clipped.  If wx.NullBitmap is used then a new
+buffer will be allocated that is the same size as the dc.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      <dd><code><b>style</b></code> -
+ The style parameter indicates whether the supplied buffer is
+intended to cover the entire virtual size of a <a href="wx.ScrolledWindow-class.html" class="link"><code>wx.ScrolledWindow</code></a> or
+if it only covers the client area.  Acceptable values are
+<tt class="rst-docutils literal"><span class="pre">wx.BUFFER_VIRTUAL_AREA</span></tt> and <tt class="rst-docutils literal"><span class="pre">wx.BUFFER_CLIENT_AREA</span></tt>.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+BufferedDC      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.MemoryDC-class.html#__init__"><code>wx.MemoryDC.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UnMask"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UnMask</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Blits the buffer to the dc, and detaches the dc from the buffer (so it
+can be effectively used once only).  This is usually only called in
+the destructor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:03:06 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

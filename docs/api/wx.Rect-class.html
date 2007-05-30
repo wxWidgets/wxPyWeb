@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.Rect</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;Rect
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.Rect-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Rect</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>Rect</b>
+</pre><br />
+
+<hr/>
+
+<p>A class for representing and manipulating rectangles.  It has x, y,
+width and height properties.  In wxPython most palces that expect a
+wx.Rect can also accept a (x,y,width,height) tuple.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+<br />
+Create a new Rect object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#__add__" class="summary-sig-name"><code>__add__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Add the properties of rect to this rectangle and return the result.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1391852324"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#__eq__" class="summary-sig-name"><code>__eq__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>other</span>)</span></code>
+<br />
+Test for equality of wx.Rect objects.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__getitem__"></a><span class="summary-sig"><span class="summary-sig-name">__getitem__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#__iadd__" class="summary-sig-name"><code>__iadd__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Add the properties of rect to this rectangle, updating this rectangle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__len__"></a><span class="summary-sig"><span class="summary-sig-name">__len__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#__ne__" class="summary-sig-name"><code>__ne__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>other</span>)</span></code>
+<br />
+Test for inequality of wx.Rect objects.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__nonzero__"></a><span class="summary-sig"><span class="summary-sig-name">__nonzero__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__reduce__"></a><span class="summary-sig"><span class="summary-sig-name">__reduce__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__repr__"></a><span class="summary-sig"><span class="summary-sig-name">__repr__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__setitem__"></a><span class="summary-sig"><span class="summary-sig-name">__setitem__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>,
+          <span class=summary-sig-arg>val</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__str__"></a><span class="summary-sig"><span class="summary-sig-name">__str__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#deprecatedWrapper" class="summary-sig-name"><code>asTuple</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+asTuple is deprecated, use <a href="wx.Rect-class.html#Get" class="link"><code>Get</code></a> instead</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#CenterIn" class="summary-sig-name"><code>CenterIn</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>r</span>,
+          <span class=summary-sig-arg>dir</span>)</span></code>
+<br />
+Center this rectangle within the one passed to the method, which is
+usually, but not necessarily, the larger one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#CenterIn" class="summary-sig-name"><code>CentreIn</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>r</span>,
+          <span class=summary-sig-arg>dir</span>)</span></code>
+<br />
+Center this rectangle within the one passed to the method, which is
+usually, but not necessarily, the larger one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#Contains" class="summary-sig-name"><code>Contains</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>)</span></code>
+<br />
+Return True if the point is inside the rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#ContainsRect" class="summary-sig-name"><code>ContainsRect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the given rectangle is completely inside this
+rectangle or touches its boundary.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#ContainsXY" class="summary-sig-name"><code>ContainsXY</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return True if the point is inside the rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#Deflate" class="summary-sig-name"><code>Deflate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dx</span>,
+          <span class=summary-sig-arg>dy</span>)</span></code>
+<br />
+Decrease the rectangle size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(x,y,width,height)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#Get" class="summary-sig-name"><code>Get</code></a>()</span></code>
+<br />
+Return the rectangle properties as a tuple.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetBottom"></a><span class="summary-sig"><span class="summary-sig-name">GetBottom</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Point</font></td>
+  <td><code><a name="GetBottomLeft"></a><span class="summary-sig"><span class="summary-sig-name">GetBottomLeft</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Point</font></td>
+  <td><code><a name="GetBottomRight"></a><span class="summary-sig"><span class="summary-sig-name">GetBottomRight</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetHeight"></a><span class="summary-sig"><span class="summary-sig-name">GetHeight</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetLeft"></a><span class="summary-sig"><span class="summary-sig-name">GetLeft</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Point</font></td>
+  <td><code><a name="GetPosition"></a><span class="summary-sig"><span class="summary-sig-name">GetPosition</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetRight"></a><span class="summary-sig"><span class="summary-sig-name">GetRight</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><a name="GetSize"></a><span class="summary-sig"><span class="summary-sig-name">GetSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetTop"></a><span class="summary-sig"><span class="summary-sig-name">GetTop</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Point</font></td>
+  <td><code><a name="GetTopLeft"></a><span class="summary-sig"><span class="summary-sig-name">GetTopLeft</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Point</font></td>
+  <td><code><a name="GetTopRight"></a><span class="summary-sig"><span class="summary-sig-name">GetTopRight</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetWidth"></a><span class="summary-sig"><span class="summary-sig-name">GetWidth</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetX"></a><span class="summary-sig"><span class="summary-sig-name">GetX</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetY"></a><span class="summary-sig"><span class="summary-sig-name">GetY</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#Inflate" class="summary-sig-name"><code>Inflate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dx</span>,
+          <span class=summary-sig-arg>dy</span>)</span></code>
+<br />
+Increases the size of the rectangle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#Contains" class="summary-sig-name"><code>Inside</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>)</span></code>
+<br />
+Return True if the point is inside the rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#ContainsRect" class="summary-sig-name"><code>InsideRect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the given rectangle is completely inside this
+rectangle or touches its boundary.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#ContainsXY" class="summary-sig-name"><code>InsideXY</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return True if the point is inside the rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#Intersect" class="summary-sig-name"><code>Intersect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Returns the intersectsion of this rectangle and rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#Intersects" class="summary-sig-name"><code>Intersects</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Returns True if the rectangles have a non empty intersection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsEmpty"></a><span class="summary-sig"><span class="summary-sig-name">IsEmpty</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#Offset" class="summary-sig-name"><code>Offset</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>)</span></code>
+<br />
+Same as <a href="wx.Rect-class.html#OffsetXY" class="link"><code>OffsetXY</code></a> but uses dx,dy from Point</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#OffsetXY" class="summary-sig-name"><code>OffsetXY</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dx</span>,
+          <span class=summary-sig-arg>dy</span>)</span></code>
+<br />
+Moves the rectangle by the specified offset.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#Set" class="summary-sig-name"><code>Set</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+<br />
+Set all rectangle properties.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetBottom"></a><span class="summary-sig"><span class="summary-sig-name">SetBottom</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bottom</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetBottomLeft"></a><span class="summary-sig"><span class="summary-sig-name">SetBottomLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetBottomRight"></a><span class="summary-sig"><span class="summary-sig-name">SetBottomRight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetHeight"></a><span class="summary-sig"><span class="summary-sig-name">SetHeight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetLeft"></a><span class="summary-sig"><span class="summary-sig-name">SetLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>left</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetPosition"></a><span class="summary-sig"><span class="summary-sig-name">SetPosition</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRight"></a><span class="summary-sig"><span class="summary-sig-name">SetRight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>right</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSize"></a><span class="summary-sig"><span class="summary-sig-name">SetSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>s</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetTop"></a><span class="summary-sig"><span class="summary-sig-name">SetTop</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>top</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetTopLeft"></a><span class="summary-sig"><span class="summary-sig-name">SetTopLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetTopRight"></a><span class="summary-sig"><span class="summary-sig-name">SetTopRight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetWidth"></a><span class="summary-sig"><span class="summary-sig-name">SetWidth</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>w</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetX"></a><span class="summary-sig"><span class="summary-sig-name">SetX</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetY"></a><span class="summary-sig"><span class="summary-sig-name">SetY</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Rect-class.html#Union" class="summary-sig-name"><code>Union</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Returns the union of this rectangle and rect.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#Bottom"><code>Bottom</code></a></b>: See <a href="wx.Rect-class.html#GetBottom" class="link"><code>GetBottom</code></a> and <a href="wx.Rect-class.html#SetBottom" class="link"><code>SetBottom</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#bottom"><code>bottom</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#BottomLeft"><code>BottomLeft</code></a></b>: See <a href="wx.Rect-class.html#GetBottomLeft" class="link"><code>GetBottomLeft</code></a> and <a href="wx.Rect-class.html#SetBottomLeft" class="link"><code>SetBottomLeft</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#BottomRight"><code>BottomRight</code></a></b>: See <a href="wx.Rect-class.html#GetBottomRight" class="link"><code>GetBottomRight</code></a> and <a href="wx.Rect-class.html#SetBottomRight" class="link"><code>SetBottomRight</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#Empty"><code>Empty</code></a></b>: See <a href="wx.Rect-class.html#IsEmpty" class="link"><code>IsEmpty</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#Height"><code>Height</code></a></b>: See <a href="wx.Rect-class.html#GetHeight" class="link"><code>GetHeight</code></a> and <a href="wx.Rect-class.html#SetHeight" class="link"><code>SetHeight</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="height"></a><b><code>height</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#Left"><code>Left</code></a></b>: See <a href="wx.Rect-class.html#GetLeft" class="link"><code>GetLeft</code></a> and <a href="wx.Rect-class.html#SetLeft" class="link"><code>SetLeft</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#left"><code>left</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#Position"><code>Position</code></a></b>: See <a href="wx.Rect-class.html#GetPosition" class="link"><code>GetPosition</code></a> and <a href="wx.Rect-class.html#SetPosition" class="link"><code>SetPosition</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#position"><code>position</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#Right"><code>Right</code></a></b>: See <a href="wx.Rect-class.html#GetRight" class="link"><code>GetRight</code></a> and <a href="wx.Rect-class.html#SetRight" class="link"><code>SetRight</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#right"><code>right</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#Size"><code>Size</code></a></b>: See <a href="wx.Rect-class.html#GetSize" class="link"><code>GetSize</code></a> and <a href="wx.Rect-class.html#SetSize" class="link"><code>SetSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#size"><code>size</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#Top"><code>Top</code></a></b>: See <a href="wx.Rect-class.html#GetTop" class="link"><code>GetTop</code></a> and <a href="wx.Rect-class.html#SetTop" class="link"><code>SetTop</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#top"><code>top</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#TopLeft"><code>TopLeft</code></a></b>: See <a href="wx.Rect-class.html#GetTopLeft" class="link"><code>GetTopLeft</code></a> and <a href="wx.Rect-class.html#SetTopLeft" class="link"><code>SetTopLeft</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#TopRight"><code>TopRight</code></a></b>: See <a href="wx.Rect-class.html#GetTopRight" class="link"><code>GetTopRight</code></a> and <a href="wx.Rect-class.html#SetTopRight" class="link"><code>SetTopRight</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#Width"><code>Width</code></a></b>: See <a href="wx.Rect-class.html#GetWidth" class="link"><code>GetWidth</code></a> and <a href="wx.Rect-class.html#SetWidth" class="link"><code>SetWidth</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="width"></a><b><code>width</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#X"><code>X</code></a></b>: See <a href="wx.Rect-class.html#GetX" class="link"><code>GetX</code></a> and <a href="wx.Rect-class.html#SetX" class="link"><code>SetX</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="x"></a><b><code>x</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Rect-class.html#Y"><code>Y</code></a></b>: See <a href="wx.Rect-class.html#GetY" class="link"><code>GetY</code></a> and <a href="wx.Rect-class.html#SetY" class="link"><code>SetY</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="y"></a><b><code>y</code></b></td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>bool</code></font></td>
+<td><b><a href="wx.Rect-class.html#__safe_for_unpickling__"><code>__safe_for_unpickling__</code></a></b> = <span title="True"><code>True                           </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>y</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>width</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>height</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Create a new Rect object.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="__builtin__.object-class.html#__init__"><code>__builtin__.object.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__add__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__add__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+    <br /><i>(Addition operator)</i>
+  </h3>
+<p>Add the properties of rect to this rectangle and return the result.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__eq__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__eq__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>other</span>)</span>
+    <br /><i>(Equality operator)</i>
+  </h3>
+<p>Test for equality of wx.Rect objects.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>other</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__iadd__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__iadd__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Add the properties of rect to this rectangle, updating this rectangle.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__ne__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__ne__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>other</span>)</span>
+  </h3>
+<p>Test for inequality of wx.Rect objects.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>other</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="deprecatedWrapper"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">asTuple</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>asTuple is deprecated, use <a href="wx.Rect-class.html#Get" class="link"><code>Get</code></a> instead</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CenterIn"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CenterIn</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>r</span>,
+          <span class=sig-arg>dir</span>=<span class=sig-default>BOTH</span>)</span>
+  </h3>
+<p>Center this rectangle within the one passed to the method, which is
+usually, but not necessarily, the larger one.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>r</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>dir</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CenterIn"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CentreIn</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>r</span>,
+          <span class=sig-arg>dir</span>=<span class=sig-default>BOTH</span>)</span>
+  </h3>
+<p>Center this rectangle within the one passed to the method, which is
+usually, but not necessarily, the larger one.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>r</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>dir</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Contains"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Contains</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>)</span>
+  </h3>
+<p>Return True if the point is inside the rect.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ContainsRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ContainsRect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the given rectangle is completely inside this
+rectangle or touches its boundary.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ContainsXY"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ContainsXY</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Return True if the point is inside the rect.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Deflate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Deflate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dx</span>,
+          <span class=sig-arg>dy</span>)</span>
+  </h3>
+<p>Decrease the rectangle size. This method is the opposite of <a href="wx.Rect-class.html#Inflate" class="link"><code>Inflate</code></a>
+in that Deflate(a,b) is equivalent to Inflate(-a,-b).  Please refer to
+<a href="wx.Rect-class.html#Inflate" class="link"><code>Inflate</code></a> for a full description.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dx</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>dy</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Get"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Get</span>()</span>
+  </h3>
+<p>Return the rectangle properties as a tuple.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(x,y,width,height)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Inflate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Inflate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dx</span>,
+          <span class=sig-arg>dy</span>)</span>
+  </h3>
+<p>Increases the size of the rectangle.</p>
+<p>The left border is moved farther left and the right border is moved
+farther right by <tt class="rst-docutils literal"><span class="pre">dx</span></tt>. The upper border is moved farther up and the
+bottom border is moved farther down by <tt class="rst-docutils literal"><span class="pre">dy</span></tt>. (Note the the width and
+height of the rectangle thus change by <tt class="rst-docutils literal"><span class="pre">2*dx</span></tt> and <tt class="rst-docutils literal"><span class="pre">2*dy</span></tt>,
+respectively.) If one or both of <tt class="rst-docutils literal"><span class="pre">dx</span></tt> and <tt class="rst-docutils literal"><span class="pre">dy</span></tt> are negative, the
+opposite happens: the rectangle size decreases in the respective
+direction.</p>
+<p>The change is made to the rectangle inplace, if instead you need a
+copy that is inflated, preserving the original then make the copy
+first:</p>
+<pre class="rst-literal-block">
+copy = wx.Rect(*original)
+copy.Inflate(10,15)
+</pre>
+<p>Inflating and deflating behaves <em>naturally</em>. Defined more precisely,
+that means:</p>
+<blockquote>
+<ul class="rst-simple">
+<li>Real inflates (that is, <tt class="rst-docutils literal"><span class="pre">dx</span></tt> and/or <tt class="rst-docutils literal"><span class="pre">dy</span></tt> &gt;= 0) are not
+constrained. Thus inflating a rectangle can cause its upper left
+corner to move into the negative numbers. (The versions prior to
+2.5.4 forced the top left coordinate to not fall below (0, 0),
+which implied a forced move of the rectangle.)</li>
+<li>Deflates are clamped to not reduce the width or height of the
+rectangle below zero. In such cases, the top-left corner is
+nonetheless handled properly. For example, a rectangle at (10,
+10) with size (20, 40) that is inflated by (-15, -15) will
+become located at (20, 25) at size (0, 10). Finally, observe
+that the width and height are treated independently. In the
+above example, the width is reduced by 20, whereas the height is
+reduced by the full 30 (rather than also stopping at 20, when
+the width reached zero).</li>
+</ul>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dx</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>dy</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Rect-class.html#Deflate" class="link"><code>Deflate</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="Contains"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Inside</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>)</span>
+  </h3>
+<p>Return True if the point is inside the rect.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ContainsRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsideRect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the given rectangle is completely inside this
+rectangle or touches its boundary.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ContainsXY"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsideXY</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Return True if the point is inside the rect.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Intersect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Intersect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Returns the intersectsion of this rectangle and rect.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Intersects"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Intersects</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Returns True if the rectangles have a non empty intersection.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Offset"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Offset</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>)</span>
+  </h3>
+<p>Same as <a href="wx.Rect-class.html#OffsetXY" class="link"><code>OffsetXY</code></a> but uses dx,dy from Point</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OffsetXY"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OffsetXY</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dx</span>,
+          <span class=sig-arg>dy</span>)</span>
+  </h3>
+<p>Moves the rectangle by the specified offset. If dx is positive, the
+rectangle is moved to the right, if dy is positive, it is moved to the
+bottom, otherwise it is moved to the left or top respectively.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dx</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>dy</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Set"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Set</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>y</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>width</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>height</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Set all rectangle properties.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Union"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Union</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Returns the union of this rectangle and rect.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Bottom"></a>
+<h3>Bottom</h3>
+<p>See <a href="wx.Rect-class.html#GetBottom" class="link"><code>GetBottom</code></a> and <a href="wx.Rect-class.html#SetBottom" class="link"><code>SetBottom</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetBottom" class="summary-sig-name"><code>GetBottom</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetBottom" class="summary-sig-name"><code>SetBottom</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bottom</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="bottom"></a>
+<h3>bottom</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetBottom" class="summary-sig-name"><code>GetBottom</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetBottom" class="summary-sig-name"><code>SetBottom</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bottom</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BottomLeft"></a>
+<h3>BottomLeft</h3>
+<p>See <a href="wx.Rect-class.html#GetBottomLeft" class="link"><code>GetBottomLeft</code></a> and <a href="wx.Rect-class.html#SetBottomLeft" class="link"><code>SetBottomLeft</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetBottomLeft" class="summary-sig-name"><code>GetBottomLeft</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetBottomLeft" class="summary-sig-name"><code>SetBottomLeft</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BottomRight"></a>
+<h3>BottomRight</h3>
+<p>See <a href="wx.Rect-class.html#GetBottomRight" class="link"><code>GetBottomRight</code></a> and <a href="wx.Rect-class.html#SetBottomRight" class="link"><code>SetBottomRight</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetBottomRight" class="summary-sig-name"><code>GetBottomRight</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetBottomRight" class="summary-sig-name"><code>SetBottomRight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Empty"></a>
+<h3>Empty</h3>
+<p>See <a href="wx.Rect-class.html#IsEmpty" class="link"><code>IsEmpty</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#IsEmpty" class="summary-sig-name"><code>IsEmpty</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Height"></a>
+<h3>Height</h3>
+<p>See <a href="wx.Rect-class.html#GetHeight" class="link"><code>GetHeight</code></a> and <a href="wx.Rect-class.html#SetHeight" class="link"><code>SetHeight</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetHeight" class="summary-sig-name"><code>GetHeight</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetHeight" class="summary-sig-name"><code>SetHeight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>h</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Left"></a>
+<h3>Left</h3>
+<p>See <a href="wx.Rect-class.html#GetLeft" class="link"><code>GetLeft</code></a> and <a href="wx.Rect-class.html#SetLeft" class="link"><code>SetLeft</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetLeft" class="summary-sig-name"><code>GetLeft</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetLeft" class="summary-sig-name"><code>SetLeft</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>left</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="left"></a>
+<h3>left</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetLeft" class="summary-sig-name"><code>GetLeft</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetLeft" class="summary-sig-name"><code>SetLeft</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>left</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Position"></a>
+<h3>Position</h3>
+<p>See <a href="wx.Rect-class.html#GetPosition" class="link"><code>GetPosition</code></a> and <a href="wx.Rect-class.html#SetPosition" class="link"><code>SetPosition</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetPosition" class="summary-sig-name"><code>GetPosition</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetPosition" class="summary-sig-name"><code>SetPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="position"></a>
+<h3>position</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetPosition" class="summary-sig-name"><code>GetPosition</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetPosition" class="summary-sig-name"><code>SetPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Right"></a>
+<h3>Right</h3>
+<p>See <a href="wx.Rect-class.html#GetRight" class="link"><code>GetRight</code></a> and <a href="wx.Rect-class.html#SetRight" class="link"><code>SetRight</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetRight" class="summary-sig-name"><code>GetRight</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetRight" class="summary-sig-name"><code>SetRight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>right</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="right"></a>
+<h3>right</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetRight" class="summary-sig-name"><code>GetRight</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetRight" class="summary-sig-name"><code>SetRight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>right</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Size"></a>
+<h3>Size</h3>
+<p>See <a href="wx.Rect-class.html#GetSize" class="link"><code>GetSize</code></a> and <a href="wx.Rect-class.html#SetSize" class="link"><code>SetSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetSize" class="summary-sig-name"><code>GetSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetSize" class="summary-sig-name"><code>SetSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>s</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="size"></a>
+<h3>size</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetSize" class="summary-sig-name"><code>GetSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetSize" class="summary-sig-name"><code>SetSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>s</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Top"></a>
+<h3>Top</h3>
+<p>See <a href="wx.Rect-class.html#GetTop" class="link"><code>GetTop</code></a> and <a href="wx.Rect-class.html#SetTop" class="link"><code>SetTop</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetTop" class="summary-sig-name"><code>GetTop</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetTop" class="summary-sig-name"><code>SetTop</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>top</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="top"></a>
+<h3>top</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetTop" class="summary-sig-name"><code>GetTop</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetTop" class="summary-sig-name"><code>SetTop</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>top</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="TopLeft"></a>
+<h3>TopLeft</h3>
+<p>See <a href="wx.Rect-class.html#GetTopLeft" class="link"><code>GetTopLeft</code></a> and <a href="wx.Rect-class.html#SetTopLeft" class="link"><code>SetTopLeft</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetTopLeft" class="summary-sig-name"><code>GetTopLeft</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetTopLeft" class="summary-sig-name"><code>SetTopLeft</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="TopRight"></a>
+<h3>TopRight</h3>
+<p>See <a href="wx.Rect-class.html#GetTopRight" class="link"><code>GetTopRight</code></a> and <a href="wx.Rect-class.html#SetTopRight" class="link"><code>SetTopRight</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetTopRight" class="summary-sig-name"><code>GetTopRight</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetTopRight" class="summary-sig-name"><code>SetTopRight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Width"></a>
+<h3>Width</h3>
+<p>See <a href="wx.Rect-class.html#GetWidth" class="link"><code>GetWidth</code></a> and <a href="wx.Rect-class.html#SetWidth" class="link"><code>SetWidth</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetWidth" class="summary-sig-name"><code>GetWidth</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetWidth" class="summary-sig-name"><code>SetWidth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>w</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="X"></a>
+<h3>X</h3>
+<p>See <a href="wx.Rect-class.html#GetX" class="link"><code>GetX</code></a> and <a href="wx.Rect-class.html#SetX" class="link"><code>SetX</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetX" class="summary-sig-name"><code>GetX</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetX" class="summary-sig-name"><code>SetX</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Y"></a>
+<h3>Y</h3>
+<p>See <a href="wx.Rect-class.html#GetY" class="link"><code>GetY</code></a> and <a href="wx.Rect-class.html#SetY" class="link"><code>SetY</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#GetY" class="summary-sig-name"><code>GetY</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Rect-class.html#SetY" class="summary-sig-name"><code>SetY</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>y</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__safe_for_unpickling__"></a>
+<h3>__safe_for_unpickling__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>bool</code>
+
+      </dd>
+<span title="True">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+True                                                                   </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:56:40 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

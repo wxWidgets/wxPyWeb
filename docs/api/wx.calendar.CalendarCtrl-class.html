@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.calendar.CalendarCtrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.calendar-module.html">Module&nbsp;calendar</a> ::
+        Class&nbsp;CalendarCtrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.calendar.CalendarCtrl-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type CalendarCtrl</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+               <a href="wx.Control-class.html"><code>Control</code></a> --+
+                         |
+                        <b>CalendarCtrl</b>
+</pre><br />
+
+<hr/>
+
+<p>The calendar control allows the user to pick a date interactively.</p>
+<p>The CalendarCtrl displays a window containing several parts: the
+control to pick the month and the year at the top (either or both of
+them may be disabled) and a month area below them which shows all the
+days in the month. The user can move the current selection using the
+keyboard and select the date (generating EVT_CALENDAR event) by
+pressing &lt;Return&gt; or double clicking it.</p>
+<p>It has advanced possibilities for the customization of its
+display. All global settings (such as colours and fonts used) can, of
+course, be changed. But also, the display style for each day in the
+month can be set independently using CalendarDateAttr class.</p>
+<p>An item without custom attributes is drawn with the default colours
+and font and without border, but setting custom attributes with
+<a href="wx.calendar.CalendarCtrl-class.html#SetAttr" class="link"><code>SetAttr</code></a> allows to modify its appearance. Just create a custom
+attribute object and set it for the day you want to be displayed
+specially A day may be marked as being a holiday, (even if it is not
+recognized as one by <a href="wx.DateTime-class.html" class="link"><code>wx.DateTime</code></a>) by using the SetHoliday method.</p>
+<p>As the attributes are specified for each day, they may change when the
+month is changed, so you will often want to update them in an
+EVT_CALENDAR_MONTH event handler.</p>
+<div class="rst-section" id="window-styles">
+<h1 class="heading"><a name="rst-window-styles">Window Styles</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="50%" />
+<col class="rst" width="50%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">CAL_SUNDAY_FIRST</td>
+<td class="rst">Show Sunday as the first day
+in the week</td>
+</tr>
+<tr class="rst"><td class="rst">CAL_MONDAY_FIRST</td>
+<td class="rst">Show Monday as the first day
+in the week</td>
+</tr>
+<tr class="rst"><td class="rst">CAL_SHOW_HOLIDAYS</td>
+<td class="rst">Highlight holidays in the
+calendar</td>
+</tr>
+<tr class="rst"><td class="rst">CAL_NO_YEAR_CHANGE</td>
+<td class="rst">Disable the year changing</td>
+</tr>
+<tr class="rst"><td class="rst">CAL_NO_MONTH_CHANGE</td>
+<td class="rst">Disable the month (and,
+implicitly, the year) changing</td>
+</tr>
+<tr class="rst"><td class="rst">CAL_SHOW_SURROUNDING_WEEKS</td>
+<td class="rst">Show the neighbouring weeks in
+the previous and next months</td>
+</tr>
+<tr class="rst"><td class="rst">CAL_SEQUENTIAL_MONTH_SELECTION</td>
+<td class="rst">Use alternative, more compact,
+style for the month and year
+selection controls.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>The default calendar style is CAL_SHOW_HOLIDAYS.</p>
+</div>
+<div class="rst-section" id="events">
+<h1 class="heading"><a name="rst-events">Events</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="48%" />
+<col class="rst" width="52%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">EVT_CALENDAR</td>
+<td class="rst">A day was double clicked in the
+calendar.</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_CALENDAR_SEL_CHANGED</td>
+<td class="rst">The selected date changed.</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_CALENDAR_DAY</td>
+<td class="rst">The selected day changed.</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_CALENDAR_MONTH</td>
+<td class="rst">The selected month changed.</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_CALENDAR_YEAR</td>
+<td class="rst">The selected year changed.</td>
+</tr>
+<tr class="rst"><td class="rst">EVT_CALENDAR_WEEKDAY_CLICKED</td>
+<td class="rst">User clicked on the week day
+header</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>Note that changing the selected date will result in one of
+EVT_CALENDAR_DAY, MONTH or YEAR events and an EVT_CALENDAR_SEL_CHANGED
+event.</p>
+</div>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">CalendarCtrl</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>date</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Create and show a calendar control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#Create" class="summary-sig-name"><code>Create</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>date</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Acutally create the GUI portion of the CalendarCtrl for 2-phase
+creation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#EnableHolidayDisplay" class="summary-sig-name"><code>EnableHolidayDisplay</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>display</span>)</span></code>
+<br />
+This function should be used instead of changing CAL_SHOW_HOLIDAYS
+style bit directly.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#EnableMonthChange" class="summary-sig-name"><code>EnableMonthChange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+This function should be used instead of changing CAL_NO_MONTH_CHANGE
+style bit.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#EnableYearChange" class="summary-sig-name"><code>EnableYearChange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+This function should be used instead of changing CAL_NO_YEAR_CHANGE
+style bit directly.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">CalendarDateAttr</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetAttr" class="summary-sig-name"><code>GetAttr</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>day</span>)</span></code>
+<br />
+Returns the attribute for the given date (should be in the range
+1...31).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">VisualAttributes</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetClassDefaultAttributes" class="summary-sig-name"><code>GetClassDefaultAttributes</code></a>(<span class=summary-sig-arg>variant</span>)</span></code>
+<br />
+Get the default attributes for this class.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">DateTime</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetDate" class="summary-sig-name"><code>GetDate</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the currently selected date.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHeaderColourBg" class="summary-sig-name"><code>GetHeaderColourBg</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Header colours are used for painting the weekdays at the top.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHeaderColourFg" class="summary-sig-name"><code>GetHeaderColourFg</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Header colours are used for painting the weekdays at the top.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHighlightColourBg" class="summary-sig-name"><code>GetHighlightColourBg</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Highlight colour is used for the currently selected date.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHighlightColourFg" class="summary-sig-name"><code>GetHighlightColourFg</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Highlight colour is used for the currently selected date.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHolidayColourBg" class="summary-sig-name"><code>GetHolidayColourBg</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Holiday colour is used for the holidays (if CAL_SHOW_HOLIDAYS style is
+used).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHolidayColourFg" class="summary-sig-name"><code>GetHolidayColourFg</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Holiday colour is used for the holidays (if CAL_SHOW_HOLIDAYS style is
+used).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">DateTime</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetLowerDateLimit" class="summary-sig-name"><code>GetLowerDateLimit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+get the range in which selection can occur</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Control</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetMonthControl" class="summary-sig-name"><code>GetMonthControl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the currently shown control for month.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">DateTime</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetUpperDateLimit" class="summary-sig-name"><code>GetUpperDateLimit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+get the range in which selection can occur</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Control</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetYearControl" class="summary-sig-name"><code>GetYearControl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the currently shown control for year.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(result, date, weekday)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#HitTest" class="summary-sig-name"><code>HitTest</code></a>(<span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Returns 3-tuple with information about the given position on the
+calendar control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#PyGetDate" class="summary-sig-name"><code>PyGetDate</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+returns datetime.date object</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#PyGetLowerDateLimit" class="summary-sig-name"><code>PyGetLowerDateLimit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+returns datetime.date object</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#PyGetUpperDateLimit" class="summary-sig-name"><code>PyGetUpperDateLimit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+returns datetime.date object</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#PySetDate" class="summary-sig-name"><code>PySetDate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>date</span>)</span></code>
+<br />
+takes datetime.datetime or datetime.date object</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#PySetDateRange" class="summary-sig-name"><code>PySetDateRange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>lowerdate</span>,
+          <span class=summary-sig-arg>upperdate</span>)</span></code>
+<br />
+takes datetime.datetime or datetime.date objects</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#PySetLowerDateLimit" class="summary-sig-name"><code>PySetLowerDateLimit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>date</span>)</span></code>
+<br />
+takes datetime.datetime or datetime.date object</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#PySetUpperDateLimit" class="summary-sig-name"><code>PySetUpperDateLimit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>date</span>)</span></code>
+<br />
+takes datetime.datetime or datetime.date object</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#ResetAttr" class="summary-sig-name"><code>ResetAttr</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>day</span>)</span></code>
+<br />
+Clears any attributes associated with the given day (in the range
+1...31).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetAttr" class="summary-sig-name"><code>SetAttr</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>day</span>,
+          <span class=summary-sig-arg>attr</span>)</span></code>
+<br />
+Associates the attribute with the specified date (in the range
+1...31).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetDate" class="summary-sig-name"><code>SetDate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>date</span>)</span></code>
+<br />
+Sets the current date.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetDateRange" class="summary-sig-name"><code>SetDateRange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>lowerdate</span>,
+          <span class=summary-sig-arg>upperdate</span>)</span></code>
+<br />
+set the range in which selection can occur</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetHeaderColours" class="summary-sig-name"><code>SetHeaderColours</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colFg</span>,
+          <span class=summary-sig-arg>colBg</span>)</span></code>
+<br />
+Header colours are used for painting the weekdays at the top.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetHighlightColours" class="summary-sig-name"><code>SetHighlightColours</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colFg</span>,
+          <span class=summary-sig-arg>colBg</span>)</span></code>
+<br />
+Highlight colour is used for the currently selected date.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetHoliday" class="summary-sig-name"><code>SetHoliday</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>day</span>)</span></code>
+<br />
+Marks the specified day as being a holiday in the current month.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetHolidayColours" class="summary-sig-name"><code>SetHolidayColours</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colFg</span>,
+          <span class=summary-sig-arg>colBg</span>)</span></code>
+<br />
+Holiday colour is used for the holidays (if CAL_SHOW_HOLIDAYS style is
+used).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetLowerDateLimit" class="summary-sig-name"><code>SetLowerDateLimit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>date</span>)</span></code>
+<br />
+set the range in which selection can occur</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetUpperDateLimit" class="summary-sig-name"><code>SetUpperDateLimit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>date</span>)</span></code>
+<br />
+set the range in which selection can occur</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#Date"><code>Date</code></a></b>: See <a href="wx.calendar.CalendarCtrl-class.html#GetDate" class="link"><code>GetDate</code></a> and <a href="wx.calendar.CalendarCtrl-class.html#SetDate" class="link"><code>SetDate</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#HeaderColourBg"><code>HeaderColourBg</code></a></b>: See <a href="wx.calendar.CalendarCtrl-class.html#GetHeaderColourBg" class="link"><code>GetHeaderColourBg</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#HeaderColourFg"><code>HeaderColourFg</code></a></b>: See <a href="wx.calendar.CalendarCtrl-class.html#GetHeaderColourFg" class="link"><code>GetHeaderColourFg</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#HighlightColourBg"><code>HighlightColourBg</code></a></b>: See <a href="wx.calendar.CalendarCtrl-class.html#GetHighlightColourBg" class="link"><code>GetHighlightColourBg</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#HighlightColourFg"><code>HighlightColourFg</code></a></b>: See <a href="wx.calendar.CalendarCtrl-class.html#GetHighlightColourFg" class="link"><code>GetHighlightColourFg</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#HolidayColourBg"><code>HolidayColourBg</code></a></b>: See <a href="wx.calendar.CalendarCtrl-class.html#GetHolidayColourBg" class="link"><code>GetHolidayColourBg</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#HolidayColourFg"><code>HolidayColourFg</code></a></b>: See <a href="wx.calendar.CalendarCtrl-class.html#GetHolidayColourFg" class="link"><code>GetHolidayColourFg</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#LowerDateLimit"><code>LowerDateLimit</code></a></b>: See <a href="wx.calendar.CalendarCtrl-class.html#GetLowerDateLimit" class="link"><code>GetLowerDateLimit</code></a> and <a href="wx.calendar.CalendarCtrl-class.html#SetLowerDateLimit" class="link"><code>SetLowerDateLimit</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#MonthControl"><code>MonthControl</code></a></b>: See <a href="wx.calendar.CalendarCtrl-class.html#GetMonthControl" class="link"><code>GetMonthControl</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#UpperDateLimit"><code>UpperDateLimit</code></a></b>: See <a href="wx.calendar.CalendarCtrl-class.html#GetUpperDateLimit" class="link"><code>GetUpperDateLimit</code></a> and <a href="wx.calendar.CalendarCtrl-class.html#SetUpperDateLimit" class="link"><code>SetUpperDateLimit</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.calendar.CalendarCtrl-class.html#YearControl"><code>YearControl</code></a></b>: See <a href="wx.calendar.CalendarCtrl-class.html#GetYearControl" class="link"><code>GetYearControl</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>date</span>=<span class=sig-default>DefaultDateTime</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>wxCAL_SHOW_HOLIDAYS|wxWANTS_CHARS</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>CalendarNameStr</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Create and show a calendar control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>date</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+CalendarCtrl      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Control-class.html#__init__"><code>wx.Control.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>date</span>=<span class=sig-default>DefaultDateTime</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>wxCAL_SHOW_HOLIDAYS|wxWANTS_CHARS</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>CalendarNameStr</span>)</span>
+  </h3>
+<p>Acutally create the GUI portion of the CalendarCtrl for 2-phase
+creation.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>date</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Control-class.html#Create"><code>wx.Control.Create</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableHolidayDisplay"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableHolidayDisplay</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>display</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>This function should be used instead of changing CAL_SHOW_HOLIDAYS
+style bit directly. It enables or disables the special highlighting of
+the holidays.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>display</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableMonthChange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableMonthChange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>This function should be used instead of changing CAL_NO_MONTH_CHANGE
+style bit. It allows or disallows the user to change the month
+interactively. Note that if the month can not be changed, the year can
+not be changed either.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>enable</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableYearChange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableYearChange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>This function should be used instead of changing CAL_NO_YEAR_CHANGE
+style bit directly. It allows or disallows the user to change the year
+interactively.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>enable</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAttr"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAttr</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>day</span>)</span>
+  </h3>
+<p>Returns the attribute for the given date (should be in the range
+1...31).  The returned value may be None</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>day</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=size_t)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+CalendarDateAttr      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDate</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the currently selected date.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+DateTime      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHeaderColourBg"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHeaderColourBg</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Header colours are used for painting the weekdays at the top.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Colour      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHeaderColourFg"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHeaderColourFg</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Header colours are used for painting the weekdays at the top.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Colour      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHighlightColourBg"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHighlightColourBg</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Highlight colour is used for the currently selected date.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Colour      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHighlightColourFg"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHighlightColourFg</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Highlight colour is used for the currently selected date.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Colour      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHolidayColourBg"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHolidayColourBg</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Holiday colour is used for the holidays (if CAL_SHOW_HOLIDAYS style is
+used).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Colour      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHolidayColourFg"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHolidayColourFg</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Holiday colour is used for the holidays (if CAL_SHOW_HOLIDAYS style is
+used).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Colour      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLowerDateLimit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLowerDateLimit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>get the range in which selection can occur</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+DateTime      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMonthControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMonthControl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the currently shown control for month.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Control      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetUpperDateLimit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetUpperDateLimit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>get the range in which selection can occur</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+DateTime      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetYearControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetYearControl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the currently shown control for year.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Control      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HitTest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HitTest</span>(<span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>Returns 3-tuple with information about the given position on the
+calendar control.  The first value of the tuple is a result code and
+determines the validity of the remaining two values.
+The result codes are:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="30%" />
+<col class="rst" width="70%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">CAL_HITTEST_NOWHERE</td>
+<td class="rst">hit outside of anything</td>
+</tr>
+<tr class="rst"><td class="rst">CAL_HITTEST_HEADER</td>
+<td class="rst">hit on the header, weekday is valid</td>
+</tr>
+<tr class="rst"><td class="rst">CAL_HITTEST_DAY</td>
+<td class="rst">hit on a day in the calendar, date is set.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(result, date, weekday)      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#HitTest"><code>wx.Window.HitTest</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PyGetDate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PyGetDate</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>returns datetime.date object</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PyGetLowerDateLimit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PyGetLowerDateLimit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>returns datetime.date object</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PyGetUpperDateLimit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PyGetUpperDateLimit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>returns datetime.date object</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PySetDate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PySetDate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>date</span>)</span>
+  </h3>
+<p>takes datetime.datetime or datetime.date object</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PySetDateRange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PySetDateRange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>lowerdate</span>,
+          <span class=sig-arg>upperdate</span>)</span>
+  </h3>
+<p>takes datetime.datetime or datetime.date objects</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PySetLowerDateLimit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PySetLowerDateLimit</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>date</span>)</span>
+  </h3>
+<p>takes datetime.datetime or datetime.date object</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PySetUpperDateLimit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PySetUpperDateLimit</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>date</span>)</span>
+  </h3>
+<p>takes datetime.datetime or datetime.date object</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetAttr"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetAttr</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>day</span>)</span>
+  </h3>
+<p>Clears any attributes associated with the given day (in the range
+1...31).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>day</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=size_t)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAttr"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAttr</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>day</span>,
+          <span class=sig-arg>attr</span>)</span>
+  </h3>
+<p>Associates the attribute with the specified date (in the range
+1...31).  If the attribute passed is None, the items attribute is
+cleared.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>day</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=size_t)</i>
+<p/>
+      <dd><code><b>attr</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=CalendarDateAttr)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>date</span>)</span>
+  </h3>
+<p>Sets the current date.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>date</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDateRange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDateRange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>lowerdate</span>=<span class=sig-default>DefaultDateTime</span>,
+          <span class=sig-arg>upperdate</span>=<span class=sig-default>DefaultDateTime</span>)</span>
+  </h3>
+<p>set the range in which selection can occur</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>lowerdate</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      <dd><code><b>upperdate</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHeaderColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHeaderColours</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colFg</span>,
+          <span class=sig-arg>colBg</span>)</span>
+  </h3>
+<p>Header colours are used for painting the weekdays at the top.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>colFg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      <dd><code><b>colBg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHighlightColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHighlightColours</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colFg</span>,
+          <span class=sig-arg>colBg</span>)</span>
+  </h3>
+<p>Highlight colour is used for the currently selected date.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>colFg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      <dd><code><b>colBg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHoliday"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHoliday</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>day</span>)</span>
+  </h3>
+<p>Marks the specified day as being a holiday in the current month.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>day</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=size_t)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHolidayColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHolidayColours</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colFg</span>,
+          <span class=sig-arg>colBg</span>)</span>
+  </h3>
+<p>Holiday colour is used for the holidays (if CAL_SHOW_HOLIDAYS style is
+used).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>colFg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      <dd><code><b>colBg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLowerDateLimit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLowerDateLimit</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>date</span>=<span class=sig-default>DefaultDateTime</span>)</span>
+  </h3>
+<p>set the range in which selection can occur</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>date</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetUpperDateLimit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetUpperDateLimit</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>date</span>=<span class=sig-default>DefaultDateTime</span>)</span>
+  </h3>
+<p>set the range in which selection can occur</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>date</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="GetClassDefaultAttributes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClassDefaultAttributes</span>(<span class=sig-arg>variant</span>=<span class=sig-default>WINDOW_VARIANT_NORMAL</span>)</span>
+  </h3>
+<p>Get the default attributes for this class.  This is useful if you want
+to use the same font or colour in your own control as in a standard
+control -- which is a much better idea than hard coding specific
+colours or fonts which might look completely out of place on the
+user's system, especially if it uses themes.</p>
+<p>The variant parameter is only relevant under Mac currently and is
+ignore under other platforms. Under Mac, it will change the size of
+the returned font. See <a href="wx.Window-class.html#SetWindowVariant" class="link"><code>wx.Window.SetWindowVariant</code></a> for more about
+this.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>variant</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+VisualAttributes      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Date"></a>
+<h3>Date</h3>
+<p>See <a href="wx.calendar.CalendarCtrl-class.html#GetDate" class="link"><code>GetDate</code></a> and <a href="wx.calendar.CalendarCtrl-class.html#SetDate" class="link"><code>SetDate</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetDate" class="summary-sig-name"><code>GetDate</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetDate" class="summary-sig-name"><code>SetDate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>date</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="HeaderColourBg"></a>
+<h3>HeaderColourBg</h3>
+<p>See <a href="wx.calendar.CalendarCtrl-class.html#GetHeaderColourBg" class="link"><code>GetHeaderColourBg</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHeaderColourBg" class="summary-sig-name"><code>GetHeaderColourBg</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="HeaderColourFg"></a>
+<h3>HeaderColourFg</h3>
+<p>See <a href="wx.calendar.CalendarCtrl-class.html#GetHeaderColourFg" class="link"><code>GetHeaderColourFg</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHeaderColourFg" class="summary-sig-name"><code>GetHeaderColourFg</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="HighlightColourBg"></a>
+<h3>HighlightColourBg</h3>
+<p>See <a href="wx.calendar.CalendarCtrl-class.html#GetHighlightColourBg" class="link"><code>GetHighlightColourBg</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHighlightColourBg" class="summary-sig-name"><code>GetHighlightColourBg</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="HighlightColourFg"></a>
+<h3>HighlightColourFg</h3>
+<p>See <a href="wx.calendar.CalendarCtrl-class.html#GetHighlightColourFg" class="link"><code>GetHighlightColourFg</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHighlightColourFg" class="summary-sig-name"><code>GetHighlightColourFg</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="HolidayColourBg"></a>
+<h3>HolidayColourBg</h3>
+<p>See <a href="wx.calendar.CalendarCtrl-class.html#GetHolidayColourBg" class="link"><code>GetHolidayColourBg</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHolidayColourBg" class="summary-sig-name"><code>GetHolidayColourBg</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="HolidayColourFg"></a>
+<h3>HolidayColourFg</h3>
+<p>See <a href="wx.calendar.CalendarCtrl-class.html#GetHolidayColourFg" class="link"><code>GetHolidayColourFg</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetHolidayColourFg" class="summary-sig-name"><code>GetHolidayColourFg</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="LowerDateLimit"></a>
+<h3>LowerDateLimit</h3>
+<p>See <a href="wx.calendar.CalendarCtrl-class.html#GetLowerDateLimit" class="link"><code>GetLowerDateLimit</code></a> and <a href="wx.calendar.CalendarCtrl-class.html#SetLowerDateLimit" class="link"><code>SetLowerDateLimit</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetLowerDateLimit" class="summary-sig-name"><code>GetLowerDateLimit</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetLowerDateLimit" class="summary-sig-name"><code>SetLowerDateLimit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>date</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="MonthControl"></a>
+<h3>MonthControl</h3>
+<p>See <a href="wx.calendar.CalendarCtrl-class.html#GetMonthControl" class="link"><code>GetMonthControl</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetMonthControl" class="summary-sig-name"><code>GetMonthControl</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1219596532</span>(...)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1219596476</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="UpperDateLimit"></a>
+<h3>UpperDateLimit</h3>
+<p>See <a href="wx.calendar.CalendarCtrl-class.html#GetUpperDateLimit" class="link"><code>GetUpperDateLimit</code></a> and <a href="wx.calendar.CalendarCtrl-class.html#SetUpperDateLimit" class="link"><code>SetUpperDateLimit</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetUpperDateLimit" class="summary-sig-name"><code>GetUpperDateLimit</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#SetUpperDateLimit" class="summary-sig-name"><code>SetUpperDateLimit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>date</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="YearControl"></a>
+<h3>YearControl</h3>
+<p>See <a href="wx.calendar.CalendarCtrl-class.html#GetYearControl" class="link"><code>GetYearControl</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.calendar.CalendarCtrl-class.html#GetYearControl" class="summary-sig-name"><code>GetYearControl</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:01:20 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

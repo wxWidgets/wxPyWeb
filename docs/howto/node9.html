@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>4 A first application - Hello, world</title>
+<META NAME="description" CONTENT="4 A first application - Hello, world">
+<META NAME="keywords" CONTENT="wxPython-howto">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="STYLESHEET" href="wxPython-howto.css">
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" href="contents.html">
+<LINK REL="next" HREF="node10.html">
+</head>
+<body>
+<DIV CLASS="navigation">
+<table align="center" width="100%" cellpadding="0" cellspacing="2">
+<tr>
+<td><A HREF="node8.html"><img src="../icons/previous.gif"
+  border="0" height="32"
+  alt="Previous Page" width="32"></A></td>
+<td><A href="contents.html"><img src="../icons/up.gif"
+  border="0" height="32"
+  alt="Up One Level" width="32"></A></td>
+<td><A HREF="node10.html"><img src="../icons/next.gif"
+  border="0" height="32"
+  alt="Next Page" width="32"></A></td>
+<td align="center" width="100%">wxPython, a cross-platform GUI Library </td>
+<td><A href="contents.html"><img src="../icons/contents.gif"
+  border="0" height="32"
+  alt="Contents" width="32"></A></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+</tr></table>
+<b class="navlabel">Previous:</b> <a class="sectref" HREF="node8.html">3.3 Linux - Building</A>
+<b class="navlabel">Up:</b> <a class="sectref" href="contents.html">Contents</A>
+<b class="navlabel">Next:</b> <a class="sectref" HREF="node10.html">5 Pushing it a</A>
+<br><hr>
+</DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION002400000000000000000">
+4 A first application - Hello, world</A>
+</H1>
+	As is traditional, we are first going to write a Small "Hello, world" application.
+Here is the code:
+<dl><dd><pre class="verbatim">
+    from wxPython.wx import wxPySimpleApp, wxFrame
+    app = wxPySimpleApp()
+    frame = wxFrame(None, -1, "Hello World")
+    frame.Show(1)
+    app.MainLoop()
+</pre></dl>
+
+<P></P>
+<DIV ALIGN="CENTER">
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+Hello, World application</CAPTION>
+<TR><TD><IMG
+ WIDTH="385" HEIGHT="267" BORDER="0"
+ SRC="img1.gif"
+ ALT="\begin{figure}
+\epsfig{file=helloworld.eps}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+After importing <tt class="module">wxPython</tt> GUI, we instantiate a new <tt class="class">wxPySimpleApp</tt> and a new <tt class="class">wxFrame</tt>. A frame in wxPython is a window with its titlebar, reduction and close buttons, etc... <A NAME="tex2html5"
+  HREF="#foot64"><SUP>4</SUP></A> We make this <tt class="keyword">Frame</tt> appear by "showing" it. Eventually, we start the application's <tt class="method">MainLoop</tt> whose role
+
+
+<BR><HR><H4>Footnotes</H4>
+<DL>
+<DT><A NAME="foot64">... etc...</A><A NAME="foot64"
+ HREF="node9.html#tex2html5"><SUP>4</SUP></A>
+<DD>it can be a normal application window, a MDI parent frame, etc...
+
+</DL>
+<DIV CLASS="navigation">
+<p><hr>
+<table align="center" width="100%" cellpadding="0" cellspacing="2">
+<tr>
+<td><A HREF="node8.html"><img src="../icons/previous.gif"
+  border="0" height="32"
+  alt="Previous Page" width="32"></A></td>
+<td><A href="contents.html"><img src="../icons/up.gif"
+  border="0" height="32"
+  alt="Up One Level" width="32"></A></td>
+<td><A HREF="node10.html"><img src="../icons/next.gif"
+  border="0" height="32"
+  alt="Next Page" width="32"></A></td>
+<td align="center" width="100%">wxPython, a cross-platform GUI Library </td>
+<td><A href="contents.html"><img src="../icons/contents.gif"
+  border="0" height="32"
+  alt="Contents" width="32"></A></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+</tr></table>
+<b class="navlabel">Previous:</b> <a class="sectref" HREF="node8.html">3.3 Linux - Building</A>
+<b class="navlabel">Up:</b> <a class="sectref" href="contents.html">Contents</A>
+<b class="navlabel">Next:</b> <a class="sectref" HREF="node10.html">5 Pushing it a</A>
+<hr>
+<span class="release-info">Release 0.03.</span>
+</DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

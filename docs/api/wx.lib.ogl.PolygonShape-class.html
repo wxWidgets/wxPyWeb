@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.ogl.PolygonShape</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.ogl-module.html">Package&nbsp;ogl</a> ::
+        Class&nbsp;PolygonShape
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.ogl.PolygonShape-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type PolygonShape</h2>
+
+<pre class="base-tree">
+     <a href="__builtin__.object-class.html"><code>object</code></a> --+        
+              |        
+<a href="wx.lib.ogl.ShapeEvtHandler-class.html"><code>ShapeEvtHandler</code></a> --+    
+                  |    
+              <a href="wx.lib.ogl.Shape-class.html"><code>Shape</code></a> --+
+                      |
+                     <b>PolygonShape</b>
+</pre><br />
+
+<hr/>
+
+<p>A PolygonShape's shape is defined by a number of points passed to
+the object's constructor. It can be used to create new shapes such as
+diamonds and triangles.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#AddPolygonPoint" class="summary-sig-name"><code>AddPolygonPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Add a control point after the given point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#AttachmentIsValid" class="summary-sig-name"><code>AttachmentIsValid</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+<br />
+TRUE if attachment is a valid attachment point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="CalculateBoundingBox"></a><span class="summary-sig"><span class="summary-sig-name">CalculateBoundingBox</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#CalculatePolygonCentre" class="summary-sig-name"><code>CalculatePolygonCentre</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Recalculates the centre of the polygon, and
+readjusts the point offsets accordingly.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ClearPoints"></a><span class="summary-sig"><span class="summary-sig-name">ClearPoints</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#Create" class="summary-sig-name"><code>Create</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>the_points</span>)</span></code>
+<br />
+Takes a list of wx.RealPoints or tuples; each point is an offset
+from the centre.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#DeletePolygonPoint" class="summary-sig-name"><code>DeletePolygonPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Delete the given control point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#GetAttachmentPosition" class="summary-sig-name"><code>GetAttachmentPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>,
+          <span class=summary-sig-arg>nth</span>,
+          <span class=summary-sig-arg>no_arcs</span>,
+          <span class=summary-sig-arg>line</span>)</span></code>
+<br />
+Get the position at which the given attachment point should be drawn.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#GetBoundingBoxMin" class="summary-sig-name"><code>GetBoundingBoxMin</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the minimum bounding box for the shape, that defines the area
+available for drawing the contents (such as text).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#GetNumberOfAttachments" class="summary-sig-name"><code>GetNumberOfAttachments</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the number of attachment points for this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetOriginalHeight"></a><span class="summary-sig"><span class="summary-sig-name">GetOriginalHeight</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetOriginalPoints"></a><span class="summary-sig"><span class="summary-sig-name">GetOriginalPoints</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetOriginalWidth"></a><span class="summary-sig"><span class="summary-sig-name">GetOriginalWidth</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#GetPerimeterPoint" class="summary-sig-name"><code>GetPerimeterPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x1</span>,
+          <span class=summary-sig-arg>y1</span>,
+          <span class=summary-sig-arg>x2</span>,
+          <span class=summary-sig-arg>y2</span>)</span></code>
+<br />
+Get the point at which the line from (x1, y1) to (x2, y2) hits
+the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#GetPoints" class="summary-sig-name"><code>GetPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the internal list of polygon vertices.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#HitTest" class="summary-sig-name"><code>HitTest</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Given a point on a canvas, returns TRUE if the point was on the
+shape, and returns the nearest attachment point and distance from
+the given point and target.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#MakeControlPoints" class="summary-sig-name"><code>MakeControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Make a list of control points (draggable handles) appropriate to
+the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDraw"></a><span class="summary-sig"><span class="summary-sig-name">OnDraw</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawOutline"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawOutline</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSizingBeginDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnSizingBeginDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSizingDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnSizingDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>draw</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSizingEndDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnSizingEndDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#ResetControlPoints" class="summary-sig-name"><code>ResetControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Reset the positions of the control points (for instance when the
+shape's shape has changed).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#Rotate" class="summary-sig-name"><code>Rotate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>theta</span>)</span></code>
+<br />
+Rotate about the given axis by the given amount in radians.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetOriginalHeight"></a><span class="summary-sig"><span class="summary-sig-name">SetOriginalHeight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetOriginalWidth"></a><span class="summary-sig"><span class="summary-sig-name">SetOriginalWidth</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>w</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSize"></a><span class="summary-sig"><span class="summary-sig-name">SetSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>new_width</span>,
+          <span class=summary-sig-arg>new_height</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.PolygonShape-class.html#UpdateOriginalPoints" class="summary-sig-name"><code>UpdateOriginalPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+If we've changed the shape, must make the original points match the
+working points with this function.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="AddPolygonPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddPolygonPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>Add a control point after the given point.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AttachmentIsValid"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AttachmentIsValid</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachment</span>)</span>
+  </h3>
+<p>TRUE if attachment is a valid attachment point.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#AttachmentIsValid"><code>wx.lib.ogl.Shape.AttachmentIsValid</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalculatePolygonCentre"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalculatePolygonCentre</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Recalculates the centre of the polygon, and
+readjusts the point offsets accordingly.
+Necessary since the centre of the polygon
+is expected to be the real centre of the bounding
+box.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>the_points</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Takes a list of wx.RealPoints or tuples; each point is an offset
+from the centre.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeletePolygonPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeletePolygonPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>Delete the given control point.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAttachmentPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAttachmentPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachment</span>,
+          <span class=sig-arg>nth</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>no_arcs</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>line</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Get the position at which the given attachment point should be drawn.</p>
+<p>If attachment isn't found among the attachment points of the shape,
+returns None.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#GetAttachmentPosition"><code>wx.lib.ogl.Shape.GetAttachmentPosition</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBoundingBoxMin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBoundingBoxMin</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the minimum bounding box for the shape, that defines the area
+available for drawing the contents (such as text).</p>
+<p>Must be overridden.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#GetBoundingBoxMin"><code>wx.lib.ogl.Shape.GetBoundingBoxMin</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNumberOfAttachments"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNumberOfAttachments</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the number of attachment points for this shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#GetNumberOfAttachments"><code>wx.lib.ogl.Shape.GetNumberOfAttachments</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPerimeterPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPerimeterPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x1</span>,
+          <span class=sig-arg>y1</span>,
+          <span class=sig-arg>x2</span>,
+          <span class=sig-arg>y2</span>)</span>
+  </h3>
+<p>Get the point at which the line from (x1, y1) to (x2, y2) hits
+the shape. Returns False if the line doesn't hit the perimeter.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#GetPerimeterPoint"><code>wx.lib.ogl.Shape.GetPerimeterPoint</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the internal list of polygon vertices.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HitTest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HitTest</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Given a point on a canvas, returns TRUE if the point was on the
+shape, and returns the nearest attachment point and distance from
+the given point and target.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#HitTest"><code>wx.lib.ogl.Shape.HitTest</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Make a list of control points (draggable handles) appropriate to
+the shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#MakeControlPoints"><code>wx.lib.ogl.Shape.MakeControlPoints</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Reset the positions of the control points (for instance when the
+shape's shape has changed).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#ResetControlPoints"><code>wx.lib.ogl.Shape.ResetControlPoints</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Rotate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Rotate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>theta</span>)</span>
+  </h3>
+<p>Rotate about the given axis by the given amount in radians.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#Rotate"><code>wx.lib.ogl.Shape.Rotate</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateOriginalPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateOriginalPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>If we've changed the shape, must make the original points match the
+working points with this function.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:55:13 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.CloseEvent</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;CloseEvent
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.CloseEvent-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type CloseEvent</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+         <a href="wx.Event-class.html"><code>Event</code></a> --+
+                 |
+                <b>CloseEvent</b>
+</pre><br />
+
+<hr/>
+
+<p>This event class contains information about window and session close
+events.</p>
+<p>The handler function for EVT_CLOSE is called when the user has tried
+to close a a frame or dialog box using the window manager controls or
+the system menu. It can also be invoked by the application itself
+programmatically, for example by calling the <a href="wx.Window-class.html#Close" class="link"><code>wx.Window.Close</code></a>
+function.</p>
+<p>You should check whether the application is forcing the deletion of
+the window using <a href="wx.CloseEvent-class.html#CanVeto" class="link"><code>CanVeto</code></a>. If it returns <tt class="rst-docutils literal"><span class="pre">False</span></tt>, you must destroy
+the window using <a href="wx.Window-class.html#Destroy" class="link"><code>wx.Window.Destroy</code></a>. If the return value is <tt class="rst-docutils literal"><span class="pre">True</span></tt>,
+it is up to you whether you respond by destroying the window or not.
+For example you may wish to display a message dialog prompting to save
+files or to cancel the close.</p>
+<p>If you don't destroy the window, you should call <a href="wx.CloseEvent-class.html#Veto" class="link"><code>Veto</code></a> to let the
+calling code know that you did not destroy the window. This allows the
+<a href="wx.Window-class.html#Close" class="link"><code>wx.Window.Close</code></a> function to return <tt class="rst-docutils literal"><span class="pre">True</span></tt> or <tt class="rst-docutils literal"><span class="pre">False</span></tt> depending
+on whether the close instruction was honored or not.</p>
+<div class="rst-section" id="events">
+<h1 class="heading"><a name="rst-events">Events</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="36%" />
+<col class="rst" width="64%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.EVT_CLOSE</td>
+<td class="rst">This event is sent to a top-level window
+when it has been requested to close either
+from the user or programatically.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.EVT_QUERY_END_SESSION</td>
+<td class="rst">This event is sent to the <a href="wx.App-class.html" class="link"><code>wx.App</code></a> when the
+system is about to be logged off, giving the
+app a chance to veto the shutdown.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.EVT_END_SESSION</td>
+<td class="rst">This event is sent to the <a href="wx.App-class.html" class="link"><code>wx.App</code></a> when the
+system is being logged off.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">CloseEvent</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CloseEvent-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>type</span>,
+          <span class=summary-sig-arg>winid</span>)</span></code>
+<br />
+Constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CloseEvent-class.html#CanVeto" class="summary-sig-name"><code>CanVeto</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if you can veto a system shutdown or a window close
+event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CloseEvent-class.html#GetLoggingOff" class="summary-sig-name"><code>GetLoggingOff</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the user is logging off or <tt class="rst-docutils literal"><span class="pre">False</span></tt> if the
+system is shutting down.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="GetVeto"></a><span class="summary-sig"><span class="summary-sig-name">GetVeto</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CloseEvent-class.html#SetCanVeto" class="summary-sig-name"><code>SetCanVeto</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>canVeto</span>)</span></code>
+<br />
+Sets the 'can veto' flag.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CloseEvent-class.html#SetLoggingOff" class="summary-sig-name"><code>SetLoggingOff</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>logOff</span>)</span></code>
+<br />
+Sets the 'logging off' flag.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CloseEvent-class.html#Veto" class="summary-sig-name"><code>Veto</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>veto</span>)</span></code>
+<br />
+Call this from your event handler to veto a system shutdown or to
+signal to the calling application that a window close did not happen.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CloseEvent-class.html#LoggingOff"><code>LoggingOff</code></a></b>: See <a href="wx.CloseEvent-class.html#GetLoggingOff" class="link"><code>GetLoggingOff</code></a> and <a href="wx.CloseEvent-class.html#SetLoggingOff" class="link"><code>SetLoggingOff</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CloseEvent-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>type</span>=<span class=sig-default>wxEVT_NULL</span>,
+          <span class=sig-arg>winid</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>type</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=EventType)</i>
+<p/>
+      <dd><code><b>winid</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+CloseEvent      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Event-class.html#__init__"><code>wx.Event.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanVeto"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanVeto</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if you can veto a system shutdown or a window close
+event. Vetoing a window close event is not possible if the calling
+code wishes to force the application to exit, and so this function
+must be called to check this.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLoggingOff"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLoggingOff</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the user is logging off or <tt class="rst-docutils literal"><span class="pre">False</span></tt> if the
+system is shutting down. This method can only be called for end
+session and query end session events, it doesn't make sense for close
+window event.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCanVeto"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCanVeto</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>canVeto</span>)</span>
+  </h3>
+<p>Sets the 'can veto' flag.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>canVeto</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLoggingOff"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLoggingOff</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>logOff</span>)</span>
+  </h3>
+<p>Sets the 'logging off' flag.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>logOff</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Veto"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Veto</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>veto</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Call this from your event handler to veto a system shutdown or to
+signal to the calling application that a window close did not happen.</p>
+<p>You can only veto a shutdown or close if <a href="wx.CloseEvent-class.html#CanVeto" class="link"><code>CanVeto</code></a> returns true.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>veto</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="LoggingOff"></a>
+<h3>LoggingOff</h3>
+<p>See <a href="wx.CloseEvent-class.html#GetLoggingOff" class="link"><code>GetLoggingOff</code></a> and <a href="wx.CloseEvent-class.html#SetLoggingOff" class="link"><code>SetLoggingOff</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CloseEvent-class.html#GetLoggingOff" class="summary-sig-name"><code>GetLoggingOff</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CloseEvent-class.html#SetLoggingOff" class="summary-sig-name"><code>SetLoggingOff</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>logOff</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:58:09 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

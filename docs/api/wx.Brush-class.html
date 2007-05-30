@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.Brush</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;Brush
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.Brush-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Brush</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+     <a href="wx.GDIObject-class.html"><code>GDIObject</code></a> --+
+                 |
+                <b>Brush</b>
+</pre><br />
+
+<hr/>
+
+<p>A brush is a drawing tool for filling in areas. It is used for
+painting the background of rectangles, ellipses, etc. when drawing on
+a <a href="wx.DC-class.html" class="link"><code>wx.DC</code></a>.  It has a colour and a style.</p>
+<hr/>
+
+<p><b>Warning:</b> <p>Do not create instances of wx.Brush before the <a href="wx.App-class.html" class="link"><code>wx.App</code></a>
+object has been created because, depending on the platform,
+required internal data structures may not have been initialized
+yet.  Instead create your brushes in the app's OnInit or as they
+are needed for drawing.</p>
+</p>
+
+<p><b>Note:</b> <p>On monochrome displays all brushes are white, unless the colour
+really is black.</p>
+</p>
+
+<p><b>See Also:</b> <p><a href="wx.BrushList-class.html" class="link"><code>wx.BrushList</code></a>, <a href="wx.DC-class.html" class="link"><code>wx.DC</code></a>, <a href="wx.DC-class.html#SetBrush" class="link"><code>wx.DC.SetBrush</code></a></p>
+</p>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Brush</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Brush-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Constructs a brush from a <a href="wx.Colour-class.html" class="link"><code>wx.Colour</code></a> object and a style.The style parameter may be one of the following:</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1311073668"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__nonzero__"></a><span class="summary-sig"><span class="summary-sig-name">__nonzero__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Brush-class.html#GetColour" class="summary-sig-name"><code>GetColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the <a href="wx.Colour-class.html" class="link"><code>wx.Colour</code></a> of the brush.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Bitmap</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Brush-class.html#GetStipple" class="summary-sig-name"><code>GetStipple</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the stiple <a href="wx.Bitmap-class.html" class="link"><code>wx.Bitmap</code></a> of the brush.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Brush-class.html#GetStyle" class="summary-sig-name"><code>GetStyle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the style of the brush.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Brush-class.html#IsHatch" class="summary-sig-name"><code>IsHatch</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Is the current style a hatch type?</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Brush-class.html#IsOk" class="summary-sig-name"><code>IsOk</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the brush is initialised and valid.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Brush-class.html#IsOk" class="summary-sig-name"><code>Ok</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the brush is initialised and valid.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Brush-class.html#SetColour" class="summary-sig-name"><code>SetColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+<br />
+Set the brush's <a href="wx.Colour-class.html" class="link"><code>wx.Colour</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Brush-class.html#SetStipple" class="summary-sig-name"><code>SetStipple</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>stipple</span>)</span></code>
+<br />
+Sets the stipple <a href="wx.Bitmap-class.html" class="link"><code>wx.Bitmap</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Brush-class.html#SetStyle" class="summary-sig-name"><code>SetStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Sets the style of the brush.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Brush-class.html#Colour"><code>Colour</code></a></b>: See <a href="wx.Brush-class.html#GetColour" class="link"><code>GetColour</code></a> and <a href="wx.Brush-class.html#SetColour" class="link"><code>SetColour</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Brush-class.html#Stipple"><code>Stipple</code></a></b>: See <a href="wx.Brush-class.html#GetStipple" class="link"><code>GetStipple</code></a> and <a href="wx.Brush-class.html#SetStipple" class="link"><code>SetStipple</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Brush-class.html#Style"><code>Style</code></a></b>: See <a href="wx.Brush-class.html#GetStyle" class="link"><code>GetStyle</code></a> and <a href="wx.Brush-class.html#SetStyle" class="link"><code>SetStyle</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Brush-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>SOLID</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructs a brush from a <a href="wx.Colour-class.html" class="link"><code>wx.Colour</code></a> object and a style.The style parameter may be one of the following:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="40%" />
+<col class="rst" width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="rst"><th class="rst">Style</th>
+<th class="rst">Meaning</th>
+</tr>
+</thead>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.TRANSPARENT</td>
+<td class="rst">Transparent (no fill).</td>
+</tr>
+<tr class="rst"><td class="rst">wx.SOLID</td>
+<td class="rst">Solid.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.STIPPLE</td>
+<td class="rst">Uses a bitmap as a stipple.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.BDIAGONAL_HATCH</td>
+<td class="rst">Backward diagonal hatch.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CROSSDIAG_HATCH</td>
+<td class="rst">Cross-diagonal hatch.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FDIAGONAL_HATCH</td>
+<td class="rst">Forward diagonal hatch.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CROSS_HATCH</td>
+<td class="rst">Cross hatch.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.HORIZONTAL_HATCH</td>
+<td class="rst">Horizontal hatch.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.VERTICAL_HATCH</td>
+<td class="rst">Vertical hatch.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>colour</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Brush      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.GDIObject-class.html#__init__"><code>wx.GDIObject.__init__</code></a></dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx-module.html#BrushFromBitmap" class="link"><code>wx.BrushFromBitmap</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the <a href="wx.Colour-class.html" class="link"><code>wx.Colour</code></a> of the brush.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Colour      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetStipple"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetStipple</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the stiple <a href="wx.Bitmap-class.html" class="link"><code>wx.Bitmap</code></a> of the brush.  If the brush does not
+have a wx.STIPPLE style, then the return value may be non-None but an
+uninitialised bitmap (<a href="wx.Bitmap-class.html#IsOk" class="link"><code>wx.Bitmap.Ok</code></a> returns False).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Bitmap      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetStyle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the style of the brush.  See <a href="wx.Brush-class.html#__init__" class="link"><code>__init__</code></a> for a listing of
+styles.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsHatch"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsHatch</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Is the current style a hatch type?</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsOk"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsOk</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the brush is initialised and valid.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsOk"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Ok</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the brush is initialised and valid.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>col</span>)</span>
+  </h3>
+<p>Set the brush's <a href="wx.Colour-class.html" class="link"><code>wx.Colour</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>col</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetStipple"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetStipple</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>stipple</span>)</span>
+  </h3>
+<p>Sets the stipple <a href="wx.Bitmap-class.html" class="link"><code>wx.Bitmap</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>stipple</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetStyle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>style</span>)</span>
+  </h3>
+<p>Sets the style of the brush. See <a href="wx.Brush-class.html#__init__" class="link"><code>__init__</code></a> for a listing of styles.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Colour"></a>
+<h3>Colour</h3>
+<p>See <a href="wx.Brush-class.html#GetColour" class="link"><code>GetColour</code></a> and <a href="wx.Brush-class.html#SetColour" class="link"><code>SetColour</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Brush-class.html#GetColour" class="summary-sig-name"><code>GetColour</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Brush-class.html#SetColour" class="summary-sig-name"><code>SetColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Stipple"></a>
+<h3>Stipple</h3>
+<p>See <a href="wx.Brush-class.html#GetStipple" class="link"><code>GetStipple</code></a> and <a href="wx.Brush-class.html#SetStipple" class="link"><code>SetStipple</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Brush-class.html#GetStipple" class="summary-sig-name"><code>GetStipple</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Brush-class.html#SetStipple" class="summary-sig-name"><code>SetStipple</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>stipple</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Style"></a>
+<h3>Style</h3>
+<p>See <a href="wx.Brush-class.html#GetStyle" class="link"><code>GetStyle</code></a> and <a href="wx.Brush-class.html#SetStyle" class="link"><code>SetStyle</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Brush-class.html#GetStyle" class="summary-sig-name"><code>GetStyle</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Brush-class.html#SetStyle" class="summary-sig-name"><code>SetStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:03:06 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

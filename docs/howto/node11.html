@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>5.1 Adding the edit component</title>
+<META NAME="description" CONTENT="5.1 Adding the edit component">
+<META NAME="keywords" CONTENT="wxPython-howto">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="STYLESHEET" href="wxPython-howto.css">
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node12.html">
+</head>
+<body>
+<DIV CLASS="navigation">
+<table align="center" width="100%" cellpadding="0" cellspacing="2">
+<tr>
+<td><A HREF="node10.html"><img src="../icons/previous.gif"
+  border="0" height="32"
+  alt="Previous Page" width="32"></A></td>
+<td><A HREF="node10.html"><img src="../icons/up.gif"
+  border="0" height="32"
+  alt="Up One Level" width="32"></A></td>
+<td><A HREF="node12.html"><img src="../icons/next.gif"
+  border="0" height="32"
+  alt="Next Page" width="32"></A></td>
+<td align="center" width="100%">wxPython, a cross-platform GUI Library </td>
+<td><A href="contents.html"><img src="../icons/contents.gif"
+  border="0" height="32"
+  alt="Contents" width="32"></A></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+</tr></table>
+<b class="navlabel">Previous:</b> <a class="sectref" HREF="node10.html">5 Pushing it a</A>
+<b class="navlabel">Up:</b> <a class="sectref" HREF="node10.html">5 Pushing it a</A>
+<b class="navlabel">Next:</b> <a class="sectref" HREF="node12.html">5.2 Adding a menu</A>
+<br><hr>
+</DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION002510000000000000000">
+5.1 Adding the edit component</A>
+</H2>
+	The first step is to add a new edit component. The code herein appears, by courtesy of Mr Michael Roberts<A NAME="tex2html6"
+  HREF="#foot76"><SUP>5</SUP></A>.
+
+<dl><dd><pre class="verbatim">
+from wxPython.wx import *
+class MainWindow(wxFrame):
+""" We simply derive a new class of Frame. """
+    def __init__(self,parent,id,title):
+        wxFrame.__init__(self,parent,-4, title, size = ( 200,100),
+                                     style=wxDEFAULT_FRAME_STYLE|wxNO_FULL_REPAINT_ON_RESIZE)
+        self.control = wxTextCtrl(self, 1, style=wxTE_MULTILINE)
+        self.Show(true)
+app = wxPySimpleApp()
+frame = MainWindow(None, -1, "Small editor")
+frame.Show(1)
+app.MainLoop()
+</pre></dl>
+
+<P></P>
+<DIV ALIGN="CENTER">
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+Small Editor application</CAPTION>
+<TR><TD><IMG
+ WIDTH="239" HEIGHT="120" BORDER="0"
+ SRC="img2.gif"
+ ALT="\begin{figure}
+\epsfig{file=editapp1.eps}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+As you can see, it is not very difficult: All we have to do is to derive <tt class="class">wxFrame</tt> and then overload its <tt class="method">__init__</tt> method. In this method, we declare a new <tt class="class">wxTextCtrl</tt>, which is a simple text edit control. Here, You might probably want to have a look at the demoes that are bundled with the install package, since they deal with all sort of subjects and show very well how easy and rich wxPython is.
+<BR><HR><H4>Footnotes</H4>
+<DL>
+<DT><A NAME="foot76">... Roberts</A><A NAME="foot76"
+ HREF="node11.html#tex2html6"><SUP>5</SUP></A>
+<DD> See Also his excellent article in Useful resources 
+
+</DL>
+<DIV CLASS="navigation">
+<p><hr>
+<table align="center" width="100%" cellpadding="0" cellspacing="2">
+<tr>
+<td><A HREF="node10.html"><img src="../icons/previous.gif"
+  border="0" height="32"
+  alt="Previous Page" width="32"></A></td>
+<td><A HREF="node10.html"><img src="../icons/up.gif"
+  border="0" height="32"
+  alt="Up One Level" width="32"></A></td>
+<td><A HREF="node12.html"><img src="../icons/next.gif"
+  border="0" height="32"
+  alt="Next Page" width="32"></A></td>
+<td align="center" width="100%">wxPython, a cross-platform GUI Library </td>
+<td><A href="contents.html"><img src="../icons/contents.gif"
+  border="0" height="32"
+  alt="Contents" width="32"></A></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+</tr></table>
+<b class="navlabel">Previous:</b> <a class="sectref" HREF="node10.html">5 Pushing it a</A>
+<b class="navlabel">Up:</b> <a class="sectref" HREF="node10.html">5 Pushing it a</A>
+<b class="navlabel">Next:</b> <a class="sectref" HREF="node12.html">5.2 Adding a menu</A>
+<hr>
+<span class="release-info">Release 0.03.</span>
+</DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

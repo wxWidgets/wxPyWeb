@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>5.4 More magic</title>
+<META NAME="description" CONTENT="5.4 More magic">
+<META NAME="keywords" CONTENT="wxPython-howto">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="STYLESHEET" href="wxPython-howto.css">
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node15.html">
+</head>
+<body>
+<DIV CLASS="navigation">
+<table align="center" width="100%" cellpadding="0" cellspacing="2">
+<tr>
+<td><A HREF="node13.html"><img src="../icons/previous.gif"
+  border="0" height="32"
+  alt="Previous Page" width="32"></A></td>
+<td><A HREF="node10.html"><img src="../icons/up.gif"
+  border="0" height="32"
+  alt="Up One Level" width="32"></A></td>
+<td><A HREF="node15.html"><img src="../icons/next.gif"
+  border="0" height="32"
+  alt="Next Page" width="32"></A></td>
+<td align="center" width="100%">wxPython, a cross-platform GUI Library </td>
+<td><A href="contents.html"><img src="../icons/contents.gif"
+  border="0" height="32"
+  alt="Contents" width="32"></A></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+</tr></table>
+<b class="navlabel">Previous:</b> <a class="sectref" HREF="node13.html">5.3 Practical event handling</A>
+<b class="navlabel">Up:</b> <a class="sectref" HREF="node10.html">5 Pushing it a</A>
+<b class="navlabel">Next:</b> <a class="sectref" HREF="node15.html">5.5 Possible extensions</A>
+<br><hr>
+</DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION002540000000000000000">
+5.4 More magic</A>
+</H2>
+Of course an editor is useless if it is not able to save or open documents. That's where Common dialogs come in. Those dialogs are those offered by the underlying platform so that your application will exactly look like a native application. 
+	Here is the implementation of the OnOpen method in <tt class="class">MainWindow</tt> :
+<dl><dd><pre class="verbatim">
+    def OnOpen(self,e):
+        """ Open a file"""
+        dlg = wxFileDialog(self, "Choose a file", self.dirname, "", "*.*", wxOPEN)
+        if dlg.ShowModal() == wxID_OK:
+            self.filename=dlg.GetFilename()
+            self.dirname=dlg.GetDirectory()
+            f=open(self.dirname+'\\'+self.filename,'r')   
+            self.control.SetValue(f.read())
+            f.close()
+        dlg.Destroy()
+</pre></dl>
+This method works just in three steps:
+
+<UL>
+<LI>First, we create the dialog by calling the appropriate Constructor.
+</LI>
+<LI>Then, we call the <tt class="method">ShowModal</tt> method, that does all the real work and returns a value corresponding to what the user has pressed ( OK button or Cancel)
+</LI>
+<LI>If necessary, we retrieve the filename and the directory of the selected file and we load it into the editor. Finally, we destroy the dialog.
+</LI>
+</UL>
+
+Normally, you should now be able to add the corresponding entry into the menu and connect it to the <tt class="method">OnOpen</tt> method.
+Find the complete source in appendix A. 
+
+And have a look at the result:
+
+<P></P>
+<DIV ALIGN="CENTER">
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+Small editor application with Common dialogs</CAPTION>
+<TR><TD></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<DIV CLASS="navigation">
+<p><hr>
+<table align="center" width="100%" cellpadding="0" cellspacing="2">
+<tr>
+<td><A HREF="node13.html"><img src="../icons/previous.gif"
+  border="0" height="32"
+  alt="Previous Page" width="32"></A></td>
+<td><A HREF="node10.html"><img src="../icons/up.gif"
+  border="0" height="32"
+  alt="Up One Level" width="32"></A></td>
+<td><A HREF="node15.html"><img src="../icons/next.gif"
+  border="0" height="32"
+  alt="Next Page" width="32"></A></td>
+<td align="center" width="100%">wxPython, a cross-platform GUI Library </td>
+<td><A href="contents.html"><img src="../icons/contents.gif"
+  border="0" height="32"
+  alt="Contents" width="32"></A></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+</tr></table>
+<b class="navlabel">Previous:</b> <a class="sectref" HREF="node13.html">5.3 Practical event handling</A>
+<b class="navlabel">Up:</b> <a class="sectref" HREF="node10.html">5 Pushing it a</A>
+<b class="navlabel">Next:</b> <a class="sectref" HREF="node15.html">5.5 Possible extensions</A>
+<hr>
+<span class="release-info">Release 0.03.</span>
+</DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

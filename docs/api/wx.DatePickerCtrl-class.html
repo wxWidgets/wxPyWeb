@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.DatePickerCtrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;DatePickerCtrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.DatePickerCtrl-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type DatePickerCtrl</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+               <a href="wx.Control-class.html"><code>Control</code></a> --+
+                         |
+                        <b>DatePickerCtrl</b>
+</pre><br />
+
+<hr/>
+
+<p>This control allows the user to select a date. Unlike
+<a href="wx.calendar.CalendarCtrl-class.html" class="link"><code>wx.calendar.CalendarCtrl</code></a>, which is a relatively big control,
+<a href="wx.DatePickerCtrl-class.html" class="link"><code>wx.DatePickerCtrl</code></a> is implemented as a small window showing the
+currently selected date. The control can be edited using the keyboard,
+and can also display a popup window for more user-friendly date
+selection, depending on the styles used and the platform.</p>
+<div class="rst-section" id="styles">
+<h1 class="heading"><a name="rst-styles">Styles</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="24%" />
+<col class="rst" width="76%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.DP_SPIN</td>
+<td class="rst">Creates a control without month calendar drop down but
+with spin control-like arrows to change individual
+date components. This style is not supported by the
+generic version.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.DP_DROPDOWN</td>
+<td class="rst">Creates a control with a month calendar drop down
+part from which the user can select a date.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.DP_DEFAULT</td>
+<td class="rst">Creates a control with default style which is the
+best supported for the current platform
+(currently wx.DP_SPIN under Windows and
+wx.DP_DROPDOWN elsewhere).</td>
+</tr>
+<tr class="rst"><td class="rst">wx.DP_ALLOWNONE</td>
+<td class="rst">With this style, the control allows the user to not
+enter any valid date at all. Without it -- which
+is by default -- the control always has some
+valid date.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.DP_SHOWCENTURY</td>
+<td class="rst">Forces display of the century in the default
+date format. Without this flas the century
+could be displayed or not depending on the
+default date representation in the system.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="rst-section" id="events">
+<h1 class="heading"><a name="rst-events">Events</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="24%" />
+<col class="rst" width="76%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">EVT_DATE_CHANGED</td>
+<td class="rst">This event fires when the user changes the current
+selection in the control.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+<p><b>See Also:</b> <p><a href="wx.calendar.CalendarCtrl-class.html" class="link"><code>wx.calendar.CalendarCtrl</code></a>, <a href="wx.DateEvent-class.html" class="link"><code>wx.DateEvent</code></a></p>
+</p>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">DatePickerCtrl</font></td>
+  <td><code><span class="summary-sig"><a href="wx.DatePickerCtrl-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>dt</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Create a new DatePickerCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.DatePickerCtrl-class.html#Create" class="summary-sig-name"><code>Create</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>dt</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Create the GUI parts of the DatePickerCtrl, for use in 2-phase
+creation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">DateTime</font></td>
+  <td><code><span class="summary-sig"><a href="wx.DatePickerCtrl-class.html#GetLowerLimit" class="summary-sig-name"><code>GetLowerLimit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the lower limit of the valid range for the date selection, if any.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">DateTime</font></td>
+  <td><code><span class="summary-sig"><a href="wx.DatePickerCtrl-class.html#GetUpperLimit" class="summary-sig-name"><code>GetUpperLimit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the upper limit of the valid range for the date selection, if any.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">DateTime</font></td>
+  <td><code><span class="summary-sig"><a href="wx.DatePickerCtrl-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the currently selected date.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.DatePickerCtrl-class.html#SetRange" class="summary-sig-name"><code>SetRange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dt1</span>,
+          <span class=summary-sig-arg>dt2</span>)</span></code>
+<br />
+Sets the valid range for the date selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.DatePickerCtrl-class.html#SetValue" class="summary-sig-name"><code>SetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dt</span>)</span></code>
+<br />
+Changes the current value of the control.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.DatePickerCtrl-class.html#LowerLimit"><code>LowerLimit</code></a></b>: See <a href="wx.DatePickerCtrl-class.html#GetLowerLimit" class="link"><code>GetLowerLimit</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.DatePickerCtrl-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.DatePickerCtrl-class.html#UpperLimit"><code>UpperLimit</code></a></b>: See <a href="wx.DatePickerCtrl-class.html#GetUpperLimit" class="link"><code>GetUpperLimit</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.DatePickerCtrl-class.html#Value"><code>Value</code></a></b>: See <a href="wx.DatePickerCtrl-class.html#GetValue" class="link"><code>GetValue</code></a> and <a href="wx.DatePickerCtrl-class.html#SetValue" class="link"><code>SetValue</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>dt</span>=<span class=sig-default>wxDefaultDateTime</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>wxDP_DEFAULT|wxDP_SHOWCENTURY</span>,
+          <span class=sig-arg>validator</span>=<span class=sig-default>DefaultValidator</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>DatePickerCtrlNameStr</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Create a new DatePickerCtrl.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>dt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>validator</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Validator)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+DatePickerCtrl      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Control-class.html#__init__"><code>wx.Control.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>dt</span>=<span class=sig-default>wxDefaultDateTime</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>wxDP_DEFAULT|wxDP_SHOWCENTURY</span>,
+          <span class=sig-arg>validator</span>=<span class=sig-default>DefaultValidator</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>DatePickerCtrlNameStr</span>)</span>
+  </h3>
+<p>Create the GUI parts of the DatePickerCtrl, for use in 2-phase
+creation.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>dt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>validator</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Validator)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Control-class.html#Create"><code>wx.Control.Create</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLowerLimit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLowerLimit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the lower limit of the valid range for the date selection, if any.
+If there is no range or there is no lower limit, then the
+<a href="wx.DateTime-class.html" class="link"><code>wx.DateTime</code></a> value returned will be invalid.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+DateTime      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetUpperLimit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetUpperLimit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the upper limit of the valid range for the date selection, if any.
+If there is no range or there is no upper limit, then the
+<a href="wx.DateTime-class.html" class="link"><code>wx.DateTime</code></a> value returned will be invalid.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+DateTime      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the currently selected date. If there is no selection or the
+selection is outside of the current range, an invalid <a href="wx.DateTime-class.html" class="link"><code>wx.DateTime</code></a>
+object is returned.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+DateTime      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dt1</span>,
+          <span class=sig-arg>dt2</span>)</span>
+  </h3>
+<p>Sets the valid range for the date selection. If dt1 is valid, it
+becomes the earliest date (inclusive) accepted by the control. If dt2
+is valid, it becomes the latest possible date.</p>
+<p>If the current value of the control is outside of the newly set range
+bounds, the behaviour is undefined.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dt1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      <dd><code><b>dt2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dt</span>)</span>
+  </h3>
+<p>Changes the current value of the control. The date should be valid and
+included in the currently selected range, if any.</p>
+<p>Calling this method does not result in a date change event.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DateTime)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="LowerLimit"></a>
+<h3>LowerLimit</h3>
+<p>See <a href="wx.DatePickerCtrl-class.html#GetLowerLimit" class="link"><code>GetLowerLimit</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.DatePickerCtrl-class.html#GetLowerLimit" class="summary-sig-name"><code>GetLowerLimit</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="UpperLimit"></a>
+<h3>UpperLimit</h3>
+<p>See <a href="wx.DatePickerCtrl-class.html#GetUpperLimit" class="link"><code>GetUpperLimit</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.DatePickerCtrl-class.html#GetUpperLimit" class="summary-sig-name"><code>GetUpperLimit</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Value"></a>
+<h3>Value</h3>
+<p>See <a href="wx.DatePickerCtrl-class.html#GetValue" class="link"><code>GetValue</code></a> and <a href="wx.DatePickerCtrl-class.html#SetValue" class="link"><code>SetValue</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.DatePickerCtrl-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.DatePickerCtrl-class.html#SetValue" class="summary-sig-name"><code>SetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dt</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:58:19 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

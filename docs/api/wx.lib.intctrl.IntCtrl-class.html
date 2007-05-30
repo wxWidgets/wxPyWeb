@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.intctrl.IntCtrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.intctrl-module.html">Module&nbsp;intctrl</a> ::
+        Class&nbsp;IntCtrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.intctrl.IntCtrl-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type IntCtrl</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+               <a href="wx.Control-class.html"><code>Control</code></a> --+    
+                         |    
+                  <a href="wx.TextCtrl-class.html"><code>TextCtrl</code></a> --+
+                             |
+                            <b>IntCtrl</b>
+</pre><br />
+
+<hr/>
+
+<p>This class provides a control that takes and returns integers as
+value, and provides bounds support and optional value limiting.</p>
+<dl class="rst-docutils">
+<dt>IntCtrl(</dt>
+<dd>parent, id = -1,
+value = 0,
+pos = wxDefaultPosition,
+size = wxDefaultSize,
+style = 0,
+validator = wxDefaultValidator,
+name = &quot;integer&quot;,
+min = None,
+max = None,
+limited = False,
+allow_none = False,
+allow_long = False,
+default_color = wxBLACK,
+oob_color = wxRED )</dd>
+<dt>value</dt>
+<dd>If no initial value is set, the default will be zero, or
+the minimum value, if specified.  If an illegal string is specified,
+a ValueError will result. (You can always later set the initial
+value with SetValue() after instantiation of the control.)</dd>
+<dt>min</dt>
+<dd>The minimum value that the control should allow.  This can be
+adjusted with SetMin().  If the control is not limited, any value
+below this bound will be colored with the current out-of-bounds color.
+If min &lt; -sys.maxint-1 and the control is configured to not allow long
+values, the minimum bound will still be set to the long value, but
+the implicit bound will be -sys.maxint-1.</dd>
+<dt>max</dt>
+<dd>The maximum value that the control should allow.  This can be
+adjusted with SetMax().  If the control is not limited, any value
+above this bound will be colored with the current out-of-bounds color.
+if max &gt; sys.maxint and the control is configured to not allow long
+values, the maximum bound will still be set to the long value, but
+the implicit bound will be sys.maxint.</dd>
+<dt>limited</dt>
+<dd>Boolean indicating whether the control prevents values from
+exceeding the currently set minimum and maximum values (bounds).
+If False and bounds are set, out-of-bounds values will
+be colored with the current out-of-bounds color.</dd>
+<dt>allow_none</dt>
+<dd>Boolean indicating whether or not the control is allowed to be
+empty, representing a value of None for the control.</dd>
+<dt>allow_long</dt>
+<dd>Boolean indicating whether or not the control is allowed to hold
+and return a long as well as an int.</dd>
+<dt>default_color</dt>
+<dd>Color value used for in-bounds values of the control.</dd>
+<dt>oob_color</dt>
+<dd>Color value used for out-of-bounds values of the control
+when the bounds are set but the control is not limited.</dd>
+<dt>validator</dt>
+<dd>Normally None, IntCtrl uses its own validator to do value
+validation and input control.  However, a validator derived
+from IntValidator can be supplied to override the data
+transfer methods for the IntValidator class.</dd>
+</dl>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>value</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>min</span>,
+          <span class=summary-sig-arg>max</span>,
+          <span class=summary-sig-arg>limited</span>,
+          <span class=summary-sig-arg>allow_none</span>,
+          <span class=summary-sig-arg>allow_long</span>,
+          <span class=summary-sig-arg>default_color</span>,
+          <span class=summary-sig-arg>oob_color</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#Cut" class="summary-sig-name"><code>Cut</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Override the wxTextCtrl's .Cut function, with our own
+that does validation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#GetBounds" class="summary-sig-name"><code>GetBounds</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+This function returns a two-tuple (min,max), indicating the
+current bounds of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#GetColors" class="summary-sig-name"><code>GetColors</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a tuple of (default_color, oob_color), indicating
+the current color settings for the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#GetMax" class="summary-sig-name"><code>GetMax</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the maximum value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#GetMin" class="summary-sig-name"><code>GetMin</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the minimum value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the current integer (long) value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#IsInBounds" class="summary-sig-name"><code>IsInBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Returns True if no value is specified and the current value
+of the control falls within the current bounds.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#IsLimited" class="summary-sig-name"><code>IsLimited</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the control is currently limiting the
+value to fall within the current bounds.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="IsLongAllowed"></a><span class="summary-sig"><span class="summary-sig-name">IsLongAllowed</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="IsNoneAllowed"></a><span class="summary-sig"><span class="summary-sig-name">IsNoneAllowed</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#OnText" class="summary-sig-name"><code>OnText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles an event indicating that the text control's value
+has changed, and issue EVT_INT event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#Paste" class="summary-sig-name"><code>Paste</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Override the wxTextCtrl's .Paste function, with our own
+that does validation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#SetBounds" class="summary-sig-name"><code>SetBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>min</span>,
+          <span class=summary-sig-arg>max</span>)</span></code>
+<br />
+This function is a convenience function for setting the min and max
+values at the same time.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#SetColors" class="summary-sig-name"><code>SetColors</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>default_color</span>,
+          <span class=summary-sig-arg>oob_color</span>)</span></code>
+<br />
+Tells the control what colors to use for normal and out-of-bounds
+values.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#SetLimited" class="summary-sig-name"><code>SetLimited</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>limited</span>)</span></code>
+<br />
+If called with a value of True, this function will cause the control
+to limit the value to fall within the bounds currently specified.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#SetLongAllowed" class="summary-sig-name"><code>SetLongAllowed</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>allow_long</span>)</span></code>
+<br />
+Change the behavior of the validation code, allowing control
+to have a long value or not, as appropriate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#SetMax" class="summary-sig-name"><code>SetMax</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>max</span>)</span></code>
+<br />
+Sets the maximum value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#SetMin" class="summary-sig-name"><code>SetMin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>min</span>)</span></code>
+<br />
+Sets the minimum value of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#SetNoneAllowed" class="summary-sig-name"><code>SetNoneAllowed</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>allow_none</span>)</span></code>
+<br />
+Change the behavior of the validation code, allowing control
+to have a value of None or not, as appropriate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.intctrl.IntCtrl-class.html#SetValue" class="summary-sig-name"><code>SetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Sets the value of the control to the integer value specified.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="Cut"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Cut</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Override the wxTextCtrl's .Cut function, with our own
+that does validation.  Will result in a value of 0
+if entire contents of control are removed.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.TextCtrl-class.html#Cut"><code>wx.TextCtrl.Cut</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBounds</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>This function returns a two-tuple (min,max), indicating the
+current bounds of the control.  Each value can be None if
+that bound is not set.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetColors"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetColors</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a tuple of (default_color, oob_color), indicating
+the current color settings for the control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMax"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMax</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the maximum value of the control.  It will return the current
+maximum integer, or None if not specified.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMin</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the minimum value of the control.  It will return the current
+minimum integer, or None if not specified.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the current integer (long) value of the control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.TextCtrl-class.html#GetValue"><code>wx.TextCtrl.GetValue</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsInBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsInBounds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns True if no value is specified and the current value
+of the control falls within the current bounds.  This function can
+also be called with a value to see if that value would fall within
+the current bounds of the given control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsLimited"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsLimited</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the control is currently limiting the
+value to fall within the current bounds.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles an event indicating that the text control's value
+has changed, and issue EVT_INT event.
+NOTE: using wx.TextCtrl.SetValue() to change the control's
+contents from within a wx.EVT_CHAR handler can cause double
+text events.  So we check for actual changes to the text
+before passing the events on.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Paste"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Paste</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Override the wxTextCtrl's .Paste function, with our own
+that does validation.  Will raise ValueError if not a
+valid integerizable value.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.TextCtrl-class.html#Paste"><code>wx.TextCtrl.Paste</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBounds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>min</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>max</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>This function is a convenience function for setting the min and max
+values at the same time.  The function only applies the maximum bound
+if setting the minimum bound is successful, and returns True
+only if both operations succeed.
+NOTE: leaving out an argument will remove the corresponding bound.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetColors"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetColors</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>default_color</span>=<span class=sig-default>...</span>,
+          <span class=sig-arg>oob_color</span>=<span class=sig-default>...</span>)</span>
+  </h3>
+<p>Tells the control what colors to use for normal and out-of-bounds
+values.  If the value currently exceeds the bounds, it will be
+recolored accordingly.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLimited"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLimited</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>limited</span>)</span>
+  </h3>
+<p>If called with a value of True, this function will cause the control
+to limit the value to fall within the bounds currently specified.
+If the control's value currently exceeds the bounds, it will then
+be limited accordingly.</p>
+<p>If called with a value of 0, this function will disable value
+limiting, but coloring of out-of-bounds values will still take
+place if bounds have been set for the control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLongAllowed"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLongAllowed</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>allow_long</span>)</span>
+  </h3>
+<p>Change the behavior of the validation code, allowing control
+to have a long value or not, as appropriate.  If the value
+of the control is currently long, and allow_long is 0, the
+value of the control will be adjusted to fall within the
+size of an integer type, at either the sys.maxint or -sys.maxint-1,
+for positive and negative values, respectively.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMax"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMax</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>max</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the maximum value of the control. If a value of None
+is provided, then the control will have no explicit maximum value.
+If the value specified is less than the current minimum value, then
+the function returns 0 and the maximum will not change from its
+current setting. On success, the function returns 1.</p>
+<p>If successful and the current value is greater than the new upper
+bound, if the control is limited the value will be automatically
+adjusted to this maximum value; if not limited, the value in the
+control will be colored with the current out-of-bounds color.</p>
+<p>If max &gt; sys.maxint and the control is configured to not allow longs,
+the function will return 0, and the max will not be set.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMin</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>min</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the minimum value of the control.  If a value of None
+is provided, then the control will have no explicit minimum value.
+If the value specified is greater than the current maximum value,
+then the function returns 0 and the minimum will not change from
+its current setting.  On success, the function returns 1.</p>
+<p>If successful and the current value is lower than the new lower
+bound, if the control is limited, the value will be automatically
+adjusted to the new minimum value; if not limited, the value in the
+control will be colored with the current out-of-bounds color.</p>
+<p>If min &gt; -sys.maxint-1 and the control is configured to not allow longs,
+the function will return 0, and the min will not be set.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetNoneAllowed"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetNoneAllowed</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>allow_none</span>)</span>
+  </h3>
+<p>Change the behavior of the validation code, allowing control
+to have a value of None or not, as appropriate.  If the value
+of the control is currently None, and allow_none is 0, the
+value of the control will be set to the minimum value of the
+control, or 0 if no lower bound is set.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Sets the value of the control to the integer value specified.
+The resulting actual value of the control may be altered to
+conform with the bounds set on the control if limited,
+or colored if not limited but the value is out-of-bounds.
+A ValueError exception will be raised if an invalid value
+is specified.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.TextCtrl-class.html#SetValue"><code>wx.TextCtrl.SetValue</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:57:50 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

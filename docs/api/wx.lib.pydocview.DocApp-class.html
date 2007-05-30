@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.pydocview.DocApp</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.pydocview-module.html">Module&nbsp;pydocview</a> ::
+        Class&nbsp;DocApp
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.pydocview.DocApp-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type DocApp</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+             <a href="wx.PyApp-class.html"><code>PyApp</code></a> --+        
+                     |        
+                   <a href="wx.App-class.html"><code>App</code></a> --+    
+                         |    
+               <a href="wx.PySimpleApp-class.html"><code>PySimpleApp</code></a> --+
+                             |
+                            <b>DocApp</b>
+</pre><br />
+
+<hr/>
+
+<p>The DocApp class serves as the base class for pydocview applications and offers
+functionality such as services, creation of SDI and MDI frames, show tips,
+and a splash screen.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#CloseChildDocuments" class="summary-sig-name"><code>CloseChildDocuments</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parentDocument</span>)</span></code>
+<br />
+Closes the child windows of a Document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#CloseSplash" class="summary-sig-name"><code>CloseSplash</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Closes the splash window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#CreateChildDocument" class="summary-sig-name"><code>CreateChildDocument</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parentDocument</span>,
+          <span class=summary-sig-arg>documentType</span>,
+          <span class=summary-sig-arg>objectToEdit</span>,
+          <span class=summary-sig-arg>path</span>)</span></code>
+<br />
+Creates a child window of a document that edits an object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#CreateDocumentFrame" class="summary-sig-name"><code>CreateDocumentFrame</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>view</span>,
+          <span class=summary-sig-arg>doc</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>title</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Called by the DocManager to create and return a new Frame for a Document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#CreateMDIDocumentFrame" class="summary-sig-name"><code>CreateMDIDocumentFrame</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doc</span>,
+          <span class=summary-sig-arg>view</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>title</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Creates and returns an MDI Document Frame.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#CreateSDIDocumentFrame" class="summary-sig-name"><code>CreateSDIDocumentFrame</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doc</span>,
+          <span class=summary-sig-arg>view</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>title</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Creates and returns an SDI Document Frame.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#CreateTabbedDocumentFrame" class="summary-sig-name"><code>CreateTabbedDocumentFrame</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>doc</span>,
+          <span class=summary-sig-arg>view</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>title</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Creates and returns an MDI Document Frame for a Tabbed MDI view</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#DoBackgroundListenAndLoad" class="summary-sig-name"><code>DoBackgroundListenAndLoad</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Open any files specified in the given command line argument passed in via shared memory</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#GetDebug" class="summary-sig-name"><code>GetDebug</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the application is in debug mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#GetDefaultDocManagerFlags" class="summary-sig-name"><code>GetDefaultDocManagerFlags</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the default flags to use when creating the DocManager.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#GetDefaultIcon" class="summary-sig-name"><code>GetDefaultIcon</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the application's default icon.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#GetDocumentManager" class="summary-sig-name"><code>GetDocumentManager</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the document manager associated to the DocApp.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#GetEditMenu" class="summary-sig-name"><code>GetEditMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>frame</span>)</span></code>
+<br />
+Utility method that finds the Edit menu within the menubar of a frame.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#GetService" class="summary-sig-name"><code>GetService</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>type</span>)</span></code>
+<br />
+Returns the instance of a particular type of service that has been installed
+into the DocApp.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#GetServices" class="summary-sig-name"><code>GetServices</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the DocService instances that have been installed into the DocApp.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#GetSingleInstance" class="summary-sig-name"><code>GetSingleInstance</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the application is in single instance mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#GetUseTabbedMDI" class="summary-sig-name"><code>GetUseTabbedMDI</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if Windows MDI should use folder tabs instead of child windows.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#InstallService" class="summary-sig-name"><code>InstallService</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>service</span>)</span></code>
+<br />
+Installs an instance of a DocService into the DocApp.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#IsMDI" class="summary-sig-name"><code>IsMDI</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the application is in MDI mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#IsSDI" class="summary-sig-name"><code>IsSDI</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the application is in SDI mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MacOpenFile"></a><span class="summary-sig"><span class="summary-sig-name">MacOpenFile</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filename</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#OnCloseChildWindow" class="summary-sig-name"><code>OnCloseChildWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Called when an MDI Child Frame is closed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#OnCloseMainWindow" class="summary-sig-name"><code>OnCloseMainWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Called when the MDI Parent Frame is closed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#OnExit" class="summary-sig-name"><code>OnExit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Called when the DocApp is exited, enables the installed DocServices to exit
+and saves the DocManager's file history.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#OnInit" class="summary-sig-name"><code>OnInit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Initializes the DocApp.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#OpenCommandLineArgs" class="summary-sig-name"><code>OpenCommandLineArgs</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Called to open files that have been passed to the application from the
+command line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OpenMainFrame"></a><span class="summary-sig"><span class="summary-sig-name">OpenMainFrame</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#ProcessEvent" class="summary-sig-name"><code>ProcessEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Processes an event, searching event tables and calling zero or more
+suitable event handler function(s).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#ProcessEventBeforeWindows" class="summary-sig-name"><code>ProcessEventBeforeWindows</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Enables services to process an event before the main window has a chance to
+process the window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#ProcessUpdateUIEvent" class="summary-sig-name"><code>ProcessUpdateUIEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Processes a UI event, searching event tables and calling zero or more
+suitable event handler function(s).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#ProcessUpdateUIEventBeforeWindows" class="summary-sig-name"><code>ProcessUpdateUIEventBeforeWindows</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Enables services to process a UI event before the main window has a chance
+to process the window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#SaveMDIDocumentFrameMaximizedState" class="summary-sig-name"><code>SaveMDIDocumentFrameMaximizedState</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>maximized</span>)</span></code>
+<br />
+Remember in the config whether the MDI Frame is maximized so that it can be restored
+on open.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#SetDebug" class="summary-sig-name"><code>SetDebug</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>debug</span>)</span></code>
+<br />
+Sets the application's debug mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#SetDefaultIcon" class="summary-sig-name"><code>SetDefaultIcon</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>icon</span>)</span></code>
+<br />
+Sets the application's default icon.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#SetDocumentManager" class="summary-sig-name"><code>SetDocumentManager</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>docManager</span>)</span></code>
+<br />
+Sets the document manager associated with the DocApp and loads the
+DocApp's file history into the document manager.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#SetSingleInstance" class="summary-sig-name"><code>SetSingleInstance</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>singleInstance</span>)</span></code>
+<br />
+Sets application's single instance mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#SetUseTabbedMDI" class="summary-sig-name"><code>SetUseTabbedMDI</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>useTabbedMDI</span>)</span></code>
+<br />
+Set to True if Windows MDI should use folder tabs instead of child windows.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#ShowSplash" class="summary-sig-name"><code>ShowSplash</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>image</span>)</span></code>
+<br />
+Shows a splash window with the given image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.pydocview.DocApp-class.html#ShowTip" class="summary-sig-name"><code>ShowTip</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>frame</span>,
+          <span class=summary-sig-arg>tipProvider</span>)</span></code>
+<br />
+Shows the tip window, generally this is called when an application starts.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="CloseChildDocuments"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CloseChildDocuments</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parentDocument</span>)</span>
+  </h3>
+<p>Closes the child windows of a Document.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CloseSplash"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CloseSplash</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Closes the splash window.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateChildDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateChildDocument</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parentDocument</span>,
+          <span class=sig-arg>documentType</span>,
+          <span class=sig-arg>objectToEdit</span>,
+          <span class=sig-arg>path</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+<p>Creates a child window of a document that edits an object.  The child window
+is managed by the parent document frame, so it will be prompted to close if its
+parent is closed, etc.  Child Documents are useful when there are complicated
+Views of a Document and users will need to tunnel into the View.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateDocumentFrame"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateDocumentFrame</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>view</span>,
+          <span class=sig-arg>doc</span>,
+          <span class=sig-arg>flags</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>title</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>541072960</span>)</span>
+  </h3>
+<p>Called by the DocManager to create and return a new Frame for a Document.
+Chooses whether to create an MDIChildFrame or SDI Frame based on the
+DocManager's flags.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateMDIDocumentFrame"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateMDIDocumentFrame</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doc</span>,
+          <span class=sig-arg>view</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>title</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>541072960</span>)</span>
+  </h3>
+<p>Creates and returns an MDI Document Frame.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateSDIDocumentFrame"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateSDIDocumentFrame</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doc</span>,
+          <span class=sig-arg>view</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>title</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>541072960</span>)</span>
+  </h3>
+<p>Creates and returns an SDI Document Frame.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateTabbedDocumentFrame"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateTabbedDocumentFrame</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>doc</span>,
+          <span class=sig-arg>view</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>title</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>541072960</span>)</span>
+  </h3>
+<p>Creates and returns an MDI Document Frame for a Tabbed MDI view</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoBackgroundListenAndLoad"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoBackgroundListenAndLoad</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Open any files specified in the given command line argument passed in via shared memory</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDebug"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDebug</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the application is in debug mode.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDefaultDocManagerFlags"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDefaultDocManagerFlags</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the default flags to use when creating the DocManager.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDefaultIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDefaultIcon</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the application's default icon.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocumentManager"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocumentManager</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the document manager associated to the DocApp.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEditMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEditMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>frame</span>)</span>
+  </h3>
+<p>Utility method that finds the Edit menu within the menubar of a frame.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetService"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetService</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>type</span>)</span>
+  </h3>
+<p>Returns the instance of a particular type of service that has been installed
+into the DocApp.  For example, &quot;wx.GetApp().GetService(pydocview.OptionsService)&quot;
+returns the isntance of the OptionsService that is running within the DocApp.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetServices"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetServices</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the DocService instances that have been installed into the DocApp.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSingleInstance"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSingleInstance</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the application is in single instance mode.  Used to determine if multiple instances of the application is allowed to launch.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetUseTabbedMDI"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetUseTabbedMDI</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if Windows MDI should use folder tabs instead of child windows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InstallService"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InstallService</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>service</span>)</span>
+  </h3>
+<p>Installs an instance of a DocService into the DocApp.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsMDI"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsMDI</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the application is in MDI mode.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsSDI"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsSDI</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the application is in SDI mode.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCloseChildWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCloseChildWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Called when an MDI Child Frame is closed.  Calls SaveMDIDocumentFrameMaximizedState to
+remember whether the MDI Frame is maximized so that it can be restored on open.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCloseMainWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCloseMainWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Called when the MDI Parent Frame is closed.  Remembers whether the MDI Parent Frame is
+maximized.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnExit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnExit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Called when the DocApp is exited, enables the installed DocServices to exit
+and saves the DocManager's file history.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnInit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnInit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Initializes the DocApp.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PySimpleApp-class.html#OnInit"><code>wx.PySimpleApp.OnInit</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OpenCommandLineArgs"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OpenCommandLineArgs</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Called to open files that have been passed to the application from the
+command line.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Processes an event, searching event tables and calling zero or more
+suitable event handler function(s).  Note that the ProcessEvent
+method is called from the wxPython docview framework directly since
+wxPython does not have a virtual ProcessEvent function.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.EvtHandler-class.html#ProcessEvent"><code>wx.EvtHandler.ProcessEvent</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessEventBeforeWindows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessEventBeforeWindows</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Enables services to process an event before the main window has a chance to
+process the window.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessUpdateUIEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessUpdateUIEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Processes a UI event, searching event tables and calling zero or more
+suitable event handler function(s).  Note that the ProcessEvent
+method is called from the wxPython docview framework directly since
+wxPython does not have a virtual ProcessEvent function.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessUpdateUIEventBeforeWindows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessUpdateUIEventBeforeWindows</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Enables services to process a UI event before the main window has a chance
+to process the window.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SaveMDIDocumentFrameMaximizedState"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SaveMDIDocumentFrameMaximizedState</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>maximized</span>)</span>
+  </h3>
+<p>Remember in the config whether the MDI Frame is maximized so that it can be restored
+on open.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDebug"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDebug</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>debug</span>)</span>
+  </h3>
+<p>Sets the application's debug mode.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDefaultIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDefaultIcon</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>icon</span>)</span>
+  </h3>
+<p>Sets the application's default icon.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDocumentManager"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDocumentManager</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>docManager</span>)</span>
+  </h3>
+<p>Sets the document manager associated with the DocApp and loads the
+DocApp's file history into the document manager.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSingleInstance"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSingleInstance</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>singleInstance</span>)</span>
+  </h3>
+<p>Sets application's single instance mode.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetUseTabbedMDI"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetUseTabbedMDI</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>useTabbedMDI</span>)</span>
+  </h3>
+<p>Set to True if Windows MDI should use folder tabs instead of child windows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowSplash"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowSplash</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>image</span>)</span>
+  </h3>
+<p>Shows a splash window with the given image.  Input parameter 'image' can either be a wx.Bitmap or a filename.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowTip"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowTip</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>frame</span>,
+          <span class=sig-arg>tipProvider</span>)</span>
+  </h3>
+<p>Shows the tip window, generally this is called when an application starts.
+A wx.TipProvider must be passed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:01:19 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,2293 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.grid.Grid</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.grid-module.html">Module&nbsp;grid</a> ::
+        Class&nbsp;Grid
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.grid.Grid-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Grid</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+    
+                         |    
+            <a href="wx.ScrolledWindow-class.html"><code>ScrolledWindow</code></a> --+
+                             |
+                            <b>Grid</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.sheet.CSheet-class.html"><code>CSheet</code></a></dd></dl>
+
+<hr/>
+
+<p>Proxy of C++ Grid class</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Construct and show a generic Window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="AppendCols"></a><span class="summary-sig"><span class="summary-sig-name">AppendCols</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>numCols</span>,
+          <span class=summary-sig-arg>updateLabels</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="AppendRows"></a><span class="summary-sig"><span class="summary-sig-name">AppendRows</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>numRows</span>,
+          <span class=summary-sig-arg>updateLabels</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AutoSize"></a><span class="summary-sig"><span class="summary-sig-name">AutoSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AutoSizeColLabelSize"></a><span class="summary-sig"><span class="summary-sig-name">AutoSizeColLabelSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AutoSizeColumn"></a><span class="summary-sig"><span class="summary-sig-name">AutoSizeColumn</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>setAsMin</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AutoSizeColumns"></a><span class="summary-sig"><span class="summary-sig-name">AutoSizeColumns</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>setAsMin</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AutoSizeRow"></a><span class="summary-sig"><span class="summary-sig-name">AutoSizeRow</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>setAsMin</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AutoSizeRowLabelSize"></a><span class="summary-sig"><span class="summary-sig-name">AutoSizeRowLabelSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AutoSizeRows"></a><span class="summary-sig"><span class="summary-sig-name">AutoSizeRows</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>setAsMin</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="BeginBatch"></a><span class="summary-sig"><span class="summary-sig-name">BeginBatch</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><a name="BlockToDeviceRect"></a><span class="summary-sig"><span class="summary-sig-name">BlockToDeviceRect</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>topLeft</span>,
+          <span class=summary-sig-arg>bottomRight</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="CanDragCell"></a><span class="summary-sig"><span class="summary-sig-name">CanDragCell</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="CanDragColMove"></a><span class="summary-sig"><span class="summary-sig-name">CanDragColMove</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="CanDragColSize"></a><span class="summary-sig"><span class="summary-sig-name">CanDragColSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="CanDragGridSize"></a><span class="summary-sig"><span class="summary-sig-name">CanDragGridSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="CanDragRowSize"></a><span class="summary-sig"><span class="summary-sig-name">CanDragRowSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="CanEnableCellControl"></a><span class="summary-sig"><span class="summary-sig-name">CanEnableCellControl</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><a name="CellToRect"></a><span class="summary-sig"><span class="summary-sig-name">CellToRect</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ClearGrid"></a><span class="summary-sig"><span class="summary-sig-name">ClearGrid</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ClearSelection"></a><span class="summary-sig"><span class="summary-sig-name">ClearSelection</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#Create" class="summary-sig-name"><code>Create</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Create the GUI part of the Window for 2-phase creation mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="CreateGrid"></a><span class="summary-sig"><span class="summary-sig-name">CreateGrid</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>numRows</span>,
+          <span class=summary-sig-arg>numCols</span>,
+          <span class=summary-sig-arg>selmode</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="DeleteCols"></a><span class="summary-sig"><span class="summary-sig-name">DeleteCols</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>numCols</span>,
+          <span class=summary-sig-arg>updateLabels</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="DeleteRows"></a><span class="summary-sig"><span class="summary-sig-name">DeleteRows</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>numRows</span>,
+          <span class=summary-sig-arg>updateLabels</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DeselectCell"></a><span class="summary-sig"><span class="summary-sig-name">DeselectCell</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DeselectCol"></a><span class="summary-sig"><span class="summary-sig-name">DeselectCol</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DeselectRow"></a><span class="summary-sig"><span class="summary-sig-name">DeselectRow</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DisableCellEditControl"></a><span class="summary-sig"><span class="summary-sig-name">DisableCellEditControl</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DisableDragCell"></a><span class="summary-sig"><span class="summary-sig-name">DisableDragCell</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DisableDragColMove"></a><span class="summary-sig"><span class="summary-sig-name">DisableDragColMove</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DisableDragColSize"></a><span class="summary-sig"><span class="summary-sig-name">DisableDragColSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DisableDragGridSize"></a><span class="summary-sig"><span class="summary-sig-name">DisableDragGridSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DisableDragRowSize"></a><span class="summary-sig"><span class="summary-sig-name">DisableDragRowSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DrawCellHighlight"></a><span class="summary-sig"><span class="summary-sig-name">DrawCellHighlight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>attr</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#DrawTextRectangle" class="summary-sig-name"><code>DrawTextRectangle</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+int verticalAlignment=TOP, int textOrientation=HORIZONTAL)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="EnableCellEditControl"></a><span class="summary-sig"><span class="summary-sig-name">EnableCellEditControl</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="EnableDragCell"></a><span class="summary-sig"><span class="summary-sig-name">EnableDragCell</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="EnableDragColMove"></a><span class="summary-sig"><span class="summary-sig-name">EnableDragColMove</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="EnableDragColSize"></a><span class="summary-sig"><span class="summary-sig-name">EnableDragColSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="EnableDragGridSize"></a><span class="summary-sig"><span class="summary-sig-name">EnableDragGridSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="EnableDragRowSize"></a><span class="summary-sig"><span class="summary-sig-name">EnableDragRowSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="EnableEditing"></a><span class="summary-sig"><span class="summary-sig-name">EnableEditing</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>edit</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="EnableGridLines"></a><span class="summary-sig"><span class="summary-sig-name">EnableGridLines</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="EndBatch"></a><span class="summary-sig"><span class="summary-sig-name">EndBatch</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ForceRefresh"></a><span class="summary-sig"><span class="summary-sig-name">ForceRefresh</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetBatchCount"></a><span class="summary-sig"><span class="summary-sig-name">GetBatchCount</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(horiz, vert)</font></td>
+  <td><code><a name="GetCellAlignment"></a><span class="summary-sig"><span class="summary-sig-name">GetCellAlignment</span>(<span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><a name="GetCellBackgroundColour"></a><span class="summary-sig"><span class="summary-sig-name">GetCellBackgroundColour</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridCellEditor</font></td>
+  <td><code><a name="GetCellEditor"></a><span class="summary-sig"><span class="summary-sig-name">GetCellEditor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Font</font></td>
+  <td><code><a name="GetCellFont"></a><span class="summary-sig"><span class="summary-sig-name">GetCellFont</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><a name="GetCellHighlightColour"></a><span class="summary-sig"><span class="summary-sig-name">GetCellHighlightColour</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetCellHighlightPenWidth"></a><span class="summary-sig"><span class="summary-sig-name">GetCellHighlightPenWidth</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetCellHighlightROPenWidth"></a><span class="summary-sig"><span class="summary-sig-name">GetCellHighlightROPenWidth</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="GetCellOverflow"></a><span class="summary-sig"><span class="summary-sig-name">GetCellOverflow</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridCellRenderer</font></td>
+  <td><code><a name="GetCellRenderer"></a><span class="summary-sig"><span class="summary-sig-name">GetCellRenderer</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(num_rows, num_cols)</font></td>
+  <td><code><a name="GetCellSize"></a><span class="summary-sig"><span class="summary-sig-name">GetCellSize</span>(<span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><a name="GetCellTextColour"></a><span class="summary-sig"><span class="summary-sig-name">GetCellTextColour</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="GetCellValue"></a><span class="summary-sig"><span class="summary-sig-name">GetCellValue</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">VisualAttributes</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetClassDefaultAttributes" class="summary-sig-name"><code>GetClassDefaultAttributes</code></a>(<span class=summary-sig-arg>variant</span>)</span></code>
+<br />
+Get the default attributes for this class.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetColAt"></a><span class="summary-sig"><span class="summary-sig-name">GetColAt</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colPos</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxPen</font></td>
+  <td><code><a name="GetColGridLinePen"></a><span class="summary-sig"><span class="summary-sig-name">GetColGridLinePen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(horiz, vert)</font></td>
+  <td><code><a name="GetColLabelAlignment"></a><span class="summary-sig"><span class="summary-sig-name">GetColLabelAlignment</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetColLabelSize"></a><span class="summary-sig"><span class="summary-sig-name">GetColLabelSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetColLabelTextOrientation"></a><span class="summary-sig"><span class="summary-sig-name">GetColLabelTextOrientation</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="GetColLabelValue"></a><span class="summary-sig"><span class="summary-sig-name">GetColLabelValue</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetColMinimalAcceptableWidth"></a><span class="summary-sig"><span class="summary-sig-name">GetColMinimalAcceptableWidth</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetColPos"></a><span class="summary-sig"><span class="summary-sig-name">GetColPos</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colID</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetColSize"></a><span class="summary-sig"><span class="summary-sig-name">GetColSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(horiz, vert)</font></td>
+  <td><code><a name="GetDefaultCellAlignment"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultCellAlignment</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><a name="GetDefaultCellBackgroundColour"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultCellBackgroundColour</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Font</font></td>
+  <td><code><a name="GetDefaultCellFont"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultCellFont</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="GetDefaultCellOverflow"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultCellOverflow</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><a name="GetDefaultCellTextColour"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultCellTextColour</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetDefaultColLabelSize"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultColLabelSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetDefaultColSize"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultColSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridCellEditor</font></td>
+  <td><code><a name="GetDefaultEditor"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultEditor</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridCellEditor</font></td>
+  <td><code><a name="GetDefaultEditorForCell"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultEditorForCell</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridCellEditor</font></td>
+  <td><code><a name="GetDefaultEditorForType"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultEditorForType</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>typeName</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxPen</font></td>
+  <td><code><a name="GetDefaultGridLinePen"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultGridLinePen</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridCellRenderer</font></td>
+  <td><code><a name="GetDefaultRenderer"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultRenderer</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridCellRenderer</font></td>
+  <td><code><a name="GetDefaultRendererForCell"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultRendererForCell</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridCellRenderer</font></td>
+  <td><code><a name="GetDefaultRendererForType"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultRendererForType</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>typeName</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetDefaultRowLabelSize"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultRowLabelSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetDefaultRowSize"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultRowSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><a name="GetGridColLabelWindow"></a><span class="summary-sig"><span class="summary-sig-name">GetGridColLabelWindow</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><a name="GetGridCornerLabelWindow"></a><span class="summary-sig"><span class="summary-sig-name">GetGridCornerLabelWindow</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetGridCursorCol"></a><span class="summary-sig"><span class="summary-sig-name">GetGridCursorCol</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetGridCursorRow"></a><span class="summary-sig"><span class="summary-sig-name">GetGridCursorRow</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><a name="GetGridLineColour"></a><span class="summary-sig"><span class="summary-sig-name">GetGridLineColour</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><a name="GetGridRowLabelWindow"></a><span class="summary-sig"><span class="summary-sig-name">GetGridRowLabelWindow</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><a name="GetGridWindow"></a><span class="summary-sig"><span class="summary-sig-name">GetGridWindow</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><a name="GetLabelBackgroundColour"></a><span class="summary-sig"><span class="summary-sig-name">GetLabelBackgroundColour</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Font</font></td>
+  <td><code><a name="GetLabelFont"></a><span class="summary-sig"><span class="summary-sig-name">GetLabelFont</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><a name="GetLabelTextColour"></a><span class="summary-sig"><span class="summary-sig-name">GetLabelTextColour</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetNumberCols"></a><span class="summary-sig"><span class="summary-sig-name">GetNumberCols</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetNumberRows"></a><span class="summary-sig"><span class="summary-sig-name">GetNumberRows</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridCellAttr</font></td>
+  <td><code><a name="GetOrCreateCellAttr"></a><span class="summary-sig"><span class="summary-sig-name">GetOrCreateCellAttr</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxPen</font></td>
+  <td><code><a name="GetRowGridLinePen"></a><span class="summary-sig"><span class="summary-sig-name">GetRowGridLinePen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(horiz, vert)</font></td>
+  <td><code><a name="GetRowLabelAlignment"></a><span class="summary-sig"><span class="summary-sig-name">GetRowLabelAlignment</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetRowLabelSize"></a><span class="summary-sig"><span class="summary-sig-name">GetRowLabelSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="GetRowLabelValue"></a><span class="summary-sig"><span class="summary-sig-name">GetRowLabelValue</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetRowMinimalAcceptableHeight"></a><span class="summary-sig"><span class="summary-sig-name">GetRowMinimalAcceptableHeight</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetRowSize"></a><span class="summary-sig"><span class="summary-sig-name">GetRowSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetScrollLineX"></a><span class="summary-sig"><span class="summary-sig-name">GetScrollLineX</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetScrollLineY"></a><span class="summary-sig"><span class="summary-sig-name">GetScrollLineY</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetScrollX"></a><span class="summary-sig"><span class="summary-sig-name">GetScrollX</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetScrollY"></a><span class="summary-sig"><span class="summary-sig-name">GetScrollY</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxGridCellCoordsArray</font></td>
+  <td><code><a name="GetSelectedCells"></a><span class="summary-sig"><span class="summary-sig-name">GetSelectedCells</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxArrayInt</font></td>
+  <td><code><a name="GetSelectedCols"></a><span class="summary-sig"><span class="summary-sig-name">GetSelectedCols</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxArrayInt</font></td>
+  <td><code><a name="GetSelectedRows"></a><span class="summary-sig"><span class="summary-sig-name">GetSelectedRows</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><a name="GetSelectionBackground"></a><span class="summary-sig"><span class="summary-sig-name">GetSelectionBackground</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxGridCellCoordsArray</font></td>
+  <td><code><a name="GetSelectionBlockBottomRight"></a><span class="summary-sig"><span class="summary-sig-name">GetSelectionBlockBottomRight</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxGridCellCoordsArray</font></td>
+  <td><code><a name="GetSelectionBlockTopLeft"></a><span class="summary-sig"><span class="summary-sig-name">GetSelectionBlockTopLeft</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Colour</font></td>
+  <td><code><a name="GetSelectionForeground"></a><span class="summary-sig"><span class="summary-sig-name">GetSelectionForeground</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">WXGRIDSELECTIONMODES</font></td>
+  <td><code><a name="GetSelectionMode"></a><span class="summary-sig"><span class="summary-sig-name">GetSelectionMode</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridTableBase</font></td>
+  <td><code><a name="GetTable"></a><span class="summary-sig"><span class="summary-sig-name">GetTable</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(width, height)</font></td>
+  <td><code><a name="GetTextBoxSize"></a><span class="summary-sig"><span class="summary-sig-name">GetTextBoxSize</span>(<span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>lines</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="GridLinesEnabled"></a><span class="summary-sig"><span class="summary-sig-name">GridLinesEnabled</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="HideCellEditControl"></a><span class="summary-sig"><span class="summary-sig-name">HideCellEditControl</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="InsertCols"></a><span class="summary-sig"><span class="summary-sig-name">InsertCols</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>numCols</span>,
+          <span class=summary-sig-arg>updateLabels</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="InsertRows"></a><span class="summary-sig"><span class="summary-sig-name">InsertRows</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>numRows</span>,
+          <span class=summary-sig-arg>updateLabels</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsCellEditControlEnabled"></a><span class="summary-sig"><span class="summary-sig-name">IsCellEditControlEnabled</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsCellEditControlShown"></a><span class="summary-sig"><span class="summary-sig-name">IsCellEditControlShown</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsCurrentCellReadOnly"></a><span class="summary-sig"><span class="summary-sig-name">IsCurrentCellReadOnly</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsEditable"></a><span class="summary-sig"><span class="summary-sig-name">IsEditable</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsInSelection"></a><span class="summary-sig"><span class="summary-sig-name">IsInSelection</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsReadOnly"></a><span class="summary-sig"><span class="summary-sig-name">IsReadOnly</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsSelection"></a><span class="summary-sig"><span class="summary-sig-name">IsSelection</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsVisible"></a><span class="summary-sig"><span class="summary-sig-name">IsVisible</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>wholeCellVisible</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MakeCellVisible"></a><span class="summary-sig"><span class="summary-sig-name">MakeCellVisible</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="MoveCursorDown"></a><span class="summary-sig"><span class="summary-sig-name">MoveCursorDown</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expandSelection</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="MoveCursorDownBlock"></a><span class="summary-sig"><span class="summary-sig-name">MoveCursorDownBlock</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expandSelection</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="MoveCursorLeft"></a><span class="summary-sig"><span class="summary-sig-name">MoveCursorLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expandSelection</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="MoveCursorLeftBlock"></a><span class="summary-sig"><span class="summary-sig-name">MoveCursorLeftBlock</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expandSelection</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="MoveCursorRight"></a><span class="summary-sig"><span class="summary-sig-name">MoveCursorRight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expandSelection</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="MoveCursorRightBlock"></a><span class="summary-sig"><span class="summary-sig-name">MoveCursorRightBlock</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expandSelection</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="MoveCursorUp"></a><span class="summary-sig"><span class="summary-sig-name">MoveCursorUp</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expandSelection</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="MoveCursorUpBlock"></a><span class="summary-sig"><span class="summary-sig-name">MoveCursorUpBlock</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expandSelection</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="MovePageDown"></a><span class="summary-sig"><span class="summary-sig-name">MovePageDown</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="MovePageUp"></a><span class="summary-sig"><span class="summary-sig-name">MovePageUp</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#ProcessTableMessage" class="summary-sig-name"><code>ProcessTableMessage</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+ProcessTableMessage(self, GridTableMessage ?) -&gt; bool</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RegisterDataType"></a><span class="summary-sig"><span class="summary-sig-name">RegisterDataType</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>typeName</span>,
+          <span class=summary-sig-arg>renderer</span>,
+          <span class=summary-sig-arg>editor</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SaveEditControlValue"></a><span class="summary-sig"><span class="summary-sig-name">SaveEditControlValue</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SelectAll"></a><span class="summary-sig"><span class="summary-sig-name">SelectAll</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SelectBlock"></a><span class="summary-sig"><span class="summary-sig-name">SelectBlock</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>topRow</span>,
+          <span class=summary-sig-arg>leftCol</span>,
+          <span class=summary-sig-arg>bottomRow</span>,
+          <span class=summary-sig-arg>rightCol</span>,
+          <span class=summary-sig-arg>addToSelected</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SelectCol"></a><span class="summary-sig"><span class="summary-sig-name">SelectCol</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>addToSelected</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SelectRow"></a><span class="summary-sig"><span class="summary-sig-name">SelectRow</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>addToSelected</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAttr"></a><span class="summary-sig"><span class="summary-sig-name">SetAttr</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>attr</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCellAlignment"></a><span class="summary-sig"><span class="summary-sig-name">SetCellAlignment</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>horiz</span>,
+          <span class=summary-sig-arg>vert</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetCellBackgroundColour" class="summary-sig-name"><code>SetCellBackgroundColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetCellBackgroundColour(self, int row, int col, Colour ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCellEditor"></a><span class="summary-sig"><span class="summary-sig-name">SetCellEditor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>editor</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetCellFont" class="summary-sig-name"><code>SetCellFont</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetCellFont(self, int row, int col, Font ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetCellHighlightColour" class="summary-sig-name"><code>SetCellHighlightColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetCellHighlightColour(self, Colour ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCellHighlightPenWidth"></a><span class="summary-sig"><span class="summary-sig-name">SetCellHighlightPenWidth</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCellHighlightROPenWidth"></a><span class="summary-sig"><span class="summary-sig-name">SetCellHighlightROPenWidth</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCellOverflow"></a><span class="summary-sig"><span class="summary-sig-name">SetCellOverflow</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>allow</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCellRenderer"></a><span class="summary-sig"><span class="summary-sig-name">SetCellRenderer</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>renderer</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCellSize"></a><span class="summary-sig"><span class="summary-sig-name">SetCellSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>num_rows</span>,
+          <span class=summary-sig-arg>num_cols</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetCellTextColour" class="summary-sig-name"><code>SetCellTextColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetCellTextColour(self, int row, int col, Colour ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCellValue"></a><span class="summary-sig"><span class="summary-sig-name">SetCellValue</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>s</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColAttr"></a><span class="summary-sig"><span class="summary-sig-name">SetColAttr</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>attr</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColFormatBool"></a><span class="summary-sig"><span class="summary-sig-name">SetColFormatBool</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColFormatCustom"></a><span class="summary-sig"><span class="summary-sig-name">SetColFormatCustom</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>typeName</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColFormatFloat"></a><span class="summary-sig"><span class="summary-sig-name">SetColFormatFloat</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>precision</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColFormatNumber"></a><span class="summary-sig"><span class="summary-sig-name">SetColFormatNumber</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColLabelAlignment"></a><span class="summary-sig"><span class="summary-sig-name">SetColLabelAlignment</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>horiz</span>,
+          <span class=summary-sig-arg>vert</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColLabelSize"></a><span class="summary-sig"><span class="summary-sig-name">SetColLabelSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColLabelTextOrientation"></a><span class="summary-sig"><span class="summary-sig-name">SetColLabelTextOrientation</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>textOrientation</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetColLabelValue" class="summary-sig-name"><code>SetColLabelValue</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetColLabelValue(self, int col, String ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColMinimalAcceptableWidth"></a><span class="summary-sig"><span class="summary-sig-name">SetColMinimalAcceptableWidth</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColMinimalWidth"></a><span class="summary-sig"><span class="summary-sig-name">SetColMinimalWidth</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColPos"></a><span class="summary-sig"><span class="summary-sig-name">SetColPos</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colID</span>,
+          <span class=summary-sig-arg>newPos</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColSize"></a><span class="summary-sig"><span class="summary-sig-name">SetColSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDefaultCellAlignment"></a><span class="summary-sig"><span class="summary-sig-name">SetDefaultCellAlignment</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>horiz</span>,
+          <span class=summary-sig-arg>vert</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultCellBackgroundColour" class="summary-sig-name"><code>SetDefaultCellBackgroundColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetDefaultCellBackgroundColour(self, Colour ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultCellFont" class="summary-sig-name"><code>SetDefaultCellFont</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetDefaultCellFont(self, Font ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDefaultCellOverflow"></a><span class="summary-sig"><span class="summary-sig-name">SetDefaultCellOverflow</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>allow</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultCellTextColour" class="summary-sig-name"><code>SetDefaultCellTextColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetDefaultCellTextColour(self, Colour ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDefaultColSize"></a><span class="summary-sig"><span class="summary-sig-name">SetDefaultColSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>resizeExistingCols</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDefaultEditor"></a><span class="summary-sig"><span class="summary-sig-name">SetDefaultEditor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>editor</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDefaultRenderer"></a><span class="summary-sig"><span class="summary-sig-name">SetDefaultRenderer</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>renderer</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDefaultRowSize"></a><span class="summary-sig"><span class="summary-sig-name">SetDefaultRowSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>height</span>,
+          <span class=summary-sig-arg>resizeExistingRows</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetGridCursor"></a><span class="summary-sig"><span class="summary-sig-name">SetGridCursor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetGridLineColour" class="summary-sig-name"><code>SetGridLineColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetGridLineColour(self, Colour ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetLabelBackgroundColour" class="summary-sig-name"><code>SetLabelBackgroundColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetLabelBackgroundColour(self, Colour ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetLabelFont" class="summary-sig-name"><code>SetLabelFont</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetLabelFont(self, Font ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetLabelTextColour" class="summary-sig-name"><code>SetLabelTextColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetLabelTextColour(self, Colour ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMargins"></a><span class="summary-sig"><span class="summary-sig-name">SetMargins</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>extraWidth</span>,
+          <span class=summary-sig-arg>extraHeight</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetReadOnly"></a><span class="summary-sig"><span class="summary-sig-name">SetReadOnly</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>isReadOnly</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRowAttr"></a><span class="summary-sig"><span class="summary-sig-name">SetRowAttr</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>attr</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRowLabelAlignment"></a><span class="summary-sig"><span class="summary-sig-name">SetRowLabelAlignment</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>horiz</span>,
+          <span class=summary-sig-arg>vert</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRowLabelSize"></a><span class="summary-sig"><span class="summary-sig-name">SetRowLabelSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetRowLabelValue" class="summary-sig-name"><code>SetRowLabelValue</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+SetRowLabelValue(self, int row, String ?)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRowMinimalAcceptableHeight"></a><span class="summary-sig"><span class="summary-sig-name">SetRowMinimalAcceptableHeight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRowMinimalHeight"></a><span class="summary-sig"><span class="summary-sig-name">SetRowMinimalHeight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRowSize"></a><span class="summary-sig"><span class="summary-sig-name">SetRowSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetScrollLineX"></a><span class="summary-sig"><span class="summary-sig-name">SetScrollLineX</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetScrollLineY"></a><span class="summary-sig"><span class="summary-sig-name">SetScrollLineY</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSelectionBackground"></a><span class="summary-sig"><span class="summary-sig-name">SetSelectionBackground</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>c</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSelectionForeground"></a><span class="summary-sig"><span class="summary-sig-name">SetSelectionForeground</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>c</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSelectionMode"></a><span class="summary-sig"><span class="summary-sig-name">SetSelectionMode</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>selmode</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="SetTable"></a><span class="summary-sig"><span class="summary-sig-name">SetTable</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>table</span>,
+          <span class=summary-sig-arg>takeOwnership</span>,
+          <span class=summary-sig-arg>selmode</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ShowCellEditControl"></a><span class="summary-sig"><span class="summary-sig-name">ShowCellEditControl</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="XToCol"></a><span class="summary-sig"><span class="summary-sig-name">XToCol</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>clipToMinMax</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="XToEdgeOfCol"></a><span class="summary-sig"><span class="summary-sig-name">XToEdgeOfCol</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridCellCoords</font></td>
+  <td><code><a name="XYToCell"></a><span class="summary-sig"><span class="summary-sig-name">XYToCell</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="YToEdgeOfRow"></a><span class="summary-sig"><span class="summary-sig-name">YToEdgeOfRow</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="YToRow"></a><span class="summary-sig"><span class="summary-sig-name">YToRow</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#BatchCount"><code>BatchCount</code></a></b>: See <a href="wx.grid.Grid-class.html#GetBatchCount" class="link"><code>GetBatchCount</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#CellHighlightColour"><code>CellHighlightColour</code></a></b>: See <a href="wx.grid.Grid-class.html#GetCellHighlightColour" class="link"><code>GetCellHighlightColour</code></a> and <a href="wx.grid.Grid-class.html#SetCellHighlightColour" class="link"><code>SetCellHighlightColour</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#CellHighlightPenWidth"><code>CellHighlightPenWidth</code></a></b>: See <a href="wx.grid.Grid-class.html#GetCellHighlightPenWidth" class="link"><code>GetCellHighlightPenWidth</code></a> and <a href="wx.grid.Grid-class.html#SetCellHighlightPenWidth" class="link"><code>SetCellHighlightPenWidth</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#CellHighlightROPenWidth"><code>CellHighlightROPenWidth</code></a></b>: See <a href="wx.grid.Grid-class.html#GetCellHighlightROPenWidth" class="link"><code>GetCellHighlightROPenWidth</code></a> and <a href="wx.grid.Grid-class.html#SetCellHighlightROPenWidth" class="link"><code>SetCellHighlightROPenWidth</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#CellSize"><code>CellSize</code></a></b>: See <a href="wx.grid.Grid-class.html#GetCellSize" class="link"><code>GetCellSize</code></a> and <a href="wx.grid.Grid-class.html#SetCellSize" class="link"><code>SetCellSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#ColLabelAlignment"><code>ColLabelAlignment</code></a></b>: See <a href="wx.grid.Grid-class.html#GetColLabelAlignment" class="link"><code>GetColLabelAlignment</code></a> and <a href="wx.grid.Grid-class.html#SetColLabelAlignment" class="link"><code>SetColLabelAlignment</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#ColLabelSize"><code>ColLabelSize</code></a></b>: See <a href="wx.grid.Grid-class.html#GetColLabelSize" class="link"><code>GetColLabelSize</code></a> and <a href="wx.grid.Grid-class.html#SetColLabelSize" class="link"><code>SetColLabelSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#ColLabelTextOrientation"><code>ColLabelTextOrientation</code></a></b>: See <a href="wx.grid.Grid-class.html#GetColLabelTextOrientation" class="link"><code>GetColLabelTextOrientation</code></a> and <a href="wx.grid.Grid-class.html#SetColLabelTextOrientation" class="link"><code>SetColLabelTextOrientation</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#ColMinimalAcceptableWidth"><code>ColMinimalAcceptableWidth</code></a></b>: See <a href="wx.grid.Grid-class.html#GetColMinimalAcceptableWidth" class="link"><code>GetColMinimalAcceptableWidth</code></a> and <a href="wx.grid.Grid-class.html#SetColMinimalAcceptableWidth" class="link"><code>SetColMinimalAcceptableWidth</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultCellAlignment"><code>DefaultCellAlignment</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultCellAlignment" class="link"><code>GetDefaultCellAlignment</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultCellAlignment" class="link"><code>SetDefaultCellAlignment</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultCellBackgroundColour"><code>DefaultCellBackgroundColour</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultCellBackgroundColour" class="link"><code>GetDefaultCellBackgroundColour</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultCellBackgroundColour" class="link"><code>SetDefaultCellBackgroundColour</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultCellFont"><code>DefaultCellFont</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultCellFont" class="link"><code>GetDefaultCellFont</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultCellFont" class="link"><code>SetDefaultCellFont</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultCellOverflow"><code>DefaultCellOverflow</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultCellOverflow" class="link"><code>GetDefaultCellOverflow</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultCellOverflow" class="link"><code>SetDefaultCellOverflow</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultCellTextColour"><code>DefaultCellTextColour</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultCellTextColour" class="link"><code>GetDefaultCellTextColour</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultCellTextColour" class="link"><code>SetDefaultCellTextColour</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultColLabelSize"><code>DefaultColLabelSize</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultColLabelSize" class="link"><code>GetDefaultColLabelSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultColSize"><code>DefaultColSize</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultColSize" class="link"><code>GetDefaultColSize</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultColSize" class="link"><code>SetDefaultColSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultEditor"><code>DefaultEditor</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultEditor" class="link"><code>GetDefaultEditor</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultEditor" class="link"><code>SetDefaultEditor</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultGridLinePen"><code>DefaultGridLinePen</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultGridLinePen" class="link"><code>GetDefaultGridLinePen</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultRenderer"><code>DefaultRenderer</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultRenderer" class="link"><code>GetDefaultRenderer</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultRenderer" class="link"><code>SetDefaultRenderer</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultRowLabelSize"><code>DefaultRowLabelSize</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultRowLabelSize" class="link"><code>GetDefaultRowLabelSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#DefaultRowSize"><code>DefaultRowSize</code></a></b>: See <a href="wx.grid.Grid-class.html#GetDefaultRowSize" class="link"><code>GetDefaultRowSize</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultRowSize" class="link"><code>SetDefaultRowSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#GridColLabelWindow"><code>GridColLabelWindow</code></a></b>: See <a href="wx.grid.Grid-class.html#GetGridColLabelWindow" class="link"><code>GetGridColLabelWindow</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#GridCornerLabelWindow"><code>GridCornerLabelWindow</code></a></b>: See <a href="wx.grid.Grid-class.html#GetGridCornerLabelWindow" class="link"><code>GetGridCornerLabelWindow</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#GridCursorCol"><code>GridCursorCol</code></a></b>: See <a href="wx.grid.Grid-class.html#GetGridCursorCol" class="link"><code>GetGridCursorCol</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#GridCursorRow"><code>GridCursorRow</code></a></b>: See <a href="wx.grid.Grid-class.html#GetGridCursorRow" class="link"><code>GetGridCursorRow</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#GridLineColour"><code>GridLineColour</code></a></b>: See <a href="wx.grid.Grid-class.html#GetGridLineColour" class="link"><code>GetGridLineColour</code></a> and <a href="wx.grid.Grid-class.html#SetGridLineColour" class="link"><code>SetGridLineColour</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#GridRowLabelWindow"><code>GridRowLabelWindow</code></a></b>: See <a href="wx.grid.Grid-class.html#GetGridRowLabelWindow" class="link"><code>GetGridRowLabelWindow</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#GridWindow"><code>GridWindow</code></a></b>: See <a href="wx.grid.Grid-class.html#GetGridWindow" class="link"><code>GetGridWindow</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#LabelBackgroundColour"><code>LabelBackgroundColour</code></a></b>: See <a href="wx.grid.Grid-class.html#GetLabelBackgroundColour" class="link"><code>GetLabelBackgroundColour</code></a> and <a href="wx.grid.Grid-class.html#SetLabelBackgroundColour" class="link"><code>SetLabelBackgroundColour</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#LabelFont"><code>LabelFont</code></a></b>: See <a href="wx.grid.Grid-class.html#GetLabelFont" class="link"><code>GetLabelFont</code></a> and <a href="wx.grid.Grid-class.html#SetLabelFont" class="link"><code>SetLabelFont</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#LabelTextColour"><code>LabelTextColour</code></a></b>: See <a href="wx.grid.Grid-class.html#GetLabelTextColour" class="link"><code>GetLabelTextColour</code></a> and <a href="wx.grid.Grid-class.html#SetLabelTextColour" class="link"><code>SetLabelTextColour</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#NumberCols"><code>NumberCols</code></a></b>: See <a href="wx.grid.Grid-class.html#GetNumberCols" class="link"><code>GetNumberCols</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#NumberRows"><code>NumberRows</code></a></b>: See <a href="wx.grid.Grid-class.html#GetNumberRows" class="link"><code>GetNumberRows</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#RowLabelAlignment"><code>RowLabelAlignment</code></a></b>: See <a href="wx.grid.Grid-class.html#GetRowLabelAlignment" class="link"><code>GetRowLabelAlignment</code></a> and <a href="wx.grid.Grid-class.html#SetRowLabelAlignment" class="link"><code>SetRowLabelAlignment</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#RowLabelSize"><code>RowLabelSize</code></a></b>: See <a href="wx.grid.Grid-class.html#GetRowLabelSize" class="link"><code>GetRowLabelSize</code></a> and <a href="wx.grid.Grid-class.html#SetRowLabelSize" class="link"><code>SetRowLabelSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#RowMinimalAcceptableHeight"><code>RowMinimalAcceptableHeight</code></a></b>: See <a href="wx.grid.Grid-class.html#GetRowMinimalAcceptableHeight" class="link"><code>GetRowMinimalAcceptableHeight</code></a> and <a href="wx.grid.Grid-class.html#SetRowMinimalAcceptableHeight" class="link"><code>SetRowMinimalAcceptableHeight</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#ScrollLineX"><code>ScrollLineX</code></a></b>: See <a href="wx.grid.Grid-class.html#GetScrollLineX" class="link"><code>GetScrollLineX</code></a> and <a href="wx.grid.Grid-class.html#SetScrollLineX" class="link"><code>SetScrollLineX</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#ScrollLineY"><code>ScrollLineY</code></a></b>: See <a href="wx.grid.Grid-class.html#GetScrollLineY" class="link"><code>GetScrollLineY</code></a> and <a href="wx.grid.Grid-class.html#SetScrollLineY" class="link"><code>SetScrollLineY</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#SelectedCells"><code>SelectedCells</code></a></b>: See <a href="wx.grid.Grid-class.html#GetSelectedCells" class="link"><code>GetSelectedCells</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#SelectedCols"><code>SelectedCols</code></a></b>: See <a href="wx.grid.Grid-class.html#GetSelectedCols" class="link"><code>GetSelectedCols</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#SelectedRows"><code>SelectedRows</code></a></b>: See <a href="wx.grid.Grid-class.html#GetSelectedRows" class="link"><code>GetSelectedRows</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#SelectionBackground"><code>SelectionBackground</code></a></b>: See <a href="wx.grid.Grid-class.html#GetSelectionBackground" class="link"><code>GetSelectionBackground</code></a> and <a href="wx.grid.Grid-class.html#SetSelectionBackground" class="link"><code>SetSelectionBackground</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#SelectionBlockBottomRight"><code>SelectionBlockBottomRight</code></a></b>: See <a href="wx.grid.Grid-class.html#GetSelectionBlockBottomRight" class="link"><code>GetSelectionBlockBottomRight</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#SelectionBlockTopLeft"><code>SelectionBlockTopLeft</code></a></b>: See <a href="wx.grid.Grid-class.html#GetSelectionBlockTopLeft" class="link"><code>GetSelectionBlockTopLeft</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#SelectionForeground"><code>SelectionForeground</code></a></b>: See <a href="wx.grid.Grid-class.html#GetSelectionForeground" class="link"><code>GetSelectionForeground</code></a> and <a href="wx.grid.Grid-class.html#SetSelectionForeground" class="link"><code>SetSelectionForeground</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#SelectionMode"><code>SelectionMode</code></a></b>: See <a href="wx.grid.Grid-class.html#GetSelectionMode" class="link"><code>GetSelectionMode</code></a> and <a href="wx.grid.Grid-class.html#SetSelectionMode" class="link"><code>SetSelectionMode</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#Table"><code>Table</code></a></b>: See <a href="wx.grid.Grid-class.html#GetTable" class="link"><code>GetTable</code></a> and <a href="wx.grid.Grid-class.html#SetTable" class="link"><code>SetTable</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.grid.Grid-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.grid.Grid-class.html#SelectCells"><code>SelectCells</code></a></b> = <span title="0">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.grid.Grid-class.html#SelectColumns"><code>SelectColumns</code></a></b> = <span title="2">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.grid.Grid-class.html#SelectRows"><code>SelectRows</code></a></b> = <span title="1">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.grid.Grid-class.html#wxGridSelectCells"><code>wxGridSelectCells</code></a></b> = <span title="0">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.grid.Grid-class.html#wxGridSelectColumns"><code>wxGridSelectColumns</code></a></b> = <span title="2">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.grid.Grid-class.html#wxGridSelectRows"><code>wxGridSelectRows</code></a></b> = <span title="1">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>WANTS_CHARS</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>wxPyGridNameStr</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Construct and show a generic Window.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Window      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.ScrolledWindow-class.html#__init__"><code>wx.ScrolledWindow.__init__</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>WANTS_CHARS</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>wxPyGridNameStr</span>)</span>
+  </h3>
+<p>Create the GUI part of the Window for 2-phase creation mode.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.ScrolledWindow-class.html#Create"><code>wx.ScrolledWindow.Create</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawTextRectangle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawTextRectangle</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<dl class="rst-docutils">
+<dt>DrawTextRectangle(self, DC dc, String ?, Rect ?, int horizontalAlignment=LEFT, </dt>
+<dd>int verticalAlignment=TOP, int textOrientation=HORIZONTAL)</dd>
+</dl>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessTableMessage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessTableMessage</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>ProcessTableMessage(self, GridTableMessage ?) -&gt; bool</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCellBackgroundColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCellBackgroundColour</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetCellBackgroundColour(self, int row, int col, Colour ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCellFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCellFont</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetCellFont(self, int row, int col, Font ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCellHighlightColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCellHighlightColour</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetCellHighlightColour(self, Colour ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCellTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCellTextColour</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetCellTextColour(self, int row, int col, Colour ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetColLabelValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetColLabelValue</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetColLabelValue(self, int col, String ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDefaultCellBackgroundColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDefaultCellBackgroundColour</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetDefaultCellBackgroundColour(self, Colour ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDefaultCellFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDefaultCellFont</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetDefaultCellFont(self, Font ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDefaultCellTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDefaultCellTextColour</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetDefaultCellTextColour(self, Colour ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGridLineColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGridLineColour</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetGridLineColour(self, Colour ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLabelBackgroundColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLabelBackgroundColour</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetLabelBackgroundColour(self, Colour ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLabelFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLabelFont</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetLabelFont(self, Font ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLabelTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLabelTextColour</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetLabelTextColour(self, Colour ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRowLabelValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRowLabelValue</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>SetRowLabelValue(self, int row, String ?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="GetClassDefaultAttributes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClassDefaultAttributes</span>(<span class=sig-arg>variant</span>=<span class=sig-default>WINDOW_VARIANT_NORMAL</span>)</span>
+  </h3>
+<p>Get the default attributes for this class.  This is useful if you want
+to use the same font or colour in your own control as in a standard
+control -- which is a much better idea than hard coding specific
+colours or fonts which might look completely out of place on the
+user's system, especially if it uses themes.</p>
+<p>The variant parameter is only relevant under Mac currently and is
+ignore under other platforms. Under Mac, it will change the size of
+the returned font. See <a href="wx.Window-class.html#SetWindowVariant" class="link"><code>wx.Window.SetWindowVariant</code></a> for more about
+this.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>variant</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+VisualAttributes      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BatchCount"></a>
+<h3>BatchCount</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetBatchCount" class="link"><code>GetBatchCount</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetBatchCount" class="summary-sig-name"><code>GetBatchCount</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="CellHighlightColour"></a>
+<h3>CellHighlightColour</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetCellHighlightColour" class="link"><code>GetCellHighlightColour</code></a> and <a href="wx.grid.Grid-class.html#SetCellHighlightColour" class="link"><code>SetCellHighlightColour</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetCellHighlightColour" class="summary-sig-name"><code>GetCellHighlightColour</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetCellHighlightColour" class="summary-sig-name"><code>SetCellHighlightColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="CellHighlightPenWidth"></a>
+<h3>CellHighlightPenWidth</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetCellHighlightPenWidth" class="link"><code>GetCellHighlightPenWidth</code></a> and <a href="wx.grid.Grid-class.html#SetCellHighlightPenWidth" class="link"><code>SetCellHighlightPenWidth</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetCellHighlightPenWidth" class="summary-sig-name"><code>GetCellHighlightPenWidth</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetCellHighlightPenWidth" class="summary-sig-name"><code>SetCellHighlightPenWidth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="CellHighlightROPenWidth"></a>
+<h3>CellHighlightROPenWidth</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetCellHighlightROPenWidth" class="link"><code>GetCellHighlightROPenWidth</code></a> and <a href="wx.grid.Grid-class.html#SetCellHighlightROPenWidth" class="link"><code>SetCellHighlightROPenWidth</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetCellHighlightROPenWidth" class="summary-sig-name"><code>GetCellHighlightROPenWidth</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetCellHighlightROPenWidth" class="summary-sig-name"><code>SetCellHighlightROPenWidth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="CellSize"></a>
+<h3>CellSize</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetCellSize" class="link"><code>GetCellSize</code></a> and <a href="wx.grid.Grid-class.html#SetCellSize" class="link"><code>SetCellSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetCellSize" class="summary-sig-name"><code>GetCellSize</code></a>(<span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetCellSize" class="summary-sig-name"><code>SetCellSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>num_rows</span>,
+          <span class=summary-sig-arg>num_cols</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ColLabelAlignment"></a>
+<h3>ColLabelAlignment</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetColLabelAlignment" class="link"><code>GetColLabelAlignment</code></a> and <a href="wx.grid.Grid-class.html#SetColLabelAlignment" class="link"><code>SetColLabelAlignment</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetColLabelAlignment" class="summary-sig-name"><code>GetColLabelAlignment</code></a>()</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetColLabelAlignment" class="summary-sig-name"><code>SetColLabelAlignment</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>horiz</span>,
+          <span class=summary-sig-arg>vert</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ColLabelSize"></a>
+<h3>ColLabelSize</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetColLabelSize" class="link"><code>GetColLabelSize</code></a> and <a href="wx.grid.Grid-class.html#SetColLabelSize" class="link"><code>SetColLabelSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetColLabelSize" class="summary-sig-name"><code>GetColLabelSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetColLabelSize" class="summary-sig-name"><code>SetColLabelSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>height</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ColLabelTextOrientation"></a>
+<h3>ColLabelTextOrientation</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetColLabelTextOrientation" class="link"><code>GetColLabelTextOrientation</code></a> and <a href="wx.grid.Grid-class.html#SetColLabelTextOrientation" class="link"><code>SetColLabelTextOrientation</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetColLabelTextOrientation" class="summary-sig-name"><code>GetColLabelTextOrientation</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetColLabelTextOrientation" class="summary-sig-name"><code>SetColLabelTextOrientation</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>textOrientation</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ColMinimalAcceptableWidth"></a>
+<h3>ColMinimalAcceptableWidth</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetColMinimalAcceptableWidth" class="link"><code>GetColMinimalAcceptableWidth</code></a> and <a href="wx.grid.Grid-class.html#SetColMinimalAcceptableWidth" class="link"><code>SetColMinimalAcceptableWidth</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetColMinimalAcceptableWidth" class="summary-sig-name"><code>GetColMinimalAcceptableWidth</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetColMinimalAcceptableWidth" class="summary-sig-name"><code>SetColMinimalAcceptableWidth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultCellAlignment"></a>
+<h3>DefaultCellAlignment</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultCellAlignment" class="link"><code>GetDefaultCellAlignment</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultCellAlignment" class="link"><code>SetDefaultCellAlignment</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultCellAlignment" class="summary-sig-name"><code>GetDefaultCellAlignment</code></a>()</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultCellAlignment" class="summary-sig-name"><code>SetDefaultCellAlignment</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>horiz</span>,
+          <span class=summary-sig-arg>vert</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultCellBackgroundColour"></a>
+<h3>DefaultCellBackgroundColour</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultCellBackgroundColour" class="link"><code>GetDefaultCellBackgroundColour</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultCellBackgroundColour" class="link"><code>SetDefaultCellBackgroundColour</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultCellBackgroundColour" class="summary-sig-name"><code>GetDefaultCellBackgroundColour</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultCellBackgroundColour" class="summary-sig-name"><code>SetDefaultCellBackgroundColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultCellFont"></a>
+<h3>DefaultCellFont</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultCellFont" class="link"><code>GetDefaultCellFont</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultCellFont" class="link"><code>SetDefaultCellFont</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultCellFont" class="summary-sig-name"><code>GetDefaultCellFont</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultCellFont" class="summary-sig-name"><code>SetDefaultCellFont</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultCellOverflow"></a>
+<h3>DefaultCellOverflow</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultCellOverflow" class="link"><code>GetDefaultCellOverflow</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultCellOverflow" class="link"><code>SetDefaultCellOverflow</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultCellOverflow" class="summary-sig-name"><code>GetDefaultCellOverflow</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultCellOverflow" class="summary-sig-name"><code>SetDefaultCellOverflow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>allow</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultCellTextColour"></a>
+<h3>DefaultCellTextColour</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultCellTextColour" class="link"><code>GetDefaultCellTextColour</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultCellTextColour" class="link"><code>SetDefaultCellTextColour</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultCellTextColour" class="summary-sig-name"><code>GetDefaultCellTextColour</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultCellTextColour" class="summary-sig-name"><code>SetDefaultCellTextColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultColLabelSize"></a>
+<h3>DefaultColLabelSize</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultColLabelSize" class="link"><code>GetDefaultColLabelSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultColLabelSize" class="summary-sig-name"><code>GetDefaultColLabelSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultColSize"></a>
+<h3>DefaultColSize</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultColSize" class="link"><code>GetDefaultColSize</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultColSize" class="link"><code>SetDefaultColSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultColSize" class="summary-sig-name"><code>GetDefaultColSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultColSize" class="summary-sig-name"><code>SetDefaultColSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>resizeExistingCols</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultEditor"></a>
+<h3>DefaultEditor</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultEditor" class="link"><code>GetDefaultEditor</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultEditor" class="link"><code>SetDefaultEditor</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultEditor" class="summary-sig-name"><code>GetDefaultEditor</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultEditor" class="summary-sig-name"><code>SetDefaultEditor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>editor</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultGridLinePen"></a>
+<h3>DefaultGridLinePen</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultGridLinePen" class="link"><code>GetDefaultGridLinePen</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultGridLinePen" class="summary-sig-name"><code>GetDefaultGridLinePen</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultRenderer"></a>
+<h3>DefaultRenderer</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultRenderer" class="link"><code>GetDefaultRenderer</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultRenderer" class="link"><code>SetDefaultRenderer</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultRenderer" class="summary-sig-name"><code>GetDefaultRenderer</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultRenderer" class="summary-sig-name"><code>SetDefaultRenderer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>renderer</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultRowLabelSize"></a>
+<h3>DefaultRowLabelSize</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultRowLabelSize" class="link"><code>GetDefaultRowLabelSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultRowLabelSize" class="summary-sig-name"><code>GetDefaultRowLabelSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DefaultRowSize"></a>
+<h3>DefaultRowSize</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetDefaultRowSize" class="link"><code>GetDefaultRowSize</code></a> and <a href="wx.grid.Grid-class.html#SetDefaultRowSize" class="link"><code>SetDefaultRowSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetDefaultRowSize" class="summary-sig-name"><code>GetDefaultRowSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetDefaultRowSize" class="summary-sig-name"><code>SetDefaultRowSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>height</span>,
+          <span class=summary-sig-arg>resizeExistingRows</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="GridColLabelWindow"></a>
+<h3>GridColLabelWindow</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetGridColLabelWindow" class="link"><code>GetGridColLabelWindow</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetGridColLabelWindow" class="summary-sig-name"><code>GetGridColLabelWindow</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="GridCornerLabelWindow"></a>
+<h3>GridCornerLabelWindow</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetGridCornerLabelWindow" class="link"><code>GetGridCornerLabelWindow</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetGridCornerLabelWindow" class="summary-sig-name"><code>GetGridCornerLabelWindow</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="GridCursorCol"></a>
+<h3>GridCursorCol</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetGridCursorCol" class="link"><code>GetGridCursorCol</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetGridCursorCol" class="summary-sig-name"><code>GetGridCursorCol</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="GridCursorRow"></a>
+<h3>GridCursorRow</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetGridCursorRow" class="link"><code>GetGridCursorRow</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetGridCursorRow" class="summary-sig-name"><code>GetGridCursorRow</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="GridLineColour"></a>
+<h3>GridLineColour</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetGridLineColour" class="link"><code>GetGridLineColour</code></a> and <a href="wx.grid.Grid-class.html#SetGridLineColour" class="link"><code>SetGridLineColour</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetGridLineColour" class="summary-sig-name"><code>GetGridLineColour</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetGridLineColour" class="summary-sig-name"><code>SetGridLineColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="GridRowLabelWindow"></a>
+<h3>GridRowLabelWindow</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetGridRowLabelWindow" class="link"><code>GetGridRowLabelWindow</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetGridRowLabelWindow" class="summary-sig-name"><code>GetGridRowLabelWindow</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="GridWindow"></a>
+<h3>GridWindow</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetGridWindow" class="link"><code>GetGridWindow</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetGridWindow" class="summary-sig-name"><code>GetGridWindow</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="LabelBackgroundColour"></a>
+<h3>LabelBackgroundColour</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetLabelBackgroundColour" class="link"><code>GetLabelBackgroundColour</code></a> and <a href="wx.grid.Grid-class.html#SetLabelBackgroundColour" class="link"><code>SetLabelBackgroundColour</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetLabelBackgroundColour" class="summary-sig-name"><code>GetLabelBackgroundColour</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetLabelBackgroundColour" class="summary-sig-name"><code>SetLabelBackgroundColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="LabelFont"></a>
+<h3>LabelFont</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetLabelFont" class="link"><code>GetLabelFont</code></a> and <a href="wx.grid.Grid-class.html#SetLabelFont" class="link"><code>SetLabelFont</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetLabelFont" class="summary-sig-name"><code>GetLabelFont</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetLabelFont" class="summary-sig-name"><code>SetLabelFont</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="LabelTextColour"></a>
+<h3>LabelTextColour</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetLabelTextColour" class="link"><code>GetLabelTextColour</code></a> and <a href="wx.grid.Grid-class.html#SetLabelTextColour" class="link"><code>SetLabelTextColour</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetLabelTextColour" class="summary-sig-name"><code>GetLabelTextColour</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetLabelTextColour" class="summary-sig-name"><code>SetLabelTextColour</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NumberCols"></a>
+<h3>NumberCols</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetNumberCols" class="link"><code>GetNumberCols</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetNumberCols" class="summary-sig-name"><code>GetNumberCols</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NumberRows"></a>
+<h3>NumberRows</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetNumberRows" class="link"><code>GetNumberRows</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetNumberRows" class="summary-sig-name"><code>GetNumberRows</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="RowLabelAlignment"></a>
+<h3>RowLabelAlignment</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetRowLabelAlignment" class="link"><code>GetRowLabelAlignment</code></a> and <a href="wx.grid.Grid-class.html#SetRowLabelAlignment" class="link"><code>SetRowLabelAlignment</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetRowLabelAlignment" class="summary-sig-name"><code>GetRowLabelAlignment</code></a>()</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetRowLabelAlignment" class="summary-sig-name"><code>SetRowLabelAlignment</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>horiz</span>,
+          <span class=summary-sig-arg>vert</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="RowLabelSize"></a>
+<h3>RowLabelSize</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetRowLabelSize" class="link"><code>GetRowLabelSize</code></a> and <a href="wx.grid.Grid-class.html#SetRowLabelSize" class="link"><code>SetRowLabelSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetRowLabelSize" class="summary-sig-name"><code>GetRowLabelSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetRowLabelSize" class="summary-sig-name"><code>SetRowLabelSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="RowMinimalAcceptableHeight"></a>
+<h3>RowMinimalAcceptableHeight</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetRowMinimalAcceptableHeight" class="link"><code>GetRowMinimalAcceptableHeight</code></a> and <a href="wx.grid.Grid-class.html#SetRowMinimalAcceptableHeight" class="link"><code>SetRowMinimalAcceptableHeight</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetRowMinimalAcceptableHeight" class="summary-sig-name"><code>GetRowMinimalAcceptableHeight</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetRowMinimalAcceptableHeight" class="summary-sig-name"><code>SetRowMinimalAcceptableHeight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ScrollLineX"></a>
+<h3>ScrollLineX</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetScrollLineX" class="link"><code>GetScrollLineX</code></a> and <a href="wx.grid.Grid-class.html#SetScrollLineX" class="link"><code>SetScrollLineX</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetScrollLineX" class="summary-sig-name"><code>GetScrollLineX</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetScrollLineX" class="summary-sig-name"><code>SetScrollLineX</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ScrollLineY"></a>
+<h3>ScrollLineY</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetScrollLineY" class="link"><code>GetScrollLineY</code></a> and <a href="wx.grid.Grid-class.html#SetScrollLineY" class="link"><code>SetScrollLineY</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetScrollLineY" class="summary-sig-name"><code>GetScrollLineY</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetScrollLineY" class="summary-sig-name"><code>SetScrollLineY</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>y</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SelectedCells"></a>
+<h3>SelectedCells</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetSelectedCells" class="link"><code>GetSelectedCells</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetSelectedCells" class="summary-sig-name"><code>GetSelectedCells</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SelectedCols"></a>
+<h3>SelectedCols</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetSelectedCols" class="link"><code>GetSelectedCols</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetSelectedCols" class="summary-sig-name"><code>GetSelectedCols</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SelectedRows"></a>
+<h3>SelectedRows</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetSelectedRows" class="link"><code>GetSelectedRows</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetSelectedRows" class="summary-sig-name"><code>GetSelectedRows</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SelectionBackground"></a>
+<h3>SelectionBackground</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetSelectionBackground" class="link"><code>GetSelectionBackground</code></a> and <a href="wx.grid.Grid-class.html#SetSelectionBackground" class="link"><code>SetSelectionBackground</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetSelectionBackground" class="summary-sig-name"><code>GetSelectionBackground</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetSelectionBackground" class="summary-sig-name"><code>SetSelectionBackground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>c</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SelectionBlockBottomRight"></a>
+<h3>SelectionBlockBottomRight</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetSelectionBlockBottomRight" class="link"><code>GetSelectionBlockBottomRight</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetSelectionBlockBottomRight" class="summary-sig-name"><code>GetSelectionBlockBottomRight</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SelectionBlockTopLeft"></a>
+<h3>SelectionBlockTopLeft</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetSelectionBlockTopLeft" class="link"><code>GetSelectionBlockTopLeft</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetSelectionBlockTopLeft" class="summary-sig-name"><code>GetSelectionBlockTopLeft</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SelectionForeground"></a>
+<h3>SelectionForeground</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetSelectionForeground" class="link"><code>GetSelectionForeground</code></a> and <a href="wx.grid.Grid-class.html#SetSelectionForeground" class="link"><code>SetSelectionForeground</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetSelectionForeground" class="summary-sig-name"><code>GetSelectionForeground</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetSelectionForeground" class="summary-sig-name"><code>SetSelectionForeground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>c</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="SelectionMode"></a>
+<h3>SelectionMode</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetSelectionMode" class="link"><code>GetSelectionMode</code></a> and <a href="wx.grid.Grid-class.html#SetSelectionMode" class="link"><code>SetSelectionMode</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetSelectionMode" class="summary-sig-name"><code>GetSelectionMode</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetSelectionMode" class="summary-sig-name"><code>SetSelectionMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>selmode</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Table"></a>
+<h3>Table</h3>
+<p>See <a href="wx.grid.Grid-class.html#GetTable" class="link"><code>GetTable</code></a> and <a href="wx.grid.Grid-class.html#SetTable" class="link"><code>SetTable</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#GetTable" class="summary-sig-name"><code>GetTable</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.grid.Grid-class.html#SetTable" class="summary-sig-name"><code>SetTable</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>table</span>,
+          <span class=summary-sig-arg>takeOwnership</span>,
+          <span class=summary-sig-arg>selmode</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1218333556</span>(...)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1218333500</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="SelectCells"></a>
+<h3>SelectCells</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="0">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="SelectColumns"></a>
+<h3>SelectColumns</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="2">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="SelectRows"></a>
+<h3>SelectRows</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="1">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="wxGridSelectCells"></a>
+<h3>wxGridSelectCells</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="0">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="wxGridSelectColumns"></a>
+<h3>wxGridSelectColumns</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="2">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="wxGridSelectRows"></a>
+<h3>wxGridSelectRows</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="1">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:55:45 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

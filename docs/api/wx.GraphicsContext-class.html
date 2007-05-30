@@ -1,0 +1,1478 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.GraphicsContext</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;GraphicsContext
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.GraphicsContext-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type GraphicsContext</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+<a href="wx.GraphicsObject-class.html"><code>GraphicsObject</code></a> --+
+                 |
+                <b>GraphicsContext</b>
+</pre><br />
+
+<hr/>
+
+<p>A <a href="wx.GraphicsContext-class.html" class="link"><code>wx.GraphicsContext</code></a> instance is the object that is drawn upon. It is
+created by a renderer using the CreateContext calls, this can be done
+either directly using a renderer instance, or indirectly using the
+static convenience CreateXXX functions of wx.GraphicsContext that
+always delegate the task to the default renderer.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1345048868"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#Clip" class="summary-sig-name"><code>Clip</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+<br />
+Clips drawings to the rectangle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#ClipRegion" class="summary-sig-name"><code>ClipRegion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>region</span>)</span></code>
+<br />
+Clips drawings to the region, combined to current clipping region.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#ConcatTransform" class="summary-sig-name"><code>ConcatTransform</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>matrix</span>)</span></code>
+<br />
+Concatenates the passed in transform with the current transform of
+this context.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsContext</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#Create" class="summary-sig-name"><code>Create</code></a>(<span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Create(Window window) -&gt; GraphicsContext    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsBrush</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#CreateBrush" class="summary-sig-name"><code>CreateBrush</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>brush</span>)</span></code>
+<br />
+Creates a native brush from a <a href="wx.Brush-class.html" class="link"><code>wx.Brush</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsFont</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#CreateFont" class="summary-sig-name"><code>CreateFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+<br />
+Creates a native graphics font from a <a href="wx.Font-class.html" class="link"><code>wx.Font</code></a> and a text colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsContext</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#CreateFromNative" class="summary-sig-name"><code>CreateFromNative</code></a>(<span class=summary-sig-arg>context</span>)</span></code>
+<br />
+Creates a wx.GraphicsContext from a native context.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsContext</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#CreateFromNativeWindow" class="summary-sig-name"><code>CreateFromNativeWindow</code></a>(<span class=summary-sig-arg>window</span>)</span></code>
+<br />
+Creates a wx.GraphicsContext from a native window.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsBrush</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#CreateLinearGradientBrush" class="summary-sig-name"><code>CreateLinearGradientBrush</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x1</span>,
+          <span class=summary-sig-arg>y1</span>,
+          <span class=summary-sig-arg>x2</span>,
+          <span class=summary-sig-arg>y2</span>,
+          <span class=summary-sig-arg>c1</span>,
+          <span class=summary-sig-arg>c2</span>)</span></code>
+<br />
+Creates a native brush, having a linear gradient, starting at (x1,y1)
+with color c1 to (x2,y2) with color c2.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsMatrix</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#CreateMatrix" class="summary-sig-name"><code>CreateMatrix</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>b</span>,
+          <span class=summary-sig-arg>c</span>,
+          <span class=summary-sig-arg>d</span>,
+          <span class=summary-sig-arg>tx</span>,
+          <span class=summary-sig-arg>ty</span>)</span></code>
+<br />
+Creates a native affine transformation matrix from the passed in
+values.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsContext</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#CreateMeasuringContext" class="summary-sig-name"><code>CreateMeasuringContext</code></a>()</span></code>
+<br />
+Create a lightwieght context that can be used for measuring text only.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsPath</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#CreatePath" class="summary-sig-name"><code>CreatePath</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Creates a native graphics path which is initially empty.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsPen</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#CreatePen" class="summary-sig-name"><code>CreatePen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pen</span>)</span></code>
+<br />
+Creates a native pen from a <a href="wx.Pen-class.html" class="link"><code>wx.Pen</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsBrush</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#CreateRadialGradientBrush" class="summary-sig-name"><code>CreateRadialGradientBrush</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>xo</span>,
+          <span class=summary-sig-arg>yo</span>,
+          <span class=summary-sig-arg>xc</span>,
+          <span class=summary-sig-arg>yc</span>,
+          <span class=summary-sig-arg>radius</span>,
+          <span class=summary-sig-arg>oColor</span>,
+          <span class=summary-sig-arg>cColor</span>)</span></code>
+<br />
+Creates a native brush, having a radial gradient originating at point
+(xo,yc) with color oColour and ends on a circle around (xc,yc) with
+radius r and color cColour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#DrawBitmap" class="summary-sig-name"><code>DrawBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+<br />
+Draws the bitmap.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#DrawEllipse" class="summary-sig-name"><code>DrawEllipse</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+<br />
+Draws an ellipse.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#DrawIcon" class="summary-sig-name"><code>DrawIcon</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>icon</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+<br />
+Draws the icon.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#DrawLines" class="summary-sig-name"><code>DrawLines</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>points</span>,
+          <span class=summary-sig-arg>fillStyle</span>)</span></code>
+<br />
+Draws a polygon.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#DrawPath" class="summary-sig-name"><code>DrawPath</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>,
+          <span class=summary-sig-arg>fillStyle</span>)</span></code>
+<br />
+Draws the path by first filling and then stroking.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#DrawRectangle" class="summary-sig-name"><code>DrawRectangle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+<br />
+Draws a rectangle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#DrawRotatedText" class="summary-sig-name"><code>DrawRotatedText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>str</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>angle</span>,
+          <span class=summary-sig-arg>backgroundBrush</span>)</span></code>
+<br />
+Draws a text string at the defined position, at the specified angle,
+which is given in radians.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#DrawRoundedRectangle" class="summary-sig-name"><code>DrawRoundedRectangle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Draws a rounded rectangle</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#DrawText" class="summary-sig-name"><code>DrawText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>str</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>backgroundBrush</span>)</span></code>
+<br />
+Draws a text string at the defined position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#FillPath" class="summary-sig-name"><code>FillPath</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>,
+          <span class=summary-sig-arg>fillStyle</span>)</span></code>
+<br />
+Fills a path with the current brush.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#GetFullTextExtent" class="summary-sig-name"><code>GetFullTextExtent</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+GetFullTextExtent(self, text) --&gt; (width, height, descent, externalLeading)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#GetLogicalFunction" class="summary-sig-name"><code>GetLogicalFunction</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the current logical function.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">void</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#GetNativeContext" class="summary-sig-name"><code>GetNativeContext</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the native context (CGContextRef for Core Graphics, Graphics
+pointer for GDIPlus and cairo_t pointer for cairo).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">[widths]</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#GetPartialTextExtents" class="summary-sig-name"><code>GetPartialTextExtents</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Returns a list of widths from the beginning of <tt class="rst-docutils literal"><span class="pre">text</span></tt> to the
+coresponding character in <tt class="rst-docutils literal"><span class="pre">text</span></tt>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#GetTextExtent" class="summary-sig-name"><code>GetTextExtent</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+GetTextExtent(self, text) --&gt; (width, height)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GraphicsMatrix</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#GetTransform" class="summary-sig-name"><code>GetTransform</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the current transformation matrix of this context.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#PopState" class="summary-sig-name"><code>PopState</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Pops a stored state from the stack</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#PushState" class="summary-sig-name"><code>PushState</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Push the current state of the context, (ie the transformation matrix)
+on a stack</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#ResetClip" class="summary-sig-name"><code>ResetClip</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Resets the clipping to original shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#Rotate" class="summary-sig-name"><code>Rotate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>angle</span>)</span></code>
+<br />
+Rotate the current transformation matrix of the context.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#Scale" class="summary-sig-name"><code>Scale</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>xScale</span>,
+          <span class=summary-sig-arg>yScale</span>)</span></code>
+<br />
+Scale the current transformation matrix of the context.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#SetBrush" class="summary-sig-name"><code>SetBrush</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>brush</span>)</span></code>
+<br />
+SetBrush(self, Brush brush)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#SetFont" class="summary-sig-name"><code>SetFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+<br />
+SetFont(self, Font font, Colour colour=*wxBLACK)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#SetLogicalFunction" class="summary-sig-name"><code>SetLogicalFunction</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>function</span>)</span></code>
+<br />
+Sets the current logical function, returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if it supported</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#SetPen" class="summary-sig-name"><code>SetPen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pen</span>)</span></code>
+<br />
+SetPen(self, Pen pen)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#SetTransform" class="summary-sig-name"><code>SetTransform</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>matrix</span>)</span></code>
+<br />
+Sets the current transform of this context.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#ShouldOffset" class="summary-sig-name"><code>ShouldOffset</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+helper to determine if a 0.5 offset should be applied for the drawing operation</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#StrokeLine" class="summary-sig-name"><code>StrokeLine</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x1</span>,
+          <span class=summary-sig-arg>y1</span>,
+          <span class=summary-sig-arg>x2</span>,
+          <span class=summary-sig-arg>y2</span>)</span></code>
+<br />
+Strokes a single line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#StrokeLines" class="summary-sig-name"><code>StrokeLines</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>points</span>)</span></code>
+<br />
+Stroke lines connecting each of the points</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#StrokeLineSegements" class="summary-sig-name"><code>StrokeLineSegements</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+StrokeLineSegments(self, List beginPoints, List endPoints)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#StrokePath" class="summary-sig-name"><code>StrokePath</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>)</span></code>
+<br />
+Strokes along a path with the current pen.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GraphicsContext-class.html#Translate" class="summary-sig-name"><code>Translate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dx</span>,
+          <span class=summary-sig-arg>dy</span>)</span></code>
+<br />
+Translates the current transformation matrix.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.GraphicsContext-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="Clip"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Clip</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>w</span>,
+          <span class=sig-arg>h</span>)</span>
+  </h3>
+<p>Clips drawings to the rectangle.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>w</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>h</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClipRegion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClipRegion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>region</span>)</span>
+  </h3>
+<p>Clips drawings to the region, combined to current clipping region.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>region</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Region)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ConcatTransform"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ConcatTransform</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>matrix</span>)</span>
+  </h3>
+<p>Concatenates the passed in transform with the current transform of
+this context.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>matrix</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GraphicsMatrix)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateBrush"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateBrush</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>brush</span>)</span>
+  </h3>
+<p>Creates a native brush from a <a href="wx.Brush-class.html" class="link"><code>wx.Brush</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>brush</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Brush)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsBrush      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>font</span>,
+          <span class=sig-arg>col</span>=<span class=sig-default>*wxBLACK</span>)</span>
+  </h3>
+<p>Creates a native graphics font from a <a href="wx.Font-class.html" class="link"><code>wx.Font</code></a> and a text colour.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>font</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Font)</i>
+<p/>
+      <dd><code><b>col</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsFont      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateLinearGradientBrush"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateLinearGradientBrush</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x1</span>,
+          <span class=sig-arg>y1</span>,
+          <span class=sig-arg>x2</span>,
+          <span class=sig-arg>y2</span>,
+          <span class=sig-arg>c1</span>,
+          <span class=sig-arg>c2</span>)</span>
+  </h3>
+<p>Creates a native brush, having a linear gradient, starting at (x1,y1)
+with color c1 to (x2,y2) with color c2.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>x2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>c1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      <dd><code><b>c2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsBrush      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateMatrix"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateMatrix</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>a</span>=<span class=sig-default>1.0</span>,
+          <span class=sig-arg>b</span>=<span class=sig-default>0.0</span>,
+          <span class=sig-arg>c</span>=<span class=sig-default>0.0</span>,
+          <span class=sig-arg>d</span>=<span class=sig-default>1.0</span>,
+          <span class=sig-arg>tx</span>=<span class=sig-default>0.0</span>,
+          <span class=sig-arg>ty</span>=<span class=sig-default>0.0</span>)</span>
+  </h3>
+<p>Creates a native affine transformation matrix from the passed in
+values. The defaults result in an identity matrix.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>a</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>b</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>c</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>d</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>tx</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>ty</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsMatrix      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreatePath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreatePath</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Creates a native graphics path which is initially empty.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsPath      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreatePen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreatePen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pen</span>)</span>
+  </h3>
+<p>Creates a native pen from a <a href="wx.Pen-class.html" class="link"><code>wx.Pen</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pen</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Pen)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsPen      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateRadialGradientBrush"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateRadialGradientBrush</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>xo</span>,
+          <span class=sig-arg>yo</span>,
+          <span class=sig-arg>xc</span>,
+          <span class=sig-arg>yc</span>,
+          <span class=sig-arg>radius</span>,
+          <span class=sig-arg>oColor</span>,
+          <span class=sig-arg>cColor</span>)</span>
+  </h3>
+<p>Creates a native brush, having a radial gradient originating at point
+(xo,yc) with color oColour and ends on a circle around (xc,yc) with
+radius r and color cColour.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>xo</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>yo</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>xc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>yc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>radius</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>oColor</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      <dd><code><b>cColor</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsBrush      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawBitmap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>w</span>,
+          <span class=sig-arg>h</span>)</span>
+  </h3>
+<p>Draws the bitmap. In case of a mono bitmap, this is treated as a mask
+and the current brush is used for filling.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>bmp</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>w</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>h</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawEllipse"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawEllipse</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>w</span>,
+          <span class=sig-arg>h</span>)</span>
+  </h3>
+<p>Draws an ellipse.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>w</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>h</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawIcon</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>icon</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>w</span>,
+          <span class=sig-arg>h</span>)</span>
+  </h3>
+<p>Draws the icon.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>icon</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Icon)</i>
+<p/>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>w</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>h</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawLines"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawLines</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>points</span>,
+          <span class=sig-arg>fillStyle</span>=<span class=sig-default>ODDEVEN_RULE</span>)</span>
+  </h3>
+<p>Draws a polygon.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>points</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=size_t)</i>
+<p/>
+      <dd><code><b>fillStyle</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawPath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawPath</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>,
+          <span class=sig-arg>fillStyle</span>=<span class=sig-default>ODDEVEN_RULE</span>)</span>
+  </h3>
+<p>Draws the path by first filling and then stroking.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>path</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GraphicsPath)</i>
+<p/>
+      <dd><code><b>fillStyle</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRectangle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRectangle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>w</span>,
+          <span class=sig-arg>h</span>)</span>
+  </h3>
+<p>Draws a rectangle.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>w</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>h</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRotatedText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRotatedText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>str</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>angle</span>,
+          <span class=sig-arg>backgroundBrush</span>=<span class=sig-default>NullGraphicsBrush</span>)</span>
+  </h3>
+<p>Draws a text string at the defined position, at the specified angle,
+which is given in radians.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>str</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>angle</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>backgroundBrush</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GraphicsBrush)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRoundedRectangle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRoundedRectangle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>w</span>,
+          <span class=sig-arg>h</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Draws a rounded rectangle</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>w</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>h</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>radius</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>str</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>backgroundBrush</span>=<span class=sig-default>NullGraphicsBrush</span>)</span>
+  </h3>
+<p>Draws a text string at the defined position.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>str</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>backgroundBrush</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GraphicsBrush)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FillPath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FillPath</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>,
+          <span class=sig-arg>fillStyle</span>=<span class=sig-default>ODDEVEN_RULE</span>)</span>
+  </h3>
+<p>Fills a path with the current brush.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>path</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GraphicsPath)</i>
+<p/>
+      <dd><code><b>fillStyle</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFullTextExtent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFullTextExtent</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>GetFullTextExtent(self, text) --&gt; (width, height, descent, externalLeading)</p>
+<p>Gets the dimensions of the string using the currently selected
+font. <tt class="rst-docutils literal"><span class="pre">text</span></tt> is the string to measure, <tt class="rst-docutils literal"><span class="pre">w</span></tt> and <tt class="rst-docutils literal"><span class="pre">h</span></tt> are the total
+width and height respectively, <tt class="rst-docutils literal"><span class="pre">descent</span></tt> is the dimension from the
+baseline of the font to the bottom of the descender, and
+<tt class="rst-docutils literal"><span class="pre">externalLeading</span></tt> is any extra vertical space added to the font by
+the font designer (usually is zero).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLogicalFunction"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLogicalFunction</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the current logical function.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNativeContext"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNativeContext</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the native context (CGContextRef for Core Graphics, Graphics
+pointer for GDIPlus and cairo_t pointer for cairo).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+void      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPartialTextExtents"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPartialTextExtents</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Returns a list of widths from the beginning of <tt class="rst-docutils literal"><span class="pre">text</span></tt> to the
+coresponding character in <tt class="rst-docutils literal"><span class="pre">text</span></tt>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+[widths]      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTextExtent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTextExtent</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>GetTextExtent(self, text) --&gt; (width, height)</p>
+<p>Gets the dimensions of the string using the currently selected
+font. <tt class="rst-docutils literal"><span class="pre">text</span></tt> is the string to measure, <tt class="rst-docutils literal"><span class="pre">w</span></tt> and <tt class="rst-docutils literal"><span class="pre">h</span></tt> are the total
+width and height respectively.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTransform"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTransform</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the current transformation matrix of this context.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsMatrix      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PopState"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PopState</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Pops a stored state from the stack</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PushState"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PushState</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Push the current state of the context, (ie the transformation matrix)
+on a stack</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetClip"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetClip</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Resets the clipping to original shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Rotate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Rotate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>angle</span>)</span>
+  </h3>
+<p>Rotate the current transformation matrix of the context.  <tt class="rst-docutils literal"><span class="pre">angle</span></tt> is
+specified in radians.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>angle</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Scale"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Scale</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>xScale</span>,
+          <span class=sig-arg>yScale</span>)</span>
+  </h3>
+<p>Scale the current transformation matrix of the context.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>xScale</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>yScale</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBrush"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBrush</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>brush</span>)</span>
+  </h3>
+<p>SetBrush(self, Brush brush)</p>
+<p>Sets the brush for filling</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>brush</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GraphicsBrush)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>font</span>)</span>
+  </h3>
+<p>SetFont(self, Font font, Colour colour=*wxBLACK)</p>
+<p>Sets the font</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>font</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GraphicsFont)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLogicalFunction"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLogicalFunction</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>function</span>)</span>
+  </h3>
+<p>Sets the current logical function, returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if it supported</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>function</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pen</span>)</span>
+  </h3>
+<p>SetPen(self, Pen pen)</p>
+<p>Sets the stroke pen</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pen</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GraphicsPen)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTransform"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTransform</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>matrix</span>)</span>
+  </h3>
+<p>Sets the current transform of this context.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>matrix</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GraphicsMatrix)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShouldOffset"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShouldOffset</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>helper to determine if a 0.5 offset should be applied for the drawing operation</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="StrokeLine"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">StrokeLine</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x1</span>,
+          <span class=sig-arg>y1</span>,
+          <span class=sig-arg>x2</span>,
+          <span class=sig-arg>y2</span>)</span>
+  </h3>
+<p>Strokes a single line.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>x2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>y2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="StrokeLines"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">StrokeLines</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>points</span>)</span>
+  </h3>
+<p>Stroke lines connecting each of the points</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>points</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=List)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="StrokeLineSegements"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">StrokeLineSegements</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>StrokeLineSegments(self, List beginPoints, List endPoints)</p>
+<p>Stroke disconnected lines from begin to end points</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="StrokePath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">StrokePath</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>)</span>
+  </h3>
+<p>Strokes along a path with the current pen.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>path</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GraphicsPath)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Translate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Translate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dx</span>,
+          <span class=sig-arg>dy</span>)</span>
+  </h3>
+<p>Translates the current transformation matrix.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dx</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      <dd><code><b>dy</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>(<span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Create(Window window) -&gt; GraphicsContext</p>
+<p>Creates a wx.GraphicsContext either from a window or a DC.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=WindowDC)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsContext      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateFromNative"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateFromNative</span>(<span class=sig-arg>context</span>)</span>
+  </h3>
+<p>Creates a wx.GraphicsContext from a native context. This native
+context must be eg a CGContextRef for Core Graphics, a Graphics
+pointer for GDIPlus or a cairo_t pointer for Cairo.  NOTE: For
+wxPython we still need a way to make this value usable.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>context</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=void)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsContext      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateFromNativeWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateFromNativeWindow</span>(<span class=sig-arg>window</span>)</span>
+  </h3>
+<p>Creates a wx.GraphicsContext from a native window.  NOTE: For wxPython
+we still need a way to make this value usable.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>window</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=void)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsContext      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateMeasuringContext"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateMeasuringContext</span>()</span>
+  </h3>
+<p>Create a lightwieght context that can be used for measuring text only.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GraphicsContext      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:57:34 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

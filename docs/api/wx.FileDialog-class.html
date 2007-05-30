@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.FileDialog</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;FileDialog
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.FileDialog-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type FileDialog</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+        <a href="wx.TopLevelWindow-class.html"><code>TopLevelWindow</code></a> --+    
+                         |    
+                    <a href="wx.Dialog-class.html"><code>Dialog</code></a> --+
+                             |
+                            <b>FileDialog</b>
+</pre><br />
+
+<hr/>
+
+<p>wx.FileDialog allows the user to select one or more files from the
+filesystem.</p>
+<p>In Windows, this is the common file selector dialog. On X based
+platforms a generic alternative is used.  The path and filename are
+distinct elements of a full file pathname. If path is &quot;&quot;, the
+current directory will be used. If filename is &quot;&quot;, no default
+filename will be supplied. The wildcard determines what files are
+displayed in the file selector, and file extension supplies a type
+extension for the required filename.</p>
+<p>Both the X and Windows versions implement a wildcard filter. Typing a
+filename containing wildcards (*, ?) in the filename text item, and
+clicking on Ok, will result in only those files matching the pattern
+being displayed. The wildcard may be a specification for multiple
+types of file with a description for each, such as:</p>
+<pre class="rst-literal-block">
+&quot;BMP files (*.bmp)|*.bmp|GIF files (*.gif)|*.gif&quot;
+</pre>
+<div class="rst-section" id="window-styles">
+<h1 class="heading"><a name="rst-window-styles">Window  Styles</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="32%" />
+<col class="rst" width="68%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.FD_OPEN</td>
+<td class="rst">This is an open dialog.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FD_SAVE</td>
+<td class="rst">This is a save dialog.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FD_OVERWRITE_PROMPT</td>
+<td class="rst">For save dialog only: prompt for a confirmation
+if a file will be overwritten.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FD_MULTIPLE</td>
+<td class="rst">For open dialog only: allows selecting multiple
+files.</td>
+</tr>
+<tr class="rst"><td class="rst">wx.FD_CHANGE_DIR</td>
+<td class="rst">Change the current working directory to the
+directory  where the file(s) chosen by the user
+are.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">FileDialog</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>message</span>,
+          <span class=summary-sig-arg>defaultDir</span>,
+          <span class=summary-sig-arg>defaultFile</span>,
+          <span class=summary-sig-arg>wildcard</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#GetDirectory" class="summary-sig-name"><code>GetDirectory</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the default directory.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#GetFilename" class="summary-sig-name"><code>GetFilename</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the default filename.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#GetFilenames" class="summary-sig-name"><code>GetFilenames</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a list of filenames chosen in the dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#GetFilterIndex" class="summary-sig-name"><code>GetFilterIndex</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the index into the list of filters supplied, optionally, in
+the wildcard parameter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#GetMessage" class="summary-sig-name"><code>GetMessage</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the message that will be displayed on the dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#GetPath" class="summary-sig-name"><code>GetPath</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the full path (directory and filename) of the selected file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#GetPaths" class="summary-sig-name"><code>GetPaths</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Fills the array paths with the full paths of the files chosen.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#GetWildcard" class="summary-sig-name"><code>GetWildcard</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the file dialog wildcard.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#SetDirectory" class="summary-sig-name"><code>SetDirectory</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dir</span>)</span></code>
+<br />
+Sets the default directory.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#SetFilename" class="summary-sig-name"><code>SetFilename</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Sets the default filename.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#SetFilterIndex" class="summary-sig-name"><code>SetFilterIndex</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filterIndex</span>)</span></code>
+<br />
+Sets the default filter index, starting from zero.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#SetMessage" class="summary-sig-name"><code>SetMessage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>message</span>)</span></code>
+<br />
+Sets the message that will be displayed on the dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#SetPath" class="summary-sig-name"><code>SetPath</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>)</span></code>
+<br />
+Sets the path (the combined directory and filename that will be
+returned when the dialog is dismissed).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.FileDialog-class.html#SetWildcard" class="summary-sig-name"><code>SetWildcard</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>wildCard</span>)</span></code>
+<br />
+Sets the wildcard, which can contain multiple file types, for
+example:</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FileDialog-class.html#Directory"><code>Directory</code></a></b>: See <a href="wx.FileDialog-class.html#GetDirectory" class="link"><code>GetDirectory</code></a> and <a href="wx.FileDialog-class.html#SetDirectory" class="link"><code>SetDirectory</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FileDialog-class.html#Filename"><code>Filename</code></a></b>: See <a href="wx.FileDialog-class.html#GetFilename" class="link"><code>GetFilename</code></a> and <a href="wx.FileDialog-class.html#SetFilename" class="link"><code>SetFilename</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FileDialog-class.html#Filenames"><code>Filenames</code></a></b>: See <a href="wx.FileDialog-class.html#GetFilenames" class="link"><code>GetFilenames</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FileDialog-class.html#FilterIndex"><code>FilterIndex</code></a></b>: See <a href="wx.FileDialog-class.html#GetFilterIndex" class="link"><code>GetFilterIndex</code></a> and <a href="wx.FileDialog-class.html#SetFilterIndex" class="link"><code>SetFilterIndex</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FileDialog-class.html#Message"><code>Message</code></a></b>: See <a href="wx.FileDialog-class.html#GetMessage" class="link"><code>GetMessage</code></a> and <a href="wx.FileDialog-class.html#SetMessage" class="link"><code>SetMessage</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FileDialog-class.html#Path"><code>Path</code></a></b>: See <a href="wx.FileDialog-class.html#GetPath" class="link"><code>GetPath</code></a> and <a href="wx.FileDialog-class.html#SetPath" class="link"><code>SetPath</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FileDialog-class.html#Paths"><code>Paths</code></a></b>: See <a href="wx.FileDialog-class.html#GetPaths" class="link"><code>GetPaths</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FileDialog-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.FileDialog-class.html#Wildcard"><code>Wildcard</code></a></b>: See <a href="wx.FileDialog-class.html#GetWildcard" class="link"><code>GetWildcard</code></a> and <a href="wx.FileDialog-class.html#SetWildcard" class="link"><code>SetWildcard</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>message</span>=<span class=sig-default>FileSelectorPromptStr</span>,
+          <span class=sig-arg>defaultDir</span>=<span class=sig-default>EmptyString</span>,
+          <span class=sig-arg>defaultFile</span>=<span class=sig-default>EmptyString</span>,
+          <span class=sig-arg>wildcard</span>=<span class=sig-default>FileSelectorDefaultWildcardStr</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>FD_DEFAULT_STYLE</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor.  Use ShowModal method to show the dialog.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>parent</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      <dd><code><b>message</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>defaultDir</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>defaultFile</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>wildcard</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+FileDialog      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Dialog-class.html#__init__"><code>wx.Dialog.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDirectory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDirectory</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the default directory.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFilename"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFilename</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the default filename.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFilenames"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFilenames</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a list of filenames chosen in the dialog.  This function
+should only be used with the dialogs which have wx.MULTIPLE style, use
+GetFilename for the others.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyObject      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFilterIndex"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFilterIndex</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the index into the list of filters supplied, optionally, in
+the wildcard parameter. Before the dialog is shown, this is the index
+which will be used when the dialog is first displayed. After the
+dialog is shown, this is the index selected by the user.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMessage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMessage</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the message that will be displayed on the dialog.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPath</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the full path (directory and filename) of the selected file.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPaths"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPaths</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Fills the array paths with the full paths of the files chosen. This
+function should only be used with the dialogs which have wx.MULTIPLE
+style, use GetPath for the others.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyObject      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetWildcard"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetWildcard</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the file dialog wildcard.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDirectory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDirectory</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dir</span>)</span>
+  </h3>
+<p>Sets the default directory.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dir</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFilename"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFilename</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Sets the default filename.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFilterIndex"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFilterIndex</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>filterIndex</span>)</span>
+  </h3>
+<p>Sets the default filter index, starting from zero.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>filterIndex</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMessage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMessage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>message</span>)</span>
+  </h3>
+<p>Sets the message that will be displayed on the dialog.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>message</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPath</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>)</span>
+  </h3>
+<p>Sets the path (the combined directory and filename that will be
+returned when the dialog is dismissed).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>path</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetWildcard"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetWildcard</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>wildCard</span>)</span>
+  </h3>
+<p>Sets the wildcard, which can contain multiple file types, for
+example:</p>
+<pre class="rst-literal-block">
+&quot;BMP files (*.bmp)|*.bmp|GIF files (*.gif)|*.gif&quot;
+</pre>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>wildCard</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Directory"></a>
+<h3>Directory</h3>
+<p>See <a href="wx.FileDialog-class.html#GetDirectory" class="link"><code>GetDirectory</code></a> and <a href="wx.FileDialog-class.html#SetDirectory" class="link"><code>SetDirectory</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#GetDirectory" class="summary-sig-name"><code>GetDirectory</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#SetDirectory" class="summary-sig-name"><code>SetDirectory</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dir</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Filename"></a>
+<h3>Filename</h3>
+<p>See <a href="wx.FileDialog-class.html#GetFilename" class="link"><code>GetFilename</code></a> and <a href="wx.FileDialog-class.html#SetFilename" class="link"><code>SetFilename</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#GetFilename" class="summary-sig-name"><code>GetFilename</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#SetFilename" class="summary-sig-name"><code>SetFilename</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Filenames"></a>
+<h3>Filenames</h3>
+<p>See <a href="wx.FileDialog-class.html#GetFilenames" class="link"><code>GetFilenames</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#GetFilenames" class="summary-sig-name"><code>GetFilenames</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="FilterIndex"></a>
+<h3>FilterIndex</h3>
+<p>See <a href="wx.FileDialog-class.html#GetFilterIndex" class="link"><code>GetFilterIndex</code></a> and <a href="wx.FileDialog-class.html#SetFilterIndex" class="link"><code>SetFilterIndex</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#GetFilterIndex" class="summary-sig-name"><code>GetFilterIndex</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#SetFilterIndex" class="summary-sig-name"><code>SetFilterIndex</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filterIndex</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Message"></a>
+<h3>Message</h3>
+<p>See <a href="wx.FileDialog-class.html#GetMessage" class="link"><code>GetMessage</code></a> and <a href="wx.FileDialog-class.html#SetMessage" class="link"><code>SetMessage</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#GetMessage" class="summary-sig-name"><code>GetMessage</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#SetMessage" class="summary-sig-name"><code>SetMessage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>message</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Path"></a>
+<h3>Path</h3>
+<p>See <a href="wx.FileDialog-class.html#GetPath" class="link"><code>GetPath</code></a> and <a href="wx.FileDialog-class.html#SetPath" class="link"><code>SetPath</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#GetPath" class="summary-sig-name"><code>GetPath</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#SetPath" class="summary-sig-name"><code>SetPath</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Paths"></a>
+<h3>Paths</h3>
+<p>See <a href="wx.FileDialog-class.html#GetPaths" class="link"><code>GetPaths</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#GetPaths" class="summary-sig-name"><code>GetPaths</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Wildcard"></a>
+<h3>Wildcard</h3>
+<p>See <a href="wx.FileDialog-class.html#GetWildcard" class="link"><code>GetWildcard</code></a> and <a href="wx.FileDialog-class.html#SetWildcard" class="link"><code>SetWildcard</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#GetWildcard" class="summary-sig-name"><code>GetWildcard</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.FileDialog-class.html#SetWildcard" class="summary-sig-name"><code>SetWildcard</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>wildCard</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:57:23 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

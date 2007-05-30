@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.GridSizer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;GridSizer
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.GridSizer-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type GridSizer</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+         <a href="wx.Sizer-class.html"><code>Sizer</code></a> --+
+                 |
+                <b>GridSizer</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.FlexGridSizer-class.html"><code>FlexGridSizer</code></a></dd></dl>
+
+<hr/>
+
+<p>A grid sizer is a sizer which lays out its children in a
+two-dimensional table with all cells having the same size.  In other
+words, the width of each cell within the grid is the width of the
+widest item added to the sizer and the height of each grid cell is the
+height of the tallest item.  An optional vertical and/or horizontal
+gap between items can also be specified (in pixels.)</p>
+<p>Items are placed in the cells of the grid in the order they are added,
+in row-major order.  In other words, the first row is filled first,
+then the second, and so on until all items have been added. (If
+neccessary, additional rows will be added as items are added.)  If you
+need to have greater control over the cells that items are placed in
+then use the <a href="wx.GridBagSizer-class.html" class="link"><code>wx.GridBagSizer</code></a>.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridSizer</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridSizer-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rows</span>,
+          <span class=summary-sig-arg>cols</span>,
+          <span class=summary-sig-arg>vgap</span>,
+          <span class=summary-sig-arg>hgap</span>)</span></code>
+<br />
+Constructor for a wx.GridSizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(rows, cols)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridSizer-class.html#CalcRowsCols" class="summary-sig-name"><code>CalcRowsCols</code></a>()</span></code>
+<br />
+Calculates how many rows and columns will be in the sizer based
+on the current number of items and also the rows, cols specified
+in the constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridSizer-class.html#GetCols" class="summary-sig-name"><code>GetCols</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of columns in the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridSizer-class.html#GetHGap" class="summary-sig-name"><code>GetHGap</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the horizontal gap (in pixels) between cells in the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridSizer-class.html#GetRows" class="summary-sig-name"><code>GetRows</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of rows in the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridSizer-class.html#GetVGap" class="summary-sig-name"><code>GetVGap</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the vertical gap (in pixels) between the cells in the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridSizer-class.html#SetCols" class="summary-sig-name"><code>SetCols</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cols</span>)</span></code>
+<br />
+Sets the number of columns in the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridSizer-class.html#SetHGap" class="summary-sig-name"><code>SetHGap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>gap</span>)</span></code>
+<br />
+Sets the horizontal gap (in pixels) between cells in the sizer</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridSizer-class.html#SetRows" class="summary-sig-name"><code>SetRows</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rows</span>)</span></code>
+<br />
+Sets the number of rows in the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridSizer-class.html#SetVGap" class="summary-sig-name"><code>SetVGap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>gap</span>)</span></code>
+<br />
+Sets the vertical gap (in pixels) between the cells in the sizer.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.GridSizer-class.html#Cols"><code>Cols</code></a></b>: See <a href="wx.GridSizer-class.html#GetCols" class="link"><code>GetCols</code></a> and <a href="wx.GridSizer-class.html#SetCols" class="link"><code>SetCols</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.GridSizer-class.html#HGap"><code>HGap</code></a></b>: See <a href="wx.GridSizer-class.html#GetHGap" class="link"><code>GetHGap</code></a> and <a href="wx.GridSizer-class.html#SetHGap" class="link"><code>SetHGap</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.GridSizer-class.html#Rows"><code>Rows</code></a></b>: See <a href="wx.GridSizer-class.html#GetRows" class="link"><code>GetRows</code></a> and <a href="wx.GridSizer-class.html#SetRows" class="link"><code>SetRows</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.GridSizer-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.GridSizer-class.html#VGap"><code>VGap</code></a></b>: See <a href="wx.GridSizer-class.html#GetVGap" class="link"><code>GetVGap</code></a> and <a href="wx.GridSizer-class.html#SetVGap" class="link"><code>SetVGap</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rows</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>cols</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>vgap</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>hgap</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor for a wx.GridSizer. <em>rows</em> and <em>cols</em> determine the number
+of columns and rows in the sizer - if either of the parameters is
+zero, it will be calculated to from the total number of children in
+the sizer, thus making the sizer grow dynamically. <em>vgap</em> and <em>hgap</em>
+define extra space between all children.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rows</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>cols</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>vgap</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>hgap</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GridSizer      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Sizer-class.html#__init__"><code>wx.Sizer.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalcRowsCols"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalcRowsCols</span>()</span>
+  </h3>
+<p>Calculates how many rows and columns will be in the sizer based
+on the current number of items and also the rows, cols specified
+in the constructor.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(rows, cols)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCols"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCols</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the number of columns in the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHGap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHGap</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the horizontal gap (in pixels) between cells in the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRows</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the number of rows in the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetVGap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetVGap</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the vertical gap (in pixels) between the cells in the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCols"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCols</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>cols</span>)</span>
+  </h3>
+<p>Sets the number of columns in the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>cols</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHGap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHGap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>gap</span>)</span>
+  </h3>
+<p>Sets the horizontal gap (in pixels) between cells in the sizer</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>gap</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRows</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rows</span>)</span>
+  </h3>
+<p>Sets the number of rows in the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rows</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetVGap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetVGap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>gap</span>)</span>
+  </h3>
+<p>Sets the vertical gap (in pixels) between the cells in the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>gap</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Cols"></a>
+<h3>Cols</h3>
+<p>See <a href="wx.GridSizer-class.html#GetCols" class="link"><code>GetCols</code></a> and <a href="wx.GridSizer-class.html#SetCols" class="link"><code>SetCols</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.GridSizer-class.html#GetCols" class="summary-sig-name"><code>GetCols</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.GridSizer-class.html#SetCols" class="summary-sig-name"><code>SetCols</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cols</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="HGap"></a>
+<h3>HGap</h3>
+<p>See <a href="wx.GridSizer-class.html#GetHGap" class="link"><code>GetHGap</code></a> and <a href="wx.GridSizer-class.html#SetHGap" class="link"><code>SetHGap</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.GridSizer-class.html#GetHGap" class="summary-sig-name"><code>GetHGap</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.GridSizer-class.html#SetHGap" class="summary-sig-name"><code>SetHGap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>gap</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Rows"></a>
+<h3>Rows</h3>
+<p>See <a href="wx.GridSizer-class.html#GetRows" class="link"><code>GetRows</code></a> and <a href="wx.GridSizer-class.html#SetRows" class="link"><code>SetRows</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.GridSizer-class.html#GetRows" class="summary-sig-name"><code>GetRows</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.GridSizer-class.html#SetRows" class="summary-sig-name"><code>SetRows</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rows</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="VGap"></a>
+<h3>VGap</h3>
+<p>See <a href="wx.GridSizer-class.html#GetVGap" class="link"><code>GetVGap</code></a> and <a href="wx.GridSizer-class.html#SetVGap" class="link"><code>SetVGap</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.GridSizer-class.html#GetVGap" class="summary-sig-name"><code>GetVGap</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.GridSizer-class.html#SetVGap" class="summary-sig-name"><code>SetVGap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>gap</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:44 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

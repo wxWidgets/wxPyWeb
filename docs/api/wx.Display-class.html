@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.Display</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;Display
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.Display-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Display</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>Display</b>
+</pre><br />
+
+<hr/>
+
+<p>Represents a display/monitor attached to the system</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+__init__(self, unsigned int index=0) -&gt; Display</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1329250140"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__nonzero__"></a><span class="summary-sig"><span class="summary-sig-name">__nonzero__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#ChangeMode" class="summary-sig-name"><code>ChangeMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+Changes the video mode of this display to the mode specified in the
+mode parameter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#GetClientArea" class="summary-sig-name"><code>GetClientArea</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the bounding rectangle the client area of the display,
+i.e., without taskbars and such.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">unsigned int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#GetCount" class="summary-sig-name"><code>GetCount</code></a>()</span></code>
+<br />
+Return the number of available displays.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">VideoMode</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#GetCurrentMode" class="summary-sig-name"><code>GetCurrentMode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the current video mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#GetFromPoint" class="summary-sig-name"><code>GetFromPoint</code></a>(<span class=summary-sig-arg>pt</span>)</span></code>
+<br />
+Find the display where the given point lies, return wx.NOT_FOUND if it
+doesn't belong to any display    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#GetFromWindow" class="summary-sig-name"><code>GetFromWindow</code></a>(<span class=summary-sig-arg>window</span>)</span></code>
+<br />
+Find the display where the given window lies, return wx.NOT_FOUND if
+it is not shown at all.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#GetGeometry" class="summary-sig-name"><code>GetGeometry</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the bounding rectangle of the display whose index was passed
+to the constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">[videoMode...]</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#GetModes" class="summary-sig-name"><code>GetModes</code></a>(<span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+Enumerate all video modes supported by this display matching the given
+one (in the sense of VideoMode.Match()).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#GetName" class="summary-sig-name"><code>GetName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the display's name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#IsOk" class="summary-sig-name"><code>IsOk</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return true if the object was initialized successfully</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#IsPrimary" class="summary-sig-name"><code>IsPrimary</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the display is the primary display.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Display-class.html#ResetMode" class="summary-sig-name"><code>ResetMode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Restore the default video mode (just a more readable synonym)</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Display-class.html#ClientArea"><code>ClientArea</code></a></b>: See <a href="wx.Display-class.html#GetClientArea" class="link"><code>GetClientArea</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Display-class.html#CurrentMode"><code>CurrentMode</code></a></b>: See <a href="wx.Display-class.html#GetCurrentMode" class="link"><code>GetCurrentMode</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Display-class.html#Geometry"><code>Geometry</code></a></b>: See <a href="wx.Display-class.html#GetGeometry" class="link"><code>GetGeometry</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Display-class.html#Modes"><code>Modes</code></a></b>: See <a href="wx.Display-class.html#GetModes" class="link"><code>GetModes</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Display-class.html#Name"><code>Name</code></a></b>: See <a href="wx.Display-class.html#GetName" class="link"><code>GetName</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Display-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>__init__(self, unsigned int index=0) -&gt; Display</p>
+<p>Set up a Display instance with the specified display.  The displays
+are numbered from 0 to GetCount() - 1, 0 is always the primary display
+and the only one which is always supported</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="__builtin__.object-class.html#__init__"><code>__builtin__.object.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ChangeMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ChangeMode</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mode</span>=<span class=sig-default>DefaultVideoMode</span>)</span>
+  </h3>
+<p>Changes the video mode of this display to the mode specified in the
+mode parameter.</p>
+<p>If wx.DefaultVideoMode is passed in as the mode parameter, the defined
+behaviour is that wx.Display will reset the video mode to the default
+mode used by the display.  On Windows, the behavior is normal.
+However, there are differences on other platforms. On Unix variations
+using X11 extensions it should behave as defined, but some
+irregularities may occur.</p>
+<p>On wxMac passing in wx.DefaultVideoMode as the mode parameter does
+nothing.  This happens because Carbon no longer has access to
+DMUseScreenPrefs, an undocumented function that changed the video mode
+to the system default by using the system's 'scrn' resource.</p>
+<p>Returns True if succeeded, False otherwise</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>mode</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=VideoMode)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetClientArea"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClientArea</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the bounding rectangle the client area of the display,
+i.e., without taskbars and such.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCurrentMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCurrentMode</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the current video mode.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+VideoMode      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGeometry"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGeometry</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the bounding rectangle of the display whose index was passed
+to the constructor.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetModes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetModes</span>(<span class=sig-arg>mode</span>=<span class=sig-default>DefaultVideoMode</span>)</span>
+  </h3>
+<p>Enumerate all video modes supported by this display matching the given
+one (in the sense of VideoMode.Match()).</p>
+<p>As any mode matches the default value of the argument and there is
+always at least one video mode supported by display, the returned
+array is only empty for the default value of the argument if this
+function is not supported at all on this platform.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>mode</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=VideoMode)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+[videoMode...]      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the display's name. A name is not available on all platforms.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsOk"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsOk</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return true if the object was initialized successfully</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsPrimary"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsPrimary</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the display is the primary display. The primary
+display is the one whose index is 0.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetMode</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Restore the default video mode (just a more readable synonym)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="GetCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCount</span>()</span>
+  </h3>
+<p>Return the number of available displays.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+unsigned int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFromPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFromPoint</span>(<span class=sig-arg>pt</span>)</span>
+  </h3>
+<p>Find the display where the given point lies, return wx.NOT_FOUND if it
+doesn't belong to any display</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFromWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFromWindow</span>(<span class=sig-arg>window</span>)</span>
+  </h3>
+<p>Find the display where the given window lies, return wx.NOT_FOUND if
+it is not shown at all.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>window</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ClientArea"></a>
+<h3>ClientArea</h3>
+<p>See <a href="wx.Display-class.html#GetClientArea" class="link"><code>GetClientArea</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Display-class.html#GetClientArea" class="summary-sig-name"><code>GetClientArea</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="CurrentMode"></a>
+<h3>CurrentMode</h3>
+<p>See <a href="wx.Display-class.html#GetCurrentMode" class="link"><code>GetCurrentMode</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Display-class.html#GetCurrentMode" class="summary-sig-name"><code>GetCurrentMode</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Geometry"></a>
+<h3>Geometry</h3>
+<p>See <a href="wx.Display-class.html#GetGeometry" class="link"><code>GetGeometry</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Display-class.html#GetGeometry" class="summary-sig-name"><code>GetGeometry</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Modes"></a>
+<h3>Modes</h3>
+<p>See <a href="wx.Display-class.html#GetModes" class="link"><code>GetModes</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Display-class.html#GetModes" class="summary-sig-name"><code>GetModes</code></a>(<span class=summary-sig-arg>mode</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Name"></a>
+<h3>Name</h3>
+<p>See <a href="wx.Display-class.html#GetName" class="link"><code>GetName</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Display-class.html#GetName" class="summary-sig-name"><code>GetName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:03:24 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

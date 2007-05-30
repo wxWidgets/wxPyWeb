@@ -1,0 +1,2270 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.ogl.Shape</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.ogl-module.html">Package&nbsp;ogl</a> ::
+        Class&nbsp;Shape
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.ogl.Shape-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Shape</h2>
+
+<pre class="base-tree">
+     <a href="__builtin__.object-class.html"><code>object</code></a> --+    
+              |    
+<a href="wx.lib.ogl.ShapeEvtHandler-class.html"><code>ShapeEvtHandler</code></a> --+
+                  |
+                 <b>Shape</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.ogl.EllipseShape-class.html"><code>EllipseShape</code></a>,
+    <a href="wx.lib.ogl.LineShape-class.html"><code>LineShape</code></a>,
+    <a href="wx.lib.ogl.PolygonShape-class.html"><code>PolygonShape</code></a>,
+    <a href="wx.lib.ogl.RectangleShape-class.html"><code>RectangleShape</code></a></dd></dl>
+
+<hr/>
+
+<p>OGL base class</p>
+<p>Shape(canvas = None)</p>
+<p>The wxShape is the top-level, abstract object that all other objects
+are derived from. All common functionality is represented by wxShape's
+members, and overriden members that appear in derived classes and have
+behaviour as documented for wxShape, are not documented separately.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>canvas</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__str__"></a><span class="summary-sig"><span class="summary-sig-name">__str__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#AddLine" class="summary-sig-name"><code>AddLine</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>line</span>,
+          <span class=summary-sig-arg>other</span>,
+          <span class=summary-sig-arg>attachFrom</span>,
+          <span class=summary-sig-arg>attachTo</span>,
+          <span class=summary-sig-arg>positionFrom</span>,
+          <span class=summary-sig-arg>positionTo</span>)</span></code>
+<br />
+Add a line between this shape and the given other shape, at the
+specified attachment points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#AddRegion" class="summary-sig-name"><code>AddRegion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>region</span>)</span></code>
+<br />
+Add a region to the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#AddText" class="summary-sig-name"><code>AddText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>string</span>)</span></code>
+<br />
+Add a line of text to the shape's default text region.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#AddToCanvas" class="summary-sig-name"><code>AddToCanvas</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>theCanvas</span>,
+          <span class=summary-sig-arg>addAfter</span>)</span></code>
+<br />
+Add the shape to the canvas's shape list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#AncestorSelected" class="summary-sig-name"><code>AncestorSelected</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if the shape's ancestor is currently selected.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#ApplyAttachmentOrdering" class="summary-sig-name"><code>ApplyAttachmentOrdering</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>linesToSort</span>)</span></code>
+<br />
+Apply the line ordering in linesToSort to the shape, to reorder
+the way lines are attached.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#AssignNewIds" class="summary-sig-name"><code>AssignNewIds</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Assign new ids to this image and its children.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Attach" class="summary-sig-name"><code>Attach</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>can</span>)</span></code>
+<br />
+Set the shape's internal canvas pointer to point to the given canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#AttachmentIsValid" class="summary-sig-name"><code>AttachmentIsValid</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+<br />
+TRUE if attachment is a valid attachment point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#AttachmentSortTest" class="summary-sig-name"><code>AttachmentSortTest</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachmentPoint</span>,
+          <span class=summary-sig-arg>pt1</span>,
+          <span class=summary-sig-arg>pt2</span>)</span></code>
+<br />
+Return TRUE if pt1 is less than or equal to pt2, in the sense
+that one point comes before another on an edge of the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#CalcSimpleAttachment" class="summary-sig-name"><code>CalcSimpleAttachment</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt1</span>,
+          <span class=summary-sig-arg>pt2</span>,
+          <span class=summary-sig-arg>nth</span>,
+          <span class=summary-sig-arg>noArcs</span>,
+          <span class=summary-sig-arg>line</span>)</span></code>
+<br />
+Assuming the attachment lies along a vertical or horizontal line,
+calculate the position on that point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#ClearAttachments" class="summary-sig-name"><code>ClearAttachments</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Clear internal custom attachment point shapes (of class
+wxAttachmentPoint).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#ClearRegions" class="summary-sig-name"><code>ClearRegions</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Clear the ShapeRegions from the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#ClearText" class="summary-sig-name"><code>ClearText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>regionId</span>)</span></code>
+<br />
+Clear the text from the specified text region.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Delete" class="summary-sig-name"><code>Delete</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Fully disconnect this shape from parents, children, the
+canvas, etc.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#DeleteControlPoints" class="summary-sig-name"><code>DeleteControlPoints</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Delete the control points (or handles) for the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Detach" class="summary-sig-name"><code>Detach</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Disassociates the shape from its canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Draggable" class="summary-sig-name"><code>Draggable</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if the shape may be dragged by the user.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Draw" class="summary-sig-name"><code>Draw</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Draw the whole shape and any lines attached to it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#DrawContents" class="summary-sig-name"><code>DrawContents</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Draw the internal graphic of the shape (such as text).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#DrawLinks" class="summary-sig-name"><code>DrawLinks</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>attachment</span>,
+          <span class=summary-sig-arg>recurse</span>)</span></code>
+<br />
+Draws any lines linked to this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Erase" class="summary-sig-name"><code>Erase</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Erase the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#EraseContents" class="summary-sig-name"><code>EraseContents</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Erase the shape contents, that is, the area within the shape's
+minimum bounding box.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#EraseLinks" class="summary-sig-name"><code>EraseLinks</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>attachment</span>,
+          <span class=summary-sig-arg>recurse</span>)</span></code>
+<br />
+Erase links attached to this shape, but do not repair damage
+caused to other shapes.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#FindRegion" class="summary-sig-name"><code>FindRegion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Find the actual image ('this' if non-composite) and region id
+for the given region name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#FindRegionNames" class="summary-sig-name"><code>FindRegionNames</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get a list of all region names for this image (composite or simple).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Flash" class="summary-sig-name"><code>Flash</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Flash the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#FormatText" class="summary-sig-name"><code>FormatText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>s</span>,
+          <span class=summary-sig-arg>i</span>)</span></code>
+<br />
+Reformat the given text region; defaults to formatting the
+default region.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetAttachmentLineCount" class="summary-sig-name"><code>GetAttachmentLineCount</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+<br />
+Get the number of lines at this attachment position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetAttachmentMode" class="summary-sig-name"><code>GetAttachmentMode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the attachment mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetAttachmentPosition" class="summary-sig-name"><code>GetAttachmentPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>,
+          <span class=summary-sig-arg>nth</span>,
+          <span class=summary-sig-arg>no_arcs</span>,
+          <span class=summary-sig-arg>line</span>)</span></code>
+<br />
+Get the position at which the given attachment point should be drawn.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetAttachmentPositionEdge" class="summary-sig-name"><code>GetAttachmentPositionEdge</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>,
+          <span class=summary-sig-arg>nth</span>,
+          <span class=summary-sig-arg>no_arcs</span>,
+          <span class=summary-sig-arg>line</span>)</span></code>
+<br />
+Only get the attachment position at the _edge_ of the shape,
+ignoring branching mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetBackgroundBrush" class="summary-sig-name"><code>GetBackgroundBrush</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return brush of the right colour for the background.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetBackgroundPen" class="summary-sig-name"><code>GetBackgroundPen</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return pen of the right colour for the background.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetBoundingBoxMax" class="summary-sig-name"><code>GetBoundingBoxMax</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the maximum bounding box for the shape, taking into account
+external features such as shadows.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetBoundingBoxMin" class="summary-sig-name"><code>GetBoundingBoxMin</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the minimum bounding box for the shape, that defines the area
+available for drawing the contents (such as text).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetBranchingAttachmentInfo" class="summary-sig-name"><code>GetBranchingAttachmentInfo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+<br />
+Get information about where branching connections go.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetBranchingAttachmentPoint"></a><span class="summary-sig"><span class="summary-sig-name">GetBranchingAttachmentPoint</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>,
+          <span class=summary-sig-arg>n</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetBranchingAttachmentRoot" class="summary-sig-name"><code>GetBranchingAttachmentRoot</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+<br />
+Get the root point at the given attachment.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetBranchStyle"></a><span class="summary-sig"><span class="summary-sig-name">GetBranchStyle</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetBrush" class="summary-sig-name"><code>GetBrush</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the brush used for filling the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetCanvas" class="summary-sig-name"><code>GetCanvas</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the internal canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetCentreResize" class="summary-sig-name"><code>GetCentreResize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if the shape is to be resized from the centre (the centre stands
+still), or FALSE if from the corner or side being dragged (the other
+corner or side stands still)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetChildren" class="summary-sig-name"><code>GetChildren</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the list of children for this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetClassName"></a><span class="summary-sig"><span class="summary-sig-name">GetClassName</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetDisableLabel" class="summary-sig-name"><code>GetDisableLabel</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if the default region will not be shown, FALSE otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetDrawHandles" class="summary-sig-name"><code>GetDrawHandles</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the list of drawhandles.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetEventHandler" class="summary-sig-name"><code>GetEventHandler</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the event handler for this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetFixedHeight" class="summary-sig-name"><code>GetFixedHeight</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if the shape cannot be resized in the vertical plane.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetFixedSize" class="summary-sig-name"><code>GetFixedSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return flags indicating whether the shape is of fixed size in
+either direction.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetFixedWidth" class="summary-sig-name"><code>GetFixedWidth</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if the shape cannot be resized in the horizontal plane.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetFont" class="summary-sig-name"><code>GetFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>regionId</span>)</span></code>
+<br />
+Get the font for the specified text region.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetFormatMode"></a><span class="summary-sig"><span class="summary-sig-name">GetFormatMode</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>regionId</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetId" class="summary-sig-name"><code>GetId</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the integer identifier for this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetLinePosition" class="summary-sig-name"><code>GetLinePosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>line</span>)</span></code>
+<br />
+Get the zero-based position of line in the list of lines
+for this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetLines" class="summary-sig-name"><code>GetLines</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the list of lines connected to this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetMaintainAspectRatio" class="summary-sig-name"><code>GetMaintainAspectRatio</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if shape keeps aspect ratio during resize.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetNumberOfAttachments" class="summary-sig-name"><code>GetNumberOfAttachments</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the number of attachment points for this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetNumberOfTextRegions" class="summary-sig-name"><code>GetNumberOfTextRegions</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the number of text regions for this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetParent" class="summary-sig-name"><code>GetParent</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the parent of this shape, if it is part of a composite.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetPen" class="summary-sig-name"><code>GetPen</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the pen used for drawing the shape's outline.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetPerimeterPoint" class="summary-sig-name"><code>GetPerimeterPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x1</span>,
+          <span class=summary-sig-arg>y1</span>,
+          <span class=summary-sig-arg>x2</span>,
+          <span class=summary-sig-arg>y2</span>)</span></code>
+<br />
+Get the point at which the line from (x1, y1) to (x2, y2) hits
+the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetRegionId" class="summary-sig-name"><code>GetRegionId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Get the region's identifier by name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetRegionName" class="summary-sig-name"><code>GetRegionName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>regionId</span>)</span></code>
+<br />
+Get the region's name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetRegions" class="summary-sig-name"><code>GetRegions</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the list of ShapeRegions.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetRotation" class="summary-sig-name"><code>GetRotation</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the angle of rotation in radians.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetSensitivityFilter" class="summary-sig-name"><code>GetSensitivityFilter</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the sensitivity filter, a bitlist of values.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetShadowMode" class="summary-sig-name"><code>GetShadowMode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the current shadow mode setting</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetSpaceAttachments" class="summary-sig-name"><code>GetSpaceAttachments</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return whether lines should be spaced out evenly at the point they
+touch the node (True), or whether they should join at a single point
+(False).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetTextColour" class="summary-sig-name"><code>GetTextColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>regionId</span>)</span></code>
+<br />
+Get the colour for the specified text region.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetTopAncestor" class="summary-sig-name"><code>GetTopAncestor</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the top-most ancestor of this shape (the root of
+the composite).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetX" class="summary-sig-name"><code>GetX</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the x position of the centre of the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#GetY" class="summary-sig-name"><code>GetY</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the y position of the centre of the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#HasDescendant" class="summary-sig-name"><code>HasDescendant</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>image</span>)</span></code>
+<br />
+TRUE if image is a descendant of this composite.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#HitTest" class="summary-sig-name"><code>HitTest</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Given a point on a canvas, returns TRUE if the point was on the
+shape, and returns the nearest attachment point and distance from
+the given point and target.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#InsertInCanvas" class="summary-sig-name"><code>InsertInCanvas</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>theCanvas</span>)</span></code>
+<br />
+Insert the shape at the front of the shape list of canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#IsHighlighted" class="summary-sig-name"><code>IsHighlighted</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if the shape is highlighted.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#IsShown" class="summary-sig-name"><code>IsShown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if the shape is in a visible state, FALSE otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#LogicalToPhysicalAttachment" class="summary-sig-name"><code>LogicalToPhysicalAttachment</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>logicalAttachment</span>)</span></code>
+<br />
+Rotate the standard attachment point from logical
+to physical (0 is always North).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#MakeControlPoints" class="summary-sig-name"><code>MakeControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Make a list of control points (draggable handles) appropriate to
+the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#MakeMandatoryControlPoints" class="summary-sig-name"><code>MakeMandatoryControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Make the mandatory control points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Move" class="summary-sig-name"><code>Move</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>display</span>)</span></code>
+<br />
+Move the shape to the given position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#MoveLineToNewAttachment" class="summary-sig-name"><code>MoveLineToNewAttachment</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>to_move</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Move the given line (which must already be attached to the shape)
+to a different attachment point on the shape, or a different order
+on the same attachment.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#MoveLinks" class="summary-sig-name"><code>MoveLinks</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Redraw all the lines attached to the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#NameRegions" class="summary-sig-name"><code>NameRegions</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parentName</span>)</span></code>
+<br />
+Make unique names for all the regions in a shape or composite shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnBeginDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnBeginDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnBeginDragRight"></a><span class="summary-sig"><span class="summary-sig-name">OnBeginDragRight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnChangeAttachment"></a><span class="summary-sig"><span class="summary-sig-name">OnChangeAttachment</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>,
+          <span class=summary-sig-arg>line</span>,
+          <span class=summary-sig-arg>ordering</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>draw</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDragRight"></a><span class="summary-sig"><span class="summary-sig-name">OnDragRight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>draw</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDraw"></a><span class="summary-sig"><span class="summary-sig-name">OnDraw</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawBranches"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawBranches</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>erase</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawBranchesAttachment"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawBranchesAttachment</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>attachment</span>,
+          <span class=summary-sig-arg>erase</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawContents"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawContents</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawControlPoints"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawControlPoints</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawOutline"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawOutline</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnEndDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnEndDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnEndDragRight"></a><span class="summary-sig"><span class="summary-sig-name">OnEndDragRight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnErase"></a><span class="summary-sig"><span class="summary-sig-name">OnErase</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnEraseContents"></a><span class="summary-sig"><span class="summary-sig-name">OnEraseContents</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnEraseControlPoints"></a><span class="summary-sig"><span class="summary-sig-name">OnEraseControlPoints</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnHighlight"></a><span class="summary-sig"><span class="summary-sig-name">OnHighlight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnLeftClick"></a><span class="summary-sig"><span class="summary-sig-name">OnLeftClick</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMoveLinks"></a><span class="summary-sig"><span class="summary-sig-name">OnMoveLinks</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMovePre"></a><span class="summary-sig"><span class="summary-sig-name">OnMovePre</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>old_x</span>,
+          <span class=summary-sig-arg>old_y</span>,
+          <span class=summary-sig-arg>display</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnRightClick"></a><span class="summary-sig"><span class="summary-sig-name">OnRightClick</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSize"></a><span class="summary-sig"><span class="summary-sig-name">OnSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSizingBeginDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnSizingBeginDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSizingDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnSizingDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>draw</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSizingEndDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnSizingEndDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#PhysicalToLogicalAttachment" class="summary-sig-name"><code>PhysicalToLogicalAttachment</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>physicalAttachment</span>)</span></code>
+<br />
+Rotate the standard attachment point from physical
+(0 is always North) to logical (0 -&gt; 1 if rotated by 90 degrees)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Recentre" class="summary-sig-name"><code>Recentre</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Do recentring (or other formatting) for all the text regions
+for this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Recompute" class="summary-sig-name"><code>Recompute</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Recomputes any constraints associated with the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#RemoveFromCanvas" class="summary-sig-name"><code>RemoveFromCanvas</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>theCanvas</span>)</span></code>
+<br />
+Remove the shape from the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#RemoveLine" class="summary-sig-name"><code>RemoveLine</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>line</span>)</span></code>
+<br />
+Remove the given line from the shape's list of attached lines.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#ResetControlPoints" class="summary-sig-name"><code>ResetControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Reset the positions of the control points (for instance when the
+shape's shape has changed).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#ResetMandatoryControlPoints" class="summary-sig-name"><code>ResetMandatoryControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Reset the mandatory control points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Rotate" class="summary-sig-name"><code>Rotate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>theta</span>)</span></code>
+<br />
+Rotate about the given axis by the given amount in radians.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Select" class="summary-sig-name"><code>Select</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>select</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Select or deselect the given shape, drawing or erasing control points
+(handles) as necessary.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Selected" class="summary-sig-name"><code>Selected</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+TRUE if the shape is currently selected.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetAttachmentMode" class="summary-sig-name"><code>SetAttachmentMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+Set the attachment mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAttachmentSize"></a><span class="summary-sig"><span class="summary-sig-name">SetAttachmentSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetBrush" class="summary-sig-name"><code>SetBrush</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>the_brush</span>)</span></code>
+<br />
+Set the brush for filling the shape's shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetCanvas" class="summary-sig-name"><code>SetCanvas</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>theCanvas</span>)</span></code>
+<br />
+Identical to Shape.Attach.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetCentreResize" class="summary-sig-name"><code>SetCentreResize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cr</span>)</span></code>
+<br />
+Specify whether the shape is to be resized from the centre (the
+centre stands still) or from the corner or side being dragged (the
+other corner or side stands still).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetDefaultRegionSize" class="summary-sig-name"><code>SetDefaultRegionSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Set the default region to be consistent with the shape size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetDisableLabel" class="summary-sig-name"><code>SetDisableLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>flag</span>)</span></code>
+<br />
+Set flag to TRUE to stop the default region being shown.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetDraggable" class="summary-sig-name"><code>SetDraggable</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>drag</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+<br />
+Set the shape to be draggable or not draggable.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetDrawHandles" class="summary-sig-name"><code>SetDrawHandles</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>drawH</span>)</span></code>
+<br />
+Set the drawHandles flag for this shape and all descendants.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetEventHandler" class="summary-sig-name"><code>SetEventHandler</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>handler</span>)</span></code>
+<br />
+Set the event handler for this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetFixedSize" class="summary-sig-name"><code>SetFixedSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Set the shape to be fixed size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetFont" class="summary-sig-name"><code>SetFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>the_font</span>,
+          <span class=summary-sig-arg>regionId</span>)</span></code>
+<br />
+Set the font for the specified text region.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetFormatMode" class="summary-sig-name"><code>SetFormatMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>,
+          <span class=summary-sig-arg>regionId</span>)</span></code>
+<br />
+Set the format mode of the default text region.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetHighlight" class="summary-sig-name"><code>SetHighlight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>hi</span>,
+          <span class=summary-sig-arg>recurse</span>)</span></code>
+<br />
+Set the highlight for a shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetId" class="summary-sig-name"><code>SetId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>i</span>)</span></code>
+<br />
+Set the integer identifier for this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetMaintainAspectRatio" class="summary-sig-name"><code>SetMaintainAspectRatio</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>ar</span>)</span></code>
+<br />
+Set whether a shape that resizes should not change the aspect ratio
+(width and height should be in the original proportion).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetParent"></a><span class="summary-sig"><span class="summary-sig-name">SetParent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>p</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetPen" class="summary-sig-name"><code>SetPen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>the_pen</span>)</span></code>
+<br />
+Set the pen for drawing the shape's outline.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetRegionName" class="summary-sig-name"><code>SetRegionName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>regionId</span>)</span></code>
+<br />
+Set the name for this region.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRotation"></a><span class="summary-sig"><span class="summary-sig-name">SetRotation</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rotation</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetSensitivityFilter" class="summary-sig-name"><code>SetSensitivityFilter</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sens</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+<br />
+Set the shape to be sensitive or insensitive to specific mouse
+operations.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetShadowMode" class="summary-sig-name"><code>SetShadowMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>,
+          <span class=summary-sig-arg>redraw</span>)</span></code>
+<br />
+Set the shadow mode (whether a shadow is drawn or not).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetShape"></a><span class="summary-sig"><span class="summary-sig-name">SetShape</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sh</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetSize" class="summary-sig-name"><code>SetSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+<br />
+Set the shape's size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetSpaceAttachments" class="summary-sig-name"><code>SetSpaceAttachments</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sp</span>)</span></code>
+<br />
+Indicate whether lines should be spaced out evenly at the point
+they touch the node (sp = True), or whether they should join at a single
+point (sp = False).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetTextColour" class="summary-sig-name"><code>SetTextColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>the_colour</span>,
+          <span class=summary-sig-arg>regionId</span>)</span></code>
+<br />
+Set the colour for the specified text region.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetX" class="summary-sig-name"><code>SetX</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Set the x position of the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SetY" class="summary-sig-name"><code>SetY</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Set the y position of the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#Show" class="summary-sig-name"><code>Show</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span></code>
+<br />
+Set a flag indicating whether the shape should be drawn.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Shape-class.html#SortLines" class="summary-sig-name"><code>SortLines</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>,
+          <span class=summary-sig-arg>linesToSort</span>)</span></code>
+<br />
+Reorder the lines coming into the node image at this attachment
+position, in the order in which they appear in linesToSort.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>bool</code></font></td>
+<td><b><a href="wx.lib.ogl.Shape-class.html#GraphicsInSizeToContents"><code>GraphicsInSizeToContents</code></a></b> = <span title="False"><code>False                         </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="AddLine"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddLine</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>line</span>,
+          <span class=sig-arg>other</span>,
+          <span class=sig-arg>attachFrom</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>attachTo</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>positionFrom</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>positionTo</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Add a line between this shape and the given other shape, at the
+specified attachment points.</p>
+<p>The position in the list of lines at each end can also be specified,
+so that the line will be drawn at a particular point on its attachment
+point.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddRegion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddRegion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>region</span>)</span>
+  </h3>
+<p>Add a region to the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>string</span>)</span>
+  </h3>
+<p>Add a line of text to the shape's default text region.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddToCanvas"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddToCanvas</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>theCanvas</span>,
+          <span class=sig-arg>addAfter</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Add the shape to the canvas's shape list.
+If addAfter is non-NULL, will add the shape after this one.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AncestorSelected"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AncestorSelected</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if the shape's ancestor is currently selected.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ApplyAttachmentOrdering"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ApplyAttachmentOrdering</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>linesToSort</span>)</span>
+  </h3>
+<p>Apply the line ordering in linesToSort to the shape, to reorder
+the way lines are attached.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AssignNewIds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AssignNewIds</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Assign new ids to this image and its children.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Attach"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Attach</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>can</span>)</span>
+  </h3>
+<p>Set the shape's internal canvas pointer to point to the given canvas.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AttachmentIsValid"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AttachmentIsValid</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachment</span>)</span>
+  </h3>
+<p>TRUE if attachment is a valid attachment point.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AttachmentSortTest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AttachmentSortTest</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachmentPoint</span>,
+          <span class=sig-arg>pt1</span>,
+          <span class=sig-arg>pt2</span>)</span>
+  </h3>
+<p>Return TRUE if pt1 is less than or equal to pt2, in the sense
+that one point comes before another on an edge of the shape.</p>
+<p>attachment is the attachment point (side) in question.</p>
+<p>This function is used in Shape.MoveLineToNewAttachment to determine
+the new line ordering.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalcSimpleAttachment"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalcSimpleAttachment</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt1</span>,
+          <span class=sig-arg>pt2</span>,
+          <span class=sig-arg>nth</span>,
+          <span class=sig-arg>noArcs</span>,
+          <span class=sig-arg>line</span>)</span>
+  </h3>
+<p>Assuming the attachment lies along a vertical or horizontal line,
+calculate the position on that point.</p>
+<p>Parameters:</p>
+<dl class="rst-docutils">
+<dt>pt1</dt>
+<dd>The first point of the line repesenting the edge of the shape.</dd>
+<dt>pt2</dt>
+<dd>The second point of the line representing the edge of the shape.</dd>
+<dt>nth</dt>
+<dd>The position on the edge (for example there may be 6 lines at
+this attachment point, and this may be the 2nd line.</dd>
+<dt>noArcs</dt>
+<dd>The number of lines at this edge.</dd>
+<dt>line</dt>
+<dd>The line shape.</dd>
+</dl>
+<p>Remarks</p>
+<p>This function expects the line to be either vertical or horizontal,
+and determines which.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClearAttachments"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClearAttachments</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Clear internal custom attachment point shapes (of class
+wxAttachmentPoint).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClearRegions"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClearRegions</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Clear the ShapeRegions from the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClearText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClearText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>regionId</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Clear the text from the specified text region.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Delete"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Delete</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Fully disconnect this shape from parents, children, the
+canvas, etc.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteControlPoints</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Delete the control points (or handles) for the shape.</p>
+<p>Does not redraw the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Detach"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Detach</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Disassociates the shape from its canvas.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Draggable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Draggable</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if the shape may be dragged by the user.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Draw"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Draw</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Draw the whole shape and any lines attached to it.</p>
+<p>Do not override this function: override OnDraw, which is called
+by this function.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawContents"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawContents</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Draw the internal graphic of the shape (such as text).</p>
+<p>Do not override this function: override OnDrawContents, which
+is called by this function.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawLinks"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawLinks</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>attachment</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>recurse</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Draws any lines linked to this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Erase"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Erase</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Erase the shape.
+Does not repair damage caused to other shapes.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EraseContents"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EraseContents</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Erase the shape contents, that is, the area within the shape's
+minimum bounding box.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EraseLinks"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EraseLinks</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>attachment</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>recurse</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Erase links attached to this shape, but do not repair damage
+caused to other shapes.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindRegion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindRegion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Find the actual image ('this' if non-composite) and region id
+for the given region name.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindRegionNames"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindRegionNames</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get a list of all region names for this image (composite or simple).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Flash"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Flash</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Flash the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FormatText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FormatText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>s</span>,
+          <span class=sig-arg>i</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Reformat the given text region; defaults to formatting the
+default region.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAttachmentLineCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAttachmentLineCount</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachment</span>)</span>
+  </h3>
+<p>Get the number of lines at this attachment position.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAttachmentMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAttachmentMode</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the attachment mode.</p>
+<p>See Shape.SetAttachmentMode.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAttachmentPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAttachmentPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachment</span>,
+          <span class=sig-arg>nth</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>no_arcs</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>line</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Get the position at which the given attachment point should be drawn.</p>
+<p>If attachment isn't found among the attachment points of the shape,
+returns None.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAttachmentPositionEdge"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAttachmentPositionEdge</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachment</span>,
+          <span class=sig-arg>nth</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>no_arcs</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>line</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Only get the attachment position at the _edge_ of the shape,
+ignoring branching mode. This is used e.g. to indicate the edge of
+interest, not the point on the attachment branch.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBackgroundBrush"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBackgroundBrush</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return brush of the right colour for the background.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBackgroundPen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBackgroundPen</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return pen of the right colour for the background.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBoundingBoxMax"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBoundingBoxMax</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the maximum bounding box for the shape, taking into account
+external features such as shadows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBoundingBoxMin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBoundingBoxMin</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the minimum bounding box for the shape, that defines the area
+available for drawing the contents (such as text).</p>
+<p>Must be overridden.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBranchingAttachmentInfo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBranchingAttachmentInfo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachment</span>)</span>
+  </h3>
+<p>Get information about where branching connections go.</p>
+<p>Returns FALSE if there are no lines at this attachment.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBranchingAttachmentRoot"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBranchingAttachmentRoot</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachment</span>)</span>
+  </h3>
+<p>Get the root point at the given attachment.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBrush"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBrush</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the brush used for filling the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCanvas"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCanvas</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the internal canvas.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCentreResize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCentreResize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if the shape is to be resized from the centre (the centre stands
+still), or FALSE if from the corner or side being dragged (the other
+corner or side stands still)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetChildren"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetChildren</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the list of children for this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDisableLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDisableLabel</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if the default region will not be shown, FALSE otherwise.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDrawHandles"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDrawHandles</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the list of drawhandles.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEventHandler"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEventHandler</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the event handler for this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFixedHeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFixedHeight</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if the shape cannot be resized in the vertical plane.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFixedSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFixedSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return flags indicating whether the shape is of fixed size in
+either direction.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFixedWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFixedWidth</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if the shape cannot be resized in the horizontal plane.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>regionId</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Get the font for the specified text region.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetId</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the integer identifier for this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLinePosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLinePosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>line</span>)</span>
+  </h3>
+<p>Get the zero-based position of line in the list of lines
+for this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLines"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLines</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the list of lines connected to this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMaintainAspectRatio"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMaintainAspectRatio</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if shape keeps aspect ratio during resize.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNumberOfAttachments"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNumberOfAttachments</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the number of attachment points for this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNumberOfTextRegions"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNumberOfTextRegions</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the number of text regions for this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetParent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetParent</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the parent of this shape, if it is part of a composite.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPen</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the pen used for drawing the shape's outline.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPerimeterPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPerimeterPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x1</span>,
+          <span class=sig-arg>y1</span>,
+          <span class=sig-arg>x2</span>,
+          <span class=sig-arg>y2</span>)</span>
+  </h3>
+<p>Get the point at which the line from (x1, y1) to (x2, y2) hits
+the shape. Returns False if the line doesn't hit the perimeter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRegionId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRegionId</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Get the region's identifier by name.
+This is not unique for within an entire composite, but is unique
+for the image.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRegionName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRegionName</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>regionId</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Get the region's name.
+A region's name can be used to uniquely determine a region within
+an entire composite image hierarchy. See also Shape.SetRegionName.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRegions"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRegions</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the list of ShapeRegions.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRotation"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRotation</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the angle of rotation in radians.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSensitivityFilter"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSensitivityFilter</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the sensitivity filter, a bitlist of values.</p>
+<p>See Shape.SetSensitivityFilter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetShadowMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetShadowMode</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the current shadow mode setting</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSpaceAttachments"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSpaceAttachments</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return whether lines should be spaced out evenly at the point they
+touch the node (True), or whether they should join at a single point
+(False).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTextColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>regionId</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Get the colour for the specified text region.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTopAncestor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTopAncestor</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the top-most ancestor of this shape (the root of
+the composite).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetX"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetX</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the x position of the centre of the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetY"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetY</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the y position of the centre of the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasDescendant"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasDescendant</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>image</span>)</span>
+  </h3>
+<p>TRUE if image is a descendant of this composite.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HitTest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HitTest</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Given a point on a canvas, returns TRUE if the point was on the
+shape, and returns the nearest attachment point and distance from
+the given point and target.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertInCanvas"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertInCanvas</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>theCanvas</span>)</span>
+  </h3>
+<p>Insert the shape at the front of the shape list of canvas.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsHighlighted"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsHighlighted</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if the shape is highlighted. Shape highlighting is unimplemented.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsShown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsShown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if the shape is in a visible state, FALSE otherwise.</p>
+<p>Note that this has nothing to do with whether the window is hidden
+or the shape has scrolled off the canvas; it refers to the internal
+visibility flag.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LogicalToPhysicalAttachment"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LogicalToPhysicalAttachment</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>logicalAttachment</span>)</span>
+  </h3>
+<p>Rotate the standard attachment point from logical
+to physical (0 is always North).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Make a list of control points (draggable handles) appropriate to
+the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeMandatoryControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeMandatoryControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Make the mandatory control points.</p>
+<p>For example, the control point on a dividing line should appear even
+if the divided rectangle shape's handles should not appear (because
+it is the child of a composite, and children are not resizable).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Move"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Move</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>display</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Move the shape to the given position.
+Redraw if display is TRUE.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MoveLineToNewAttachment"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MoveLineToNewAttachment</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>to_move</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Move the given line (which must already be attached to the shape)
+to a different attachment point on the shape, or a different order
+on the same attachment.</p>
+<p>Calls Shape.AttachmentSortTest and then
+ShapeEvtHandler.OnChangeAttachment.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MoveLinks"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MoveLinks</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Redraw all the lines attached to the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="NameRegions"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">NameRegions</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parentName</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+<p>Make unique names for all the regions in a shape or composite shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PhysicalToLogicalAttachment"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PhysicalToLogicalAttachment</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>physicalAttachment</span>)</span>
+  </h3>
+<p>Rotate the standard attachment point from physical
+(0 is always North) to logical (0 -&gt; 1 if rotated by 90 degrees)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Recentre"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Recentre</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Do recentring (or other formatting) for all the text regions
+for this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Recompute"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Recompute</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Recomputes any constraints associated with the shape.</p>
+<p>Normally applicable to CompositeShapes only, but harmless for
+other classes of Shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveFromCanvas"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveFromCanvas</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>theCanvas</span>)</span>
+  </h3>
+<p>Remove the shape from the canvas.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveLine"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveLine</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>line</span>)</span>
+  </h3>
+<p>Remove the given line from the shape's list of attached lines.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Reset the positions of the control points (for instance when the
+shape's shape has changed).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetMandatoryControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetMandatoryControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Reset the mandatory control points.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Rotate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Rotate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>theta</span>)</span>
+  </h3>
+<p>Rotate about the given axis by the given amount in radians.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Select"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Select</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>select</span>,
+          <span class=sig-arg>dc</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Select or deselect the given shape, drawing or erasing control points
+(handles) as necessary.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Selected"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Selected</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>TRUE if the shape is currently selected.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAttachmentMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAttachmentMode</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mode</span>)</span>
+  </h3>
+<p>Set the attachment mode.</p>
+<p>If TRUE, attachment points will be significant when drawing lines to
+and from this shape.
+If FALSE, lines will be drawn as if to the centre of the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBrush"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBrush</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>the_brush</span>)</span>
+  </h3>
+<p>Set the brush for filling the shape's shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCanvas"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCanvas</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>theCanvas</span>)</span>
+  </h3>
+<p>Identical to Shape.Attach.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCentreResize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCentreResize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>cr</span>)</span>
+  </h3>
+<p>Specify whether the shape is to be resized from the centre (the
+centre stands still) or from the corner or side being dragged (the
+other corner or side stands still).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDefaultRegionSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDefaultRegionSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Set the default region to be consistent with the shape size.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDisableLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDisableLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>flag</span>)</span>
+  </h3>
+<p>Set flag to TRUE to stop the default region being shown.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDraggable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDraggable</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>drag</span>,
+          <span class=sig-arg>recursive</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Set the shape to be draggable or not draggable.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDrawHandles"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDrawHandles</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>drawH</span>)</span>
+  </h3>
+<p>Set the drawHandles flag for this shape and all descendants.
+If drawH is TRUE (the default), any handles (control points) will
+be drawn. Otherwise, the handles will not be drawn.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEventHandler"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEventHandler</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>handler</span>)</span>
+  </h3>
+<p>Set the event handler for this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFixedSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFixedSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Set the shape to be fixed size.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>the_font</span>,
+          <span class=sig-arg>regionId</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Set the font for the specified text region.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFormatMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFormatMode</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mode</span>,
+          <span class=sig-arg>regionId</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Set the format mode of the default text region. The argument
+can be a bit list of the following:</p>
+<dl class="rst-docutils">
+<dt>FORMAT_NONE</dt>
+<dd>No formatting.</dd>
+<dt>FORMAT_CENTRE_HORIZ</dt>
+<dd>Horizontal centring.</dd>
+<dt>FORMAT_CENTRE_VERT</dt>
+<dd>Vertical centring.</dd>
+</dl>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHighlight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHighlight</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>hi</span>,
+          <span class=sig-arg>recurse</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Set the highlight for a shape. Shape highlighting is unimplemented.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetId</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>i</span>)</span>
+  </h3>
+<p>Set the integer identifier for this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMaintainAspectRatio"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMaintainAspectRatio</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>ar</span>)</span>
+  </h3>
+<p>Set whether a shape that resizes should not change the aspect ratio
+(width and height should be in the original proportion).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>the_pen</span>)</span>
+  </h3>
+<p>Set the pen for drawing the shape's outline.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRegionName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRegionName</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>,
+          <span class=sig-arg>regionId</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Set the name for this region.
+The name for a region is unique within the scope of the whole
+composite, whereas a region id is unique only for a single image.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSensitivityFilter"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSensitivityFilter</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sens</span>=<span class=sig-default>15</span>,
+          <span class=sig-arg>recursive</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Set the shape to be sensitive or insensitive to specific mouse
+operations.</p>
+<p>sens is a bitlist of the following:</p>
+<ul class="rst-simple">
+<li>OP_CLICK_LEFT</li>
+<li>OP_CLICK_RIGHT</li>
+<li>OP_DRAG_LEFT</li>
+<li>OP_DRAG_RIGHT</li>
+<li>OP_ALL (equivalent to a combination of all the above).</li>
+</ul>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetShadowMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetShadowMode</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mode</span>,
+          <span class=sig-arg>redraw</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Set the shadow mode (whether a shadow is drawn or not).
+mode can be one of the following:</p>
+<dl class="rst-docutils">
+<dt>SHADOW_NONE</dt>
+<dd>No shadow (the default).</dd>
+<dt>SHADOW_LEFT</dt>
+<dd>Shadow on the left side.</dd>
+<dt>SHADOW_RIGHT</dt>
+<dd>Shadow on the right side.</dd>
+</dl>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>recursive</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Set the shape's size.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSpaceAttachments"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSpaceAttachments</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sp</span>)</span>
+  </h3>
+<p>Indicate whether lines should be spaced out evenly at the point
+they touch the node (sp = True), or whether they should join at a single
+point (sp = False).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTextColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>the_colour</span>,
+          <span class=sig-arg>regionId</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Set the colour for the specified text region.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetX"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetX</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>)</span>
+  </h3>
+<p>Set the x position of the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetY"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetY</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Set the y position of the shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Show"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Show</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>show</span>)</span>
+  </h3>
+<p>Set a flag indicating whether the shape should be drawn.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SortLines"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SortLines</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachment</span>,
+          <span class=sig-arg>linesToSort</span>)</span>
+  </h3>
+<p>Reorder the lines coming into the node image at this attachment
+position, in the order in which they appear in linesToSort.</p>
+<p>Any remaining lines not in the list will be added to the end.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="GraphicsInSizeToContents"></a>
+<h3>GraphicsInSizeToContents</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>bool</code>
+
+      </dd>
+<span title="False">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+False                                                                  </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:54:04 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

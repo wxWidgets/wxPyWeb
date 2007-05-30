@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.masked.maskededit.MaskedEditAccessorsMixin</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.masked-module.html">Package&nbsp;masked</a> ::
+        <a href="wx.lib.masked.maskededit-module.html">Module&nbsp;maskededit</a> ::
+        Class&nbsp;MaskedEditAccessorsMixin
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.masked.maskededit.MaskedEditAccessorsMixin-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class MaskedEditAccessorsMixin</h2>
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.masked.combobox.ComboBox-class.html"><code>ComboBox</code></a>,
+    <a href="wx.lib.masked.combobox.PreMaskedComboBox-class.html"><code>PreMaskedComboBox</code></a>,
+    <a href="wx.lib.masked.textctrl.PreMaskedTextCtrl-class.html"><code>PreMaskedTextCtrl</code></a>,
+    <a href="wx.lib.masked.textctrl.TextCtrl-class.html"><code>TextCtrl</code></a></dd></dl>
+
+<hr/>
+
+<p>To avoid a ton of boiler-plate, and to automate the getter/setter generation
+for each valid control parameter so we never forget to add the functions when
+adding parameters, this class programmatically adds the masked edit mixin
+parameters to itself.
+(This makes it easier for Designers like Boa to deal with masked controls.)</p>
+<p>To further complicate matters, this is done with an extra level of inheritance,
+so that &quot;general&quot; classes like masked.TextCtrl can have all possible attributes,
+while derived classes, like masked.TimeCtrl and masked.NumCtrl can prevent
+exposure of those optional attributes of their base class that do not make
+sense for their derivation.</p>
+<dl class="rst-docutils">
+<dt>Therefore, we define:</dt>
+<dd>BaseMaskedTextCtrl(TextCtrl, MaskedEditMixin)</dd>
+<dt>and</dt>
+<dd>masked.TextCtrl(BaseMaskedTextCtrl, MaskedEditAccessorsMixin).</dd>
+<dt>This allows us to then derive:</dt>
+<dd>masked.NumCtrl( BaseMaskedTextCtrl )</dd>
+</dl>
+<p>and not have to expose all the same accessor functions for the
+derived control when they don't all make sense for it.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetAutoCompleteKeycodes"></a><span class="summary-sig"><span class="summary-sig-name">GetAutoCompleteKeycodes</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetAutoformat"></a><span class="summary-sig"><span class="summary-sig-name">GetAutoformat</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetAutoSelect"></a><span class="summary-sig"><span class="summary-sig-name">GetAutoSelect</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetChoiceRequired"></a><span class="summary-sig"><span class="summary-sig-name">GetChoiceRequired</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetChoices"></a><span class="summary-sig"><span class="summary-sig-name">GetChoices</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetCompareNoCase"></a><span class="summary-sig"><span class="summary-sig-name">GetCompareNoCase</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetDatestyle"></a><span class="summary-sig"><span class="summary-sig-name">GetDatestyle</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetDecimalChar"></a><span class="summary-sig"><span class="summary-sig-name">GetDecimalChar</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetDefaultEncoding"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultEncoding</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetDefaultValue"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultValue</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetDemo"></a><span class="summary-sig"><span class="summary-sig-name">GetDemo</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetDescription"></a><span class="summary-sig"><span class="summary-sig-name">GetDescription</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetEmptyBackgroundColour"></a><span class="summary-sig"><span class="summary-sig-name">GetEmptyBackgroundColour</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetEmptyInvalid"></a><span class="summary-sig"><span class="summary-sig-name">GetEmptyInvalid</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetExcludeChars"></a><span class="summary-sig"><span class="summary-sig-name">GetExcludeChars</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetFields"></a><span class="summary-sig"><span class="summary-sig-name">GetFields</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetFillChar"></a><span class="summary-sig"><span class="summary-sig-name">GetFillChar</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetFormatcodes"></a><span class="summary-sig"><span class="summary-sig-name">GetFormatcodes</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetGroupChar"></a><span class="summary-sig"><span class="summary-sig-name">GetGroupChar</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetIncludeChars"></a><span class="summary-sig"><span class="summary-sig-name">GetIncludeChars</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetInvalidBackgroundColour"></a><span class="summary-sig"><span class="summary-sig-name">GetInvalidBackgroundColour</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetMask"></a><span class="summary-sig"><span class="summary-sig-name">GetMask</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetRaiseOnInvalidPaste"></a><span class="summary-sig"><span class="summary-sig-name">GetRaiseOnInvalidPaste</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetRetainFieldValidation"></a><span class="summary-sig"><span class="summary-sig-name">GetRetainFieldValidation</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetShiftDecimalChar"></a><span class="summary-sig"><span class="summary-sig-name">GetShiftDecimalChar</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetSignedForegroundColour"></a><span class="summary-sig"><span class="summary-sig-name">GetSignedForegroundColour</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetStopFieldChangeIfInvalid"></a><span class="summary-sig"><span class="summary-sig-name">GetStopFieldChangeIfInvalid</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetUseFixedWidthFont"></a><span class="summary-sig"><span class="summary-sig-name">GetUseFixedWidthFont</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetUseParensForNegatives"></a><span class="summary-sig"><span class="summary-sig-name">GetUseParensForNegatives</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetValidBackgroundColour"></a><span class="summary-sig"><span class="summary-sig-name">GetValidBackgroundColour</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetValidFunc"></a><span class="summary-sig"><span class="summary-sig-name">GetValidFunc</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetValidRange"></a><span class="summary-sig"><span class="summary-sig-name">GetValidRange</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetValidRegex"></a><span class="summary-sig"><span class="summary-sig-name">GetValidRegex</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetValidRequired"></a><span class="summary-sig"><span class="summary-sig-name">GetValidRequired</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAutoCompleteKeycodes"></a><span class="summary-sig"><span class="summary-sig-name">SetAutoCompleteKeycodes</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAutoformat"></a><span class="summary-sig"><span class="summary-sig-name">SetAutoformat</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAutoSelect"></a><span class="summary-sig"><span class="summary-sig-name">SetAutoSelect</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetChoiceRequired"></a><span class="summary-sig"><span class="summary-sig-name">SetChoiceRequired</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetChoices"></a><span class="summary-sig"><span class="summary-sig-name">SetChoices</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCompareNoCase"></a><span class="summary-sig"><span class="summary-sig-name">SetCompareNoCase</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDatestyle"></a><span class="summary-sig"><span class="summary-sig-name">SetDatestyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDecimalChar"></a><span class="summary-sig"><span class="summary-sig-name">SetDecimalChar</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDefaultEncoding"></a><span class="summary-sig"><span class="summary-sig-name">SetDefaultEncoding</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDefaultValue"></a><span class="summary-sig"><span class="summary-sig-name">SetDefaultValue</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDemo"></a><span class="summary-sig"><span class="summary-sig-name">SetDemo</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDescription"></a><span class="summary-sig"><span class="summary-sig-name">SetDescription</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetEmptyBackgroundColour"></a><span class="summary-sig"><span class="summary-sig-name">SetEmptyBackgroundColour</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetEmptyInvalid"></a><span class="summary-sig"><span class="summary-sig-name">SetEmptyInvalid</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetExcludeChars"></a><span class="summary-sig"><span class="summary-sig-name">SetExcludeChars</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetFields"></a><span class="summary-sig"><span class="summary-sig-name">SetFields</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetFillChar"></a><span class="summary-sig"><span class="summary-sig-name">SetFillChar</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetFormatcodes"></a><span class="summary-sig"><span class="summary-sig-name">SetFormatcodes</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetGroupChar"></a><span class="summary-sig"><span class="summary-sig-name">SetGroupChar</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetIncludeChars"></a><span class="summary-sig"><span class="summary-sig-name">SetIncludeChars</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetInvalidBackgroundColour"></a><span class="summary-sig"><span class="summary-sig-name">SetInvalidBackgroundColour</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMask"></a><span class="summary-sig"><span class="summary-sig-name">SetMask</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRaiseOnInvalidPaste"></a><span class="summary-sig"><span class="summary-sig-name">SetRaiseOnInvalidPaste</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRetainFieldValidation"></a><span class="summary-sig"><span class="summary-sig-name">SetRetainFieldValidation</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetShiftDecimalChar"></a><span class="summary-sig"><span class="summary-sig-name">SetShiftDecimalChar</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSignedForegroundColour"></a><span class="summary-sig"><span class="summary-sig-name">SetSignedForegroundColour</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetStopFieldChangeIfInvalid"></a><span class="summary-sig"><span class="summary-sig-name">SetStopFieldChangeIfInvalid</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetUseFixedWidthFont"></a><span class="summary-sig"><span class="summary-sig-name">SetUseFixedWidthFont</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetUseParensForNegatives"></a><span class="summary-sig"><span class="summary-sig-name">SetUseParensForNegatives</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetValidBackgroundColour"></a><span class="summary-sig"><span class="summary-sig-name">SetValidBackgroundColour</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetValidFunc"></a><span class="summary-sig"><span class="summary-sig-name">SetValidFunc</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetValidRange"></a><span class="summary-sig"><span class="summary-sig-name">SetValidRange</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetValidRegex"></a><span class="summary-sig"><span class="summary-sig-name">SetValidRegex</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetValidRequired"></a><span class="summary-sig"><span class="summary-sig-name">SetValidRequired</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>list</code></font></td>
+<td><b><a href="wx.lib.masked.maskededit.MaskedEditAccessorsMixin-class.html#exposed_basectrl_params"><code>exposed_basectrl_params</code></a></b> = <span title="['demo', 'retainFieldValidation', 'emptyBackgroundColour', 'fields', 'datestyle', 'validBackgroundColour', 'mask', 'autoCompleteKeycodes', 'signedForegroundColour', 'useFixedWidthFont', 'defaultEncoding', 'autoformat', 'invalidBackgroundColour', 'formatcodes', 'fillChar', 'groupChar', 'decimalChar', 'validFunc', 'compareNoCase', 'useParensForNegatives', 'defaultValue', 'choiceRequired', 'shiftDecimalChar', 'includeChars', 'excludeChars', 'validRequired', 'description', 'validRegex', 'stopFieldChangeIfInvalid', 'validRange', 'autoSelect', 'mask', 'choices', 'emptyInvalid', 'raiseOnInvalidPas..."><code>['demo',&nbsp;'retainFieldValidatio<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.lib.masked.maskededit.MaskedEditAccessorsMixin-class.html#param"><code>param</code></a></b> = <span title="'raiseOnInvalidPaste'"><code><span class="variable-quote">'</span>raiseOnInvalidPaste<span class="variable-quote">'</span>                            </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.lib.masked.maskededit.MaskedEditAccessorsMixin-class.html#propname"><code>propname</code></a></b> = <span title="'RaiseOnInvalidPaste'"><code><span class="variable-quote">'</span>RaiseOnInvalidPaste<span class="variable-quote">'</span>                         </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="exposed_basectrl_params"></a>
+<h3>exposed_basectrl_params</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>list</code>
+
+      </dd>
+<span title="['demo', 'retainFieldValidation', 'emptyBackgroundColour', 'fields', 'datestyle', 'validBackgroundColour', 'mask', 'autoCompleteKeycodes', 'signedForegroundColour', 'useFixedWidthFont', 'defaultEncoding', 'autoformat', 'invalidBackgroundColour', 'formatcodes', 'fillChar', 'groupChar', 'decimalChar', 'validFunc', 'compareNoCase', 'useParensForNegatives', 'defaultValue', 'choiceRequired', 'shiftDecimalChar', 'includeChars', 'excludeChars', 'validRequired', 'description', 'validRegex', 'stopFieldChangeIfInvalid', 'validRange', 'autoSelect', 'mask', 'choices', 'emptyInvalid', 'raiseOnInvalidPas...">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+['demo',
+ 'retainFieldValidation',
+ 'emptyBackgroundColour',
+ 'fields',
+ 'datestyle',
+ 'validBackgroundColour',
+ 'mask',
+ 'autoCompleteKeycodes',
+<span class="variable-ellipsis">...</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="param"></a>
+<h3>param</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'raiseOnInvalidPaste'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>raiseOnInvalidPaste<span class="variable-quote">'</span>                                                  </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="propname"></a>
+<h3>propname</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'RaiseOnInvalidPaste'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>RaiseOnInvalidPaste<span class="variable-quote">'</span>                                                  </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:59:24 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>distutils.cmd.Command</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        Package&nbsp;distutils ::
+        Module&nbsp;cmd ::
+        Class&nbsp;Command
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="distutils.cmd.Command-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class Command</h2>
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="distutils.command.clean.clean-class.html"><code>clean</code></a>,
+    <a href="distutils.command.install.install-class.html"><code>install</code></a>,
+    <a href="distutils.command.install_data.install_data-class.html"><code>install_data</code></a>,
+    <a href="distutils.command.install_headers.install_headers-class.html"><code>install_headers</code></a></dd></dl>
+
+<hr/>
+
+<p>Abstract base class for defining command classes, the &quot;worker bees&quot;
+of the Distutils.  A useful analogy for command classes is to think of
+them as subroutines with local variables called &quot;options&quot;.  The options
+are &quot;declared&quot; in 'initialize_options()' and &quot;defined&quot; (given their
+final values, aka &quot;finalized&quot;) in 'finalize_options()', both of which
+must be defined by every command class.  The distinction between the
+two is necessary because option values might come from the outside
+world (command line, config file, ...), and any options dependent on
+other options must be computed <em>after</em> these outside influences have
+been processed -- hence 'finalize_options()'.  The &quot;body&quot; of the
+subroutine, where it does all its work based on the values of its
+options, is the 'run()' method, which must also be implemented by every
+command class.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dist</span>)</span></code>
+<br />
+Create and initialize a new Command object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__getattr__"></a><span class="summary-sig"><span class="summary-sig-name">__getattr__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attr</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#announce" class="summary-sig-name"><code>announce</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>msg</span>,
+          <span class=summary-sig-arg>level</span>)</span></code>
+<br />
+If the current verbosity level is of greater than or equal to
+'level' print 'msg' to stdout.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#copy_file" class="summary-sig-name"><code>copy_file</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>infile</span>,
+          <span class=summary-sig-arg>outfile</span>,
+          <span class=summary-sig-arg>preserve_mode</span>,
+          <span class=summary-sig-arg>preserve_times</span>,
+          <span class=summary-sig-arg>link</span>,
+          <span class=summary-sig-arg>level</span>)</span></code>
+<br />
+Copy a file respecting verbose, dry-run and force flags.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#copy_tree" class="summary-sig-name"><code>copy_tree</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>infile</span>,
+          <span class=summary-sig-arg>outfile</span>,
+          <span class=summary-sig-arg>preserve_mode</span>,
+          <span class=summary-sig-arg>preserve_times</span>,
+          <span class=summary-sig-arg>preserve_symlinks</span>,
+          <span class=summary-sig-arg>level</span>)</span></code>
+<br />
+Copy an entire directory tree respecting verbose, dry-run,
+and force flags.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#debug_print" class="summary-sig-name"><code>debug_print</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Print 'msg' to stdout if the global DEBUG (taken from the
+DISTUTILS_DEBUG environment variable) flag is true.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="dump_options"></a><span class="summary-sig"><span class="summary-sig-name">dump_options</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>header</span>,
+          <span class=summary-sig-arg>indent</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ensure_dirname"></a><span class="summary-sig"><span class="summary-sig-name">ensure_dirname</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>option</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#ensure_filename" class="summary-sig-name"><code>ensure_filename</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>option</span>)</span></code>
+<br />
+Ensure that 'option' is the name of an existing file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ensure_finalized"></a><span class="summary-sig"><span class="summary-sig-name">ensure_finalized</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#ensure_string" class="summary-sig-name"><code>ensure_string</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>option</span>,
+          <span class=summary-sig-arg>default</span>)</span></code>
+<br />
+Ensure that 'option' is a string; if not defined, set it to
+'default'.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#ensure_string_list" class="summary-sig-name"><code>ensure_string_list</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>option</span>)</span></code>
+<br />
+Ensure that 'option' is a list of strings.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="execute"></a><span class="summary-sig"><span class="summary-sig-name">execute</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>func</span>,
+          <span class=summary-sig-arg>args</span>,
+          <span class=summary-sig-arg>msg</span>,
+          <span class=summary-sig-arg>level</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#finalize_options" class="summary-sig-name"><code>finalize_options</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Set final values for all the options that this command supports.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="get_command_name"></a><span class="summary-sig"><span class="summary-sig-name">get_command_name</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#get_finalized_command" class="summary-sig-name"><code>get_finalized_command</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>,
+          <span class=summary-sig-arg>create</span>)</span></code>
+<br />
+Wrapper around Distribution's 'get_command_obj()' method: find
+(create if necessary and 'create' is true) the command object for
+'command', call its 'ensure_finalized()' method, and return the
+finalized command object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#get_sub_commands" class="summary-sig-name"><code>get_sub_commands</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Determine the sub-commands that are relevant in the current
+distribution (ie., that need to be run).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#initialize_options" class="summary-sig-name"><code>initialize_options</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Set default values for all the options that this command
+supports.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="make_archive"></a><span class="summary-sig"><span class="summary-sig-name">make_archive</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>base_name</span>,
+          <span class=summary-sig-arg>format</span>,
+          <span class=summary-sig-arg>root_dir</span>,
+          <span class=summary-sig-arg>base_dir</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#make_file" class="summary-sig-name"><code>make_file</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>infiles</span>,
+          <span class=summary-sig-arg>outfile</span>,
+          <span class=summary-sig-arg>func</span>,
+          <span class=summary-sig-arg>args</span>,
+          <span class=summary-sig-arg>exec_msg</span>,
+          <span class=summary-sig-arg>skip_msg</span>,
+          <span class=summary-sig-arg>level</span>)</span></code>
+<br />
+Special case of 'execute()' for operations that process one or
+more input files and generate one output file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="mkpath"></a><span class="summary-sig"><span class="summary-sig-name">mkpath</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#move_file" class="summary-sig-name"><code>move_file</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>src</span>,
+          <span class=summary-sig-arg>dst</span>,
+          <span class=summary-sig-arg>level</span>)</span></code>
+<br />
+Move a file respectin dry-run flag.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="reinitialize_command"></a><span class="summary-sig"><span class="summary-sig-name">reinitialize_command</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>,
+          <span class=summary-sig-arg>reinit_subcommands</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#run" class="summary-sig-name"><code>run</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+A command's raison d'etre: carry out the action it exists to
+perform, controlled by the options initialized in
+'initialize_options()', customized by other commands, the setup
+script, the command-line, and config files, and finalized in
+'finalize_options()'.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#run_command" class="summary-sig-name"><code>run_command</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>)</span></code>
+<br />
+Run some other command: uses the 'run_command()' method of
+Distribution, which creates and finalizes the command object if
+necessary and then invokes its 'run()' method.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#set_undefined_options" class="summary-sig-name"><code>set_undefined_options</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>src_cmd</span>,
+          <span class="summary-sig-vararg">*option_pairs</span>)</span></code>
+<br />
+Set the values of any &quot;undefined&quot; options from corresponding
+option values in some other command object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.cmd.Command-class.html#spawn" class="summary-sig-name"><code>spawn</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cmd</span>,
+          <span class=summary-sig-arg>search_path</span>,
+          <span class=summary-sig-arg>level</span>)</span></code>
+<br />
+Spawn an external command respecting dry-run flag.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="warn"></a><span class="summary-sig"><span class="summary-sig-name">warn</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>list</code></font></td>
+<td><b><a href="distutils.cmd.Command-class.html#sub_commands"><code>sub_commands</code></a></b> = <span title="[]"><code>[]                                        </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dist</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Create and initialize a new Command object.  Most importantly,
+invokes the 'initialize_options()' method, which is the real
+initializer and depends on the actual command being
+instantiated.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="announce"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">announce</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>msg</span>,
+          <span class=sig-arg>level</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>If the current verbosity level is of greater than or equal to
+'level' print 'msg' to stdout.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="copy_file"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">copy_file</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>infile</span>,
+          <span class=sig-arg>outfile</span>,
+          <span class=sig-arg>preserve_mode</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>preserve_times</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>link</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>level</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Copy a file respecting verbose, dry-run and force flags.  (The
+former two default to whatever is in the Distribution object, and
+the latter defaults to false for commands that don't define it.)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="copy_tree"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">copy_tree</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>infile</span>,
+          <span class=sig-arg>outfile</span>,
+          <span class=sig-arg>preserve_mode</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>preserve_times</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>preserve_symlinks</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>level</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Copy an entire directory tree respecting verbose, dry-run,
+and force flags.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="debug_print"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">debug_print</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>msg</span>)</span>
+  </h3>
+<p>Print 'msg' to stdout if the global DEBUG (taken from the
+DISTUTILS_DEBUG environment variable) flag is true.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ensure_filename"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ensure_filename</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>option</span>)</span>
+  </h3>
+<p>Ensure that 'option' is the name of an existing file.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ensure_string"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ensure_string</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>option</span>,
+          <span class=sig-arg>default</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Ensure that 'option' is a string; if not defined, set it to
+'default'.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ensure_string_list"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ensure_string_list</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>option</span>)</span>
+  </h3>
+<p>Ensure that 'option' is a list of strings.  If 'option' is
+currently a string, we split it either on /,s*/ or /s+/, so
+&quot;foo bar baz&quot;, &quot;foo,bar,baz&quot;, and &quot;foo,   bar baz&quot; all become
+[&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;].</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="finalize_options"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">finalize_options</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Set final values for all the options that this command supports.
+This is always called as late as possible, ie.  after any option
+assignments from the command-line or from other commands have been
+done.  Thus, this is the place to code option dependencies: if
+'foo' depends on 'bar', then it is safe to set 'foo' from 'bar' as
+long as 'foo' still has the same value it was assigned in
+'initialize_options()'.</p>
+<p>This method must be implemented by all command classes.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="get_finalized_command"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">get_finalized_command</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>command</span>,
+          <span class=sig-arg>create</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Wrapper around Distribution's 'get_command_obj()' method: find
+(create if necessary and 'create' is true) the command object for
+'command', call its 'ensure_finalized()' method, and return the
+finalized command object.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="get_sub_commands"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">get_sub_commands</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Determine the sub-commands that are relevant in the current
+distribution (ie., that need to be run).  This is based on the
+'sub_commands' class attribute: each tuple in that list may include
+a method that we call to determine if the subcommand needs to be
+run for the current distribution.  Return a list of command names.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="initialize_options"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">initialize_options</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Set default values for all the options that this command
+supports.  Note that these defaults may be overridden by other
+commands, by the setup script, by config files, or by the
+command-line.  Thus, this is not the place to code dependencies
+between options; generally, 'initialize_options()' implementations
+are just a bunch of &quot;self.foo = None&quot; assignments.</p>
+<p>This method must be implemented by all command classes.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="make_file"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">make_file</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>infiles</span>,
+          <span class=sig-arg>outfile</span>,
+          <span class=sig-arg>func</span>,
+          <span class=sig-arg>args</span>,
+          <span class=sig-arg>exec_msg</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>skip_msg</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>level</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Special case of 'execute()' for operations that process one or
+more input files and generate one output file.  Works just like
+'execute()', except the operation is skipped and a different
+message printed if 'outfile' already exists and is newer than all
+files listed in 'infiles'.  If the command defined 'self.force',
+and it is true, then the command is unconditionally run -- does no
+timestamp checks.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="move_file"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">move_file</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>src</span>,
+          <span class=sig-arg>dst</span>,
+          <span class=sig-arg>level</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Move a file respectin dry-run flag.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="run"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">run</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>A command's raison d'etre: carry out the action it exists to
+perform, controlled by the options initialized in
+'initialize_options()', customized by other commands, the setup
+script, the command-line, and config files, and finalized in
+'finalize_options()'.  All terminal output and filesystem
+interaction should be done by 'run()'.</p>
+<p>This method must be implemented by all command classes.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="run_command"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">run_command</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>command</span>)</span>
+  </h3>
+<p>Run some other command: uses the 'run_command()' method of
+Distribution, which creates and finalizes the command object if
+necessary and then invokes its 'run()' method.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="set_undefined_options"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">set_undefined_options</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>src_cmd</span>,
+          <span class="sig-vararg">*option_pairs</span>)</span>
+  </h3>
+<p>Set the values of any &quot;undefined&quot; options from corresponding
+option values in some other command object.  &quot;Undefined&quot; here means
+&quot;is None&quot;, which is the convention used to indicate that an option
+has not been changed between 'initialize_options()' and
+'finalize_options()'.  Usually called from 'finalize_options()' for
+options that depend on some other command rather than another
+option of the same command.  'src_cmd' is the other command from
+which option values will be taken (a command object will be created
+for it if necessary); the remaining arguments are
+'(src_option,dst_option)' tuples which mean &quot;take the value of
+'src_option' in the 'src_cmd' command object, and copy it to
+'dst_option' in the current command object&quot;.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="spawn"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">spawn</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>cmd</span>,
+          <span class=sig-arg>search_path</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>level</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Spawn an external command respecting dry-run flag.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="sub_commands"></a>
+<h3>sub_commands</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>list</code>
+
+      </dd>
+<span title="[]">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+[]                                                                     </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:56 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

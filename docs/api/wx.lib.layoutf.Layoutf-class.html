@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.layoutf.Layoutf</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.layoutf-module.html">Module&nbsp;layoutf</a> ::
+        Class&nbsp;Layoutf
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.layoutf.Layoutf-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Layoutf</h2>
+
+<pre class="base-tree">
+   <a href="__builtin__.object-class.html"><code>object</code></a> --+        
+            |        
+       <a href="wx.Object-class.html"><code>Object</code></a> --+    
+                |    
+<a href="wx.LayoutConstraints-class.html"><code>LayoutConstraints</code></a> --+
+                    |
+                   <b>Layoutf</b>
+</pre><br />
+
+<hr/>
+
+<p>The class Layoutf(wxLayoutConstraints) presents a simplification
+of the wxLayoutConstraints syntax. The name Layoutf is choosen
+because of the similarity with C's printf function.</p>
+<p>Quick Example:</p>
+<blockquote>
+lc = Layoutf('t=t#1;l=r10#2;r!100;h%h50#1', (self, self.panel))</blockquote>
+<p>is equivalent to</p>
+<blockquote>
+lc = wxLayoutContraints()
+lc.top.SameAs(self, wxTop)
+lc.left.SameAs(self.panel, wxRight, 10)
+lc.right.Absolute(100)
+lc.height.PercentOf(self, wxHeight, 50)</blockquote>
+<p>Usage:</p>
+<blockquote>
+You can give a constraint string to the Layoutf constructor,</blockquote>
+<p>or use the 'pack' method. The following are equivalent:</p>
+<blockquote>
+lc = Layoutf('t=t#1;l=r#2;r!100;h%h50#1', (self, self.panel))</blockquote>
+<p>and</p>
+<blockquote>
+<p>lc = Layoutf()
+lc.pack('t=t#1;l=r#2;r!100;h%h50#1', (self, self.panel))</p>
+<p>Besides 'pack' there's also 'debug_pack' which does not set</p>
+</blockquote>
+<p>constraints, but prints traditional wxLayoutConstraint calls to
+stdout.</p>
+<blockquote>
+The calls to the Layoutf constructor and pack methods have</blockquote>
+<p>the following argument list:</p>
+<blockquote>
+(constraint_string, objects_tuple)</blockquote>
+<p>Constraint String syntax:</p>
+<blockquote>
+Constraint directives are separated by semi-colons. You</blockquote>
+<p>generally (always?) need four directives to completely describe a
+subwindow's location.</p>
+<blockquote>
+<p>A single directive has either of the following forms:</p>
+<p>1. &lt;own attribute&gt;&lt;compare operation&gt;[numerical argument]
+for example r!100 -&gt; lc.right.Absolute(100) )
+and w* -&gt; lc.width.AsIs()</p>
+<ol class="rst-arabic simple" start="2">
+<li>&lt;own attribute&gt;&lt;compare operation&gt;[numerical argument]
+#&lt;compare object nr.&gt;</li>
+</ol>
+<p>for example t_10#2 (lc.top.Below(&lt;second obj&gt;, 10)</p>
+<ol class="rst-arabic simple" start="3">
+<li>&lt;own attribute&gt;&lt;compare operation&gt;&lt;compare attribute&gt;
+[numerical argument]#&lt;compare object nr.&gt;</li>
+</ol>
+<p>for example w%h50#2 ( lc.width.PercentOf(&lt;second obj&gt;,
+wxHeight, 50) and t=b#1 ( lc.top.SameAs(&lt;first obj&gt;,
+wxBottom) )</p>
+<p>Which one you need is defined by the &lt;compare operation&gt;</p>
+</blockquote>
+<p>type. The following take type 1 (no object to compare with):</p>
+<blockquote>
+'!': 'Absolute', '?': 'Unconstrained', '*': 'AsIs'</blockquote>
+<p>These take type 2 (need to be compared with another object)</p>
+<blockquote>
+'&lt;': 'LeftOf', '&gt;': 'RightOf', '^': 'Above', '_': 'Below'</blockquote>
+<p>These take type 3 (need to be compared to another object
+attribute)</p>
+<blockquote>
+'=': 'SameAs', '%': 'PercentOf'</blockquote>
+<p>For all types, the &lt;own attribute&gt; letter can be any of</p>
+<blockquote>
+'t': 'top', 'l': 'left', 'b': 'bottom',
+'r': 'right', 'h': 'height', 'w': 'width',
+'x': 'centreX', 'y': 'centreY'</blockquote>
+<p>If the operation takes an (optional) numerical argument, place it
+in [numerical argument].  For type 3 directives, the &lt;compare
+attribute&gt; letter can be any of</p>
+<blockquote>
+'t': 'wxTop', 'l': 'wxLeft', 'b': 'wxBottom'
+'r': 'wxRight', 'h': 'wxHeight', 'w': 'wxWidth',
+'x': 'wxCentreX', 'y': 'wxCentreY'</blockquote>
+<p>Note that these are the same letters as used for &lt;own attribute&gt;,
+so you'll only need to remember one set. Finally, the object
+whose attribute is refered to, is specified by #&lt;compare object
+nr&gt;, where &lt;compare object nr&gt; is the 1-based (stupid, I know,
+but I've gotten used to it) index of the object in the
+objects_tuple argument.</p>
+<p>Bugs:</p>
+<p>Not entirely happy about the logic in the order of arguments
+after the &lt;compare operation&gt; character.</p>
+<p>Not all wxLayoutConstraint methods are included in the
+syntax. However, the type 3 directives are generally the most
+used. Further excuse: wxWindows layout constraints are at the
+time of this writing not documented.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pstr</span>,
+          <span class=summary-sig-arg>winlist</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="debug_pack"></a><span class="summary-sig"><span class="summary-sig-name">debug_pack</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pstr</span>,
+          <span class=summary-sig-arg>winlist</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="pack"></a><span class="summary-sig"><span class="summary-sig-name">pack</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pstr</span>,
+          <span class=summary-sig-arg>winlist</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="wx.lib.layoutf.Layoutf-class.html#attr_d"><code>attr_d</code></a></b> = <span title="{'b': 'bottom', 'h': 'height', 'l': 'left', 'r': 'right', 't': 'top', 'w': 'width', 'y': 'centreY', 'x': 'centreX'}"><code>{'b':&nbsp;'bottom',&nbsp;'h':&nbsp;'height',&nbsp;'l':&nbsp;'left',&nbsp;'r'<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="wx.lib.layoutf.Layoutf-class.html#cmp_d"><code>cmp_d</code></a></b> = <span title="{'b': 'wx.Bottom', 'h': 'wx.Height', 'l': 'wx.Left', 'r': 'wx.Right', 't': 'wx.Top', 'w': 'wx.Width', 'y': 'wx.CentreY', 'x': 'wx.CentreX'}"><code>{'b':&nbsp;'wx.Bottom',&nbsp;'h':&nbsp;'wx.Height',&nbsp;'l':&nbsp;'wx.Le<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="wx.lib.layoutf.Layoutf-class.html#op_d"><code>op_d</code></a></b> = <span title="{'!': 'Absolute', '%': 'PercentOf', '*': 'AsIs', '?': 'Unconstrained', '&gt;': 'RightOf', '=': 'SameAs', '&lt;': 'LeftOf', '_': 'Below', '^': 'Above'}"><code>{'!':&nbsp;'Absolute',&nbsp;'%':&nbsp;'PercentOf',&nbsp;'*':&nbsp;'AsIs',&nbsp;<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>SRE_Pattern</code></font></td>
+<td><b><a href="wx.lib.layoutf.Layoutf-class.html#rexp1"><code>rexp1</code></a></b> = <span title="&lt;_sre.SRE_Pattern object at 0x8676490&gt;"><code><span class="re"><span class="re-char">^</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-group">[</span>tlrbhwxy<span class="re-group">]</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-group">[</span>!<span class="re-char">\?</span><span class="re-char">\*</span><span class="re-group">]</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-char">\d</span><span class="re-op">*</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-char">$</span></span>         </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>SRE_Pattern</code></font></td>
+<td><b><a href="wx.lib.layoutf.Layoutf-class.html#rexp2"><code>rexp2</code></a></b> = <span title="&lt;_sre.SRE_Pattern object at 0x86768e8&gt;"><code><span class="re"><span class="re-char">^</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-group">[</span>tlrbhwxy<span class="re-group">]</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-group">[</span>=%&lt;&gt;<span class="re-char">\^</span>_<span class="re-group">]</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-group">[</span>tlrbhwxy<span class="re-group">]</span><span class="re-op">?</span><span class="re-group">)</span><span class="re-char">\s<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="attr_d"></a>
+<h3>attr_d</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{'b': 'bottom', 'h': 'height', 'l': 'left', 'r': 'right', 't': 'top', 'w': 'width', 'y': 'centreY', 'x': 'centreX'}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{'b': 'bottom',
+ 'h': 'height',
+ 'l': 'left',
+ 'r': 'right',
+ 't': 'top',
+ 'w': 'width',
+ 'x': 'centreX',
+ 'y': 'centreY'}                                                       </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="cmp_d"></a>
+<h3>cmp_d</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{'b': 'wx.Bottom', 'h': 'wx.Height', 'l': 'wx.Left', 'r': 'wx.Right', 't': 'wx.Top', 'w': 'wx.Width', 'y': 'wx.CentreY', 'x': 'wx.CentreX'}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{'b': 'wx.Bottom',
+ 'h': 'wx.Height',
+ 'l': 'wx.Left',
+ 'r': 'wx.Right',
+ 't': 'wx.Top',
+ 'w': 'wx.Width',
+ 'x': 'wx.CentreX',
+ 'y': 'wx.CentreY'}                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="op_d"></a>
+<h3>op_d</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{'!': 'Absolute', '%': 'PercentOf', '*': 'AsIs', '?': 'Unconstrained', '&gt;': 'RightOf', '=': 'SameAs', '&lt;': 'LeftOf', '_': 'Below', '^': 'Above'}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{'!': 'Absolute',
+ '%': 'PercentOf',
+ '*': 'AsIs',
+ '&lt;': 'LeftOf',
+ '=': 'SameAs',
+ '&gt;': 'RightOf',
+ '?': 'Unconstrained',
+ '^': 'Above',
+<span class="variable-ellipsis">...</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="rexp1"></a>
+<h3>rexp1</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>SRE_Pattern</code>
+
+      </dd>
+<span title="&lt;_sre.SRE_Pattern object at 0x8676490&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="re"><span class="re-char">^</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-group">[</span>tlrbhwxy<span class="re-group">]</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-group">[</span>!<span class="re-char">\?</span><span class="re-char">\*</span><span class="re-group">]</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-char">\d</span><span class="re-op">*</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-char">$</span></span>                               </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="rexp2"></a>
+<h3>rexp2</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>SRE_Pattern</code>
+
+      </dd>
+<span title="&lt;_sre.SRE_Pattern object at 0x86768e8&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="re"><span class="re-char">^</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-group">[</span>tlrbhwxy<span class="re-group">]</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-group">[</span>=%&lt;&gt;<span class="re-char">\^</span>_<span class="re-group">]</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-group">[</span>tlrbhwxy<span class="re-group">]</span><span class="re-op">?</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-group">(</span><span class="re-char">\d</span><span class="re-op">*</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span>#<span class="re-group">(</span><span class="re-char">\d</span><span class="re-op">+</span><span class="re-group">)</span><span class="re-char">\s</span><span class="re-op">*</span><span class="re-char">$</span></span>    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:57:51 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

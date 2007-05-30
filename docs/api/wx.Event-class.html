@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.Event</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;Event
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.Event-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Event</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+    
+         |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+
+             |
+            <b>Event</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.ActivateEvent-class.html"><code>ActivateEvent</code></a>,
+    <a href="wx.aui.AuiManagerEvent-class.html"><code>AuiManagerEvent</code></a>,
+    <a href="wx.CalculateLayoutEvent-class.html"><code>CalculateLayoutEvent</code></a>,
+    <a href="wx.CloseEvent-class.html"><code>CloseEvent</code></a>,
+    <a href="wx.CommandEvent-class.html"><code>CommandEvent</code></a>,
+    <a href="wx.DisplayChangedEvent-class.html"><code>DisplayChangedEvent</code></a>,
+    <a href="wx.DropFilesEvent-class.html"><code>DropFilesEvent</code></a>,
+    <a href="wx.EraseEvent-class.html"><code>EraseEvent</code></a>,
+    <a href="wx.FocusEvent-class.html"><code>FocusEvent</code></a>,
+    <a href="wx.IconizeEvent-class.html"><code>IconizeEvent</code></a>,
+    <a href="wx.IdleEvent-class.html"><code>IdleEvent</code></a>,
+    <a href="wx.InitDialogEvent-class.html"><code>InitDialogEvent</code></a>,
+    <a href="wx.JoystickEvent-class.html"><code>JoystickEvent</code></a>,
+    <a href="wx.KeyEvent-class.html"><code>KeyEvent</code></a>,
+    <a href="wx.MaximizeEvent-class.html"><code>MaximizeEvent</code></a>,
+    <a href="wx.MenuEvent-class.html"><code>MenuEvent</code></a>,
+    <a href="wx.MouseCaptureChangedEvent-class.html"><code>MouseCaptureChangedEvent</code></a>,
+    <a href="wx.MouseCaptureLostEvent-class.html"><code>MouseCaptureLostEvent</code></a>,
+    <a href="wx.MouseEvent-class.html"><code>MouseEvent</code></a>,
+    <a href="wx.MoveEvent-class.html"><code>MoveEvent</code></a>,
+    <a href="wx.NavigationKeyEvent-class.html"><code>NavigationKeyEvent</code></a>,
+    <a href="wx.NcPaintEvent-class.html"><code>NcPaintEvent</code></a>,
+    <a href="wx.PaintEvent-class.html"><code>PaintEvent</code></a>,
+    <a href="wx.PaletteChangedEvent-class.html"><code>PaletteChangedEvent</code></a>,
+    <a href="wx.PowerEvent-class.html"><code>PowerEvent</code></a>,
+    <a href="wx.ProcessEvent-class.html"><code>ProcessEvent</code></a>,
+    <a href="wx.PyEvent-class.html"><code>PyEvent</code></a>,
+    <a href="wx.QueryLayoutInfoEvent-class.html"><code>QueryLayoutInfoEvent</code></a>,
+    <a href="wx.QueryNewPaletteEvent-class.html"><code>QueryNewPaletteEvent</code></a>,
+    <a href="wx.ScrollWinEvent-class.html"><code>ScrollWinEvent</code></a>,
+    <a href="wx.SetCursorEvent-class.html"><code>SetCursorEvent</code></a>,
+    <a href="wx.ShowEvent-class.html"><code>ShowEvent</code></a>,
+    <a href="wx.SizeEvent-class.html"><code>SizeEvent</code></a>,
+    <a href="wx.SysColourChangedEvent-class.html"><code>SysColourChangedEvent</code></a>,
+    <a href="wx.TaskBarIconEvent-class.html"><code>TaskBarIconEvent</code></a>,
+    <a href="wx.TimerEvent-class.html"><code>TimerEvent</code></a></dd></dl>
+
+<hr/>
+
+<p>An event is a structure holding information about an event passed to a
+callback or member function. wx.Event is an abstract base class for
+other event classes</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1284436580"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Event</font></td>
+  <td><code><a name="Clone"></a><span class="summary-sig"><span class="summary-sig-name">Clone</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Object</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#GetEventObject" class="summary-sig-name"><code>GetEventObject</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the object (usually a window) associated with the event, if
+any.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">EventType</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#GetEventType" class="summary-sig-name"><code>GetEventType</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the identifier of the given event type, such as
+<tt class="rst-docutils literal"><span class="pre">wxEVT_COMMAND_BUTTON_CLICKED</span></tt>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#GetId" class="summary-sig-name"><code>GetId</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the identifier associated with this event, such as a button
+command id.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#GetSkipped" class="summary-sig-name"><code>GetSkipped</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if the event handler should be skipped, false otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><a name="GetTimestamp"></a><span class="summary-sig"><span class="summary-sig-name">GetTimestamp</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#IsCommandEvent" class="summary-sig-name"><code>IsCommandEvent</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if the event is or is derived from <a href="wx.CommandEvent-class.html" class="link"><code>wx.CommandEvent</code></a> else
+it returns false.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#ResumePropagation" class="summary-sig-name"><code>ResumePropagation</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>propagationLevel</span>)</span></code>
+<br />
+Resume the event propagation by restoring the propagation level.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#SetEventObject" class="summary-sig-name"><code>SetEventObject</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>obj</span>)</span></code>
+<br />
+Sets the originating object, or in other words, obj is normally the
+object that is sending the event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#SetEventType" class="summary-sig-name"><code>SetEventType</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>typ</span>)</span></code>
+<br />
+Sets the specific type of the event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#SetId" class="summary-sig-name"><code>SetId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Id</span>)</span></code>
+<br />
+Set's the ID for the event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetTimestamp"></a><span class="summary-sig"><span class="summary-sig-name">SetTimestamp</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>ts</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#ShouldPropagate" class="summary-sig-name"><code>ShouldPropagate</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Test if this event should be propagated to the parent window or not,
+i.e.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#Skip" class="summary-sig-name"><code>Skip</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>skip</span>)</span></code>
+<br />
+This method can be used inside an event handler to control whether
+further event handlers bound to this event will be called after the
+current one returns.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Event-class.html#StopPropagation" class="summary-sig-name"><code>StopPropagation</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Stop the event from propagating to its parent window.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Event-class.html#EventObject"><code>EventObject</code></a></b>: See <a href="wx.Event-class.html#GetEventObject" class="link"><code>GetEventObject</code></a> and <a href="wx.Event-class.html#SetEventObject" class="link"><code>SetEventObject</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Event-class.html#EventType"><code>EventType</code></a></b>: See <a href="wx.Event-class.html#GetEventType" class="link"><code>GetEventType</code></a> and <a href="wx.Event-class.html#SetEventType" class="link"><code>SetEventType</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Event-class.html#Id"><code>Id</code></a></b>: See <a href="wx.Event-class.html#GetId" class="link"><code>GetId</code></a> and <a href="wx.Event-class.html#SetId" class="link"><code>SetId</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Event-class.html#Skipped"><code>Skipped</code></a></b>: See <a href="wx.Event-class.html#GetSkipped" class="link"><code>GetSkipped</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Event-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Event-class.html#Timestamp"><code>Timestamp</code></a></b>: See <a href="wx.Event-class.html#GetTimestamp" class="link"><code>GetTimestamp</code></a> and <a href="wx.Event-class.html#SetTimestamp" class="link"><code>SetTimestamp</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="GetEventObject"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEventObject</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the object (usually a window) associated with the event, if
+any.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Object      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEventType"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEventType</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the identifier of the given event type, such as
+<tt class="rst-docutils literal"><span class="pre">wxEVT_COMMAND_BUTTON_CLICKED</span></tt>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+EventType      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetId</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the identifier associated with this event, such as a button
+command id.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSkipped"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSkipped</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if the event handler should be skipped, false otherwise.
+:see: <a href="wx.Event-class.html#Skip" class="link"><code>Skip</code></a></p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsCommandEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsCommandEvent</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if the event is or is derived from <a href="wx.CommandEvent-class.html" class="link"><code>wx.CommandEvent</code></a> else
+it returns false. Note: Exists only for optimization purposes.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResumePropagation"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResumePropagation</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>propagationLevel</span>)</span>
+  </h3>
+<p>Resume the event propagation by restoring the propagation level.  (For
+example, you can use the value returned by an earlier call to
+<a href="wx.Event-class.html#StopPropagation" class="link"><code>StopPropagation</code></a>.)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>propagationLevel</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEventObject"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEventObject</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>obj</span>)</span>
+  </h3>
+<p>Sets the originating object, or in other words, obj is normally the
+object that is sending the event.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>obj</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Object)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEventType"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEventType</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>typ</span>)</span>
+  </h3>
+<p>Sets the specific type of the event.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>typ</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=EventType)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetId</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>Id</span>)</span>
+  </h3>
+<p>Set's the ID for the event.  This is usually the ID of the window that
+is sending the event, but it can also be a command id from a menu
+item, etc.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>Id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShouldPropagate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShouldPropagate</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Test if this event should be propagated to the parent window or not,
+i.e. if the propagation level is currently greater than 0.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Skip"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Skip</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>skip</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>This method can be used inside an event handler to control whether
+further event handlers bound to this event will be called after the
+current one returns. Without Skip() (or equivalently if Skip(False) is
+used), the event will not be processed any more. If Skip(True) is
+called, the event processing system continues searching for a further
+handler function for this event, even though it has been processed
+already in the current handler.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>skip</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="StopPropagation"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">StopPropagation</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Stop the event from propagating to its parent window.  Returns the old
+propagation level value which may be later passed to
+<a href="wx.Event-class.html#ResumePropagation" class="link"><code>ResumePropagation</code></a> to allow propagating the event again.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="EventObject"></a>
+<h3>EventObject</h3>
+<p>See <a href="wx.Event-class.html#GetEventObject" class="link"><code>GetEventObject</code></a> and <a href="wx.Event-class.html#SetEventObject" class="link"><code>SetEventObject</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Event-class.html#GetEventObject" class="summary-sig-name"><code>GetEventObject</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Event-class.html#SetEventObject" class="summary-sig-name"><code>SetEventObject</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>obj</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="EventType"></a>
+<h3>EventType</h3>
+<p>See <a href="wx.Event-class.html#GetEventType" class="link"><code>GetEventType</code></a> and <a href="wx.Event-class.html#SetEventType" class="link"><code>SetEventType</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Event-class.html#GetEventType" class="summary-sig-name"><code>GetEventType</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Event-class.html#SetEventType" class="summary-sig-name"><code>SetEventType</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>typ</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Id"></a>
+<h3>Id</h3>
+<p>See <a href="wx.Event-class.html#GetId" class="link"><code>GetId</code></a> and <a href="wx.Event-class.html#SetId" class="link"><code>SetId</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Event-class.html#GetId" class="summary-sig-name"><code>GetId</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Event-class.html#SetId" class="summary-sig-name"><code>SetId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Id</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Skipped"></a>
+<h3>Skipped</h3>
+<p>See <a href="wx.Event-class.html#GetSkipped" class="link"><code>GetSkipped</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Event-class.html#GetSkipped" class="summary-sig-name"><code>GetSkipped</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Timestamp"></a>
+<h3>Timestamp</h3>
+<p>See <a href="wx.Event-class.html#GetTimestamp" class="link"><code>GetTimestamp</code></a> and <a href="wx.Event-class.html#SetTimestamp" class="link"><code>SetTimestamp</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Event-class.html#GetTimestamp" class="summary-sig-name"><code>GetTimestamp</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Event-class.html#SetTimestamp" class="summary-sig-name"><code>SetTimestamp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>ts</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:03:25 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

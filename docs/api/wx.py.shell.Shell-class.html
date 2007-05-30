@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.py.shell.Shell</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.py-module.html">Package&nbsp;py</a> ::
+        <a href="wx.py.shell-module.html">Module&nbsp;shell</a> ::
+        Class&nbsp;Shell
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.py.shell.Shell-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Shell</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                        
+         |                        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                    
+             |                    
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+                
+                 |                
+            <a href="wx.Window-class.html"><code>Window</code></a> --+            
+                     |            
+               <a href="wx.Control-class.html"><code>Control</code></a> --+        
+                         |        
+            <a href="wx.stc.StyledTextCtrl-class.html"><code>StyledTextCtrl</code></a> --+    
+                             |    
+                    <a href="wx.py.editwindow.EditWindow-class.html"><code>EditWindow</code></a> --+
+                                 |
+                                <b>Shell</b>
+</pre><br />
+
+<hr/>
+
+<p>Shell based on StyledTextCtrl.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>introText</span>,
+          <span class=summary-sig-arg>locals</span>,
+          <span class=summary-sig-arg>InterpClass</span>,
+          <span class=summary-sig-arg>startupScript</span>,
+          <span class=summary-sig-arg>execStartupScript</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwds</span>)</span></code>
+<br />
+Create Shell instance.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#about" class="summary-sig-name"><code>about</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Display information about Py.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#addHistory" class="summary-sig-name"><code>addHistory</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>)</span></code>
+<br />
+Add command to the command history.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#ask" class="summary-sig-name"><code>ask</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>prompt</span>)</span></code>
+<br />
+Get response from the user using a dialog box.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#autoCallTipShow" class="summary-sig-name"><code>autoCallTipShow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>,
+          <span class=summary-sig-arg>insertcalltip</span>,
+          <span class=summary-sig-arg>forceCallTip</span>)</span></code>
+<br />
+Display argument spec and docstring in a popup window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#autoCompleteShow" class="summary-sig-name"><code>autoCompleteShow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>,
+          <span class=summary-sig-arg>offset</span>)</span></code>
+<br />
+Display auto-completion popup list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#CanCut" class="summary-sig-name"><code>CanCut</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return true if text is selected and can be cut.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#CanEdit" class="summary-sig-name"><code>CanEdit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return true if editing should succeed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#CanPaste" class="summary-sig-name"><code>CanPaste</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return true if a paste should succeed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#clear" class="summary-sig-name"><code>clear</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Delete all text from the shell.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#clearCommand" class="summary-sig-name"><code>clearCommand</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Delete the current, unexecuted command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="clearHistory"></a><span class="summary-sig"><span class="summary-sig-name">clearHistory</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#Copy" class="summary-sig-name"><code>Copy</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Copy selection and place it on the clipboard.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#CopyWithPrompts" class="summary-sig-name"><code>CopyWithPrompts</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Copy selection, including prompts, and place it on the clipboard.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#CopyWithPromptsPrefixed" class="summary-sig-name"><code>CopyWithPromptsPrefixed</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Copy selection, including prompts prefixed with four
+spaces, and place it on the clipboard.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#Cut" class="summary-sig-name"><code>Cut</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Remove selection and place it on the clipboard.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="destroy"></a><span class="summary-sig"><span class="summary-sig-name">destroy</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#execStartupScript" class="summary-sig-name"><code>execStartupScript</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>startupScript</span>)</span></code>
+<br />
+Execute the user's PYTHONSTARTUP script if they have one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#Execute" class="summary-sig-name"><code>Execute</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Replace selection with text and run commands.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#fixLineEndings" class="summary-sig-name"><code>fixLineEndings</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Return text with line endings replaced by OS-specific endings.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#getCommand" class="summary-sig-name"><code>getCommand</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>rstrip</span>)</span></code>
+<br />
+Extract a command from text which may include a shell prompt.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#getMultilineCommand" class="summary-sig-name"><code>getMultilineCommand</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rstrip</span>)</span></code>
+<br />
+Extract a multi-line command from the editor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#insertLineBreak" class="summary-sig-name"><code>insertLineBreak</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Insert a new line break.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="LoadSettings"></a><span class="summary-sig"><span class="summary-sig-name">LoadSettings</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>config</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#lstripPrompt" class="summary-sig-name"><code>lstripPrompt</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Return text without a leading prompt.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#OnCallTipAutoCompleteManually" class="summary-sig-name"><code>OnCallTipAutoCompleteManually</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>shiftDown</span>)</span></code>
+<br />
+AutoComplete and Calltips manually.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#OnChar" class="summary-sig-name"><code>OnChar</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Keypress event handler.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#OnHistoryInsert" class="summary-sig-name"><code>OnHistoryInsert</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>step</span>)</span></code>
+<br />
+Insert the previous/next command from the history buffer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#OnHistoryReplace" class="summary-sig-name"><code>OnHistoryReplace</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>step</span>)</span></code>
+<br />
+Replace with the previous/next command from the history buffer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#OnHistorySearch" class="summary-sig-name"><code>OnHistorySearch</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Search up the history buffer for the text in front of the cursor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#OnIdle" class="summary-sig-name"><code>OnIdle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Free the CPU to do other things.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#OnKeyDown" class="summary-sig-name"><code>OnKeyDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Key down event handler.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#OnShowCompHistory" class="summary-sig-name"><code>OnShowCompHistory</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Show possible autocompletion Words from already typed words.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#Paste" class="summary-sig-name"><code>Paste</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Replace selection with clipboard contents.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#PasteAndRun" class="summary-sig-name"><code>PasteAndRun</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Replace selection with clipboard contents, run commands.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#pause" class="summary-sig-name"><code>pause</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Halt execution pending a response from the user.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#processLine" class="summary-sig-name"><code>processLine</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Process the line of text at which the user hit Enter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#prompt" class="summary-sig-name"><code>prompt</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Display proper prompt for the context: ps1, ps2 or ps3.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#push" class="summary-sig-name"><code>push</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>,
+          <span class=summary-sig-arg>silent</span>)</span></code>
+<br />
+Send command to the interpreter for execution.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#quit" class="summary-sig-name"><code>quit</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Quit the application.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#raw_input" class="summary-sig-name"><code>raw_input</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>prompt</span>)</span></code>
+<br />
+Return string based on user input.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#readline" class="summary-sig-name"><code>readline</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Replacement for stdin.readline().</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#readlines" class="summary-sig-name"><code>readlines</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Replacement for stdin.readlines().</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#redirectStderr" class="summary-sig-name"><code>redirectStderr</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>redirect</span>)</span></code>
+<br />
+If redirect is true then sys.stderr will go to the shell.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#redirectStdin" class="summary-sig-name"><code>redirectStdin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>redirect</span>)</span></code>
+<br />
+If redirect is true then sys.stdin will come from the shell.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#redirectStdout" class="summary-sig-name"><code>redirectStdout</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>redirect</span>)</span></code>
+<br />
+If redirect is true then sys.stdout will go to the shell.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#replaceFromHistory" class="summary-sig-name"><code>replaceFromHistory</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>step</span>)</span></code>
+<br />
+Replace selection with command from the history buffer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#run" class="summary-sig-name"><code>run</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>command</span>,
+          <span class=summary-sig-arg>prompt</span>,
+          <span class=summary-sig-arg>verbose</span>)</span></code>
+<br />
+Execute command as if it was typed in directly.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#runfile" class="summary-sig-name"><code>runfile</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filename</span>)</span></code>
+<br />
+Execute all commands in file as if they were typed into the
+shell.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SaveSettings"></a><span class="summary-sig"><span class="summary-sig-name">SaveSettings</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>config</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#setBuiltinKeywords" class="summary-sig-name"><code>setBuiltinKeywords</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Create pseudo keywords as part of builtins.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#setFocus" class="summary-sig-name"><code>setFocus</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Set focus to the shell.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#setLocalShell" class="summary-sig-name"><code>setLocalShell</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Add 'shell' to locals as reference to ShellFacade instance.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#setStatusText" class="summary-sig-name"><code>setStatusText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Display status information.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#showIntro" class="summary-sig-name"><code>showIntro</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Display introductory text in the shell.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#wrap" class="summary-sig-name"><code>wrap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>wrap</span>)</span></code>
+<br />
+Sets whether text is word wrapped.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#write" class="summary-sig-name"><code>write</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Display text in the shell.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#writeErr" class="summary-sig-name"><code>writeErr</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Replacement for stderr.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#writeOut" class="summary-sig-name"><code>writeOut</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Replacement for stdout.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#zoom" class="summary-sig-name"><code>zoom</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>points</span>)</span></code>
+<br />
+Set the zoom level.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.py.shell.Shell-class.html#name"><code>name</code></a></b> = <span title="'Shell'"><code><span class="variable-quote">'</span>Shell<span class="variable-quote">'</span>                                           </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.py.shell.Shell-class.html#revision"><code>revision</code></a></b> = <span title="'1.20'"><code><span class="variable-quote">'</span>1.20<span class="variable-quote">'</span>                                        </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>4194304</span>,
+          <span class=sig-arg>introText</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>locals</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>InterpClass</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>startupScript</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>execStartupScript</span>=<span class=sig-default>True</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwds</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Create Shell instance.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.py.editwindow.EditWindow-class.html#__init__"><code>wx.py.editwindow.EditWindow.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="about"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">about</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Display information about Py.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addHistory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">addHistory</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>command</span>)</span>
+  </h3>
+<p>Add command to the command history.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ask"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ask</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>prompt</span>=<span class=sig-default>'Please&nbsp;enter&nbsp;your&nbsp;response:'</span>)</span>
+  </h3>
+<p>Get response from the user using a dialog box.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="autoCallTipShow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">autoCallTipShow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>command</span>,
+          <span class=sig-arg>insertcalltip</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>forceCallTip</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Display argument spec and docstring in a popup window.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="autoCompleteShow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">autoCompleteShow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>command</span>,
+          <span class=sig-arg>offset</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Display auto-completion popup list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanCut"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanCut</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return true if text is selected and can be cut.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.py.editwindow.EditWindow-class.html#CanCut"><code>wx.py.editwindow.EditWindow.CanCut</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanEdit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanEdit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return true if editing should succeed.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.py.editwindow.EditWindow-class.html#CanEdit"><code>wx.py.editwindow.EditWindow.CanEdit</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanPaste"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanPaste</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return true if a paste should succeed.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.py.editwindow.EditWindow-class.html#CanPaste"><code>wx.py.editwindow.EditWindow.CanPaste</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="clear"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">clear</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Delete all text from the shell.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="clearCommand"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">clearCommand</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Delete the current, unexecuted command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Copy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Copy</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Copy selection and place it on the clipboard.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.stc.StyledTextCtrl-class.html#Copy"><code>wx.stc.StyledTextCtrl.Copy</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CopyWithPrompts"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CopyWithPrompts</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Copy selection, including prompts, and place it on the clipboard.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CopyWithPromptsPrefixed"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CopyWithPromptsPrefixed</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Copy selection, including prompts prefixed with four
+spaces, and place it on the clipboard.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Cut"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Cut</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Remove selection and place it on the clipboard.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.stc.StyledTextCtrl-class.html#Cut"><code>wx.stc.StyledTextCtrl.Cut</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="execStartupScript"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">execStartupScript</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>startupScript</span>)</span>
+  </h3>
+<p>Execute the user's PYTHONSTARTUP script if they have one.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Execute"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Execute</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Replace selection with text and run commands.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="fixLineEndings"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">fixLineEndings</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Return text with line endings replaced by OS-specific endings.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getCommand"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getCommand</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>rstrip</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Extract a command from text which may include a shell prompt.</p>
+<p>The command may not necessarily be valid Python syntax.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getMultilineCommand"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getMultilineCommand</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rstrip</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Extract a multi-line command from the editor.</p>
+<p>The command may not necessarily be valid Python syntax.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="insertLineBreak"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">insertLineBreak</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Insert a new line break.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="lstripPrompt"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">lstripPrompt</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Return text without a leading prompt.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCallTipAutoCompleteManually"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCallTipAutoCompleteManually</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>shiftDown</span>)</span>
+  </h3>
+<p>AutoComplete and Calltips manually.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnChar"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnChar</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Keypress event handler.</p>
+<p>Only receives an event if OnKeyDown calls event.Skip() for the
+corresponding event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnHistoryInsert"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnHistoryInsert</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>step</span>)</span>
+  </h3>
+<p>Insert the previous/next command from the history buffer.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnHistoryReplace"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnHistoryReplace</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>step</span>)</span>
+  </h3>
+<p>Replace with the previous/next command from the history buffer.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnHistorySearch"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnHistorySearch</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Search up the history buffer for the text in front of the cursor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnIdle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnIdle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Free the CPU to do other things.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnKeyDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnKeyDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Key down event handler.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnShowCompHistory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnShowCompHistory</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Show possible autocompletion Words from already typed words.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Paste"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Paste</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Replace selection with clipboard contents.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.stc.StyledTextCtrl-class.html#Paste"><code>wx.stc.StyledTextCtrl.Paste</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PasteAndRun"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PasteAndRun</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Replace selection with clipboard contents, run commands.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="pause"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">pause</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Halt execution pending a response from the user.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="processLine"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">processLine</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Process the line of text at which the user hit Enter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="prompt"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">prompt</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Display proper prompt for the context: ps1, ps2 or ps3.</p>
+<p>If this is a continuation line, autoindent as necessary.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="push"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">push</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>command</span>,
+          <span class=sig-arg>silent</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Send command to the interpreter for execution.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="quit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">quit</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Quit the application.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="raw_input"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">raw_input</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>prompt</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+<p>Return string based on user input.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="readline"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">readline</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Replacement for stdin.readline().</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="readlines"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">readlines</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Replacement for stdin.readlines().</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="redirectStderr"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">redirectStderr</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>redirect</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>If redirect is true then sys.stderr will go to the shell.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="redirectStdin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">redirectStdin</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>redirect</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>If redirect is true then sys.stdin will come from the shell.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="redirectStdout"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">redirectStdout</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>redirect</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>If redirect is true then sys.stdout will go to the shell.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="replaceFromHistory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">replaceFromHistory</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>step</span>)</span>
+  </h3>
+<p>Replace selection with command from the history buffer.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="run"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">run</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>command</span>,
+          <span class=sig-arg>prompt</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>verbose</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Execute command as if it was typed in directly.
+&gt;&gt;&gt; shell.run('print &quot;this&quot;')
+&gt;&gt;&gt; print &quot;this&quot;
+this
+&gt;&gt;&gt;</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="runfile"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">runfile</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>filename</span>)</span>
+  </h3>
+<p>Execute all commands in file as if they were typed into the
+shell.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setBuiltinKeywords"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setBuiltinKeywords</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Create pseudo keywords as part of builtins.</p>
+<p>This sets &quot;close&quot;, &quot;exit&quot; and &quot;quit&quot; to a helpful string.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setFocus</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Set focus to the shell.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setLocalShell"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setLocalShell</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Add 'shell' to locals as reference to ShellFacade instance.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setStatusText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setStatusText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Display status information.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="showIntro"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">showIntro</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+<p>Display introductory text in the shell.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="wrap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">wrap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>wrap</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Sets whether text is word wrapped.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="write"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">write</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Display text in the shell.</p>
+<p>Replace line endings with OS-specific endings.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="writeErr"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">writeErr</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Replacement for stderr.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="writeOut"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">writeOut</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Replacement for stdout.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="zoom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">zoom</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>points</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Set the zoom level.</p>
+<p>This number of points is added to the size of all fonts.  It
+may be positive to magnify or negative to reduce.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="name"></a>
+<h3>name</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'Shell'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>Shell<span class="variable-quote">'</span>                                                                </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="revision"></a>
+<h3>revision</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'1.20'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>1.20<span class="variable-quote">'</span>                                                                 </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:59:09 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

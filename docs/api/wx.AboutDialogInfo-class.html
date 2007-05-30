@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.AboutDialogInfo</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;AboutDialogInfo
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.AboutDialogInfo-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type AboutDialogInfo</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>AboutDialogInfo</b>
+</pre><br />
+
+<hr/>
+
+<p><a href="wx.AboutDialogInfo-class.html" class="link"><code>wx.AboutDialogInfo</code></a> contains information to be shown in the standard
+About dialog displayed by the <a href="wx-module.html#AboutBox" class="link"><code>wx.AboutBox</code></a> function.  This class
+contains the general information about the program, such as its name,
+version, copyright and so on, as well as lists of the program
+developers, documentation writers, artists and translators.</p>
+<p>While all the main platforms have a native implementation of the about
+dialog, they are often more limited than the generic version provided
+by wxWidgets and so the generic version is used if
+<a href="wx.AboutDialogInfo-class.html" class="link"><code>wx.AboutDialogInfo</code></a> has any fields not supported by the native
+version. Currently GTK+ version supports all the possible fields
+natively but MSW and Mac versions don't support URLs, licence text nor
+custom icons in the about dialog and if either of those is used,
+wxAboutBox() will automatically use the generic version so you should
+avoid specifying these fields to achieve more native look and feel.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">AboutDialogInfo</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+<a href="wx.AboutDialogInfo-class.html" class="link"><code>wx.AboutDialogInfo</code></a> contains information to be shown in the standard
+About dialog displayed by the <a href="wx-module.html#AboutBox" class="link"><code>wx.AboutBox</code></a> function.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1282304964"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#AddArtist" class="summary-sig-name"><code>AddArtist</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>artist</span>)</span></code>
+<br />
+Add a string to the list of artists.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#AddDeveloper" class="summary-sig-name"><code>AddDeveloper</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>developer</span>)</span></code>
+<br />
+Add a string to the list of developers.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#AddDocWriter" class="summary-sig-name"><code>AddDocWriter</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>docwriter</span>)</span></code>
+<br />
+Add a string to the list of documentation writers.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#AddTranslator" class="summary-sig-name"><code>AddTranslator</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>translator</span>)</span></code>
+<br />
+Add a string to the list of translators.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetArtists" class="summary-sig-name"><code>GetArtists</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+GetArtists(self) --&gt; list</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetCopyright" class="summary-sig-name"><code>GetCopyright</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the copyright value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetDescription" class="summary-sig-name"><code>GetDescription</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the description value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="GetDescriptionAndCredits"></a><span class="summary-sig"><span class="summary-sig-name">GetDescriptionAndCredits</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetDevelopers" class="summary-sig-name"><code>GetDevelopers</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+GetDevelopers(self) --&gt; list</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetDocWriters" class="summary-sig-name"><code>GetDocWriters</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+GetDocWriters(self) --&gt; list</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Icon</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetIcon" class="summary-sig-name"><code>GetIcon</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the current icon value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetLicence" class="summary-sig-name"><code>GetLicence</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the licence value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetName" class="summary-sig-name"><code>GetName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the program name.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetTranslators" class="summary-sig-name"><code>GetTranslators</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+GetTranslators(self) --&gt; list</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetVersion" class="summary-sig-name"><code>GetVersion</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the version value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetWebSite" class="summary-sig-name"><code>GetWebSite</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+GetWebSite(self) --&gt; (URL, Description)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#HasArtists" class="summary-sig-name"><code>HasArtists</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if any artists have been set.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#HasCopyright" class="summary-sig-name"><code>HasCopyright</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the copyright property has been set.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#HasDescription" class="summary-sig-name"><code>HasDescription</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the description property has been set.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#HasDevelopers" class="summary-sig-name"><code>HasDevelopers</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <a href="#id1" name="id2"><span class="rst-problematic" id="id2">``</span></a>True if any developers have been set.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#HasDocWriters" class="summary-sig-name"><code>HasDocWriters</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <a href="#id1" name="id2"><span class="rst-problematic" id="id2">``</span></a>True if any documentation writers have been set.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#HasIcon" class="summary-sig-name"><code>HasIcon</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the icon property has been set.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#HasLicence" class="summary-sig-name"><code>HasLicence</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the licence property has been set.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#HasTranslators" class="summary-sig-name"><code>HasTranslators</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if any translators have been set.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#HasVersion" class="summary-sig-name"><code>HasVersion</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the version property has been set.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="HasWebSite"></a><span class="summary-sig"><span class="summary-sig-name">HasWebSite</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsSimple"></a><span class="summary-sig"><span class="summary-sig-name">IsSimple</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetArtists" class="summary-sig-name"><code>SetArtists</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>artists</span>)</span></code>
+<br />
+Set the list of artists for the program.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetCopyright" class="summary-sig-name"><code>SetCopyright</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>copyright</span>)</span></code>
+<br />
+Set the short string containing the program copyright
+information.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetDescription" class="summary-sig-name"><code>SetDescription</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>desc</span>)</span></code>
+<br />
+Set brief, but possibly multiline, description of the program.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetDevelopers" class="summary-sig-name"><code>SetDevelopers</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>developers</span>)</span></code>
+<br />
+Set the list of the developers of the program.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetDocWriters" class="summary-sig-name"><code>SetDocWriters</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>docwriters</span>)</span></code>
+<br />
+Set the list of the documentation writers.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetIcon" class="summary-sig-name"><code>SetIcon</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>icon</span>)</span></code>
+<br />
+Set the icon to be shown in the dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetLicence" class="summary-sig-name"><code>SetLicence</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>licence</span>)</span></code>
+<br />
+Set the long, multiline string containing the text of the program
+licence.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetLicense" class="summary-sig-name"><code>SetLicense</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>licence</span>)</span></code>
+<br />
+This is the same as <a href="wx.AboutDialogInfo-class.html#SetLicence" class="link"><code>SetLicence</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetName" class="summary-sig-name"><code>SetName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Set the name of the program.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetTranslators" class="summary-sig-name"><code>SetTranslators</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>translators</span>)</span></code>
+<br />
+Sets the list of program translators.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetVersion" class="summary-sig-name"><code>SetVersion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>version</span>)</span></code>
+<br />
+Set the version of the program.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetWebSite" class="summary-sig-name"><code>SetWebSite</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>args</span>)</span></code>
+<br />
+SetWebSite(self, URL, [Description])</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#Artists"><code>Artists</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#Copyright"><code>Copyright</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#Description"><code>Description</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#Developers"><code>Developers</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#DocWriters"><code>DocWriters</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#Icon"><code>Icon</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#Licence"><code>Licence</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#License"><code>License</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#Name"><code>Name</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#Translators"><code>Translators</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#Version"><code>Version</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.AboutDialogInfo-class.html#WebSite"><code>WebSite</code></a></b></td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p><a href="wx.AboutDialogInfo-class.html" class="link"><code>wx.AboutDialogInfo</code></a> contains information to be shown in the standard
+About dialog displayed by the <a href="wx-module.html#AboutBox" class="link"><code>wx.AboutBox</code></a> function.  This class
+contains the general information about the program, such as its name,
+version, copyright and so on, as well as lists of the program
+developers, documentation writers, artists and translators.</p>
+<p>While all the main platforms have a native implementation of the about
+dialog, they are often more limited than the generic version provided
+by wxWidgets and so the generic version is used if
+<a href="wx.AboutDialogInfo-class.html" class="link"><code>wx.AboutDialogInfo</code></a> has any fields not supported by the native
+version. Currently GTK+ version supports all the possible fields
+natively but MSW and Mac versions don't support URLs, licence text nor
+custom icons in the about dialog and if either of those is used,
+wxAboutBox() will automatically use the generic version so you should
+avoid specifying these fields to achieve more native look and feel.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+AboutDialogInfo      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="__builtin__.object-class.html#__init__"><code>__builtin__.object.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddArtist"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddArtist</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>artist</span>)</span>
+  </h3>
+<p>Add a string to the list of artists.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>artist</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddDeveloper"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddDeveloper</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>developer</span>)</span>
+  </h3>
+<p>Add a string to the list of developers.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>developer</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddDocWriter"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddDocWriter</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>docwriter</span>)</span>
+  </h3>
+<p>Add a string to the list of documentation writers.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>docwriter</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddTranslator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddTranslator</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>translator</span>)</span>
+  </h3>
+<p>Add a string to the list of translators.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>translator</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetArtists"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetArtists</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>GetArtists(self) --&gt; list</p>
+<p>Returns the list od artists.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCopyright"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCopyright</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the copyright value.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDescription"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDescription</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the description value.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDevelopers"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDevelopers</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>GetDevelopers(self) --&gt; list</p>
+<p>Returns the list of developers.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocWriters"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocWriters</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>GetDocWriters(self) --&gt; list</p>
+<p>Returns the list of documentation writers.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetIcon</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the current icon value.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Icon      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLicence"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLicence</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the licence value.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the program name.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTranslators"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTranslators</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>GetTranslators(self) --&gt; list</p>
+<p>Returns the list of program translators.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetVersion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetVersion</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the version value.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetWebSite"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetWebSite</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>GetWebSite(self) --&gt; (URL, Description)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasArtists"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasArtists</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if any artists have been set.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasCopyright"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasCopyright</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the copyright property has been set.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasDescription"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasDescription</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the description property has been set.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasDevelopers"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasDevelopers</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <a href="#id1" name="id2"><span class="rst-problematic" id="id2">``</span></a>True if any developers have been set.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasDocWriters"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasDocWriters</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <a href="#id1" name="id2"><span class="rst-problematic" id="id2">``</span></a>True if any documentation writers have been set.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasIcon</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the icon property has been set.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasLicence"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasLicence</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the licence property has been set.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasTranslators"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasTranslators</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if any translators have been set.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasVersion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasVersion</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the version property has been set.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetArtists"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetArtists</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>artists</span>)</span>
+  </h3>
+<p>Set the list of artists for the program.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>artists</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=list)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCopyright"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCopyright</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>copyright</span>)</span>
+  </h3>
+<p>Set the short string containing the program copyright
+information. Notice that any occurrences of &quot;(C)&quot; in <tt class="rst-docutils literal"><span class="pre">copyright</span></tt>
+will be replaced by the copyright symbol (circled C) automatically,
+which means that you can avoid using this symbol in the program source
+code which can be problematic.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>copyright</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDescription"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDescription</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>desc</span>)</span>
+  </h3>
+<p>Set brief, but possibly multiline, description of the program.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>desc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDevelopers"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDevelopers</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>developers</span>)</span>
+  </h3>
+<p>Set the list of the developers of the program.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>developers</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=list)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDocWriters"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDocWriters</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>docwriters</span>)</span>
+  </h3>
+<p>Set the list of the documentation writers.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>docwriters</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=list)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetIcon</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>icon</span>)</span>
+  </h3>
+<p>Set the icon to be shown in the dialog. By default the icon of the
+main frame will be shown if the native about dialog supports custom
+icons. If it doesn't but a valid icon is specified using this method,
+the generic about dialog is used instead so you should avoid calling
+this function for maximally native look and feel.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>icon</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Icon)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLicence"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLicence</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>licence</span>)</span>
+  </h3>
+<p>Set the long, multiline string containing the text of the program
+licence.</p>
+<p>Only GTK+ version supports showing the licence text in the native
+about dialog currently so the generic version will be used under all
+the other platforms if this method is called. To preserve the native
+look and feel it is advised that you do not call this method but
+provide a separate menu item in the &quot;Help&quot; menu for displaying the
+text of your program licence.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>licence</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLicense"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLicense</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>licence</span>)</span>
+  </h3>
+<p>This is the same as <a href="wx.AboutDialogInfo-class.html#SetLicence" class="link"><code>SetLicence</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>licence</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetName</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Set the name of the program. If this method is not called, the string
+returned by <a href="wx.App-class.html#GetAppName" class="link"><code>wx.App.GetAppName</code></a> will be shown in the dialog.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>name</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTranslators"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTranslators</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>translators</span>)</span>
+  </h3>
+<p>Sets the list of program translators.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>translators</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=list)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetVersion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetVersion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>version</span>)</span>
+  </h3>
+<p>Set the version of the program. The version is in free format,
+i.e. not necessarily in the x.y.z form but it shouldn't contain the
+&quot;version&quot; word.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>version</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetWebSite"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetWebSite</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>args</span>)</span>
+  </h3>
+<p>SetWebSite(self, URL, [Description])</p>
+<p>Set the web site property.  The <tt class="rst-docutils literal"><span class="pre">args</span></tt> parameter can
+either be a single string for the URL, to a 2-tuple of
+(URL, Description) strings.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Artists"></a>
+<h3>Artists</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetArtists" class="summary-sig-name"><code>GetArtists</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetArtists" class="summary-sig-name"><code>SetArtists</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>artists</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Copyright"></a>
+<h3>Copyright</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetCopyright" class="summary-sig-name"><code>GetCopyright</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetCopyright" class="summary-sig-name"><code>SetCopyright</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>copyright</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Description"></a>
+<h3>Description</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetDescription" class="summary-sig-name"><code>GetDescription</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetDescription" class="summary-sig-name"><code>SetDescription</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>desc</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Developers"></a>
+<h3>Developers</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetDevelopers" class="summary-sig-name"><code>GetDevelopers</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetDevelopers" class="summary-sig-name"><code>SetDevelopers</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>developers</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="DocWriters"></a>
+<h3>DocWriters</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetDocWriters" class="summary-sig-name"><code>GetDocWriters</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetDocWriters" class="summary-sig-name"><code>SetDocWriters</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>docwriters</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Icon"></a>
+<h3>Icon</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetIcon" class="summary-sig-name"><code>GetIcon</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetIcon" class="summary-sig-name"><code>SetIcon</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>icon</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Licence"></a>
+<h3>Licence</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetLicence" class="summary-sig-name"><code>GetLicence</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetLicence" class="summary-sig-name"><code>SetLicence</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>licence</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="License"></a>
+<h3>License</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetLicence" class="summary-sig-name"><code>GetLicence</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetLicence" class="summary-sig-name"><code>SetLicence</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>licence</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Name"></a>
+<h3>Name</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetName" class="summary-sig-name"><code>GetName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetName" class="summary-sig-name"><code>SetName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Translators"></a>
+<h3>Translators</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetTranslators" class="summary-sig-name"><code>GetTranslators</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetTranslators" class="summary-sig-name"><code>SetTranslators</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>translators</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Version"></a>
+<h3>Version</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetVersion" class="summary-sig-name"><code>GetVersion</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetVersion" class="summary-sig-name"><code>SetVersion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>version</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="WebSite"></a>
+<h3>WebSite</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#GetWebSite" class="summary-sig-name"><code>GetWebSite</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.AboutDialogInfo-class.html#SetWebSite" class="summary-sig-name"><code>SetWebSite</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>args</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:01:01 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

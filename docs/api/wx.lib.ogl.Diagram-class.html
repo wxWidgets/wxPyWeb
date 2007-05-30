@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.ogl.Diagram</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.ogl-module.html">Package&nbsp;ogl</a> ::
+        Class&nbsp;Diagram
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.ogl.Diagram-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Diagram</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>Diagram</b>
+</pre><br />
+
+<hr/>
+
+<p>Encapsulates an entire diagram, with methods for drawing. A diagram has
+an associated ShapeCanvas.</p>
+<dl class="rst-docutils">
+<dt>Derived from:</dt>
+<dd>Object</dd>
+</dl>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#AddShape" class="summary-sig-name"><code>AddShape</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>object</span>,
+          <span class=summary-sig-arg>addAfter</span>)</span></code>
+<br />
+Adds a shape to the diagram.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#Clear" class="summary-sig-name"><code>Clear</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Clear the specified device context.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#DeleteAllShapes" class="summary-sig-name"><code>DeleteAllShapes</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Remove and delete all shapes in the diagram.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#DrawOutline" class="summary-sig-name"><code>DrawOutline</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>x1</span>,
+          <span class=summary-sig-arg>y1</span>,
+          <span class=summary-sig-arg>x2</span>,
+          <span class=summary-sig-arg>y2</span>)</span></code>
+<br />
+Draw an outline rectangle on the current device context.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#FindShape" class="summary-sig-name"><code>FindShape</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Return the shape for the given identifier.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#GetCanvas" class="summary-sig-name"><code>GetCanvas</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the shape canvas associated with this diagram.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#GetCount" class="summary-sig-name"><code>GetCount</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the number of shapes in the diagram.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#GetGridSpacing" class="summary-sig-name"><code>GetGridSpacing</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the grid spacing.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#GetMouseTolerance" class="summary-sig-name"><code>GetMouseTolerance</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the tolerance within which a mouse move is ignored.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#GetQuickEditMode" class="summary-sig-name"><code>GetQuickEditMode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return quick edit mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#GetShapeList" class="summary-sig-name"><code>GetShapeList</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the internal shape list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#GetSnapToGrid" class="summary-sig-name"><code>GetSnapToGrid</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return snap-to-grid mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#InsertShape" class="summary-sig-name"><code>InsertShape</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>object</span>)</span></code>
+<br />
+Insert a shape at the front of the shape list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#RecentreAll" class="summary-sig-name"><code>RecentreAll</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Make sure all text that should be centred, is centred.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#Redraw" class="summary-sig-name"><code>Redraw</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Draw the shapes in the diagram on the specified device context.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#RemoveAllShapes" class="summary-sig-name"><code>RemoveAllShapes</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Remove all shapes from the diagram but do not delete the shapes.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#RemoveShape" class="summary-sig-name"><code>RemoveShape</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>object</span>)</span></code>
+<br />
+Remove the shape from the diagram (non-recursively) but do not
+delete it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#SetCanvas" class="summary-sig-name"><code>SetCanvas</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>canvas</span>)</span></code>
+<br />
+Set the canvas associated with this diagram.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#SetGridSpacing" class="summary-sig-name"><code>SetGridSpacing</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>spacing</span>)</span></code>
+<br />
+Sets grid spacing.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#SetMouseTolerance" class="summary-sig-name"><code>SetMouseTolerance</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>tolerance</span>)</span></code>
+<br />
+Set the tolerance within which a mouse move is ignored.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#SetQuickEditMode" class="summary-sig-name"><code>SetQuickEditMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+Set quick-edit-mode on of off.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#SetSnapToGrid" class="summary-sig-name"><code>SetSnapToGrid</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>snap</span>)</span></code>
+<br />
+Sets snap-to-grid mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#ShowAll" class="summary-sig-name"><code>ShowAll</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span></code>
+<br />
+Call Show for each shape in the diagram.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.Diagram-class.html#Snap" class="summary-sig-name"><code>Snap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+'Snaps' the coordinate to the nearest grid position, if
+snap-to-grid is on.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="AddShape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddShape</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>object</span>,
+          <span class=sig-arg>addAfter</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Adds a shape to the diagram. If addAfter is not None, the shape
+will be added after addAfter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Clear"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Clear</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Clear the specified device context.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteAllShapes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteAllShapes</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Remove and delete all shapes in the diagram.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawOutline"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawOutline</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>x1</span>,
+          <span class=sig-arg>y1</span>,
+          <span class=sig-arg>x2</span>,
+          <span class=sig-arg>y2</span>)</span>
+  </h3>
+<p>Draw an outline rectangle on the current device context.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindShape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindShape</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>)</span>
+  </h3>
+<p>Return the shape for the given identifier.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCanvas"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCanvas</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the shape canvas associated with this diagram.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCount</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the number of shapes in the diagram.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGridSpacing"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGridSpacing</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the grid spacing.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMouseTolerance"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMouseTolerance</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the tolerance within which a mouse move is ignored.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetQuickEditMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetQuickEditMode</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return quick edit mode.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetShapeList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetShapeList</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the internal shape list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSnapToGrid"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSnapToGrid</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return snap-to-grid mode.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertShape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertShape</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>object</span>)</span>
+  </h3>
+<p>Insert a shape at the front of the shape list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RecentreAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RecentreAll</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Make sure all text that should be centred, is centred.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Redraw"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Redraw</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Draw the shapes in the diagram on the specified device context.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveAllShapes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveAllShapes</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Remove all shapes from the diagram but do not delete the shapes.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveShape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveShape</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>object</span>)</span>
+  </h3>
+<p>Remove the shape from the diagram (non-recursively) but do not
+delete it.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCanvas"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCanvas</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>canvas</span>)</span>
+  </h3>
+<p>Set the canvas associated with this diagram.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGridSpacing"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGridSpacing</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>spacing</span>)</span>
+  </h3>
+<p>Sets grid spacing.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMouseTolerance"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMouseTolerance</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>tolerance</span>)</span>
+  </h3>
+<p>Set the tolerance within which a mouse move is ignored.</p>
+<p>The default is 3 pixels.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetQuickEditMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetQuickEditMode</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mode</span>)</span>
+  </h3>
+<p>Set quick-edit-mode on of off.</p>
+<p>In this mode, refreshes are minimized, but the diagram may need
+manual refreshing occasionally.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSnapToGrid"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSnapToGrid</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>snap</span>)</span>
+  </h3>
+<p>Sets snap-to-grid mode.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowAll</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>show</span>)</span>
+  </h3>
+<p>Call Show for each shape in the diagram.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Snap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Snap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>'Snaps' the coordinate to the nearest grid position, if
+snap-to-grid is on.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:57:48 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

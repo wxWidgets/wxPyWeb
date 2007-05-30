@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.KeyEvent</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;KeyEvent
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.KeyEvent-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type KeyEvent</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+         <a href="wx.Event-class.html"><code>Event</code></a> --+
+                 |
+                <b>KeyEvent</b>
+</pre><br />
+
+<hr/>
+
+<p>This event class contains information about keypress and character
+events.  These events are only sent to the widget that currently has
+the keyboard focus.</p>
+<p>Notice that there are three different kinds of keyboard events in
+wxWidgets: key down and up events and char events. The difference
+between the first two is clear - the first corresponds to a key press
+and the second to a key release - otherwise they are identical. Just
+note that if the key is maintained in a pressed state you will
+typically get a lot of (automatically generated) down events but only
+one up so it is wrong to assume that there is one up event
+corresponding to each down one.</p>
+<p>Both key events provide untranslated key codes while the char event
+carries the translated one. The untranslated code for alphanumeric
+keys is always an upper case value. For the other keys it is one of
+WXK_XXX values from the keycodes table. The translated key is, in
+general, the character the user expects to appear as the result of the
+key combination when typing the text into a text entry zone, for
+example.</p>
+<p>A few examples to clarify this (all assume that CAPS LOCK is unpressed
+and the standard US keyboard): when the 'A' key is pressed, the key
+down event key code is equal to ASCII A == 65. But the char event key
+code is ASCII a == 97. On the other hand, if you press both SHIFT and
+'A' keys simultaneously , the key code in key down event will still be
+just 'A' while the char event key code parameter will now be 'A' as
+well.</p>
+<p>Although in this simple case it is clear that the correct key code
+could be found in the key down event handler by checking the value
+returned by <a href="wx.KeyEvent-class.html#ShiftDown" class="link"><code>ShiftDown</code></a>, in general you should use EVT_CHAR for this
+as for non alphanumeric keys or non-US keyboard layouts the
+translation is keyboard-layout dependent and can only be done properly
+by the system itself.</p>
+<p>Another kind of translation is done when the control key is pressed:
+for example, for CTRL-A key press the key down event still carries the
+same key code 'A' as usual but the char event will have key code of 1,
+the ASCII value of this key combination.</p>
+<p>You may discover how the other keys on your system behave
+interactively by running the KeyEvents sample in the wxPython demo and
+pressing some keys while the blue box at the top has the keyboard
+focus.</p>
+<p><strong>Note</strong>: If a key down event is caught and the event handler does not
+call event.Skip() then the coresponding char event will not
+happen. This is by design and enables the programs that handle both
+types of events to be a bit simpler.</p>
+<p><strong>Note for Windows programmers</strong>: The key and char events in wxWidgets
+are similar to but slightly different from Windows WM_KEYDOWN and
+WM_CHAR events. In particular, Alt-x combination will generate a char
+event in wxWidgets (unless it is used as an accelerator).</p>
+<p><strong>Tip</strong>: be sure to call event.Skip() for events that you don't
+process in key event function, otherwise menu shortcuts may cease to
+work under Windows.</p>
+<div class="rst-section" id="events">
+<h1 class="heading"><a name="rst-events">Events</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="28%" />
+<col class="rst" width="72%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.EVT_KEY_DOWN</td>
+<td class="rst">Sent when a keyboard key has been pressed</td>
+</tr>
+<tr class="rst"><td class="rst">wx.EVT_KEY_UP</td>
+<td class="rst">Sent when a keyboard key has been released</td>
+</tr>
+<tr class="rst"><td class="rst">wx.EVT_CHAR</td>
+<td class="rst">Sent for translated character events.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="rst-section" id="keycode-table">
+<h1 class="heading"><a name="rst-keycode-table">Keycode Table</a></h1>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="16%" />
+<col class="rst" width="20%" />
+<col class="rst" width="11%" />
+<col class="rst" width="29%" />
+<col class="rst" width="24%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">WXK_BACK</td>
+<td class="rst">WXK_EXECUTE</td>
+<td class="rst">WXK_F1</td>
+<td class="rst">WXK_NUMPAD_SPACE</td>
+<td class="rst">WXK_WINDOWS_LEFT</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_TAB</td>
+<td class="rst">WXK_SNAPSHOT</td>
+<td class="rst">WXK_F2</td>
+<td class="rst">WXK_NUMPAD_TAB</td>
+<td class="rst">WXK_WINDOWS_RIGHT</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_RETURN</td>
+<td class="rst">WXK_INSERT</td>
+<td class="rst">WXK_F3</td>
+<td class="rst">WXK_NUMPAD_ENTER</td>
+<td class="rst">WXK_WINDOWS_MENU</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_ESCAPE</td>
+<td class="rst">WXK_HELP</td>
+<td class="rst">WXK_F4</td>
+<td class="rst">WXK_NUMPAD_F1</td>
+<td class="rst">WXK_SPECIAL1</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_SPACE</td>
+<td class="rst">WXK_NUMPAD0</td>
+<td class="rst">WXK_F5</td>
+<td class="rst">WXK_NUMPAD_F2</td>
+<td class="rst">WXK_SPECIAL2</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_DELETE</td>
+<td class="rst">WXK_NUMPAD1</td>
+<td class="rst">WXK_F6</td>
+<td class="rst">WXK_NUMPAD_F3</td>
+<td class="rst">WXK_SPECIAL3</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_LBUTTON</td>
+<td class="rst">WXK_NUMPAD2</td>
+<td class="rst">WXK_F7</td>
+<td class="rst">WXK_NUMPAD_F4</td>
+<td class="rst">WXK_SPECIAL4</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_RBUTTON</td>
+<td class="rst">WXK_NUMPAD3</td>
+<td class="rst">WXK_F8</td>
+<td class="rst">WXK_NUMPAD_HOME</td>
+<td class="rst">WXK_SPECIAL5</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_CANCEL</td>
+<td class="rst">WXK_NUMPAD4</td>
+<td class="rst">WXK_F9</td>
+<td class="rst">WXK_NUMPAD_LEFT</td>
+<td class="rst">WXK_SPECIAL6</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_MBUTTON</td>
+<td class="rst">WXK_NUMPAD5</td>
+<td class="rst">WXK_F10</td>
+<td class="rst">WXK_NUMPAD_UP</td>
+<td class="rst">WXK_SPECIAL7</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_CLEAR</td>
+<td class="rst">WXK_NUMPAD6</td>
+<td class="rst">WXK_F11</td>
+<td class="rst">WXK_NUMPAD_RIGHT</td>
+<td class="rst">WXK_SPECIAL8</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_SHIFT</td>
+<td class="rst">WXK_NUMPAD7</td>
+<td class="rst">WXK_F12</td>
+<td class="rst">WXK_NUMPAD_DOWN</td>
+<td class="rst">WXK_SPECIAL9</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_ALT</td>
+<td class="rst">WXK_NUMPAD8</td>
+<td class="rst">WXK_F13</td>
+<td class="rst">WXK_NUMPAD_PRIOR</td>
+<td class="rst">WXK_SPECIAL10</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_CONTROL</td>
+<td class="rst">WXK_NUMPAD9</td>
+<td class="rst">WXK_F14</td>
+<td class="rst">WXK_NUMPAD_PAGEUP</td>
+<td class="rst">WXK_SPECIAL11</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_MENU</td>
+<td class="rst">WXK_MULTIPLY</td>
+<td class="rst">WXK_F15</td>
+<td class="rst">WXK_NUMPAD_NEXT</td>
+<td class="rst">WXK_SPECIAL12</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_PAUSE</td>
+<td class="rst">WXK_ADD</td>
+<td class="rst">WXK_F16</td>
+<td class="rst">WXK_NUMPAD_PAGEDOWN</td>
+<td class="rst">WXK_SPECIAL13</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_CAPITAL</td>
+<td class="rst">WXK_SEPARATOR</td>
+<td class="rst">WXK_F17</td>
+<td class="rst">WXK_NUMPAD_END</td>
+<td class="rst">WXK_SPECIAL14</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_PRIOR</td>
+<td class="rst">WXK_SUBTRACT</td>
+<td class="rst">WXK_F18</td>
+<td class="rst">WXK_NUMPAD_BEGIN</td>
+<td class="rst">WXK_SPECIAL15</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_NEXT</td>
+<td class="rst">WXK_DECIMAL</td>
+<td class="rst">WXK_F19</td>
+<td class="rst">WXK_NUMPAD_INSERT</td>
+<td class="rst">WXK_SPECIAL16</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_END</td>
+<td class="rst">WXK_DIVIDE</td>
+<td class="rst">WXK_F20</td>
+<td class="rst">WXK_NUMPAD_DELETE</td>
+<td class="rst">WXK_SPECIAL17</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_HOME</td>
+<td class="rst">WXK_NUMLOCK</td>
+<td class="rst">WXK_F21</td>
+<td class="rst">WXK_NUMPAD_EQUAL</td>
+<td class="rst">WXK_SPECIAL18</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_LEFT</td>
+<td class="rst">WXK_SCROLL</td>
+<td class="rst">WXK_F22</td>
+<td class="rst">WXK_NUMPAD_MULTIPLY</td>
+<td class="rst">WXK_SPECIAL19</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_UP</td>
+<td class="rst">WXK_PAGEUP</td>
+<td class="rst">WXK_F23</td>
+<td class="rst">WXK_NUMPAD_ADD</td>
+<td class="rst">WXK_SPECIAL20</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_RIGHT</td>
+<td class="rst">WXK_PAGEDOWN</td>
+<td class="rst">WXK_F24</td>
+<td class="rst">WXK_NUMPAD_SEPARATOR</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_DOWN</td>
+<td class="rst">&nbsp;</td>
+<td class="rst">&nbsp;</td>
+<td class="rst">WXK_NUMPAD_SUBTRACT</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_SELECT</td>
+<td class="rst">&nbsp;</td>
+<td class="rst">&nbsp;</td>
+<td class="rst">WXK_NUMPAD_DECIMAL</td>
+<td class="rst">&nbsp;</td>
+</tr>
+<tr class="rst"><td class="rst">WXK_PRINT</td>
+<td class="rst">&nbsp;</td>
+<td class="rst">&nbsp;</td>
+<td class="rst">WXK_NUMPAD_DIVIDE</td>
+<td class="rst">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">KeyEvent</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>eventType</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#AltDown" class="summary-sig-name"><code>AltDown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the Alt key was down at the time of the event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#CmdDown" class="summary-sig-name"><code>CmdDown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+&quot;Cmd&quot; is a pseudo key which is the same as Control for PC and Unix
+platforms but the special &quot;Apple&quot; (a.k.a as &quot;Command&quot;) key on
+Macs.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#ControlDown" class="summary-sig-name"><code>ControlDown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the Control key was down at the time of the event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetKeyCode" class="summary-sig-name"><code>GetKeyCode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the virtual key code.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetModifiers" class="summary-sig-name"><code>GetModifiers</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a bitmask of the current modifier settings.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Point</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetPosition" class="summary-sig-name"><code>GetPosition</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Find the position of the event, if applicable.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">(x,y)</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetPositionTuple" class="summary-sig-name"><code>GetPositionTuple</code></a>()</span></code>
+<br />
+Find the position of the event, if applicable.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">unsigned int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetRawKeyCode" class="summary-sig-name"><code>GetRawKeyCode</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the raw key code for this event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">unsigned int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetRawKeyFlags" class="summary-sig-name"><code>GetRawKeyFlags</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the low level key flags for this event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetUnicodeKey" class="summary-sig-name"><code>GetUniChar</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the Unicode character corresponding to this key event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetUnicodeKey" class="summary-sig-name"><code>GetUnicodeKey</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the Unicode character corresponding to this key event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetX" class="summary-sig-name"><code>GetX</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the X position (in client coordinates) of the event, if
+applicable.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetY" class="summary-sig-name"><code>GetY</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the Y position (in client coordinates) of the event, if
+applicable.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#HasModifiers" class="summary-sig-name"><code>HasModifiers</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if either CTRL or ALT keys was down at the time of the
+key event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#MetaDown" class="summary-sig-name"><code>MetaDown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the Meta key was down at the time of the event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#SetUnicodeKey" class="summary-sig-name"><code>SetUnicodeKey</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>uniChar</span>)</span></code>
+<br />
+Set the Unicode value of the key event, but only if this is a Unicode
+build of wxPython.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.KeyEvent-class.html#ShiftDown" class="summary-sig-name"><code>ShiftDown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the Shift key was down at the time of the event.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.KeyEvent-class.html#KeyCode"><code>KeyCode</code></a></b>: See <a href="wx.KeyEvent-class.html#GetKeyCode" class="link"><code>GetKeyCode</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="m_altDown"></a><b><code>m_altDown</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="m_controlDown"></a><b><code>m_controlDown</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="m_keyCode"></a><b><code>m_keyCode</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="m_metaDown"></a><b><code>m_metaDown</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="m_rawCode"></a><b><code>m_rawCode</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="m_rawFlags"></a><b><code>m_rawFlags</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="m_scanCode"></a><b><code>m_scanCode</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="m_shiftDown"></a><b><code>m_shiftDown</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="m_x"></a><b><code>m_x</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><a name="m_y"></a><b><code>m_y</code></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.KeyEvent-class.html#Modifiers"><code>Modifiers</code></a></b>: See <a href="wx.KeyEvent-class.html#GetModifiers" class="link"><code>GetModifiers</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.KeyEvent-class.html#Position"><code>Position</code></a></b>: See <a href="wx.KeyEvent-class.html#GetPosition" class="link"><code>GetPosition</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.KeyEvent-class.html#RawKeyCode"><code>RawKeyCode</code></a></b>: See <a href="wx.KeyEvent-class.html#GetRawKeyCode" class="link"><code>GetRawKeyCode</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.KeyEvent-class.html#RawKeyFlags"><code>RawKeyFlags</code></a></b>: See <a href="wx.KeyEvent-class.html#GetRawKeyFlags" class="link"><code>GetRawKeyFlags</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.KeyEvent-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.KeyEvent-class.html#UnicodeKey"><code>UnicodeKey</code></a></b>: See <a href="wx.KeyEvent-class.html#GetUnicodeKey" class="link"><code>GetUnicodeKey</code></a> and <a href="wx.KeyEvent-class.html#SetUnicodeKey" class="link"><code>SetUnicodeKey</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.KeyEvent-class.html#X"><code>X</code></a></b>: See <a href="wx.KeyEvent-class.html#GetX" class="link"><code>GetX</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.KeyEvent-class.html#Y"><code>Y</code></a></b>: See <a href="wx.KeyEvent-class.html#GetY" class="link"><code>GetY</code></a></td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>eventType</span>=<span class=sig-default>wxEVT_NULL</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<dl class="rst-docutils">
+<dt>Construct a new <a href="wx.KeyEvent-class.html" class="link"><code>wx.KeyEvent</code></a>.  Valid event types are:</dt>
+<dd><ul class="first last rst-simple">
+<li></li>
+</ul>
+</dd>
+</dl>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>eventType</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=EventType)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+KeyEvent      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Event-class.html#__init__"><code>wx.Event.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AltDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AltDown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the Alt key was down at the time of the event.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CmdDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CmdDown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>&quot;Cmd&quot; is a pseudo key which is the same as Control for PC and Unix
+platforms but the special &quot;Apple&quot; (a.k.a as &quot;Command&quot;) key on
+Macs. It makes often sense to use it instead of, say, <a href="wx.KeyEvent-class.html#ControlDown" class="link"><code>ControlDown</code></a>
+because Cmd key is used for the same thing under Mac as Ctrl
+elsewhere. The Ctrl still exists, it's just not used for this
+purpose. So for non-Mac platforms this is the same as <a href="wx.KeyEvent-class.html#ControlDown" class="link"><code>ControlDown</code></a>
+and Macs this is the same as <a href="wx.KeyEvent-class.html#MetaDown" class="link"><code>MetaDown</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ControlDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ControlDown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the Control key was down at the time of the event.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetKeyCode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetKeyCode</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the virtual key code. ASCII events return normal ASCII values,
+while non-ASCII events return values such as WXK_LEFT for the left
+cursor key. See <a href="wx.KeyEvent-class.html" class="link"><code>wx.KeyEvent</code></a> for a full list of the virtual key
+codes.</p>
+<p>Note that in Unicode build, the returned value is meaningful only if
+the user entered a character that can be represented in current
+locale's default charset. You can obtain the corresponding Unicode
+character using <a href="wx.KeyEvent-class.html#GetUnicodeKey" class="link"><code>GetUnicodeKey</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetModifiers"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetModifiers</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a bitmask of the current modifier settings.  Can be used to
+check if the key event has exactly the given modifiers without having
+to explicitly check that the other modifiers are not down.  For
+example:</p>
+<pre class="rst-literal-block">
+if event.GetModifers() == wx.MOD_CONTROL:
+    DoSomething()
+</pre>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPosition</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Find the position of the event, if applicable.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Point      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPositionTuple"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPositionTuple</span>()</span>
+  </h3>
+<p>Find the position of the event, if applicable.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+(x,y)      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRawKeyCode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRawKeyCode</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the raw key code for this event. This is a platform-dependent
+scan code which should only be used in advanced
+applications. Currently the raw key codes are not supported by all
+ports.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+unsigned int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRawKeyFlags"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRawKeyFlags</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the low level key flags for this event. The flags are
+platform-dependent and should only be used in advanced applications.
+Currently the raw key flags are not supported by all ports.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+unsigned int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetUnicodeKey"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetUniChar</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the Unicode character corresponding to this key event.  This
+function is only meaningfule in a Unicode build of wxPython.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetUnicodeKey"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetUnicodeKey</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the Unicode character corresponding to this key event.  This
+function is only meaningfule in a Unicode build of wxPython.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetX"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetX</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the X position (in client coordinates) of the event, if
+applicable.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetY"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetY</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the Y position (in client coordinates) of the event, if
+applicable.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasModifiers"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasModifiers</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if either CTRL or ALT keys was down at the time of the
+key event. Note that this function does not take into account neither
+SHIFT nor META key states (the reason for ignoring the latter is that
+it is common for NUMLOCK key to be configured as META under X but the
+key presses even while NUMLOCK is on should be still processed
+normally).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MetaDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MetaDown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the Meta key was down at the time of the event.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetUnicodeKey"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetUnicodeKey</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>uniChar</span>)</span>
+  </h3>
+<p>Set the Unicode value of the key event, but only if this is a Unicode
+build of wxPython.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>uniChar</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShiftDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShiftDown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the Shift key was down at the time of the event.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="KeyCode"></a>
+<h3>KeyCode</h3>
+<p>See <a href="wx.KeyEvent-class.html#GetKeyCode" class="link"><code>GetKeyCode</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetKeyCode" class="summary-sig-name"><code>GetKeyCode</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Modifiers"></a>
+<h3>Modifiers</h3>
+<p>See <a href="wx.KeyEvent-class.html#GetModifiers" class="link"><code>GetModifiers</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetModifiers" class="summary-sig-name"><code>GetModifiers</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Position"></a>
+<h3>Position</h3>
+<p>See <a href="wx.KeyEvent-class.html#GetPosition" class="link"><code>GetPosition</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetPosition" class="summary-sig-name"><code>GetPosition</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="RawKeyCode"></a>
+<h3>RawKeyCode</h3>
+<p>See <a href="wx.KeyEvent-class.html#GetRawKeyCode" class="link"><code>GetRawKeyCode</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetRawKeyCode" class="summary-sig-name"><code>GetRawKeyCode</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="RawKeyFlags"></a>
+<h3>RawKeyFlags</h3>
+<p>See <a href="wx.KeyEvent-class.html#GetRawKeyFlags" class="link"><code>GetRawKeyFlags</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetRawKeyFlags" class="summary-sig-name"><code>GetRawKeyFlags</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="UnicodeKey"></a>
+<h3>UnicodeKey</h3>
+<p>See <a href="wx.KeyEvent-class.html#GetUnicodeKey" class="link"><code>GetUnicodeKey</code></a> and <a href="wx.KeyEvent-class.html#SetUnicodeKey" class="link"><code>SetUnicodeKey</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetUnicodeKey" class="summary-sig-name"><code>GetUnicodeKey</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.KeyEvent-class.html#SetUnicodeKey" class="summary-sig-name"><code>SetUnicodeKey</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>uniChar</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="X"></a>
+<h3>X</h3>
+<p>See <a href="wx.KeyEvent-class.html#GetX" class="link"><code>GetX</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetX" class="summary-sig-name"><code>GetX</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Y"></a>
+<h3>Y</h3>
+<p>See <a href="wx.KeyEvent-class.html#GetY" class="link"><code>GetY</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.KeyEvent-class.html#GetY" class="summary-sig-name"><code>GetY</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:59:10 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

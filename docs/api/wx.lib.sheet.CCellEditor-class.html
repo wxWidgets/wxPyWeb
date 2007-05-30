@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.sheet.CCellEditor</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.sheet-module.html">Module&nbsp;sheet</a> ::
+        Class&nbsp;CCellEditor
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.sheet.CCellEditor-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type CCellEditor</h2>
+
+<pre class="base-tree">
+    <a href="__builtin__.object-class.html"><code>object</code></a> --+            
+             |            
+<a href="wx.grid.GridCellWorker-class.html"><code>GridCellWorker</code></a> --+        
+                 |        
+    <a href="wx.grid.GridCellEditor-class.html"><code>GridCellEditor</code></a> --+    
+                     |    
+      <a href="wx.grid.PyGridCellEditor-class.html"><code>PyGridCellEditor</code></a> --+
+                         |
+                        <b>CCellEditor</b>
+</pre><br />
+
+<hr/>
+
+<p>Custom cell editor</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>grid</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#BeginEdit" class="summary-sig-name"><code>BeginEdit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>grid</span>)</span></code>
+<br />
+Fetch the value from the table and prepare edit control to begin editing.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#Clone" class="summary-sig-name"><code>Clone</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Create a new object which is the copy of this one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#Create" class="summary-sig-name"><code>Create</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>evtHandler</span>)</span></code>
+<br />
+Create the actual edit control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#Destroy" class="summary-sig-name"><code>Destroy</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Final cleanup</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#EndEdit" class="summary-sig-name"><code>EndEdit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>grid</span>)</span></code>
+<br />
+Commit editing the current cell.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#IsAcceptedKey" class="summary-sig-name"><code>IsAcceptedKey</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+Return True to allow the given key to start editing.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#PaintBackground" class="summary-sig-name"><code>PaintBackground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>attr</span>)</span></code>
+<br />
+Draws the part of the cell not occupied by the edit control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#Reset" class="summary-sig-name"><code>Reset</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Reset the value in the control back to its starting value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#SetSize" class="summary-sig-name"><code>SetSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Position/size the edit control within the cell rectangle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#Show" class="summary-sig-name"><code>Show</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>,
+          <span class=summary-sig-arg>attr</span>)</span></code>
+<br />
+Show or hide the edit control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#StartingClick" class="summary-sig-name"><code>StartingClick</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+If the editor is enabled by clicking on the cell, this method will be
+called to allow the editor to simulate the click on the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.sheet.CCellEditor-class.html#StartingKey" class="summary-sig-name"><code>StartingKey</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+If the editor is enabled by pressing keys on the grid, this will be
+called to let the editor react to that first key.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="BeginEdit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">BeginEdit</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>row</span>,
+          <span class=sig-arg>col</span>,
+          <span class=sig-arg>grid</span>)</span>
+  </h3>
+<p>Fetch the value from the table and prepare edit control to begin editing.
+Set the focus to the edit control.  Must Override.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#BeginEdit"><code>wx.grid.GridCellEditor.BeginEdit</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Clone"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Clone</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Create a new object which is the copy of this one. Must Override.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#Clone"><code>wx.grid.GridCellEditor.Clone</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Create"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Create</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>evtHandler</span>)</span>
+  </h3>
+<p>Create the actual edit control.  Must derive from wxControl.
+Must Override</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#Create"><code>wx.grid.GridCellEditor.Create</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Destroy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Destroy</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Final cleanup</p>
+<p>NOTE: There is no need to everride this if you don't need
+to do something out of the ordinary.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#Destroy"><code>wx.grid.GridCellEditor.Destroy</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EndEdit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EndEdit</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>row</span>,
+          <span class=sig-arg>col</span>,
+          <span class=sig-arg>grid</span>)</span>
+  </h3>
+<p>Commit editing the current cell. Returns True if the value has changed.
+If necessary, the control may be destroyed. Must Override.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#EndEdit"><code>wx.grid.GridCellEditor.EndEdit</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsAcceptedKey"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsAcceptedKey</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>)</span>
+  </h3>
+<p>Return True to allow the given key to start editing.  The base class
+version only checks that the event has no modifiers.  F2 is special
+and will always start the editor.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#IsAcceptedKey"><code>wx.grid.GridCellEditor.IsAcceptedKey</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PaintBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PaintBackground</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>attr</span>)</span>
+  </h3>
+<p>Draws the part of the cell not occupied by the edit control.  The
+base class version just fills it with background colour from the
+attribute.</p>
+<p>NOTE: There is no need to everride this if you don't need
+to do something out of the ordinary.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#PaintBackground"><code>wx.grid.GridCellEditor.PaintBackground</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Reset"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Reset</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Reset the value in the control back to its starting value. Must Override.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#Reset"><code>wx.grid.GridCellEditor.Reset</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Position/size the edit control within the cell rectangle.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#SetSize"><code>wx.grid.GridCellEditor.SetSize</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Show"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Show</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>show</span>,
+          <span class=sig-arg>attr</span>)</span>
+  </h3>
+<p>Show or hide the edit control.  Use the attr (if not None)
+to set colors or fonts for the control.</p>
+<p>NOTE: There is no need to everride this if you don't need
+to do something out of the ordinary.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#Show"><code>wx.grid.GridCellEditor.Show</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="StartingClick"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">StartingClick</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>If the editor is enabled by clicking on the cell, this method will be
+called to allow the editor to simulate the click on the control.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#StartingClick"><code>wx.grid.GridCellEditor.StartingClick</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="StartingKey"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">StartingKey</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>)</span>
+  </h3>
+<p>If the editor is enabled by pressing keys on the grid, this will be
+called to let the editor react to that first key.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.grid.GridCellEditor-class.html#StartingKey"><code>wx.grid.GridCellEditor.StartingKey</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:57:03 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

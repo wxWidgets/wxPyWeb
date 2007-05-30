@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.SizerFlags</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;SizerFlags
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.SizerFlags-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type SizerFlags</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>SizerFlags</b>
+</pre><br />
+
+<hr/>
+
+<p>Normally, when you add an item to a sizer via <a href="wx.Sizer-class.html#Add" class="link"><code>wx.Sizer.Add</code></a>, you have
+to specify a lot of flags and parameters which can be unwieldy. This
+is where wx.SizerFlags comes in: it allows you to specify all
+parameters using the named methods instead. For example, instead of:</p>
+<pre class="rst-literal-block">
+sizer.Add(ctrl, 0, wx.EXPAND | wx.ALL, 10)
+</pre>
+<p>you can now write:</p>
+<pre class="rst-literal-block">
+sizer.AddF(ctrl, wx.SizerFlags().Expand().Border(wx.ALL, 10))
+</pre>
+<p>This is more readable and also allows you to create wx.SizerFlags
+objects which can be reused for several sizer items.:</p>
+<pre class="rst-literal-block">
+flagsExpand = wx.SizerFlags(1)
+flagsExpand.Expand().Border(wx.ALL, 10)
+sizer.AddF(ctrl1, flagsExpand)
+sizer.AddF(ctrl2, flagsExpand)
+</pre>
+<p>Note that by specification, all methods of wx.SizerFlags return the
+wx.SizerFlags object itself allowing chaining multiple method calls
+like in the examples above.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>proportion</span>)</span></code>
+<br />
+Constructs the flags object with the specified proportion.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1400172060"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#Align" class="summary-sig-name"><code>Align</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>alignment</span>)</span></code>
+<br />
+Sets the item's alignment</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#Border" class="summary-sig-name"><code>Border</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>direction</span>,
+          <span class=summary-sig-arg>borderInPixels</span>)</span></code>
+<br />
+Sets the border of the item in the direction(s) or sides given by the
+direction parameter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#Bottom" class="summary-sig-name"><code>Bottom</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Aligns the object to the bottom of the available space, a shortcut for
+calling Align(wx.ALIGN_BOTTOM)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#Center" class="summary-sig-name"><code>Center</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets the centering alignment flags.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#Centre" class="summary-sig-name"><code>Centre</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Same as <a href="wx.SizerFlags-class.html#Center" class="link"><code>Center</code></a> for those with an alternate dialect of English.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#DoubleBorder" class="summary-sig-name"><code>DoubleBorder</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>direction</span>)</span></code>
+<br />
+Sets the border in the given direction to twice the default border
+size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#DoubleHorzBorder" class="summary-sig-name"><code>DoubleHorzBorder</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets the left and right borders to twice the default border size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#Expand" class="summary-sig-name"><code>Expand</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets the wx.EXPAND flag, which will cause the item to be expanded to
+fill as much space as it is given by the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#FixedMinSize" class="summary-sig-name"><code>FixedMinSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets the wx.FIXED_MINSIZE flag.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#GetBorderInPixels" class="summary-sig-name"><code>GetBorderInPixels</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the border value in pixels to be used in the sizer item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#GetDefaultBorder" class="summary-sig-name"><code>GetDefaultBorder</code></a>()</span></code>
+<br />
+Returns the default border size used by the other border methods    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#GetFlags" class="summary-sig-name"><code>GetFlags</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the flags value to be used in the sizer item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#GetProportion" class="summary-sig-name"><code>GetProportion</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the proportion value to be used in the sizer item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#HorzBorder" class="summary-sig-name"><code>HorzBorder</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets the left and right borders to the default border size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#Left" class="summary-sig-name"><code>Left</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Aligns the object to the left, a shortcut for calling
+Align(wx.ALIGN_LEFT)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#Proportion" class="summary-sig-name"><code>Proportion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>proportion</span>)</span></code>
+<br />
+Sets the item's proportion value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#Right" class="summary-sig-name"><code>Right</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Aligns the object to the right, a shortcut for calling
+Align(wx.ALIGN_RIGHT)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#Shaped" class="summary-sig-name"><code>Shaped</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets the wx.SHAPED flag.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#Top" class="summary-sig-name"><code>Top</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Aligns the object to the top of the available space, a shortcut for
+calling Align(wx.ALIGN_TOP)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">SizerFlags</font></td>
+  <td><code><span class="summary-sig"><a href="wx.SizerFlags-class.html#TripleBorder" class="summary-sig-name"><code>TripleBorder</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>direction</span>)</span></code>
+<br />
+Sets the border in the given direction to three times the default
+border size.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.SizerFlags-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>proportion</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructs the flags object with the specified proportion.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>proportion</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="__builtin__.object-class.html#__init__"><code>__builtin__.object.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Align"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Align</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>alignment</span>)</span>
+  </h3>
+<p>Sets the item's alignment</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>alignment</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Border"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Border</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>direction</span>=<span class=sig-default>ALL</span>,
+          <span class=sig-arg>borderInPixels</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Sets the border of the item in the direction(s) or sides given by the
+direction parameter.  If the borderInPixels value is not given then
+the default border size (see <a href="wx.SizerFlags-class.html#GetDefaultBorder" class="link"><code>GetDefaultBorder</code></a>) will be used.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>direction</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>borderInPixels</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Bottom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Bottom</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Aligns the object to the bottom of the available space, a shortcut for
+calling Align(wx.ALIGN_BOTTOM)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Center"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Center</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets the centering alignment flags.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Centre"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Centre</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Same as <a href="wx.SizerFlags-class.html#Center" class="link"><code>Center</code></a> for those with an alternate dialect of English.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoubleBorder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoubleBorder</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>direction</span>=<span class=sig-default>ALL</span>)</span>
+  </h3>
+<p>Sets the border in the given direction to twice the default border
+size.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>direction</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoubleHorzBorder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoubleHorzBorder</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets the left and right borders to twice the default border size.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Expand"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Expand</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets the wx.EXPAND flag, which will cause the item to be expanded to
+fill as much space as it is given by the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FixedMinSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FixedMinSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets the wx.FIXED_MINSIZE flag.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBorderInPixels"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBorderInPixels</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the border value in pixels to be used in the sizer item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFlags"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFlags</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the flags value to be used in the sizer item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetProportion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetProportion</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the proportion value to be used in the sizer item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HorzBorder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HorzBorder</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets the left and right borders to the default border size.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Left"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Left</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Aligns the object to the left, a shortcut for calling
+Align(wx.ALIGN_LEFT)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Proportion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Proportion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>proportion</span>)</span>
+  </h3>
+<p>Sets the item's proportion value.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>proportion</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Right"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Right</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Aligns the object to the right, a shortcut for calling
+Align(wx.ALIGN_RIGHT)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Shaped"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Shaped</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets the wx.SHAPED flag.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Top"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Top</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Aligns the object to the top of the available space, a shortcut for
+calling Align(wx.ALIGN_TOP)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="TripleBorder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">TripleBorder</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>direction</span>=<span class=sig-default>ALL</span>)</span>
+  </h3>
+<p>Sets the border in the given direction to three times the default
+border size.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>direction</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+SizerFlags      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="GetDefaultBorder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDefaultBorder</span>()</span>
+  </h3>
+<p>Returns the default border size used by the other border methods</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:56:54 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

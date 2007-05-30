@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.py.shell</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.py-module.html">Package&nbsp;py</a> ::
+        Module&nbsp;shell
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.py.shell-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.py.shell</h2>
+
+<p>Shell is an interactive text control in which a user types in
+commands to be sent to the interpreter.  This particular shell is
+based on wxPython's wxStyledTextCtrl.</p>
+<p>Sponsored by Orbtech - Your source for Python programming expertise.</p>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.py.shell.Shell-class.html"><code>Shell</code></a></b></td>
+  <td>Shell based on StyledTextCtrl.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.py.shell.ShellFacade-class.html"><code>ShellFacade</code></a></b></td>
+  <td>Simplified interface to all shell-related functionality.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.py.shell.ShellFrame-class.html"><code>ShellFrame</code></a></b></td>
+  <td>Frame containing the shell component.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.py.shell-module.html#__author__"><code>__author__</code></a></b> = <span title="&quot;Patrick K. O'Brien &lt;pobrien@orbtech.com&gt;&quot;"><code><span class="variable-quote">"</span>Patrick&nbsp;K.&nbsp;O'Brien&nbsp;&lt;pobrien&#64;orbtech.com&gt;<span class="variable-quote">"</span>  </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.py.shell-module.html#__cvsid__"><code>__cvsid__</code></a></b> = <span title="'$Id: shell.py,v 1.20 2007/01/17 23:05:14 RD Exp $'"><code><span class="variable-quote">'</span>$Id:&nbsp;shell.py,v&nbsp;1.20&nbsp;2007/01/17&nbsp;23:05:14&nbsp;RD<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.py.shell-module.html#__revision__"><code>__revision__</code></a></b> = <span title="'1.20'"><code><span class="variable-quote">'</span>1.20<span class="variable-quote">'</span>                                    </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.py.shell-module.html#HELP_TEXT"><code>HELP_TEXT</code></a></b> = <span title="'* Key bindings:\nHome              Go to the beginning of the command or line.\nShift+Home        Select to the beginning of the command or line.\nShift+End         Select to the end of the line.\nEnd               Go to the end of the line.\nCtrl+C            Copy selected text, removing prompts.\nCtrl+Shift+C      Copy selected text, retaining prompts.\nAlt+C             Copy to the clipboard, including prefixed prompts.\nCtrl+X            Cut selected text.\nCtrl+V            Paste from clipboard.\nCtrl+Shift+V      Paste and run multiple commands from clipboard.\nCtrl+Up Arrow     Retr..."><code><span class="variable-quote">'</span>*&nbsp;Key&nbsp;bindings:\nHome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go&nbsp;to&nbsp;th<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>tuple</code></font></td>
+<td><b><a href="wx.py.shell-module.html#NAVKEYS"><code>NAVKEYS</code></a></b> = <span title="(312, 314, 316, 315, 317, 366, 367)"><code>(312,&nbsp;314,&nbsp;316,&nbsp;315,&nbsp;317,&nbsp;366,&nbsp;367)            </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__author__"></a>
+<h3>__author__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="&quot;Patrick K. O'Brien &lt;pobrien@orbtech.com&gt;&quot;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">"</span>Patrick K. O'Brien &lt;pobrien&#64;orbtech.com&gt;<span class="variable-quote">"</span>                             </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__cvsid__"></a>
+<h3>__cvsid__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'$Id: shell.py,v 1.20 2007/01/17 23:05:14 RD Exp $'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>$Id: shell.py,v 1.20 2007/01/17 23:05:14 RD Exp $<span class="variable-quote">'</span>                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__revision__"></a>
+<h3>__revision__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'1.20'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>1.20<span class="variable-quote">'</span>                                                                 </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="HELP_TEXT"></a>
+<h3>HELP_TEXT</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'* Key bindings:\nHome              Go to the beginning of the command or line.\nShift+Home        Select to the beginning of the command or line.\nShift+End         Select to the end of the line.\nEnd               Go to the end of the line.\nCtrl+C            Copy selected text, removing prompts.\nCtrl+Shift+C      Copy selected text, retaining prompts.\nAlt+C             Copy to the clipboard, including prefixed prompts.\nCtrl+X            Cut selected text.\nCtrl+V            Paste from clipboard.\nCtrl+Shift+V      Paste and run multiple commands from clipboard.\nCtrl+Up Arrow     Retr...">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'''</span>* Key bindings:
+Home              Go to the beginning of the command or line.
+Shift+Home        Select to the beginning of the command or line.
+Shift+End         Select to the end of the line.
+End               Go to the end of the line.
+Ctrl+C            Copy selected text, removing prompts.
+Ctrl+Shift+C      Copy selected text, retaining prompts.
+Alt+C             Copy to the clipboard, including prefixed prompts.
+<span class="variable-ellipsis">...</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="NAVKEYS"></a>
+<h3>NAVKEYS</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>tuple</code>
+
+      </dd>
+<span title="(312, 314, 316, 315, 317, 366, 367)">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+(312, 314, 316, 315, 317, 366, 367)                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:53:27 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

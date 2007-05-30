@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.mvctree</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        Module&nbsp;mvctree
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.mvctree-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.mvctree</h2>
+
+<pre class="literalblock">
+MVCTree is a control which handles hierarchical data. It is constructed
+in model-view-controller architecture, so the display of that data, and
+the content of the data can be changed greatly without affecting the other parts.
+
+MVCTree actually is even more configurable than MVC normally implies, because
+almost every aspect of it is pluggable:
+    MVCTree - Overall controller, and the window that actually gets placed
+    in the GUI.
+        Painter - Paints the control. The 'view' part of MVC.
+           NodePainter - Paints just the nodes
+           LinePainter - Paints just the lines between the nodes
+           TextConverter - Figures out what text to print for each node
+        Editor - Edits the contents of a node, if the model is editable.
+        LayoutEngine - Determines initial placement of nodes
+        Transform - Adjusts positions of nodes for movement or special effects.
+        TreeModel - Contains the data which the rest of the control acts
+        on. The 'model' part of MVC.
+
+Author/Maintainer - Bryn Keller &lt;xoltar&#64;starship.python.net&gt;
+
+
+NOTE: This module is *not* supported in any way.  Use it however you
+      wish, but be warned that dealing with any consequences is
+      entirly up to you.
+      --Robin
+</pre>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.BasicTreeModel-class.html"><code>BasicTreeModel</code></a></b></td>
+  <td>A very simple treemodel implementation, but flexible enough for many needs.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.Editor-class.html"><code>Editor</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.FileEditor-class.html"><code>FileEditor</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.FileWrapper-class.html"><code>FileWrapper</code></a></b></td>
+  <td>Node class for FSTreeModel.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.FSTreeModel-class.html"><code>FSTreeModel</code></a></b></td>
+  <td>This treemodel models the filesystem starting from a given path.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.LateFSTreeModel-class.html"><code>LateFSTreeModel</code></a></b></td>
+  <td>This treemodel models the filesystem starting from a given path.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.LayoutEngine-class.html"><code>LayoutEngine</code></a></b></td>
+  <td>Interface for layout engines.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.LinePainter-class.html"><code>LinePainter</code></a></b></td>
+  <td>The linepainter interface.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.MVCTree-class.html"><code>MVCTree</code></a></b></td>
+  <td>The main mvc tree class.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.MVCTreeEvent-class.html"><code>MVCTreeEvent</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.MVCTreeNode-class.html"><code>MVCTreeNode</code></a></b></td>
+  <td>Used internally by MVCTree to manage its data.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.MVCTreeNotifyEvent-class.html"><code>MVCTreeNotifyEvent</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.NodePainter-class.html"><code>NodePainter</code></a></b></td>
+  <td>This is the interface expected of a nodepainter.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.NullTransform-class.html"><code>NullTransform</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.Painter-class.html"><code>Painter</code></a></b></td>
+  <td>This is the interface that MVCTree expects from painters.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.Rect-class.html"><code>Rect</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.StrTextConverter-class.html"><code>StrTextConverter</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.TextConverter-class.html"><code>TextConverter</code></a></b></td>
+  <td>TextConverter interface.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.Transform-class.html"><code>Transform</code></a></b></td>
+  <td>Transform interface.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.TreeLayout-class.html"><code>TreeLayout</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.TreeLinePainter-class.html"><code>TreeLinePainter</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.TreeModel-class.html"><code>TreeModel</code></a></b></td>
+  <td>Interface for tree models</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.TreeNodePainter-class.html"><code>TreeNodePainter</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.mvctree.TreePainter-class.html"><code>TreePainter</code></a></b></td>
+  <td>The default painter class.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>PyEventBinder</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#EVT_MVCTREE_ADD_ITEM"><code>EVT_MVCTREE_ADD_ITEM</code></a></b> = <span title="&lt;wx._core.PyEventBinder object at 0xb4886c2c&gt;"><code>&lt;wx._core.PyEventBinder&nbsp;object&nbsp;at<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>PyEventBinder</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#EVT_MVCTREE_DELETE_ITEM"><code>EVT_MVCTREE_DELETE_ITEM</code></a></b> = <span title="&lt;wx._core.PyEventBinder object at 0xb4886c4c&gt;"><code>&lt;wx._core.PyEventBinder&nbsp;object<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>PyEventBinder</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#EVT_MVCTREE_ITEM_COLLAPSED"><code>EVT_MVCTREE_ITEM_COLLAPSED</code></a></b> = <span title="&lt;wx._core.PyEventBinder object at 0xb4886bec&gt;"><code>&lt;wx._core.PyEventBinder&nbsp;obj<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>PyEventBinder</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#EVT_MVCTREE_ITEM_COLLAPSING"><code>EVT_MVCTREE_ITEM_COLLAPSING</code></a></b> = <span title="&lt;wx._core.PyEventBinder object at 0xb4886c0c&gt;"><code>&lt;wx._core.PyEventBinder&nbsp;ob<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>PyEventBinder</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#EVT_MVCTREE_ITEM_EXPANDED"><code>EVT_MVCTREE_ITEM_EXPANDED</code></a></b> = <span title="&lt;wx._core.PyEventBinder object at 0xb4886bac&gt;"><code>&lt;wx._core.PyEventBinder&nbsp;obje<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>PyEventBinder</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#EVT_MVCTREE_ITEM_EXPANDING"><code>EVT_MVCTREE_ITEM_EXPANDING</code></a></b> = <span title="&lt;wx._core.PyEventBinder object at 0xb4886bcc&gt;"><code>&lt;wx._core.PyEventBinder&nbsp;obj<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>PyEventBinder</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#EVT_MVCTREE_KEY_DOWN"><code>EVT_MVCTREE_KEY_DOWN</code></a></b> = <span title="&lt;wx._core.PyEventBinder object at 0xb4886c6c&gt;"><code>&lt;wx._core.PyEventBinder&nbsp;object&nbsp;at<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>PyEventBinder</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#EVT_MVCTREE_SEL_CHANGED"><code>EVT_MVCTREE_SEL_CHANGED</code></a></b> = <span title="&lt;wx._core.PyEventBinder object at 0xb4886b4c&gt;"><code>&lt;wx._core.PyEventBinder&nbsp;object<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>PyEventBinder</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#EVT_MVCTREE_SEL_CHANGING"><code>EVT_MVCTREE_SEL_CHANGING</code></a></b> = <span title="&lt;wx._core.PyEventBinder object at 0xb4886b8c&gt;"><code>&lt;wx._core.PyEventBinder&nbsp;objec<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#warningmsg"><code>warningmsg</code></a></b> = <span title="'\\\n\n################################################\\\n# This module is not supported in any way!      |\n#                                               |\n# See cource code for wx.lib.mvctree for more   |\n# information.                                  |\n################################################/\n\n'"><code><span class="variable-quote">'</span>\\\n\n####################################<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#wxEVT_MVCTREE_ITEM_COLLAPSED"><code>wxEVT_MVCTREE_ITEM_COLLAPSED</code></a></b> = <span title="10316">10316&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#wxEVT_MVCTREE_ITEM_COLLAPSING"><code>wxEVT_MVCTREE_ITEM_COLLAPSING</code></a></b> = <span title="10317">10317&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#wxEVT_MVCTREE_ITEM_EXPANDED"><code>wxEVT_MVCTREE_ITEM_EXPANDED</code></a></b> = <span title="10314">10314&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#wxEVT_MVCTREE_ITEM_EXPANDING"><code>wxEVT_MVCTREE_ITEM_EXPANDING</code></a></b> = <span title="10315">10315&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#wxEVT_MVCTREE_KEY_DOWN"><code>wxEVT_MVCTREE_KEY_DOWN</code></a></b> = <span title="10320">10320&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.mvctree-module.html#wxEVT_MVCTREE_SEL_CHANGED"><code>wxEVT_MVCTREE_SEL_CHANGED</code></a></b> = <span title="10318">10318&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EVT_MVCTREE_ADD_ITEM"></a>
+<h3>EVT_MVCTREE_ADD_ITEM</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>PyEventBinder</code>
+
+      </dd>
+<span title="&lt;wx._core.PyEventBinder object at 0xb4886c2c&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx._core.PyEventBinder object at 0xb4886c2c&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EVT_MVCTREE_DELETE_ITEM"></a>
+<h3>EVT_MVCTREE_DELETE_ITEM</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>PyEventBinder</code>
+
+      </dd>
+<span title="&lt;wx._core.PyEventBinder object at 0xb4886c4c&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx._core.PyEventBinder object at 0xb4886c4c&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EVT_MVCTREE_ITEM_COLLAPSED"></a>
+<h3>EVT_MVCTREE_ITEM_COLLAPSED</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>PyEventBinder</code>
+
+      </dd>
+<span title="&lt;wx._core.PyEventBinder object at 0xb4886bec&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx._core.PyEventBinder object at 0xb4886bec&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EVT_MVCTREE_ITEM_COLLAPSING"></a>
+<h3>EVT_MVCTREE_ITEM_COLLAPSING</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>PyEventBinder</code>
+
+      </dd>
+<span title="&lt;wx._core.PyEventBinder object at 0xb4886c0c&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx._core.PyEventBinder object at 0xb4886c0c&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EVT_MVCTREE_ITEM_EXPANDED"></a>
+<h3>EVT_MVCTREE_ITEM_EXPANDED</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>PyEventBinder</code>
+
+      </dd>
+<span title="&lt;wx._core.PyEventBinder object at 0xb4886bac&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx._core.PyEventBinder object at 0xb4886bac&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EVT_MVCTREE_ITEM_EXPANDING"></a>
+<h3>EVT_MVCTREE_ITEM_EXPANDING</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>PyEventBinder</code>
+
+      </dd>
+<span title="&lt;wx._core.PyEventBinder object at 0xb4886bcc&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx._core.PyEventBinder object at 0xb4886bcc&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EVT_MVCTREE_KEY_DOWN"></a>
+<h3>EVT_MVCTREE_KEY_DOWN</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>PyEventBinder</code>
+
+      </dd>
+<span title="&lt;wx._core.PyEventBinder object at 0xb4886c6c&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx._core.PyEventBinder object at 0xb4886c6c&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EVT_MVCTREE_SEL_CHANGED"></a>
+<h3>EVT_MVCTREE_SEL_CHANGED</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>PyEventBinder</code>
+
+      </dd>
+<span title="&lt;wx._core.PyEventBinder object at 0xb4886b4c&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx._core.PyEventBinder object at 0xb4886b4c&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EVT_MVCTREE_SEL_CHANGING"></a>
+<h3>EVT_MVCTREE_SEL_CHANGING</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>PyEventBinder</code>
+
+      </dd>
+<span title="&lt;wx._core.PyEventBinder object at 0xb4886b8c&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx._core.PyEventBinder object at 0xb4886b8c&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="warningmsg"></a>
+<h3>warningmsg</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'\\\n\n################################################\\\n# This module is not supported in any way!      |\n#                                               |\n# See cource code for wx.lib.mvctree for more   |\n# information.                                  |\n################################################/\n\n'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'''</span>\\
+
+################################################\\
+# This module is not supported in any way!      |
+#                                               |
+# See cource code for wx.lib.mvctree for more   |
+# information.                                  |
+################################################/
+<span class="variable-ellipsis">...</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="wxEVT_MVCTREE_ITEM_COLLAPSED"></a>
+<h3>wxEVT_MVCTREE_ITEM_COLLAPSED</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="10316">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+10316&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="wxEVT_MVCTREE_ITEM_COLLAPSING"></a>
+<h3>wxEVT_MVCTREE_ITEM_COLLAPSING</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="10317">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+10317&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="wxEVT_MVCTREE_ITEM_EXPANDED"></a>
+<h3>wxEVT_MVCTREE_ITEM_EXPANDED</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="10314">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+10314&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="wxEVT_MVCTREE_ITEM_EXPANDING"></a>
+<h3>wxEVT_MVCTREE_ITEM_EXPANDING</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="10315">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+10315&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="wxEVT_MVCTREE_KEY_DOWN"></a>
+<h3>wxEVT_MVCTREE_KEY_DOWN</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="10320">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+10320&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="wxEVT_MVCTREE_SEL_CHANGED"></a>
+<h3>wxEVT_MVCTREE_SEL_CHANGED</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="10318">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+10318&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:55:13 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

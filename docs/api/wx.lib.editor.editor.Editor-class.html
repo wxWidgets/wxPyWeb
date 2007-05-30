@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.editor.editor.Editor</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.editor-module.html">Package&nbsp;editor</a> ::
+        <a href="wx.lib.editor.editor-module.html">Module&nbsp;editor</a> ::
+        Class&nbsp;Editor
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.editor.editor.Editor-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Editor</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+    
+                         |    
+            <a href="wx.ScrolledWindow-class.html"><code>ScrolledWindow</code></a> --+
+                             |
+                            <b>Editor</b>
+</pre><br />
+
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AboveScreen"></a><span class="summary-sig"><span class="summary-sig-name">AboveScreen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AdjustScrollbars"></a><span class="summary-sig"><span class="summary-sig-name">AdjustScrollbars</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AltKey"></a><span class="summary-sig"><span class="summary-sig-name">AltKey</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>key</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="BackSpace"></a><span class="summary-sig"><span class="summary-sig-name">BackSpace</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="BelowScreen"></a><span class="summary-sig"><span class="summary-sig-name">BelowScreen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="BreakLine"></a><span class="summary-sig"><span class="summary-sig-name">BreakLine</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="BufferWasTouched"></a><span class="summary-sig"><span class="summary-sig-name">BufferWasTouched</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.editor.editor.Editor-class.html#CalcMaxLineLen" class="summary-sig-name"><code>CalcMaxLineLen</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+get length of longest line on screen</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="CanScroll"></a><span class="summary-sig"><span class="summary-sig-name">CanScroll</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="cHoriz"></a><span class="summary-sig"><span class="summary-sig-name">cHoriz</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>num</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ControlKey"></a><span class="summary-sig"><span class="summary-sig-name">ControlKey</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>key</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="CopySelection"></a><span class="summary-sig"><span class="summary-sig-name">CopySelection</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="CopyToClipboard"></a><span class="summary-sig"><span class="summary-sig-name">CopyToClipboard</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>linesOfText</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="CurrentLineLength"></a><span class="summary-sig"><span class="summary-sig-name">CurrentLineLength</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="cVert"></a><span class="summary-sig"><span class="summary-sig-name">cVert</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>num</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Delete"></a><span class="summary-sig"><span class="summary-sig-name">Delete</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DeleteChar"></a><span class="summary-sig"><span class="summary-sig-name">DeleteChar</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>oldtext</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Dispatch"></a><span class="summary-sig"><span class="summary-sig-name">Dispatch</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>keySettingFunction</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Draw"></a><span class="summary-sig"><span class="summary-sig-name">Draw</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>odc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DrawCursor"></a><span class="summary-sig"><span class="summary-sig-name">DrawCursor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DrawEditText"></a><span class="summary-sig"><span class="summary-sig-name">DrawEditText</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>t</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DrawEofMarker"></a><span class="summary-sig"><span class="summary-sig-name">DrawEofMarker</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DrawLine"></a><span class="summary-sig"><span class="summary-sig-name">DrawLine</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>line</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DrawSimpleCursor"></a><span class="summary-sig"><span class="summary-sig-name">DrawSimpleCursor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>xp</span>,
+          <span class=summary-sig-arg>yp</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>old</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Escape"></a><span class="summary-sig"><span class="summary-sig-name">Escape</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="FindSelection"></a><span class="summary-sig"><span class="summary-sig-name">FindSelection</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetText"></a><span class="summary-sig"><span class="summary-sig-name">GetText</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetTextLine"></a><span class="summary-sig"><span class="summary-sig-name">GetTextLine</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>lineNum</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="HandleAboveScreen"></a><span class="summary-sig"><span class="summary-sig-name">HandleAboveScreen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="HandleBelowScreen"></a><span class="summary-sig"><span class="summary-sig-name">HandleBelowScreen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="HandleLeftOfScreen"></a><span class="summary-sig"><span class="summary-sig-name">HandleLeftOfScreen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="HandleRightOfScreen"></a><span class="summary-sig"><span class="summary-sig-name">HandleRightOfScreen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="HorizBoundaries"></a><span class="summary-sig"><span class="summary-sig-name">HorizBoundaries</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="HorizScroll"></a><span class="summary-sig"><span class="summary-sig-name">HorizScroll</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>eventType</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="InitCoords"></a><span class="summary-sig"><span class="summary-sig-name">InitCoords</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="InitDoubleBuffering"></a><span class="summary-sig"><span class="summary-sig-name">InitDoubleBuffering</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="InitFonts"></a><span class="summary-sig"><span class="summary-sig-name">InitFonts</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="InitScrolling"></a><span class="summary-sig"><span class="summary-sig-name">InitScrolling</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="InsertChar"></a><span class="summary-sig"><span class="summary-sig-name">InsertChar</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>char</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="IsLine"></a><span class="summary-sig"><span class="summary-sig-name">IsLine</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>lineNum</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="JoinLines"></a><span class="summary-sig"><span class="summary-sig-name">JoinLines</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="KeepCursorOnScreen"></a><span class="summary-sig"><span class="summary-sig-name">KeepCursorOnScreen</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="LeftOfScreen"></a><span class="summary-sig"><span class="summary-sig-name">LeftOfScreen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="LinesInFile"></a><span class="summary-sig"><span class="summary-sig-name">LinesInFile</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="LoadImages"></a><span class="summary-sig"><span class="summary-sig-name">LoadImages</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MapEvents"></a><span class="summary-sig"><span class="summary-sig-name">MapEvents</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ModifierKey"></a><span class="summary-sig"><span class="summary-sig-name">ModifierKey</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>modifierKeyDown</span>,
+          <span class=summary-sig-arg>MappingFunc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MouseToCol"></a><span class="summary-sig"><span class="summary-sig-name">MouseToCol</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mouseX</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MouseToCursor"></a><span class="summary-sig"><span class="summary-sig-name">MouseToCursor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MouseToRow"></a><span class="summary-sig"><span class="summary-sig-name">MouseToRow</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mouseY</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Move"></a><span class="summary-sig"><span class="summary-sig-name">Move</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>keySettingFunction</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MoveDown"></a><span class="summary-sig"><span class="summary-sig-name">MoveDown</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MoveEnd"></a><span class="summary-sig"><span class="summary-sig-name">MoveEnd</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MoveEndOfFile"></a><span class="summary-sig"><span class="summary-sig-name">MoveEndOfFile</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MoveHome"></a><span class="summary-sig"><span class="summary-sig-name">MoveHome</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MoveLeft"></a><span class="summary-sig"><span class="summary-sig-name">MoveLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MovePageDown"></a><span class="summary-sig"><span class="summary-sig-name">MovePageDown</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MovePageUp"></a><span class="summary-sig"><span class="summary-sig-name">MovePageUp</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MoveRight"></a><span class="summary-sig"><span class="summary-sig-name">MoveRight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MoveSpecialControlKey"></a><span class="summary-sig"><span class="summary-sig-name">MoveSpecialControlKey</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>key</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MoveSpecialKey"></a><span class="summary-sig"><span class="summary-sig-name">MoveSpecialKey</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>key</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MoveStartOfFile"></a><span class="summary-sig"><span class="summary-sig-name">MoveStartOfFile</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MoveUp"></a><span class="summary-sig"><span class="summary-sig-name">MoveUp</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MultipleLineCopy"></a><span class="summary-sig"><span class="summary-sig-name">MultipleLineCopy</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bRow</span>,
+          <span class=summary-sig-arg>bCol</span>,
+          <span class=summary-sig-arg>eRow</span>,
+          <span class=summary-sig-arg>eCol</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MultipleLineDelete"></a><span class="summary-sig"><span class="summary-sig-name">MultipleLineDelete</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bRow</span>,
+          <span class=summary-sig-arg>bCol</span>,
+          <span class=summary-sig-arg>eRow</span>,
+          <span class=summary-sig-arg>eCol</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MultipleLinePaste"></a><span class="summary-sig"><span class="summary-sig-name">MultipleLinePaste</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pastedLines</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="NiceFontForPlatform"></a><span class="summary-sig"><span class="summary-sig-name">NiceFontForPlatform</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="NormalChar"></a><span class="summary-sig"><span class="summary-sig-name">NormalChar</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>key</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="NormalizedSelect"></a><span class="summary-sig"><span class="summary-sig-name">NormalizedSelect</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnChar"></a><span class="summary-sig"><span class="summary-sig-name">OnChar</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnClick"></a><span class="summary-sig"><span class="summary-sig-name">OnClick</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnCopySelection"></a><span class="summary-sig"><span class="summary-sig-name">OnCopySelection</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnCutSelection"></a><span class="summary-sig"><span class="summary-sig-name">OnCutSelection</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDeleteSelection"></a><span class="summary-sig"><span class="summary-sig-name">OnDeleteSelection</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDestroy"></a><span class="summary-sig"><span class="summary-sig-name">OnDestroy</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnEraseBackground"></a><span class="summary-sig"><span class="summary-sig-name">OnEraseBackground</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnLeftDown"></a><span class="summary-sig"><span class="summary-sig-name">OnLeftDown</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnLeftUp"></a><span class="summary-sig"><span class="summary-sig-name">OnLeftUp</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMotion"></a><span class="summary-sig"><span class="summary-sig-name">OnMotion</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnPaint"></a><span class="summary-sig"><span class="summary-sig-name">OnPaint</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnPaste"></a><span class="summary-sig"><span class="summary-sig-name">OnPaste</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnScroll"></a><span class="summary-sig"><span class="summary-sig-name">OnScroll</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSize"></a><span class="summary-sig"><span class="summary-sig-name">OnSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnTimer"></a><span class="summary-sig"><span class="summary-sig-name">OnTimer</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RightOfScreen"></a><span class="summary-sig"><span class="summary-sig-name">RightOfScreen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SelectNotify"></a><span class="summary-sig"><span class="summary-sig-name">SelectNotify</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Selecting</span>,
+          <span class=summary-sig-arg>SelectionBegin</span>,
+          <span class=summary-sig-arg>SelectionEnd</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SelectOff"></a><span class="summary-sig"><span class="summary-sig-name">SelectOff</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SelectUpdate"></a><span class="summary-sig"><span class="summary-sig-name">SelectUpdate</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAltFuncs"></a><span class="summary-sig"><span class="summary-sig-name">SetAltFuncs</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>action</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCharDimensions"></a><span class="summary-sig"><span class="summary-sig-name">SetCharDimensions</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColors"></a><span class="summary-sig"><span class="summary-sig-name">SetColors</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetControlFuncs"></a><span class="summary-sig"><span class="summary-sig-name">SetControlFuncs</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>action</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMoveSpecialControlFuncs"></a><span class="summary-sig"><span class="summary-sig-name">SetMoveSpecialControlFuncs</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>action</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMoveSpecialFuncs"></a><span class="summary-sig"><span class="summary-sig-name">SetMoveSpecialFuncs</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>action</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetScrollTimer"></a><span class="summary-sig"><span class="summary-sig-name">SetScrollTimer</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetShiftFuncs"></a><span class="summary-sig"><span class="summary-sig-name">SetShiftFuncs</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>action</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSpecialControlFuncs"></a><span class="summary-sig"><span class="summary-sig-name">SetSpecialControlFuncs</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>action</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSpecialFuncs"></a><span class="summary-sig"><span class="summary-sig-name">SetSpecialFuncs</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>action</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetText"></a><span class="summary-sig"><span class="summary-sig-name">SetText</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>lines</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetTextLine"></a><span class="summary-sig"><span class="summary-sig-name">SetTextLine</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>lineNum</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ShiftKey"></a><span class="summary-sig"><span class="summary-sig-name">ShiftKey</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>key</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SingleLineCopy"></a><span class="summary-sig"><span class="summary-sig-name">SingleLineCopy</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Row</span>,
+          <span class=summary-sig-arg>bCol</span>,
+          <span class=summary-sig-arg>eCol</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SingleLineDelete"></a><span class="summary-sig"><span class="summary-sig-name">SingleLineDelete</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Row</span>,
+          <span class=summary-sig-arg>bCol</span>,
+          <span class=summary-sig-arg>eCol</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SingleLineInsert"></a><span class="summary-sig"><span class="summary-sig-name">SingleLineInsert</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>newText</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SpecialControlKey"></a><span class="summary-sig"><span class="summary-sig-name">SpecialControlKey</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>key</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="TabKey"></a><span class="summary-sig"><span class="summary-sig-name">TabKey</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="TouchBuffer"></a><span class="summary-sig"><span class="summary-sig-name">TouchBuffer</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="UnixKeyHack"></a><span class="summary-sig"><span class="summary-sig-name">UnixKeyHack</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="UnTouchBuffer"></a><span class="summary-sig"><span class="summary-sig-name">UnTouchBuffer</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="UpdateView"></a><span class="summary-sig"><span class="summary-sig-name">UpdateView</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="VertBoundaries"></a><span class="summary-sig"><span class="summary-sig-name">VertBoundaries</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="VertScroll"></a><span class="summary-sig"><span class="summary-sig-name">VertScroll</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>eventType</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="CalcMaxLineLen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalcMaxLineLen</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>get length of longest line on screen</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:57:03 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

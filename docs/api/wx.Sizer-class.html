@@ -1,0 +1,1563 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.Sizer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;Sizer
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.Sizer-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Sizer</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+    
+         |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+
+             |
+            <b>Sizer</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.BoxSizer-class.html"><code>BoxSizer</code></a>,
+    <a href="wx.GridSizer-class.html"><code>GridSizer</code></a>,
+    <a href="wx.PySizer-class.html"><code>PySizer</code></a></dd></dl>
+
+<hr/>
+
+<p>wx.Sizer is the abstract base class used for laying out subwindows in
+a window.  You cannot use wx.Sizer directly; instead, you will have to
+use one of the sizer classes derived from it such as <a href="wx.BoxSizer-class.html" class="link"><code>wx.BoxSizer</code></a>,
+<a href="wx.StaticBoxSizer-class.html" class="link"><code>wx.StaticBoxSizer</code></a>, <a href="wx.GridSizer-class.html" class="link"><code>wx.GridSizer</code></a>, <a href="wx.FlexGridSizer-class.html" class="link"><code>wx.FlexGridSizer</code></a> and
+<a href="wx.GridBagSizer-class.html" class="link"><code>wx.GridBagSizer</code></a>.</p>
+<p>The concept implemented by sizers in wxWidgets is closely related to
+layout tools in other GUI toolkits, such as Java's AWT, the GTK
+toolkit or the Qt toolkit. It is based upon the idea of the individual
+subwindows reporting their minimal required size and their ability to
+get stretched if the size of the parent window has changed. This will
+most often mean that the programmer does not set the original size of
+a dialog in the beginning, rather the dialog will assigned a sizer and
+this sizer will be queried about the recommended size. The sizer in
+turn will query its children, which can be normal windows or contorls,
+empty space or other sizers, so that a hierarchy of sizers can be
+constructed. Note that wxSizer does not derive from wxWindow and thus
+do not interfere with tab ordering and requires very little resources
+compared to a real window on screen.</p>
+<p>What makes sizers so well fitted for use in wxWidgets is the fact that
+every control reports its own minimal size and the algorithm can
+handle differences in font sizes or different window (dialog item)
+sizes on different platforms without problems. If for example the
+standard font as well as the overall design of Mac widgets requires
+more space than on Windows, then the initial size of a dialog using a
+sizer will automatically be bigger on Mac than on Windows.</p>
+<p>Sizers may also be used to control the layout of custom drawn items on
+the window.  The <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a>, <a href="wx.Sizer-class.html#Insert" class="link"><code>Insert</code></a>, and <a href="wx.Sizer-class.html#Prepend" class="link"><code>Prepend</code></a> functions return a
+pointer to the newly added <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a>. Just add empty space of the
+desired size and attributes, and then use the <a href="wx.SizerItem-class.html#GetRect" class="link"><code>wx.SizerItem.GetRect</code></a>
+method to determine where the drawing operations should take place.</p>
+<hr/>
+
+<p><b>Note:</b> <p>If you wish to create a custom sizer class in wxPython you
+should derive the class from <a href="wx.PySizer-class.html" class="link"><code>wx.PySizer</code></a> in order to get
+Python-aware capabilities for the various virtual methods.</p>
+</p>
+
+<p><b>See Also:</b> <p><a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a></p>
+</p>
+
+<p><b>To Do:</b> <p>More dscriptive text here along with some pictures...</p>
+</p>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1308579964"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wx.SizerItem</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#Add" class="summary-sig-name"><code>Add</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>proportion</span>,
+          <span class=summary-sig-arg>flag</span>,
+          <span class=summary-sig-arg>border</span>,
+          <span class=summary-sig-arg>userData</span>)</span></code>
+<br />
+Appends a child item to the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#AddF" class="summary-sig-name"><code>AddF</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+AddF(self, item, wx.SizerFlags flags) -&gt; wx.SizerItem</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#AddItem" class="summary-sig-name"><code>AddItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Adds a <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a> to the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#AddMany" class="summary-sig-name"><code>AddMany</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>items</span>)</span></code>
+<br />
+AddMany is a convenience method for adding several items
+to a sizer at one time.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#AddSizer" class="summary-sig-name"><code>AddSizer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+Compatibility alias for <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#AddSpacer" class="summary-sig-name"><code>AddSpacer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+AddSpacer(int size) --&gt; SizerItem</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#AddStretchSpacer" class="summary-sig-name"><code>AddStretchSpacer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>prop</span>)</span></code>
+<br />
+AddStretchSpacer(int prop=1) --&gt; SizerItem</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#AddWindow" class="summary-sig-name"><code>AddWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+Compatibility alias for <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#CalcMin" class="summary-sig-name"><code>CalcMin</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+This method is where the sizer will do the actual calculation of its
+children's minimal sizes.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#Clear" class="summary-sig-name"><code>Clear</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>deleteWindows</span>)</span></code>
+<br />
+Clear all items from the sizer, optionally destroying the window items
+as well.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#DeleteWindows" class="summary-sig-name"><code>DeleteWindows</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Destroy all windows managed by the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#Detach" class="summary-sig-name"><code>Detach</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Detaches an item from the sizer without destroying it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#Fit" class="summary-sig-name"><code>Fit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window</span>)</span></code>
+<br />
+Tell the sizer to resize the <em>window</em> to match the sizer's minimal
+size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#FitInside" class="summary-sig-name"><code>FitInside</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window</span>)</span></code>
+<br />
+Tell the sizer to resize the <em>virtual size</em> of the <em>window</em> to match the
+sizer's minimal size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">list</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#GetChildren" class="summary-sig-name"><code>GetChildren</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a list of all the <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a> objects managed by the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#GetContainingWindow" class="summary-sig-name"><code>GetContainingWindow</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the window this sizer is used in.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wx.SizerItem</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#GetItem" class="summary-sig-name"><code>GetItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+<br />
+Returns the <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a> which holds the <em>item</em> given.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#GetMinSize" class="summary-sig-name"><code>GetMinSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the minimal size of the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetMinSizeTuple"></a><span class="summary-sig"><span class="summary-sig-name">GetMinSizeTuple</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Point</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#GetPosition" class="summary-sig-name"><code>GetPosition</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the current position of the sizer's managed space.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetPositionTuple"></a><span class="summary-sig"><span class="summary-sig-name">GetPositionTuple</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#GetSize" class="summary-sig-name"><code>GetSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the current size of the space managed by the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetSizeTuple"></a><span class="summary-sig"><span class="summary-sig-name">GetSizeTuple</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#Hide" class="summary-sig-name"><code>Hide</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+<br />
+A convenience method for <a href="wx.Sizer-class.html#Show" class="link"><code>Show</code></a> (item, False, recursive).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wx.SizerItem</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#Insert" class="summary-sig-name"><code>Insert</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>before</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>proportion</span>,
+          <span class=summary-sig-arg>flag</span>,
+          <span class=summary-sig-arg>border</span>,
+          <span class=summary-sig-arg>userData</span>)</span></code>
+<br />
+Inserts a new item into the list of items managed by this sizer before
+the item at index <em>before</em>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#InsertF" class="summary-sig-name"><code>InsertF</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+InsertF(self, int before, item, wx.SizerFlags flags) -&gt; wx.SizerItem</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#InsertItem" class="summary-sig-name"><code>InsertItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Inserts a <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a> to the sizer at the position given by <em>index</em>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#InsertSizer" class="summary-sig-name"><code>InsertSizer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+Compatibility alias for <a href="wx.Sizer-class.html#Insert" class="link"><code>Insert</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#InsertSpacer" class="summary-sig-name"><code>InsertSpacer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+InsertSpacer(int index, int size) --&gt; SizerItem</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#InsertStretchSpacer" class="summary-sig-name"><code>InsertStretchSpacer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>,
+          <span class=summary-sig-arg>prop</span>)</span></code>
+<br />
+InsertStretchSpacer(int index, int prop=1) --&gt; SizerItem</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#InsertWindow" class="summary-sig-name"><code>InsertWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+Compatibility alias for <a href="wx.Sizer-class.html#Insert" class="link"><code>Insert</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#IsShown" class="summary-sig-name"><code>IsShown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Determines if the item is currently shown.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#Layout" class="summary-sig-name"><code>Layout</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+This method will force the recalculation and layout of the items
+controlled by the sizer using the current space allocated to the
+sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wx.SizerItem</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#Prepend" class="summary-sig-name"><code>Prepend</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>proportion</span>,
+          <span class=summary-sig-arg>flag</span>,
+          <span class=summary-sig-arg>border</span>,
+          <span class=summary-sig-arg>userData</span>)</span></code>
+<br />
+Adds a new item to the begining of the list of sizer items managed by
+this sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#PrependF" class="summary-sig-name"><code>PrependF</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+PrependF(self, item, wx.SizerFlags flags) -&gt; wx.SizerItem</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#PrependItem" class="summary-sig-name"><code>PrependItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Prepends a <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a> to the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#PrependSizer" class="summary-sig-name"><code>PrependSizer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+Compatibility alias for <a href="wx.Sizer-class.html#Prepend" class="link"><code>Prepend</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#PrependSpacer" class="summary-sig-name"><code>PrependSpacer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+PrependSpacer(int size) --&gt; SizerItem</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#PrependStretchSpacer" class="summary-sig-name"><code>PrependStretchSpacer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>prop</span>)</span></code>
+<br />
+PrependStretchSpacer(int prop=1) --&gt; SizerItem</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#PrependWindow" class="summary-sig-name"><code>PrependWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+Compatibility alias for <a href="wx.Sizer-class.html#Prepend" class="link"><code>Prepend</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#RecalcSizes" class="summary-sig-name"><code>RecalcSizes</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Using the sizes calculated by <a href="wx.Sizer-class.html#CalcMin" class="link"><code>CalcMin</code></a> reposition and resize all the
+items managed by this sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#Remove" class="summary-sig-name"><code>Remove</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Removes an item from the sizer and destroys it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#RemovePos" class="summary-sig-name"><code>RemovePos</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+Compatibility alias for <a href="wx.Sizer-class.html#Remove" class="link"><code>Remove</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#RemoveSizer" class="summary-sig-name"><code>RemoveSizer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+Compatibility alias for <a href="wx.Sizer-class.html#Remove" class="link"><code>Remove</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#RemoveWindow" class="summary-sig-name"><code>RemoveWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kw</span>)</span></code>
+<br />
+Compatibility alias for <a href="wx.Sizer-class.html#Remove" class="link"><code>Remove</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#Replace" class="summary-sig-name"><code>Replace</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>olditem</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+<br />
+Detaches the given <tt class="rst-docutils literal"><span class="pre">olditem</span></tt> from the sizer and replaces it with
+<tt class="rst-docutils literal"><span class="pre">item</span></tt> which can be a window, sizer, or <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#SetContainingWindow" class="summary-sig-name"><code>SetContainingWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window</span>)</span></code>
+<br />
+Set (or unset) the window this sizer is used in.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#SetDimension" class="summary-sig-name"><code>SetDimension</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+<br />
+Call this to force the sizer to take the given dimension and thus
+force the items owned by the sizer to resize themselves according to
+the rules defined by the parameter in the <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a>, <a href="wx.Sizer-class.html#Insert" class="link"><code>Insert</code></a> or <a href="wx.Sizer-class.html#Prepend" class="link"><code>Prepend</code></a>
+methods.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#SetItemMinSize" class="summary-sig-name"><code>SetItemMinSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>size</span>)</span></code>
+<br />
+Sets the minimum size that will be allocated for an item in the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#SetMinSize" class="summary-sig-name"><code>SetMinSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>size</span>)</span></code>
+<br />
+Call this to give the sizer a minimal size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#SetSizeHints" class="summary-sig-name"><code>SetSizeHints</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window</span>)</span></code>
+<br />
+Tell the sizer to set (and <a href="wx.Sizer-class.html#Fit" class="link"><code>Fit</code></a>) the minimal size of the <em>window</em> to
+match the sizer's minimal size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#SetVirtualSizeHints" class="summary-sig-name"><code>SetVirtualSizeHints</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window</span>)</span></code>
+<br />
+Tell the sizer to set the minimal size of the window virtual area to
+match the sizer's minimal size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#Show" class="summary-sig-name"><code>Show</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>show</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+<br />
+Shows or hides an item managed by the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Sizer-class.html#ShowItems" class="summary-sig-name"><code>ShowItems</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span></code>
+<br />
+Recursively call <a href="wx.SizerItem-class.html#Show" class="link"><code>wx.SizerItem.Show</code></a> on all sizer items.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Sizer-class.html#Children"><code>Children</code></a></b>: See <a href="wx.Sizer-class.html#GetChildren" class="link"><code>GetChildren</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Sizer-class.html#ContainingWindow"><code>ContainingWindow</code></a></b>: See <a href="wx.Sizer-class.html#GetContainingWindow" class="link"><code>GetContainingWindow</code></a> and <a href="wx.Sizer-class.html#SetContainingWindow" class="link"><code>SetContainingWindow</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Sizer-class.html#MinSize"><code>MinSize</code></a></b>: See <a href="wx.Sizer-class.html#GetMinSize" class="link"><code>GetMinSize</code></a> and <a href="wx.Sizer-class.html#SetMinSize" class="link"><code>SetMinSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Sizer-class.html#Position"><code>Position</code></a></b>: See <a href="wx.Sizer-class.html#GetPosition" class="link"><code>GetPosition</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Sizer-class.html#Size"><code>Size</code></a></b>: See <a href="wx.Sizer-class.html#GetSize" class="link"><code>GetSize</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.Sizer-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="Add"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Add</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>proportion</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>flag</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>border</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>userData</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Appends a child item to the sizer.</p>
+<blockquote>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>item</b></code> -
+ The item can be one of three kinds of objects:</p>
+<ul class="rst-simple">
+<li><strong>window</strong>: A <a href="wx.Window-class.html" class="link"><code>wx.Window</code></a> to be managed by the sizer. Its
+minimal size (either set explicitly by the user or
+calculated internally when constructed with wx.DefaultSize)
+is interpreted as the minimal size to use when laying out
+item in the sizer.  This is particularly useful in
+connection with <a href="wx.Window-class.html#SetSizeHints" class="link"><code>wx.Window.SetSizeHints</code></a>.</li>
+<li><strong>sizer</strong>: The (child-)sizer to be added to the sizer. This
+allows placing a child sizer in a sizer and thus to create
+hierarchies of sizers (for example a vertical box as the top
+sizer and several horizontal boxes on the level beneath).</li>
+<li><strong>size</strong>: A <a href="wx.Size-class.html" class="link"><code>wx.Size</code></a> or a 2-element sequence of integers
+that represents the width and height of a spacer to be added
+to the sizer. Adding spacers to sizers gives more
+flexibility in the design of dialogs; imagine for example a
+horizontal box with two buttons at the bottom of a dialog:
+you might want to insert a space between the two buttons and
+make that space stretchable using the <em>proportion</em> value and
+the result will be that the left button will be aligned with
+the left side of the dialog and the right button with the
+right side - the space in between will shrink and grow with
+the dialog.</li>
+</ul>
+<p/>
+      <dd><code><b>proportion</b></code> -
+ Although the meaning of this parameter is
+undefined in wx.Sizer, it is used in <a href="wx.BoxSizer-class.html" class="link"><code>wx.BoxSizer</code></a> to indicate
+if a child of a sizer can change its size in the main
+orientation of the wx.BoxSizer - where 0 stands for not
+changeable and a value of more than zero is interpreted
+relative (a proportion of the total) to the value of other
+children of the same wx.BoxSizer. For example, you might have
+a horizontal wx.BoxSizer with three children, two of which are
+supposed to change their size with the sizer. Then the two
+stretchable windows should each be given <em>proportion</em> value of
+1 to make them grow and shrink equally with the sizer's
+horizontal dimension.  But if one of them had a <em>proportion</em>
+value of 2 then it would get a double share of the space
+available after the fixed size items are positioned.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>flag</b></code> -
+ This parameter can be used to set a number of flags
+which can be combined using the binary OR operator <tt class="rst-docutils literal"><span class="pre">|</span></tt>. Two
+main behaviours are defined using these flags. One is the
+border around a window: the <em>border</em> parameter determines the
+border width whereas the flags given here determine which
+side(s) of the item that the border will be added. The other
+flags determine how the sizer item behaves when the space
+allotted to the sizer changes, and is somewhat dependent on
+the specific kind of sizer used.</p>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="40%" />
+<col class="rst" width="60%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst"><ul class="first last rst-simple">
+<li>wx.TOP</li>
+<li>wx.BOTTOM</li>
+<li>wx.LEFT</li>
+<li>wx.RIGHT</li>
+<li>wx.ALL</li>
+</ul>
+</td>
+<td class="rst">These flags are used to specify
+which side(s) of the sizer item that
+the <em>border</em> width will apply to.</td>
+</tr>
+<tr class="rst"><td class="rst"><ul class="first last rst-simple">
+<li>wx.EXPAND</li>
+</ul>
+</td>
+<td class="rst">The item will be expanded to fill
+the space allotted to the item.</td>
+</tr>
+<tr class="rst"><td class="rst"><ul class="first last rst-simple">
+<li>wx.SHAPED</li>
+</ul>
+</td>
+<td class="rst">The item will be expanded as much as
+possible while also maintaining its
+aspect ratio</td>
+</tr>
+<tr class="rst"><td class="rst"><ul class="first last rst-simple">
+<li>wx.FIXED_MINSIZE</li>
+</ul>
+</td>
+<td class="rst">Normally wx.Sizers will use
+<a href="wx.Window-class.html#GetMinSize" class="link"><code>wx.Window.GetMinSize</code></a> or
+<a href="wx.Window-class.html#GetBestSize" class="link"><code>wx.Window.GetBestSize</code></a> to determine what
+the minimal size of window items should
+be, and will use that size to calculate
+the layout. This allows layouts to adjust
+when an item changes and it's best size
+becomes different. If you would rather
+have a window item stay the size it
+started with then use wx.FIXED_MINSIZE.</td>
+</tr>
+<tr class="rst"><td class="rst"><ul class="first last rst-simple">
+<li>wx.ALIGN_CENTER</li>
+<li>wx.ALIGN_LEFT</li>
+<li>wx.ALIGN_RIGHT</li>
+<li>wx.ALIGN_TOP</li>
+<li>wx.ALIGN_BOTTOM</li>
+<li>wx.ALIGN_CENTER_VERTICAL</li>
+<li>wx.ALIGN_CENTER_HORIZONTAL</li>
+</ul>
+</td>
+<td class="rst">The wx.ALIGN flags allow you to specify
+the alignment of the item within the space
+allotted to it by the sizer, ajusted for
+the border if any.</td>
+</tr>
+</tbody>
+</table>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>border</b></code> -
+ Determines the border width, if the <em>flag</em>
+parameter is set to include any border flag.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>userData</b></code> -
+ Allows an extra object to be attached to the
+sizer item, for use in derived classes when sizing information
+is more complex than the <em>proportion</em> and <em>flag</em> will allow for.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+wx.SizerItem      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddF"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddF</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>AddF(self, item, wx.SizerFlags flags) -&gt; wx.SizerItem</p>
+<p>Similar to <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a> but uses the <a href="wx.SizerFlags-class.html" class="link"><code>wx.SizerFlags</code></a> convenience class for
+setting the various flags, options and borders.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Adds a <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a> to the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>item</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=SizerItem)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddMany"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddMany</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>items</span>)</span>
+  </h3>
+<p>AddMany is a convenience method for adding several items
+to a sizer at one time.  Simply pass it a list of tuples,
+where each tuple consists of the parameters that you
+would normally pass to the <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a> method.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddSizer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddSizer</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>Compatibility alias for <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddSpacer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddSpacer</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>AddSpacer(int size) --&gt; SizerItem</p>
+<p>Add a spacer that is (size,size) pixels.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddStretchSpacer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddStretchSpacer</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>prop</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>AddStretchSpacer(int prop=1) --&gt; SizerItem</p>
+<p>Add a stretchable spacer.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddWindow</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>Compatibility alias for <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalcMin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalcMin</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>This method is where the sizer will do the actual calculation of its
+children's minimal sizes.  You should not need to call this directly as
+it is called by <a href="wx.Sizer-class.html#Layout" class="link"><code>Layout</code></a>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Size      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Clear"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Clear</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>deleteWindows</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Clear all items from the sizer, optionally destroying the window items
+as well.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>deleteWindows</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteWindows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteWindows</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Destroy all windows managed by the sizer.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Detach"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Detach</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Detaches an item from the sizer without destroying it.  This method
+does not cause any layout or resizing to take place, call <a href="wx.Sizer-class.html#Layout" class="link"><code>Layout</code></a> to
+do so.  The <em>item</em> parameter can be either a window, a sizer, or the
+zero-based index of the item to be detached.  Returns True if the child item
+was found and detached.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Fit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Fit</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window</span>)</span>
+  </h3>
+<p>Tell the sizer to resize the <em>window</em> to match the sizer's minimal
+size. This is commonly done in the constructor of the window itself in
+order to set its initial size to match the needs of the children as
+determined by the sizer.  Returns the new size.</p>
+<p>For a top level window this is the total window size, not the client size.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>window</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Size      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FitInside"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FitInside</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window</span>)</span>
+  </h3>
+<p>Tell the sizer to resize the <em>virtual size</em> of the <em>window</em> to match the
+sizer's minimal size. This will not alter the on screen size of the
+window, but may cause the addition/removal/alteration of scrollbars
+required to view the virtual area in windows which manage it.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>window</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.ScrolledWindow-class.html#SetScrollbars" class="link"><code>wx.ScrolledWindow.SetScrollbars</code></a>, <a href="wx.Sizer-class.html#SetVirtualSizeHints" class="link"><code>SetVirtualSizeHints</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetChildren"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetChildren</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a list of all the <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a> objects managed by the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+list      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetContainingWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetContainingWindow</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the window this sizer is used in.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Window      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>recursive</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Returns the <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a> which holds the <em>item</em> given.  The <em>item</em>
+parameter can be either a window, a sizer, or the zero-based index of
+the item to be found.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+wx.SizerItem      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMinSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMinSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the minimal size of the sizer. This is either the combined
+minimal size of all the children and their borders or the minimal size
+set by SetMinSize, depending on which is bigger.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Size      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPosition</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the current position of the sizer's managed space.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Point      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the current size of the space managed by the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Size      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Hide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Hide</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>recursive</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>A convenience method for <a href="wx.Sizer-class.html#Show" class="link"><code>Show</code></a> (item, False, recursive).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Insert"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Insert</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>before</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>proportion</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>flag</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>border</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>userData</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Inserts a new item into the list of items managed by this sizer before
+the item at index <em>before</em>.  See <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a> for a description of the parameters.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>before</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>proportion</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>flag</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>border</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>userData</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+wx.SizerItem      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertF"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertF</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>InsertF(self, int before, item, wx.SizerFlags flags) -&gt; wx.SizerItem</p>
+<p>Similar to <a href="wx.Sizer-class.html#Insert" class="link"><code>Insert</code></a>, but uses the <a href="wx.SizerFlags-class.html" class="link"><code>wx.SizerFlags</code></a> convenience class
+for setting the various flags, options and borders.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Inserts a <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a> to the sizer at the position given by <em>index</em>.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>index</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>item</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=SizerItem)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertSizer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertSizer</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>Compatibility alias for <a href="wx.Sizer-class.html#Insert" class="link"><code>Insert</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertSpacer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertSpacer</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>InsertSpacer(int index, int size) --&gt; SizerItem</p>
+<p>Insert a spacer at position index that is (size, size) pixels.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertStretchSpacer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertStretchSpacer</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>,
+          <span class=sig-arg>prop</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>InsertStretchSpacer(int index, int prop=1) --&gt; SizerItem</p>
+<p>Insert a stretchable spacer.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertWindow</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>Compatibility alias for <a href="wx.Sizer-class.html#Insert" class="link"><code>Insert</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsShown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsShown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Determines if the item is currently shown. To make a sizer
+item disappear or reappear, use Show followed by <a href="wx.Sizer-class.html#Layout" class="link"><code>Layout</code></a>.  The <em>item</em>
+parameter can be either a window, a sizer, or the zero-based index of
+the item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Layout"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Layout</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>This method will force the recalculation and layout of the items
+controlled by the sizer using the current space allocated to the
+sizer.  Normally this is called automatically from the owning window's
+EVT_SIZE handler, but it is also useful to call it from user code when
+one of the items in a sizer change size, or items are added or
+removed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Prepend"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Prepend</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>proportion</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>flag</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>border</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>userData</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Adds a new item to the begining of the list of sizer items managed by
+this sizer.  See <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a> for a description of the parameters.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>proportion</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>flag</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>border</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>userData</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=PyObject)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+wx.SizerItem      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PrependF"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PrependF</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>PrependF(self, item, wx.SizerFlags flags) -&gt; wx.SizerItem</p>
+<p>Similar to <a href="wx.Sizer-class.html#Prepend" class="link"><code>Prepend</code></a> but uses the <a href="wx.SizerFlags-class.html" class="link"><code>wx.SizerFlags</code></a> convenience class
+for setting the various flags, options and borders.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PrependItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PrependItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Prepends a <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a> to the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>item</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=SizerItem)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PrependSizer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PrependSizer</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>Compatibility alias for <a href="wx.Sizer-class.html#Prepend" class="link"><code>Prepend</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PrependSpacer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PrependSpacer</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>PrependSpacer(int size) --&gt; SizerItem</p>
+<p>Prepend a spacer that is (size, size) pixels.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PrependStretchSpacer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PrependStretchSpacer</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>prop</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>PrependStretchSpacer(int prop=1) --&gt; SizerItem</p>
+<p>Prepend a stretchable spacer.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PrependWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PrependWindow</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>Compatibility alias for <a href="wx.Sizer-class.html#Prepend" class="link"><code>Prepend</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RecalcSizes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RecalcSizes</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Using the sizes calculated by <a href="wx.Sizer-class.html#CalcMin" class="link"><code>CalcMin</code></a> reposition and resize all the
+items managed by this sizer.  You should not need to call this directly as
+it is called by <a href="wx.Sizer-class.html#Layout" class="link"><code>Layout</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Remove"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Remove</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Removes an item from the sizer and destroys it.  This method does not
+cause any layout or resizing to take place, call <a href="wx.Sizer-class.html#Layout" class="link"><code>Layout</code></a> to update
+the layout on screen after removing a child from the sizer.  The
+<em>item</em> parameter can be either a window, a sizer, or the zero-based
+index of an item to remove.  Returns True if the child item was found
+and removed.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+<p><b>Note:</b> <p>For historical reasons calling this method with a <a href="wx.Window-class.html" class="link"><code>wx.Window</code></a>
+parameter is depreacted, as it will not be able to destroy the
+window since it is owned by its parent.  You should use <a href="wx.Sizer-class.html#Detach" class="link"><code>Detach</code></a>
+instead.</p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemovePos"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemovePos</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>Compatibility alias for <a href="wx.Sizer-class.html#Remove" class="link"><code>Remove</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveSizer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveSizer</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>Compatibility alias for <a href="wx.Sizer-class.html#Remove" class="link"><code>Remove</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveWindow</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kw</span>)</span>
+  </h3>
+<p>Compatibility alias for <a href="wx.Sizer-class.html#Remove" class="link"><code>Remove</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Replace"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Replace</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>olditem</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>recursive</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Detaches the given <tt class="rst-docutils literal"><span class="pre">olditem</span></tt> from the sizer and replaces it with
+<tt class="rst-docutils literal"><span class="pre">item</span></tt> which can be a window, sizer, or <a href="wx.SizerItem-class.html" class="link"><code>wx.SizerItem</code></a>.  The
+detached child is destroyed only if it is not a window, (because
+windows are owned by their parent, not the sizer.)  The
+<tt class="rst-docutils literal"><span class="pre">recursive</span></tt> parameter can be used to search for the given
+element recursivly in subsizers.</p>
+<p>This method does not cause any layout or resizing to take place,
+call <a href="wx.Sizer-class.html#Layout" class="link"><code>Layout</code></a> to do so.</p>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the child item was found and removed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetContainingWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetContainingWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window</span>)</span>
+  </h3>
+<p>Set (or unset) the window this sizer is used in.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>window</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDimension"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDimension</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>width</span>,
+          <span class=sig-arg>height</span>)</span>
+  </h3>
+<p>Call this to force the sizer to take the given dimension and thus
+force the items owned by the sizer to resize themselves according to
+the rules defined by the parameter in the <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a>, <a href="wx.Sizer-class.html#Insert" class="link"><code>Insert</code></a> or <a href="wx.Sizer-class.html#Prepend" class="link"><code>Prepend</code></a>
+methods.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemMinSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemMinSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>size</span>)</span>
+  </h3>
+<p>Sets the minimum size that will be allocated for an item in the sizer.
+The <em>item</em> parameter can be either a window, a sizer, or the
+zero-based index of the item.  If a window or sizer is given then it
+will be searched for recursivly in subsizers if neccessary.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMinSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMinSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>size</span>)</span>
+  </h3>
+<p>Call this to give the sizer a minimal size. Normally, the sizer will
+calculate its minimal size based purely on how much space its children
+need. After calling this method <a href="wx.Sizer-class.html#GetMinSize" class="link"><code>GetMinSize</code></a> will return either the
+minimal size as requested by its children or the minimal size set
+here, depending on which is bigger.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>size</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSizeHints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSizeHints</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window</span>)</span>
+  </h3>
+<p>Tell the sizer to set (and <a href="wx.Sizer-class.html#Fit" class="link"><code>Fit</code></a>) the minimal size of the <em>window</em> to
+match the sizer's minimal size. This is commonly done in the
+constructor of the window itself if the window is resizable (as are
+many dialogs under Unix and frames on probably all platforms) in order
+to prevent the window from being sized smaller than the minimal size
+required by the sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>window</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetVirtualSizeHints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetVirtualSizeHints</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window</span>)</span>
+  </h3>
+<p>Tell the sizer to set the minimal size of the window virtual area to
+match the sizer's minimal size. For windows with managed scrollbars
+this will set them appropriately.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>window</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.ScrolledWindow-class.html#SetScrollbars" class="link"><code>wx.ScrolledWindow.SetScrollbars</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="Show"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Show</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>show</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>recursive</span>=<span class=sig-default>false</span>)</span>
+  </h3>
+<p>Shows or hides an item managed by the sizer.  To make a sizer item
+disappear or reappear, use Show followed by <a href="wx.Sizer-class.html#Layout" class="link"><code>Layout</code></a>.  The <em>item</em>
+parameter can be either a window, a sizer, or the zero-based index of
+the item.  Use the recursive parameter to show or hide an item in a
+subsizer.  Returns True if the item was found.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>show</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      <dd><code><b>recursive</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowItems</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>show</span>)</span>
+  </h3>
+<p>Recursively call <a href="wx.SizerItem-class.html#Show" class="link"><code>wx.SizerItem.Show</code></a> on all sizer items.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>show</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Children"></a>
+<h3>Children</h3>
+<p>See <a href="wx.Sizer-class.html#GetChildren" class="link"><code>GetChildren</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Sizer-class.html#GetChildren" class="summary-sig-name"><code>GetChildren</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ContainingWindow"></a>
+<h3>ContainingWindow</h3>
+<p>See <a href="wx.Sizer-class.html#GetContainingWindow" class="link"><code>GetContainingWindow</code></a> and <a href="wx.Sizer-class.html#SetContainingWindow" class="link"><code>SetContainingWindow</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Sizer-class.html#GetContainingWindow" class="summary-sig-name"><code>GetContainingWindow</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Sizer-class.html#SetContainingWindow" class="summary-sig-name"><code>SetContainingWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="MinSize"></a>
+<h3>MinSize</h3>
+<p>See <a href="wx.Sizer-class.html#GetMinSize" class="link"><code>GetMinSize</code></a> and <a href="wx.Sizer-class.html#SetMinSize" class="link"><code>SetMinSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Sizer-class.html#GetMinSize" class="summary-sig-name"><code>GetMinSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Sizer-class.html#SetMinSize" class="summary-sig-name"><code>SetMinSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>size</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Position"></a>
+<h3>Position</h3>
+<p>See <a href="wx.Sizer-class.html#GetPosition" class="link"><code>GetPosition</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Sizer-class.html#GetPosition" class="summary-sig-name"><code>GetPosition</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Size"></a>
+<h3>Size</h3>
+<p>See <a href="wx.Sizer-class.html#GetSize" class="link"><code>GetSize</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.Sizer-class.html#GetSize" class="summary-sig-name"><code>GetSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:53:44 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

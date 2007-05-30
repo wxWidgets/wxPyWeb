@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.ogl.DivisionShape</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.ogl-module.html">Package&nbsp;ogl</a> ::
+        Class&nbsp;DivisionShape
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.ogl.DivisionShape-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type DivisionShape</h2>
+
+<pre class="base-tree">
+     <a href="__builtin__.object-class.html"><code>object</code></a> --+                
+              |                
+<a href="wx.lib.ogl.ShapeEvtHandler-class.html"><code>ShapeEvtHandler</code></a> --+            
+                  |            
+              <a href="wx.lib.ogl.Shape-class.html"><code>Shape</code></a> --+        
+                      |        
+         <a href="wx.lib.ogl.RectangleShape-class.html"><code>RectangleShape</code></a> --+    
+                          |    
+             <a href="wx.lib.ogl.CompositeShape-class.html"><code>CompositeShape</code></a> --+
+                              |
+                             <b>DivisionShape</b>
+</pre><br />
+
+<hr/>
+
+<p>A division shape is like a composite in that it can contain further
+objects, but is used exclusively to divide another shape into regions,
+or divisions. A wxDivisionShape is never free-standing.</p>
+<dl class="rst-docutils">
+<dt>Derived from:</dt>
+<dd>wxCompositeShape</dd>
+</dl>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#AdjustLeft" class="summary-sig-name"><code>AdjustLeft</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>left</span>,
+          <span class=summary-sig-arg>test</span>)</span></code>
+<br />
+Adjust a side.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#AdjustRight" class="summary-sig-name"><code>AdjustRight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>right</span>,
+          <span class=summary-sig-arg>test</span>)</span></code>
+<br />
+Adjust a side.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#AdjustTop" class="summary-sig-name"><code>AdjustTop</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>top</span>,
+          <span class=summary-sig-arg>test</span>)</span></code>
+<br />
+Adjust a side.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#CalculateSize" class="summary-sig-name"><code>CalculateSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculates the size and position of the composite based on
+child sizes and positions.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#Divide" class="summary-sig-name"><code>Divide</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>direction</span>)</span></code>
+<br />
+Divide this division into two further divisions,
+horizontally (direction is wxHORIZONTAL) or
+vertically (direction is wxVERTICAL).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="EditEdge"></a><span class="summary-sig"><span class="summary-sig-name">EditEdge</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>side</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#GetBottomSide" class="summary-sig-name"><code>GetBottomSide</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the division on the bottom side of this division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#GetHandleSide" class="summary-sig-name"><code>GetHandleSide</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the side which the handle appears on.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#GetLeftSide" class="summary-sig-name"><code>GetLeftSide</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the division on the left side of this division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#GetLeftSideColour" class="summary-sig-name"><code>GetLeftSideColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the colour used for drawing the left side of the division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#GetLeftSidePen" class="summary-sig-name"><code>GetLeftSidePen</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the pen used for drawing the left side of the division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#GetLeftSideStyle" class="summary-sig-name"><code>GetLeftSideStyle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the style used for the left side of the division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#GetRightSide" class="summary-sig-name"><code>GetRightSide</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the division on the right side of this division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#GetTopSide" class="summary-sig-name"><code>GetTopSide</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the division on the top side of this division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#GetTopSideColour" class="summary-sig-name"><code>GetTopSideColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the colour used for drawing the top side of the division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#GetTopSidePen" class="summary-sig-name"><code>GetTopSidePen</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the pen used for drawing the top side of the division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#GetTopSideStyle" class="summary-sig-name"><code>GetTopSideStyle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the style used for the top side of the division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#MakeControlPoints" class="summary-sig-name"><code>MakeControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Make a list of control points (draggable handles) appropriate to
+the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#MakeMandatoryControlPoints" class="summary-sig-name"><code>MakeMandatoryControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Make the mandatory control points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnBeginDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnBeginDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>draw</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDraw"></a><span class="summary-sig"><span class="summary-sig-name">OnDraw</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawContents"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawContents</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnEndDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnEndDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMovePre"></a><span class="summary-sig"><span class="summary-sig-name">OnMovePre</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>oldx</span>,
+          <span class=summary-sig-arg>oldy</span>,
+          <span class=summary-sig-arg>display</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnRightClick"></a><span class="summary-sig"><span class="summary-sig-name">OnRightClick</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="PopupMenu"></a><span class="summary-sig"><span class="summary-sig-name">PopupMenu</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#ResetControlPoints" class="summary-sig-name"><code>ResetControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Reset the positions of the control points (for instance when the
+shape's shape has changed).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#ResetMandatoryControlPoints" class="summary-sig-name"><code>ResetMandatoryControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Reset the mandatory control points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#ResizeAdjoining" class="summary-sig-name"><code>ResizeAdjoining</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>side</span>,
+          <span class=summary-sig-arg>newPos</span>,
+          <span class=summary-sig-arg>test</span>)</span></code>
+<br />
+Resize adjoining divisions at the given side.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#SetBottomSide" class="summary-sig-name"><code>SetBottomSide</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>shape</span>)</span></code>
+<br />
+Set the the division on the bottom side of this division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#SetHandleSide" class="summary-sig-name"><code>SetHandleSide</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>side</span>)</span></code>
+<br />
+Sets the side which the handle appears on.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#SetLeftSide" class="summary-sig-name"><code>SetLeftSide</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>shape</span>)</span></code>
+<br />
+Set the the division on the left side of this division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#SetLeftSideColour" class="summary-sig-name"><code>SetLeftSideColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Set the colour for drawing the left side of the division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#SetLeftSidePen" class="summary-sig-name"><code>SetLeftSidePen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pen</span>)</span></code>
+<br />
+Set the colour for drawing the left side of the division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetLeftSideStyle"></a><span class="summary-sig"><span class="summary-sig-name">SetLeftSideStyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#SetRightSide" class="summary-sig-name"><code>SetRightSide</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>shape</span>)</span></code>
+<br />
+Set the the division on the right side of this division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSize"></a><span class="summary-sig"><span class="summary-sig-name">SetSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#SetTopSide" class="summary-sig-name"><code>SetTopSide</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>shape</span>)</span></code>
+<br />
+Set the the division on the top side of this division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#SetTopSideColour" class="summary-sig-name"><code>SetTopSideColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Set the colour for drawing the top side of the division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DivisionShape-class.html#SetTopSidePen" class="summary-sig-name"><code>SetTopSidePen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pen</span>)</span></code>
+<br />
+Set the colour for drawing the top side of the division.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetTopSideStyle"></a><span class="summary-sig"><span class="summary-sig-name">SetTopSideStyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="AdjustLeft"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AdjustLeft</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>left</span>,
+          <span class=sig-arg>test</span>)</span>
+  </h3>
+<p>Adjust a side.</p>
+<p>Returns FALSE if it's not physically possible to adjust it to
+this point.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AdjustRight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AdjustRight</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>right</span>,
+          <span class=sig-arg>test</span>)</span>
+  </h3>
+<p>Adjust a side.</p>
+<p>Returns FALSE if it's not physically possible to adjust it to
+this point.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AdjustTop"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AdjustTop</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>top</span>,
+          <span class=sig-arg>test</span>)</span>
+  </h3>
+<p>Adjust a side.</p>
+<p>Returns FALSE if it's not physically possible to adjust it to
+this point.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalculateSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalculateSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Calculates the size and position of the composite based on
+child sizes and positions.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.CompositeShape-class.html#CalculateSize"><code>wx.lib.ogl.CompositeShape.CalculateSize</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Divide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Divide</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>direction</span>)</span>
+  </h3>
+<p>Divide this division into two further divisions,
+horizontally (direction is wxHORIZONTAL) or
+vertically (direction is wxVERTICAL).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBottomSide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBottomSide</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the division on the bottom side of this division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHandleSide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHandleSide</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the side which the handle appears on.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLeftSide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLeftSide</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the division on the left side of this division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLeftSideColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLeftSideColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the colour used for drawing the left side of the division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLeftSidePen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLeftSidePen</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the pen used for drawing the left side of the division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLeftSideStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLeftSideStyle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the style used for the left side of the division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRightSide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRightSide</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the division on the right side of this division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTopSide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTopSide</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the division on the top side of this division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTopSideColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTopSideColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the colour used for drawing the top side of the division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTopSidePen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTopSidePen</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the pen used for drawing the top side of the division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTopSideStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTopSideStyle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the style used for the top side of the division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Make a list of control points (draggable handles) appropriate to
+the shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#MakeControlPoints"><code>wx.lib.ogl.Shape.MakeControlPoints</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeMandatoryControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeMandatoryControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Make the mandatory control points.</p>
+<p>For example, the control point on a dividing line should appear even
+if the divided rectangle shape's handles should not appear (because
+it is the child of a composite, and children are not resizable).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#MakeMandatoryControlPoints"><code>wx.lib.ogl.Shape.MakeMandatoryControlPoints</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Reset the positions of the control points (for instance when the
+shape's shape has changed).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#ResetControlPoints"><code>wx.lib.ogl.Shape.ResetControlPoints</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetMandatoryControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetMandatoryControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Reset the mandatory control points.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#ResetMandatoryControlPoints"><code>wx.lib.ogl.Shape.ResetMandatoryControlPoints</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResizeAdjoining"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResizeAdjoining</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>side</span>,
+          <span class=sig-arg>newPos</span>,
+          <span class=sig-arg>test</span>)</span>
+  </h3>
+<p>Resize adjoining divisions at the given side.</p>
+<p>If test is TRUE, just see whether it's possible for each adjoining
+region, returning FALSE if it's not.</p>
+<p>side can be one of:</p>
+<ul class="rst-simple">
+<li>DIVISION_SIDE_NONE</li>
+<li>DIVISION_SIDE_LEFT</li>
+<li>DIVISION_SIDE_TOP</li>
+<li>DIVISION_SIDE_RIGHT</li>
+<li>DIVISION_SIDE_BOTTOM</li>
+</ul>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBottomSide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBottomSide</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>shape</span>)</span>
+  </h3>
+<p>Set the the division on the bottom side of this division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHandleSide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHandleSide</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>side</span>)</span>
+  </h3>
+<p>Sets the side which the handle appears on.</p>
+<p>Either DIVISION_SIDE_LEFT or DIVISION_SIDE_TOP.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLeftSide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLeftSide</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>shape</span>)</span>
+  </h3>
+<p>Set the the division on the left side of this division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLeftSideColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLeftSideColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Set the colour for drawing the left side of the division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLeftSidePen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLeftSidePen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pen</span>)</span>
+  </h3>
+<p>Set the colour for drawing the left side of the division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRightSide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRightSide</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>shape</span>)</span>
+  </h3>
+<p>Set the the division on the right side of this division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTopSide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTopSide</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>shape</span>)</span>
+  </h3>
+<p>Set the the division on the top side of this division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTopSideColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTopSideColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Set the colour for drawing the top side of the division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTopSidePen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTopSidePen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pen</span>)</span>
+  </h3>
+<p>Set the colour for drawing the top side of the division.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:53:26 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

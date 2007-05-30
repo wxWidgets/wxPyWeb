@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>5.3 Practical event handling</title>
+<META NAME="description" CONTENT="5.3 Practical event handling">
+<META NAME="keywords" CONTENT="wxPython-howto">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="STYLESHEET" href="wxPython-howto.css">
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node14.html">
+</head>
+<body>
+<DIV CLASS="navigation">
+<table align="center" width="100%" cellpadding="0" cellspacing="2">
+<tr>
+<td><A HREF="node12.html"><img src="../icons/previous.gif"
+  border="0" height="32"
+  alt="Previous Page" width="32"></A></td>
+<td><A HREF="node10.html"><img src="../icons/up.gif"
+  border="0" height="32"
+  alt="Up One Level" width="32"></A></td>
+<td><A HREF="node14.html"><img src="../icons/next.gif"
+  border="0" height="32"
+  alt="Next Page" width="32"></A></td>
+<td align="center" width="100%">wxPython, a cross-platform GUI Library </td>
+<td><A href="contents.html"><img src="../icons/contents.gif"
+  border="0" height="32"
+  alt="Contents" width="32"></A></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+</tr></table>
+<b class="navlabel">Previous:</b> <a class="sectref" HREF="node12.html">5.2 Adding a menu</A>
+<b class="navlabel">Up:</b> <a class="sectref" HREF="node10.html">5 Pushing it a</A>
+<b class="navlabel">Next:</b> <a class="sectref" HREF="node14.html">5.4 More magic</A>
+<br><hr>
+</DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION002530000000000000000">
+5.3  Practical event handling</A>
+</H2>
+Reacting to events in wxPython is called <tt class="keyword">event handling</tt>. Flexible event handling is one of the biggest strengths of wxPython. We are going to present practical basic event handling and we'll discuss later in <i>advanced topics</i>, the why and how.
+	An event is a small message sent by wxPython to your application to signify that "something" has happened <A NAME="tex2html9"
+  HREF="#foot96"><SUP>6</SUP></A>.
+	Most often, in wxPython, all you have to do, is to "connect" an event with a particular method.
+	This is done by calling the pseudo methods <tt class="method">EVT_*</tt>. By instance:
+<dl><dd><pre class="verbatim">
+EVT_MENU(self, ID_ABOUT, self.OnAbout )
+</pre></dl>
+In other words, from now on, any menu selection event with ID, ID_ABOUT that is sent to window <code>self</code>, will be passed to the method <tt class="method">self.OnAbout</tt>.
+The latter method has the general declaration:
+<dl><dd><pre class="verbatim">
+def OnAbout(self, event):
+	...
+</pre></dl>
+where event is an instance of a subclass of wxEvent.
+Let's now have a look at what it is like in our application:
+
+<dl><dd><pre class="verbatim">
+from wxPython.wx import *
+ID_ABOUT=101
+ID_EXIT=110
+class MainWindow(wxFrame):
+    def __init__(self,parent,id,title):
+        wxFrame.__init__(self,parent,-4, title, size = ( 200,100),                    					
+   					style=wxDEFAULT_FRAME_STYLE|
+               				wxNO_FULL_REPAINT_ON_RESIZE)
+        self.control = wxTextCtrl(self, 1, style=wxTE_MULTILINE)
+        self.CreateStatusBar() # A Statusbar in the bottom of the window
+        # Setting up the menu.
+        filemenu= wxMenu()
+        filemenu.Append(ID_ABOUT, "&amp;About"," Information about this program")
+        filemenu.AppendSeparator()
+        filemenu.Append(ID_EXIT,"E&amp;xit"," Terminate the program")
+        # Creating the menubar.
+        menuBar = wxMenuBar()
+        menuBar.Append(filemenu,"&amp;File") # Adding the "filemenu" to the MenuBar
+        self.SetMenuBar(menuBar)  # Adding the MenuBar to the Frame content.
+        EVT_MENU(self, ID_ABOUT, self.OnAbout) # attach the menu-event ID_ABOUT to the 
+        						   # method self.OnAbout
+        EVT_MENU(self, ID_EXIT, self.OnExit)   # attach the menu-event ID_EXIT to the
+        						   # method self.OnExit
+        self.Show(true)
+    def OnAbout(self,e):
+        d= wxMessageDialog( self, " A sample editor \n"
+                            " in wxPython","About Sample Editor", wxOK)  
+                            # Create a message dialog box
+        d.ShowModal() # Shows it
+        d.Destroy() # finally destroy it when finished.
+    def OnExit(self,e):
+        self.Close(true)  # Close the frame.
+app = wxPySimpleApp()
+frame = MainWindow(None, -1, "Sample editor")
+frame.Show(1)
+app.MainLoop()
+</pre></dl>
+<BR><HR><H4>Footnotes</H4>
+<DL>
+<DT><A NAME="foot96">... happened</A><A NAME="foot96"
+ HREF="node13.html#tex2html9"><SUP>6</SUP></A>
+<DD>the mouse has been moved, a key has been pressed, the user has popped up the menu, everything you might possibly think of...
+
+</DL>
+<DIV CLASS="navigation">
+<p><hr>
+<table align="center" width="100%" cellpadding="0" cellspacing="2">
+<tr>
+<td><A HREF="node12.html"><img src="../icons/previous.gif"
+  border="0" height="32"
+  alt="Previous Page" width="32"></A></td>
+<td><A HREF="node10.html"><img src="../icons/up.gif"
+  border="0" height="32"
+  alt="Up One Level" width="32"></A></td>
+<td><A HREF="node14.html"><img src="../icons/next.gif"
+  border="0" height="32"
+  alt="Next Page" width="32"></A></td>
+<td align="center" width="100%">wxPython, a cross-platform GUI Library </td>
+<td><A href="contents.html"><img src="../icons/contents.gif"
+  border="0" height="32"
+  alt="Contents" width="32"></A></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+<td><img src="../icons/blank.gif"
+  border="0" height="32"
+  alt="" width="32"></td>
+</tr></table>
+<b class="navlabel">Previous:</b> <a class="sectref" HREF="node12.html">5.2 Adding a menu</A>
+<b class="navlabel">Up:</b> <a class="sectref" HREF="node10.html">5 Pushing it a</A>
+<b class="navlabel">Next:</b> <a class="sectref" HREF="node14.html">5.4 More magic</A>
+<hr>
+<span class="release-info">Release 0.03.</span>
+</DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

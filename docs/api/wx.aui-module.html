@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.aui</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Module&nbsp;aui
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.aui-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.aui</h2>
+
+<p>The wx.aui moduleis an Advanced User Interface library that aims to
+implement &quot;cutting-edge&quot; interface usability and design features so
+developers can quickly and easily create beautiful and usable
+application interfaces.</p>
+<p><strong>Vision and Design Principles</strong></p>
+<p>wx.aui attempts to encapsulate the following aspects of the user
+interface:</p>
+<blockquote>
+<ul class="rst-simple">
+<li>Frame Management: Frame management provides the means to open,
+move and hide common controls that are needed to interact with the
+document, and allow these configurations to be saved into
+different perspectives and loaded at a later time.</li>
+<li>Toolbars: Toolbars are a specialized subset of the frame
+management system and should behave similarly to other docked
+components. However, they also require additional functionality,
+such as &quot;spring-loaded&quot; rebar support, &quot;chevron&quot; buttons and
+end-user customizability.</li>
+<li>Modeless Controls: Modeless controls expose a tool palette or set
+of options that float above the application content while allowing
+it to be accessed. Usually accessed by the toolbar, these controls
+disappear when an option is selected, but may also be &quot;torn off&quot;
+the toolbar into a floating frame of their own.</li>
+<li>Look and Feel: Look and feel encompasses the way controls are
+drawn, both when shown statically as well as when they are being
+moved. This aspect of user interface design incorporates &quot;special
+effects&quot; such as transparent window dragging as well as frame
+animation.</li>
+</ul>
+</blockquote>
+<p><strong>wx.aui adheres to the following principles</strong></p>
+<blockquote>
+<ul class="rst-simple">
+<li>Use native floating frames to obtain a native look and feel for
+all platforms;</li>
+<li>Use existing wxPython code where possible, such as sizer
+implementation for frame management;</li>
+<li>Use standard wxPython coding conventions.</li>
+</ul>
+</blockquote>
+<p><strong>Usage</strong></p>
+<p>The following example shows a simple implementation that utilizes
+<a href="wx.aui.AuiManager-class.html" class="link"><code>wx.aui.AuiManager</code></a> to manage three text controls in a frame window:</p>
+<pre class="rst-literal-block">
+import wx
+import wx.aui
+
+class MyFrame(wx.Frame):
+
+    def __init__(self, parent, id=-1, title='wx.aui Test',
+                 size=(800, 600), style=wx.DEFAULT_FRAME_STYLE):
+        wx.Frame.__init__(self, parent, id, title, pos, size, style)
+
+        self._mgr = wx.aui.AuiManager(self)
+
+        # create several text controls
+        text1 = wx.TextCtrl(self, -1, 'Pane 1 - sample text',
+                            wx.DefaultPosition, wx.Size(200,150),
+                            wx.NO_BORDER | wx.TE_MULTILINE)
+
+        text2 = wx.TextCtrl(self, -1, 'Pane 2 - sample text',
+                            wx.DefaultPosition, wx.Size(200,150),
+                            wx.NO_BORDER | wx.TE_MULTILINE)
+
+        text3 = wx.TextCtrl(self, -1, 'Main content window',
+                            wx.DefaultPosition, wx.Size(200,150),
+                            wx.NO_BORDER | wx.TE_MULTILINE)
+
+        # add the panes to the manager
+        self._mgr.AddPane(text1, wx.LEFT, 'Pane Number One')
+        self._mgr.AddPane(text2, wx.BOTTOM, 'Pane Number Two')
+        self._mgr.AddPane(text3, wx.CENTER)
+
+        # tell the manager to 'commit' all the changes just made
+        self._mgr.Update()
+
+        self.Bind(wx.EVT_CLOSE, self.OnClose)
+
+
+    def OnClose(self, event):
+        # deinitialize the frame manager
+        self._mgr.UnInit()
+        # delete the frame
+        self.Destroy()
+
+
+app = wx.App()
+frame = MyFrame(None)
+frame.Show()
+app.MainLoop()
+</pre>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiDefaultDockArt-class.html"><code>AuiDefaultDockArt</code></a></b></td>
+  <td>Proxy of C++ AuiDefaultDockArt class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiDefaultTabArt-class.html"><code>AuiDefaultTabArt</code></a></b></td>
+  <td>Proxy of C++ AuiDefaultTabArt class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiDockArt-class.html"><code>AuiDockArt</code></a></b></td>
+  <td>Proxy of C++ AuiDockArt class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiDockInfo-class.html"><code>AuiDockInfo</code></a></b></td>
+  <td>Proxy of C++ AuiDockInfo class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiDockUIPart-class.html"><code>AuiDockUIPart</code></a></b></td>
+  <td>Proxy of C++ AuiDockUIPart class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiFloatingFrame-class.html"><code>AuiFloatingFrame</code></a></b></td>
+  <td>Proxy of C++ AuiFloatingFrame class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiManager-class.html"><code>AuiManager</code></a></b></td>
+  <td>Proxy of C++ AuiManager class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiManagerEvent-class.html"><code>AuiManagerEvent</code></a></b></td>
+  <td>Proxy of C++ AuiManagerEvent class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiMDIChildFrame-class.html"><code>AuiMDIChildFrame</code></a></b></td>
+  <td>Proxy of C++ AuiMDIChildFrame class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiMDIClientWindow-class.html"><code>AuiMDIClientWindow</code></a></b></td>
+  <td>Proxy of C++ AuiMDIClientWindow class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiMDIParentFrame-class.html"><code>AuiMDIParentFrame</code></a></b></td>
+  <td>Proxy of C++ AuiMDIParentFrame class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiNotebook-class.html"><code>AuiNotebook</code></a></b></td>
+  <td>Proxy of C++ AuiNotebook class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiNotebookEvent-class.html"><code>AuiNotebookEvent</code></a></b></td>
+  <td>Proxy of C++ AuiNotebookEvent class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiNotebookPage-class.html"><code>AuiNotebookPage</code></a></b></td>
+  <td>Proxy of C++ AuiNotebookPage class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiPaneButton-class.html"><code>AuiPaneButton</code></a></b></td>
+  <td>Proxy of C++ AuiPaneButton class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiPaneInfo-class.html"><code>AuiPaneInfo</code></a></b></td>
+  <td>Proxy of C++ AuiPaneInfo class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiSimpleTabArt-class.html"><code>AuiSimpleTabArt</code></a></b></td>
+  <td>Proxy of C++ AuiSimpleTabArt class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiTabArt-class.html"><code>AuiTabArt</code></a></b></td>
+  <td>Proxy of C++ AuiTabArt class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiTabContainer-class.html"><code>AuiTabContainer</code></a></b></td>
+  <td>Proxy of C++ AuiTabContainer class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiTabContainerButton-class.html"><code>AuiTabContainerButton</code></a></b></td>
+  <td>Proxy of C++ AuiTabContainerButton class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.AuiTabCtrl-class.html"><code>AuiTabCtrl</code></a></b></td>
+  <td>Proxy of C++ AuiTabCtrl class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.PyAuiDockArt-class.html"><code>PyAuiDockArt</code></a></b></td>
+  <td>This version of the <a href="wx.aui.AuiDockArt-class.html" class="link"><code>AuiDockArt</code></a> class has been instrumented to be
+subclassable in Python and to reflect all calls to the C++ base class
+methods to the Python methods implemented in the derived class.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.aui.PyAuiTabArt-class.html"><code>PyAuiTabArt</code></a></b></td>
+  <td>This version of the <code>TabArt</code> class has been instrumented to be
+subclassable in Python and to reflect all calls to the C++ base class
+methods to the Python methods implemented in the derived class.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">AuiMDIChildFrame</font></td>
+  <td><code><a name="PreAuiMDIChildFrame"></a><span class="summary-sig"><span class="summary-sig-name">PreAuiMDIChildFrame</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">AuiMDIClientWindow</font></td>
+  <td><code><a name="PreAuiMDIClientWindow"></a><span class="summary-sig"><span class="summary-sig-name">PreAuiMDIClientWindow</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">AuiMDIParentFrame</font></td>
+  <td><code><a name="PreAuiMDIParentFrame"></a><span class="summary-sig"><span class="summary-sig-name">PreAuiMDIParentFrame</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">AuiNotebook</font></td>
+  <td><code><a name="PreAuiNotebook"></a><span class="summary-sig"><span class="summary-sig-name">PreAuiNotebook</span>()</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:32 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

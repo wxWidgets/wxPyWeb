@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.GridBagSizer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;GridBagSizer
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.GridBagSizer-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type GridBagSizer</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+         <a href="wx.Sizer-class.html"><code>Sizer</code></a> --+        
+                 |        
+         <a href="wx.GridSizer-class.html"><code>GridSizer</code></a> --+    
+                     |    
+         <a href="wx.FlexGridSizer-class.html"><code>FlexGridSizer</code></a> --+
+                         |
+                        <b>GridBagSizer</b>
+</pre><br />
+
+<hr/>
+
+<p>A <a href="wx.Sizer-class.html" class="link"><code>wx.Sizer</code></a> that can lay out items in a virtual grid like a
+<a href="wx.FlexGridSizer-class.html" class="link"><code>wx.FlexGridSizer</code></a> but in this case explicit positioning of the items
+is allowed using <a href="wx.GBPosition-class.html" class="link"><code>wx.GBPosition</code></a>, and items can optionally span more
+than one row and/or column using <a href="wx.GBSpan-class.html" class="link"><code>wx.GBSpan</code></a>.  The total size of the
+virtual grid is determined by the largest row and column that items are
+positioned at, adjusted for spanning.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GridBagSizer</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>vgap</span>,
+          <span class=summary-sig-arg>hgap</span>)</span></code>
+<br />
+Constructor, with optional parameters to specify the gap between the
+rows and columns.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wx.GBSizerItem</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#Add" class="summary-sig-name"><code>Add</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>span</span>,
+          <span class=summary-sig-arg>flag</span>,
+          <span class=summary-sig-arg>border</span>,
+          <span class=summary-sig-arg>userData</span>)</span></code>
+<br />
+Adds an item to the sizer at the grid cell <em>pos</em>, optionally spanning
+more than one row or column as specified with <em>span</em>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#AddItem" class="summary-sig-name"><code>AddItem</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Add(self, GBSizerItem item) -&gt; wx.GBSizerItem</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#CheckForIntersection" class="summary-sig-name"><code>CheckForIntersection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>excludeItem</span>)</span></code>
+<br />
+Look at all items and see if any intersect (or would overlap) the
+given <em>item</em>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#CheckForIntersectionPos" class="summary-sig-name"><code>CheckForIntersectionPos</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>span</span>,
+          <span class=summary-sig-arg>excludeItem</span>)</span></code>
+<br />
+Look at all items and see if any intersect (or would overlap) the
+given position and span.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GBSizerItem</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#FindItem" class="summary-sig-name"><code>FindItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Find the sizer item for the given window or subsizer, returns None if
+not found.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GBSizerItem</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#FindItemAtPoint" class="summary-sig-name"><code>FindItemAtPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>)</span></code>
+<br />
+Return the sizer item located at the point given in <em>pt</em>, or None if
+there is no item at that point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GBSizerItem</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#FindItemAtPosition" class="summary-sig-name"><code>FindItemAtPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Return the sizer item for the given grid cell, or None if there is no
+item at that position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#GetCellSize" class="summary-sig-name"><code>GetCellSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>row</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+<br />
+Get the size of the specified cell, including hgap and
+vgap.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#GetEmptyCellSize" class="summary-sig-name"><code>GetEmptyCellSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the size used for cells in the grid with no item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetItem"></a><span class="summary-sig"><span class="summary-sig-name">GetItem</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GBPosition</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#GetItemPosition" class="summary-sig-name"><code>GetItemPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Get the grid position of the specified <em>item</em> where <em>item</em> is either a
+window or subsizer that is a member of this sizer, or a zero-based
+index of an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">GBSpan</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#GetItemSpan" class="summary-sig-name"><code>GetItemSpan</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Get the row/col spanning of the specified <em>item</em> where <em>item</em> is
+either a window or subsizer that is a member of this sizer, or a
+zero-based index of an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#SetEmptyCellSize" class="summary-sig-name"><code>SetEmptyCellSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sz</span>)</span></code>
+<br />
+Set the size used for cells in the grid with no item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#SetItemPosition" class="summary-sig-name"><code>SetItemPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Set the grid position of the specified <em>item</em> where <em>item</em> is either a
+window or subsizer that is a member of this sizer, or a zero-based
+index of an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.GridBagSizer-class.html#SetItemSpan" class="summary-sig-name"><code>SetItemSpan</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>span</span>)</span></code>
+<br />
+Set the row/col spanning of the specified <em>item</em> where <em>item</em> is
+either a window or subsizer that is a member of this sizer, or a
+zero-based index of an item.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.GridBagSizer-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>vgap</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>hgap</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor, with optional parameters to specify the gap between the
+rows and columns.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>vgap</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>hgap</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GridBagSizer      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.FlexGridSizer-class.html#__init__"><code>wx.FlexGridSizer.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Add"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Add</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>pos</span>,
+          <span class=sig-arg>span</span>=<span class=sig-default>DefaultSpan</span>,
+          <span class=sig-arg>flag</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>border</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>userData</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Adds an item to the sizer at the grid cell <em>pos</em>, optionally spanning
+more than one row or column as specified with <em>span</em>.  The remaining
+args behave similarly to <a href="wx.Sizer-class.html#Add" class="link"><code>wx.Sizer.Add</code></a>.</p>
+<p>Returns True if the item was successfully placed at the given cell
+position, False if something was already there.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GBPosition)</i>
+<p/>
+      <dd><code><b>span</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GBSpan)</i>
+<p/>
+      <dd><code><b>flag</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>border</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+wx.GBSizerItem      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Sizer-class.html#Add"><code>wx.Sizer.Add</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddItem</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Add(self, GBSizerItem item) -&gt; wx.GBSizerItem</p>
+<p>Add an item to the sizer using a <a href="wx.GBSizerItem-class.html" class="link"><code>wx.GBSizerItem</code></a>.  Returns True if
+the item was successfully placed at its given cell position, False if
+something was already there.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Sizer-class.html#AddItem"><code>wx.Sizer.AddItem</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CheckForIntersection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CheckForIntersection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>excludeItem</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Look at all items and see if any intersect (or would overlap) the
+given <em>item</em>.  Returns True if so, False if there would be no overlap.
+If an <em>excludeItem</em> is given then it will not be checked for
+intersection, for example it may be the item we are checking the
+position of.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>item</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GBSizerItem)</i>
+<p/>
+      <dd><code><b>excludeItem</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GBSizerItem)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CheckForIntersectionPos"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CheckForIntersectionPos</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>,
+          <span class=sig-arg>span</span>,
+          <span class=sig-arg>excludeItem</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Look at all items and see if any intersect (or would overlap) the
+given position and span.  Returns True if so, False if there would be
+no overlap.  If an <em>excludeItem</em> is given then it will not be checked
+for intersection, for example it may be the item we are checking the
+position of.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GBPosition)</i>
+<p/>
+      <dd><code><b>span</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GBSpan)</i>
+<p/>
+      <dd><code><b>excludeItem</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GBSizerItem)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Find the sizer item for the given window or subsizer, returns None if
+not found. (non-recursive)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GBSizerItem      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindItemAtPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindItemAtPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>)</span>
+  </h3>
+<p>Return the sizer item located at the point given in <em>pt</em>, or None if
+there is no item at that point. The (x,y) coordinates in pt correspond
+to the client coordinates of the window using the sizer for
+layout. (non-recursive)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GBSizerItem      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindItemAtPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindItemAtPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>Return the sizer item for the given grid cell, or None if there is no
+item at that position. (non-recursive)</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GBPosition)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GBSizerItem      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCellSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCellSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>row</span>,
+          <span class=sig-arg>col</span>)</span>
+  </h3>
+<p>Get the size of the specified cell, including hgap and
+vgap.  Only valid after a Layout.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>row</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>col</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Size      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEmptyCellSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEmptyCellSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the size used for cells in the grid with no item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Size      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Get the grid position of the specified <em>item</em> where <em>item</em> is either a
+window or subsizer that is a member of this sizer, or a zero-based
+index of an item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GBPosition      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemSpan"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemSpan</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Get the row/col spanning of the specified <em>item</em> where <em>item</em> is
+either a window or subsizer that is a member of this sizer, or a
+zero-based index of an item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+GBSpan      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetEmptyCellSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetEmptyCellSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sz</span>)</span>
+  </h3>
+<p>Set the size used for cells in the grid with no item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>sz</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>Set the grid position of the specified <em>item</em> where <em>item</em> is either a
+window or subsizer that is a member of this sizer, or a zero-based
+index of an item.  Returns True on success.  If the move is not
+allowed (because an item is already there) then False is returned.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pos</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GBPosition)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemSpan"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemSpan</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>span</span>)</span>
+  </h3>
+<p>Set the row/col spanning of the specified <em>item</em> where <em>item</em> is
+either a window or subsizer that is a member of this sizer, or a
+zero-based index of an item.  Returns True on success.  If the move is
+not allowed (because an item is already there) then False is returned.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>span</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=GBSpan)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:03:16 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

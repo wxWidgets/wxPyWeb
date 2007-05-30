@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.StdDialogButtonSizer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;StdDialogButtonSizer
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.StdDialogButtonSizer-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type StdDialogButtonSizer</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+            
+         |            
+    <a href="wx.Object-class.html"><code>Object</code></a> --+        
+             |        
+         <a href="wx.Sizer-class.html"><code>Sizer</code></a> --+    
+                 |    
+          <a href="wx.BoxSizer-class.html"><code>BoxSizer</code></a> --+
+                     |
+                    <b>StdDialogButtonSizer</b>
+</pre><br />
+
+<hr/>
+
+<p>A special sizer that knows how to order and position standard buttons
+in order to conform to the current platform's standards.  You simply
+need to add each <a href="wx.Button-class.html" class="link"><code>wx.Button</code></a> to the sizer, and be sure to create the
+buttons using the standard ID's.  Then call <a href="wx.StdDialogButtonSizer-class.html#Realize" class="link"><code>Realize</code></a> and the sizer
+will take care of the rest.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">BoxSizer</font></td>
+  <td><code><span class="summary-sig"><a href="wx.StdDialogButtonSizer-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>orient</span>)</span></code>
+<br />
+Constructor for a wx.BoxSizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.StdDialogButtonSizer-class.html#AddButton" class="summary-sig-name"><code>AddButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>button</span>)</span></code>
+<br />
+Use this to add the buttons to this sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxButton</font></td>
+  <td><code><a name="GetAffirmativeButton"></a><span class="summary-sig"><span class="summary-sig-name">GetAffirmativeButton</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxButton</font></td>
+  <td><code><a name="GetApplyButton"></a><span class="summary-sig"><span class="summary-sig-name">GetApplyButton</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxButton</font></td>
+  <td><code><a name="GetCancelButton"></a><span class="summary-sig"><span class="summary-sig-name">GetCancelButton</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxButton</font></td>
+  <td><code><a name="GetHelpButton"></a><span class="summary-sig"><span class="summary-sig-name">GetHelpButton</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxButton</font></td>
+  <td><code><a name="GetNegativeButton"></a><span class="summary-sig"><span class="summary-sig-name">GetNegativeButton</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.StdDialogButtonSizer-class.html#Realize" class="summary-sig-name"><code>Realize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+This funciton needs to be called after all the buttons have been added
+to the sizer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAffirmativeButton"></a><span class="summary-sig"><span class="summary-sig-name">SetAffirmativeButton</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>button</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCancelButton"></a><span class="summary-sig"><span class="summary-sig-name">SetCancelButton</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>button</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetNegativeButton"></a><span class="summary-sig"><span class="summary-sig-name">SetNegativeButton</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>button</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.StdDialogButtonSizer-class.html#AffirmativeButton"><code>AffirmativeButton</code></a></b>: See <a href="wx.StdDialogButtonSizer-class.html#GetAffirmativeButton" class="link"><code>GetAffirmativeButton</code></a> and <a href="wx.StdDialogButtonSizer-class.html#SetAffirmativeButton" class="link"><code>SetAffirmativeButton</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.StdDialogButtonSizer-class.html#ApplyButton"><code>ApplyButton</code></a></b>: See <a href="wx.StdDialogButtonSizer-class.html#GetApplyButton" class="link"><code>GetApplyButton</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.StdDialogButtonSizer-class.html#CancelButton"><code>CancelButton</code></a></b>: See <a href="wx.StdDialogButtonSizer-class.html#GetCancelButton" class="link"><code>GetCancelButton</code></a> and <a href="wx.StdDialogButtonSizer-class.html#SetCancelButton" class="link"><code>SetCancelButton</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.StdDialogButtonSizer-class.html#HelpButton"><code>HelpButton</code></a></b>: See <a href="wx.StdDialogButtonSizer-class.html#GetHelpButton" class="link"><code>GetHelpButton</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.StdDialogButtonSizer-class.html#NegativeButton"><code>NegativeButton</code></a></b>: See <a href="wx.StdDialogButtonSizer-class.html#GetNegativeButton" class="link"><code>GetNegativeButton</code></a> and <a href="wx.StdDialogButtonSizer-class.html#SetNegativeButton" class="link"><code>SetNegativeButton</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.StdDialogButtonSizer-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor for a wx.BoxSizer. <em>orient</em> may be one of <tt class="rst-docutils literal"><span class="pre">wx.VERTICAL</span></tt>
+or <tt class="rst-docutils literal"><span class="pre">wx.HORIZONTAL</span></tt> for creating either a column sizer or a row
+sizer.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>orient</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+BoxSizer      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.BoxSizer-class.html#__init__"><code>wx.BoxSizer.__init__</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddButton"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddButton</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>button</span>)</span>
+  </h3>
+<p>Use this to add the buttons to this sizer.  Do not use the <a href="wx.Sizer-class.html#Add" class="link"><code>Add</code></a>
+method in the base class.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>button</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=wxButton)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Realize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Realize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>This funciton needs to be called after all the buttons have been added
+to the sizer.  It will reorder them and position them in a platform
+specifc manner.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="AffirmativeButton"></a>
+<h3>AffirmativeButton</h3>
+<p>See <a href="wx.StdDialogButtonSizer-class.html#GetAffirmativeButton" class="link"><code>GetAffirmativeButton</code></a> and <a href="wx.StdDialogButtonSizer-class.html#SetAffirmativeButton" class="link"><code>SetAffirmativeButton</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.StdDialogButtonSizer-class.html#GetAffirmativeButton" class="summary-sig-name"><code>GetAffirmativeButton</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.StdDialogButtonSizer-class.html#SetAffirmativeButton" class="summary-sig-name"><code>SetAffirmativeButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>button</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="ApplyButton"></a>
+<h3>ApplyButton</h3>
+<p>See <a href="wx.StdDialogButtonSizer-class.html#GetApplyButton" class="link"><code>GetApplyButton</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.StdDialogButtonSizer-class.html#GetApplyButton" class="summary-sig-name"><code>GetApplyButton</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="CancelButton"></a>
+<h3>CancelButton</h3>
+<p>See <a href="wx.StdDialogButtonSizer-class.html#GetCancelButton" class="link"><code>GetCancelButton</code></a> and <a href="wx.StdDialogButtonSizer-class.html#SetCancelButton" class="link"><code>SetCancelButton</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.StdDialogButtonSizer-class.html#GetCancelButton" class="summary-sig-name"><code>GetCancelButton</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.StdDialogButtonSizer-class.html#SetCancelButton" class="summary-sig-name"><code>SetCancelButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>button</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="HelpButton"></a>
+<h3>HelpButton</h3>
+<p>See <a href="wx.StdDialogButtonSizer-class.html#GetHelpButton" class="link"><code>GetHelpButton</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.StdDialogButtonSizer-class.html#GetHelpButton" class="summary-sig-name"><code>GetHelpButton</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="NegativeButton"></a>
+<h3>NegativeButton</h3>
+<p>See <a href="wx.StdDialogButtonSizer-class.html#GetNegativeButton" class="link"><code>GetNegativeButton</code></a> and <a href="wx.StdDialogButtonSizer-class.html#SetNegativeButton" class="link"><code>SetNegativeButton</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.StdDialogButtonSizer-class.html#GetNegativeButton" class="summary-sig-name"><code>GetNegativeButton</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.StdDialogButtonSizer-class.html#SetNegativeButton" class="summary-sig-name"><code>SetNegativeButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>button</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:59:21 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.combotreebox</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        Module&nbsp;combotreebox
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.combotreebox-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.combotreebox</h2>
+
+<p>ComboTreeBox provides a ComboBox that pops up a tree instead of a list.</p>
+<p>ComboTreeBox tries to provide the same interface as ComboBox as much as
+possible. However, whereas the ComboBox widget uses indices to access 
+items in the list of choices, ComboTreeBox uses TreeItemId's instead. If
+you add an item to the ComboTreeBox (using Append or Insert), the 
+TreeItemId associated with the added item is returned. You can then use
+that TreeItemId to add items as children of that first item. For
+example:</p>
+<pre class="rst-doctest-block">
+&gt;&gt;&gt; from wx.lib.combotreebox import ComboTreeBox
+&gt;&gt;&gt; combo = ComboTreeBox(parent)
+&gt;&gt;&gt; item1 = combo.Append('Item 1') # Add a root item
+&gt;&gt;&gt; item1a = combo.Append('Item 1a', parent=item1) # Add a child to item1
+</pre>
+<p>You can also add client data to each of the items like this:
+&gt;&gt;&gt; item1 = combo.Append('Item 1', clientData=somePythonObject)
+&gt;&gt;&gt; item1a = combo.Append('Item 1a', parent=item1, 
+...                       clientData=someOtherPythonObject)</p>
+<p>And later fetch the client data like this:
+&gt;&gt;&gt; somePythonObject = combo.GetClientData(item1)</p>
+<p>To get the client data of the currently selected item (if any):
+&gt;&gt;&gt; currentItem = combo.GetSelection()
+&gt;&gt;&gt; if currentItem:
+&gt;&gt;&gt;     somePythonObject = combo.GetClientData(currentItem)</p>
+<p>Supported styles are the same as for ComboBox, i.e. wx.CB_READONLY and
+wx.CB_SORT. Provide them as usual:
+&gt;&gt;&gt; combo = ComboTreeBox(parent, style=wx.CB_READONLY|wx.CB_SORT)</p>
+<p>Supported platforms: wxMSW and wxMAC natively, wxGTK by means of a
+workaround.</p>
+<p>Author: Frank Niessink &lt;<a class="rst-reference" href="mailto:frank&#64;niessink.com">frank&#64;niessink.com</a>&gt;
+Copyright 2006, Frank Niessink
+License: wxWidgets license
+Version: 0.9
+Date: September 6, 2006</p>
+<hr/>
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.combotreebox-module.html#ComboTreeBox" class="summary-sig-name"><code>ComboTreeBox</code></a>(<span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Factory function to create the right ComboTreeBox depending on
+platform.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Function Details</th></tr>
+</table>
+
+<a name="ComboTreeBox"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ComboTreeBox</span>(<span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Factory function to create the right ComboTreeBox depending on
+platform. You may force a specific class, e.g. for testing
+purposes, by setting the keyword argument 'platform', e.g. 
+'platform=GTK' or 'platform=MSW' or platform='MAC'.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:55:02 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

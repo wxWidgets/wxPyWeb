@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.masked.timectrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.masked-module.html">Package&nbsp;masked</a> ::
+        Module&nbsp;timectrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.masked.timectrl-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.masked.timectrl</h2>
+
+<p><em>TimeCtrl</em> provides a multi-cell control that allows manipulation of a time
+value.  It supports 12 or 24 hour format, and you can use wxDateTime or mxDateTime
+to get/set values from the control.</p>
+<p>Left/right/tab keys to switch cells within a TimeCtrl, and the up/down arrows act
+like a spin control.  TimeCtrl also allows for an actual spin button to be attached
+to the control, so that it acts like the up/down arrow keys.</p>
+<p>The ! or c key sets the value of the control to the current time.</p>
+<blockquote>
+<p>Here's the API for TimeCtrl:</p>
+<pre class="rst-literal-block">
+from wx.lib.masked import TimeCtrl
+
+TimeCtrl(
+     parent, id = -1,
+     value = '00:00:00',
+     pos = wx.DefaultPosition,
+     size = wx.DefaultSize,
+     style = wxTE_PROCESS_TAB,
+     validator = wx.DefaultValidator,
+     name = &quot;time&quot;,
+     format = 'HHMMSS',
+     fmt24hr = False,
+     displaySeconds = True,
+     spinButton = None,
+     min = None,
+     max = None,
+     limited = None,
+     oob_color = &quot;Yellow&quot;
+    )
+</pre>
+<dl class="rst-docutils">
+<dt>value</dt>
+<dd>If no initial value is set, the default will be midnight; if an illegal string
+is specified, a ValueError will result.  (You can always later set the initial time
+with SetValue() after instantiation of the control.)</dd>
+<dt>size</dt>
+<dd>The size of the control will be automatically adjusted for 12/24 hour format
+if wx.DefaultSize is specified.  NOTE: due to a problem with wx.DateTime, if the
+locale does not use 'AM/PM' for its values, the default format will automatically
+change to 24 hour format, and an AttributeError will be thrown if a non-24 format
+is specified.</dd>
+<dt>style</dt>
+<dd>By default, TimeCtrl will process TAB events, by allowing tab to the
+different cells within the control.</dd>
+<dt>validator</dt>
+<dd>By default, TimeCtrl just uses the default (empty) validator, as all
+of its validation for entry control is handled internally.  However, a validator
+can be supplied to provide data transfer capability to the control.</dd>
+<dt>format</dt>
+<dd>This parameter can be used instead of the fmt24hr and displaySeconds
+parameters, respectively; it provides a shorthand way to specify the time
+format you want.  Accepted values are 'HHMMSS', 'HHMM', '24HHMMSS', and
+'24HHMM'.  If the format is specified, the other two arguments will be ignored.</dd>
+<dt>fmt24hr</dt>
+<dd>If True, control will display time in 24 hour time format; if False, it will
+use 12 hour AM/PM format.  SetValue() will adjust values accordingly for the
+control, based on the format specified.  (This value is ignored if the <em>format</em>
+parameter is specified.)</dd>
+<dt>displaySeconds</dt>
+<dd>If True, control will include a seconds field; if False, it will
+just show hours and minutes. (This value is ignored if the <em>format</em>
+parameter is specified.)</dd>
+<dt>spinButton</dt>
+<dd>If specified, this button's events will be bound to the behavior of the
+TimeCtrl, working like up/down cursor key events.  (See BindSpinButton.)</dd>
+<dt>min</dt>
+<dd>Defines the lower bound for &quot;valid&quot; selections in the control.
+By default, TimeCtrl doesn't have bounds.  You must set both upper and lower
+bounds to make the control pay attention to them, (as only one bound makes no sense
+with times.) &quot;Valid&quot; times will fall between the min and max &quot;pie wedge&quot; of the
+clock.</dd>
+<dt>max</dt>
+<dd>Defines the upper bound for &quot;valid&quot; selections in the control.
+&quot;Valid&quot; times will fall between the min and max &quot;pie wedge&quot; of the
+clock. (This can be a &quot;big piece&quot;, ie. min = 11pm, max= 10pm
+means <em>all but the hour from 10:00pm to 11pm are valid times.</em>)</dd>
+<dt>limited</dt>
+<dd>If True, the control will not permit entry of values that fall outside the
+set bounds.</dd>
+<dt>oob_color</dt>
+<dd>Sets the background color used to indicate out-of-bounds values for the control
+when the control is not limited.  This is set to &quot;Yellow&quot; by default.</dd>
+</dl>
+</blockquote>
+<hr class="rst-docutils" />
+<dl class="rst-docutils">
+<dt>EVT_TIMEUPDATE(win, id, func)</dt>
+<dd>func is fired whenever the value of the control changes.</dd>
+<dt>SetValue(time_string | wxDateTime | wxTimeSpan | mx.DateTime | mx.DateTimeDelta)</dt>
+<dd>Sets the value of the control to a particular time, given a valid
+value; raises ValueError on invalid value.</dd>
+<dt><em>NOTE:</em> This will only allow mx.DateTime or mx.DateTimeDelta if mx.DateTime</dt>
+<dd>was successfully imported by the class module.</dd>
+<dt>GetValue(as_wxDateTime = False, as_mxDateTime = False, as_wxTimeSpan=False, as mxDateTimeDelta=False)</dt>
+<dd>Retrieves the value of the time from the control.  By default this is
+returned as a string, unless one of the other arguments is set; args are
+searched in the order listed; only one value will be returned.</dd>
+<dt>GetWxDateTime(value=None)</dt>
+<dd>When called without arguments, retrieves the value of the control, and applies
+it to the wxDateTimeFromHMS() constructor, and returns the resulting value.
+The date portion will always be set to Jan 1, 1970. This form is the same
+as GetValue(as_wxDateTime=True).  GetWxDateTime can also be called with any of the
+other valid time formats settable with SetValue, to regularize it to a single
+wxDateTime form.  The function will raise ValueError on an unconvertable argument.</dd>
+<dt>GetMxDateTime()</dt>
+<dd>Retrieves the value of the control and applies it to the DateTime.Time()
+constructor,and returns the resulting value.  (The date portion will always be
+set to Jan 1, 1970.) (Same as GetValue(as_wxDateTime=True); provided for backward
+compatibility with previous release.)</dd>
+<dt>BindSpinButton(SpinBtton)</dt>
+<dd>Binds an externally created spin button to the control, so that up/down spin
+events change the active cell or selection in the control (in addition to the
+up/down cursor keys.)  (This is primarily to allow you to create a &quot;standard&quot;
+interface to time controls, as seen in Windows.)</dd>
+<dt>SetMin(min=None)</dt>
+<dd><p class="first">Sets the expected minimum value, or lower bound, of the control.
+(The lower bound will only be enforced if the control is
+configured to limit its values to the set bounds.)
+If a value of <em>None</em> is provided, then the control will have
+explicit lower bound.  If the value specified is greater than
+the current lower bound, then the function returns False and the
+lower bound will not change from its current setting.  On success,
+the function returns True.  Even if set, if there is no corresponding
+upper bound, the control will behave as if it is unbounded.</p>
+<p class="last">If successful and the current value is outside the
+new bounds, if the control is limited the value will be
+automatically adjusted to the nearest bound; if not limited,
+the background of the control will be colored with the current
+out-of-bounds color.</p>
+</dd>
+<dt>GetMin(as_string=False)</dt>
+<dd>Gets the current lower bound value for the control, returning
+None, if not set, or a wxDateTime, unless the as_string parameter
+is set to True, at which point it will return the string
+representation of the lower bound.</dd>
+<dt>SetMax(max=None)</dt>
+<dd><p class="first">Sets the expected maximum value, or upper bound, of the control.
+(The upper bound will only be enforced if the control is
+configured to limit its values to the set bounds.)
+If a value of <em>None</em> is provided, then the control will
+have no explicit upper bound.  If the value specified is less
+than the current lower bound, then the function returns False and
+the maximum will not change from its current setting. On success,
+the function returns True.  Even if set, if there is no corresponding
+lower bound, the control will behave as if it is unbounded.</p>
+<p class="last">If successful and the current value is outside the
+new bounds, if the control is limited the value will be
+automatically adjusted to the nearest bound; if not limited,
+the background of the control will be colored with the current
+out-of-bounds color.</p>
+</dd>
+<dt>GetMax(as_string = False)</dt>
+<dd>Gets the current upper bound value for the control, returning
+None, if not set, or a wxDateTime, unless the as_string parameter
+is set to True, at which point it will return the string
+representation of the lower bound.</dd>
+<dt>SetBounds(min=None,max=None)</dt>
+<dd>This function is a convenience function for setting the min and max
+values at the same time.  The function only applies the maximum bound
+if setting the minimum bound is successful, and returns True
+only if both operations succeed.  <em>Note: leaving out an argument
+will remove the corresponding bound, and result in the behavior of
+an unbounded control.</em></dd>
+<dt>GetBounds(as_string = False)</dt>
+<dd>This function returns a two-tuple (min,max), indicating the
+current bounds of the control.  Each value can be None if
+that bound is not set.  The values will otherwise be wxDateTimes
+unless the as_string argument is set to True, at which point they
+will be returned as string representations of the bounds.</dd>
+<dt>IsInBounds(value=None)</dt>
+<dd>Returns <em>True</em> if no value is specified and the current value
+of the control falls within the current bounds.  This function can also
+be called with a value to see if that value would fall within the current
+bounds of the given control.  It will raise ValueError if the value
+specified is not a wxDateTime, mxDateTime (if available) or parsable string.</dd>
+<dt>IsValid(value)</dt>
+<dd>Returns <em>True</em> if specified value is a legal time value and
+falls within the current bounds of the given control.</dd>
+<dt>SetLimited(bool)</dt>
+<dd>If called with a value of True, this function will cause the control
+to limit the value to fall within the bounds currently specified.
+(Provided both bounds have been set.)
+If the control's value currently exceeds the bounds, it will then
+be set to the nearest bound.
+If called with a value of False, this function will disable value
+limiting, but coloring of out-of-bounds values will still take
+place if bounds have been set for the control.</dd>
+<dt>IsLimited()</dt>
+<dd>Returns <em>True</em> if the control is currently limiting the
+value to fall within the current bounds.</dd>
+</dl>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.masked.timectrl.TimeCtrl-class.html"><code>TimeCtrl</code></a></b></td>
+  <td>Masked control providing several time formats and manipulation of time values.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.masked.timectrl.TimeCtrlAccessorsMixin-class.html"><code>TimeCtrlAccessorsMixin</code></a></b></td>
+  <td>Defines TimeCtrl's list of attributes having their own Get/Set functions,
+ignoring those in the base class that make no sense for a time control.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.masked.timectrl.TimeUpdatedEvent-class.html"><code>TimeUpdatedEvent</code></a></b></td>
+  <td>Used to fire an EVT_TIMEUPDATE event whenever the value in a TimeCtrl changes.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><a href="wx.tools.dbg.Logger-class.html" 
+          class="link"><code>Logger</code></a></font></td>
+<td><b><a href="wx.lib.masked.timectrl-module.html#dbg"><code>dbg</code></a></b> = <span title="&lt;wx.tools.dbg.Logger instance at 0xb77b15cc&gt;"><code>&lt;wx.tools.dbg.Logger&nbsp;instance&nbsp;at&nbsp;0xb77b15cc&gt;       </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>PyEventBinder</code></font></td>
+<td><b><a href="wx.lib.masked.timectrl-module.html#EVT_TIMEUPDATE"><code>EVT_TIMEUPDATE</code></a></b> = <span title="&lt;wx._core.PyEventBinder object at 0xb77b164c&gt;"><code>&lt;wx._core.PyEventBinder&nbsp;object&nbsp;at&nbsp;0xb77<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.masked.timectrl-module.html#wxEVT_TIMEVAL_UPDATED"><code>wxEVT_TIMEVAL_UPDATED</code></a></b> = <span title="10287">10287&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="dbg"></a>
+<h3>dbg</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <a href="wx.tools.dbg.Logger-class.html" 
+          class="link"><code>Logger</code></a>
+
+      </dd>
+<span title="&lt;wx.tools.dbg.Logger instance at 0xb77b15cc&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx.tools.dbg.Logger instance at 0xb77b15cc&gt;                           </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EVT_TIMEUPDATE"></a>
+<h3>EVT_TIMEUPDATE</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>PyEventBinder</code>
+
+      </dd>
+<span title="&lt;wx._core.PyEventBinder object at 0xb77b164c&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx._core.PyEventBinder object at 0xb77b164c&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="wxEVT_TIMEVAL_UPDATED"></a>
+<h3>wxEVT_TIMEVAL_UPDATED</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="10287">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+10287&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:00:46 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

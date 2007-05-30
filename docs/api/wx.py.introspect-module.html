@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.py.introspect</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.py-module.html">Package&nbsp;py</a> ::
+        Module&nbsp;introspect
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.py.introspect-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.py.introspect</h2>
+
+<p>Provides a variety of introspective-type support functions for
+things like call tips and command auto completion.</p>
+<hr/>
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.introspect-module.html#getAllAttributeNames" class="summary-sig-name"><code>getAllAttributeNames</code></a>(<span class=summary-sig-arg>object</span>)</span></code>
+<br />
+Return dict of all attributes, including inherited, for an object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.introspect-module.html#getAttributeNames" class="summary-sig-name"><code>getAttributeNames</code></a>(<span class=summary-sig-arg>object</span>,
+          <span class=summary-sig-arg>includeMagic</span>,
+          <span class=summary-sig-arg>includeSingle</span>,
+          <span class=summary-sig-arg>includeDouble</span>)</span></code>
+<br />
+Return list of unique attributes, including inherited, for object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.introspect-module.html#getAutoCompleteList" class="summary-sig-name"><code>getAutoCompleteList</code></a>(<span class=summary-sig-arg>command</span>,
+          <span class=summary-sig-arg>locals</span>,
+          <span class=summary-sig-arg>includeMagic</span>,
+          <span class=summary-sig-arg>includeSingle</span>,
+          <span class=summary-sig-arg>includeDouble</span>)</span></code>
+<br />
+Return list of auto-completion options for command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.introspect-module.html#getBaseObject" class="summary-sig-name"><code>getBaseObject</code></a>(<span class=summary-sig-arg>object</span>)</span></code>
+<br />
+Return base object and dropSelf indicator for an object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.introspect-module.html#getCallTip" class="summary-sig-name"><code>getCallTip</code></a>(<span class=summary-sig-arg>command</span>,
+          <span class=summary-sig-arg>locals</span>)</span></code>
+<br />
+For a command, return a tuple of object name, argspec, tip text.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.introspect-module.html#getConstructor" class="summary-sig-name"><code>getConstructor</code></a>(<span class=summary-sig-arg>object</span>)</span></code>
+<br />
+Return constructor for class object, or None if there isn't one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.introspect-module.html#getRoot" class="summary-sig-name"><code>getRoot</code></a>(<span class=summary-sig-arg>command</span>,
+          <span class=summary-sig-arg>terminator</span>)</span></code>
+<br />
+Return the rightmost root portion of an arbitrary Python command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.introspect-module.html#getTokens" class="summary-sig-name"><code>getTokens</code></a>(<span class=summary-sig-arg>command</span>)</span></code>
+<br />
+Return list of token tuples for command.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="hasattrAlwaysReturnsTrue"></a><span class="summary-sig"><span class="summary-sig-name">hasattrAlwaysReturnsTrue</span>(<span class=summary-sig-arg>object</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.introspect-module.html#rtrimTerminus" class="summary-sig-name"><code>rtrimTerminus</code></a>(<span class=summary-sig-arg>command</span>,
+          <span class=summary-sig-arg>terminator</span>)</span></code>
+<br />
+Return command minus anything that follows the final terminator.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.py.introspect-module.html#__author__"><code>__author__</code></a></b> = <span title="&quot;Patrick K. O'Brien &lt;pobrien@orbtech.com&gt;&quot;"><code><span class="variable-quote">"</span>Patrick&nbsp;K.&nbsp;O'Brien&nbsp;&lt;pobrien&#64;orbtech.com&gt;<span class="variable-quote">"</span>  </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.py.introspect-module.html#__cvsid__"><code>__cvsid__</code></a></b> = <span title="'$Id: introspect.py,v 1.15 2006/06/29 22:23:19 RD Exp $'"><code><span class="variable-quote">'</span>$Id:&nbsp;introspect.py,v&nbsp;1.15&nbsp;2006/06/29&nbsp;22:23:<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.py.introspect-module.html#__revision__"><code>__revision__</code></a></b> = <span title="'1.15'"><code><span class="variable-quote">'</span>1.15<span class="variable-quote">'</span>                                    </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Function Details</th></tr>
+</table>
+
+<a name="getAllAttributeNames"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getAllAttributeNames</span>(<span class=sig-arg>object</span>)</span>
+  </h3>
+<p>Return dict of all attributes, including inherited, for an object.</p>
+<p>Recursively walk through a class and all base classes.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getAttributeNames"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getAttributeNames</span>(<span class=sig-arg>object</span>,
+          <span class=sig-arg>includeMagic</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>includeSingle</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>includeDouble</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Return list of unique attributes, including inherited, for object.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getAutoCompleteList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getAutoCompleteList</span>(<span class=sig-arg>command</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>locals</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>includeMagic</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>includeSingle</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>includeDouble</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Return list of auto-completion options for command.</p>
+<p>The list of options will be based on the locals namespace.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getBaseObject"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getBaseObject</span>(<span class=sig-arg>object</span>)</span>
+  </h3>
+<p>Return base object and dropSelf indicator for an object.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getCallTip"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getCallTip</span>(<span class=sig-arg>command</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>locals</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>For a command, return a tuple of object name, argspec, tip text.</p>
+<p>The call tip information will be based on the locals namespace.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getConstructor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getConstructor</span>(<span class=sig-arg>object</span>)</span>
+  </h3>
+<p>Return constructor for class object, or None if there isn't one.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getRoot"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getRoot</span>(<span class=sig-arg>command</span>,
+          <span class=sig-arg>terminator</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Return the rightmost root portion of an arbitrary Python command.</p>
+<p>Return only the root portion that can be eval()'d without side
+effects.  The command would normally terminate with a '(' or
+'.'. The terminator and anything after the terminator will be
+dropped.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getTokens"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getTokens</span>(<span class=sig-arg>command</span>)</span>
+  </h3>
+<p>Return list of token tuples for command.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="rtrimTerminus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">rtrimTerminus</span>(<span class=sig-arg>command</span>,
+          <span class=sig-arg>terminator</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Return command minus anything that follows the final terminator.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__author__"></a>
+<h3>__author__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="&quot;Patrick K. O'Brien &lt;pobrien@orbtech.com&gt;&quot;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">"</span>Patrick K. O'Brien &lt;pobrien&#64;orbtech.com&gt;<span class="variable-quote">"</span>                             </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__cvsid__"></a>
+<h3>__cvsid__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'$Id: introspect.py,v 1.15 2006/06/29 22:23:19 RD Exp $'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>$Id: introspect.py,v 1.15 2006/06/29 22:23:19 RD Exp $<span class="variable-quote">'</span>               </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__revision__"></a>
+<h3>__revision__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'1.15'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>1.15<span class="variable-quote">'</span>                                                                 </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:58:34 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

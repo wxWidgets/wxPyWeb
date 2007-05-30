@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.ogl.CompositeShape</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.ogl-module.html">Package&nbsp;ogl</a> ::
+        Class&nbsp;CompositeShape
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.ogl.CompositeShape-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type CompositeShape</h2>
+
+<pre class="base-tree">
+     <a href="__builtin__.object-class.html"><code>object</code></a> --+            
+              |            
+<a href="wx.lib.ogl.ShapeEvtHandler-class.html"><code>ShapeEvtHandler</code></a> --+        
+                  |        
+              <a href="wx.lib.ogl.Shape-class.html"><code>Shape</code></a> --+    
+                      |    
+         <a href="wx.lib.ogl.RectangleShape-class.html"><code>RectangleShape</code></a> --+
+                          |
+                         <b>CompositeShape</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.ogl.DivisionShape-class.html"><code>DivisionShape</code></a></dd></dl>
+
+<hr/>
+
+<p>This is an object with a list of child objects, and a list of size
+and positioning constraints between the children.</p>
+<dl class="rst-docutils">
+<dt>Derived from:</dt>
+<dd>wxRectangleShape</dd>
+</dl>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#AddChild" class="summary-sig-name"><code>AddChild</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>child</span>,
+          <span class=summary-sig-arg>addAfter</span>)</span></code>
+<br />
+Adds a child shape to the composite.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#AddConstraint" class="summary-sig-name"><code>AddConstraint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>constraint</span>)</span></code>
+<br />
+Adds a constraint to the composite.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#AddSimpleConstraint" class="summary-sig-name"><code>AddSimpleConstraint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>type</span>,
+          <span class=summary-sig-arg>constraining</span>,
+          <span class=summary-sig-arg>constrained</span>)</span></code>
+<br />
+Add a constraint of the given type to the composite.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#CalculateSize" class="summary-sig-name"><code>CalculateSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculates the size and position of the composite based on
+child sizes and positions.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Constrain"></a><span class="summary-sig"><span class="summary-sig-name">Constrain</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#ContainsDivision" class="summary-sig-name"><code>ContainsDivision</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>division</span>)</span></code>
+<br />
+Returns TRUE if division is a descendant of this container.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#Delete" class="summary-sig-name"><code>Delete</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Fully disconnect this shape from parents, children, the
+canvas, etc.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#DeleteConstraint" class="summary-sig-name"><code>DeleteConstraint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>constraint</span>)</span></code>
+<br />
+Deletes constraint from composite.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#DeleteConstraintsInvolvingChild" class="summary-sig-name"><code>DeleteConstraintsInvolvingChild</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>child</span>)</span></code>
+<br />
+This function deletes constraints which mention the given child.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#FindConstraint" class="summary-sig-name"><code>FindConstraint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cId</span>)</span></code>
+<br />
+Finds the constraint with the given id.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#FindContainerImage" class="summary-sig-name"><code>FindContainerImage</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Finds the image used to visualize a container.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#GetConstraints" class="summary-sig-name"><code>GetConstraints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the list of constraints.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#GetDivisions" class="summary-sig-name"><code>GetDivisions</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the list of divisions.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#MakeContainer" class="summary-sig-name"><code>MakeContainer</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Makes this composite into a container by creating one child
+DivisionShape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnBeginDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnBeginDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnCreateDivision"></a><span class="summary-sig"><span class="summary-sig-name">OnCreateDivision</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>draw</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDraw"></a><span class="summary-sig"><span class="summary-sig-name">OnDraw</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawContents"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawContents</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnEndDragLeft"></a><span class="summary-sig"><span class="summary-sig-name">OnEndDragLeft</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnErase"></a><span class="summary-sig"><span class="summary-sig-name">OnErase</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnMovePre"></a><span class="summary-sig"><span class="summary-sig-name">OnMovePre</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>old_x</span>,
+          <span class=summary-sig-arg>old_y</span>,
+          <span class=summary-sig-arg>display</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnRightClick"></a><span class="summary-sig"><span class="summary-sig-name">OnRightClick</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#Recompute" class="summary-sig-name"><code>Recompute</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Recomputes any constraints associated with the object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.CompositeShape-class.html#RemoveChild" class="summary-sig-name"><code>RemoveChild</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>child</span>)</span></code>
+<br />
+Removes the child from the composite and any constraint
+relationships, but does not delete the child.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RemoveChildFromConstraints"></a><span class="summary-sig"><span class="summary-sig-name">RemoveChildFromConstraints</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>child</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSize"></a><span class="summary-sig"><span class="summary-sig-name">SetSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="AddChild"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddChild</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>child</span>,
+          <span class=sig-arg>addAfter</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Adds a child shape to the composite.</p>
+<p>If addAfter is not None, the shape will be added after this shape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddConstraint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddConstraint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>constraint</span>)</span>
+  </h3>
+<p>Adds a constraint to the composite.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddSimpleConstraint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddSimpleConstraint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>type</span>,
+          <span class=sig-arg>constraining</span>,
+          <span class=sig-arg>constrained</span>)</span>
+  </h3>
+<p>Add a constraint of the given type to the composite.</p>
+<p>constraining is the shape doing the constraining
+constrained is a list of shapes being constrained</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalculateSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalculateSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Calculates the size and position of the composite based on
+child sizes and positions.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ContainsDivision"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ContainsDivision</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>division</span>)</span>
+  </h3>
+<p>Returns TRUE if division is a descendant of this container.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Delete"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Delete</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Fully disconnect this shape from parents, children, the
+canvas, etc.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#Delete"><code>wx.lib.ogl.Shape.Delete</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteConstraint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteConstraint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>constraint</span>)</span>
+  </h3>
+<p>Deletes constraint from composite.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteConstraintsInvolvingChild"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteConstraintsInvolvingChild</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>child</span>)</span>
+  </h3>
+<p>This function deletes constraints which mention the given child.</p>
+<p>Used when deleting a child from the composite.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindConstraint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindConstraint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>cId</span>)</span>
+  </h3>
+<p>Finds the constraint with the given id.</p>
+<p>Returns a tuple of the constraint and the actual composite the
+constraint was in, in case that composite was a descendant of
+this composit.</p>
+<p>Returns None if not found.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindContainerImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindContainerImage</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Finds the image used to visualize a container. This is any child of
+the composite that is not in the divisions list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetConstraints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetConstraints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the list of constraints.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDivisions"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDivisions</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the list of divisions.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeContainer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeContainer</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Makes this composite into a container by creating one child
+DivisionShape.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Recompute"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Recompute</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Recomputes any constraints associated with the object. If FALSE is
+returned, the constraints could not be satisfied (there was an
+inconsistency).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#Recompute"><code>wx.lib.ogl.Shape.Recompute</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveChild"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveChild</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>child</span>)</span>
+  </h3>
+<p>Removes the child from the composite and any constraint
+relationships, but does not delete the child.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:46 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

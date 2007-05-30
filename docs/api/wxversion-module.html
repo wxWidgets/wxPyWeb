@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wxversion</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        Module&nbsp;wxversion
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wxversion-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wxversion</h2>
+
+<p>If you have more than one version of wxPython installed this module
+allows your application to choose which version of wxPython will be
+imported when it does 'import wx'.  The main function of this module
+is <a href="wxversion-module.html#select" class="link"><code>select</code></a> and you use it like this:</p>
+<pre class="rst-literal-block">
+import wxversion
+wxversion.select('2.4')
+import wx
+</pre>
+<p>Or additional build options can also be selected, although they will
+not be required if they are not installed, like this:</p>
+<pre class="rst-literal-block">
+import wxversion
+wxversion.select('2.5.3-unicode')
+import wx
+</pre>
+<p>Or you can require an exact match on the build options like this:</p>
+<pre class="rst-literal-block">
+import wxversion
+wxversion.select('2.5.3-unicode', optionsRequired=True)
+import wx
+</pre>
+<p>Finally you can also specify a collection of versions that are allowed
+by your application, like this:</p>
+<pre class="rst-literal-block">
+import wxversion
+wxversion.select(['2.5.4', '2.5.5', '2.6'])
+import wx
+</pre>
+<p>Of course the default wxPython version can also be controlled by
+setting PYTHONPATH or by editing the wx.pth path configuration file,
+but using wxversion will allow an application to manage the version
+selection itself rather than depend on the user to setup the
+environment correctly.</p>
+<p>It works by searching the sys.path for directories matching wx-* and
+then comparing them to what was passed to the select function.  If a
+match is found then that path is inserted into sys.path.</p>
+<p>NOTE: If you are making a 'bundle' of your application with a tool
+like py2exe then you should <em>not</em> use the wxversion module since it
+looks at the filesystem for the directories on sys.path, it will fail
+in a bundled environment.  Instead you should simply ensure that the
+version of wxPython that you want is found by default on the sys.path
+when making the bundled version by setting PYTHONPATH.  Then that
+version will be included in your bundle and your app will work as
+expected.  Py2exe and the others usually have a way to tell at runtime
+if they are running from a bundle or running raw, so you can check
+that and only use wxversion if needed.  For example, for py2exe:</p>
+<pre class="rst-literal-block">
+if not hasattr(sys, 'frozen'):
+    import wxversion
+    wxversion.select('2.5')
+import wx
+</pre>
+<p>More documentation on wxversion and multi-version installs can be
+found at: <a class="rst-reference" href="http://wiki.wxpython.org/index.cgi/MultiVersionInstalls">http://wiki.wxpython.org/index.cgi/MultiVersionInstalls</a></p>
+<hr/>
+
+<!-- =========== START OF EXCEPTIONS =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Exceptions</th></tr>
+<tr><td width="15%">
+  <b><a href="wxversion.VersionError-class.html"><code>VersionError</code></a></b></td>
+  <td>&nbsp;</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wxversion-module.html#checkInstalled" class="summary-sig-name"><code>checkInstalled</code></a>(<span class=summary-sig-arg>versions</span>,
+          <span class=summary-sig-arg>optionsRequired</span>)</span></code>
+<br />
+Check if there is a version of wxPython installed that matches one
+of the versions given.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wxversion-module.html#ensureMinimal" class="summary-sig-name"><code>ensureMinimal</code></a>(<span class=summary-sig-arg>minVersion</span>,
+          <span class=summary-sig-arg>optionsRequired</span>)</span></code>
+<br />
+Checks to see if the default version of wxPython is greater-than
+or equal to <a href="wxversion-module.html#ensureMinimal" class="link"><code>minVersion</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wxversion-module.html#getInstalled" class="summary-sig-name"><code>getInstalled</code></a>()</span></code>
+<br />
+Returns a list of strings representing the installed wxPython
+versions that are found on the system.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wxversion-module.html#select" class="summary-sig-name"><code>select</code></a>(<span class=summary-sig-arg>versions</span>,
+          <span class=summary-sig-arg>optionsRequired</span>)</span></code>
+<br />
+Search for a wxPython installation that matches version.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wxversion-module.html#UPDATE_URL"><code>UPDATE_URL</code></a></b> = <span title="'http://wxPython.org/'"><code><span class="variable-quote">'</span>http://wxPython.org/<span class="variable-quote">'</span>                      </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Function Details</th></tr>
+</table>
+
+<a name="checkInstalled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">checkInstalled</span>(<span class=sig-arg>versions</span>,
+          <span class=sig-arg>optionsRequired</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Check if there is a version of wxPython installed that matches one
+of the versions given.  Returns True if so, False if not.  This
+can be used to determine if calling <a href="wxversion-module.html#select" class="link"><code>select</code></a> will succeed or not.</p>
+<blockquote>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>versions</b></code> -
+ Same as in <a href="wxversion-module.html#select" class="link"><code>select</code></a>, either a string or a list
+of strings specifying the version(s) to check for.
+<p/>
+      <dd><code><b>optionsRequired</b></code> -
+ Same as in <a href="wxversion-module.html#select" class="link"><code>select</code></a>.
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ensureMinimal"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ensureMinimal</span>(<span class=sig-arg>minVersion</span>,
+          <span class=sig-arg>optionsRequired</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Checks to see if the default version of wxPython is greater-than
+or equal to <a href="wxversion-module.html#ensureMinimal" class="link"><code>minVersion</code></a>.  If not then it will try to find an
+installed version that is &gt;= minVersion.  If none are available
+then a message is displayed that will inform the user and will
+offer to open their web browser to the wxPython downloads page,
+and will then exit the application.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getInstalled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getInstalled</span>()</span>
+  </h3>
+<p>Returns a list of strings representing the installed wxPython
+versions that are found on the system.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="select"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">select</span>(<span class=sig-arg>versions</span>,
+          <span class=sig-arg>optionsRequired</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Search for a wxPython installation that matches version.  If one
+is found then sys.path is modified so that version will be
+imported with a 'import wx', otherwise a VersionError exception is
+raised.  This funciton should only be caled once at the begining
+of the application before wxPython is imported.</p>
+<blockquote>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>versions</b></code> -
+ Specifies the version to look for, it can
+either be a string or a list of strings.  Each string is
+compared to the installed wxPythons and the best match is
+inserted into the sys.path, allowing an 'import wx' to
+find that version.</p>
+<p>The version string is composed of the dotted version
+number (at least 2 of the 4 components) optionally
+followed by hyphen ('-') separated options (wx port,
+unicode/ansi, flavour, etc.)  A match is determined by how
+much of the installed version matches what is given in the
+version parameter.  If the version number components don't
+match then the score is zero, otherwise the score is
+increased for every specified optional component that is
+specified and that matches.</p>
+<p>Please note, however, that it is possible for a match to
+be selected that doesn't exactly match the versions
+requested.  The only component that is required to be
+matched is the version number.  If you need to require a
+match on the other components as well, then please use the
+optional <tt class="rst-docutils literal"><span class="pre">optionsRequired</span></tt> parameter described next.
+<p/>
+      <dd><code><b>optionsRequired</b></code> -
+ Allows you to specify that the other
+components of the version string (such as the port name
+or character type) are also required to be present for an
+installed version to be considered a match.  Using this
+parameter allows you to change the selection from a soft,
+as close as possible match to a hard, exact match.
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="UPDATE_URL"></a>
+<h3>UPDATE_URL</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'http://wxPython.org/'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>http://wxPython.org/<span class="variable-quote">'</span>                                                 </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:21 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.UpdateUIEvent</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;UpdateUIEvent
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.UpdateUIEvent-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type UpdateUIEvent</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+            
+         |            
+    <a href="wx.Object-class.html"><code>Object</code></a> --+        
+             |        
+         <a href="wx.Event-class.html"><code>Event</code></a> --+    
+                 |    
+      <a href="wx.CommandEvent-class.html"><code>CommandEvent</code></a> --+
+                     |
+                    <b>UpdateUIEvent</b>
+</pre><br />
+
+<hr/>
+
+<p>This class is used for EVT_UPDATE_UI pseudo-events which are sent by
+wxWidgets to give an application the chance to update various user
+interface elements.</p>
+<p>Without update UI events, an application has to work hard to
+check/uncheck, enable/disable, and set the text for elements such as
+menu items and toolbar buttons. The code for doing this has to be
+mixed up with the code that is invoked when an action is invoked for a
+menu item or button.</p>
+<p>With update UI events, you define an event handler to look at the
+state of the application and change UI elements accordingly. wxWidgets
+will call your handler functions in idle time, so you don't have to
+worry where to call this code. In addition to being a clearer and more
+declarative method, it also means you don't have to worry whether
+you're updating a toolbar or menubar identifier. The same handler can
+update a menu item and toolbar button, if the ID values are the same.</p>
+<p>Instead of directly manipulating the menu or button, you call
+functions in the event object, such as <a href="wx.UpdateUIEvent-class.html#Check" class="link"><code>Check</code></a>. wxWidgets will
+determine whether such a call has been made, and which UI element to
+update.</p>
+<p>These events will work for popup menus as well as menubars. Just
+before a menu is popped up, <a href="wx.Menu-class.html#UpdateUI" class="link"><code>wx.Menu.UpdateUI</code></a> is called to process
+any UI events for the window that owns the menu.</p>
+<p>If you find that the overhead of UI update processing is affecting
+your application, you can do one or both of the following:</p>
+<blockquote>
+<ol class="rst-arabic simple">
+<li>Call <code>wx.UpdateUIEvent.SetMode</code> with a value of
+wx.UPDATE_UI_PROCESS_SPECIFIED, and set the extra style
+wx.WS_EX_PROCESS_UPDATE_EVENTS for every window that should
+receive update events. No other windows will receive update
+events.</li>
+<li>Call <code>wx.UpdateUIEvent.SetUpdateInterval</code> with a millisecond
+value to set the delay between updates. You may need to call
+<a href="wx.Window-class.html#UpdateWindowUI" class="link"><code>wx.Window.UpdateWindowUI</code></a> at critical points, for example when
+a dialog is about to be shown, in case the user sees a slight
+delay before windows are updated.</li>
+</ol>
+</blockquote>
+<p>Note that although events are sent in idle time, defining a EVT_IDLE
+handler for a window does not affect this because the events are sent
+from an internal idle handler.</p>
+<p>wxWidgets tries to optimize update events on some platforms. On
+Windows and GTK+, events for menubar items are only sent when the menu
+is about to be shown, and not in idle time.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">UpdateUIEvent</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>commandId</span>)</span></code>
+<br />
+Constructor</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#CanUpdate" class="summary-sig-name"><code>CanUpdate</code></a>(<span class=summary-sig-arg>win</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if it is appropriate to update (send UI update events
+to) this window.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#Check" class="summary-sig-name"><code>Check</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>check</span>)</span></code>
+<br />
+Check or uncheck the UI element.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#Enable" class="summary-sig-name"><code>Enable</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Enable or disable the UI element.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetChecked" class="summary-sig-name"><code>GetChecked</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the UI element should be checked.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetEnabled" class="summary-sig-name"><code>GetEnabled</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the UI element should be enabled.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetMode" class="summary-sig-name"><code>GetMode</code></a>()</span></code>
+<br />
+Returns a value specifying how wxWidgets will send update events: to
+all windows, or only to those which specify that they will process the
+events.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetSetChecked" class="summary-sig-name"><code>GetSetChecked</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the application has called <a href="wx.UpdateUIEvent-class.html#Check" class="link"><code>Check</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetSetEnabled" class="summary-sig-name"><code>GetSetEnabled</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the application has called <a href="wx.UpdateUIEvent-class.html#Enable" class="link"><code>Enable</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetSetShown" class="summary-sig-name"><code>GetSetShown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the application has called <a href="wx.UpdateUIEvent-class.html#Show" class="link"><code>Show</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetSetText" class="summary-sig-name"><code>GetSetText</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the application has called <a href="wx.UpdateUIEvent-class.html#SetText" class="link"><code>SetText</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetShown" class="summary-sig-name"><code>GetShown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the UI element should be shown.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetText" class="summary-sig-name"><code>GetText</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the text that should be set for the UI element.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetUpdateInterval" class="summary-sig-name"><code>GetUpdateInterval</code></a>()</span></code>
+<br />
+Returns the current interval between updates in milliseconds.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#ResetUpdateTime" class="summary-sig-name"><code>ResetUpdateTime</code></a>()</span></code>
+<br />
+Used internally to reset the last-updated time to the current time.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#SetMode" class="summary-sig-name"><code>SetMode</code></a>(<span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+Specify how wxWidgets will send update events: to all windows, or only
+to those which specify that they will process the events.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#SetText" class="summary-sig-name"><code>SetText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Sets the text for this UI element.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#SetUpdateInterval" class="summary-sig-name"><code>SetUpdateInterval</code></a>(<span class=summary-sig-arg>updateInterval</span>)</span></code>
+<br />
+Sets the interval between updates in milliseconds.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#Show" class="summary-sig-name"><code>Show</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span></code>
+<br />
+Show or hide the UI element.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.UpdateUIEvent-class.html#Checked"><code>Checked</code></a></b>: See <a href="wx.UpdateUIEvent-class.html#GetChecked" class="link"><code>GetChecked</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.UpdateUIEvent-class.html#Enabled"><code>Enabled</code></a></b>: See <a href="wx.UpdateUIEvent-class.html#GetEnabled" class="link"><code>GetEnabled</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.UpdateUIEvent-class.html#Shown"><code>Shown</code></a></b>: See <a href="wx.UpdateUIEvent-class.html#GetShown" class="link"><code>GetShown</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.UpdateUIEvent-class.html#Text"><code>Text</code></a></b>: See <a href="wx.UpdateUIEvent-class.html#GetText" class="link"><code>GetText</code></a> and <a href="wx.UpdateUIEvent-class.html#SetText" class="link"><code>SetText</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.UpdateUIEvent-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>commandId</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>commandId</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+UpdateUIEvent      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.CommandEvent-class.html#__init__"><code>wx.CommandEvent.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Check"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Check</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>check</span>)</span>
+  </h3>
+<p>Check or uncheck the UI element.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>check</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Enable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Enable</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>)</span>
+  </h3>
+<p>Enable or disable the UI element.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>enable</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetChecked"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetChecked</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the UI element should be checked.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEnabled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEnabled</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the UI element should be enabled.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSetChecked"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSetChecked</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the application has called <a href="wx.UpdateUIEvent-class.html#Check" class="link"><code>Check</code></a>. For wxWidgets
+internal use only.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSetEnabled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSetEnabled</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the application has called <a href="wx.UpdateUIEvent-class.html#Enable" class="link"><code>Enable</code></a>. For wxWidgets
+internal use only.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSetShown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSetShown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the application has called <a href="wx.UpdateUIEvent-class.html#Show" class="link"><code>Show</code></a>. For wxWidgets
+internal use only.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSetText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSetText</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the application has called <a href="wx.UpdateUIEvent-class.html#SetText" class="link"><code>SetText</code></a>. For
+wxWidgets internal use only.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetShown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetShown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if the UI element should be shown.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetText</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the text that should be set for the UI element.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Sets the text for this UI element.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>text</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Show"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Show</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>show</span>)</span>
+  </h3>
+<p>Show or hide the UI element.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>show</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="CanUpdate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanUpdate</span>(<span class=sig-arg>win</span>)</span>
+  </h3>
+<p>Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if it is appropriate to update (send UI update events
+to) this window.</p>
+<p>This function looks at the mode used (see <code>wx.UpdateUIEvent.SetMode</code>),
+the wx.WS_EX_PROCESS_UPDATE_EVENTS flag in window, the time update
+events were last sent in idle time, and the update interval, to
+determine whether events should be sent to this window now. By default
+this will always return true because the update mode is initially
+wx.UPDATE_UI_PROCESS_ALL and the interval is set to 0; so update
+events will be sent as often as possible. You can reduce the frequency
+that events are sent by changing the mode and/or setting an update
+interval.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>win</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Window)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMode</span>()</span>
+  </h3>
+<p>Returns a value specifying how wxWidgets will send update events: to
+all windows, or only to those which specify that they will process the
+events.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetUpdateInterval"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetUpdateInterval</span>()</span>
+  </h3>
+<p>Returns the current interval between updates in milliseconds. -1
+disables updates, 0 updates as frequently as possible.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+long      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetUpdateTime"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetUpdateTime</span>()</span>
+  </h3>
+<p>Used internally to reset the last-updated time to the current time. It
+is assumed that update events are normally sent in idle time, so this
+is called at the end of idle processing.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMode</span>(<span class=sig-arg>mode</span>)</span>
+  </h3>
+<p>Specify how wxWidgets will send update events: to all windows, or only
+to those which specify that they will process the events.</p>
+<p>The mode may be one of the following values:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="40%" />
+<col class="rst" width="60%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wxUPDATE_UI_PROCESS_ALL</td>
+<td class="rst">Send UI update events to all windows.  This
+is the default setting.</td>
+</tr>
+<tr class="rst"><td class="rst">wxUPDATE_UI_PROCESS_SPECIFIED</td>
+<td class="rst">Send UI update events only to windows that
+have the wx.WS_EX_PROCESS_UI_UPDATES extra
+style set.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>mode</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetUpdateInterval"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetUpdateInterval</span>(<span class=sig-arg>updateInterval</span>)</span>
+  </h3>
+<p>Sets the interval between updates in milliseconds. Set to -1 to
+disable updates, or to 0 to update as frequently as possible. The
+default is 0.</p>
+<p>Use this to reduce the overhead of UI update events if your
+application has a lot of windows. If you set the value to -1 or
+greater than 0, you may also need to call <a href="wx.Window-class.html#UpdateWindowUI" class="link"><code>wx.Window.UpdateWindowUI</code></a>
+at appropriate points in your application, such as when a dialog is
+about to be shown.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>updateInterval</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=long)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Checked"></a>
+<h3>Checked</h3>
+<p>See <a href="wx.UpdateUIEvent-class.html#GetChecked" class="link"><code>GetChecked</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetChecked" class="summary-sig-name"><code>GetChecked</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#Check" class="summary-sig-name"><code>Check</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>check</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Enabled"></a>
+<h3>Enabled</h3>
+<p>See <a href="wx.UpdateUIEvent-class.html#GetEnabled" class="link"><code>GetEnabled</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetEnabled" class="summary-sig-name"><code>GetEnabled</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#Enable" class="summary-sig-name"><code>Enable</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Shown"></a>
+<h3>Shown</h3>
+<p>See <a href="wx.UpdateUIEvent-class.html#GetShown" class="link"><code>GetShown</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetShown" class="summary-sig-name"><code>GetShown</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#Show" class="summary-sig-name"><code>Show</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Text"></a>
+<h3>Text</h3>
+<p>See <a href="wx.UpdateUIEvent-class.html#GetText" class="link"><code>GetText</code></a> and <a href="wx.UpdateUIEvent-class.html#SetText" class="link"><code>SetText</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#GetText" class="summary-sig-name"><code>GetText</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.UpdateUIEvent-class.html#SetText" class="summary-sig-name"><code>SetText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:00:50 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

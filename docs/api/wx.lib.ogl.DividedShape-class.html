@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.ogl.DividedShape</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.ogl-module.html">Package&nbsp;ogl</a> ::
+        Class&nbsp;DividedShape
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.ogl.DividedShape-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type DividedShape</h2>
+
+<pre class="base-tree">
+     <a href="__builtin__.object-class.html"><code>object</code></a> --+            
+              |            
+<a href="wx.lib.ogl.ShapeEvtHandler-class.html"><code>ShapeEvtHandler</code></a> --+        
+                  |        
+              <a href="wx.lib.ogl.Shape-class.html"><code>Shape</code></a> --+    
+                      |    
+         <a href="wx.lib.ogl.RectangleShape-class.html"><code>RectangleShape</code></a> --+
+                          |
+                         <b>DividedShape</b>
+</pre><br />
+
+<hr/>
+
+<p>A DividedShape is a rectangle with a number of vertical divisions.
+Each division may have its text formatted with independent characteristics,
+and the size of each division relative to the whole image may be specified.</p>
+<dl class="rst-docutils">
+<dt>Derived from:</dt>
+<dd>RectangleShape</dd>
+</dl>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DividedShape-class.html#AttachmentIsValid" class="summary-sig-name"><code>AttachmentIsValid</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+<br />
+TRUE if attachment is a valid attachment point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DividedShape-class.html#EditRegions" class="summary-sig-name"><code>EditRegions</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Edit the region colours and styles.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DividedShape-class.html#GetAttachmentPosition" class="summary-sig-name"><code>GetAttachmentPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attachment</span>,
+          <span class=summary-sig-arg>nth</span>,
+          <span class=summary-sig-arg>no_arcs</span>,
+          <span class=summary-sig-arg>line</span>)</span></code>
+<br />
+Get the position at which the given attachment point should be drawn.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DividedShape-class.html#GetNumberOfAttachments" class="summary-sig-name"><code>GetNumberOfAttachments</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the number of attachment points for this shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DividedShape-class.html#MakeControlPoints" class="summary-sig-name"><code>MakeControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Make a list of control points (draggable handles) appropriate to
+the shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DividedShape-class.html#MakeMandatoryControlPoints" class="summary-sig-name"><code>MakeMandatoryControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Make the mandatory control points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDraw"></a><span class="summary-sig"><span class="summary-sig-name">OnDraw</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnDrawContents"></a><span class="summary-sig"><span class="summary-sig-name">OnDrawContents</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnRightClick"></a><span class="summary-sig"><span class="summary-sig-name">OnRightClick</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>keys</span>,
+          <span class=summary-sig-arg>attachment</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DividedShape-class.html#ResetControlPoints" class="summary-sig-name"><code>ResetControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Reset the positions of the control points (for instance when the
+shape's shape has changed).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DividedShape-class.html#ResetMandatoryControlPoints" class="summary-sig-name"><code>ResetMandatoryControlPoints</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Reset the mandatory control points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.ogl.DividedShape-class.html#SetRegionSizes" class="summary-sig-name"><code>SetRegionSizes</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Set all region sizes according to proportions and this object
+total size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSize"></a><span class="summary-sig"><span class="summary-sig-name">SetSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>,
+          <span class=summary-sig-arg>recursive</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="AttachmentIsValid"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AttachmentIsValid</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachment</span>)</span>
+  </h3>
+<p>TRUE if attachment is a valid attachment point.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#AttachmentIsValid"><code>wx.lib.ogl.Shape.AttachmentIsValid</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EditRegions"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EditRegions</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Edit the region colours and styles. Not implemented.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAttachmentPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAttachmentPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attachment</span>,
+          <span class=sig-arg>nth</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>no_arcs</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>line</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Get the position at which the given attachment point should be drawn.</p>
+<p>If attachment isn't found among the attachment points of the shape,
+returns None.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#GetAttachmentPosition"><code>wx.lib.ogl.Shape.GetAttachmentPosition</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNumberOfAttachments"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNumberOfAttachments</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the number of attachment points for this shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#GetNumberOfAttachments"><code>wx.lib.ogl.Shape.GetNumberOfAttachments</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Make a list of control points (draggable handles) appropriate to
+the shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#MakeControlPoints"><code>wx.lib.ogl.Shape.MakeControlPoints</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeMandatoryControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeMandatoryControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Make the mandatory control points.</p>
+<p>For example, the control point on a dividing line should appear even
+if the divided rectangle shape's handles should not appear (because
+it is the child of a composite, and children are not resizable).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#MakeMandatoryControlPoints"><code>wx.lib.ogl.Shape.MakeMandatoryControlPoints</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Reset the positions of the control points (for instance when the
+shape's shape has changed).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#ResetControlPoints"><code>wx.lib.ogl.Shape.ResetControlPoints</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetMandatoryControlPoints"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetMandatoryControlPoints</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Reset the mandatory control points.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.ogl.Shape-class.html#ResetMandatoryControlPoints"><code>wx.lib.ogl.Shape.ResetMandatoryControlPoints</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRegionSizes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRegionSizes</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Set all region sizes according to proportions and this object
+total size.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:53:26 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

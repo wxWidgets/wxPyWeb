@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.mixins.listctrl.ColumnSorterMixin</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.mixins-module.html">Package&nbsp;mixins</a> ::
+        <a href="wx.lib.mixins.listctrl-module.html">Module&nbsp;listctrl</a> ::
+        Class&nbsp;ColumnSorterMixin
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.mixins.listctrl.ColumnSorterMixin-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class ColumnSorterMixin</h2>
+
+<hr/>
+
+<p>A mixin class that handles sorting of a wx.ListCtrl in REPORT mode when
+the column header is clicked on.</p>
+<p>There are a few requirments needed in order for this to work genericly:</p>
+<blockquote>
+<ol class="rst-arabic simple">
+<li>The combined class must have a GetListCtrl method that
+returns the wx.ListCtrl to be sorted, and the list control
+must exist at the time the wx.ColumnSorterMixin.__init__
+method is called because it uses GetListCtrl.</li>
+<li>Items in the list control must have a unique data value set
+with list.SetItemData.</li>
+<li>The combined class must have an attribute named itemDataMap
+that is a dictionary mapping the data values to a sequence of
+objects representing the values in each column.  These values
+are compared in the column sorter to determine sort order.</li>
+</ol>
+</blockquote>
+<p>Interesting methods to override are GetColumnSorter,
+GetSecondarySortValues, and GetSortImages.  See below for details.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>numColumns</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.listctrl.ColumnSorterMixin-class.html#GetColumnSorter" class="summary-sig-name"><code>GetColumnSorter</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a callable object to be used for comparing column values when sorting.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.listctrl.ColumnSorterMixin-class.html#GetColumnWidths" class="summary-sig-name"><code>GetColumnWidths</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a list of column widths.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.listctrl.ColumnSorterMixin-class.html#GetSecondarySortValues" class="summary-sig-name"><code>GetSecondarySortValues</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>key1</span>,
+          <span class=summary-sig-arg>key2</span>)</span></code>
+<br />
+Returns a tuple of 2 values to use for secondary sort values when the
+items in the selected column match equal.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.listctrl.ColumnSorterMixin-class.html#GetSortImages" class="summary-sig-name"><code>GetSortImages</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a tuple of image list indexesthe indexes in the image list for an image to be put on the column
+header when sorting in descending order.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.listctrl.ColumnSorterMixin-class.html#OnSortOrderChanged" class="summary-sig-name"><code>OnSortOrderChanged</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Callback called after sort order has changed (whenever user
+clicked column header).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColumnCount"></a><span class="summary-sig"><span class="summary-sig-name">SetColumnCount</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>newNumColumns</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.mixins.listctrl.ColumnSorterMixin-class.html#SortListItems" class="summary-sig-name"><code>SortListItems</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>ascending</span>)</span></code>
+<br />
+Sort the list on demand.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="GetColumnSorter"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetColumnSorter</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a callable object to be used for comparing column values when sorting.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetColumnWidths"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetColumnWidths</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a list of column widths.  Can be used to help restore the current
+view later.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSecondarySortValues"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSecondarySortValues</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>col</span>,
+          <span class=sig-arg>key1</span>,
+          <span class=sig-arg>key2</span>)</span>
+  </h3>
+<p>Returns a tuple of 2 values to use for secondary sort values when the
+items in the selected column match equal.  The default just returns the
+item data values.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSortImages"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSortImages</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a tuple of image list indexesthe indexes in the image list for an image to be put on the column
+header when sorting in descending order.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSortOrderChanged"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSortOrderChanged</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Callback called after sort order has changed (whenever user
+clicked column header).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SortListItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SortListItems</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>col</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>ascending</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Sort the list on demand.  Can also be used to set the sort column and order.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:53:27 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

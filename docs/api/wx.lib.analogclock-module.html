@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.analogclock</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        Package&nbsp;analogclock
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.analogclock-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF PACKAGE DESCRIPTION =========== -->
+<h2 class="package">Package wx.lib.analogclock</h2>
+
+<p>AnalogClock - an analog clock.</p>
+<p>This control creates an analog clock window. Its features include shadowing,
+the ability to render numbers as well as any arbitrary polygon as tick marks,
+resize marks and hands proportionally as the widget itself is resized, rotate
+marks in a way the get aligned to the watch. It also has a dialog, accessed 
+via a context menu item, allowing one to change on the fly all of its settings.</p>
+<p>Usage:</p>
+<blockquote>
+<dl class="rst-docutils">
+<dt>AnalogClock(parent, id=-1, pos=wx.DefaultPosition,</dt>
+<dd>size=wx.DefaultSize, style=wx.NO_BORDER, name=&quot;AnalogClock&quot;,
+clockStyle=DEFAULT_CLOCK_STYLE,
+minutesStyle=TICKS_CIRCLE, hoursStyle=TICKS_POLY)</dd>
+</dl>
+</blockquote>
+<ul>
+<li><p class="first">parent, id, pos, size, style and name are used as in a wx.Window. Please
+refer to the wx.Window docs for more details.</p>
+</li>
+<li><p class="first">clockStyle defines the clock style, according to the options below:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="38%" />
+<col class="rst" width="62%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst"><p class="first last">SHOW_QUARTERS_TICKS</p>
+</td>
+<td class="rst"><p class="first last">Show marks for hours 3, 6, 9, 12</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">SHOW_HOURS_TICKS</p>
+</td>
+<td class="rst"><p class="first last">Show marks for all hours</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">SHOW_MINUTES_TICKS</p>
+</td>
+<td class="rst"><p class="first last">Show marks for minutes</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">SHOW_HOURS_HAND</p>
+</td>
+<td class="rst"><p class="first last">Show hours hand</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">SHOW_MINUTES_HAND</p>
+</td>
+<td class="rst"><p class="first last">Show minutes hand</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">SHOW_SECONDS_HAND</p>
+</td>
+<td class="rst"><p class="first last">Show seconds hand</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">SHOW_SHADOWS</p>
+</td>
+<td class="rst"><p class="first last">Show hands and marks shadows</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">ROTATE_TICKS</p>
+</td>
+<td class="rst"><p class="first last">Align tick marks to watch</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">OVERLAP_TICKS</p>
+</td>
+<td class="rst"><p class="first last">Draw tick marks for minutes even
+when they match the hours marks.</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">DEFAULT_CLOCK_STYLE</p>
+</td>
+<td class="rst"><p class="first last">The same as SHOW_HOURS_TICKS|
+SHOW_MINUTES_TICKS|
+SHOW_HOURS_HAND|
+SHOW_MINUTES_HAND|
+SHOW_SECONDS_HAND|
+SHOW_SHADOWS|ROTATE_TICKS</p>
+</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</li>
+<li><p class="first">minutesStyle and hoursStyle define the the tick styles, according to the
+options below:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="31%" />
+<col class="rst" width="69%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst"><p class="first last">TICKS_NONE</p>
+</td>
+<td class="rst"><p class="first last">Don't show tick marks.</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">TICKS_SQUARE</p>
+</td>
+<td class="rst"><p class="first last">Use squares as tick marks.</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">TICKS_CIRCLE</p>
+</td>
+<td class="rst"><p class="first last">Use circles as tick marks.</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">TICKS_POLY</p>
+</td>
+<td class="rst"><p class="first last">Use a polygon as tick marks. A
+polygon can be passed using
+SetTickPolygon, otherwise the default
+polygon will be used.</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">TICKS_DECIMAL</p>
+</td>
+<td class="rst"><p class="first last">Use decimal numbers as tick marks.</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">TICKS_ROMAN</p>
+</td>
+<td class="rst"><p class="first last">Use Roman numbers as tick marks.</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">TICKS_BINARY</p>
+</td>
+<td class="rst"><p class="first last">Use binary numbers as tick marks.</p>
+</td>
+</tr>
+<tr class="rst"><td class="rst"><p class="first last">TICKS_HEX</p>
+</td>
+<td class="rst"><p class="first last">Use hexadecimal numbers as tick marks.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</li>
+</ul>
+<p>Notes:</p>
+<p>The 'target' keyword that's present in various of the AnalogClock methods may
+accept one (or more, combined using '|') of the following values:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="17%" />
+<col class="rst" width="83%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">HOUR</td>
+<td class="rst">The values passed/retrieved are related to
+the hours hand/ticks</td>
+</tr>
+<tr class="rst"><td class="rst">MINUTE</td>
+<td class="rst">The values passed/retrieved are related to
+the minutes hand/ticks</td>
+</tr>
+<tr class="rst"><td class="rst">SECOND</td>
+<td class="rst">The values passed/retrieved are related to
+the seconds hand/ticks</td>
+</tr>
+<tr class="rst"><td class="rst">ALL</td>
+<td class="rst">The same as HOUR|MINUTE|SECOND, i. e., the
+values passed/retrieved are related to all
+of the hours hands/ticks. This is the
+default value in all methods.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>It is legal to pass target=ALL to methods that don't handle seconds (tick
+mark related methods). In such cases, ALL will be equivalent to HOUR|MINUTE.</p>
+<p>All of the 'Get' AnalogClock methods that allow the 'target' keyword
+will always return a tuple, e. g.:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="45%" />
+<col class="rst" width="55%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">GetHandSize(target=HOUR)</td>
+<td class="rst">Returns a 1 element tuple, containing
+the size of the hours hand.</td>
+</tr>
+<tr class="rst"><td class="rst">GetHandSize(target=HOUR|MINUTE)</td>
+<td class="rst">Returns a 2 element tuple, containing
+the sizes of the hours and the minutes
+hands, respectively.</td>
+</tr>
+<tr class="rst"><td class="rst">GetHandSize(target=ALL)</td>
+<td class="rst">Returns a 3 element tuple, containing</td>
+</tr>
+<tr class="rst"><td class="rst">or</td>
+<td class="rst">the sizes of the hours, minutes and</td>
+</tr>
+<tr class="rst"><td class="rst">GetHandSize()</td>
+<td class="rst">seconds hands, respectively.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>About:</p>
+<p>Most of the ideas and part of the code of AnalogClock were based on the
+original wxPython's AnalogClock module, which was created by several folks on
+the wxPython-users list.</p>
+<p>AnalogClock is distributed under the wxWidgets license.</p>
+<p>This code should meet the wxPython Coding Guidelines 
+&lt;<a class="rst-reference" href="http://www.wxpython.org/codeguidelines.php">http://www.wxpython.org/codeguidelines.php</a>&gt; and the wxPython Style Guide
+&lt;<a class="rst-reference" href="http://wiki.wxpython.org/index.cgi/wxPython_20Style_20Guide">http://wiki.wxpython.org/index.cgi/wxPython_20Style_20Guide</a>&gt;.</p>
+<p>For all kind of problems, requests, enhancements, bug reports, etc,
+please drop me an e-mail.</p>
+<p>For updates please visit &lt;<a class="rst-reference" href="http://j.domaindlx.com/elements28/wxpython/">http://j.domaindlx.com/elements28/wxpython/</a>&gt;.</p>
+<hr/>
+
+<!-- =========== START OF SUBMODULES =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Submodules</th></tr>
+  <tr><td><ul>
+<li> <b><a href="wx.lib.analogclock.analogclock-module.html"><code>analogclock</code></a></b>
+<li> <b><a href="wx.lib.analogclock.helpers-module.html"><code>helpers</code></a></b>
+<li> <b><a href="wx.lib.analogclock.lib_setup-module.html"><code>lib_setup</code></a></b>
+<li> <b><a href="wx.lib.analogclock.setup-module.html"><code>setup</code></a></b>
+<li> <b><a href="wx.lib.analogclock.styles-module.html"><code>styles</code></a></b>
+  </ul></td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.lib.analogclock-module.html#__author__"><code>__author__</code></a></b> = <span title="'E. A. Tacao &lt;e.a.tacao |at| estadao.com.br&gt;'"><code><span class="variable-quote">'</span>E.&nbsp;A.&nbsp;Tacao&nbsp;&lt;e.a.tacao&nbsp;|at|&nbsp;estadao.com.br<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.lib.analogclock-module.html#__date__"><code>__date__</code></a></b> = <span title="'15 Fev 2006, 22:00 GMT-03:00'"><code><span class="variable-quote">'</span>15&nbsp;Fev&nbsp;2006,&nbsp;22:00&nbsp;GMT-03:00<span class="variable-quote">'</span>                </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="wx.lib.analogclock-module.html#__version__"><code>__version__</code></a></b> = <span title="'0.02'"><code><span class="variable-quote">'</span>0.02<span class="variable-quote">'</span>                                     </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__author__"></a>
+<h3>__author__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'E. A. Tacao &lt;e.a.tacao |at| estadao.com.br&gt;'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>E. A. Tacao &lt;e.a.tacao |at| estadao.com.br&gt;<span class="variable-quote">'</span>                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__date__"></a>
+<h3>__date__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'15 Fev 2006, 22:00 GMT-03:00'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>15 Fev 2006, 22:00 GMT-03:00<span class="variable-quote">'</span>                                         </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__version__"></a>
+<h3>__version__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'0.02'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>0.02<span class="variable-quote">'</span>                                                                 </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:22 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

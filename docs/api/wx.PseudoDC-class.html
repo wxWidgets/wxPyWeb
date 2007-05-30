@@ -1,0 +1,2467 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.PseudoDC</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        Class&nbsp;PseudoDC
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.PseudoDC-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type PseudoDC</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+    
+         |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+
+             |
+            <b>PseudoDC</b>
+</pre><br />
+
+<hr/>
+
+<p>A PseudoDC is an object that can be used as if it were a <a href="wx.DC-class.html" class="link"><code>wx.DC</code></a>.  All
+commands issued to the PseudoDC are stored in a list.  You can then
+play these commands back to a real DC object using the DrawToDC
+method.  Commands in the command list are indexed by ID.  You can use
+this to clear the operations associated with a single ID and then
+re-draw the object associated with that ID.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PseudoDC</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Constructs a new Pseudo device context for recording dc operations</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown--1381186020"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#BeginDrawing" class="summary-sig-name"><code>BeginDrawing</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Allows for optimization of drawing code on platforms that need it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#Clear" class="summary-sig-name"><code>Clear</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Clears the device context using the current background brush.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#ClearId" class="summary-sig-name"><code>ClearId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Removes all operations associated with id so the object can be redrawn.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#CrossHair" class="summary-sig-name"><code>CrossHair</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Displays a cross hair using the current pen.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#CrossHairPoint" class="summary-sig-name"><code>CrossHairPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>)</span></code>
+<br />
+Displays a cross hair using the current pen.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawArc" class="summary-sig-name"><code>DrawArc</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x1</span>,
+          <span class=summary-sig-arg>y1</span>,
+          <span class=summary-sig-arg>x2</span>,
+          <span class=summary-sig-arg>y2</span>,
+          <span class=summary-sig-arg>xc</span>,
+          <span class=summary-sig-arg>yc</span>)</span></code>
+<br />
+Draws an arc of a circle, centred on the <em>center</em> point (xc, yc), from
+the first point to the second.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawArcPoint" class="summary-sig-name"><code>DrawArcPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt1</span>,
+          <span class=summary-sig-arg>pt2</span>,
+          <span class=summary-sig-arg>center</span>)</span></code>
+<br />
+Draws an arc of a circle, centred on the <em>center</em> point (xc, yc), from
+the first point to the second.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawBitmap" class="summary-sig-name"><code>DrawBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>useMask</span>)</span></code>
+<br />
+Draw a bitmap on the device context at the specified point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawBitmapPoint" class="summary-sig-name"><code>DrawBitmapPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>useMask</span>)</span></code>
+<br />
+Draw a bitmap on the device context at the specified point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawCheckMark" class="summary-sig-name"><code>DrawCheckMark</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+<br />
+Draws a check mark inside the given rectangle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawCheckMarkRect" class="summary-sig-name"><code>DrawCheckMarkRect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Draws a check mark inside the given rectangle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawCircle" class="summary-sig-name"><code>DrawCircle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Draws a circle with the given center point and radius.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawCirclePoint" class="summary-sig-name"><code>DrawCirclePoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Draws a circle with the given center point and radius.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawEllipse" class="summary-sig-name"><code>DrawEllipse</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+<br />
+Draws an ellipse contained in the specified rectangle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawEllipsePointSize" class="summary-sig-name"><code>DrawEllipsePointSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>sz</span>)</span></code>
+<br />
+Draws an ellipse contained in the specified rectangle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawEllipseRect" class="summary-sig-name"><code>DrawEllipseRect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Draws an ellipse contained in the specified rectangle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawEllipticArc" class="summary-sig-name"><code>DrawEllipticArc</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>,
+          <span class=summary-sig-arg>start</span>,
+          <span class=summary-sig-arg>end</span>)</span></code>
+<br />
+Draws an arc of an ellipse, with the given rectangle defining the
+bounds of the ellipse.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawEllipticArcPointSize" class="summary-sig-name"><code>DrawEllipticArcPointSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>sz</span>,
+          <span class=summary-sig-arg>start</span>,
+          <span class=summary-sig-arg>end</span>)</span></code>
+<br />
+Draws an arc of an ellipse, with the given rectangle defining the
+bounds of the ellipse.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawIcon" class="summary-sig-name"><code>DrawIcon</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>icon</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Draw an icon on the display (does nothing if the device context is
+PostScript).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawIconPoint" class="summary-sig-name"><code>DrawIconPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>icon</span>,
+          <span class=summary-sig-arg>pt</span>)</span></code>
+<br />
+Draw an icon on the display (does nothing if the device context is
+PostScript).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawIdToDC" class="summary-sig-name"><code>DrawIdToDC</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Draw recorded operations of id to dc.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawImageLabel" class="summary-sig-name"><code>DrawImageLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>alignment</span>,
+          <span class=summary-sig-arg>indexAccel</span>)</span></code>
+<br />
+Draw <em>text</em> and an image (which may be <tt class="rst-docutils literal"><span class="pre">wx.NullBitmap</span></tt> to skip
+drawing it) within the specified rectangle, abiding by the alignment
+flags.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawLabel" class="summary-sig-name"><code>DrawLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>alignment</span>,
+          <span class=summary-sig-arg>indexAccel</span>)</span></code>
+<br />
+Draw <em>text</em> within the specified rectangle, abiding by the alignment
+flags.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawLine" class="summary-sig-name"><code>DrawLine</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x1</span>,
+          <span class=summary-sig-arg>y1</span>,
+          <span class=summary-sig-arg>x2</span>,
+          <span class=summary-sig-arg>y2</span>)</span></code>
+<br />
+Draws a line from the first point to the second.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawLinePoint" class="summary-sig-name"><code>DrawLinePoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt1</span>,
+          <span class=summary-sig-arg>pt2</span>)</span></code>
+<br />
+Draws a line from the first point to the second.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawLines" class="summary-sig-name"><code>DrawLines</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>points</span>,
+          <span class=summary-sig-arg>xoffset</span>,
+          <span class=summary-sig-arg>yoffset</span>)</span></code>
+<br />
+Draws lines using a sequence of <a href="wx.Point-class.html" class="link"><code>wx.Point</code></a> objects, adding the
+optional offset coordinate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawPoint" class="summary-sig-name"><code>DrawPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Draws a point using the current pen.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawPointPoint" class="summary-sig-name"><code>DrawPointPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>)</span></code>
+<br />
+Draws a point using the current pen.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawPolygon" class="summary-sig-name"><code>DrawPolygon</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>points</span>,
+          <span class=summary-sig-arg>xoffset</span>,
+          <span class=summary-sig-arg>yoffset</span>,
+          <span class=summary-sig-arg>fillStyle</span>)</span></code>
+<br />
+Draws a filled polygon using a sequence of <a href="wx.Point-class.html" class="link"><code>wx.Point</code></a> objects, adding
+the optional offset coordinate.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawRectangle" class="summary-sig-name"><code>DrawRectangle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+<br />
+Draws a rectangle with the given top left corner, and with the given
+size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawRectanglePointSize" class="summary-sig-name"><code>DrawRectanglePointSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>sz</span>)</span></code>
+<br />
+Draws a rectangle with the given top left corner, and with the given
+size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawRectangleRect" class="summary-sig-name"><code>DrawRectangleRect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Draws a rectangle with the given top left corner, and with the given
+size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawRotatedText" class="summary-sig-name"><code>DrawRotatedText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>angle</span>)</span></code>
+<br />
+Draws the text rotated by <em>angle</em> degrees, if supported by the platform.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawRotatedTextPoint" class="summary-sig-name"><code>DrawRotatedTextPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>angle</span>)</span></code>
+<br />
+Draws the text rotated by <em>angle</em> degrees, if supported by the platform.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawRoundedRectangle" class="summary-sig-name"><code>DrawRoundedRectangle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Draws a rectangle with the given top left corner, and with the given
+size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawRoundedRectanglePointSize" class="summary-sig-name"><code>DrawRoundedRectanglePointSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>sz</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Draws a rectangle with the given top left corner, and with the given
+size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawRoundedRectangleRect" class="summary-sig-name"><code>DrawRoundedRectangleRect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>r</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Draws a rectangle with the given top left corner, and with the given
+size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawSpline" class="summary-sig-name"><code>DrawSpline</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>points</span>)</span></code>
+<br />
+Draws a spline between all given control points, (a list of <a href="wx.Point-class.html" class="link"><code>wx.Point</code></a>
+objects) using the current pen.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawText" class="summary-sig-name"><code>DrawText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Draws a text string at the specified point, using the current text
+font, and the current text foreground and background colours.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawTextPoint" class="summary-sig-name"><code>DrawTextPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>pt</span>)</span></code>
+<br />
+Draws a text string at the specified point, using the current text
+font, and the current text foreground and background colours.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawToDC" class="summary-sig-name"><code>DrawToDC</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Draws the recorded operations to dc.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawToDCClipped" class="summary-sig-name"><code>DrawToDCClipped</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Draws the recorded operations to dc unless the operation is known to
+be outside rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#DrawToDCClippedRgn" class="summary-sig-name"><code>DrawToDCClippedRgn</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>region</span>)</span></code>
+<br />
+Draws the recorded operations to dc unless the operation is known to
+be outside rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#EndDrawing" class="summary-sig-name"><code>EndDrawing</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Ends the group of drawing primitives started with <a href="wx.PseudoDC-class.html#BeginDrawing" class="link"><code>BeginDrawing</code></a>, and
+invokes whatever optimization is available for this DC type on the
+current platform.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#FindObjects" class="summary-sig-name"><code>FindObjects</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>radius</span>,
+          <span class=summary-sig-arg>bg</span>)</span></code>
+<br />
+Returns a list of all the id's that draw a pixel with color
+not equal to bg within radius of (x,y).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#FindObjectsByBBox" class="summary-sig-name"><code>FindObjectsByBBox</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Returns a list of all the id's whose bounding boxes include (x,y).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#FloodFill" class="summary-sig-name"><code>FloodFill</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Flood fills the device context starting from the given point, using
+the current brush colour, and using a style:</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#FloodFillPoint" class="summary-sig-name"><code>FloodFillPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>col</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Flood fills the device context starting from the given point, using
+the current brush colour, and using a style:</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#GetIdBounds" class="summary-sig-name"><code>GetIdBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Returns the bounding rectangle previouly set with SetIdBounds.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#GetIdGreyedOut" class="summary-sig-name"><code>GetIdGreyedOut</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Get whether an object is drawn greyed out or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#GetLen" class="summary-sig-name"><code>GetLen</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of operations in the recorded list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#RemoveAll" class="summary-sig-name"><code>RemoveAll</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Removes all objects and operations from the recorded list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#RemoveId" class="summary-sig-name"><code>RemoveId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Remove the object node (and all operations) associated with an id.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetBackground" class="summary-sig-name"><code>SetBackground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>brush</span>)</span></code>
+<br />
+Sets the current background brush for the DC.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetBackgroundMode" class="summary-sig-name"><code>SetBackgroundMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+<em>mode</em> may be one of <tt class="rst-docutils literal"><span class="pre">wx.SOLID</span></tt> and <tt class="rst-docutils literal"><span class="pre">wx.TRANSPARENT</span></tt>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetBrush" class="summary-sig-name"><code>SetBrush</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>brush</span>)</span></code>
+<br />
+Sets the current brush for the DC.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetFont" class="summary-sig-name"><code>SetFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+<br />
+Sets the current font for the DC.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetId" class="summary-sig-name"><code>SetId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Sets the id to be associated with subsequent operations.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetIdBounds" class="summary-sig-name"><code>SetIdBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Set the bounding rect of a given object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetIdGreyedOut" class="summary-sig-name"><code>SetIdGreyedOut</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>greyout</span>)</span></code>
+<br />
+Set whether an object is drawn greyed out or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetLogicalFunction" class="summary-sig-name"><code>SetLogicalFunction</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>function</span>)</span></code>
+<br />
+Sets the current logical function for the device context.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetPalette" class="summary-sig-name"><code>SetPalette</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>palette</span>)</span></code>
+<br />
+If this is a window DC or memory DC, assigns the given palette to the
+window or bitmap associated with the DC.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetPen" class="summary-sig-name"><code>SetPen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pen</span>)</span></code>
+<br />
+Sets the current pen for the DC.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetTextBackground" class="summary-sig-name"><code>SetTextBackground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the current text background colour for the DC.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetTextForeground" class="summary-sig-name"><code>SetTextForeground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the current text foreground colour for the DC.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.PseudoDC-class.html#TranslateId" class="summary-sig-name"><code>TranslateId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>dx</span>,
+          <span class=summary-sig-arg>dy</span>)</span></code>
+<br />
+Translate the operations of id by dx,dy.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PseudoDC-class.html#IdBounds"><code>IdBounds</code></a></b>: See <a href="wx.PseudoDC-class.html#GetIdBounds" class="link"><code>GetIdBounds</code></a> and <a href="wx.PseudoDC-class.html#SetIdBounds" class="link"><code>SetIdBounds</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PseudoDC-class.html#Len"><code>Len</code></a></b>: See <a href="wx.PseudoDC-class.html#GetLen" class="link"><code>GetLen</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.PseudoDC-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructs a new Pseudo device context for recording dc operations</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PseudoDC      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Object-class.html#__init__"><code>wx.Object.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="BeginDrawing"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">BeginDrawing</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Allows for optimization of drawing code on platforms that need it.  On
+other platforms this is just an empty function and is harmless.  To
+take advantage of this postential optimization simply enclose each
+group of calls to the drawing primitives within calls to
+<a href="wx.PseudoDC-class.html#BeginDrawing" class="link"><code>BeginDrawing</code></a> and <a href="wx.PseudoDC-class.html#EndDrawing" class="link"><code>EndDrawing</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Clear"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Clear</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Clears the device context using the current background brush.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClearId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClearId</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>)</span>
+  </h3>
+<p>Removes all operations associated with id so the object can be redrawn.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CrossHair"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CrossHair</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Displays a cross hair using the current pen. This is a vertical and
+horizontal line the height and width of the window, centred on the
+given point.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CrossHairPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CrossHairPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>)</span>
+  </h3>
+<p>Displays a cross hair using the current pen. This is a vertical and
+horizontal line the height and width of the window, centred on the
+given point.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawArc"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawArc</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x1</span>,
+          <span class=sig-arg>y1</span>,
+          <span class=sig-arg>x2</span>,
+          <span class=sig-arg>y2</span>,
+          <span class=sig-arg>xc</span>,
+          <span class=sig-arg>yc</span>)</span>
+  </h3>
+<p>Draws an arc of a circle, centred on the <em>center</em> point (xc, yc), from
+the first point to the second. The current pen is used for the outline
+and the current brush for filling the shape.</p>
+<p>The arc is drawn in an anticlockwise direction from the start point to
+the end point.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>x2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>xc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>yc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawArcPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawArcPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt1</span>,
+          <span class=sig-arg>pt2</span>,
+          <span class=sig-arg>center</span>)</span>
+  </h3>
+<p>Draws an arc of a circle, centred on the <em>center</em> point (xc, yc), from
+the first point to the second. The current pen is used for the outline
+and the current brush for filling the shape.</p>
+<p>The arc is drawn in an anticlockwise direction from the start point to
+the end point.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>pt2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>center</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawBitmap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>useMask</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Draw a bitmap on the device context at the specified point. If
+<em>transparent</em> is true and the bitmap has a transparency mask, (or
+alpha channel on the platforms that support it) then the bitmap will
+be drawn transparently.</p>
+<p>When drawing a mono-bitmap, the current text foreground colour will be
+used to draw the foreground of the bitmap (all bits set to 1), and the
+current text background colour to draw the background (all bits set to
+0).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>bmp</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>useMask</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#SetTextForeground" class="link"><code>SetTextForeground</code></a>, <a href="wx.PseudoDC-class.html#SetTextBackground" class="link"><code>SetTextBackground</code></a> and <a href="wx.MemoryDC-class.html" class="link"><code>wx.MemoryDC</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawBitmapPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawBitmapPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>,
+          <span class=sig-arg>pt</span>,
+          <span class=sig-arg>useMask</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Draw a bitmap on the device context at the specified point. If
+<em>transparent</em> is true and the bitmap has a transparency mask, (or
+alpha channel on the platforms that support it) then the bitmap will
+be drawn transparently.</p>
+<p>When drawing a mono-bitmap, the current text foreground colour will be
+used to draw the foreground of the bitmap (all bits set to 1), and the
+current text background colour to draw the background (all bits set to
+0).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>bmp</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>useMask</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#SetTextForeground" class="link"><code>SetTextForeground</code></a>, <a href="wx.PseudoDC-class.html#SetTextBackground" class="link"><code>SetTextBackground</code></a> and <a href="wx.MemoryDC-class.html" class="link"><code>wx.MemoryDC</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawCheckMark"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawCheckMark</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>width</span>,
+          <span class=sig-arg>height</span>)</span>
+  </h3>
+<p>Draws a check mark inside the given rectangle.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawCheckMarkRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawCheckMarkRect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Draws a check mark inside the given rectangle.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawCircle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawCircle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Draws a circle with the given center point and radius.  The current
+pen is used for the outline and the current brush for filling the
+shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>radius</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#DrawEllipse" class="link"><code>DrawEllipse</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawCirclePoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawCirclePoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Draws a circle with the given center point and radius.  The current
+pen is used for the outline and the current brush for filling the
+shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>radius</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#DrawEllipse" class="link"><code>DrawEllipse</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawEllipse"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawEllipse</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>width</span>,
+          <span class=sig-arg>height</span>)</span>
+  </h3>
+<p>Draws an ellipse contained in the specified rectangle. The current pen
+is used for the outline and the current brush for filling the shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#DrawCircle" class="link"><code>DrawCircle</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawEllipsePointSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawEllipsePointSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>,
+          <span class=sig-arg>sz</span>)</span>
+  </h3>
+<p>Draws an ellipse contained in the specified rectangle. The current pen
+is used for the outline and the current brush for filling the shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>sz</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#DrawCircle" class="link"><code>DrawCircle</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawEllipseRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawEllipseRect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Draws an ellipse contained in the specified rectangle. The current pen
+is used for the outline and the current brush for filling the shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#DrawCircle" class="link"><code>DrawCircle</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawEllipticArc"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawEllipticArc</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>w</span>,
+          <span class=sig-arg>h</span>,
+          <span class=sig-arg>start</span>,
+          <span class=sig-arg>end</span>)</span>
+  </h3>
+<p>Draws an arc of an ellipse, with the given rectangle defining the
+bounds of the ellipse. The current pen is used for drawing the arc and
+the current brush is used for drawing the pie.</p>
+<p>The <em>start</em> and <em>end</em> parameters specify the start and end of the arc
+relative to the three-o'clock position from the center of the
+rectangle. Angles are specified in degrees (360 is a complete
+circle). Positive values mean counter-clockwise motion. If start is
+equal to end, a complete ellipse will be drawn.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>w</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>h</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>start</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      <dd><code><b>end</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawEllipticArcPointSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawEllipticArcPointSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>,
+          <span class=sig-arg>sz</span>,
+          <span class=sig-arg>start</span>,
+          <span class=sig-arg>end</span>)</span>
+  </h3>
+<p>Draws an arc of an ellipse, with the given rectangle defining the
+bounds of the ellipse. The current pen is used for drawing the arc and
+the current brush is used for drawing the pie.</p>
+<p>The <em>start</em> and <em>end</em> parameters specify the start and end of the arc
+relative to the three-o'clock position from the center of the
+rectangle. Angles are specified in degrees (360 is a complete
+circle). Positive values mean counter-clockwise motion. If start is
+equal to end, a complete ellipse will be drawn.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>sz</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>start</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      <dd><code><b>end</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawIcon</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>icon</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Draw an icon on the display (does nothing if the device context is
+PostScript). This can be the simplest way of drawing bitmaps on a
+window.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>icon</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Icon)</i>
+<p/>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawIconPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawIconPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>icon</span>,
+          <span class=sig-arg>pt</span>)</span>
+  </h3>
+<p>Draw an icon on the display (does nothing if the device context is
+PostScript). This can be the simplest way of drawing bitmaps on a
+window.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>icon</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Icon)</i>
+<p/>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawIdToDC"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawIdToDC</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Draw recorded operations of id to dc.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawImageLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawImageLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>image</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>alignment</span>=<span class=sig-default>wxALIGN_LEFT|wxALIGN_TOP</span>,
+          <span class=sig-arg>indexAccel</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Draw <em>text</em> and an image (which may be <tt class="rst-docutils literal"><span class="pre">wx.NullBitmap</span></tt> to skip
+drawing it) within the specified rectangle, abiding by the alignment
+flags.  Will additionally emphasize the character at <em>indexAccel</em> if
+it is not -1.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>text</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>image</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Bitmap)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>alignment</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>indexAccel</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>alignment</span>=<span class=sig-default>wxALIGN_LEFT|wxALIGN_TOP</span>,
+          <span class=sig-arg>indexAccel</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Draw <em>text</em> within the specified rectangle, abiding by the alignment
+flags.  Will additionally emphasize the character at <em>indexAccel</em> if
+it is not -1.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>text</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>alignment</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>indexAccel</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#DrawImageLabel" class="link"><code>DrawImageLabel</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawLine"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawLine</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x1</span>,
+          <span class=sig-arg>y1</span>,
+          <span class=sig-arg>x2</span>,
+          <span class=sig-arg>y2</span>)</span>
+  </h3>
+<p>Draws a line from the first point to the second. The current pen is
+used for drawing the line. Note that the second point is <em>not</em> part of
+the line and is not drawn by this function (this is consistent with
+the behaviour of many other toolkits).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>x2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawLinePoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawLinePoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt1</span>,
+          <span class=sig-arg>pt2</span>)</span>
+  </h3>
+<p>Draws a line from the first point to the second. The current pen is
+used for drawing the line. Note that the second point is <em>not</em> part of
+the line and is not drawn by this function (this is consistent with
+the behaviour of many other toolkits).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt1</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>pt2</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawLines"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawLines</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>points</span>,
+          <span class=sig-arg>xoffset</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>yoffset</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Draws lines using a sequence of <a href="wx.Point-class.html" class="link"><code>wx.Point</code></a> objects, adding the
+optional offset coordinate. The current pen is used for drawing the
+lines.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>points</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=List)</i>
+<p/>
+      <dd><code><b>xoffset</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>yoffset</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Draws a point using the current pen.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawPointPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawPointPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>)</span>
+  </h3>
+<p>Draws a point using the current pen.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawPolygon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawPolygon</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>points</span>,
+          <span class=sig-arg>xoffset</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>yoffset</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>fillStyle</span>=<span class=sig-default>ODDEVEN_RULE</span>)</span>
+  </h3>
+<p>Draws a filled polygon using a sequence of <a href="wx.Point-class.html" class="link"><code>wx.Point</code></a> objects, adding
+the optional offset coordinate.  The last argument specifies the fill
+rule: <tt class="rst-docutils literal"><span class="pre">wx.ODDEVEN_RULE</span></tt> (the default) or <tt class="rst-docutils literal"><span class="pre">wx.WINDING_RULE</span></tt>.</p>
+<p>The current pen is used for drawing the outline, and the current brush
+for filling the shape. Using a transparent brush suppresses
+filling. Note that wxWidgets automatically closes the first and last
+points.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>points</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=List)</i>
+<p/>
+      <dd><code><b>xoffset</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>yoffset</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>fillStyle</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRectangle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRectangle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>width</span>,
+          <span class=sig-arg>height</span>)</span>
+  </h3>
+<p>Draws a rectangle with the given top left corner, and with the given
+size. The current pen is used for the outline and the current brush
+for filling the shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRectanglePointSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRectanglePointSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>,
+          <span class=sig-arg>sz</span>)</span>
+  </h3>
+<p>Draws a rectangle with the given top left corner, and with the given
+size. The current pen is used for the outline and the current brush
+for filling the shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>sz</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRectangleRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRectangleRect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Draws a rectangle with the given top left corner, and with the given
+size. The current pen is used for the outline and the current brush
+for filling the shape.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRotatedText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRotatedText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>angle</span>)</span>
+  </h3>
+<p>Draws the text rotated by <em>angle</em> degrees, if supported by the platform.</p>
+<p><strong>NOTE</strong>: Under Win9x only TrueType fonts can be drawn by this
+function. In particular, a font different from <tt class="rst-docutils literal"><span class="pre">wx.NORMAL_FONT</span></tt>
+should be used as the it is not normally a TrueType
+font. <tt class="rst-docutils literal"><span class="pre">wx.SWISS_FONT</span></tt> is an example of a font which is.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>text</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>angle</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#DrawText" class="link"><code>DrawText</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRotatedTextPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRotatedTextPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>pt</span>,
+          <span class=sig-arg>angle</span>)</span>
+  </h3>
+<p>Draws the text rotated by <em>angle</em> degrees, if supported by the platform.</p>
+<p><strong>NOTE</strong>: Under Win9x only TrueType fonts can be drawn by this
+function. In particular, a font different from <tt class="rst-docutils literal"><span class="pre">wx.NORMAL_FONT</span></tt>
+should be used as the it is not normally a TrueType
+font. <tt class="rst-docutils literal"><span class="pre">wx.SWISS_FONT</span></tt> is an example of a font which is.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>text</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>angle</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#DrawText" class="link"><code>DrawText</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRoundedRectangle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRoundedRectangle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>width</span>,
+          <span class=sig-arg>height</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Draws a rectangle with the given top left corner, and with the given
+size. The corners are quarter-circles using the given radius. The
+current pen is used for the outline and the current brush for filling
+the shape.</p>
+<p>If radius is positive, the value is assumed to be the radius of the
+rounded corner. If radius is negative, the absolute value is assumed
+to be the proportion of the smallest dimension of the rectangle. This
+means that the corner can be a sensible size relative to the size of
+the rectangle, and also avoids the strange effects X produces when the
+corners are too big for the rectangle.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>width</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>height</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>radius</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRoundedRectanglePointSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRoundedRectanglePointSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>,
+          <span class=sig-arg>sz</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Draws a rectangle with the given top left corner, and with the given
+size. The corners are quarter-circles using the given radius. The
+current pen is used for the outline and the current brush for filling
+the shape.</p>
+<p>If radius is positive, the value is assumed to be the radius of the
+rounded corner. If radius is negative, the absolute value is assumed
+to be the proportion of the smallest dimension of the rectangle. This
+means that the corner can be a sensible size relative to the size of
+the rectangle, and also avoids the strange effects X produces when the
+corners are too big for the rectangle.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>sz</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Size)</i>
+<p/>
+      <dd><code><b>radius</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRoundedRectangleRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRoundedRectangleRect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>r</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Draws a rectangle with the given top left corner, and with the given
+size. The corners are quarter-circles using the given radius. The
+current pen is used for the outline and the current brush for filling
+the shape.</p>
+<p>If radius is positive, the value is assumed to be the radius of the
+rounded corner. If radius is negative, the absolute value is assumed
+to be the proportion of the smallest dimension of the rectangle. This
+means that the corner can be a sensible size relative to the size of
+the rectangle, and also avoids the strange effects X produces when the
+corners are too big for the rectangle.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>r</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      <dd><code><b>radius</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=double)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawSpline"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawSpline</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>points</span>)</span>
+  </h3>
+<p>Draws a spline between all given control points, (a list of <a href="wx.Point-class.html" class="link"><code>wx.Point</code></a>
+objects) using the current pen. The spline is drawn using a series of
+lines, using an algorithm taken from the X drawing program 'XFIG'.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>points</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=List)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Draws a text string at the specified point, using the current text
+font, and the current text foreground and background colours.</p>
+<p>The coordinates refer to the top-left corner of the rectangle bounding
+the string. See <a href="wx.DC-class.html#GetTextExtent" class="link"><code>wx.DC.GetTextExtent</code></a> for how to get the dimensions of
+a text string, which can be used to position the text more precisely,
+(you will need to use a real DC with GetTextExtent as wx.PseudoDC does
+not implement it.)</p>
+<p><strong>NOTE</strong>: under wxGTK the current logical function is used by this
+function but it is ignored by wxMSW. Thus, you should avoid using
+logical functions with this function in portable programs.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>text</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#DrawRotatedText" class="link"><code>DrawRotatedText</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawTextPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawTextPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>pt</span>)</span>
+  </h3>
+<p>Draws a text string at the specified point, using the current text
+font, and the current text foreground and background colours.</p>
+<p>The coordinates refer to the top-left corner of the rectangle bounding
+the string. See <a href="wx.DC-class.html#GetTextExtent" class="link"><code>wx.DC.GetTextExtent</code></a> for how to get the dimensions of
+a text string, which can be used to position the text more precisely,
+(you will need to use a real DC with GetTextExtent as wx.PseudoDC does
+not implement it.)</p>
+<p><strong>NOTE</strong>: under wxGTK the current logical function is used by this
+function but it is ignored by wxMSW. Thus, you should avoid using
+logical functions with this function in portable programs.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>text</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.PseudoDC-class.html#DrawRotatedText" class="link"><code>DrawRotatedText</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawToDC"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawToDC</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Draws the recorded operations to dc.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawToDCClipped"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawToDCClipped</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Draws the recorded operations to dc unless the operation is known to
+be outside rect.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawToDCClippedRgn"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawToDCClippedRgn</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>region</span>)</span>
+  </h3>
+<p>Draws the recorded operations to dc unless the operation is known to
+be outside rect.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>dc</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=DC)</i>
+<p/>
+      <dd><code><b>region</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Region)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EndDrawing"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EndDrawing</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Ends the group of drawing primitives started with <a href="wx.PseudoDC-class.html#BeginDrawing" class="link"><code>BeginDrawing</code></a>, and
+invokes whatever optimization is available for this DC type on the
+current platform.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindObjects"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindObjects</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>radius</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>bg</span>=<span class=sig-default>*wxWHITE</span>)</span>
+  </h3>
+<p>Returns a list of all the id's that draw a pixel with color
+not equal to bg within radius of (x,y).
+Returns an empty list if nothing is found.  The list is in
+reverse drawing order so list[0] is the top id.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>radius</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>bg</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyObject      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindObjectsByBBox"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindObjectsByBBox</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Returns a list of all the id's whose bounding boxes include (x,y).
+Returns an empty list if nothing is found.  The list is in
+reverse drawing order so list[0] is the top id.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+PyObject      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FloodFill"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FloodFill</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>col</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>FLOOD_SURFACE</span>)</span>
+  </h3>
+<p>Flood fills the device context starting from the given point, using
+the current brush colour, and using a style:</p>
+<blockquote>
+<ul class="rst-simple">
+<li><strong>wxFLOOD_SURFACE</strong>: the flooding occurs until a colour other than
+the given colour is encountered.</li>
+<li><strong>wxFLOOD_BORDER</strong>: the area to be flooded is bounded by the given
+colour.</li>
+</ul>
+</blockquote>
+<p>Returns False if the operation failed.</p>
+<p>Note: The present implementation for non-Windows platforms may fail to
+find colour borders if the pixels do not match the colour
+exactly. However the function will still return true.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>x</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>y</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>col</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FloodFillPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FloodFillPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>,
+          <span class=sig-arg>col</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>FLOOD_SURFACE</span>)</span>
+  </h3>
+<p>Flood fills the device context starting from the given point, using
+the current brush colour, and using a style:</p>
+<blockquote>
+<ul class="rst-simple">
+<li><strong>wxFLOOD_SURFACE</strong>: the flooding occurs until a colour other than
+the given colour is encountered.</li>
+<li><strong>wxFLOOD_BORDER</strong>: the area to be flooded is bounded by the given
+colour.</li>
+</ul>
+</blockquote>
+<p>Returns False if the operation failed.</p>
+<p>Note: The present implementation for non-Windows platforms may fail to
+find colour borders if the pixels do not match the colour
+exactly. However the function will still return true.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pt</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Point)</i>
+<p/>
+      <dd><code><b>col</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetIdBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetIdBounds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>)</span>
+  </h3>
+<p>Returns the bounding rectangle previouly set with SetIdBounds.  If
+no bounds have been set, it returns wx.Rect(0,0,0,0).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Rect      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetIdGreyedOut"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetIdGreyedOut</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>)</span>
+  </h3>
+<p>Get whether an object is drawn greyed out or not.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLen</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the number of operations in the recorded list.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+int      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveAll</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Removes all objects and operations from the recorded list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveId</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>)</span>
+  </h3>
+<p>Remove the object node (and all operations) associated with an id.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBackground</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>brush</span>)</span>
+  </h3>
+<p>Sets the current background brush for the DC.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>brush</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Brush)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBackgroundMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBackgroundMode</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mode</span>)</span>
+  </h3>
+<p><em>mode</em> may be one of <tt class="rst-docutils literal"><span class="pre">wx.SOLID</span></tt> and <tt class="rst-docutils literal"><span class="pre">wx.TRANSPARENT</span></tt>. This setting
+determines whether text will be drawn with a background colour or
+not.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>mode</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBrush"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBrush</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>brush</span>)</span>
+  </h3>
+<p>Sets the current brush for the DC.</p>
+<p>If the argument is <tt class="rst-docutils literal"><span class="pre">wx.NullBrush</span></tt>, the current brush is selected out
+of the device context, and the original brush restored, allowing the
+current brush to be destroyed safely.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>brush</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Brush)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Brush-class.html" class="link"><code>wx.Brush</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>font</span>)</span>
+  </h3>
+<p>Sets the current font for the DC. It must be a valid font, in
+particular you should not pass <tt class="rst-docutils literal"><span class="pre">wx.NullFont</span></tt> to this method.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>font</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Font)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Font-class.html" class="link"><code>wx.Font</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetId</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>)</span>
+  </h3>
+<p>Sets the id to be associated with subsequent operations.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetIdBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetIdBounds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Set the bounding rect of a given object.  This will create 
+an object node if one doesn't exist.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>rect</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Rect)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetIdGreyedOut"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetIdGreyedOut</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>greyout</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Set whether an object is drawn greyed out or not.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>greyout</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=bool)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLogicalFunction"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLogicalFunction</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>function</span>)</span>
+  </h3>
+<p>Sets the current logical function for the device context. This
+determines how a source pixel (from a pen or brush colour, combines
+with a destination pixel in the current device context.</p>
+<p>The possible values and their meaning in terms of source and
+destination pixel values are as follows:</p>
+<blockquote>
+<table border="1" class="rst-docutils">
+<colgroup class="rst">
+<col class="rst" width="38%" />
+<col class="rst" width="62%" />
+</colgroup>
+<tbody class="rst" valign="top">
+<tr class="rst"><td class="rst">wx.AND</td>
+<td class="rst">src AND dst</td>
+</tr>
+<tr class="rst"><td class="rst">wx.AND_INVERT</td>
+<td class="rst">(NOT src) AND dst</td>
+</tr>
+<tr class="rst"><td class="rst">wx.AND_REVERSE</td>
+<td class="rst">src AND (NOT dst)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.CLEAR</td>
+<td class="rst">0</td>
+</tr>
+<tr class="rst"><td class="rst">wx.COPY</td>
+<td class="rst">src</td>
+</tr>
+<tr class="rst"><td class="rst">wx.EQUIV</td>
+<td class="rst">(NOT src) XOR dst</td>
+</tr>
+<tr class="rst"><td class="rst">wx.INVERT</td>
+<td class="rst">NOT dst</td>
+</tr>
+<tr class="rst"><td class="rst">wx.NAND</td>
+<td class="rst">(NOT src) OR (NOT dst)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.NOR</td>
+<td class="rst">(NOT src) AND (NOT dst)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.NO_OP</td>
+<td class="rst">dst</td>
+</tr>
+<tr class="rst"><td class="rst">wx.OR</td>
+<td class="rst">src OR dst</td>
+</tr>
+<tr class="rst"><td class="rst">wx.OR_INVERT</td>
+<td class="rst">(NOT src) OR dst</td>
+</tr>
+<tr class="rst"><td class="rst">wx.OR_REVERSE</td>
+<td class="rst">src OR (NOT dst)</td>
+</tr>
+<tr class="rst"><td class="rst">wx.SET</td>
+<td class="rst">1</td>
+</tr>
+<tr class="rst"><td class="rst">wx.SRC_INVERT</td>
+<td class="rst">NOT src</td>
+</tr>
+<tr class="rst"><td class="rst">wx.XOR</td>
+<td class="rst">src XOR dst</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>The default is wx.COPY, which simply draws with the current
+colour. The others combine the current colour and the background using
+a logical operation. wx.INVERT is commonly used for drawing rubber
+bands or moving outlines, since drawing twice reverts to the original
+colour.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>function</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPalette"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPalette</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>palette</span>)</span>
+  </h3>
+<p>If this is a window DC or memory DC, assigns the given palette to the
+window or bitmap associated with the DC. If the argument is
+<tt class="rst-docutils literal"><span class="pre">wx.NullPalette</span></tt>, the current palette is selected out of the device
+context, and the original palette restored.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>palette</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Palette)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Palette-class.html" class="link"><code>wx.Palette</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pen</span>)</span>
+  </h3>
+<p>Sets the current pen for the DC.</p>
+<p>If the argument is <tt class="rst-docutils literal"><span class="pre">wx.NullPen</span></tt>, the current pen is selected out of the
+device context, and the original pen restored.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>pen</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Pen)</i>
+<p/>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <p><a href="wx.Pen-class.html" class="link"><code>wx.Pen</code></a></p>
+</p>
+
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTextBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTextBackground</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Sets the current text background colour for the DC.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>colour</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTextForeground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTextForeground</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Sets the current text foreground colour for the DC.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>colour</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Colour)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="TranslateId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">TranslateId</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>dx</span>,
+          <span class=sig-arg>dy</span>)</span>
+  </h3>
+<p>Translate the operations of id by dx,dy.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>dx</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      <dd><code><b>dy</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="IdBounds"></a>
+<h3>IdBounds</h3>
+<p>See <a href="wx.PseudoDC-class.html#GetIdBounds" class="link"><code>GetIdBounds</code></a> and <a href="wx.PseudoDC-class.html#SetIdBounds" class="link"><code>SetIdBounds</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PseudoDC-class.html#GetIdBounds" class="summary-sig-name"><code>GetIdBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PseudoDC-class.html#SetIdBounds" class="summary-sig-name"><code>SetIdBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>rect</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Len"></a>
+<h3>Len</h3>
+<p>See <a href="wx.PseudoDC-class.html#GetLen" class="link"><code>GetLen</code></a></p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.PseudoDC-class.html#GetLen" class="summary-sig-name"><code>GetLen</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:04:04 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

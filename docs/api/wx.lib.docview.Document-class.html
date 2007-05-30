@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.docview.Document</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.docview-module.html">Module&nbsp;docview</a> ::
+        Class&nbsp;Document
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.docview.Document-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type Document</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+        
+         |        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+    
+             |    
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+
+                 |
+                <b>Document</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.pydocview.ChildDocument-class.html"><code>ChildDocument</code></a></dd></dl>
+
+<hr/>
+
+<p>The document class can be used to model an application's file-based data. It
+is part of the document/view framework supported by wxWindows, and cooperates
+with the wxView, wxDocTemplate and wxDocManager classes.</p>
+<p>Note this wxPython version also keeps track of the modification date of the
+document and if it changes on disk outside of the application, we will warn the
+user before saving to avoid clobbering the file.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>)</span></code>
+<br />
+Constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#AddView" class="summary-sig-name"><code>AddView</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>view</span>)</span></code>
+<br />
+If the view is not already in the list of views, adds the view and
+calls OnChangedViewList.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#Close" class="summary-sig-name"><code>Close</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Closes the document, by calling OnSaveModified and then (if this true)
+OnCloseDocument.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#DeleteAllViews" class="summary-sig-name"><code>DeleteAllViews</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calls wxView.Close and deletes each view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#DeleteContents" class="summary-sig-name"><code>DeleteContents</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Deletes the contents of the document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#Destroy" class="summary-sig-name"><code>Destroy</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Destructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#Draw" class="summary-sig-name"><code>Draw</code></a>(<span class=summary-sig-arg>context</span>)</span></code>
+<br />
+Called by printing framework to draw the view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetCommandProcessor" class="summary-sig-name"><code>GetCommandProcessor</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the command processor associated with this document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetDocumentManager" class="summary-sig-name"><code>GetDocumentManager</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the associated document manager.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetDocumentModificationDate" class="summary-sig-name"><code>GetDocumentModificationDate</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the file's modification date when it was loaded from disk.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetDocumentName" class="summary-sig-name"><code>GetDocumentName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+The document type name given to the wxDocTemplate constructor,
+copied to this document when the document is created.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetDocumentSaved" class="summary-sig-name"><code>GetDocumentSaved</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns True if the document has been saved.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetDocumentTemplate" class="summary-sig-name"><code>GetDocumentTemplate</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the template that created the document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetDocumentWindow" class="summary-sig-name"><code>GetDocumentWindow</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Intended to return a suitable window for using as a parent for
+document-related dialog boxes.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetFilename" class="summary-sig-name"><code>GetFilename</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the filename associated with this document, or &quot;&quot; if none is
+associated.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetFirstView" class="summary-sig-name"><code>GetFirstView</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+A convenience function to get the first view for a document, because
+in many cases a document will only have a single view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetPrintableName" class="summary-sig-name"><code>GetPrintableName</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Copies a suitable document name into the supplied name buffer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetTitle" class="summary-sig-name"><code>GetTitle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the title for this document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetViews" class="summary-sig-name"><code>GetViews</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the list whose elements are the views on the document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#GetWriteable" class="summary-sig-name"><code>GetWriteable</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if the document can be written to its accociated file path.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#IsDocumentModificationDateCorrect" class="summary-sig-name"><code>IsDocumentModificationDateCorrect</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns False if the file has been modified outside of the application.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#IsModified" class="summary-sig-name"><code>IsModified</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns true if the document has been modified since the last save,
+false otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#LoadObject" class="summary-sig-name"><code>LoadObject</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>file</span>)</span></code>
+<br />
+Override this function and call it from your own LoadObject before
+loading your own data.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#Modify" class="summary-sig-name"><code>Modify</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>modify</span>)</span></code>
+<br />
+Call with true to mark the document as modified since the last save,
+false otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#NotifyClosing" class="summary-sig-name"><code>NotifyClosing</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Notifies the views that the document is going to close.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#OnChangedViewList" class="summary-sig-name"><code>OnChangedViewList</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Called when a view is added to or deleted from this document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#OnCloseDocument" class="summary-sig-name"><code>OnCloseDocument</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+The default implementation calls DeleteContents (an empty
+implementation) sets the modified flag to false.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#OnCreate" class="summary-sig-name"><code>OnCreate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+The default implementation calls DeleteContents (an empty
+implementation) sets the modified flag to false.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#OnCreateCommandProcessor" class="summary-sig-name"><code>OnCreateCommandProcessor</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Override this function if you want a different (or no) command
+processor to be created when the document is created.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#OnNewDocument" class="summary-sig-name"><code>OnNewDocument</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+The default implementation calls OnSaveModified and DeleteContents,
+makes a default title for the document, and notifies the views that
+the filename (in fact, the title) has changed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#OnOpenDocument" class="summary-sig-name"><code>OnOpenDocument</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filename</span>)</span></code>
+<br />
+Constructs an input file for the given filename (which must not
+be empty), and calls LoadObject.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#OnSaveDocument" class="summary-sig-name"><code>OnSaveDocument</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filename</span>)</span></code>
+<br />
+Constructs an output file for the given filename (which must
+not be empty), and calls SaveObject.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#OnSaveModified" class="summary-sig-name"><code>OnSaveModified</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+If the document has been modified, prompts the user to ask if the
+changes should be changed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#ProcessEvent" class="summary-sig-name"><code>ProcessEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Processes an event, searching event tables and calling zero or more
+suitable event handler function(s).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#RemoveView" class="summary-sig-name"><code>RemoveView</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>view</span>)</span></code>
+<br />
+Removes the view from the document's list of views, and calls
+OnChangedViewList.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#Revert" class="summary-sig-name"><code>Revert</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Override this function to revert the document to its last saved state.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#Save" class="summary-sig-name"><code>Save</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Saves the document by calling OnSaveDocument if there is an associated
+filename, or SaveAs if there is no filename.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#SaveAs" class="summary-sig-name"><code>SaveAs</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Prompts the user for a file to save to, and then calls OnSaveDocument.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#SaveObject" class="summary-sig-name"><code>SaveObject</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>file</span>)</span></code>
+<br />
+Override this function and call it from your own SaveObject before
+saving your own data.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#SetCommandProcessor" class="summary-sig-name"><code>SetCommandProcessor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>processor</span>)</span></code>
+<br />
+Sets the command processor to be used for this document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#SetDocumentModificationDate" class="summary-sig-name"><code>SetDocumentModificationDate</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Saves the file's last modification date.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#SetDocumentName" class="summary-sig-name"><code>SetDocumentName</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Sets he document type name given to the wxDocTemplate constructor,
+copied to this document when the document is created.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#SetDocumentSaved" class="summary-sig-name"><code>SetDocumentSaved</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>saved</span>)</span></code>
+<br />
+Sets whether the document has been saved.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#SetDocumentTemplate" class="summary-sig-name"><code>SetDocumentTemplate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>template</span>)</span></code>
+<br />
+Sets the template that created the document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#SetFilename" class="summary-sig-name"><code>SetFilename</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filename</span>,
+          <span class=summary-sig-arg>notifyViews</span>)</span></code>
+<br />
+Sets the filename for this document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#SetTitle" class="summary-sig-name"><code>SetTitle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>title</span>)</span></code>
+<br />
+Sets the title for this document.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#SetWriteable" class="summary-sig-name"><code>SetWriteable</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>writeable</span>)</span></code>
+<br />
+Set to False if the document can not be saved.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.docview.Document-class.html#UpdateAllViews" class="summary-sig-name"><code>UpdateAllViews</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sender</span>,
+          <span class=summary-sig-arg>hint</span>)</span></code>
+<br />
+Updates all views.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>=<span class=sig-default>None</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Constructor.  Define your own default constructor to initialize
+application-specific data.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.EvtHandler-class.html#__init__"><code>wx.EvtHandler.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddView"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddView</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>view</span>)</span>
+  </h3>
+<p>If the view is not already in the list of views, adds the view and
+calls OnChangedViewList.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Close"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Close</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Closes the document, by calling OnSaveModified and then (if this true)
+OnCloseDocument. This does not normally delete the document object:
+use DeleteAllViews to do this implicitly.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteAllViews"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteAllViews</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Calls wxView.Close and deletes each view. Deleting the final view will
+implicitly delete the document itself, because the wxView destructor
+calls RemoveView. This in turns calls wxDocument::OnChangedViewList,
+whose default implemention is to save and delete the document if no
+views exist.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteContents"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteContents</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Deletes the contents of the document.  Override this method as
+necessary.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Destroy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Destroy</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Destructor. Removes itself from the document manager.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Object-class.html#Destroy"><code>wx.Object.Destroy</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Draw"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Draw</span>(<span class=sig-arg>context</span>)</span>
+  </h3>
+<p>Called by printing framework to draw the view.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCommandProcessor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCommandProcessor</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the command processor associated with this document.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocumentManager"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocumentManager</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the associated document manager.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocumentModificationDate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocumentModificationDate</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the file's modification date when it was loaded from disk.
+This is used to check if the file has been modified outside of the application.        
+This method has been added to wxPython and is not in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocumentName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocumentName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>The document type name given to the wxDocTemplate constructor,
+copied to this document when the document is created. If several
+document templates are created that use the same document type, this
+variable is used in wxDocManager::CreateView to collate a list of
+alternative view types that can be used on this kind of document.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocumentSaved"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocumentSaved</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns True if the document has been saved.  This method has been
+added to wxPython and is not in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocumentTemplate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocumentTemplate</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the template that created the document.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDocumentWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDocumentWindow</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Intended to return a suitable window for using as a parent for
+document-related dialog boxes. By default, uses the frame associated
+with the first view.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFilename"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFilename</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the filename associated with this document, or &quot;&quot; if none is
+associated.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFirstView"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFirstView</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>A convenience function to get the first view for a document, because
+in many cases a document will only have a single view.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPrintableName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPrintableName</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Copies a suitable document name into the supplied name buffer.
+The default function uses the title, or if there is no title, uses the
+filename; or if no filename, the string 'Untitled'.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTitle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTitle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the title for this document. The document title is used for an
+associated frame (if any), and is usually constructed by the framework
+from the filename.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetViews"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetViews</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the list whose elements are the views on the document.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetWriteable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetWriteable</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if the document can be written to its accociated file path.
+This method has been added to wxPython and is not in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsDocumentModificationDateCorrect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsDocumentModificationDateCorrect</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns False if the file has been modified outside of the application.
+This method has been added to wxPython and is not in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsModified"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsModified</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns true if the document has been modified since the last save,
+false otherwise. You may need to override this if your document view
+maintains its own record of being modified (for example if using
+wxTextWindow to view and edit the document).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LoadObject"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LoadObject</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>file</span>)</span>
+  </h3>
+<p>Override this function and call it from your own LoadObject before
+loading your own data. LoadObject is called by the framework
+automatically when the document contents need to be loaded.</p>
+<p>Note that the wxPython version simply sends you a Python file object,
+so you can use pickle.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Modify"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Modify</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>modify</span>)</span>
+  </h3>
+<p>Call with true to mark the document as modified since the last save,
+false otherwise. You may need to override this if your document view
+maintains its own record of being modified (for example if using
+xTextWindow to view and edit the document).
+This method has been extended to notify its views that the dirty flag has changed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="NotifyClosing"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">NotifyClosing</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Notifies the views that the document is going to close.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnChangedViewList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnChangedViewList</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Called when a view is added to or deleted from this document. The
+default implementation saves and deletes the document if no views
+exist (the last one has just been removed).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCloseDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCloseDocument</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>The default implementation calls DeleteContents (an empty
+implementation) sets the modified flag to false. Override this to
+supply additional behaviour when the document is closed with Close.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCreate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCreate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>,
+          <span class=sig-arg>flags</span>)</span>
+  </h3>
+<p>The default implementation calls DeleteContents (an empty
+implementation) sets the modified flag to false. Override this to
+supply additional behaviour when the document is opened with Open.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCreateCommandProcessor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCreateCommandProcessor</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Override this function if you want a different (or no) command
+processor to be created when the document is created. By default, it
+returns an instance of wxCommandProcessor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnNewDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnNewDocument</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>The default implementation calls OnSaveModified and DeleteContents,
+makes a default title for the document, and notifies the views that
+the filename (in fact, the title) has changed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnOpenDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnOpenDocument</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>filename</span>)</span>
+  </h3>
+<p>Constructs an input file for the given filename (which must not
+be empty), and calls LoadObject. If LoadObject returns true, the
+document is set to unmodified; otherwise, an error message box is
+displayed. The document's views are notified that the filename has
+changed, to give windows an opportunity to update their titles. All of
+the document's views are then updated.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSaveDocument"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSaveDocument</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>filename</span>)</span>
+  </h3>
+<p>Constructs an output file for the given filename (which must
+not be empty), and calls SaveObject. If SaveObject returns true, the
+document is set to unmodified; otherwise, an error message box is
+displayed.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSaveModified"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSaveModified</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>If the document has been modified, prompts the user to ask if the
+changes should be changed. If the user replies Yes, the Save function
+is called. If No, the document is marked as unmodified and the
+function succeeds. If Cancel, the function fails.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Processes an event, searching event tables and calling zero or more
+suitable event handler function(s).  Note that the ProcessEvent
+method is called from the wxPython docview framework directly since
+wxPython does not have a virtual ProcessEvent function.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.EvtHandler-class.html#ProcessEvent"><code>wx.EvtHandler.ProcessEvent</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveView"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveView</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>view</span>)</span>
+  </h3>
+<p>Removes the view from the document's list of views, and calls
+OnChangedViewList.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Revert"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Revert</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Override this function to revert the document to its last saved state.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Save"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Save</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Saves the document by calling OnSaveDocument if there is an associated
+filename, or SaveAs if there is no filename.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SaveAs"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SaveAs</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Prompts the user for a file to save to, and then calls OnSaveDocument.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SaveObject"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SaveObject</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>file</span>)</span>
+  </h3>
+<p>Override this function and call it from your own SaveObject before
+saving your own data. SaveObject is called by the framework
+automatically when the document contents need to be saved.</p>
+<p>Note that the wxPython version simply sends you a Python file object,
+so you can use pickle.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCommandProcessor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCommandProcessor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>processor</span>)</span>
+  </h3>
+<p>Sets the command processor to be used for this document. The document
+will then be responsible for its deletion. Normally you should not
+call this; override OnCreateCommandProcessor instead.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDocumentModificationDate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDocumentModificationDate</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Saves the file's last modification date.
+This is used to check if the file has been modified outside of the application.
+This method has been added to wxPython and is not in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDocumentName"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDocumentName</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Sets he document type name given to the wxDocTemplate constructor,
+copied to this document when the document is created. If several
+document templates are created that use the same document type, this
+variable is used in wxDocManager::CreateView to collate a list of
+alternative view types that can be used on this kind of document. Do
+not change the value of this variable.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDocumentSaved"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDocumentSaved</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>saved</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Sets whether the document has been saved.  This method has been
+added to wxPython and is not in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDocumentTemplate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDocumentTemplate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>template</span>)</span>
+  </h3>
+<p>Sets the template that created the document. Should only be called by
+the framework.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFilename"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFilename</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>filename</span>,
+          <span class=sig-arg>notifyViews</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Sets the filename for this document. Usually called by the framework.
+If notifyViews is true, wxView.OnChangeFilename is called for all
+views.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTitle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTitle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>title</span>)</span>
+  </h3>
+<p>Sets the title for this document. The document title is used for an
+associated frame (if any), and is usually constructed by the framework
+from the filename.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetWriteable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetWriteable</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>writeable</span>)</span>
+  </h3>
+<p>Set to False if the document can not be saved.  This will disable the ID_SAVE_AS
+event and is useful for custom documents that should not be saveable.  The ID_SAVE
+event can be disabled by never Modifying the document.  This method has been added
+to wxPython and is not in wxWindows.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateAllViews"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateAllViews</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sender</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>hint</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Updates all views. If sender is non-NULL, does not update this view.
+hint represents optional information to allow a view to optimize its
+update.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:56:39 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

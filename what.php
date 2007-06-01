@@ -35,7 +35,7 @@ href="test7.py.html">Here</a> is an example.
 
 <div align="center">
 <font size="+1" style="font-family: sans-serif;"><b>
-<a href="http://wiki.wxpython.org/index.cgi/How_to_Learn_wxPython">How to Learn wxPython</a>
+<a href="http://wiki.wxpython.org/How_to_Learn_wxPython">How to Learn wxPython</a>
 </b></font>
 </div>
 

@@ -310,40 +310,12 @@ These RPMs each contain the following:
 <font face="sans-serif" size="+1"><b>Debian</b></font><br><br>
 Debian users can get wxPython from the Debian pacakge distribution system and can be installed with apt-get.  Look for packages named <tt>python-wxgtkX.Y</tt> where X.Y is the major version numbers.  
 
-<p><strong><font color="#FF0000">NOTE</font></strong>: The wxPython packages in Debian 'stable' are way behind the times, so you'll want to look at either 'testing' or 'unstable' for newer pacakges.  Alternatively you can build your own Debian packages from sources if you have the necessary tools and libs installed on your system.  You can either do it from the source RPM using alien, as described <a href="http://www.bitpim.org/developer.html">here</a>, or you can build directly from the source tarball. (Instructions still to be written...)
+<p><strong><font color="#FF0000">NOTE</font></strong>: The wxPython packages in Debian 'stable' are way behind the times, so you'll want to look at either 'testing' or 'unstable' for newer pacakges.  Alternatively you can build your own Debian packages from sources if you have the necessary tools and libs installed on your system.  There are some instructions <a href="http://wiki.wxpython.org/BuildingDebianPackages">on the wiki</a>.  You can also do it the old way from the source RPM using alien, as described <a href="http://www.bitpim.org/developer.html">here</a>, although I'm not sure there is any need to do it that way any more.
 
 <p>
 <font face="sans-serif" size="+1"><b>Ubuntu</b></font><br><br>
-There is a set of packages maintained by the wxPython team for Ubuntu for i386 and amd64 based systems.  You can get them by adding the following to your <tt>/etc/apt/sources.list</tt> file:
-<pre>
-    # wxPython APT repository at wxcommunity.com
-    deb http://wxpython.wxcommunity.com/apt/ubuntu/DIST /
-    deb-src http://wxpython.wxcommunity.com/apt/ubuntu/DIST /
-</pre>
+There is a set of packages for the current releases of wxPython maintained by the wxPython team, for Ubuntu for i386 and amd64 based systems.  You can get them by following <a href="http://wiki.wxpython.org/InstallingOnUbuntuOrDebian">these directions</a> on the wiki.
 
-Depending on which version of Ubuntu you are running replace the "DIST" above with one of the following values:
-
-<p><center>
-<table width="50%" border="1" cellspacing="1">
-<tr><th>Version</th><th>Arch</th><th>DIST</th></tr>
-<tr><td>6.06 (dapper drake)</td><td>i386</td><td><b>dapper</b></td></tr>
-<tr><td>6.06 (dapper drake)</td><td>amd64</td><td><b>dapper64</b></td></tr>
-<tr><td>6.10 (edgy eft)</td><td>i386</td><td><b>dapper<sup>[<font color="Red">*</font>]</sup></b></td></tr>
-<tr><td>6.10 (edgy eft)</td><td>amd64</td><td><b>dapper64<sup>[<font color="Red">*</font>]</sup></b></td></tr>
-<tr><td>7.04 (feisty fawn)</td><td>i386</td><td><b>feisty</b></td></tr>
-<tr><td>7.04 (feisty fawn)</td><td>amd64</td><td><b>feisty64</b></td></tr>
-</table>
-</center><p>
-
-<b><sup>[<font color="Red">*</font>]</sup></b> Yes, you should use the dapper pacakges on edgy.  
-
-<p>After the repository info has been added to <tt>/etc/apt/sources.list</tt> you can fetch and install the packages using one of the GUI package manager tools such as Synaptic or Adept, or by running the following commands from a terminal window:
-<pre>
-    sudo apt-get update
-    sudo apt-get install python-wxgtk2.8 python-wxtools python-wxaddons wx2.8-i18n
-</pre>
-
-These packages (and their dependencies) will replace earlier versions of wxPython and wxGTK in the same release series that may have been installed previously.  Note that there are a few other wx packages as well, but these are all that is required.
 </td></tr>
 
 
@@ -377,7 +349,7 @@ Since the RPMs no longer include the demo or samples, it is now packaged separat
 <img src="images/dot.jpg" width="37" height="36" alt="" border="0">
 
 
-<P><a name="sources"><a name="cvsaccess">
+<P><a name="sources">
 <table width="100%" border="1" cellspacing="0" cellpadding="8" bgcolor="#BCB8E7">
 <tr><td>
 <font face="sans-serif" size="+1"><b>Source Code</b></font>
@@ -404,24 +376,30 @@ Here are the wxPython sources and all you'll need (besides the prerequisites out
 </pre> 
 
 
-<p><br>
+<p><br><a name="svnaccess">
 <font face="sans-serif"><b>Development Sources</b></font><br>
-You can also get access to the source tree from the wxWidgets CVS server.  This lets you have instant access to new features and bug fixes as the core wxWidgets/wxPython developers complete their implementaion and check them in to the repository.  To learn more about CVS and to get the CVS programs, go to the <a href="http://www.cvshome.org/index.html">CVS Home</a>.
+You can also get access to the source tree from the wxWidgets Subversion (SVN) server.  This lets you have instant access to new features and bug fixes as the core wxWidgets/wxPython developers complete their implementaion and check them in to the repository.  To learn more about SVN and to get the SVN programs if you don't already have them, go to the <a href="http://subversion.tigris.org/">SVN Home</a>.
 <p>
-To get your copy of the source code, simply run these commands, (assumes the command-line version of CVS, if you are using WinCVS or other GUI version, adapt accordingly.)  When prompted for a password, type "anoncvs" (the same as the user name.)
-
-<pre>
-    set CVSROOT=:pserver:anoncvs@cvs.wxwidgets.org:/pack/cvsroots/wxwidgets
-    (or whatever you need to do to set an environment variable in your shell)
-
-    cvs login
-    cvs co wxWidgets
-</pre>
+You can browse the source repository, including the history of changes to each file by going to <a href="http://svn.wxwidgets.org/svn/wx/">http://svn.wxwidgets.org/svn/wx/</a>.
 <p>
-You will find the wxPython sources in the wxWidgets/wxPython directory.  When you want to update your copy of the sources, simply change to the wxWidgets directory and run
-<pre>
-    cvs update
-</pre>
+To get your own copy of the source code from SVN simply run "<tt>svn checkout</tt>" with one of the following URLs (or any others that will give you the code you want to see.)  You'll probably also want to specify a destination directory that makes sense to you.
+
+<p><center>
+<table width="90%" border="1" cellspacing="1">
+<tr><th colspan=2>Interesting SVN URLs</th></tr>
+<tr><th>URL</th><th>What you get</th></tr>
+<tr><td><font size="-1">http://svn.wxwidgets.org/svn/wx/wxWidgets/trunk/</font></td>
+<td>The main new development branch for wxWidgets 2.9 and beyond</td></tr>
+<tr><td><font size="-1">http://svn.wxwidgets.org/svn/wx/wxPython/trunk/</font></td>
+<td>This is for development of wxPython 2.9</td></tr>
+<tr><td><font size="-1">http://svn.wxwidgets.org/svn/wx/wxWidgets/branches/WX_2_8_BRANCH/</font></td>
+<td>Maintanence branch for wxWidgets 2.8.x</td></tr>
+<tr><td><font size="-1">http://svn.wxwidgets.org/svn/wx/wxPython/branches/WX_2_8_BRANCH/</font></td>
+<td>Maintenance branch for wxPython 2.8.x</td></tr>
+</table></center>
+<p>
+
+Once you have a working copy of the code you can modify it and use "<tt>svn diff</tt>" to make a patch to submit to the patch tracker, or you can use "<tt>svn update</tt>" to fetch new changes from the repository.
 <p>
 
 </td></tr>

@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -81,7 +81,7 @@ Creates a new range object.</td></tr>
           <span class=summary-sig-arg>range</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="unknown--1589591700"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+  <td><code><a name="unknown-673936164"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#__eq__" class="summary-sig-name"><code>__eq__</code></a>(<span class=summary-sig-arg>self</span>,
@@ -121,6 +121,11 @@ Test for equality of RichTextRange objects.</td></tr>
           <span class=summary-sig-arg>pos</span>)</span></code>
 <br />
 Returns true if the given position is within this range.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextRange</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#FromInternal" class="summary-sig-name"><code>FromInternal</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Convert from internal to public API form: (n, n+1) is the range of a
+single character.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">(start,end)</font></td>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#Get" class="summary-sig-name"><code>Get</code></a>()</span></code>
 <br />
@@ -167,6 +172,10 @@ Limit this range to be within 'range'</td></tr>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#Swap" class="summary-sig-name"><code>Swap</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
 Swaps the start and end</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextRange</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextRange-class.html#ToInternal" class="summary-sig-name"><code>ToInternal</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Convert to internal form: (n, n) is the range of a single character.</td></tr>
 </table><br />
 
 
@@ -274,6 +283,20 @@ bool      </dd>
   </dd></dl>
 </td></tr></table>
 
+<a name="FromInternal"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FromInternal</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Convert from internal to public API form: (n, n+1) is the range of a
+single character.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+RichTextRange      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
 <a name="Get"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">Get</span>()</span>
@@ -369,6 +392,19 @@ bool      </dd>
   </h3>
 <p>Swaps the start and end</p>
   <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ToInternal"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ToInternal</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Convert to internal form: (n, n) is the range of a single character.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+RichTextRange      </dd>
+    </dl>
   </dd></dl>
 </td></tr></table>
 <br />
@@ -473,10 +509,10 @@ bool      </dd>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1274607716</span>(...)</span>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-148387236</span>(...)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1274607660</span>(...)</span>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-148387348</span>(...)</span>
       </dd>
     </dl>
   </dd>
@@ -522,7 +558,7 @@ True                                                                   </pre>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -530,7 +566,7 @@ True                                                                   </pre>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:55:31 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Tue Aug  7 12:46:32 2007</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

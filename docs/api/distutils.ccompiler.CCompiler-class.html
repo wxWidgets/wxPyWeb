@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>distutils.ccompiler.CCompiler</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        Package&nbsp;distutils ::
+        Module&nbsp;ccompiler ::
+        Class&nbsp;CCompiler
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="distutils.ccompiler.CCompiler-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class CCompiler</h2>
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="distutils.unixccompiler.UnixCCompiler-class.html"><code>UnixCCompiler</code></a></dd></dl>
+
+<hr/>
+
+<p>Abstract base class to define the interface that must be implemented
+by real compiler classes.  Also has some utility methods used by
+several compiler classes.</p>
+<p>The basic idea behind a compiler abstraction class is that each
+instance can be used for all the compile/link steps in building a
+single project.  Thus, attributes common to all of those compile and
+link steps -- include directories, macros to define, libraries to link
+against, etc. -- are attributes of the compiler instance.  To allow for
+variability in how individual files are treated, most of those
+attributes may be varied on a per-compilation or per-link basis.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>verbose</span>,
+          <span class=summary-sig-arg>dry_run</span>,
+          <span class=summary-sig-arg>force</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#add_include_dir" class="summary-sig-name"><code>add_include_dir</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dir</span>)</span></code>
+<br />
+Add 'dir' to the list of directories that will be searched for
+header files.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#add_library" class="summary-sig-name"><code>add_library</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>libname</span>)</span></code>
+<br />
+Add 'libname' to the list of libraries that will be included in
+all links driven by this compiler object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#add_library_dir" class="summary-sig-name"><code>add_library_dir</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dir</span>)</span></code>
+<br />
+Add 'dir' to the list of directories that will be searched for
+libraries specified to 'add_library()' and 'set_libraries()'.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#add_link_object" class="summary-sig-name"><code>add_link_object</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>object</span>)</span></code>
+<br />
+Add 'object' to the list of object files (or analogues, such as
+explicitly named library files or the output of &quot;resource
+compilers&quot;) to be included in every link driven by this compiler
+object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#add_runtime_library_dir" class="summary-sig-name"><code>add_runtime_library_dir</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dir</span>)</span></code>
+<br />
+Add 'dir' to the list of directories that will be searched for
+shared libraries at runtime.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="announce"></a><span class="summary-sig"><span class="summary-sig-name">announce</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>msg</span>,
+          <span class=summary-sig-arg>level</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#compile" class="summary-sig-name"><code>compile</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sources</span>,
+          <span class=summary-sig-arg>output_dir</span>,
+          <span class=summary-sig-arg>macros</span>,
+          <span class=summary-sig-arg>include_dirs</span>,
+          <span class=summary-sig-arg>debug</span>,
+          <span class=summary-sig-arg>extra_preargs</span>,
+          <span class=summary-sig-arg>extra_postargs</span>,
+          <span class=summary-sig-arg>depends</span>)</span></code>
+<br />
+Compile one or more source files.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#create_static_lib" class="summary-sig-name"><code>create_static_lib</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>objects</span>,
+          <span class=summary-sig-arg>output_libname</span>,
+          <span class=summary-sig-arg>output_dir</span>,
+          <span class=summary-sig-arg>debug</span>,
+          <span class=summary-sig-arg>target_lang</span>)</span></code>
+<br />
+Link a bunch of stuff together to create a static library file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="debug_print"></a><span class="summary-sig"><span class="summary-sig-name">debug_print</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#define_macro" class="summary-sig-name"><code>define_macro</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Define a preprocessor macro for all compilations driven by this
+compiler object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#detect_language" class="summary-sig-name"><code>detect_language</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sources</span>)</span></code>
+<br />
+Detect the language of a given file, or list of files.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="executable_filename"></a><span class="summary-sig"><span class="summary-sig-name">executable_filename</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>basename</span>,
+          <span class=summary-sig-arg>strip_dir</span>,
+          <span class=summary-sig-arg>output_dir</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="execute"></a><span class="summary-sig"><span class="summary-sig-name">execute</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>func</span>,
+          <span class=summary-sig-arg>args</span>,
+          <span class=summary-sig-arg>msg</span>,
+          <span class=summary-sig-arg>level</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#find_library_file" class="summary-sig-name"><code>find_library_file</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dirs</span>,
+          <span class=summary-sig-arg>lib</span>,
+          <span class=summary-sig-arg>debug</span>)</span></code>
+<br />
+Search the specified list of directories for a static or shared
+library file 'lib' and return the full path to that file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#has_function" class="summary-sig-name"><code>has_function</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>funcname</span>,
+          <span class=summary-sig-arg>includes</span>,
+          <span class=summary-sig-arg>include_dirs</span>,
+          <span class=summary-sig-arg>libraries</span>,
+          <span class=summary-sig-arg>library_dirs</span>)</span></code>
+<br />
+Return a boolean indicating whether funcname is supported on
+the current platform.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#library_dir_option" class="summary-sig-name"><code>library_dir_option</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dir</span>)</span></code>
+<br />
+Return the compiler option to add 'dir' to the list of
+directories searched for libraries.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="library_filename"></a><span class="summary-sig"><span class="summary-sig-name">library_filename</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>libname</span>,
+          <span class=summary-sig-arg>lib_type</span>,
+          <span class=summary-sig-arg>strip_dir</span>,
+          <span class=summary-sig-arg>output_dir</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#library_option" class="summary-sig-name"><code>library_option</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>lib</span>)</span></code>
+<br />
+Return the compiler option to add 'dir' to the list of libraries
+linked into the shared library or executable.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#link" class="summary-sig-name"><code>link</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>target_desc</span>,
+          <span class=summary-sig-arg>objects</span>,
+          <span class=summary-sig-arg>output_filename</span>,
+          <span class=summary-sig-arg>output_dir</span>,
+          <span class=summary-sig-arg>libraries</span>,
+          <span class=summary-sig-arg>library_dirs</span>,
+          <span class=summary-sig-arg>runtime_library_dirs</span>,
+          <span class=summary-sig-arg>export_symbols</span>,
+          <span class=summary-sig-arg>debug</span>,
+          <span class=summary-sig-arg>extra_preargs</span>,
+          <span class=summary-sig-arg>extra_postargs</span>,
+          <span class=summary-sig-arg>build_temp</span>,
+          <span class=summary-sig-arg>target_lang</span>)</span></code>
+<br />
+Link a bunch of stuff together to create an executable or
+shared library file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="link_executable"></a><span class="summary-sig"><span class="summary-sig-name">link_executable</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>objects</span>,
+          <span class=summary-sig-arg>output_progname</span>,
+          <span class=summary-sig-arg>output_dir</span>,
+          <span class=summary-sig-arg>libraries</span>,
+          <span class=summary-sig-arg>library_dirs</span>,
+          <span class=summary-sig-arg>runtime_library_dirs</span>,
+          <span class=summary-sig-arg>debug</span>,
+          <span class=summary-sig-arg>extra_preargs</span>,
+          <span class=summary-sig-arg>extra_postargs</span>,
+          <span class=summary-sig-arg>target_lang</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="link_shared_lib"></a><span class="summary-sig"><span class="summary-sig-name">link_shared_lib</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>objects</span>,
+          <span class=summary-sig-arg>output_libname</span>,
+          <span class=summary-sig-arg>output_dir</span>,
+          <span class=summary-sig-arg>libraries</span>,
+          <span class=summary-sig-arg>library_dirs</span>,
+          <span class=summary-sig-arg>runtime_library_dirs</span>,
+          <span class=summary-sig-arg>export_symbols</span>,
+          <span class=summary-sig-arg>debug</span>,
+          <span class=summary-sig-arg>extra_preargs</span>,
+          <span class=summary-sig-arg>extra_postargs</span>,
+          <span class=summary-sig-arg>build_temp</span>,
+          <span class=summary-sig-arg>target_lang</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="link_shared_object"></a><span class="summary-sig"><span class="summary-sig-name">link_shared_object</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>objects</span>,
+          <span class=summary-sig-arg>output_filename</span>,
+          <span class=summary-sig-arg>output_dir</span>,
+          <span class=summary-sig-arg>libraries</span>,
+          <span class=summary-sig-arg>library_dirs</span>,
+          <span class=summary-sig-arg>runtime_library_dirs</span>,
+          <span class=summary-sig-arg>export_symbols</span>,
+          <span class=summary-sig-arg>debug</span>,
+          <span class=summary-sig-arg>extra_preargs</span>,
+          <span class=summary-sig-arg>extra_postargs</span>,
+          <span class=summary-sig-arg>build_temp</span>,
+          <span class=summary-sig-arg>target_lang</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="mkpath"></a><span class="summary-sig"><span class="summary-sig-name">mkpath</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="move_file"></a><span class="summary-sig"><span class="summary-sig-name">move_file</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>src</span>,
+          <span class=summary-sig-arg>dst</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="object_filenames"></a><span class="summary-sig"><span class="summary-sig-name">object_filenames</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>source_filenames</span>,
+          <span class=summary-sig-arg>strip_dir</span>,
+          <span class=summary-sig-arg>output_dir</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#preprocess" class="summary-sig-name"><code>preprocess</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>source</span>,
+          <span class=summary-sig-arg>output_file</span>,
+          <span class=summary-sig-arg>macros</span>,
+          <span class=summary-sig-arg>include_dirs</span>,
+          <span class=summary-sig-arg>extra_preargs</span>,
+          <span class=summary-sig-arg>extra_postargs</span>)</span></code>
+<br />
+Preprocess a single C/C++ source file, named in 'source'.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#runtime_library_dir_option" class="summary-sig-name"><code>runtime_library_dir_option</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dir</span>)</span></code>
+<br />
+Return the compiler option to add 'dir' to the list of
+directories searched for runtime libraries.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="set_executable"></a><span class="summary-sig"><span class="summary-sig-name">set_executable</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#set_executables" class="summary-sig-name"><code>set_executables</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-kwarg">**args</span>)</span></code>
+<br />
+Define the executables (and options for them) that will be run
+to perform the various stages of compilation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#set_include_dirs" class="summary-sig-name"><code>set_include_dirs</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dirs</span>)</span></code>
+<br />
+Set the list of directories that will be searched to 'dirs' (a
+list of strings).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#set_libraries" class="summary-sig-name"><code>set_libraries</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>libnames</span>)</span></code>
+<br />
+Set the list of libraries to be included in all links driven by
+this compiler object to 'libnames' (a list of strings).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#set_library_dirs" class="summary-sig-name"><code>set_library_dirs</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dirs</span>)</span></code>
+<br />
+Set the list of library search directories to 'dirs' (a list of
+strings).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#set_link_objects" class="summary-sig-name"><code>set_link_objects</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>objects</span>)</span></code>
+<br />
+Set the list of object files (or analogues) to be included in
+every link to 'objects'.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#set_runtime_library_dirs" class="summary-sig-name"><code>set_runtime_library_dirs</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dirs</span>)</span></code>
+<br />
+Set the list of directories to search for shared libraries at
+runtime to 'dirs' (a list of strings).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="shared_object_filename"></a><span class="summary-sig"><span class="summary-sig-name">shared_object_filename</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>basename</span>,
+          <span class=summary-sig-arg>strip_dir</span>,
+          <span class=summary-sig-arg>output_dir</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="spawn"></a><span class="summary-sig"><span class="summary-sig-name">spawn</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cmd</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="distutils.ccompiler.CCompiler-class.html#undefine_macro" class="summary-sig-name"><code>undefine_macro</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Undefine a preprocessor macro for all compilations driven by
+this compiler object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="warn"></a><span class="summary-sig"><span class="summary-sig-name">warn</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>NoneType</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#compiler_type"><code>compiler_type</code></a></b> = <span title="None">None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>NoneType</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#exe_extension"><code>exe_extension</code></a></b> = <span title="None">None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#EXECUTABLE"><code>EXECUTABLE</code></a></b> = <span title="'executable'"><code><span class="variable-quote">'</span>executable<span class="variable-quote">'</span>                                </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#language_map"><code>language_map</code></a></b> = <span title="{'.cc': 'c++', '.m': 'objc', '.c': 'c', '.cpp': 'c++', '.cxx': 'c++'}"><code>{'.cc':&nbsp;'c++',&nbsp;'.m':&nbsp;'objc',&nbsp;'.c':&nbsp;'c',&nbsp;'<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>list</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#language_order"><code>language_order</code></a></b> = <span title="['c++', 'objc', 'c']"><code>['c++',&nbsp;'objc',&nbsp;'c']                    </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>NoneType</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#obj_extension"><code>obj_extension</code></a></b> = <span title="None">None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>NoneType</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#shared_lib_extension"><code>shared_lib_extension</code></a></b> = <span title="None">None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>NoneType</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#shared_lib_format"><code>shared_lib_format</code></a></b> = <span title="None">None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#SHARED_LIBRARY"><code>SHARED_LIBRARY</code></a></b> = <span title="'shared_library'"><code><span class="variable-quote">'</span>shared_library<span class="variable-quote">'</span>                        </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#SHARED_OBJECT"><code>SHARED_OBJECT</code></a></b> = <span title="'shared_object'"><code><span class="variable-quote">'</span>shared_object<span class="variable-quote">'</span>                          </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>NoneType</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#src_extensions"><code>src_extensions</code></a></b> = <span title="None">None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>NoneType</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#static_lib_extension"><code>static_lib_extension</code></a></b> = <span title="None">None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>NoneType</code></font></td>
+<td><b><a href="distutils.ccompiler.CCompiler-class.html#static_lib_format"><code>static_lib_format</code></a></b> = <span title="None">None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="add_include_dir"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">add_include_dir</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dir</span>)</span>
+  </h3>
+<p>Add 'dir' to the list of directories that will be searched for
+header files.  The compiler is instructed to search directories in
+the order in which they are supplied by successive calls to
+'add_include_dir()'.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="add_library"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">add_library</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>libname</span>)</span>
+  </h3>
+<p>Add 'libname' to the list of libraries that will be included in
+all links driven by this compiler object.  Note that 'libname'
+should <em>not</em> be the name of a file containing a library, but the
+name of the library itself: the actual filename will be inferred by
+the linker, the compiler, or the compiler class (depending on the
+platform).</p>
+<p>The linker will be instructed to link against libraries in the
+order they were supplied to 'add_library()' and/or
+'set_libraries()'.  It is perfectly valid to duplicate library
+names; the linker will be instructed to link against libraries as
+many times as they are mentioned.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="add_library_dir"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">add_library_dir</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dir</span>)</span>
+  </h3>
+<p>Add 'dir' to the list of directories that will be searched for
+libraries specified to 'add_library()' and 'set_libraries()'.  The
+linker will be instructed to search for libraries in the order they
+are supplied to 'add_library_dir()' and/or 'set_library_dirs()'.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="add_link_object"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">add_link_object</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>object</span>)</span>
+  </h3>
+<p>Add 'object' to the list of object files (or analogues, such as
+explicitly named library files or the output of &quot;resource
+compilers&quot;) to be included in every link driven by this compiler
+object.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="add_runtime_library_dir"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">add_runtime_library_dir</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dir</span>)</span>
+  </h3>
+<p>Add 'dir' to the list of directories that will be searched for
+shared libraries at runtime.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="compile"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">compile</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sources</span>,
+          <span class=sig-arg>output_dir</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>macros</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>include_dirs</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>debug</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>extra_preargs</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>extra_postargs</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>depends</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Compile one or more source files.</p>
+<p>'sources' must be a list of filenames, most likely C/C++
+files, but in reality anything that can be handled by a
+particular compiler and compiler class (eg. MSVCCompiler can
+handle resource files in 'sources').  Return a list of object
+filenames, one per source filename in 'sources'.  Depending on
+the implementation, not all source files will necessarily be
+compiled, but all corresponding object filenames will be
+returned.</p>
+<p>If 'output_dir' is given, object files will be put under it, while
+retaining their original path component.  That is, &quot;foo/bar.c&quot;
+normally compiles to &quot;foo/bar.o&quot; (for a Unix implementation); if
+'output_dir' is &quot;build&quot;, then it would compile to
+&quot;build/foo/bar.o&quot;.</p>
+<p>'macros', if given, must be a list of macro definitions.  A macro
+definition is either a (name, value) 2-tuple or a (name,) 1-tuple.
+The former defines a macro; if the value is None, the macro is
+defined without an explicit value.  The 1-tuple case undefines a
+macro.  Later definitions/redefinitions/ undefinitions take
+precedence.</p>
+<p>'include_dirs', if given, must be a list of strings, the
+directories to add to the default include file search path for this
+compilation only.</p>
+<p>'debug' is a boolean; if true, the compiler will be instructed to
+output debug symbols in (or alongside) the object file(s).</p>
+<p>'extra_preargs' and 'extra_postargs' are implementation- dependent.
+On platforms that have the notion of a command-line (e.g. Unix,
+DOS/Windows), they are most likely lists of strings: extra
+command-line arguments to prepand/append to the compiler command
+line.  On other platforms, consult the implementation class
+documentation.  In any event, they are intended as an escape hatch
+for those occasions when the abstract compiler framework doesn't
+cut the mustard.</p>
+<p>'depends', if given, is a list of filenames that all targets
+depend on.  If a source file is older than any file in
+depends, then the source file will be recompiled.  This
+supports dependency tracking, but only at a coarse
+granularity.</p>
+<p>Raises CompileError on failure.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="create_static_lib"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">create_static_lib</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>objects</span>,
+          <span class=sig-arg>output_libname</span>,
+          <span class=sig-arg>output_dir</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>debug</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>target_lang</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Link a bunch of stuff together to create a static library file.
+The &quot;bunch of stuff&quot; consists of the list of object files supplied
+as 'objects', the extra object files supplied to
+'add_link_object()' and/or 'set_link_objects()', the libraries
+supplied to 'add_library()' and/or 'set_libraries()', and the
+libraries supplied as 'libraries' (if any).</p>
+<p>'output_libname' should be a library name, not a filename; the
+filename will be inferred from the library name.  'output_dir' is
+the directory where the library file will be put.</p>
+<p>'debug' is a boolean; if true, debugging information will be
+included in the library (note that on most platforms, it is the
+compile step where this matters: the 'debug' flag is included here
+just for consistency).</p>
+<p>'target_lang' is the target language for which the given objects
+are being compiled. This allows specific linkage time treatment of
+certain languages.</p>
+<p>Raises LibError on failure.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="define_macro"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">define_macro</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Define a preprocessor macro for all compilations driven by this
+compiler object.  The optional parameter 'value' should be a
+string; if it is not supplied, then the macro will be defined
+without an explicit value and the exact outcome depends on the
+compiler used (XXX true? does ANSI say anything about this?)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="detect_language"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">detect_language</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sources</span>)</span>
+  </h3>
+<p>Detect the language of a given file, or list of files. Uses
+language_map, and language_order to do the job.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="find_library_file"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">find_library_file</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dirs</span>,
+          <span class=sig-arg>lib</span>,
+          <span class=sig-arg>debug</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Search the specified list of directories for a static or shared
+library file 'lib' and return the full path to that file.  If
+'debug' true, look for a debugging version (if that makes sense on
+the current platform).  Return None if 'lib' wasn't found in any of
+the specified directories.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="has_function"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">has_function</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>funcname</span>,
+          <span class=sig-arg>includes</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>include_dirs</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>libraries</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>library_dirs</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Return a boolean indicating whether funcname is supported on
+the current platform.  The optional arguments can be used to
+augment the compilation environment.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="library_dir_option"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">library_dir_option</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dir</span>)</span>
+  </h3>
+<p>Return the compiler option to add 'dir' to the list of
+directories searched for libraries.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="library_option"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">library_option</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>lib</span>)</span>
+  </h3>
+<p>Return the compiler option to add 'dir' to the list of libraries
+linked into the shared library or executable.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="link"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">link</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>target_desc</span>,
+          <span class=sig-arg>objects</span>,
+          <span class=sig-arg>output_filename</span>,
+          <span class=sig-arg>output_dir</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>libraries</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>library_dirs</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>runtime_library_dirs</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>export_symbols</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>debug</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>extra_preargs</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>extra_postargs</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>build_temp</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>target_lang</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Link a bunch of stuff together to create an executable or
+shared library file.</p>
+<p>The &quot;bunch of stuff&quot; consists of the list of object files supplied
+as 'objects'.  'output_filename' should be a filename.  If
+'output_dir' is supplied, 'output_filename' is relative to it
+(i.e. 'output_filename' can provide directory components if
+needed).</p>
+<p>'libraries' is a list of libraries to link against.  These are
+library names, not filenames, since they're translated into
+filenames in a platform-specific way (eg. &quot;foo&quot; becomes &quot;libfoo.a&quot;
+on Unix and &quot;foo.lib&quot; on DOS/Windows).  However, they can include a
+directory component, which means the linker will look in that
+specific directory rather than searching all the normal locations.</p>
+<p>'library_dirs', if supplied, should be a list of directories to
+search for libraries that were specified as bare library names
+(ie. no directory component).  These are on top of the system
+default and those supplied to 'add_library_dir()' and/or
+'set_library_dirs()'.  'runtime_library_dirs' is a list of
+directories that will be embedded into the shared library and used
+to search for other shared libraries that <em>it</em> depends on at
+run-time.  (This may only be relevant on Unix.)</p>
+<p>'export_symbols' is a list of symbols that the shared library will
+export.  (This appears to be relevant only on Windows.)</p>
+<p>'debug' is as for 'compile()' and 'create_static_lib()', with the
+slight distinction that it actually matters on most platforms (as
+opposed to 'create_static_lib()', which includes a 'debug' flag
+mostly for form's sake).</p>
+<p>'extra_preargs' and 'extra_postargs' are as for 'compile()' (except
+of course that they supply command-line arguments for the
+particular linker being used).</p>
+<p>'target_lang' is the target language for which the given objects
+are being compiled. This allows specific linkage time treatment of
+certain languages.</p>
+<p>Raises LinkError on failure.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="preprocess"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">preprocess</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>source</span>,
+          <span class=sig-arg>output_file</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>macros</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>include_dirs</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>extra_preargs</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>extra_postargs</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Preprocess a single C/C++ source file, named in 'source'.
+Output will be written to file named 'output_file', or stdout if
+'output_file' not supplied.  'macros' is a list of macro
+definitions as for 'compile()', which will augment the macros set
+with 'define_macro()' and 'undefine_macro()'.  'include_dirs' is a
+list of directory names that will be added to the default list.</p>
+<p>Raises PreprocessError on failure.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="runtime_library_dir_option"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">runtime_library_dir_option</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dir</span>)</span>
+  </h3>
+<p>Return the compiler option to add 'dir' to the list of
+directories searched for runtime libraries.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="set_executables"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">set_executables</span>(<span class=sig-arg>self</span>,
+          <span class="sig-kwarg">**args</span>)</span>
+  </h3>
+<pre class="literalblock">
+Define the executables (and options for them) that will be run
+to perform the various stages of compilation.  The exact set of
+executables that may be specified here depends on the compiler
+class (via the 'executables' class attribute), but most will have:
+  compiler      the C/C++ compiler
+  linker_so     linker used to create shared objects and libraries
+  linker_exe    linker used to create binary executables
+  archiver      static library creator
+
+On platforms with a command-line (Unix, DOS/Windows), each of these
+is a string that will be split into executable name and (optional)
+list of arguments.  (Splitting the string is done similarly to how
+Unix shells operate: words are delimited by spaces, but quotes and
+backslashes can override this.  See
+'distutils.util.split_quoted()'.)
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="set_include_dirs"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">set_include_dirs</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dirs</span>)</span>
+  </h3>
+<p>Set the list of directories that will be searched to 'dirs' (a
+list of strings).  Overrides any preceding calls to
+'add_include_dir()'; subsequence calls to 'add_include_dir()' add
+to the list passed to 'set_include_dirs()'.  This does not affect
+any list of standard include directories that the compiler may
+search by default.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="set_libraries"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">set_libraries</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>libnames</span>)</span>
+  </h3>
+<p>Set the list of libraries to be included in all links driven by
+this compiler object to 'libnames' (a list of strings).  This does
+not affect any standard system libraries that the linker may
+include by default.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="set_library_dirs"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">set_library_dirs</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dirs</span>)</span>
+  </h3>
+<p>Set the list of library search directories to 'dirs' (a list of
+strings).  This does not affect any standard library search path
+that the linker may search by default.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="set_link_objects"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">set_link_objects</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>objects</span>)</span>
+  </h3>
+<p>Set the list of object files (or analogues) to be included in
+every link to 'objects'.  This does not affect any standard object
+files that the linker may include by default (such as system
+libraries).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="set_runtime_library_dirs"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">set_runtime_library_dirs</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dirs</span>)</span>
+  </h3>
+<p>Set the list of directories to search for shared libraries at
+runtime to 'dirs' (a list of strings).  This does not affect any
+standard search path that the runtime linker may search by
+default.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="undefine_macro"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">undefine_macro</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>)</span>
+  </h3>
+<p>Undefine a preprocessor macro for all compilations driven by
+this compiler object.  If the same macro is defined by
+'define_macro()' and undefined by 'undefine_macro()' the last call
+takes precedence (including multiple redefinitions or
+undefinitions).  If the macro is redefined/undefined on a
+per-compilation basis (ie. in the call to 'compile()'), then that
+takes precedence.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="compiler_type"></a>
+<h3>compiler_type</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>NoneType</code>
+
+      </dd>
+<span title="None">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="exe_extension"></a>
+<h3>exe_extension</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>NoneType</code>
+
+      </dd>
+<span title="None">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EXECUTABLE"></a>
+<h3>EXECUTABLE</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'executable'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>executable<span class="variable-quote">'</span>                                                           </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="language_map"></a>
+<h3>language_map</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{'.cc': 'c++', '.m': 'objc', '.c': 'c', '.cpp': 'c++', '.cxx': 'c++'}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{'.cc': 'c++', '.m': 'objc', '.c': 'c', '.cpp': 'c++', '.cxx': 'c++'}  </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="language_order"></a>
+<h3>language_order</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>list</code>
+
+      </dd>
+<span title="['c++', 'objc', 'c']">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+['c++', 'objc', 'c']                                                   </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="obj_extension"></a>
+<h3>obj_extension</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>NoneType</code>
+
+      </dd>
+<span title="None">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="shared_lib_extension"></a>
+<h3>shared_lib_extension</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>NoneType</code>
+
+      </dd>
+<span title="None">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="shared_lib_format"></a>
+<h3>shared_lib_format</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>NoneType</code>
+
+      </dd>
+<span title="None">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="SHARED_LIBRARY"></a>
+<h3>SHARED_LIBRARY</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'shared_library'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>shared_library<span class="variable-quote">'</span>                                                       </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="SHARED_OBJECT"></a>
+<h3>SHARED_OBJECT</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>str</code>
+
+      </dd>
+<span title="'shared_object'">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+<span class="variable-quote">'</span>shared_object<span class="variable-quote">'</span>                                                        </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="src_extensions"></a>
+<h3>src_extensions</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>NoneType</code>
+
+      </dd>
+<span title="None">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="static_lib_extension"></a>
+<h3>static_lib_extension</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>NoneType</code>
+
+      </dd>
+<span title="None">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="static_lib_format"></a>
+<h3>static_lib_format</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>NoneType</code>
+
+      </dd>
+<span title="None">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Tue Aug  7 12:49:38 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

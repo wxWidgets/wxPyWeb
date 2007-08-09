@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.richtext.RichTextObject</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.richtext-module.html">Module&nbsp;richtext</a> ::
+        Class&nbsp;RichTextObject
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.richtext.RichTextObject-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type RichTextObject</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+    
+         |    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+
+             |
+            <b>RichTextObject</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.richtext.RichTextCompositeObject-class.html"><code>RichTextCompositeObject</code></a>,
+    <a href="wx.richtext.RichTextImage-class.html"><code>RichTextImage</code></a>,
+    <a href="wx.richtext.RichTextPlainText-class.html"><code>RichTextPlainText</code></a></dd></dl>
+
+<hr/>
+
+<p>This is the base class for all drawable objects in a <a href="wx.richtext.RichTextCtrl-class.html" class="link"><code>RichTextCtrl</code></a>.</p>
+<p>The data displayed in a <a href="wx.richtext.RichTextCtrl-class.html" class="link"><code>RichTextCtrl</code></a> is handled by <a href="wx.richtext.RichTextBuffer-class.html" class="link"><code>RichTextBuffer</code></a>,
+and a <a href="wx.richtext.RichTextCtrl-class.html" class="link"><code>RichTextCtrl</code></a> always has one such buffer.</p>
+<p>The content is represented by a hierarchy of objects, all derived from
+<a href="wx.richtext.RichTextObject-class.html" class="link"><code>RichTextObject</code></a>. An object might be an image, a fragment of text, a
+paragraph, or a whole buffer. Objects store a an attribute object
+containing style information; a paragraph object can contain both
+paragraph and character information, but content objects such as text
+can only store character information. The final style displayed in the
+control or in a printout is a combination of base style, paragraph
+style and content (character) style.</p>
+<p>The top of the hierarchy is the buffer, a kind of
+<a href="wx.richtext.RichTextParagraphLayoutBox-class.html" class="link"><code>RichTextParagraphLayoutBox</code></a>. containing further <a href="wx.richtext.RichTextParagraph-class.html" class="link"><code>RichTextParagraph</code></a>
+objects, each of which can include text, images and potentially other
+types of objects.</p>
+<p>Each object maintains a range (start and end position) measured from
+the start of the main parent object.</p>
+<p>When Layout is called on an object, it is given a size which the
+object must limit itself to, or one or more flexible directions
+(vertical or horizontal). So, for example, a centred paragraph is
+given the page width to play with (minus any margins), but can extend
+indefinitely in the vertical direction. The implementation of Layout
+caches the calculated size and position.</p>
+<p>When the buffer is modified, a range is invalidated (marked as
+requiring layout), so that only the minimum amount of layout is
+performed.</p>
+<p>A paragraph of pure text with the same style contains just one further
+object, a <a href="wx.richtext.RichTextPlainText-class.html" class="link"><code>RichTextPlainText</code></a> object. When styling is applied to part
+of this object, the object is decomposed into separate objects, one
+object for each different character style. So each object within a
+paragraph always has just one attribute object to denote its character
+style. Of course, this can lead to fragmentation after a lot of edit
+operations, potentially leading to several objects with the same style
+where just one would do. So a Defragment function is called when
+updating the control's display, to ensure that the minimum number of
+objects is used.</p>
+<p>To implement your own RichTextObjects in Python you must derive a
+class from <code>PyRichTextObject</code>, which has been instrumented to forward
+the virtual C++ method calls to the Python methods in the derived
+class. (This class hasn't been implemented yet!)</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="unknown-665094100"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="CalculateRange"></a><span class="summary-sig"><span class="summary-sig-name">CalculateRange</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>start</span>,
+          <span class=summary-sig-arg>OUTPUT</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="CanMerge"></a><span class="summary-sig"><span class="summary-sig-name">CanMerge</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>object</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextObject</font></td>
+  <td><code><a name="Clone"></a><span class="summary-sig"><span class="summary-sig-name">Clone</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="ConvertTenthsMMToPixels"></a><span class="summary-sig"><span class="summary-sig-name">ConvertTenthsMMToPixels</span>(<span class=summary-sig-arg>ppi</span>,
+          <span class=summary-sig-arg>units</span>)</span></code>
+<br />
+    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="ConvertTenthsMMToPixelsDC"></a><span class="summary-sig"><span class="summary-sig-name">ConvertTenthsMMToPixelsDC</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>units</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Copy"></a><span class="summary-sig"><span class="summary-sig-name">Copy</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>obj</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="DeleteRange"></a><span class="summary-sig"><span class="summary-sig-name">DeleteRange</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Dereference"></a><span class="summary-sig"><span class="summary-sig-name">Dereference</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextObject</font></td>
+  <td><code><a name="DoSplit"></a><span class="summary-sig"><span class="summary-sig-name">DoSplit</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="Draw"></a><span class="summary-sig"><span class="summary-sig-name">Draw</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>range</span>,
+          <span class=summary-sig-arg>selectionRange</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>descent</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="Dump"></a><span class="summary-sig"><span class="summary-sig-name">Dump</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="FindPosition"></a><span class="summary-sig"><span class="summary-sig-name">FindPosition</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>index</span>,
+          <span class=summary-sig-arg>OUTPUT</span>,
+          <span class=summary-sig-arg>OUTPUT</span>,
+          <span class=summary-sig-arg>forceLineStart</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextAttr</font></td>
+  <td><code><a name="GetAttributes"></a><span class="summary-sig"><span class="summary-sig-name">GetAttributes</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><a name="GetBestSize"></a><span class="summary-sig"><span class="summary-sig-name">GetBestSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetBottomMargin"></a><span class="summary-sig"><span class="summary-sig-name">GetBottomMargin</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextBuffer</font></td>
+  <td><code><a name="GetBuffer"></a><span class="summary-sig"><span class="summary-sig-name">GetBuffer</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><a name="GetCachedSize"></a><span class="summary-sig"><span class="summary-sig-name">GetCachedSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetDescent"></a><span class="summary-sig"><span class="summary-sig-name">GetDescent</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="GetDirty"></a><span class="summary-sig"><span class="summary-sig-name">GetDirty</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetLeftMargin"></a><span class="summary-sig"><span class="summary-sig-name">GetLeftMargin</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextObject</font></td>
+  <td><code><a name="GetParent"></a><span class="summary-sig"><span class="summary-sig-name">GetParent</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Point</font></td>
+  <td><code><a name="GetPosition"></a><span class="summary-sig"><span class="summary-sig-name">GetPosition</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextRange</font></td>
+  <td><code><a name="GetRange"></a><span class="summary-sig"><span class="summary-sig-name">GetRange</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="GetRangeSize"></a><span class="summary-sig"><span class="summary-sig-name">GetRangeSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>,
+          <span class=summary-sig-arg>OUTPUT</span>,
+          <span class=summary-sig-arg>OUTPUT</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>position</span>,
+          <span class=summary-sig-arg>0)</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Rect</font></td>
+  <td><code><a name="GetRect"></a><span class="summary-sig"><span class="summary-sig-name">GetRect</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetRightMargin"></a><span class="summary-sig"><span class="summary-sig-name">GetRightMargin</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><a name="GetTextForRange"></a><span class="summary-sig"><span class="summary-sig-name">GetTextForRange</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetTopMargin"></a><span class="summary-sig"><span class="summary-sig-name">GetTopMargin</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="HitTest"></a><span class="summary-sig"><span class="summary-sig-name">HitTest</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>OUTPUT</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsComposite"></a><span class="summary-sig"><span class="summary-sig-name">IsComposite</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="IsEmpty"></a><span class="summary-sig"><span class="summary-sig-name">IsEmpty</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="Layout"></a><span class="summary-sig"><span class="summary-sig-name">Layout</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="Merge"></a><span class="summary-sig"><span class="summary-sig-name">Merge</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>object</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Reference"></a><span class="summary-sig"><span class="summary-sig-name">Reference</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetAttributes"></a><span class="summary-sig"><span class="summary-sig-name">SetAttributes</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attr</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetCachedSize"></a><span class="summary-sig"><span class="summary-sig-name">SetCachedSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sz</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDescent"></a><span class="summary-sig"><span class="summary-sig-name">SetDescent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>descent</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDirty"></a><span class="summary-sig"><span class="summary-sig-name">SetDirty</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dirty</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMargins"></a><span class="summary-sig"><span class="summary-sig-name">SetMargins</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>leftMargin</span>,
+          <span class=summary-sig-arg>rightMargin</span>,
+          <span class=summary-sig-arg>topMargin</span>,
+          <span class=summary-sig-arg>bottomMargin</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetParent"></a><span class="summary-sig"><span class="summary-sig-name">SetParent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetPosition"></a><span class="summary-sig"><span class="summary-sig-name">SetPosition</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetRange"></a><span class="summary-sig"><span class="summary-sig-name">SetRange</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSameMargins"></a><span class="summary-sig"><span class="summary-sig-name">SetSameMargins</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>margin</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextObject-class.html#Attributes"><code>Attributes</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextObject-class.html#CachedSize"><code>CachedSize</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextObject-class.html#Descent"><code>Descent</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextObject-class.html#Dirty"><code>Dirty</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextObject-class.html#Parent"><code>Parent</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextObject-class.html#Position"><code>Position</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextObject-class.html#Range"><code>Range</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextObject-class.html#Rect"><code>Rect</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.RichTextObject-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Attributes"></a>
+<h3>Attributes</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#GetAttributes" class="summary-sig-name"><code>GetAttributes</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#SetAttributes" class="summary-sig-name"><code>SetAttributes</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attr</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="CachedSize"></a>
+<h3>CachedSize</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#GetCachedSize" class="summary-sig-name"><code>GetCachedSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#SetCachedSize" class="summary-sig-name"><code>SetCachedSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sz</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Descent"></a>
+<h3>Descent</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#GetDescent" class="summary-sig-name"><code>GetDescent</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#SetDescent" class="summary-sig-name"><code>SetDescent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>descent</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Dirty"></a>
+<h3>Dirty</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#GetDirty" class="summary-sig-name"><code>GetDirty</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#SetDirty" class="summary-sig-name"><code>SetDirty</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dirty</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Parent"></a>
+<h3>Parent</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#GetParent" class="summary-sig-name"><code>GetParent</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#SetParent" class="summary-sig-name"><code>SetParent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Position"></a>
+<h3>Position</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#GetPosition" class="summary-sig-name"><code>GetPosition</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#SetPosition" class="summary-sig-name"><code>SetPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Range"></a>
+<h3>Range</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#GetRange" class="summary-sig-name"><code>GetRange</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#SetRange" class="summary-sig-name"><code>SetRange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Rect"></a>
+<h3>Rect</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.richtext.RichTextObject-class.html#GetRect" class="summary-sig-name"><code>GetRect</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="thisown"></a>
+<h3>thisown</h3>
+<p>The membership flag</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-145424540</span>(...)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-145424596</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Tue Aug  7 12:49:39 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

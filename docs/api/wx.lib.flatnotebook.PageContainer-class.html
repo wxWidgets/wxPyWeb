@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -144,7 +144,7 @@ Does the actual selection of a page.</td></tr>
 <br />
 Draws small arrow at the place that the tab will be placed.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook.PageContainer-class.html#Enable" class="summary-sig-name"><code>Enable</code></a>(<span class=summary-sig-arg>self</span>,
+  <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook.PageContainer-class.html#EnableTab" class="summary-sig-name"><code>EnableTab</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>page</span>,
           <span class=summary-sig-arg>enabled</span>)</span></code>
 <br />
@@ -256,6 +256,19 @@ Handles the wx.EVT_ERASE_BACKGROUND event for <a
 href="wx.lib.flatnotebook.PageContainer-class.html" 
 class="link"><code>PageContainer</code></a> (does nothing).</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook.PageContainer-class.html#OnKeyDown" class="summary-sig-name"><code>OnKeyDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+When the PageContainer has the focus tabs can be changed with the 
+left/right arrow keys.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook.PageContainer-class.html#OnKillFocus" class="summary-sig-name"><code>OnKillFocus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_KILL_FOCUS event for <a 
+href="wx.lib.flatnotebook.PageContainer-class.html" 
+class="link"><code>PageContainer</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook.PageContainer-class.html#OnLeftDClick" class="summary-sig-name"><code>OnLeftDClick</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>event</span>)</span></code>
 <br />
@@ -319,6 +332,13 @@ Handles the wx.EVT_RIGHT_DOWN events for <a
 href="wx.lib.flatnotebook.PageContainer-class.html" 
 class="link"><code>PageContainer</code></a>.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook.PageContainer-class.html#OnSetFocus" class="summary-sig-name"><code>OnSetFocus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SET_FOCUS event for <a 
+href="wx.lib.flatnotebook.PageContainer-class.html" 
+class="link"><code>PageContainer</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook.PageContainer-class.html#OnSize" class="summary-sig-name"><code>OnSize</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>event</span>)</span></code>
 <br />
@@ -343,6 +363,11 @@ area.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><a name="RotateRight"></a><span class="summary-sig"><span class="summary-sig-name">RotateRight</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook.PageContainer-class.html#SetFocusedPage" class="summary-sig-name"><code>SetFocusedPage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pageIndex</span>)</span></code>
+<br />
+Sets/Unsets the focus on the appropriate page.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook.PageContainer-class.html#SetImageList" class="summary-sig-name"><code>SetImageList</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>imglist</span>)</span></code>
@@ -530,17 +555,14 @@ Returns whether a tab has an associated image index or not.</td></tr>
   </dd></dl>
 </td></tr></table>
 
-<a name="Enable"></a>
+<a name="EnableTab"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">Enable</span>(<span class=sig-arg>self</span>,
+  <h3><span class="sig"><span class="sig-name">EnableTab</span>(<span class=sig-arg>self</span>,
           <span class=sig-arg>page</span>,
           <span class=sig-arg>enabled</span>=<span class=sig-default>True</span>)</span>
   </h3>
   Enables or disables a tab.
   <dl><dt></dt><dd>
-    <dl><dt><b>Overrides:</b></dt>
-      <dd><a href="wx.Window-class.html#Enable"><code>wx.Window.Enable</code></a></dd>
-    </dl>
   </dd></dl>
 </td></tr></table>
 
@@ -765,6 +787,29 @@ Returns whether a tab has an associated image index or not.</td></tr>
   </dd></dl>
 </td></tr></table>
 
+<a name="OnKeyDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnKeyDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  When the PageContainer has the focus tabs can be changed with the 
+  left/right arrow keys.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnKillFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnKillFocus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_KILL_FOCUS event for <a 
+  href="wx.lib.flatnotebook.PageContainer-class.html" 
+  class="link"><code>PageContainer</code></a>.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
 <a name="OnLeftDClick"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">OnLeftDClick</span>(<span class=sig-arg>self</span>,
@@ -873,6 +918,18 @@ Returns whether a tab has an associated image index or not.</td></tr>
   </dd></dl>
 </td></tr></table>
 
+<a name="OnSetFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSetFocus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_SET_FOCUS event for <a 
+  href="wx.lib.flatnotebook.PageContainer-class.html" 
+  class="link"><code>PageContainer</code></a>.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
 <a name="OnSize"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">OnSize</span>(<span class=sig-arg>self</span>,
@@ -903,6 +960,17 @@ Returns whether a tab has an associated image index or not.</td></tr>
   </h3>
   Pops up the menu activated with the drop down arrow in the 
   navigation area.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFocusedPage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFocusedPage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pageIndex</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+  Sets/Unsets the focus on the appropriate page. If pageIndex is 
+  defaulted, we have lost focus and no focus indicator is drawn.
   <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
@@ -982,7 +1050,7 @@ Returns whether a tab has an associated image index or not.</td></tr>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -990,7 +1058,7 @@ Returns whether a tab has an associated image index or not.</td></tr>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:01:46 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Tue Aug  7 12:45:23 2007</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -64,7 +64,7 @@ given for the Unix, Windows and Mac OS X systems, however please note
 that these are just  examples and the actual values may differ. For
 example, under Windows the system administrator may change the
 standard directories locations, i.e. the Windows directory may be
-named W:Win2003 instead of the default C:Windows.</p>
+named W:/Win2003 instead of the default C:/Windows.</p>
 <p>The strings appname and username should be replaced with the value
 returned by <a href="wx.App-class.html#GetAppName" class="link"><code>wx.App.GetAppName</code></a> and the name of the currently logged
 in user, respectively. The string prefix is only used under Unix and
@@ -96,7 +96,7 @@ Return the global standard paths singleton    <i>(Static method)</i>
   <td><code><span class="summary-sig"><a href="wx.StandardPaths-class.html#GetConfigDir" class="summary-sig-name"><code>GetConfigDir</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
 Return the directory with system config files: /etc under Unix,
-'c:Documents and SettingsAll UsersApplication Data' under Windows,
+'c:/Documents and Settings/All Users/Application Data' under Windows,
 /Library/Preferences for Mac</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
   <td><code><span class="summary-sig"><a href="wx.StandardPaths-class.html#GetDataDir" class="summary-sig-name"><code>GetDataDir</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
@@ -145,14 +145,14 @@ Return the user's directory for temporary files.</td></tr>
   <td><code><span class="summary-sig"><a href="wx.StandardPaths-class.html#GetUserConfigDir" class="summary-sig-name"><code>GetUserConfigDir</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
 Return the directory for the user config files: $HOME under Unix,
-'c:Documents and Settingsusername' under Windows, and 
+'c:/Documents and Settings/username' under Windows, and 
 ~/Library/Preferences under Mac</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
   <td><code><span class="summary-sig"><a href="wx.StandardPaths-class.html#GetUserDataDir" class="summary-sig-name"><code>GetUserDataDir</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
 Return the directory for the user-dependent application data files:
-$HOME/.appname under Unix, c:Documents and
-SettingsusernameApplication Datappname under Windows and
+$HOME/.appname under Unix, c:/Documents and
+Settings/username/Application Data/appname under Windows and
 ~/Library/Application Support/appname under Mac</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
   <td><code><span class="summary-sig"><a href="wx.StandardPaths-class.html#GetUserLocalDataDir" class="summary-sig-name"><code>GetUserLocalDataDir</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
@@ -199,7 +199,7 @@ Set the program installation directory which is /usr/local by default.</td></tr>
   <h3><span class="sig"><span class="sig-name">GetConfigDir</span>(<span class=sig-arg>self</span>)</span>
   </h3>
 <p>Return the directory with system config files: /etc under Unix,
-'c:Documents and SettingsAll UsersApplication Data' under Windows,
+'c:/Documents and Settings/All Users/Application Data' under Windows,
 /Library/Preferences for Mac</p>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
@@ -215,7 +215,7 @@ String      </dd>
   </h3>
 <p>Return the location of the application's global, (i.e. not
 user-specific,) data files: prefix/share/appname under Unix,
-'c:Program Filesppname' under Windows,
+'c:/Program Files/appname' under Windows,
 appname.app/Contents/SharedSupport app bundle directory under Mac.</p>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
@@ -230,7 +230,7 @@ String      </dd>
   <h3><span class="sig"><span class="sig-name">GetDocumentsDir</span>(<span class=sig-arg>self</span>)</span>
   </h3>
 <p>Return the Documents directory for the current user.</p>
-<p>C:Documents and SettingsusernameDocuments under Windows,
+<p>C:/Documents and Settings/username/Documents under Windows,
 $HOME under Unix and ~/Documents under Mac</p>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
@@ -364,7 +364,7 @@ String      </dd>
   <h3><span class="sig"><span class="sig-name">GetUserConfigDir</span>(<span class=sig-arg>self</span>)</span>
   </h3>
 <p>Return the directory for the user config files: $HOME under Unix,
-'c:Documents and Settingsusername' under Windows, and 
+'c:/Documents and Settings/username' under Windows, and 
 ~/Library/Preferences under Mac</p>
 <p>Only use this if you have a single file to put there, otherwise
 <a href="wx.StandardPaths-class.html#GetUserDataDir" class="link"><code>GetUserDataDir</code></a> is more appropriate</p>
@@ -381,8 +381,8 @@ String      </dd>
   <h3><span class="sig"><span class="sig-name">GetUserDataDir</span>(<span class=sig-arg>self</span>)</span>
   </h3>
 <p>Return the directory for the user-dependent application data files:
-$HOME/.appname under Unix, c:Documents and
-SettingsusernameApplication Datappname under Windows and
+$HOME/.appname under Unix, c:/Documents and
+Settings/username/Application Data/appname under Windows and
 ~/Library/Application Support/appname under Mac</p>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
@@ -399,7 +399,7 @@ String      </dd>
 <p>Return the directory for user data files which shouldn't be shared
 with the other machines</p>
 <p>Same as <a href="wx.StandardPaths-class.html#GetUserDataDir" class="link"><code>GetUserDataDir</code></a> for all platforms except Windows where it is
-the 'Local SettingsApplication Datappname' directory.</p>
+the 'Local Settings/Application Data/appname' directory.</p>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
       <dd>
@@ -549,7 +549,7 @@ StandardPaths      </dd>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -557,7 +557,7 @@ StandardPaths      </dd>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:01:19 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Tue Aug  7 12:47:49 2007</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

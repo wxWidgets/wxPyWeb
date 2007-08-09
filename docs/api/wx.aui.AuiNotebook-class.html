@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -90,7 +90,7 @@ function setFrame(url1, url2){
 <br />
 Create a Control.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="unknown--1432196564"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+  <td><code><a name="unknown-402452308"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><a name="AddPage"></a><span class="summary-sig"><span class="summary-sig-name">AddPage</span>(<span class=summary-sig-arg>self</span>,
@@ -118,6 +118,10 @@ Do the 2nd phase and create the GUI control.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">AuiManager</font></td>
   <td><code><a name="GetAuiManager"></a><span class="summary-sig"><span class="summary-sig-name">GetAuiManager</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetHeightForPageHeight"></a><span class="summary-sig"><span class="summary-sig-name">GetHeightForPageHeight</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pageHeight</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
   <td><code><a name="GetPage"></a><span class="summary-sig"><span class="summary-sig-name">GetPage</span>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>page_idx</span>)</span></code>
@@ -140,6 +144,9 @@ Do the 2nd phase and create the GUI control.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
   <td><code><a name="GetSelection"></a><span class="summary-sig"><span class="summary-sig-name">GetSelection</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
+  <td><code><a name="GetTabCtrlHeight"></a><span class="summary-sig"><span class="summary-sig-name">GetTabCtrlHeight</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><a name="InsertPage"></a><span class="summary-sig"><span class="summary-sig-name">InsertPage</span>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>page_idx</span>,
@@ -156,6 +163,14 @@ Do the 2nd phase and create the GUI control.</td></tr>
   <td><code><a name="SetArtProvider"></a><span class="summary-sig"><span class="summary-sig-name">SetArtProvider</span>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>art</span>)</span></code>
 </td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMeasuringFont"></a><span class="summary-sig"><span class="summary-sig-name">SetMeasuringFont</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetNormalFont"></a><span class="summary-sig"><span class="summary-sig-name">SetNormalFont</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><a name="SetPageBitmap"></a><span class="summary-sig"><span class="summary-sig-name">SetPageBitmap</span>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>page</span>,
@@ -165,6 +180,10 @@ Do the 2nd phase and create the GUI control.</td></tr>
   <td><code><a name="SetPageText"></a><span class="summary-sig"><span class="summary-sig-name">SetPageText</span>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>page</span>,
           <span class=summary-sig-arg>text</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSelectedFont"></a><span class="summary-sig"><span class="summary-sig-name">SetSelectedFont</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">size_t</font></td>
   <td><code><a name="SetSelection"></a><span class="summary-sig"><span class="summary-sig-name">SetSelection</span>(<span class=summary-sig-arg>self</span>,
@@ -350,10 +369,10 @@ bool      </dd>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1216813044</span>(...)</span>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1216485308</span>(...)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1216812988</span>(...)</span>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1216485252</span>(...)</span>
       </dd>
     </dl>
   </dd>
@@ -371,7 +390,7 @@ bool      </dd>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -379,7 +398,7 @@ bool      </dd>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:54:55 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Tue Aug  7 12:45:30 2007</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

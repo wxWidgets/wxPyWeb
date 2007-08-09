@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -110,6 +110,10 @@ Append text to the end of the document.</td></tr>
   <td><code><a name="ApplyItalicToSelection"></a><span class="summary-sig"><span class="summary-sig-name">ApplyItalicToSelection</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="ApplyStyle"></a><span class="summary-sig"><span class="summary-sig-name">ApplyStyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>def</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><a name="ApplyStyleSheet"></a><span class="summary-sig"><span class="summary-sig-name">ApplyStyleSheet</span>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>styleSheet</span>)</span></code>
 </td></tr>
@@ -182,6 +186,17 @@ Begin named list style.</td></tr>
           <span class=summary-sig-arg>rightIndent</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="BeginStandardBullet"></a><span class="summary-sig"><span class="summary-sig-name">BeginStandardBullet</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bulletName</span>,
+          <span class=summary-sig-arg>leftIndent</span>,
+          <span class=summary-sig-arg>leftSubIndent</span>,
+          <span class=summary-sig-arg>bulletStyle</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="BeginStyle"></a><span class="summary-sig"><span class="summary-sig-name">BeginStyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><a name="BeginSuppressUndo"></a><span class="summary-sig"><span class="summary-sig-name">BeginSuppressUndo</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
@@ -232,6 +247,11 @@ Returns <tt class="rst-docutils literal"><span class="pre">True</span></tt> if t
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><a name="Clear"></a><span class="summary-sig"><span class="summary-sig-name">Clear</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="ClearListStyle"></a><span class="summary-sig"><span class="summary-sig-name">ClearListStyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#Copy" class="summary-sig-name"><code>Copy</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
@@ -250,6 +270,10 @@ Create the GUI part of the Window for 2-phase creation mode.</td></tr>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#Cut" class="summary-sig-name"><code>Cut</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
 Copies the selected text to the clipboard and removes the selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="Delete"></a><span class="summary-sig"><span class="summary-sig-name">Delete</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#DeleteSelection" class="summary-sig-name"><code>DeleteSelection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
@@ -305,6 +329,9 @@ End named list style.</td></tr>
   <td><code><a name="EndRightIndent"></a><span class="summary-sig"><span class="summary-sig-name">EndRightIndent</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="EndStandardBullet"></a><span class="summary-sig"><span class="summary-sig-name">EndStandardBullet</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><a name="EndStyle"></a><span class="summary-sig"><span class="summary-sig-name">EndStyle</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
@@ -323,7 +350,10 @@ End named list style.</td></tr>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#EndURL" class="summary-sig-name"><code>EndURL</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
 End URL.</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">wxRichTextBuffer</font></td>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextAttr</font></td>
+  <td><code><a name="GetBasicStyle"></a><span class="summary-sig"><span class="summary-sig-name">GetBasicStyle</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextBuffer</font></td>
   <td><code><a name="GetBuffer"></a><span class="summary-sig"><span class="summary-sig-name">GetBuffer</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">RichTextAttr</font></td>
@@ -386,6 +416,12 @@ GetSelection() --&gt; (start, end)</td></tr>
           <span class=summary-sig-arg>style</span>)</span></code>
 <br />
 Retrieve the style used at the given position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#GetStyleForRange" class="summary-sig-name"><code>GetStyleForRange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Get the common set of styles for the range</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">wxRichTextStyleSheet</font></td>
   <td><code><a name="GetStyleSheet"></a><span class="summary-sig"><span class="summary-sig-name">GetStyleSheet</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
@@ -451,6 +487,9 @@ HitTestRC(self, Point pt) --&gt; (result, col, row)</td></tr>
           <span class=summary-sig-arg>onlyVisibleRect</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="LineBreak"></a><span class="summary-sig"><span class="summary-sig-name">LineBreak</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#LoadFile" class="summary-sig-name"><code>LoadFile</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>file</span>,
           <span class=summary-sig-arg>type</span>)</span></code>
@@ -514,6 +553,14 @@ changed and need to be saved.</td></tr>
   <td><code><a name="Newline"></a><span class="summary-sig"><span class="summary-sig-name">Newline</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="NumberList"></a><span class="summary-sig"><span class="summary-sig-name">NumberList</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>,
+          <span class=summary-sig-arg>defName</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>startFrom</span>,
+          <span class=summary-sig-arg>specifiedLevel</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#PageDown" class="summary-sig-name"><code>PageDown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
 This is just a wrapper for ScrollPages(1).</td></tr>
@@ -526,11 +573,26 @@ This is just a wrapper for ScrollPages(-1).</td></tr>
 <br />
 Pastes text from the clipboard into the document at the current
 insertion point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">wxRichTextStyleSheet</font></td>
+  <td><code><a name="PopStyleSheet"></a><span class="summary-sig"><span class="summary-sig-name">PopStyleSheet</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#PositionToXY" class="summary-sig-name"><code>PositionToXY</code></a>(<span class="summary-sig-vararg">*args</span>,
           <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
 <br />
 PositionToXY(self, long pos) --&gt; (x, y)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="PromoteList"></a><span class="summary-sig"><span class="summary-sig-name">PromoteList</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>promoteBy</span>,
+          <span class=summary-sig-arg>range</span>,
+          <span class=summary-sig-arg>defName</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>specifiedLevel</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="PushStyleSheet"></a><span class="summary-sig"><span class="summary-sig-name">PushStyleSheet</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>styleSheet</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#Redo" class="summary-sig-name"><code>Redo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
@@ -609,6 +671,14 @@ Moves the insertion point to the end of the document.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><a name="SetInternalSelectionRange"></a><span class="summary-sig"><span class="summary-sig-name">SetInternalSelectionRange</span>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>range</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
+  <td><code><a name="SetListStyle"></a><span class="summary-sig"><span class="summary-sig-name">SetListStyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>range</span>,
+          <span class=summary-sig-arg>defName</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>startFrom</span>,
+          <span class=summary-sig-arg>specifiedLevel</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#SetMaxLength" class="summary-sig-name"><code>SetMaxLength</code></a>(<span class="summary-sig-vararg">*args</span>,
@@ -739,7 +809,9 @@ Translate a col,row coordinants into a document position.</td></tr>
           <span class=sig-arg>value</span>=<span class=sig-default>EmptyString</span>,
           <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
           <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
-          <span class=sig-arg>style</span>=<span class=sig-default>RE_MULTILINE</span>)</span>
+          <span class=sig-arg>style</span>=<span class=sig-default>RE_MULTILINE</span>,
+          <span class=sig-arg>validator</span>=<span class=sig-default>DefaultValidator</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>RichTextCtrlNameStr</span>)</span>
     <br /><i>(Constructor)</i>
   </h3>
 <p>Construct and show a generic Window.</p>
@@ -952,7 +1024,9 @@ bool      </dd>
           <span class=sig-arg>value</span>=<span class=sig-default>EmptyString</span>,
           <span class=sig-arg>pos</span>=<span class=sig-default>DefaultPosition</span>,
           <span class=sig-arg>size</span>=<span class=sig-default>DefaultSize</span>,
-          <span class=sig-arg>style</span>=<span class=sig-default>RE_MULTILINE</span>)</span>
+          <span class=sig-arg>style</span>=<span class=sig-default>RE_MULTILINE</span>,
+          <span class=sig-arg>validator</span>=<span class=sig-default>DefaultValidator</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>RichTextCtrlNameStr</span>)</span>
   </h3>
 <p>Create the GUI part of the Window for 2-phase creation mode.</p>
   <dl><dt></dt><dd>
@@ -1141,6 +1215,32 @@ if successful.  Returns <tt class="rst-docutils literal"><span class="pre">False
       <dd><code><b>position</b></code>
         <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         (type=long)</i>
+<p/>
+      <dd><code><b>style</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=RichTextAttr)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+bool      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetStyleForRange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetStyleForRange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>range</span>,
+          <span class=sig-arg>style</span>)</span>
+  </h3>
+<p>Get the common set of styles for the range</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>range</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=RichTextRange)</i>
 <p/>
       <dd><code><b>style</b></code>
         <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1869,10 +1969,10 @@ long      </dd>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1273172772</span>(...)</span>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-145441204</span>(...)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><span class="summary-sig-name">unknown--1273172716</span>(...)</span>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-145441260</span>(...)</span>
       </dd>
     </dl>
   </dd>
@@ -1908,7 +2008,7 @@ long      </dd>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -1916,7 +2016,7 @@ long      </dd>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:04:16 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Tue Aug  7 12:49:29 2007</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

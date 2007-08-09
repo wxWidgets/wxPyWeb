@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -56,7 +56,7 @@ function setFrame(url1, url2){
   <tr><td><ul>
 <li> <b><a href="wx.animate-module.html"><code>animate</code></a></b>: <i>Simple animation player classes, including <a href="wx.animate.GIFAnimationCtrl-class.html" class="link"><code>GIFAnimationCtrl</code></a> for displaying
 animated GIF files</i>
-<li> <b><a href="wx.aui-module.html"><code>aui</code></a></b>: <i>The wx.aui moduleis an Advanced User Interface library that aims to
+<li> <b><a href="wx.aui-module.html"><code>aui</code></a></b>: <i>The wx.aui module is an Advanced User Interface library that aims to
 implement &quot;cutting-edge&quot; interface usability and design features so
 developers can quickly and easily create beautiful and usable
 application interfaces.</i>
@@ -782,6 +782,13 @@ bitmap.</td></tr>
   <b><a href="wx.MenuItem-class.html"><code>MenuItem</code></a></b></td>
   <td>Proxy of C++ MenuItem class</td></tr>
 <tr><td width="15%">
+  <b><a href="wx.MenuItemList-class.html"><code>MenuItemList</code></a></b></td>
+  <td>This class wraps a wxList-based class and gives it a Python
+sequence-like interface.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.MenuItemList_iterator-class.html"><code>MenuItemList_iterator</code></a></b></td>
+  <td>This class serves as an iterator for a wxMenuItemList object.</td></tr>
+<tr><td width="15%">
   <b><a href="wx.MessageDialog-class.html"><code>MessageDialog</code></a></b></td>
   <td>This class provides a simple dialog that shows a single or multi-line
 message, with a choice of OK, Yes, No and/or Cancel buttons.</td></tr>
@@ -1214,6 +1221,13 @@ to specify a lot of flags and parameters which can be unwieldy.</td></tr>
   <td>The wx.SizerItem class is used to track the position, size and other
 attributes of each item managed by a <a href="wx.Sizer-class.html" class="link"><code>wx.Sizer</code></a>.</td></tr>
 <tr><td width="15%">
+  <b><a href="wx.SizerItemList-class.html"><code>SizerItemList</code></a></b></td>
+  <td>This class wraps a wxList-based class and gives it a Python
+sequence-like interface.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.SizerItemList_iterator-class.html"><code>SizerItemList_iterator</code></a></b></td>
+  <td>This class serves as an iterator for a wxSizerItemList object.</td></tr>
+<tr><td width="15%">
   <b><a href="wx.Slider-class.html"><code>Slider</code></a></b></td>
   <td>Proxy of C++ Slider class</td></tr>
 <tr><td width="15%">
@@ -1426,6 +1440,13 @@ when the GUI window is destroyed.</td></tr>
 <tr><td width="15%">
   <b><a href="wx.WindowDisabler-class.html"><code>WindowDisabler</code></a></b></td>
   <td>Proxy of C++ WindowDisabler class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.WindowList-class.html"><code>WindowList</code></a></b></td>
+  <td>This class wraps a wxList-based class and gives it a Python
+sequence-like interface.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.WindowList_iterator-class.html"><code>WindowList_iterator</code></a></b></td>
+  <td>This class serves as an iterator for a wxWindowList object.</td></tr>
 <tr><td width="15%">
   <b><a href="wx.XPMHandler-class.html"><code>XPMHandler</code></a></b></td>
   <td>A <a href="wx.ImageHandler-class.html" class="link"><code>wx.ImageHandler</code></a> for XPM image.</td></tr>
@@ -1822,7 +1843,7 @@ convert a Python string or unicode object to or from a wxString.</td></tr>
   <td><code><span class="summary-sig"><a href="wx-module.html#deprecatedWrapper" class="summary-sig-name"><code>GetElapsedTime</code></a>(<span class="summary-sig-vararg">*args</span>,
           <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
 <br />
-&lt;function GetElapsedTime at 0xb78e21b4&gt; is deprecated</td></tr>
+&lt;function GetElapsedTime at 0xb7975924&gt; is deprecated</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
   <td><code><a name="GetEmailAddress"></a><span class="summary-sig"><span class="summary-sig-name">GetEmailAddress</span>()</span></code>
 </td></tr>
@@ -1940,13 +1961,11 @@ return the current system power state: online or offline</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
   <td><code><a name="GetTopLevelParent"></a><span class="summary-sig"><span class="summary-sig-name">GetTopLevelParent</span>(<span class=summary-sig-arg>win</span>)</span></code>
 </td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">PyObject</font></td>
+<tr><td align="right" valign="top" width="15%"><font size="-1">WindowList</font></td>
   <td><code><span class="summary-sig"><a href="wx-module.html#GetTopLevelWindows" class="summary-sig-name"><code>GetTopLevelWindows</code></a>()</span></code>
 <br />
-Returns a list of the the application's top-level windows, (frames,
-dialogs, etc.)  NOTE: Currently this is a copy of the list maintained
-by wxWidgets, and so it is only valid as long as no top-level windows
-are closed or new top-level windows are created.</td></tr>
+Returns a list-like object of the the application's top-level windows, (frames,
+dialogs, etc.)</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
   <td><code><span class="summary-sig"><a href="wx-module.html#GetTranslation" class="summary-sig-name"><code>GetTranslation</code></a>(<span class=summary-sig-arg>str</span>)</span></code>
 <br />
@@ -2662,8 +2681,8 @@ interface, such as a string, array, etc.  The dataBuffer object is
 expected to contain a series of RGB bytes and be width*height*3
 bytes long.  A buffer object can optionally be supplied for the
 image's alpha channel data, and it is expected to be width*height
-bytes long.  On Windows the RGB values are 'premultiplied' by the
-alpha values.  (The other platforms do the multiplication
+bytes long.  On Windows and Mac the RGB values are 'premultiplied'
+by the alpha values.  (The other platforms do the multiplication
 themselves.)</p>
 <p>Unlike <a href="wx-module.html#ImageFromBuffer" class="link"><code>wx.ImageFromBuffer</code></a> the bitmap created with this function
 does not share the memory buffer with the buffer object.  This is
@@ -2690,8 +2709,8 @@ buffer.  For direct access to a bitmap's pixel buffer see
 parameter must be a Python object that implements the buffer
 interface, such as a string, array, etc.  The dataBuffer object is
 expected to contain a series of RGBA bytes (red, green, blue and
-alpha) and be width*height*4 bytes long.  On Windows the RGB
-values are 'premultiplied' by the alpha values.  (The other
+alpha) and be width*height*4 bytes long.  On Windows and Mac the
+RGB values are 'premultiplied' by the alpha values.  (The other
 platforms do the multiplication themselves.)</p>
 <p>Unlike <a href="wx-module.html#ImageFromBuffer" class="link"><code>wx.ImageFromBuffer</code></a> the bitmap created with this function
 does not share the memory buffer with the buffer object.  This is
@@ -3548,7 +3567,7 @@ string      </dd>
   <h3><span class="sig"><span class="sig-name">GetElapsedTime</span>(<span class="sig-vararg">*args</span>,
           <span class="sig-kwarg">**kwargs</span>)</span>
   </h3>
-<p>&lt;function GetElapsedTime at 0xb78e21b4&gt; is deprecated</p>
+<p>&lt;function GetElapsedTime at 0xb7975924&gt; is deprecated</p>
   <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
@@ -3622,14 +3641,12 @@ int      </dd>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">GetTopLevelWindows</span>()</span>
   </h3>
-<p>Returns a list of the the application's top-level windows, (frames,
-dialogs, etc.)  NOTE: Currently this is a copy of the list maintained
-by wxWidgets, and so it is only valid as long as no top-level windows
-are closed or new top-level windows are created.</p>
+<p>Returns a list-like object of the the application's top-level windows, (frames,
+dialogs, etc.)</p>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
       <dd>
-PyObject      </dd>
+WindowList      </dd>
     </dl>
   </dd></dl>
 </td></tr></table>
@@ -4730,7 +4747,7 @@ bool      </dd>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -4738,7 +4755,7 @@ bool      </dd>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 12:02:19 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Tue Aug  7 12:46:13 2007</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

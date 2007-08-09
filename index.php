@@ -23,7 +23,10 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
-<li><i>(14-May-2007)</i> <b>wxPython 2.8.4.0</b> has been <a href="download.php">released</a>, with lots of updates, fixes and improvements.  See <a href="recentchanges.php">Recent Changes</a> for more details.
+<li><i>(8-Aug-2007)</i> <b>wxPython 2.8.4.2</b>has been <a href="download.php">released</a>.  This release includes several fixes and a few additions and improvements, as well as new build features for <a href="http://wiki.wxpython.org/InstallingOnUbuntuOrDebian">Debian/Ubuntu</a> and OS X.
+See <a href="recentchanges.php">Recent Changes</a> for more details.
+  
+<p><li><i>(14-May-2007)</i> <b>wxPython 2.8.4.0</b> has been <a href="download.php">released</a>, with lots of updates, fixes and improvements.
 
 <p><li><i>(22-Mar-2007)</i> <b>wxPython 2.8.3.0</b> has been released.   This release includes a number of bug fixes and also some new enhancements, including updates to the XRCed tool and the new InspectionTool.  
 

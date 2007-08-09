@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -187,6 +187,10 @@ Return text with line endings replaced by OS-specific endings.</td></tr>
 <br />
 Extract a command from text which may include a shell prompt.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#GetContextMenu" class="summary-sig-name"><code>GetContextMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Create and return a context menu for the shell.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#getMultilineCommand" class="summary-sig-name"><code>getMultilineCommand</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>rstrip</span>)</span></code>
 <br />
@@ -215,6 +219,10 @@ AutoComplete and Calltips manually.</td></tr>
 <br />
 Keypress event handler.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnContextMenu"></a><span class="summary-sig"><span class="summary-sig-name">OnContextMenu</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#OnHistoryInsert" class="summary-sig-name"><code>OnHistoryInsert</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>step</span>)</span></code>
 <br />
@@ -242,6 +250,10 @@ Key down event handler.</td></tr>
   <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#OnShowCompHistory" class="summary-sig-name"><code>OnShowCompHistory</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
 Show possible autocompletion Words from already typed words.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnUpdateUI"></a><span class="summary-sig"><span class="summary-sig-name">OnUpdateUI</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.py.shell.Shell-class.html#Paste" class="summary-sig-name"><code>Paste</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
@@ -387,7 +399,7 @@ Set the zoom level.</td></tr>
 <td><b><a href="wx.py.shell.Shell-class.html#name"><code>name</code></a></b> = <span title="'Shell'"><code><span class="variable-quote">'</span>Shell<span class="variable-quote">'</span>                                           </code>
 </span></td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1"><code>str</code></font></td>
-<td><b><a href="wx.py.shell.Shell-class.html#revision"><code>revision</code></a></b> = <span title="'1.20'"><code><span class="variable-quote">'</span>1.20<span class="variable-quote">'</span>                                        </code>
+<td><b><a href="wx.py.shell.Shell-class.html#revision"><code>revision</code></a></b> = <span title="'46528'"><code><span class="variable-quote">'</span>46528<span class="variable-quote">'</span>                                       </code>
 </span></td></tr>
 </table><br />
 
@@ -610,6 +622,17 @@ spaces, and place it on the clipboard.</p>
   </h3>
 <p>Extract a command from text which may include a shell prompt.</p>
 <p>The command may not necessarily be valid Python syntax.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetContextMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetContextMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Create and return a context menu for the shell.
+This is used instead of the scintilla default menu
+in order to correctly respect our immutable buffer.</p>
   <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
@@ -1028,10 +1051,10 @@ may be positive to magnify or negative to reduce.</p>
           <code>str</code>
 
       </dd>
-<span title="'1.20'">      <dt><b>Value:</b></dt>
+<span title="'46528'">      <dt><b>Value:</b></dt>
       <dd><table><tr><td>
 <pre class="variable">
-<span class="variable-quote">'</span>1.20<span class="variable-quote">'</span>                                                                 </pre>
+<span class="variable-quote">'</span>46528<span class="variable-quote">'</span>                                                                </pre>
         </td></tr></table></dd>
 </span>    </dl>
   </dd>
@@ -1050,7 +1073,7 @@ may be positive to magnify or negative to reduce.</p>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -1058,7 +1081,7 @@ may be positive to magnify or negative to reduce.</p>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon May 14 11:59:09 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Tue Aug  7 12:44:59 2007</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

@@ -4,7 +4,7 @@
 #
 # Author:      Robin Dunn
 #
-# RCS-ID:      $Id: wxPython.spec,v 1.16 2007/05/15 05:28:02 robind Exp $
+# RCS-ID:      $Id: wxPythonFull.spec.in 47277 2007-07-09 21:21:45Z RD $
 # Copyright:   (c) 2004 by Total Control Software
 # Licence:     wxWindows license
 #----------------------------------------------------------------------
@@ -89,7 +89,7 @@
 %define pref 	   %{_prefix}
 %define python 	   /usr/bin/python%{pyver}
 %define tarname    wxPython-src
-%define version    2.8.4.0
+%define version    2.8.4.2
 %define ver2       2.8
 
 %define chartype   %(if [ "%{unicode}" = "1" ]; then echo unicode; else echo ansi; fi)
@@ -265,7 +265,10 @@ make prefix=$RPM_BUILD_ROOT%{wxpref} install
 make -C contrib/src/gizmos prefix=$RPM_BUILD_ROOT%{wxpref} install
 make -C contrib/src/stc prefix=$RPM_BUILD_ROOT%{wxpref} install
 
-
+PY_WX_CONFIG_OPTIONS="--version=%{version} --toolkit=%{port} --static=no"
+if [ %{unicode} = 1 ]; then
+    PY_WX_CONFIG_OPTIONS="$PY_WX_CONFIG_OPTIONS --unicode"
+fi
 
 # Install wxPython for wxGTK
 cd $WXDIR/wxPython
@@ -276,6 +279,7 @@ cd $WXDIR/wxPython
 	EP_FULL_VER=%{fullver} \
 	NO_SCRIPTS=1 \
 	WX_CONFIG="$RPM_BUILD_ROOT%{wxpref}/bin/wx-config --prefix=$RPM_BUILD_ROOT%{wxpref} --no_rpath" \
+        SYS_WX_CONFIG="wx-config $PY_WX_CONFIG_OPTIONS" \
        	build_ext --rpath=%{wxpref}/lib \
 	install \
 	--root=$RPM_BUILD_ROOT

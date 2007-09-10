@@ -23,7 +23,9 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
-<li><i>(8-Aug-2007)</i> <b>wxPython 2.8.4.2</b>has been <a href="download.php">released</a>.  This release includes several fixes and a few additions and improvements, as well as new build features for <a href="http://wiki.wxpython.org/InstallingOnUbuntuOrDebian">Debian/Ubuntu</a> and OS X.
+<li><i>(8-Sept-2007)</i> Yes, the <b>mail lists are down</b>.  There were multile disk failures in RAID5 array of the machine that hosts the mail lists.  The hardware has been replaced and data is being restored from tape backups.
+     
+<p><li><i>(8-Aug-2007)</i> <b>wxPython 2.8.4.2</b>has been <a href="download.php">released</a>.  This release includes several fixes and a few additions and improvements, as well as new build features for <a href="http://wiki.wxpython.org/InstallingOnUbuntuOrDebian">Debian/Ubuntu</a> and OS X.
 See <a href="recentchanges.php">Recent Changes</a> for more details.
   
 <p><li><i>(14-May-2007)</i> <b>wxPython 2.8.4.0</b> has been <a href="download.php">released</a>, with lots of updates, fixes and improvements.

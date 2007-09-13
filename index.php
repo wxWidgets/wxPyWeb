@@ -23,7 +23,7 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
-<li><i>(13-Sept-2007)</i> The <b>mail lista are up</b> and are working on processing all the queued messages.  This was definitely a "when it rais it pours" kind of situation, see the <a href="http://dotsrc.org/news/">DotSrc news archive</a> for more details.
+<li><i>(13-Sept-2007)</i> The <b>mail lists are up</b> and are working on processing all the queued messages.  This was definitely a "when it rais it pours" kind of situation, see the <a href="http://dotsrc.org/news/">DotSrc news archive</a> for more details.
 
 <p><li><i>(10-Sept-2007)</i> Yes, the <b>mail lists are down</b> and have been since the 8th.  There were multiple disk failures in RAID5 array of the machine that <a href="http://dotsrc.org/">hosts</a> the mail lists.  The hardware has been replaced and data is being restored from tape backups.
      

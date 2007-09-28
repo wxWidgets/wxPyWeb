@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.floatcanvas.FloatCanvas.DrawObject</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.floatcanvas-module.html">Package&nbsp;floatcanvas</a> ::
+        <a href="wx.lib.floatcanvas.FloatCanvas-module.html">Module&nbsp;FloatCanvas</a> ::
+        Class&nbsp;DrawObject
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.floatcanvas.FloatCanvas.DrawObject-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class DrawObject</h2>
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.floatcanvas.FloatCanvas.Arrow-class.html"><code>Arrow</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.ArrowLine-class.html"><code>ArrowLine</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.Bitmap-class.html"><code>Bitmap</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.Group-class.html"><code>Group</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.Line-class.html"><code>Line</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.Point-class.html"><code>Point</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.PointSet-class.html"><code>PointSet</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.Polygon-class.html"><code>Polygon</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.RectEllipse-class.html"><code>RectEllipse</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.ScaledBitmap-class.html"><code>ScaledBitmap</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.ScaledBitmap2-class.html"><code>ScaledBitmap2</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.ScaledText-class.html"><code>ScaledText</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.ScaledTextBox-class.html"><code>ScaledTextBox</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.SquarePoint-class.html"><code>SquarePoint</code></a>,
+    <a href="wx.lib.floatcanvas.FloatCanvas.Text-class.html"><code>Text</code></a></dd></dl>
+
+<hr/>
+
+<dl class="rst-docutils">
+<dt>!</dt>
+<dd><p class="first">This is the base class for all the objects that can be drawn.</p>
+<p class="last">One must subclass from this (and an assortment of Mixins) to create
+a new DrawObject.</p>
+</dd>
+</dl>
+<p>ote This class contain a series of static dictionaries:</p>
+<blockquote>
+<ul class="rst-simple">
+<li>BrushList</li>
+<li>PenList</li>
+<li>FillStyleList</li>
+<li>LineStyleList</li>
+</ul>
+<p>Is this still necessary?</p>
+</blockquote>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.DrawObject-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>InForeground</span>,
+          <span class=summary-sig-arg>IsVisible</span>)</span></code>
+<br />
+! param InForeground (bool)
+param IsVisible (Bool)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Bind"></a><span class="summary-sig"><span class="summary-sig-name">Bind</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Event</span>,
+          <span class=summary-sig-arg>CallBackFun</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.DrawObject-class.html#Hide" class="summary-sig-name"><code>Hide</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+! rief Make an object hidden.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="PutInBackground"></a><span class="summary-sig"><span class="summary-sig-name">PutInBackground</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="PutInForeground"></a><span class="summary-sig"><span class="summary-sig-name">PutInForeground</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetBrush"></a><span class="summary-sig"><span class="summary-sig-name">SetBrush</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>FillColor</span>,
+          <span class=summary-sig-arg>FillStyle</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetColor"></a><span class="summary-sig"><span class="summary-sig-name">SetColor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Color</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetFillColor"></a><span class="summary-sig"><span class="summary-sig-name">SetFillColor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>FillColor</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetFillStyle"></a><span class="summary-sig"><span class="summary-sig-name">SetFillStyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>FillStyle</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetHitBrush"></a><span class="summary-sig"><span class="summary-sig-name">SetHitBrush</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>HitColor</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetHitPen"></a><span class="summary-sig"><span class="summary-sig-name">SetHitPen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>HitColor</span>,
+          <span class=summary-sig-arg>LineWidth</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetLineColor"></a><span class="summary-sig"><span class="summary-sig-name">SetLineColor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>LineColor</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetLineStyle"></a><span class="summary-sig"><span class="summary-sig-name">SetLineStyle</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>LineStyle</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetLineWidth"></a><span class="summary-sig"><span class="summary-sig-name">SetLineWidth</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>LineWidth</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetPen"></a><span class="summary-sig"><span class="summary-sig-name">SetPen</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>LineColor</span>,
+          <span class=summary-sig-arg>LineStyle</span>,
+          <span class=summary-sig-arg>LineWidth</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.DrawObject-class.html#Show" class="summary-sig-name"><code>Show</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+! rief Make an object visible on the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="UnBindAll"></a><span class="summary-sig"><span class="summary-sig-name">UnBindAll</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="wx.lib.floatcanvas.FloatCanvas.DrawObject-class.html#BrushList"><code>BrushList</code></a></b> = <span title="{('MediumGrey', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Green', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Red', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('White', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Grey', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Black', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Cyan', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Blue', 'Solid'): &lt;wx._gdi.Brush;  &gt;, (None, 'Transparent'): &lt;wx._gdi.Brush;  &gt;, ('LightGrey', 'Solid'): &lt;wx._gdi.Brush;  &gt;}"><code>{('MediumGrey',&nbsp;'Solid'):&nbsp;&lt;wx._gdi.Brush;&nbsp;&nbsp;&gt;<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="wx.lib.floatcanvas.FloatCanvas.DrawObject-class.html#FillStyleList"><code>FillStyleList</code></a></b> = <span title="{'CrossHatch': 114, 'FDiagonal_Hatch': 113, 'VerticalHatch': 116, 'Solid': 100, 'HorizontalHatch': 115, 'BiDiagonalHatch': 111, 'CrossDiagHatch': 112, 'Transparent': 106}"><code>{'CrossHatch':&nbsp;114,&nbsp;'FDiagonal_Hatch':&nbsp;1<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="wx.lib.floatcanvas.FloatCanvas.DrawObject-class.html#LineStyleList"><code>LineStyleList</code></a></b> = <span title="{'Solid': 100, 'ShortDash': 103, 'Dot': 101, 'LongDash': 102, 'Transparent': 106, 'DotDash': 104}"><code>{'Solid':&nbsp;100,&nbsp;'ShortDash':&nbsp;103,&nbsp;'Dot':&nbsp;<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>dict</code></font></td>
+<td><b><a href="wx.lib.floatcanvas.FloatCanvas.DrawObject-class.html#PenList"><code>PenList</code></a></b> = <span title="{('LightGrey', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('Grey', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('Green', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('Red', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('Cyan', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('Black', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, (None, 'Transparent', 1): &lt;wx._gdi.Pen;  &gt;, ('White', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('MediumGrey', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;}"><code>{('LightGrey',&nbsp;'Solid',&nbsp;1):&nbsp;&lt;wx._gdi.Pen;&nbsp;&nbsp;&gt;,&nbsp;<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>InForeground</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>IsVisible</span>=<span class=sig-default>True</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>! param InForeground (bool)
+param IsVisible (Bool)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Hide"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Hide</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>! rief Make an object hidden.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Show"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Show</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>! rief Make an object visible on the canvas.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="BrushList"></a>
+<h3>BrushList</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{('MediumGrey', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Green', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Red', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('White', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Grey', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Black', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Cyan', 'Solid'): &lt;wx._gdi.Brush;  &gt;, ('Blue', 'Solid'): &lt;wx._gdi.Brush;  &gt;, (None, 'Transparent'): &lt;wx._gdi.Brush;  &gt;, ('LightGrey', 'Solid'): &lt;wx._gdi.Brush;  &gt;}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{(None, 'Transparent'): &lt;wx._gdi.Brush;  &gt;,
+ ('Black', 'Solid'): &lt;wx._gdi.Brush;  &gt;,
+ ('Blue', 'Solid'): &lt;wx._gdi.Brush;  &gt;,
+ ('Cyan', 'Solid'): &lt;wx._gdi.Brush;  &gt;,
+ ('Green', 'Solid'): &lt;wx._gdi.Brush;  &gt;,
+ ('Grey', 'Solid'): &lt;wx._gdi.Brush;  &gt;,
+ ('LightGrey', 'Solid'): &lt;wx._gdi.Brush;  &gt;,
+ ('MediumGrey', 'Solid'): &lt;wx._gdi.Brush;  &gt;,
+<span class="variable-ellipsis">...</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="FillStyleList"></a>
+<h3>FillStyleList</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{'CrossHatch': 114, 'FDiagonal_Hatch': 113, 'VerticalHatch': 116, 'Solid': 100, 'HorizontalHatch': 115, 'BiDiagonalHatch': 111, 'CrossDiagHatch': 112, 'Transparent': 106}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{'BiDiagonalHatch': 111,
+ 'CrossDiagHatch': 112,
+ 'CrossHatch': 114,
+ 'FDiagonal_Hatch': 113,
+ 'HorizontalHatch': 115,
+ 'Solid': 100,
+ 'Transparent': 106,
+ 'VerticalHatch': 116}                                                 </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="LineStyleList"></a>
+<h3>LineStyleList</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{'Solid': 100, 'ShortDash': 103, 'Dot': 101, 'LongDash': 102, 'Transparent': 106, 'DotDash': 104}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{'Dot': 101,
+ 'DotDash': 104,
+ 'LongDash': 102,
+ 'ShortDash': 103,
+ 'Solid': 100,
+ 'Transparent': 106}                                                   </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="PenList"></a>
+<h3>PenList</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>dict</code>
+
+      </dd>
+<span title="{('LightGrey', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('Grey', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('Green', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('Red', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('Cyan', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('Black', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, (None, 'Transparent', 1): &lt;wx._gdi.Pen;  &gt;, ('White', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;, ('MediumGrey', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;}">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+{(None, 'Transparent', 1): &lt;wx._gdi.Pen;  &gt;,
+ ('Black', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;,
+ ('Cyan', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;,
+ ('Green', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;,
+ ('Grey', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;,
+ ('LightGrey', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;,
+ ('MediumGrey', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;,
+ ('Red', 'Solid', 1): &lt;wx._gdi.Pen;  &gt;,
+<span class="variable-ellipsis">...</span>                                                                    </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Sep 26 13:47:56 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

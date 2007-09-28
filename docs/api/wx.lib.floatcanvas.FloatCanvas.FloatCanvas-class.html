@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.floatcanvas.FloatCanvas.FloatCanvas</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.floatcanvas-module.html">Package&nbsp;floatcanvas</a> ::
+        <a href="wx.lib.floatcanvas.FloatCanvas-module.html">Module&nbsp;FloatCanvas</a> ::
+        Class&nbsp;FloatCanvas
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type FloatCanvas</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+
+                         |
+                        <b>FloatCanvas</b>
+</pre><br />
+
+<hr/>
+
+<p>FloatCanvas.py</p>
+<p>This is a high level window for drawing maps and anything else in an
+arbitrary coordinate system.</p>
+<p>The goal is to provide a convenient way to draw stuff on the screen
+without having to deal with handling OnPaint events, converting to pixel
+coordinates, knowing about wxWindows brushes, pens, and colors, etc. It
+also provides virtually unlimited zooming and scrolling</p>
+<p>I am using it for two things:
+1) general purpose drawing in floating point coordinates
+2) displaying map data in Lat-long coordinates</p>
+<p>If the projection is set to None, it will draw in general purpose
+floating point coordinates. If the projection is set to 'FlatEarth', it
+will draw a FlatEarth projection, centered on the part of the map that
+you are viewing. You can also pass in your own projection function.</p>
+<p>It is double buffered, so re-draws after the window is uncovered by something
+else are very quick.</p>
+<p>It relies on NumPy, which is needed for speed (maybe, I havn't profiled it)</p>
+<dl class="rst-docutils">
+<dt>Bugs and Limitations:</dt>
+<dd>Lots: patches, fixes welcome</dd>
+</dl>
+<p>For Map drawing: It ignores the fact that the world is, in fact, a
+sphere, so it will do strange things if you are looking at stuff near
+the poles or the date line. so far I don't have a need to do that, so I
+havn't bothered to add any checks for that yet.</p>
+<p>Zooming:
+I have set no zoom limits. What this means is that if you zoom in really
+far, you can get integer overflows, and get wierd results. It
+doesn't seem to actually cause any problems other than wierd output, at
+least when I have run it.</p>
+<p>Speed:
+I have done a couple of things to improve speed in this app. The one
+thing I have done is used NumPy Arrays to store the coordinates of the
+points of the objects. This allowed me to use array oriented functions
+when doing transformations, and should provide some speed improvement
+for objects with a lot of points (big polygons, polylines, pointsets).</p>
+<p>The real slowdown comes when you have to draw a lot of objects, because
+you have to call the wx.DC.DrawSomething call each time. This is plenty
+fast for tens of objects, OK for hundreds of objects, but pretty darn
+slow for thousands of objects.</p>
+<p>The solution is to be able to pass some sort of object set to the DC
+directly. I've used DC.DrawPointList(Points), and it helped a lot with
+drawing lots of points. I havn't got a LineSet type object, so I havn't
+used DC.DrawLineList yet. I'd like to get a full set of DrawStuffList()
+methods implimented, and then I'd also have a full set of Object sets
+that could take advantage of them. I hope to get to it some day.</p>
+<p>Mouse Events:</p>
+<p>At this point, there are a full set of custom mouse events. They are
+just like the regular mouse events, but include an extra attribute:
+Event.GetCoords(), that returns the (x,y) position in world
+coordinates, as a length-2 NumPy vector of Floats.</p>
+<p>Copyright: Christopher Barker</p>
+<p>License: Same as the version of wxPython you are using it with</p>
+<p>Please let me know if you're using this!!!</p>
+<p>Contact me at:</p>
+<p><a class="rst-reference" href="mailto:Chris.Barker&#64;noaa.gov">Chris.Barker&#64;noaa.gov</a></p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>ProjectionFun</span>,
+          <span class=summary-sig-arg>BackgroundColor</span>,
+          <span class=summary-sig-arg>Debug</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddArrow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates Arrow and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddArrowLine</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates ArrowLine and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates Bitmap and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddCircle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates Circle and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddEllipse</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates Ellipse and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddGroup</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates Group and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddLine</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates Line and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AddObject"></a><span class="summary-sig"><span class="summary-sig-name">AddObject</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>obj</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AddObjects"></a><span class="summary-sig"><span class="summary-sig-name">AddObjects</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Objects</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates Point and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddPointSet</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates PointSet and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddPolygon</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates Polygon and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddRectangle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates Rectangle and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddScaledBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates ScaledBitmap and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddScaledText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates ScaledText and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddScaledTextBox</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates ScaledTextBox and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddSpline</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates Spline and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddSquarePoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates SquarePoint and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#addshape" class="summary-sig-name"><code>AddText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Creates Text and adds its reference to the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#ClearAll" class="summary-sig-name"><code>ClearAll</code></a>(<span class=summary-sig-arg>ResetBB</span>)</span></code>
+<br />
+Removes all DrawObjects from the Canvas</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ComputeFontScale"></a><span class="summary-sig"><span class="summary-sig-name">ComputeFontScale</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#Draw" class="summary-sig-name"><code>Draw</code></a>(<span class=summary-sig-arg>Canvas</span>,
+          <span class=summary-sig-arg>Force</span>)</span></code>
+<br />
+Re-draws the canvas.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="FlatEarthProjection"></a><span class="summary-sig"><span class="summary-sig-name">FlatEarthProjection</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>CenterPoint</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetHitTestColor"></a><span class="summary-sig"><span class="summary-sig-name">GetHitTestColor</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>xy</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="HitTest"></a><span class="summary-sig"><span class="summary-sig-name">HitTest</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>,
+          <span class=summary-sig-arg>HitEvent</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#InitAll" class="summary-sig-name"><code>InitAll</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+InitAll() sets everything in the Canvas to default state.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="InitializePanel"></a><span class="summary-sig"><span class="summary-sig-name">InitializePanel</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="LeftDoubleClickEvent"></a><span class="summary-sig"><span class="summary-sig-name">LeftDoubleClickEvent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="LeftDownEvent"></a><span class="summary-sig"><span class="summary-sig-name">LeftDownEvent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="LeftUpEvent"></a><span class="summary-sig"><span class="summary-sig-name">LeftUpEvent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MakeHitDict"></a><span class="summary-sig"><span class="summary-sig-name">MakeHitDict</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MakeNewBuffers"></a><span class="summary-sig"><span class="summary-sig-name">MakeNewBuffers</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#MakeNewForegroundHTBitmap" class="summary-sig-name"><code>MakeNewForegroundHTBitmap</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Off screen Bitmap used for Hit tests on foreground objects</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#MakeNewHTBitmap" class="summary-sig-name"><code>MakeNewHTBitmap</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Off screen Bitmap used for Hit tests on background objects</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MiddleDoubleClickEvent"></a><span class="summary-sig"><span class="summary-sig-name">MiddleDoubleClickEvent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MiddleDownEvent"></a><span class="summary-sig"><span class="summary-sig-name">MiddleDownEvent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MiddleUpEvent"></a><span class="summary-sig"><span class="summary-sig-name">MiddleUpEvent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MotionEvent"></a><span class="summary-sig"><span class="summary-sig-name">MotionEvent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="MouseOverTest"></a><span class="summary-sig"><span class="summary-sig-name">MouseOverTest</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#MoveImage" class="summary-sig-name"><code>MoveImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>shift</span>,
+          <span class=summary-sig-arg>CoordType</span>)</span></code>
+<br />
+move the image in the window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnPaint"></a><span class="summary-sig"><span class="summary-sig-name">OnPaint</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSize"></a><span class="summary-sig"><span class="summary-sig-name">OnSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnSizeTimer"></a><span class="summary-sig"><span class="summary-sig-name">OnSizeTimer</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#PixelToWorld" class="summary-sig-name"><code>PixelToWorld</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Points</span>)</span></code>
+<br />
+Converts coordinates from Pixel coordinates to world coordinates.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RemoveObject"></a><span class="summary-sig"><span class="summary-sig-name">RemoveObject</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Object</span>,
+          <span class=summary-sig-arg>ResetBB</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RemoveObjects"></a><span class="summary-sig"><span class="summary-sig-name">RemoveObjects</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Objects</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RightDoubleCLickEvent"></a><span class="summary-sig"><span class="summary-sig-name">RightDoubleCLickEvent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RightDownEvent"></a><span class="summary-sig"><span class="summary-sig-name">RightDownEvent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RightUpEvent"></a><span class="summary-sig"><span class="summary-sig-name">RightUpEvent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#SaveAsImage" class="summary-sig-name"><code>SaveAsImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filename</span>,
+          <span class=summary-sig-arg>ImageType</span>)</span></code>
+<br />
+Saves the current image as an image file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#ScalePixelToWorld" class="summary-sig-name"><code>ScalePixelToWorld</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Lengths</span>)</span></code>
+<br />
+This function computes a pair of x.y lengths,
+to change then from pixel to world coordinates.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#ScaleWorldToPixel" class="summary-sig-name"><code>ScaleWorldToPixel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Lengths</span>)</span></code>
+<br />
+This function will get passed to the drawing functions of the objects,
+to Change a length from world to pixel coordinates.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#SetMode" class="summary-sig-name"><code>SetMode</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Mode</span>)</span></code>
+<br />
+Set the GUImode to any of the availble mode.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetProjectionFun"></a><span class="summary-sig"><span class="summary-sig-name">SetProjectionFun</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>ProjectionFun</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetToNewScale"></a><span class="summary-sig"><span class="summary-sig-name">SetToNewScale</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>DrawFlag</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="WheelEvent"></a><span class="summary-sig"><span class="summary-sig-name">WheelEvent</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#WorldToPixel" class="summary-sig-name"><code>WorldToPixel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Coordinates</span>)</span></code>
+<br />
+This function will get passed to the drawing functions of the objects,
+to transform from world to pixel coordinates.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#Zoom" class="summary-sig-name"><code>Zoom</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>factor</span>,
+          <span class=summary-sig-arg>center</span>,
+          <span class=summary-sig-arg>centerCoords</span>)</span></code>
+<br />
+Zoom(factor, center) changes the amount of zoom of the image by factor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#ZoomToBB" class="summary-sig-name"><code>ZoomToBB</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>NewBB</span>,
+          <span class=summary-sig-arg>DrawFlag</span>)</span></code>
+<br />
+Zooms the image to the bounding box given, or to the bounding
+box of all the objects on the canvas, if none is given.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>int</code></font></td>
+<td><b><a href="wx.lib.floatcanvas.FloatCanvas.FloatCanvas-class.html#HitTestBitmapDepth"><code>HitTestBitmapDepth</code></a></b> = <span title="32">32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddArrow</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<pre class="literalblock">
+Creates Arrow and adds its reference to the canvas.
+Argument protocol same as Arrow class, whose docstring is:
+
+
+    Arrow(XY, # coords of origin of arrow (x,y)
+          Length, # length of arrow in pixels
+          theta, # angle of arrow in degrees: zero is straight up
+                 # +angle is to the right
+          LineColor = &quot;Black&quot;,
+          LineStyle = &quot;Solid&quot;,
+          LineWidth    = 1,
+          ArrowHeadSize = 4, # size of arrowhead in pixels
+          ArrowHeadAngle = 45, # angle of arrow head in degrees
+          InForeground = False):
+
+    It will draw an arrow , starting at the point, (X,Y) pointing in
+    direction, theta.
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddArrowLine</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates ArrowLine and adds its reference to the canvas.
+Argument protocol same as ArrowLine class, whose docstring is:</p>
+<blockquote>
+<dl class="rst-docutils">
+<dt>ArrowLine(Points, # coords of points</dt>
+<dd>LineColor = &quot;Black&quot;,
+LineStyle = &quot;Solid&quot;,
+LineWidth    = 1,
+ArrowHeadSize = 4, # in pixels
+ArrowHeadAngle = 45,
+InForeground = False):</dd>
+</dl>
+<p>It will draw a set of arrows from point to point.</p>
+<p>It takes a list of 2-tuples, or a NX2 NumPy Float array
+of point coordinates.</p>
+</blockquote>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddBitmap</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates Bitmap and adds its reference to the canvas.
+Argument protocol same as Bitmap class, whose docstring is:</p>
+<blockquote>
+<p>This class creates a bitmap object, placed at the coordinates,
+x,y. the &quot;Position&quot; argument is a two charactor string, indicating
+where in relation to the coordinates the bitmap should be oriented.</p>
+<p>The first letter is: t, c, or b, for top, center and bottom The
+second letter is: l, c, or r, for left, center and right The
+position refers to the position relative to the text itself. It
+defaults to &quot;tl&quot; (top left).</p>
+<p>The size is fixed, and does not scale with the drawing.</p>
+</blockquote>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddCircle</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates Circle and adds its reference to the canvas.
+Argument protocol same as Circle class</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddEllipse</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates Ellipse and adds its reference to the canvas.
+Argument protocol same as Ellipse class</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddGroup</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates Group and adds its reference to the canvas.
+Argument protocol same as Group class, whose docstring is:</p>
+<blockquote>
+<p>A group of other FloatCanvas Objects</p>
+<p>Not all DrawObject methods may apply here. In particular, you can't Bind events to a group.</p>
+<p>Note that if an object is in more than one group, it will get drawn more than once.</p>
+</blockquote>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddLine</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates Line and adds its reference to the canvas.
+Argument protocol same as Line class, whose docstring is:</p>
+<blockquote>
+<p>The Line class takes a list of 2-tuples, or a NX2 NumPy Float array
+of point coordinates.</p>
+<p>It will draw a straight line if there are two points, and a polyline
+if there are more than two.</p>
+</blockquote>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddPoint</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates Point and adds its reference to the canvas.
+Argument protocol same as Point class, whose docstring is:</p>
+<blockquote>
+<p>The Point class takes a 2-tuple, or a (2,) NumPy array of point
+coordinates.</p>
+<p>The Diameter is in screen points, not world coordinates, So the
+Bounding box is just the point, and doesn't include the Diameter.</p>
+<p>The HitLineWidth is used as diameter for the
+Hit Test.</p>
+</blockquote>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddPointSet</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates PointSet and adds its reference to the canvas.
+Argument protocol same as PointSet class, whose docstring is:</p>
+<blockquote>
+<p>The PointSet class takes a list of 2-tuples, or a NX2 NumPy array of
+point coordinates.</p>
+<p>If Points is a sequence of tuples: Points[N][0] is the x-coordinate of
+point N and Points[N][1] is the y-coordinate.</p>
+<p>If Points is a NumPy array: Points[N,0] is the x-coordinate of point
+N and Points[N,1] is the y-coordinate for arrays.</p>
+<p>Each point will be drawn the same color and Diameter. The Diameter
+is in screen pixels, not world coordinates.</p>
+<p>The hit-test code does not distingish between the points, you will
+only know that one of the points got hit, not which one. You can use
+PointSet.FindClosestPoint(WorldPoint) to find out which one</p>
+<p>In the case of points, the HitLineWidth is used as diameter.</p>
+</blockquote>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddPolygon</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates Polygon and adds its reference to the canvas.
+Argument protocol same as Polygon class, whose docstring is:</p>
+<blockquote>
+<p>The Polygon class takes a list of 2-tuples, or a NX2 NumPy array of
+point coordinates.  so that Points[N][0] is the x-coordinate of
+point N and Points[N][1] is the y-coordinate or Points[N,0] is the
+x-coordinate of point N and Points[N,1] is the y-coordinate for
+arrays.</p>
+<p>The other parameters specify various properties of the Polygon, and
+should be self explanatory.</p>
+</blockquote>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddRectangle</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates Rectangle and adds its reference to the canvas.
+Argument protocol same as Rectangle class</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddScaledBitmap</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates ScaledBitmap and adds its reference to the canvas.
+Argument protocol same as ScaledBitmap class, whose docstring is:</p>
+<blockquote>
+<p>This class creates a bitmap object, placed at the coordinates, XY,
+of Height, H, in World coorsinates. The width is calculated from the
+aspect ratio of the bitmap.</p>
+<p>the &quot;Position&quot; argument is a two charactor string, indicating
+where in relation to the coordinates the bitmap should be oriented.</p>
+<p>The first letter is: t, c, or b, for top, center and bottom The
+second letter is: l, c, or r, for left, center and right The
+position refers to the position relative to the text itself. It
+defaults to &quot;tl&quot; (top left).</p>
+<p>The size scales with the drawing</p>
+</blockquote>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddScaledText</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<pre class="literalblock">
+Creates ScaledText and adds its reference to the canvas.
+Argument protocol same as ScaledText class, whose docstring is:
+
+    This class creates a text object that is scaled when zoomed.  It is
+    placed at the coordinates, x,y. the &quot;Position&quot; argument is a two
+    charactor string, indicating where in relation to the coordinates
+    the string should be oriented.
+
+    The first letter is: t, c, or b, for top, center and bottom The
+    second letter is: l, c, or r, for left, center and right The
+    position refers to the position relative to the text itself. It
+    defaults to &quot;tl&quot; (top left).
+
+    Size is the size of the font in world coordinates.
+
+    Family:
+        Font family, a generic way of referring to fonts without
+        specifying actual facename. One of:
+            wx.DEFAULT:  Chooses a default font.
+            wx.DECORATI: A decorative font.
+            wx.ROMAN: A formal, serif font.
+            wx.SCRIPT: A handwriting font.
+            wx.SWISS: A sans-serif font.
+            wx.MODERN: A fixed pitch font.
+        NOTE: these are only as good as the wxWindows defaults, which aren't so good.
+    Style:
+        One of wx.NORMAL, wx.SLANT and wx.ITALIC.
+    Weight:
+        One of wx.NORMAL, wx.LIGHT and wx.BOLD.
+    Underlined:
+        The value can be True or False. At present this may have an an
+        effect on Windows only.
+
+    Alternatively, you can set the kw arg: Font, to a wx.Font, and the
+    above will be ignored. The size of the font you specify will be
+    ignored, but the rest of its attributes will be preserved.
+
+    The size will scale as the drawing is zoomed.
+
+    Bugs/Limitations:
+
+    As fonts are scaled, the do end up a little different, so you don't
+    get exactly the same picture as you scale up and doen, but it's
+    pretty darn close.
+
+    On wxGTK1 on my Linux system, at least, using a font of over about
+    3000 pts. brings the system to a halt. It's the Font Server using
+    huge amounts of memory. My work around is to max the font size to
+    3000 points, so it won't scale past there. GTK2 uses smarter font
+    drawing, so that may not be an issue in future versions, so feel
+    free to test. Another smarter way to do it would be to set a global
+    zoom limit at that point.
+
+    The hit-test is done on the entire text extent. This could be made
+    optional, but I haven't gotten around to it.
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddScaledTextBox</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<pre class="literalblock">
+Creates ScaledTextBox and adds its reference to the canvas.
+Argument protocol same as ScaledTextBox class, whose docstring is:
+
+    This class creates a TextBox object that is scaled when zoomed.  It is
+    placed at the coordinates, x,y.
+
+    If the Width parameter is defined, the text will be wrapped to the width given.
+
+    A Box can be drawn around the text, be specifying:
+    LineWidth and/or  FillColor
+
+    A space(margin) can be put all the way around the text, be specifying:
+    the PadSize argument in world coordinates.
+
+    The spacing between lines can be adjusted with the:
+    LineSpacing argument.
+
+    The &quot;Position&quot; argument is a two character string, indicating where
+    in relation to the coordinates the Box should be oriented.
+    -The first letter is: t, c, or b, for top, center and bottom.
+    -The second letter is: l, c, or r, for left, center and right The
+    position refers to the position relative to the text itself. It
+    defaults to &quot;tl&quot; (top left).
+
+    Size is the size of the font in world coordinates.
+
+    Family:
+        Font family, a generic way of referring to fonts without
+        specifying actual facename. One of:
+            wx.DEFAULT:  Chooses a default font.
+            wx.DECORATIVE: A decorative font.
+            wx.ROMAN: A formal, serif font.
+            wx.SCRIPT: A handwriting font.
+            wx.SWISS: A sans-serif font.
+            wx.MODERN: A fixed pitch font.
+        NOTE: these are only as good as the wxWindows defaults, which aren't so good.
+    Style:
+        One of wx.NORMAL, wx.SLANT and wx.ITALIC.
+    Weight:
+        One of wx.NORMAL, wx.LIGHT and wx.BOLD.
+    Underlined:
+        The value can be True or False. At present this may have an an
+        effect on Windows only.
+
+    Alternatively, you can set the kw arg: Font, to a wx.Font, and the
+    above will be ignored. The size of the font you specify will be
+    ignored, but the rest of its attributes will be preserved.
+
+    The size will scale as the drawing is zoomed.
+
+    Bugs/Limitations:
+
+    As fonts are scaled, they do end up a little different, so you don't
+    get exactly the same picture as you scale up and down, but it's
+    pretty darn close.
+
+    On wxGTK1 on my Linux system, at least, using a font of over about
+    1000 pts. brings the system to a halt. It's the Font Server using
+    huge amounts of memory. My work around is to max the font size to
+    1000 points, so it won't scale past there. GTK2 uses smarter font
+    drawing, so that may not be an issue in future versions, so feel
+    free to test. Another smarter way to do it would be to set a global
+    zoom limit at that point.
+
+    The hit-test is done on the entire box. This could be made
+    optional, but I haven't gotten around to it.
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddSpline</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates Spline and adds its reference to the canvas.
+Argument protocol same as Spline class</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddSquarePoint</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Creates SquarePoint and adds its reference to the canvas.
+Argument protocol same as SquarePoint class, whose docstring is:</p>
+<blockquote>
+<p>The SquarePoint class takes a 2-tuple, or a (2,) NumPy array of point
+coordinates. It produces a square dot, centered on Point</p>
+<p>The Size is in screen points, not world coordinates, so the
+Bounding box is just the point, and doesn't include the Size.</p>
+<p>The HitLineWidth is used as diameter for the
+Hit Test.</p>
+</blockquote>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="addshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddText</span>(<span class=sig-arg>self</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<pre class="literalblock">
+Creates Text and adds its reference to the canvas.
+Argument protocol same as Text class, whose docstring is:
+
+    This class creates a text object, placed at the coordinates,
+    x,y. the &quot;Position&quot; argument is a two charactor string, indicating
+    where in relation to the coordinates the string should be oriented.
+
+    The first letter is: t, c, or b, for top, center and bottom The
+    second letter is: l, c, or r, for left, center and right The
+    position refers to the position relative to the text itself. It
+    defaults to &quot;tl&quot; (top left).
+
+    Size is the size of the font in pixels, or in points for printing
+    (if it ever gets implimented). Those will be the same, If you assume
+    72 PPI.
+
+    Family:
+        Font family, a generic way of referring to fonts without
+        specifying actual facename. One of:
+            wx.DEFAULT:  Chooses a default font.
+            wx.DECORATIVE: A decorative font.
+            wx.ROMAN: A formal, serif font.
+            wx.SCRIPT: A handwriting font.
+            wx.SWISS: A sans-serif font.
+            wx.MODERN: A fixed pitch font.
+        NOTE: these are only as good as the wxWindows defaults, which aren't so good.
+    Style:
+        One of wx.NORMAL, wx.SLANT and wx.ITALIC.
+    Weight:
+        One of wx.NORMAL, wx.LIGHT and wx.BOLD.
+    Underlined:
+        The value can be True or False. At present this may have an an
+        effect on Windows only.
+
+    Alternatively, you can set the kw arg: Font, to a wx.Font, and the
+    above will be ignored.
+
+    The size is fixed, and does not scale with the drawing.
+
+    The hit-test is done on the entire text extent
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClearAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClearAll</span>(<span class=sig-arg>ResetBB</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Removes all DrawObjects from the Canvas</p>
+<p>If ResetBB is set to False, the original bounding box will remain</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Draw"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Draw</span>(<span class=sig-arg>Canvas</span>,
+          <span class=sig-arg>Force</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Re-draws the canvas.</p>
+<p>Note that the buffer will not be re-drawn unless something has
+changed. If you change a DrawObject directly, then the canvas
+will not know anything has changed. In this case, you can force
+a re-draw by passing int True for the Force flag:</p>
+<p>Canvas.Draw(Force=True)</p>
+<p>There is a main buffer set up to double buffer the screen, so
+you can get quick re-draws when the window gets uncovered.</p>
+<p>If there are any objects in self._ForeDrawList, then the
+background gets drawn to a new buffer, and the foreground
+objects get drawn on top of it. The final result if blitted to
+the screen, and stored for future Paint events.  This is done so
+that you can have a complicated background, but have something
+changing on the foreground, without having to wait for the
+background to get re-drawn. This can be used to support simple
+animation, for instance.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InitAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InitAll</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>InitAll() sets everything in the Canvas to default state.</p>
+<p>It can be used to reset the Canvas</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeNewForegroundHTBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeNewForegroundHTBitmap</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Off screen Bitmap used for Hit tests on foreground objects</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakeNewHTBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakeNewHTBitmap</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Off screen Bitmap used for Hit tests on background objects</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MoveImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MoveImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>shift</span>,
+          <span class=sig-arg>CoordType</span>)</span>
+  </h3>
+<p>move the image in the window.</p>
+<p>shift is an (x,y) tuple, specifying the amount to shift in each direction</p>
+<p>It can be in any of three coordinates: Panel, Pixel, World,
+specified by the CoordType parameter</p>
+<p>Panel coordinates means you want to shift the image by some
+fraction of the size of the displaed image</p>
+<p>Pixel coordinates means you want to shift the image by some number of pixels</p>
+<p>World coordinates mean you want to shift the image by an amount
+in Floating point world coordinates</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PixelToWorld"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PixelToWorld</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>Points</span>)</span>
+  </h3>
+<p>Converts coordinates from Pixel coordinates to world coordinates.</p>
+<p>Points is a tuple of (x,y) coordinates, or a list of such tuples,
+or a NX2 Numpy array of x,y coordinates.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SaveAsImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SaveAsImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>filename</span>,
+          <span class=sig-arg>ImageType</span>=<span class=sig-default>15</span>)</span>
+  </h3>
+<p>Saves the current image as an image file. The default is in the
+PNG format. Other formats can be specified using the wx flags:</p>
+<p>wx.BITMAP_TYPE_PNG
+wx.BITMAP_TYPE_JPG
+wx.BITMAP_TYPE_BMP
+wx.BITMAP_TYPE_XBM
+wx.BITMAP_TYPE_XPM
+etc. (see the wx docs for the complete list)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ScalePixelToWorld"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ScalePixelToWorld</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>Lengths</span>)</span>
+  </h3>
+<p>This function computes a pair of x.y lengths,
+to change then from pixel to world coordinates.</p>
+<p>Lengths should be a NX2 array of (x,y) coordinates, or
+a 2-tuple, or sequence of 2-tuples.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ScaleWorldToPixel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ScaleWorldToPixel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>Lengths</span>)</span>
+  </h3>
+<p>This function will get passed to the drawing functions of the objects,
+to Change a length from world to pixel coordinates.</p>
+<p>Lengths should be a NX2 array of (x,y) coordinates, or
+a 2-tuple, or sequence of 2-tuples.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMode"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMode</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>Mode</span>)</span>
+  </h3>
+<p>Set the GUImode to any of the availble mode.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="WorldToPixel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">WorldToPixel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>Coordinates</span>)</span>
+  </h3>
+<p>This function will get passed to the drawing functions of the objects,
+to transform from world to pixel coordinates.
+Coordinates should be a NX2 array of (x,y) coordinates, or
+a 2-tuple, or sequence of 2-tuples.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Zoom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Zoom</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>factor</span>,
+          <span class=sig-arg>center</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>centerCoords</span>=<span class=sig-default>'world'</span>)</span>
+  </h3>
+<p>Zoom(factor, center) changes the amount of zoom of the image by factor.
+If factor is greater than one, the image gets larger.
+If factor is less than one, the image gets smaller.</p>
+<p>center is a tuple of (x,y) coordinates of the center of the viewport, after zooming.
+If center is not given, the center will stay the same.</p>
+<p>centerCoords is a flag indicating whether the center given is in pixel or world 
+coords. Options are: &quot;world&quot; or &quot;pixel&quot;</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ZoomToBB"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ZoomToBB</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>NewBB</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>DrawFlag</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Zooms the image to the bounding box given, or to the bounding
+box of all the objects on the canvas, if none is given.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="HitTestBitmapDepth"></a>
+<h3>HitTestBitmapDepth</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>int</code>
+
+      </dd>
+<span title="32">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Sep 26 13:48:24 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

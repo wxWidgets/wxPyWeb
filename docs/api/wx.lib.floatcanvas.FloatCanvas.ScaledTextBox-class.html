@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.floatcanvas.FloatCanvas.ScaledTextBox</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.floatcanvas-module.html">Package&nbsp;floatcanvas</a> ::
+        <a href="wx.lib.floatcanvas.FloatCanvas-module.html">Module&nbsp;FloatCanvas</a> ::
+        Class&nbsp;ScaledTextBox
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.floatcanvas.FloatCanvas.ScaledTextBox-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class ScaledTextBox</h2>
+
+<pre class="base-tree">
+       <a href="wx.lib.floatcanvas.FloatCanvas.DrawObject-class.html"><code>DrawObject</code></a> --+
+                    |
+<a href="wx.lib.floatcanvas.FloatCanvas.XYObjectMixin-class.html"><code>XYObjectMixin</code></a> --+   |
+                |   |
+  <a href="wx.lib.floatcanvas.FloatCanvas.TextObjectMixin-class.html"><code>TextObjectMixin</code></a> --+
+                    |
+                   <b>ScaledTextBox</b>
+</pre><br />
+
+<hr/>
+
+<pre class="literalblock">
+This class creates a TextBox object that is scaled when zoomed.  It is
+placed at the coordinates, x,y.
+
+If the Width parameter is defined, the text will be wrapped to the width given.
+
+A Box can be drawn around the text, be specifying:
+LineWidth and/or  FillColor
+
+A space(margin) can be put all the way around the text, be specifying:
+the PadSize argument in world coordinates.
+
+The spacing between lines can be adjusted with the:
+LineSpacing argument.
+
+The &quot;Position&quot; argument is a two character string, indicating where
+in relation to the coordinates the Box should be oriented.
+-The first letter is: t, c, or b, for top, center and bottom.
+-The second letter is: l, c, or r, for left, center and right The
+position refers to the position relative to the text itself. It
+defaults to &quot;tl&quot; (top left).
+
+Size is the size of the font in world coordinates.
+
+Family:
+    Font family, a generic way of referring to fonts without
+    specifying actual facename. One of:
+        wx.DEFAULT:  Chooses a default font.
+        wx.DECORATIVE: A decorative font.
+        wx.ROMAN: A formal, serif font.
+        wx.SCRIPT: A handwriting font.
+        wx.SWISS: A sans-serif font.
+        wx.MODERN: A fixed pitch font.
+    NOTE: these are only as good as the wxWindows defaults, which aren't so good.
+Style:
+    One of wx.NORMAL, wx.SLANT and wx.ITALIC.
+Weight:
+    One of wx.NORMAL, wx.LIGHT and wx.BOLD.
+Underlined:
+    The value can be True or False. At present this may have an an
+    effect on Windows only.
+
+Alternatively, you can set the kw arg: Font, to a wx.Font, and the
+above will be ignored. The size of the font you specify will be
+ignored, but the rest of its attributes will be preserved.
+
+The size will scale as the drawing is zoomed.
+
+Bugs/Limitations:
+
+As fonts are scaled, they do end up a little different, so you don't
+get exactly the same picture as you scale up and down, but it's
+pretty darn close.
+
+On wxGTK1 on my Linux system, at least, using a font of over about
+1000 pts. brings the system to a halt. It's the Font Server using
+huge amounts of memory. My work around is to max the font size to
+1000 points, so it won't scale past there. GTK2 uses smarter font
+drawing, so that may not be an issue in future versions, so feel
+free to test. Another smarter way to do it would be to set a global
+zoom limit at that point.
+
+The hit-test is done on the entire box. This could be made
+optional, but I haven't gotten around to it.
+</pre>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>String</span>,
+          <span class=summary-sig-arg>Point</span>,
+          <span class=summary-sig-arg>Size</span>,
+          <span class=summary-sig-arg>Color</span>,
+          <span class=summary-sig-arg>BackgroundColor</span>,
+          <span class=summary-sig-arg>LineColor</span>,
+          <span class=summary-sig-arg>LineStyle</span>,
+          <span class=summary-sig-arg>LineWidth</span>,
+          <span class=summary-sig-arg>Width</span>,
+          <span class=summary-sig-arg>PadSize</span>,
+          <span class=summary-sig-arg>Family</span>,
+          <span class=summary-sig-arg>Style</span>,
+          <span class=summary-sig-arg>Weight</span>,
+          <span class=summary-sig-arg>Underlined</span>,
+          <span class=summary-sig-arg>Position</span>,
+          <span class=summary-sig-arg>Alignment</span>,
+          <span class=summary-sig-arg>Font</span>,
+          <span class=summary-sig-arg>LineSpacing</span>,
+          <span class=summary-sig-arg>InForeground</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.ScaledTextBox-class.html#CalcBoundingBox" class="summary-sig-name"><code>CalcBoundingBox</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculates the Bounding Box</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetBoxRect"></a><span class="summary-sig"><span class="summary-sig-name">GetBoxRect</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.FloatCanvas.ScaledTextBox-class.html#LayoutText" class="summary-sig-name"><code>LayoutText</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculates the positions of the words of text.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ReWrap"></a><span class="summary-sig"><span class="summary-sig-name">ReWrap</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>Width</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="WrapToWidth"></a><span class="summary-sig"><span class="summary-sig-name">WrapToWidth</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="CalcBoundingBox"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalcBoundingBox</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Calculates the Bounding Box</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.floatcanvas.FloatCanvas.XYObjectMixin-class.html#CalcBoundingBox"><code>wx.lib.floatcanvas.FloatCanvas.XYObjectMixin.CalcBoundingBox</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LayoutText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LayoutText</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Calculates the positions of the words of text.</p>
+<p>This isn't exact, as fonts don't scale exactly.
+To help this, the position of each individual word
+is stored separately, so that the general layout stays
+the same in world coordinates, as the fonts scale.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.floatcanvas.FloatCanvas.TextObjectMixin-class.html#LayoutText"><code>wx.lib.floatcanvas.FloatCanvas.TextObjectMixin.LayoutText</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Sep 26 13:48:40 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

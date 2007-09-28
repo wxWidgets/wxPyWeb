@@ -1,0 +1,2136 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>numpy.ndarray</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        Package&nbsp;numpy ::
+        Class&nbsp;ndarray
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="numpy.ndarray-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type ndarray</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>ndarray</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.floatcanvas.Utilities.BBox.BBox-class.html"><code>BBox</code></a></dd></dl>
+
+<hr/>
+
+<pre class="literalblock">
+An array object represents a multidimensional, homogeneous array
+of fixed-size items.  An associated data-type-descriptor object
+details the data-type in an array (including byteorder and any
+fields).  An array can be constructed using the numpy.array
+command. Arrays are sequence, mapping and numeric objects.
+More information is available in the numpy module and by looking
+at the methods and attributes of an array.
+
+ndarray.__new__(subtype, shape=, dtype=float, buffer=None,
+                offset=0, strides=None, order=None)
+
+ There are two modes of creating an array using __new__:
+ 1) If buffer is None, then only shape, dtype, and order
+    are used
+ 2) If buffer is an object exporting the buffer interface, then
+    all keywords are interpreted.
+ The dtype parameter can be any object that can be interpreted
+    as a numpy.dtype object.
+
+ No __init__ method is needed because the array is fully
+ initialized after the __new__ method.
+</pre>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__abs__"></a><span class="summary-sig"><span class="summary-sig-name">__abs__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return abs(x)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__add__"></a><span class="summary-sig"><span class="summary-sig-name">__add__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x+y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__and__"></a><span class="summary-sig"><span class="summary-sig-name">__and__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x&amp;y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#__array__" class="summary-sig-name"><code>__array__</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.__array__(<a href="#id1" name="id2"><span class="rst-problematic" id="id2">|</span></a>dtype) -&gt; reference if type unchanged, copy otherwise.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__array_wrap__"></a><span class="summary-sig"><span class="summary-sig-name">__array_wrap__</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>obj</span>)</span></code>
+<br />
+Return object of same type as a from ndarray obj.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__contains__"></a><span class="summary-sig"><span class="summary-sig-name">__contains__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y in x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#__copy__" class="summary-sig-name"><code>__copy__</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.__copy__(<a href="#id1" name="id2"><span class="rst-problematic" id="id2">|</span></a>order) -&gt; copy, possibly with different order.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#__deepcopy__" class="summary-sig-name"><code>__deepcopy__</code></a>(<span class=summary-sig-arg>a</span>)</span></code>
+<br />
+Used if copy.deepcopy is called on an array.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__delitem__"></a><span class="summary-sig"><span class="summary-sig-name">__delitem__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return del x[y]...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#__delslice__" class="summary-sig-name"><code>__delslice__</code></a>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>i</span>,
+          <span class=summary-sig-arg>j</span>)</span></code>
+<br />
+Use of negative indices is not supported.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__div__"></a><span class="summary-sig"><span class="summary-sig-name">__div__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x/y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__divmod__"></a><span class="summary-sig"><span class="summary-sig-name">__divmod__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return divmod(x, y)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__eq__"></a><span class="summary-sig"><span class="summary-sig-name">__eq__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x==y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__float__"></a><span class="summary-sig"><span class="summary-sig-name">__float__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return float(x)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__floordiv__"></a><span class="summary-sig"><span class="summary-sig-name">__floordiv__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x//y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__ge__"></a><span class="summary-sig"><span class="summary-sig-name">__ge__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x&gt;=y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__getitem__"></a><span class="summary-sig"><span class="summary-sig-name">__getitem__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x[y]...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#__getslice__" class="summary-sig-name"><code>__getslice__</code></a>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>i</span>,
+          <span class=summary-sig-arg>j</span>)</span></code>
+<br />
+Use of negative indices is not supported.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__gt__"></a><span class="summary-sig"><span class="summary-sig-name">__gt__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x&gt;y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__hex__"></a><span class="summary-sig"><span class="summary-sig-name">__hex__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return hex(x)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__iadd__"></a><span class="summary-sig"><span class="summary-sig-name">__iadd__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x+y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__iand__"></a><span class="summary-sig"><span class="summary-sig-name">__iand__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x&amp;y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__idiv__"></a><span class="summary-sig"><span class="summary-sig-name">__idiv__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x/y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__ifloordiv__"></a><span class="summary-sig"><span class="summary-sig-name">__ifloordiv__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x//y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__ilshift__"></a><span class="summary-sig"><span class="summary-sig-name">__ilshift__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x&lt;&lt;y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__imod__"></a><span class="summary-sig"><span class="summary-sig-name">__imod__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x%y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__imul__"></a><span class="summary-sig"><span class="summary-sig-name">__imul__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x*y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#__index__" class="summary-sig-name"><code>__index__</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+x[y:z] &lt;==&gt; x[y.__index__():z.__index__()]</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__int__"></a><span class="summary-sig"><span class="summary-sig-name">__int__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return int(x)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__invert__"></a><span class="summary-sig"><span class="summary-sig-name">__invert__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return ~x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__ior__"></a><span class="summary-sig"><span class="summary-sig-name">__ior__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x|y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__ipow__"></a><span class="summary-sig"><span class="summary-sig-name">__ipow__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x**y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__irshift__"></a><span class="summary-sig"><span class="summary-sig-name">__irshift__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x&gt;&gt;y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__isub__"></a><span class="summary-sig"><span class="summary-sig-name">__isub__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x-y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__iter__"></a><span class="summary-sig"><span class="summary-sig-name">__iter__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return iter(x)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__itruediv__"></a><span class="summary-sig"><span class="summary-sig-name">__itruediv__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x/y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__ixor__"></a><span class="summary-sig"><span class="summary-sig-name">__ixor__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x^y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__le__"></a><span class="summary-sig"><span class="summary-sig-name">__le__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x&lt;=y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__len__"></a><span class="summary-sig"><span class="summary-sig-name">__len__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return len(x)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__long__"></a><span class="summary-sig"><span class="summary-sig-name">__long__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return long(x)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__lshift__"></a><span class="summary-sig"><span class="summary-sig-name">__lshift__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x&lt;&lt;y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__lt__"></a><span class="summary-sig"><span class="summary-sig-name">__lt__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x&lt;y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__mod__"></a><span class="summary-sig"><span class="summary-sig-name">__mod__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x%y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__mul__"></a><span class="summary-sig"><span class="summary-sig-name">__mul__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x*y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__ne__"></a><span class="summary-sig"><span class="summary-sig-name">__ne__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x!=y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__neg__"></a><span class="summary-sig"><span class="summary-sig-name">__neg__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return -x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__new__"></a><span class="summary-sig"><span class="summary-sig-name">__new__</span>(<span class=summary-sig-arg>T</span>,
+          <span class=summary-sig-arg>S</span>,
+          <span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+Return a new object with type S, a subtype of T...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__nonzero__"></a><span class="summary-sig"><span class="summary-sig-name">__nonzero__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return x != 0...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__oct__"></a><span class="summary-sig"><span class="summary-sig-name">__oct__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return oct(x)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__or__"></a><span class="summary-sig"><span class="summary-sig-name">__or__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x|y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__pos__"></a><span class="summary-sig"><span class="summary-sig-name">__pos__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return +x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__pow__"></a><span class="summary-sig"><span class="summary-sig-name">__pow__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>z</span>)</span></code>
+<br />
+Return pow(x, y[, z])...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__radd__"></a><span class="summary-sig"><span class="summary-sig-name">__radd__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y+x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rand__"></a><span class="summary-sig"><span class="summary-sig-name">__rand__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y&amp;x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rdiv__"></a><span class="summary-sig"><span class="summary-sig-name">__rdiv__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y/x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rdivmod__"></a><span class="summary-sig"><span class="summary-sig-name">__rdivmod__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return divmod(y, x)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#__reduce__" class="summary-sig-name"><code>__reduce__</code></a>(<span class=summary-sig-arg>a</span>)</span></code>
+<br />
+For pickling.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__repr__"></a><span class="summary-sig"><span class="summary-sig-name">__repr__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return repr(x)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rfloordiv__"></a><span class="summary-sig"><span class="summary-sig-name">__rfloordiv__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y//x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rlshift__"></a><span class="summary-sig"><span class="summary-sig-name">__rlshift__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y&lt;&lt;x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rmod__"></a><span class="summary-sig"><span class="summary-sig-name">__rmod__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y%x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rmul__"></a><span class="summary-sig"><span class="summary-sig-name">__rmul__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y*x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__ror__"></a><span class="summary-sig"><span class="summary-sig-name">__ror__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y|x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rpow__"></a><span class="summary-sig"><span class="summary-sig-name">__rpow__</span>(<span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>z</span>)</span></code>
+<br />
+Return pow(x, y[, z])...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rrshift__"></a><span class="summary-sig"><span class="summary-sig-name">__rrshift__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y&gt;&gt;x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rshift__"></a><span class="summary-sig"><span class="summary-sig-name">__rshift__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x&gt;&gt;y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rsub__"></a><span class="summary-sig"><span class="summary-sig-name">__rsub__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y-x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rtruediv__"></a><span class="summary-sig"><span class="summary-sig-name">__rtruediv__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y/x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__rxor__"></a><span class="summary-sig"><span class="summary-sig-name">__rxor__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return y^x...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__setitem__"></a><span class="summary-sig"><span class="summary-sig-name">__setitem__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>i</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x[i]=y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#__setslice__" class="summary-sig-name"><code>__setslice__</code></a>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>i</span>,
+          <span class=summary-sig-arg>j</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Use  of negative indices is not supported.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#__setstate__" class="summary-sig-name"><code>__setstate__</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>version</span>,
+          <span class=summary-sig-arg>shape</span>,
+          <span class=summary-sig-arg>typecode</span>,
+          <span class=summary-sig-arg>isfortran</span>,
+          <span class=summary-sig-arg>rawdata</span>)</span></code>
+<br />
+For unpickling.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__str__"></a><span class="summary-sig"><span class="summary-sig-name">__str__</span>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Return str(x)...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__sub__"></a><span class="summary-sig"><span class="summary-sig-name">__sub__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x-y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__truediv__"></a><span class="summary-sig"><span class="summary-sig-name">__truediv__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x/y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__xor__"></a><span class="summary-sig"><span class="summary-sig-name">__xor__</span>(<span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Return x^y...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="all"></a><span class="summary-sig"><span class="summary-sig-name">all</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="any"></a><span class="summary-sig"><span class="summary-sig-name">any</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>out</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="argmax"></a><span class="summary-sig"><span class="summary-sig-name">argmax</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>out</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="argmin"></a><span class="summary-sig"><span class="summary-sig-name">argmin</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>out</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#argsort" class="summary-sig-name"><code>argsort</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>kind</span>,
+          <span class=summary-sig-arg>order</span>)</span></code>
+<br />
+Return array of indices that sort a along the given axis.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#astype" class="summary-sig-name"><code>astype</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>t</span>)</span></code>
+<br />
+Cast array m to type t.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#byteswap" class="summary-sig-name"><code>byteswap</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>False</span>)</span></code>
+<br />
+Swap the bytes in the array.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#choose" class="summary-sig-name"><code>choose</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>b0</span>,
+          <span class=summary-sig-arg>b1</span>,
+          <span class=summary-sig-arg>bn</span>,
+          <span class=summary-sig-arg>out</span>,
+          <span class=summary-sig-arg>mode</span>,
+          <span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+Return an array that merges the b_i arrays together using 'a' as
+the index The b_i arrays and 'a' must all be broadcastable to the
+same shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="clip"></a><span class="summary-sig"><span class="summary-sig-name">clip</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>min</span>,
+          <span class=summary-sig-arg>max</span>,
+          <span class=summary-sig-arg>out</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="compress"></a><span class="summary-sig"><span class="summary-sig-name">compress</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>condition</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>out</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="conj"></a><span class="summary-sig"><span class="summary-sig-name">conj</span>(<span class=summary-sig-arg>a</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="conjugate"></a><span class="summary-sig"><span class="summary-sig-name">conjugate</span>(<span class=summary-sig-arg>a</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#copy" class="summary-sig-name"><code>copy</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.copy(<a href="#id1" name="id2"><span class="rst-problematic" id="id2">|</span></a>order) -&gt; copy, possibly with different order.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="cumprod"></a><span class="summary-sig"><span class="summary-sig-name">cumprod</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>dtype</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="cumsum"></a><span class="summary-sig"><span class="summary-sig-name">cumsum</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>dtype</span>,
+          <span class=summary-sig-arg>out</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="diagonal"></a><span class="summary-sig"><span class="summary-sig-name">diagonal</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>offset</span>,
+          <span class=summary-sig-arg>axis1</span>,
+          <span class=summary-sig-arg>axis2</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#dump" class="summary-sig-name"><code>dump</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.dump(file) Dump a pickle of the array to the specified file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#dumps" class="summary-sig-name"><code>dumps</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.dumps() returns the pickle of the array as a string.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#fill" class="summary-sig-name"><code>fill</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Fill the array with the scalar value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#flatten" class="summary-sig-name"><code>flatten</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.flatten([fortran]) return a 1-d array (always copy)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#getfield" class="summary-sig-name"><code>getfield</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>dtype</span>,
+          <span class=summary-sig-arg>offset</span>)</span></code>
+<br />
+Returns a field of the given array as a certain type.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#item" class="summary-sig-name"><code>item</code></a>(<span class=summary-sig-arg>a</span>)</span></code>
+<br />
+Copy the first element of array to a standard Python scalar and return
+it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="itemset"></a><span class="summary-sig"><span class="summary-sig-name">itemset</span>(<span class="summary-sig-vararg">...</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="max"></a><span class="summary-sig"><span class="summary-sig-name">max</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#mean" class="summary-sig-name"><code>mean</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>dtype</span>)</span></code>
+<br />
+Average the array over the given axis.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="min"></a><span class="summary-sig"><span class="summary-sig-name">min</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#newbyteorder" class="summary-sig-name"><code>newbyteorder</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.newbyteorder(&lt;byteorder&gt;) is equivalent to
+a.view(a.dtype.newbytorder(&lt;byteorder&gt;))</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#nonzero" class="summary-sig-name"><code>nonzero</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.nonzero() returns a tuple of arrays
+
+Returns a tuple of arrays, one for each dimension of a,
+containing the indices of the non-zero elements in that
+dimension.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="prod"></a><span class="summary-sig"><span class="summary-sig-name">prod</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>dtype</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="ptp"></a><span class="summary-sig"><span class="summary-sig-name">ptp</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#put" class="summary-sig-name"><code>put</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.put(indices, values, mode) sets a.flat[n] = values[n] for
+each n in indices.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#ravel" class="summary-sig-name"><code>ravel</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.ravel([fortran]) return a 1-d array (copy only if needed)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#repeat" class="summary-sig-name"><code>repeat</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>repeats</span>,
+          <span class=summary-sig-arg>axis</span>)</span></code>
+<br />
+copy elements of a, repeats times.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#reshape" class="summary-sig-name"><code>reshape</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>d1</span>,
+          <span class=summary-sig-arg>d2</span>,
+          <span class=summary-sig-arg>dn</span>,
+          <span class=summary-sig-arg>order</span>,
+          <span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+Return a new array from this one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#resize" class="summary-sig-name"><code>resize</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>new_shape</span>,
+          <span class=summary-sig-arg>refcheck</span>,
+          <span class=summary-sig-arg>order</span>)</span></code>
+<br />
+Change array shape.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#round" class="summary-sig-name"><code>round</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>decimals</span>,
+          <span class=summary-sig-arg>out</span>)</span></code>
+<br />
+Rounds to 'decimals' places.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#searchsorted" class="summary-sig-name"><code>searchsorted</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>v</span>,
+          <span class=summary-sig-arg>side</span>)</span></code>
+<br />
+v -- array of keys to be searched for in a.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#setfield" class="summary-sig-name"><code>setfield</code></a>(<span class=summary-sig-arg>m</span>,
+          <span class=summary-sig-arg>value</span>,
+          <span class=summary-sig-arg>dtype</span>,
+          <span class=summary-sig-arg>offset</span>)</span></code>
+<br />
+places val into field of the given array defined by the data type and offset.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="setflags"></a><span class="summary-sig"><span class="summary-sig-name">setflags</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>write</span>,
+          <span class=summary-sig-arg>align</span>,
+          <span class=summary-sig-arg>uic</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#sort" class="summary-sig-name"><code>sort</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>kind</span>,
+          <span class=summary-sig-arg>order</span>)</span></code>
+<br />
+Sort a along the given axis.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#squeeze" class="summary-sig-name"><code>squeeze</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+m.squeeze() eliminate all length-1 dimensions</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#std" class="summary-sig-name"><code>std</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>dtype</span>,
+          <span class=summary-sig-arg>out</span>)</span></code>
+<br />
+The standard deviation isa measure of the spread of a
+distribution.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#sum" class="summary-sig-name"><code>sum</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>dtype</span>)</span></code>
+<br />
+Sum the array over the given axis.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="swapaxes"></a><span class="summary-sig"><span class="summary-sig-name">swapaxes</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis1</span>,
+          <span class=summary-sig-arg>axis2</span>)</span></code>
+<br />
+Return new view with axes swapped.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#take" class="summary-sig-name"><code>take</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>indices</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>out</span>,
+          <span class=summary-sig-arg>mode</span>)</span></code>
+<br />
+The new array is formed from the elements of a indexed by indices along the
+given axis.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#tofile" class="summary-sig-name"><code>tofile</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>fid</span>,
+          <span class=summary-sig-arg>sep</span>,
+          <span class=summary-sig-arg>format</span>)</span></code>
+<br />
+Write the data to a file.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#tolist" class="summary-sig-name"><code>tolist</code></a>(<span class=summary-sig-arg>a</span>)</span></code>
+<br />
+Copy the data portion of the array to a hierarchical python list and return
+that list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#tostring" class="summary-sig-name"><code>tostring</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>order</span>)</span></code>
+<br />
+order -- order of the data item in the copy {&quot;C&quot;,&quot;F&quot;,&quot;A&quot;} (default &quot;C&quot;)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#trace" class="summary-sig-name"><code>trace</code></a>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>offset</span>,
+          <span class=summary-sig-arg>axis1</span>,
+          <span class=summary-sig-arg>axis2</span>,
+          <span class=summary-sig-arg>dtype</span>,
+          <span class=summary-sig-arg>out</span>)</span></code>
+<br />
+return the sum along the offset diagonal of the array's indicated
+axis1 and axis2.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#transpose" class="summary-sig-name"><code>transpose</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.transpose(*axes)
+
+Returns a view of 'a' with axes transposed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="var"></a><span class="summary-sig"><span class="summary-sig-name">var</span>(<span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>axis</span>,
+          <span class=summary-sig-arg>dtype</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#view" class="summary-sig-name"><code>view</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
+<br />
+a.view(&lt;type&gt;) -&gt; new view of array with same data.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#__array_finalize__"><code>__array_finalize__</code></a></b> = <span title="&lt;attribute '__array_finalize__' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'__array_finalize__'&nbsp;of&nbsp;<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#__array_interface__"><code>__array_interface__</code></a></b> = <span title="&lt;attribute '__array_interface__' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'__array_interface__'&nbsp;o<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#__array_priority__"><code>__array_priority__</code></a></b> = <span title="&lt;attribute '__array_priority__' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'__array_priority__'&nbsp;of&nbsp;<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#__array_struct__"><code>__array_struct__</code></a></b> = <span title="&lt;attribute '__array_struct__' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'__array_struct__'&nbsp;of&nbsp;'num<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#base"><code>base</code></a></b> = <span title="&lt;attribute 'base' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'base'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt;     </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#ctypes"><code>ctypes</code></a></b> = <span title="&lt;attribute 'ctypes' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'ctypes'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt; </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#data"><code>data</code></a></b> = <span title="&lt;attribute 'data' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'data'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt;     </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#dtype"><code>dtype</code></a></b> = <span title="&lt;attribute 'dtype' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'dtype'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt;   </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#flags"><code>flags</code></a></b> = <span title="&lt;attribute 'flags' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'flags'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt;   </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#flat"><code>flat</code></a></b> = <span title="&lt;attribute 'flat' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'flat'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt;     </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#imag"><code>imag</code></a></b> = <span title="&lt;attribute 'imag' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'imag'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt;     </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#itemsize"><code>itemsize</code></a></b> = <span title="&lt;attribute 'itemsize' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'itemsize'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;obje<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#nbytes"><code>nbytes</code></a></b> = <span title="&lt;attribute 'nbytes' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'nbytes'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt; </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#ndim"><code>ndim</code></a></b> = <span title="&lt;attribute 'ndim' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'ndim'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt;     </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#real"><code>real</code></a></b> = <span title="&lt;attribute 'real' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'real'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt;     </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#shape"><code>shape</code></a></b> = <span title="&lt;attribute 'shape' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'shape'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt;   </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#size"><code>size</code></a></b> = <span title="&lt;attribute 'size' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'size'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt;     </code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#strides"><code>strides</code></a></b> = <span title="&lt;attribute 'strides' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'strides'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;object<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>getset_descriptor</code></font></td>
+<td><b><a href="numpy.ndarray-class.html#T"><code>T</code></a></b> = <span title="&lt;attribute 'T' of 'numpy.ndarray' objects&gt;"><code>&lt;attribute&nbsp;'T'&nbsp;of&nbsp;'numpy.ndarray'&nbsp;objects&gt;           </code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__array__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__array__</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>a.__array__(<a href="#id1" name="id2"><span class="rst-problematic" id="id2">|</span></a>dtype) -&gt; reference if type unchanged, copy otherwise.</p>
+<p>Returns either a new reference to self if dtype is not given or a new array
+of provided data type if dtype is different from the current dtype of the
+array.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__copy__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__copy__</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>a.__copy__(<a href="#id1" name="id2"><span class="rst-problematic" id="id2">|</span></a>order) -&gt; copy, possibly with different order.</p>
+<p>Return a copy of the array.</p>
+<dl class="rst-docutils">
+<dt>Argument:</dt>
+<dd><dl class="first last rst-docutils">
+<dt>order -- Order of returned copy (default 'C')</dt>
+<dd>If order is 'C' (False) then the result is contiguous (default).
+If order is 'Fortran' (True) then the result has fortran order.
+If order is 'Any' (None) then the result has fortran order
+only if m is already in fortran order.;</dd>
+</dl>
+</dd>
+</dl>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__deepcopy__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__deepcopy__</span>(<span class=sig-arg>a</span>)</span>
+  </h3>
+<p>Used if copy.deepcopy is called on an array.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+Deep copy of array
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__delslice__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__delslice__</span>(<span class=sig-arg>x</span>,
+          <span class=sig-arg>i</span>,
+          <span class=sig-arg>j</span>)</span>
+    <br /><i>(Slice deletion operator)</i>
+  </h3>
+<p>Use of negative indices is not supported.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+del x[i:j]
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__getslice__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__getslice__</span>(<span class=sig-arg>x</span>,
+          <span class=sig-arg>i</span>,
+          <span class=sig-arg>j</span>)</span>
+    <br /><i>(Slicling operator)</i>
+  </h3>
+<p>Use of negative indices is not supported.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+x[i:j]
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__index__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__index__</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>x[y:z] &lt;==&gt; x[y.__index__():z.__index__()]</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__reduce__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__reduce__</span>(<span class=sig-arg>a</span>)</span>
+  </h3>
+<p>For pickling.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="__builtin__.object-class.html#__reduce__"><code>__builtin__.object.__reduce__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__setslice__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__setslice__</span>(<span class=sig-arg>x</span>,
+          <span class=sig-arg>i</span>,
+          <span class=sig-arg>j</span>,
+          <span class=sig-arg>y</span>)</span>
+    <br /><i>(Slice assignment operator)</i>
+  </h3>
+<p>Use  of negative indices is not supported.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+x[i:j]=y
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="__setstate__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__setstate__</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>version</span>,
+          <span class=sig-arg>shape</span>,
+          <span class=sig-arg>typecode</span>,
+          <span class=sig-arg>isfortran</span>,
+          <span class=sig-arg>rawdata</span>)</span>
+  </h3>
+<p>For unpickling.</p>
+<dl class="rst-docutils">
+<dt>Arguments:</dt>
+<dd>version -- optional pickle version. If omitted defaults to 0.
+shape -- a tuple giving the shape
+typecode -- a typecode
+isFortran --  a bool stating if Fortran or no
+rawdata -- a binary string with the data (or a list if Object array)</dd>
+</dl>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="argsort"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">argsort</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>axis</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>kind</span>=<span class=sig-default>'quicksort'</span>,
+          <span class=sig-arg>order</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<pre class="literalblock">
+Return array of indices that sort a along the given axis.
+
+Keyword arguments:
+
+axis  -- axis to be indirectly sorted (default -1)
+kind  -- sorting algorithm (default 'quicksort')
+         Possible values: 'quicksort', 'mergesort', or 'heapsort'
+order -- If a has fields defined, then the order keyword can be the
+         field name to sort on or a list (or tuple) of field names
+         to indicate the order that fields should be used to define
+         the sort.         
+
+Returns: array of indices that sort a along the specified axis.
+
+This method executes an indirect sort along the given axis using the
+algorithm specified by the kind keyword. It returns an array of indices of
+the same shape as 'a' that index data along the given axis in sorted order.
+
+The various sorts are characterized by average speed, worst case
+performance, need for work space, and whether they are stable. A stable
+sort keeps items with the same key in the same relative order. The three
+available algorithms have the following properties:
+
+|------------------------------------------------------|
+|    kind   | speed |  worst case | work space | stable|
+|------------------------------------------------------|
+|'quicksort'|   1   | O(n^2)      |     0      |   no  |
+|'mergesort'|   2   | O(n*log(n)) |    ~n/2    |   yes |
+|'heapsort' |   3   | O(n*log(n)) |     0      |   no  |
+|------------------------------------------------------|
+
+All the sort algorithms make temporary copies of the data when the sort is
+not along the last axis. Consequently, sorts along the last axis are faster
+and use less space than sorts along other axis.
+</pre>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+indices
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="astype"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">astype</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>t</span>)</span>
+  </h3>
+<p>Cast array m to type t.  t can be either a string representing a typecode,
+or a python type object of type int, float, or complex.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+Copy of array cast to type t
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="byteswap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">byteswap</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>False</span>)</span>
+  </h3>
+<p>Swap the bytes in the array.</p>
+<p>Swap the bytes in the array.  Return the byteswapped array.  If the first
+argument is TRUE, byteswap in-place and return a reference to self.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+View or copy
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="choose"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">choose</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>b0</span>,
+          <span class=sig-arg>b1</span>,
+          <span class=sig-arg>bn</span>,
+          <span class=sig-arg>out</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>mode</span>=<span class=sig-default>'raise'</span>,
+          <span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>Return an array that merges the b_i arrays together using 'a' as
+the index The b_i arrays and 'a' must all be broadcastable to the
+same shape.  The output at a particular position is the input
+array b_i at that position depending on the value of 'a' at that
+position.  Therefore, 'a' must be an integer array with entries
+from 0 to n+1.;</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="copy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">copy</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>a.copy(<a href="#id1" name="id2"><span class="rst-problematic" id="id2">|</span></a>order) -&gt; copy, possibly with different order.</p>
+<p>Return a copy of the array.</p>
+<dl class="rst-docutils">
+<dt>Argument:</dt>
+<dd><dl class="first last rst-docutils">
+<dt>order -- Order of returned copy (default 'C')</dt>
+<dd>If order is 'C' (False) then the result is contiguous (default).
+If order is 'Fortran' (True) then the result has fortran order.
+If order is 'Any' (None) then the result has fortran order
+only if m is already in fortran order.;</dd>
+</dl>
+</dd>
+</dl>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="dump"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">dump</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>a.dump(file) Dump a pickle of the array to the specified file.</p>
+<p>The array can be read back with pickle.load or numpy.load</p>
+<dl class="rst-docutils">
+<dt>Arguments:</dt>
+<dd>file -- string naming the dump file.</dd>
+</dl>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="dumps"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">dumps</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>a.dumps() returns the pickle of the array as a string.</p>
+<p>pickle.loads or numpy.loads will convert the string back to an array.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="fill"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">fill</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Fill the array with the scalar value.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+None
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="flatten"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">flatten</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>a.flatten([fortran]) return a 1-d array (always copy)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="getfield"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">getfield</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>dtype</span>,
+          <span class=sig-arg>offset</span>)</span>
+  </h3>
+<p>Returns a field of the given array as a certain type. A field is a view of
+the array's data with each itemsize determined by the given type and the
+offset into the current array.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+field of array as given type
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="item"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">item</span>(<span class=sig-arg>a</span>)</span>
+  </h3>
+<p>Copy the first element of array to a standard Python scalar and return
+it. The array must be of size one.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+copy of first array item as Python scalar
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="mean"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">mean</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>axis</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>dtype</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Average the array over the given axis.  If the axis is None,
+average over all dimensions of the array.  Equivalent to</p>
+<blockquote>
+a.sum(axis, dtype) / size(a, axis).</blockquote>
+<p>The optional dtype argument is the data type for intermediate
+calculations in the sum.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="newbyteorder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">newbyteorder</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>a.newbyteorder(&lt;byteorder&gt;) is equivalent to
+a.view(a.dtype.newbytorder(&lt;byteorder&gt;))</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="nonzero"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">nonzero</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<pre class="literalblock">
+a.nonzero() returns a tuple of arrays
+
+Returns a tuple of arrays, one for each dimension of a,
+containing the indices of the non-zero elements in that
+dimension.  The corresponding non-zero values can be obtained
+with
+    a[a.nonzero()].
+
+To group the indices by element, rather than dimension, use
+    transpose(a.nonzero())
+instead. The result of this is always a 2d array, with a row for
+each non-zero element.;
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="put"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">put</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>a.put(indices, values, mode) sets a.flat[n] = values[n] for
+each n in indices. If values is shorter than indices then it
+will repeat.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ravel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ravel</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>a.ravel([fortran]) return a 1-d array (copy only if needed)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="repeat"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">repeat</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>repeats</span>=<span class=sig-default></span>,
+          <span class=sig-arg>axis</span>=<span class=sig-default>none</span>)</span>
+  </h3>
+<p>copy elements of a, repeats times.  the repeats argument must be a sequence
+of length a.shape[axis] or a scalar.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="reshape"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">reshape</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>d1</span>,
+          <span class=sig-arg>d2</span>,
+          <span class=sig-arg>dn</span>,
+          <span class=sig-arg>order</span>=<span class=sig-default>'c'</span>,
+          <span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>Return a new array from this one.  The new array must have the same number
+of elements as self.  Also always returns a view or raises a ValueError if
+that is impossible.;</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="resize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">resize</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>new_shape</span>,
+          <span class=sig-arg>refcheck</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>order</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Change array shape.</p>
+<p>Change size and shape of self inplace.  Array must own its own memory and
+not be referenced by other arrays.    Returns None.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+None
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="round"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">round</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>decimals</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>out</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Rounds to 'decimals' places.</p>
+<dl class="rst-docutils">
+<dt>Keyword arguments:</dt>
+<dd>decimals -- number of decimals to round to (default 0). May be negative.
+out -- existing array to use for output (default a).</dd>
+<dt>Return:</dt>
+<dd>Reference to out, where None specifies the original array a.</dd>
+</dl>
+<p>Round to the specified number of decimals. When 'decimals' is negative it
+specifies the number of positions to the left of the decimal point. The
+real and imaginary parts of complex numbers are rounded separately. Nothing
+is done if the array is not of float type and 'decimals' is &gt;= 0.</p>
+<p>The keyword 'out' may be used to specify a different array to hold the
+result rather than the default 'a'. If the type of the array specified by
+'out' differs from that of 'a', the result is cast to the new type,
+otherwise the original type is kept. Floats round to floats by default.</p>
+<p>Numpy rounds to even. Thus 1.5 and 2.5 round to 2.0, -0.5 and 0.5 round to
+0.0, etc. Results may also be surprising due to the inexact representation
+of decimal fractions in IEEE floating point and the errors introduced in
+scaling the numbers when 'decimals' is something other than 0.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+out (a)
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="searchsorted"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">searchsorted</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>v</span>,
+          <span class=sig-arg>side</span>=<span class=sig-default>'left'</span>)</span>
+  </h3>
+<dl class="rst-docutils">
+<dt>Required arguments:</dt>
+<dd>v -- array of keys to be searched for in a.</dd>
+<dt>Keyword arguments:</dt>
+<dd>side -- {'left', 'right'}, (default 'left').</dd>
+<dt>Returns:</dt>
+<dd>index array with the same shape as keys.</dd>
+</dl>
+<p>The array to be searched must be 1-D and is assumed to be sorted in
+ascending order.</p>
+<p>The method call</p>
+<blockquote>
+a.searchsorted(v, side='left')</blockquote>
+<p>returns an index array with the same shape as v such that for each value i
+in the index and the corresponding key in v the following holds:</p>
+<blockquote>
+a[j] &lt; key &lt;= a[i] for all j &lt; i,</blockquote>
+<p>If such an index does not exist, a.size() is used. Consequently, i is the
+index of the first item in 'a' that is &gt;= key. If the key were to be
+inserted into a in the slot before the index i, then the order of a would
+be preserved and i would be the smallest index with that property.</p>
+<p>The method call</p>
+<blockquote>
+a.searchsorted(v, side='right')</blockquote>
+<p>returns an index array with the same shape as v such that for each value i
+in the index and the corresponding key in v the following holds:</p>
+<blockquote>
+a[j] &lt;= key &lt; a[i] for all j &lt; i,</blockquote>
+<p>If such an index does not exist, a.size() is used. Consequently, i is the
+index of the first item in 'a' that is &gt; key. If the key were to be
+inserted into a in the slot before the index i, then the order of a would
+be preserved and i would be the largest index with that property.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+index array
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setfield"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setfield</span>(<span class=sig-arg>m</span>,
+          <span class=sig-arg>value</span>,
+          <span class=sig-arg>dtype</span>,
+          <span class=sig-arg>offset</span>)</span>
+  </h3>
+<p>places val into field of the given array defined by the data type and offset.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+None
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="sort"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">sort</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>axis</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>kind</span>=<span class=sig-default>'quicksort'</span>,
+          <span class=sig-arg>order</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<pre class="literalblock">
+Sort a along the given axis.
+
+Keyword arguments:
+
+axis  -- axis to be sorted (default -1)
+kind  -- sorting algorithm (default 'quicksort')
+         Possible values: 'quicksort', 'mergesort', or 'heapsort'.
+order -- If a has fields defined, then the order keyword can be the
+         field name to sort on or a list (or tuple) of field names
+         to indicate the order that fields should be used to define
+         the sort.         
+
+Returns: None.
+
+This method sorts 'a' in place along the given axis using the algorithm
+specified by the kind keyword.
+
+The various sorts may characterized by average speed, worst case
+performance, need for work space, and whether they are stable. A stable
+sort keeps items with the same key in the same relative order and is most
+useful when used with argsort where the key might differ from the items
+being sorted. The three available algorithms have the following properties:
+
+|------------------------------------------------------|
+|    kind   | speed |  worst case | work space | stable|
+|------------------------------------------------------|
+|'quicksort'|   1   | O(n^2)      |     0      |   no  |
+|'mergesort'|   2   | O(n*log(n)) |    ~n/2    |   yes |
+|'heapsort' |   3   | O(n*log(n)) |     0      |   no  |
+|------------------------------------------------------|
+
+All the sort algorithms make temporary copies of the data when the sort is
+not along the last axis. Consequently, sorts along the last axis are faster
+and use less space than sorts along other axis.
+</pre>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+None
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="squeeze"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">squeeze</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>m.squeeze() eliminate all length-1 dimensions</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="std"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">std</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>axis</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>dtype</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>out</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<pre class="literalblock">
+The standard deviation isa measure of the spread of a
+distribution.
+
+The standard deviation is the square root of the average of the
+squared deviations from the mean, i.e.
+    std = sqrt(mean((x - x.mean())**2,axis=0)).
+
+For multidimensional arrays, std is computed by default along the
+first axis.
+</pre>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+standard deviation
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="sum"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">sum</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>axis</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>dtype</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<pre class="literalblock">
+Sum the array over the given axis.  If the axis is None, sum over
+all dimensions of the array.
+
+The optional dtype argument is the data type for the returned
+value and intermediate calculations.  The default is to upcast
+(promote) smaller integer types to the platform-dependent int.
+For example, on 32-bit platforms:
+
+  a.dtype                         default sum dtype
+  ---------------------------------------------------
+  bool, int8, int16, int32        int32
+
+Warning: The arithmetic is modular and no error is raised on overflow.
+
+Examples:
+
+&gt;&gt;&gt; array([0.5, 1.5]).sum()
+2.0
+&gt;&gt;&gt; array([0.5, 1.5]).sum(dtype=int32)
+1
+&gt;&gt;&gt; array([[0, 1], [0, 5]]).sum(axis=0)
+array([0, 6])
+&gt;&gt;&gt; array([[0, 1], [0, 5]]).sum(axis=1)
+array([1, 5])
+&gt;&gt;&gt; ones(128, dtype=int8).sum(dtype=int8) # overflow!
+-128
+</pre>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+Sum of array over given axis
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="take"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">take</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>indices</span>,
+          <span class=sig-arg>axis</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>out</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>mode</span>=<span class=sig-default>'raise'</span>)</span>
+  </h3>
+<p>The new array is formed from the elements of a indexed by indices along the
+given axis.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+new array
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="tofile"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">tofile</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>fid</span>,
+          <span class=sig-arg>sep</span>=<span class=sig-default>&quot;&quot;</span>,
+          <span class=sig-arg>format</span>=<span class=sig-default>&quot;%s&quot;</span>)</span>
+  </h3>
+<p>Write the data to a file.</p>
+<dl class="rst-docutils">
+<dt>Required arguments:</dt>
+<dd>file -- an open file object or a string containing a filename</dd>
+<dt>Keyword arguments:</dt>
+<dd>sep -- separator for text output. Write binary if empty (default &quot;&quot;)
+format -- format string for text file output (default &quot;%s&quot;)</dd>
+</dl>
+<p>A convenience function for quick storage of array data. Information on
+endianess and precision is lost, so this method is not a good choice for
+files intended to archive data or transport data between machines with
+different endianess. Some of these problems can be overcome by outputting
+the data as text files at the expense of speed and file size.</p>
+<p>If 'sep' is empty this method is equivalent to file.write(a.tostring()). If
+'sep' is not empty each data item is converted to the nearest Python type
+and formatted using &quot;format&quot;%item. The resulting strings are written to the
+file separated by the contents of 'sep'. The data is always written in &quot;C&quot;
+(row major) order independent of the order of 'a'.</p>
+<p>The data produced by this method can be recovered by using the function
+fromfile().</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+None
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="tolist"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">tolist</span>(<span class=sig-arg>a</span>)</span>
+  </h3>
+<p>Copy the data portion of the array to a hierarchical python list and return
+that list. Data items are converted to the nearest compatible Python type.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+Array as hierarchical list
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="tostring"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">tostring</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>order</span>=<span class=sig-default>'C'</span>)</span>
+  </h3>
+<dl class="rst-docutils">
+<dt>Keyword arguments:</dt>
+<dd>order -- order of the data item in the copy {&quot;C&quot;,&quot;F&quot;,&quot;A&quot;} (default &quot;C&quot;)</dd>
+</dl>
+<p>Construct a Python string containing the raw bytes in the array. The order
+of the data in arrays with ndim &gt; 1 is specified by the 'order' keyword and
+this keyword overrides the order of the array. The
+choices are:</p>
+<blockquote>
+&quot;C&quot;       -- C order (row major)
+&quot;Fortran&quot; -- Fortran order (column major)
+&quot;Any&quot;     -- Current order of array.
+None      -- Same as &quot;Any&quot;</blockquote>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<pre class="literalblock">
+raw copy of array data as a Python string
+</pre>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="trace"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">trace</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>offset</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>axis1</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>axis2</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>dtype</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>out</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>return the sum along the offset diagonal of the array's indicated
+axis1 and axis2.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="transpose"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">transpose</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<pre class="literalblock">
+a.transpose(*axes)
+
+Returns a view of 'a' with axes transposed. If no axes are given,
+or None is passed, switches the order of the axes. For a 2-d
+array, this is the usual matrix transpose. If axes are given,
+they describe how the axes are permuted.
+
+Example:
+&gt;&gt;&gt; a = array([[1,2],[3,4]])
+&gt;&gt;&gt; a
+array([[1, 2],
+       [3, 4]])
+&gt;&gt;&gt; a.transpose()
+array([[1, 3],
+       [2, 4]])
+&gt;&gt;&gt; a.transpose((1,0))
+array([[1, 3],
+       [2, 4]])
+&gt;&gt;&gt; a.transpose(1,0)
+array([[1, 3],
+       [2, 4]])
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="view"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">view</span>(<span class="sig-vararg">...</span>)</span>
+  </h3>
+<p>a.view(&lt;type&gt;) -&gt; new view of array with same data.</p>
+<p>Type can be either a new sub-type object or a data-descriptor object</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__array_finalize__"></a>
+<h3>__array_finalize__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute '__array_finalize__' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute '__array_finalize__' of 'numpy.ndarray' objects&gt;            </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__array_interface__"></a>
+<h3>__array_interface__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute '__array_interface__' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute '__array_interface__' of 'numpy.ndarray' objects&gt;           </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__array_priority__"></a>
+<h3>__array_priority__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute '__array_priority__' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute '__array_priority__' of 'numpy.ndarray' objects&gt;            </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="__array_struct__"></a>
+<h3>__array_struct__</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute '__array_struct__' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute '__array_struct__' of 'numpy.ndarray' objects&gt;              </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="base"></a>
+<h3>base</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'base' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'base' of 'numpy.ndarray' objects&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="ctypes"></a>
+<h3>ctypes</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'ctypes' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'ctypes' of 'numpy.ndarray' objects&gt;                        </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="data"></a>
+<h3>data</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'data' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'data' of 'numpy.ndarray' objects&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="dtype"></a>
+<h3>dtype</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'dtype' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'dtype' of 'numpy.ndarray' objects&gt;                         </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="flags"></a>
+<h3>flags</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'flags' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'flags' of 'numpy.ndarray' objects&gt;                         </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="flat"></a>
+<h3>flat</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'flat' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'flat' of 'numpy.ndarray' objects&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="imag"></a>
+<h3>imag</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'imag' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'imag' of 'numpy.ndarray' objects&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="itemsize"></a>
+<h3>itemsize</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'itemsize' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'itemsize' of 'numpy.ndarray' objects&gt;                      </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="nbytes"></a>
+<h3>nbytes</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'nbytes' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'nbytes' of 'numpy.ndarray' objects&gt;                        </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="ndim"></a>
+<h3>ndim</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'ndim' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'ndim' of 'numpy.ndarray' objects&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="real"></a>
+<h3>real</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'real' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'real' of 'numpy.ndarray' objects&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="shape"></a>
+<h3>shape</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'shape' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'shape' of 'numpy.ndarray' objects&gt;                         </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="size"></a>
+<h3>size</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'size' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'size' of 'numpy.ndarray' objects&gt;                          </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="strides"></a>
+<h3>strides</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'strides' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'strides' of 'numpy.ndarray' objects&gt;                       </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="T"></a>
+<h3>T</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <code>getset_descriptor</code>
+
+      </dd>
+<span title="&lt;attribute 'T' of 'numpy.ndarray' objects&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;attribute 'T' of 'numpy.ndarray' objects&gt;                             </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Sep 26 13:48:29 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

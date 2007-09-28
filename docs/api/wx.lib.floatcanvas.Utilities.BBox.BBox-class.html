@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.floatcanvas.Utilities.BBox.BBox</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.floatcanvas-module.html">Package&nbsp;floatcanvas</a> ::
+        <a href="wx.lib.floatcanvas.Utilities-module.html">Package&nbsp;Utilities</a> ::
+        <a href="wx.lib.floatcanvas.Utilities.BBox-module.html">Module&nbsp;BBox</a> ::
+        Class&nbsp;BBox
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.floatcanvas.Utilities.BBox.BBox-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type BBox</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+    
+         |    
+   <a href="numpy.ndarray-class.html"><code>ndarray</code></a> --+
+             |
+            <b>BBox</b>
+</pre><br />
+
+<hr/>
+
+<p>A Bounding Box object:</p>
+<p>Takes Data as an array. Data is any python sequence that can be turned into a 
+2x2 numpy array of floats:</p>
+<dl class="rst-docutils">
+<dt>[[MinX, MinY ],</dt>
+<dd>[MaxX, MaxY ]]</dd>
+</dl>
+<p>It is a subclass of numpy.ndarray, so for the most part it can be used as 
+an array, and arrays that fit the above description can be used in its place.</p>
+<p>Usually created by the factory functions:</p>
+<blockquote>
+<p>asBBox</p>
+<p>and</p>
+<p>fromPoints</p>
+</blockquote>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.Utilities.BBox.BBox-class.html#__eq__" class="summary-sig-name"><code>__eq__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>BB</span>)</span></code>
+<br />
+__eq__(BB) The equality operator</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.Utilities.BBox.BBox-class.html#__new__" class="summary-sig-name"><code>__new__</code></a>(<span class=summary-sig-arg>subtype</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Takes Data as an array.    <i>(Static method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.Utilities.BBox.BBox-class.html#Inside" class="summary-sig-name"><code>Inside</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>BB</span>)</span></code>
+<br />
+Inside(BB):</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.Utilities.BBox.BBox-class.html#Merge" class="summary-sig-name"><code>Merge</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>BB</span>)</span></code>
+<br />
+Joins this bounding box with the one passed in, maybe making this one bigger</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.floatcanvas.Utilities.BBox.BBox-class.html#Overlaps" class="summary-sig-name"><code>Overlaps</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>BB</span>)</span></code>
+<br />
+Overlap(BB):</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__eq__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__eq__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>BB</span>)</span>
+    <br /><i>(Equality operator)</i>
+  </h3>
+<p>__eq__(BB) The equality operator</p>
+<p>A == B if and only if all the entries are the same</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="numpy.ndarray-class.html#__eq__"><code>numpy.ndarray.__eq__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Inside"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Inside</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>BB</span>)</span>
+  </h3>
+<p>Inside(BB):</p>
+<p>Tests if the given Bounding Box is entirely inside this one.</p>
+<p>Returns True if it is entirely inside, or touching the
+border.</p>
+<p>Returns False otherwise</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Merge"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Merge</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>BB</span>)</span>
+  </h3>
+<p>Joins this bounding box with the one passed in, maybe making this one bigger</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Overlaps"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Overlaps</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>BB</span>)</span>
+  </h3>
+<p>Overlap(BB):</p>
+<p>Tests if the given Bounding Box overlaps with this one.
+Returns True is the Bounding boxes overlap, False otherwise
+If they are just touching, returns True</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF STATIC METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Static Method Details</th></tr>
+</table>
+
+<a name="__new__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__new__</span>(<span class=sig-arg>subtype</span>,
+          <span class=sig-arg>data</span>)</span>
+  </h3>
+<p>Takes Data as an array. Data is any python sequence that can be turned into a 
+2x2 numpy array of floats:</p>
+<p>[[MinX, MinY ],
+[MaxX, MaxY ]]</p>
+<p>You don't usually call this directly. BBox objects are created with the factory functions:</p>
+<p>asBBox</p>
+<p>and</p>
+<p>fromPoints</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="numpy.ndarray-class.html#__new__"><code>numpy.ndarray.__new__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Sep 26 13:48:35 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

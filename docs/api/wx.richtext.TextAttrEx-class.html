@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>wx.richtext.RichTextAttr</title>
+  <title>wx.richtext.TextAttrEx</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
 <script language="javascript">
 <!--
@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -39,26 +39,26 @@ function setFrame(url1, url2){
       <font size="-1"><b class="breadcrumbs">
         <a href="wx-module.html">Package&nbsp;wx</a> ::
         <a href="wx.richtext-module.html">Module&nbsp;richtext</a> ::
-        Class&nbsp;RichTextAttr
+        Class&nbsp;TextAttrEx
       </b></font></br>
     </td>
     <td><table cellpadding="0" cellspacing="0">
-      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.richtext.RichTextAttr-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.richtext.TextAttrEx-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
     </table></td>
 </tr></table>
 
 <!-- =========== START OF CLASS DESCRIPTION =========== -->
-<h2 class="class">Type RichTextAttr</h2>
+<h2 class="class">Type TextAttrEx</h2>
 
 <pre class="base-tree">
 <a href="__builtin__.object-class.html"><code>object</code></a> --+
          |
-        <b>RichTextAttr</b>
+        <b>TextAttrEx</b>
 </pre><br />
 
 <hr/>
 
-<p>The RichTextAttr class stores information about the various attributes
+<p>The TextAttrEx class stores information about the various attributes
 for a block of text, including font, colour, indents, alignments, and
 etc.</p>
 <hr/>
@@ -68,43 +68,23 @@ etc.</p>
 <table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="summary">
   <th colspan="2">Method Summary</th></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextAttr</font></td>
-  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>colText</span>,
-          <span class=summary-sig-arg>colBack</span>,
-          <span class=summary-sig-arg>alignment</span>)</span></code>
+<tr><td align="right" valign="top" width="15%"><font size="-1">TextAttrEx</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
-The RichTextAttr class stores information about the various attributes
+The TextAttrEx class stores information about the various attributes
 for a block of text, including font, colour, indents, alignments, and
 etc.</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="unknown-662508484"></a><span class="summary-sig"><span class="summary-sig-name">__del__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+<tr><td align="right" valign="top" width="15%"><font size="-1">TextAttrEx</font></td>
+  <td><code><a name="CombineEx"></a><span class="summary-sig"><span class="summary-sig-name">CombineEx</span>(<span class=summary-sig-arg>attr</span>,
+          <span class=summary-sig-arg>attrDef</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+    <i>(Static method)</i>
 </td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
-  <td><code><a name="__eq__"></a><span class="summary-sig"><span class="summary-sig-name">__eq__</span>(<span class=summary-sig-arg>self</span>,
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Copy"></a><span class="summary-sig"><span class="summary-sig-name">Copy</span>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>attr</span>)</span></code>
 </td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
-  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#Apply" class="summary-sig-name"><code>Apply</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>style</span>,
-          <span class=summary-sig-arg>compareWith</span>)</span></code>
-<br />
-Merges the given attributes.</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">RichTextAttr</font></td>
-  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#Combine" class="summary-sig-name"><code>Combine</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>style</span>,
-          <span class=summary-sig-arg>compareWith</span>)</span></code>
-<br />
-Merges the given attributes and returns the result.</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#Copy" class="summary-sig-name"><code>Copy</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>attr</span>)</span></code>
-<br />
-Copy from attr to self.</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">Font</font></td>
-  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#CreateFont" class="summary-sig-name"><code>CreateFont</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
-<br />
-Create font from the font attributes in this attr object.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
   <td><code><a name="GetAlignment"></a><span class="summary-sig"><span class="summary-sig-name">GetAlignment</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
@@ -132,28 +112,8 @@ Create font from the font attributes in this attr object.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
   <td><code><a name="GetFlags"></a><span class="summary-sig"><span class="summary-sig-name">GetFlags</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Font</font></td>
   <td><code><a name="GetFont"></a><span class="summary-sig"><span class="summary-sig-name">GetFont</span>(<span class=summary-sig-arg>self</span>)</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
-  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetFontAttributes" class="summary-sig-name"><code>GetFontAttributes</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>font</span>)</span></code>
-<br />
-Set our font attributes from the font.</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
-  <td><code><a name="GetFontFaceName"></a><span class="summary-sig"><span class="summary-sig-name">GetFontFaceName</span>(<span class=summary-sig-arg>self</span>)</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
-  <td><code><a name="GetFontSize"></a><span class="summary-sig"><span class="summary-sig-name">GetFontSize</span>(<span class=summary-sig-arg>self</span>)</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
-  <td><code><a name="GetFontStyle"></a><span class="summary-sig"><span class="summary-sig-name">GetFontStyle</span>(<span class=summary-sig-arg>self</span>)</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
-  <td><code><a name="GetFontUnderlined"></a><span class="summary-sig"><span class="summary-sig-name">GetFontUnderlined</span>(<span class=summary-sig-arg>self</span>)</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
-  <td><code><a name="GetFontWeight"></a><span class="summary-sig"><span class="summary-sig-name">GetFontWeight</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">long</font></td>
   <td><code><a name="GetLeftIndent"></a><span class="summary-sig"><span class="summary-sig-name">GetLeftIndent</span>(<span class=summary-sig-arg>self</span>)</span></code>
@@ -284,16 +244,14 @@ Set our font attributes from the font.</td></tr>
   <td><code><a name="HasURL"></a><span class="summary-sig"><span class="summary-sig-name">HasURL</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#Init" class="summary-sig-name"><code>Init</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
-<br />
-Initialise this object.</td></tr>
+  <td><code><a name="Init"></a><span class="summary-sig"><span class="summary-sig-name">Init</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><a name="IsCharacterStyle"></a><span class="summary-sig"><span class="summary-sig-name">IsCharacterStyle</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
-  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#IsDefault" class="summary-sig-name"><code>IsDefault</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
-<br />
-Returns false if we have any attributes set, true otherwise</td></tr>
+  <td><code><a name="IsDefault"></a><span class="summary-sig"><span class="summary-sig-name">IsDefault</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><a name="IsParagraphStyle"></a><span class="summary-sig"><span class="summary-sig-name">IsParagraphStyle</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
@@ -323,7 +281,7 @@ Returns false if we have any attributes set, true otherwise</td></tr>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><a name="SetBulletText"></a><span class="summary-sig"><span class="summary-sig-name">SetBulletText</span>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>symbol</span>)</span></code>
+          <span class=summary-sig-arg>text</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><a name="SetCharacterStyleName"></a><span class="summary-sig"><span class="summary-sig-name">SetCharacterStyleName</span>(<span class=summary-sig-arg>self</span>,
@@ -335,27 +293,8 @@ Returns false if we have any attributes set, true otherwise</td></tr>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><a name="SetFont"></a><span class="summary-sig"><span class="summary-sig-name">SetFont</span>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>font</span>)</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="SetFontFaceName"></a><span class="summary-sig"><span class="summary-sig-name">SetFontFaceName</span>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>faceName</span>)</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="SetFontSize"></a><span class="summary-sig"><span class="summary-sig-name">SetFontSize</span>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>pointSize</span>)</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="SetFontStyle"></a><span class="summary-sig"><span class="summary-sig-name">SetFontStyle</span>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>fontStyle</span>)</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="SetFontUnderlined"></a><span class="summary-sig"><span class="summary-sig-name">SetFontUnderlined</span>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>underlined</span>)</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="SetFontWeight"></a><span class="summary-sig"><span class="summary-sig-name">SetFontWeight</span>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>fontWeight</span>)</span></code>
+          <span class=summary-sig-arg>font</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><a name="SetLeftIndent"></a><span class="summary-sig"><span class="summary-sig-name">SetLeftIndent</span>(<span class=summary-sig-arg>self</span>,
@@ -422,209 +361,54 @@ Returns false if we have any attributes set, true otherwise</td></tr>
 <tr bgcolor="#70b0f0" class="summary">
   <th colspan="2">Property Summary</th></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#Alignment"><code>Alignment</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#BackgroundColour"><code>BackgroundColour</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#BulletFont"><code>BulletFont</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#BulletName"><code>BulletName</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#BulletNumber"><code>BulletNumber</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#BulletStyle"><code>BulletStyle</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#BulletText"><code>BulletText</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#CharacterStyleName"><code>CharacterStyleName</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#Flags"><code>Flags</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#Font"><code>Font</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#FontAttributes"><code>FontAttributes</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#FontFaceName"><code>FontFaceName</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#FontSize"><code>FontSize</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#FontStyle"><code>FontStyle</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#FontUnderlined"><code>FontUnderlined</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#FontWeight"><code>FontWeight</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#LeftIndent"><code>LeftIndent</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#LeftSubIndent"><code>LeftSubIndent</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#LineSpacing"><code>LineSpacing</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#ListStyleName"><code>ListStyleName</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#OutlineLevel"><code>OutlineLevel</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#ParagraphSpacingAfter"><code>ParagraphSpacingAfter</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#ParagraphSpacingBefore"><code>ParagraphSpacingBefore</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#ParagraphStyleName"><code>ParagraphStyleName</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#RightIndent"><code>RightIndent</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#Tabs"><code>Tabs</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#TextColour"><code>TextColour</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#TextEffectFlags"><code>TextEffectFlags</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#TextEffects"><code>TextEffects</code></a></b></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.richtext.RichTextAttr-class.html#URL"><code>URL</code></a></b></td></tr></table><br />
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#Alignment"><code>Alignment</code></a></b>: GetAlignment(self) -&gt; int</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#BackgroundColour"><code>BackgroundColour</code></a></b>: GetBackgroundColour(self) -&gt; Colour</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#BulletFont"><code>BulletFont</code></a></b>: GetBulletFont(self) -&gt; String</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#BulletName"><code>BulletName</code></a></b>: GetBulletName(self) -&gt; String</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#BulletNumber"><code>BulletNumber</code></a></b>: GetBulletNumber(self) -&gt; int</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#BulletStyle"><code>BulletStyle</code></a></b>: GetBulletStyle(self) -&gt; int</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#BulletText"><code>BulletText</code></a></b>: GetBulletText(self) -&gt; String</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#CharacterStyleName"><code>CharacterStyleName</code></a></b>: GetCharacterStyleName(self) -&gt; String</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#Flags"><code>Flags</code></a></b>: GetFlags(self) -&gt; long</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#Font"><code>Font</code></a></b>: GetFont(self) -&gt; Font</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#LeftIndent"><code>LeftIndent</code></a></b>: GetLeftIndent(self) -&gt; long</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#LeftSubIndent"><code>LeftSubIndent</code></a></b>: GetLeftSubIndent(self) -&gt; long</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#LineSpacing"><code>LineSpacing</code></a></b>: GetLineSpacing(self) -&gt; int</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#ListStyleName"><code>ListStyleName</code></a></b>: GetListStyleName(self) -&gt; String</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#OutlineLevel"><code>OutlineLevel</code></a></b>: GetOutlineLevel(self) -&gt; int</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#ParagraphSpacingAfter"><code>ParagraphSpacingAfter</code></a></b>: GetParagraphSpacingAfter(self) -&gt; int</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#ParagraphSpacingBefore"><code>ParagraphSpacingBefore</code></a></b>: GetParagraphSpacingBefore(self) -&gt; int</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#ParagraphStyleName"><code>ParagraphStyleName</code></a></b>: GetParagraphStyleName(self) -&gt; String</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#RightIndent"><code>RightIndent</code></a></b>: GetRightIndent(self) -&gt; long</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#Tabs"><code>Tabs</code></a></b>: GetTabs(self) -&gt; wxArrayInt</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#TextColour"><code>TextColour</code></a></b>: GetTextColour(self) -&gt; Colour</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#TextEffectFlags"><code>TextEffectFlags</code></a></b>: GetTextEffectFlags(self) -&gt; int</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#TextEffects"><code>TextEffects</code></a></b>: GetTextEffects(self) -&gt; int</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.richtext.TextAttrEx-class.html#URL"><code>URL</code></a></b>: GetURL(self) -&gt; String</td></tr></table><br />
 
 
-<!-- =========== START OF METHOD DETAILS =========== -->
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
 <table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="details">
-  <th colspan="2">Method Details</th></tr>
+  <th colspan="2">Instance Method Details</th></tr>
 </table>
 
 <a name="__init__"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
-          <span class=sig-arg>colText</span>=<span class=sig-default>wxNullColour</span>,
-          <span class=sig-arg>colBack</span>=<span class=sig-default>wxNullColour</span>,
-          <span class=sig-arg>alignment</span>=<span class=sig-default>TEXT_ALIGNMENT_DEFAULT</span>)</span>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>)</span>
     <br /><i>(Constructor)</i>
   </h3>
-<p>The RichTextAttr class stores information about the various attributes
+<p>The TextAttrEx class stores information about the various attributes
 for a block of text, including font, colour, indents, alignments, and
 etc.</p>
   <dl><dt></dt><dd>
-    <dl><dt><b>Parameters:</b></dt>
-      <dd><code><b>colText</b></code>
-        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        (type=Colour)</i>
-<p/>
-      <dd><code><b>colBack</b></code>
-        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        (type=Colour)</i>
-<p/>
-      <dd><code><b>alignment</b></code>
-        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        (type=int)</i>
-<p/>
-      </dd>
-    </dl>
     <dl><dt><b>Returns:</b></dt>
       <dd>
-RichTextAttr      </dd>
+TextAttrEx      </dd>
     </dl>
     <dl><dt><b>Overrides:</b></dt>
       <dd><a href="__builtin__.object-class.html#__init__"><code>__builtin__.object.__init__</code></a></dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-
-<a name="Apply"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">Apply</span>(<span class=sig-arg>self</span>,
-          <span class=sig-arg>style</span>,
-          <span class=sig-arg>compareWith</span>=<span class=sig-default>None</span>)</span>
-  </h3>
-<p>Merges the given attributes. Does not affect self. If compareWith is
-not None, then it will be used to mask out those attributes that are
-the same in style and compareWith, for situations where we don't want
-to explicitly set inherited attributes.</p>
-  <dl><dt></dt><dd>
-    <dl><dt><b>Parameters:</b></dt>
-      <dd><code><b>style</b></code>
-        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        (type=RichTextAttr)</i>
-<p/>
-      <dd><code><b>compareWith</b></code>
-        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        (type=RichTextAttr)</i>
-<p/>
-      </dd>
-    </dl>
-    <dl><dt><b>Returns:</b></dt>
-      <dd>
-bool      </dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-
-<a name="Combine"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">Combine</span>(<span class=sig-arg>self</span>,
-          <span class=sig-arg>style</span>,
-          <span class=sig-arg>compareWith</span>=<span class=sig-default>None</span>)</span>
-  </h3>
-<p>Merges the given attributes and returns the result. Does not affect
-self. If compareWith is not None, then it will be used to mask out
-those attributes that are the same in style and compareWith, for
-situations where we don't want to explicitly set inherited attributes.</p>
-  <dl><dt></dt><dd>
-    <dl><dt><b>Parameters:</b></dt>
-      <dd><code><b>style</b></code>
-        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        (type=RichTextAttr)</i>
-<p/>
-      <dd><code><b>compareWith</b></code>
-        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        (type=RichTextAttr)</i>
-<p/>
-      </dd>
-    </dl>
-    <dl><dt><b>Returns:</b></dt>
-      <dd>
-RichTextAttr      </dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-
-<a name="Copy"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">Copy</span>(<span class=sig-arg>self</span>,
-          <span class=sig-arg>attr</span>)</span>
-  </h3>
-<p>Copy from attr to self.</p>
-  <dl><dt></dt><dd>
-    <dl><dt><b>Parameters:</b></dt>
-      <dd><code><b>attr</b></code>
-        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        (type=RichTextAttr)</i>
-<p/>
-      </dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-
-<a name="CreateFont"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">CreateFont</span>(<span class=sig-arg>self</span>)</span>
-  </h3>
-<p>Create font from the font attributes in this attr object.</p>
-  <dl><dt></dt><dd>
-    <dl><dt><b>Returns:</b></dt>
-      <dd>
-Font      </dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-
-<a name="GetFontAttributes"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">GetFontAttributes</span>(<span class=sig-arg>self</span>,
-          <span class=sig-arg>font</span>)</span>
-  </h3>
-<p>Set our font attributes from the font.</p>
-  <dl><dt></dt><dd>
-    <dl><dt><b>Parameters:</b></dt>
-      <dd><code><b>font</b></code>
-        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        (type=Font)</i>
-<p/>
-      </dd>
-    </dl>
-    <dl><dt><b>Returns:</b></dt>
-      <dd>
-bool      </dd>
-    </dl>
-  </dd></dl>
-</td></tr></table>
-
-<a name="Init"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">Init</span>(<span class=sig-arg>self</span>)</span>
-  </h3>
-<p>Initialise this object.</p>
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-
-<a name="IsDefault"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">IsDefault</span>(<span class=sig-arg>self</span>)</span>
-  </h3>
-<p>Returns false if we have any attributes set, true otherwise</p>
-  <dl><dt></dt><dd>
-    <dl><dt><b>Returns:</b></dt>
-      <dd>
-bool      </dd>
     </dl>
   </dd></dl>
 </td></tr></table>
@@ -640,15 +424,16 @@ bool      </dd>
 
 <a name="Alignment"></a>
 <h3>Alignment</h3>
+<p>GetAlignment(self) -&gt; int</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetAlignment" class="summary-sig-name"><code>GetAlignment</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetAlignment" class="summary-sig-name"><code>GetAlignment</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetAlignment" class="summary-sig-name"><code>SetAlignment</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetAlignment" class="summary-sig-name"><code>SetAlignment</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>alignment</span>)</span>
       </dd>
     </dl>
@@ -657,15 +442,16 @@ bool      </dd>
 
 <a name="BackgroundColour"></a>
 <h3>BackgroundColour</h3>
+<p>GetBackgroundColour(self) -&gt; Colour</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetBackgroundColour" class="summary-sig-name"><code>GetBackgroundColour</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetBackgroundColour" class="summary-sig-name"><code>GetBackgroundColour</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetBackgroundColour" class="summary-sig-name"><code>SetBackgroundColour</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetBackgroundColour" class="summary-sig-name"><code>SetBackgroundColour</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>colBack</span>)</span>
       </dd>
     </dl>
@@ -674,15 +460,16 @@ bool      </dd>
 
 <a name="BulletFont"></a>
 <h3>BulletFont</h3>
+<p>GetBulletFont(self) -&gt; String</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetBulletFont" class="summary-sig-name"><code>GetBulletFont</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetBulletFont" class="summary-sig-name"><code>GetBulletFont</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetBulletFont" class="summary-sig-name"><code>SetBulletFont</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetBulletFont" class="summary-sig-name"><code>SetBulletFont</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>bulletFont</span>)</span>
       </dd>
     </dl>
@@ -691,15 +478,16 @@ bool      </dd>
 
 <a name="BulletName"></a>
 <h3>BulletName</h3>
+<p>GetBulletName(self) -&gt; String</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetBulletName" class="summary-sig-name"><code>GetBulletName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetBulletName" class="summary-sig-name"><code>GetBulletName</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetBulletName" class="summary-sig-name"><code>SetBulletName</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetBulletName" class="summary-sig-name"><code>SetBulletName</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>name</span>)</span>
       </dd>
     </dl>
@@ -708,15 +496,16 @@ bool      </dd>
 
 <a name="BulletNumber"></a>
 <h3>BulletNumber</h3>
+<p>GetBulletNumber(self) -&gt; int</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetBulletNumber" class="summary-sig-name"><code>GetBulletNumber</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetBulletNumber" class="summary-sig-name"><code>GetBulletNumber</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetBulletNumber" class="summary-sig-name"><code>SetBulletNumber</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetBulletNumber" class="summary-sig-name"><code>SetBulletNumber</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>n</span>)</span>
       </dd>
     </dl>
@@ -725,15 +514,16 @@ bool      </dd>
 
 <a name="BulletStyle"></a>
 <h3>BulletStyle</h3>
+<p>GetBulletStyle(self) -&gt; int</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetBulletStyle" class="summary-sig-name"><code>GetBulletStyle</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetBulletStyle" class="summary-sig-name"><code>GetBulletStyle</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetBulletStyle" class="summary-sig-name"><code>SetBulletStyle</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetBulletStyle" class="summary-sig-name"><code>SetBulletStyle</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>style</span>)</span>
       </dd>
     </dl>
@@ -742,16 +532,17 @@ bool      </dd>
 
 <a name="BulletText"></a>
 <h3>BulletText</h3>
+<p>GetBulletText(self) -&gt; String</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetBulletText" class="summary-sig-name"><code>GetBulletText</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetBulletText" class="summary-sig-name"><code>GetBulletText</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetBulletText" class="summary-sig-name"><code>SetBulletText</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>symbol</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetBulletText" class="summary-sig-name"><code>SetBulletText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span>
       </dd>
     </dl>
   </dd>
@@ -759,15 +550,16 @@ bool      </dd>
 
 <a name="CharacterStyleName"></a>
 <h3>CharacterStyleName</h3>
+<p>GetCharacterStyleName(self) -&gt; String</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetCharacterStyleName" class="summary-sig-name"><code>GetCharacterStyleName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetCharacterStyleName" class="summary-sig-name"><code>GetCharacterStyleName</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetCharacterStyleName" class="summary-sig-name"><code>SetCharacterStyleName</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetCharacterStyleName" class="summary-sig-name"><code>SetCharacterStyleName</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>name</span>)</span>
       </dd>
     </dl>
@@ -776,15 +568,16 @@ bool      </dd>
 
 <a name="Flags"></a>
 <h3>Flags</h3>
+<p>GetFlags(self) -&gt; long</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetFlags" class="summary-sig-name"><code>GetFlags</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetFlags" class="summary-sig-name"><code>GetFlags</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetFlags" class="summary-sig-name"><code>SetFlags</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetFlags" class="summary-sig-name"><code>SetFlags</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>flags</span>)</span>
       </dd>
     </dl>
@@ -793,115 +586,18 @@ bool      </dd>
 
 <a name="Font"></a>
 <h3>Font</h3>
+<p>GetFont(self) -&gt; Font</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetFont" class="summary-sig-name"><code>GetFont</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetFont" class="summary-sig-name"><code>GetFont</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetFont" class="summary-sig-name"><code>SetFont</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>font</span>)</span>
-      </dd>
-    </dl>
-  </dd>
-</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-
-<a name="FontAttributes"></a>
-<h3>FontAttributes</h3>
-<dl>
-  <dt></dt>
-  <dd>
-    <dl>
-      <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetFontAttributes" class="summary-sig-name"><code>GetFontAttributes</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>font</span>)</span>
-      </dd>
-    </dl>
-  </dd>
-</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-
-<a name="FontFaceName"></a>
-<h3>FontFaceName</h3>
-<dl>
-  <dt></dt>
-  <dd>
-    <dl>
-      <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetFontFaceName" class="summary-sig-name"><code>GetFontFaceName</code></a>(<span class=summary-sig-arg>self</span>)</span>
-      </dd>
-      <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetFontFaceName" class="summary-sig-name"><code>SetFontFaceName</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>faceName</span>)</span>
-      </dd>
-    </dl>
-  </dd>
-</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-
-<a name="FontSize"></a>
-<h3>FontSize</h3>
-<dl>
-  <dt></dt>
-  <dd>
-    <dl>
-      <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetFontSize" class="summary-sig-name"><code>GetFontSize</code></a>(<span class=summary-sig-arg>self</span>)</span>
-      </dd>
-      <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetFontSize" class="summary-sig-name"><code>SetFontSize</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>pointSize</span>)</span>
-      </dd>
-    </dl>
-  </dd>
-</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-
-<a name="FontStyle"></a>
-<h3>FontStyle</h3>
-<dl>
-  <dt></dt>
-  <dd>
-    <dl>
-      <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetFontStyle" class="summary-sig-name"><code>GetFontStyle</code></a>(<span class=summary-sig-arg>self</span>)</span>
-      </dd>
-      <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetFontStyle" class="summary-sig-name"><code>SetFontStyle</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>fontStyle</span>)</span>
-      </dd>
-    </dl>
-  </dd>
-</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-
-<a name="FontUnderlined"></a>
-<h3>FontUnderlined</h3>
-<dl>
-  <dt></dt>
-  <dd>
-    <dl>
-      <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetFontUnderlined" class="summary-sig-name"><code>GetFontUnderlined</code></a>(<span class=summary-sig-arg>self</span>)</span>
-      </dd>
-      <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetFontUnderlined" class="summary-sig-name"><code>SetFontUnderlined</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>underlined</span>)</span>
-      </dd>
-    </dl>
-  </dd>
-</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-
-<a name="FontWeight"></a>
-<h3>FontWeight</h3>
-<dl>
-  <dt></dt>
-  <dd>
-    <dl>
-      <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetFontWeight" class="summary-sig-name"><code>GetFontWeight</code></a>(<span class=summary-sig-arg>self</span>)</span>
-      </dd>
-      <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetFontWeight" class="summary-sig-name"><code>SetFontWeight</code></a>(<span class=summary-sig-arg>self</span>,
-          <span class=summary-sig-arg>fontWeight</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetFont" class="summary-sig-name"><code>SetFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>,
+          <span class=summary-sig-arg>flags</span>)</span>
       </dd>
     </dl>
   </dd>
@@ -909,15 +605,16 @@ bool      </dd>
 
 <a name="LeftIndent"></a>
 <h3>LeftIndent</h3>
+<p>GetLeftIndent(self) -&gt; long</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetLeftIndent" class="summary-sig-name"><code>GetLeftIndent</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetLeftIndent" class="summary-sig-name"><code>GetLeftIndent</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetLeftIndent" class="summary-sig-name"><code>SetLeftIndent</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetLeftIndent" class="summary-sig-name"><code>SetLeftIndent</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>indent</span>,
           <span class=summary-sig-arg>subIndent</span>)</span>
       </dd>
@@ -927,12 +624,13 @@ bool      </dd>
 
 <a name="LeftSubIndent"></a>
 <h3>LeftSubIndent</h3>
+<p>GetLeftSubIndent(self) -&gt; long</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetLeftSubIndent" class="summary-sig-name"><code>GetLeftSubIndent</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetLeftSubIndent" class="summary-sig-name"><code>GetLeftSubIndent</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
     </dl>
   </dd>
@@ -940,15 +638,16 @@ bool      </dd>
 
 <a name="LineSpacing"></a>
 <h3>LineSpacing</h3>
+<p>GetLineSpacing(self) -&gt; int</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetLineSpacing" class="summary-sig-name"><code>GetLineSpacing</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetLineSpacing" class="summary-sig-name"><code>GetLineSpacing</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetLineSpacing" class="summary-sig-name"><code>SetLineSpacing</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetLineSpacing" class="summary-sig-name"><code>SetLineSpacing</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>spacing</span>)</span>
       </dd>
     </dl>
@@ -957,15 +656,16 @@ bool      </dd>
 
 <a name="ListStyleName"></a>
 <h3>ListStyleName</h3>
+<p>GetListStyleName(self) -&gt; String</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetListStyleName" class="summary-sig-name"><code>GetListStyleName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetListStyleName" class="summary-sig-name"><code>GetListStyleName</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetListStyleName" class="summary-sig-name"><code>SetListStyleName</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetListStyleName" class="summary-sig-name"><code>SetListStyleName</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>name</span>)</span>
       </dd>
     </dl>
@@ -974,15 +674,16 @@ bool      </dd>
 
 <a name="OutlineLevel"></a>
 <h3>OutlineLevel</h3>
+<p>GetOutlineLevel(self) -&gt; int</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetOutlineLevel" class="summary-sig-name"><code>GetOutlineLevel</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetOutlineLevel" class="summary-sig-name"><code>GetOutlineLevel</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetOutlineLevel" class="summary-sig-name"><code>SetOutlineLevel</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetOutlineLevel" class="summary-sig-name"><code>SetOutlineLevel</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>level</span>)</span>
       </dd>
     </dl>
@@ -991,15 +692,16 @@ bool      </dd>
 
 <a name="ParagraphSpacingAfter"></a>
 <h3>ParagraphSpacingAfter</h3>
+<p>GetParagraphSpacingAfter(self) -&gt; int</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetParagraphSpacingAfter" class="summary-sig-name"><code>GetParagraphSpacingAfter</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetParagraphSpacingAfter" class="summary-sig-name"><code>GetParagraphSpacingAfter</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetParagraphSpacingAfter" class="summary-sig-name"><code>SetParagraphSpacingAfter</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetParagraphSpacingAfter" class="summary-sig-name"><code>SetParagraphSpacingAfter</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>spacing</span>)</span>
       </dd>
     </dl>
@@ -1008,15 +710,16 @@ bool      </dd>
 
 <a name="ParagraphSpacingBefore"></a>
 <h3>ParagraphSpacingBefore</h3>
+<p>GetParagraphSpacingBefore(self) -&gt; int</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetParagraphSpacingBefore" class="summary-sig-name"><code>GetParagraphSpacingBefore</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetParagraphSpacingBefore" class="summary-sig-name"><code>GetParagraphSpacingBefore</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetParagraphSpacingBefore" class="summary-sig-name"><code>SetParagraphSpacingBefore</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetParagraphSpacingBefore" class="summary-sig-name"><code>SetParagraphSpacingBefore</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>spacing</span>)</span>
       </dd>
     </dl>
@@ -1025,15 +728,16 @@ bool      </dd>
 
 <a name="ParagraphStyleName"></a>
 <h3>ParagraphStyleName</h3>
+<p>GetParagraphStyleName(self) -&gt; String</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetParagraphStyleName" class="summary-sig-name"><code>GetParagraphStyleName</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetParagraphStyleName" class="summary-sig-name"><code>GetParagraphStyleName</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetParagraphStyleName" class="summary-sig-name"><code>SetParagraphStyleName</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetParagraphStyleName" class="summary-sig-name"><code>SetParagraphStyleName</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>name</span>)</span>
       </dd>
     </dl>
@@ -1042,15 +746,16 @@ bool      </dd>
 
 <a name="RightIndent"></a>
 <h3>RightIndent</h3>
+<p>GetRightIndent(self) -&gt; long</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetRightIndent" class="summary-sig-name"><code>GetRightIndent</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetRightIndent" class="summary-sig-name"><code>GetRightIndent</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetRightIndent" class="summary-sig-name"><code>SetRightIndent</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetRightIndent" class="summary-sig-name"><code>SetRightIndent</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>indent</span>)</span>
       </dd>
     </dl>
@@ -1059,15 +764,16 @@ bool      </dd>
 
 <a name="Tabs"></a>
 <h3>Tabs</h3>
+<p>GetTabs(self) -&gt; wxArrayInt</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetTabs" class="summary-sig-name"><code>GetTabs</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetTabs" class="summary-sig-name"><code>GetTabs</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetTabs" class="summary-sig-name"><code>SetTabs</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetTabs" class="summary-sig-name"><code>SetTabs</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>tabs</span>)</span>
       </dd>
     </dl>
@@ -1076,15 +782,16 @@ bool      </dd>
 
 <a name="TextColour"></a>
 <h3>TextColour</h3>
+<p>GetTextColour(self) -&gt; Colour</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetTextColour" class="summary-sig-name"><code>GetTextColour</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetTextColour" class="summary-sig-name"><code>GetTextColour</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetTextColour" class="summary-sig-name"><code>SetTextColour</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetTextColour" class="summary-sig-name"><code>SetTextColour</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>colText</span>)</span>
       </dd>
     </dl>
@@ -1093,15 +800,16 @@ bool      </dd>
 
 <a name="TextEffectFlags"></a>
 <h3>TextEffectFlags</h3>
+<p>GetTextEffectFlags(self) -&gt; int</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetTextEffectFlags" class="summary-sig-name"><code>GetTextEffectFlags</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetTextEffectFlags" class="summary-sig-name"><code>GetTextEffectFlags</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetTextEffectFlags" class="summary-sig-name"><code>SetTextEffectFlags</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetTextEffectFlags" class="summary-sig-name"><code>SetTextEffectFlags</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>effects</span>)</span>
       </dd>
     </dl>
@@ -1110,15 +818,16 @@ bool      </dd>
 
 <a name="TextEffects"></a>
 <h3>TextEffects</h3>
+<p>GetTextEffects(self) -&gt; int</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetTextEffects" class="summary-sig-name"><code>GetTextEffects</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetTextEffects" class="summary-sig-name"><code>GetTextEffects</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetTextEffects" class="summary-sig-name"><code>SetTextEffects</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetTextEffects" class="summary-sig-name"><code>SetTextEffects</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>effects</span>)</span>
       </dd>
     </dl>
@@ -1133,10 +842,10 @@ bool      </dd>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-148838972</span>(...)</span>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-37595928</span>(...)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-148839028</span>(...)</span>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-37596048</span>(...)</span>
       </dd>
     </dl>
   </dd>
@@ -1144,15 +853,16 @@ bool      </dd>
 
 <a name="URL"></a>
 <h3>URL</h3>
+<p>GetURL(self) -&gt; String</p>
 <dl>
   <dt></dt>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#GetURL" class="summary-sig-name"><code>GetURL</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#GetURL" class="summary-sig-name"><code>GetURL</code></a>(<span class=summary-sig-arg>self</span>)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><a href="wx.richtext.RichTextAttr-class.html#SetURL" class="summary-sig-name"><code>SetURL</code></a>(<span class=summary-sig-arg>self</span>,
+      <dd><span class="summary-sig"><a href="wx.richtext.TextAttrEx-class.html#SetURL" class="summary-sig-name"><code>SetURL</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>url</span>)</span>
       </dd>
     </dl>
@@ -1171,7 +881,7 @@ bool      </dd>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -1179,7 +889,7 @@ bool      </dd>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Tue Aug  7 12:42:25 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Sep 26 13:46:20 2007</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

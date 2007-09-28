@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>unittest.TestCase</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        Module&nbsp;unittest ::
+        Class&nbsp;TestCase
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="unittest.TestCase-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type TestCase</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+
+         |
+        <b>TestCase</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.floatcanvas.Utilities.BBoxTest.testAsBBox-class.html"><code>testAsBBox</code></a>,
+    <a href="wx.lib.floatcanvas.Utilities.BBoxTest.testBBarray-class.html"><code>testBBarray</code></a>,
+    <a href="wx.lib.floatcanvas.Utilities.BBoxTest.testCreator-class.html"><code>testCreator</code></a>,
+    <a href="wx.lib.floatcanvas.Utilities.BBoxTest.testEquality-class.html"><code>testEquality</code></a>,
+    <a href="wx.lib.floatcanvas.Utilities.BBoxTest.testFromPoints-class.html"><code>testFromPoints</code></a>,
+    <a href="wx.lib.floatcanvas.Utilities.BBoxTest.testInside-class.html"><code>testInside</code></a>,
+    <a href="wx.lib.floatcanvas.Utilities.BBoxTest.testIntersect-class.html"><code>testIntersect</code></a>,
+    <a href="wx.lib.floatcanvas.Utilities.BBoxTest.testMerge-class.html"><code>testMerge</code></a></dd></dl>
+
+<hr/>
+
+<p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the __init__ method, the base class
+__init__ method must always be called. It is important that subclasses
+should not change the signature of their __init__ method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>methodName</span>)</span></code>
+<br />
+Create an instance of the class that will use the named test
+method when executed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__call__"></a><span class="summary-sig"><span class="summary-sig-name">__call__</span>(<span class=summary-sig-arg>self</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwds</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__repr__"></a><span class="summary-sig"><span class="summary-sig-name">__repr__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__str__"></a><span class="summary-sig"><span class="summary-sig-name">__str__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failUnless" class="summary-sig-name"><code>assert_</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expr</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail the test unless the expression is true.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failUnlessAlmostEqual" class="summary-sig-name"><code>assertAlmostEqual</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>places</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are unequal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failUnlessAlmostEqual" class="summary-sig-name"><code>assertAlmostEquals</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>places</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are unequal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failUnlessEqual" class="summary-sig-name"><code>assertEqual</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are unequal as determined by the '=='
+operator.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failUnlessEqual" class="summary-sig-name"><code>assertEquals</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are unequal as determined by the '=='
+operator.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failIf" class="summary-sig-name"><code>assertFalse</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expr</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail the test if the expression is true.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failIfAlmostEqual" class="summary-sig-name"><code>assertNotAlmostEqual</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>places</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are equal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failIfAlmostEqual" class="summary-sig-name"><code>assertNotAlmostEquals</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>places</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are equal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failIfEqual" class="summary-sig-name"><code>assertNotEqual</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are equal as determined by the '=='
+operator.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failIfEqual" class="summary-sig-name"><code>assertNotEquals</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are equal as determined by the '=='
+operator.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failUnlessRaises" class="summary-sig-name"><code>assertRaises</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>excClass</span>,
+          <span class=summary-sig-arg>callableObj</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Fail unless an exception of class excClass is thrown
+by callableObj when invoked with arguments args and keyword
+arguments kwargs.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failUnless" class="summary-sig-name"><code>assertTrue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expr</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail the test unless the expression is true.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="countTestCases"></a><span class="summary-sig"><span class="summary-sig-name">countTestCases</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#debug" class="summary-sig-name"><code>debug</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Run the test without collecting errors in a TestResult</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="defaultTestResult"></a><span class="summary-sig"><span class="summary-sig-name">defaultTestResult</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#fail" class="summary-sig-name"><code>fail</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail immediately, with the given message.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failIf" class="summary-sig-name"><code>failIf</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expr</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail the test if the expression is true.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failIfAlmostEqual" class="summary-sig-name"><code>failIfAlmostEqual</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>places</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are equal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failIfEqual" class="summary-sig-name"><code>failIfEqual</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are equal as determined by the '=='
+operator.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failUnless" class="summary-sig-name"><code>failUnless</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>expr</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail the test unless the expression is true.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failUnlessAlmostEqual" class="summary-sig-name"><code>failUnlessAlmostEqual</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>places</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are unequal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failUnlessEqual" class="summary-sig-name"><code>failUnlessEqual</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>,
+          <span class=summary-sig-arg>msg</span>)</span></code>
+<br />
+Fail if the two objects are unequal as determined by the '=='
+operator.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#failUnlessRaises" class="summary-sig-name"><code>failUnlessRaises</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>excClass</span>,
+          <span class=summary-sig-arg>callableObj</span>,
+          <span class="summary-sig-vararg">*args</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+<br />
+Fail unless an exception of class excClass is thrown
+by callableObj when invoked with arguments args and keyword
+arguments kwargs.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="id"></a><span class="summary-sig"><span class="summary-sig-name">id</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="run"></a><span class="summary-sig"><span class="summary-sig-name">run</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>result</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#setUp" class="summary-sig-name"><code>setUp</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Hook method for setting up the test fixture before exercising it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#shortDescription" class="summary-sig-name"><code>shortDescription</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a one-line description of the test, or None if no
+description has been provided.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="unittest.TestCase-class.html#tearDown" class="summary-sig-name"><code>tearDown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Hook method for deconstructing the test fixture after testing it.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><code>type</code></font></td>
+  <td><a name="failureException"></a><b><code>failureException</code></b> = <a href="exceptions.AssertionError-class.html"><code>exceptions.AssertionError</code></a></td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>methodName</span>=<span class=sig-default>'runTest'</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="__builtin__.object-class.html#__init__"><code>__builtin__.object.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failUnless"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assert_</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>expr</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail the test unless the expression is true.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failUnlessAlmostEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assertAlmostEqual</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>places</span>=<span class=sig-default>7</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are unequal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</p>
+<p>Note that decimal places (from zero) are usually not the same
+as significant digits (measured from the most signficant digit).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failUnlessAlmostEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assertAlmostEquals</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>places</span>=<span class=sig-default>7</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are unequal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</p>
+<p>Note that decimal places (from zero) are usually not the same
+as significant digits (measured from the most signficant digit).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failUnlessEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assertEqual</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are unequal as determined by the '=='
+operator.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failUnlessEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assertEquals</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are unequal as determined by the '=='
+operator.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failIf"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assertFalse</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>expr</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail the test if the expression is true.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failIfAlmostEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assertNotAlmostEqual</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>places</span>=<span class=sig-default>7</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are equal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</p>
+<p>Note that decimal places (from zero) are usually not the same
+as significant digits (measured from the most signficant digit).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failIfAlmostEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assertNotAlmostEquals</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>places</span>=<span class=sig-default>7</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are equal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</p>
+<p>Note that decimal places (from zero) are usually not the same
+as significant digits (measured from the most signficant digit).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failIfEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assertNotEqual</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are equal as determined by the '=='
+operator.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failIfEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assertNotEquals</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are equal as determined by the '=='
+operator.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failUnlessRaises"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assertRaises</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>excClass</span>,
+          <span class=sig-arg>callableObj</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Fail unless an exception of class excClass is thrown
+by callableObj when invoked with arguments args and keyword
+arguments kwargs. If a different type of exception is
+thrown, it will not be caught, and the test case will be
+deemed to have suffered an error, exactly as for an
+unexpected exception.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failUnless"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">assertTrue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>expr</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail the test unless the expression is true.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="debug"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">debug</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Run the test without collecting errors in a TestResult</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="fail"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">fail</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail immediately, with the given message.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failIf"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">failIf</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>expr</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail the test if the expression is true.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failIfAlmostEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">failIfAlmostEqual</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>places</span>=<span class=sig-default>7</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are equal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</p>
+<p>Note that decimal places (from zero) are usually not the same
+as significant digits (measured from the most signficant digit).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failIfEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">failIfEqual</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are equal as determined by the '=='
+operator.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failUnless"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">failUnless</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>expr</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail the test unless the expression is true.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failUnlessAlmostEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">failUnlessAlmostEqual</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>places</span>=<span class=sig-default>7</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are unequal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero.</p>
+<p>Note that decimal places (from zero) are usually not the same
+as significant digits (measured from the most signficant digit).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failUnlessEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">failUnlessEqual</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>,
+          <span class=sig-arg>msg</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Fail if the two objects are unequal as determined by the '=='
+operator.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="failUnlessRaises"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">failUnlessRaises</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>excClass</span>,
+          <span class=sig-arg>callableObj</span>,
+          <span class="sig-vararg">*args</span>,
+          <span class="sig-kwarg">**kwargs</span>)</span>
+  </h3>
+<p>Fail unless an exception of class excClass is thrown
+by callableObj when invoked with arguments args and keyword
+arguments kwargs. If a different type of exception is
+thrown, it will not be caught, and the test case will be
+deemed to have suffered an error, exactly as for an
+unexpected exception.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="setUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">setUp</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Hook method for setting up the test fixture before exercising it.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="shortDescription"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">shortDescription</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a one-line description of the test, or None if no
+description has been provided.</p>
+<p>The default implementation of this method returns the first line of
+the specified test method's docstring.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="tearDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">tearDown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Hook method for deconstructing the test fixture after testing it.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Sep 26 13:49:12 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.floatcanvas.FloatCanvas.Text</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.floatcanvas-module.html">Package&nbsp;floatcanvas</a> ::
+        <a href="wx.lib.floatcanvas.FloatCanvas-module.html">Module&nbsp;FloatCanvas</a> ::
+        Class&nbsp;Text
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.floatcanvas.FloatCanvas.Text-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class Text</h2>
+
+<pre class="base-tree">
+       <a href="wx.lib.floatcanvas.FloatCanvas.DrawObject-class.html"><code>DrawObject</code></a> --+
+                    |
+<a href="wx.lib.floatcanvas.FloatCanvas.XYObjectMixin-class.html"><code>XYObjectMixin</code></a> --+   |
+                |   |
+  <a href="wx.lib.floatcanvas.FloatCanvas.TextObjectMixin-class.html"><code>TextObjectMixin</code></a> --+
+                    |
+                   <b>Text</b>
+</pre><br />
+
+<hr/>
+
+<pre class="literalblock">
+This class creates a text object, placed at the coordinates,
+x,y. the &quot;Position&quot; argument is a two charactor string, indicating
+where in relation to the coordinates the string should be oriented.
+
+The first letter is: t, c, or b, for top, center and bottom The
+second letter is: l, c, or r, for left, center and right The
+position refers to the position relative to the text itself. It
+defaults to &quot;tl&quot; (top left).
+
+Size is the size of the font in pixels, or in points for printing
+(if it ever gets implimented). Those will be the same, If you assume
+72 PPI.
+
+Family:
+    Font family, a generic way of referring to fonts without
+    specifying actual facename. One of:
+        wx.DEFAULT:  Chooses a default font.
+        wx.DECORATIVE: A decorative font.
+        wx.ROMAN: A formal, serif font.
+        wx.SCRIPT: A handwriting font.
+        wx.SWISS: A sans-serif font.
+        wx.MODERN: A fixed pitch font.
+    NOTE: these are only as good as the wxWindows defaults, which aren't so good.
+Style:
+    One of wx.NORMAL, wx.SLANT and wx.ITALIC.
+Weight:
+    One of wx.NORMAL, wx.LIGHT and wx.BOLD.
+Underlined:
+    The value can be True or False. At present this may have an an
+    effect on Windows only.
+
+Alternatively, you can set the kw arg: Font, to a wx.Font, and the
+above will be ignored.
+
+The size is fixed, and does not scale with the drawing.
+
+The hit-test is done on the entire text extent
+</pre>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>String</span>,
+          <span class=summary-sig-arg>xy</span>,
+          <span class=summary-sig-arg>Size</span>,
+          <span class=summary-sig-arg>Color</span>,
+          <span class=summary-sig-arg>BackgroundColor</span>,
+          <span class=summary-sig-arg>Family</span>,
+          <span class=summary-sig-arg>Style</span>,
+          <span class=summary-sig-arg>Weight</span>,
+          <span class=summary-sig-arg>Underlined</span>,
+          <span class=summary-sig-arg>Position</span>,
+          <span class=summary-sig-arg>InForeground</span>,
+          <span class=summary-sig-arg>Font</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Sep 26 13:47:53 2007</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

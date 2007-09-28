@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -226,6 +226,11 @@ Delete all items in the CustomTreeCtrl.</td></tr>
           <span class=summary-sig-arg>item</span>)</span></code>
 <br />
 Delete item children.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.customtreectrl.CustomTreeCtrl-class.html#DeleteItemWindow" class="summary-sig-name"><code>DeleteItemWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Deletes the window associated to an item (if any).</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.lib.customtreectrl.CustomTreeCtrl-class.html#DoGetBestSize" class="summary-sig-name"><code>DoGetBestSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
@@ -507,6 +512,11 @@ Gets the item last child.</td></tr>
 <br />
 Returns the line height for the given item.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.customtreectrl.CustomTreeCtrl-class.html#GetMaxWidth" class="summary-sig-name"><code>GetMaxWidth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>respect_expansion_state</span>)</span></code>
+<br />
+Returns the maximum width of the CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.lib.customtreectrl.CustomTreeCtrl-class.html#GetNext" class="summary-sig-name"><code>GetNext</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>item</span>)</span></code>
 <br />
@@ -539,9 +549,10 @@ Returns the next visible item.</td></tr>
 <br />
 Gets the previous sibling of an item.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetPrevVisible"></a><span class="summary-sig"><span class="summary-sig-name">GetPrevVisible</span>(<span class=summary-sig-arg>self</span>,
+  <td><code><span class="summary-sig"><a href="wx.lib.customtreectrl.CustomTreeCtrl-class.html#GetPrevVisible" class="summary-sig-name"><code>GetPrevVisible</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>item</span>)</span></code>
-</td></tr>
+<br />
+Returns the previous visible item.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.lib.customtreectrl.CustomTreeCtrl-class.html#GetPyData" class="summary-sig-name"><code>GetPyData</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>item</span>)</span></code>
@@ -775,6 +786,12 @@ Paint a level of CustomTreeCtrl.</td></tr>
 <br />
 Appends an item as a first child of parent.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RecurseOnChildren"></a><span class="summary-sig"><span class="summary-sig-name">RecurseOnChildren</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>maxwidth</span>,
+          <span class=summary-sig-arg>respect_expansion_state</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.lib.customtreectrl.CustomTreeCtrl-class.html#RefreshLine" class="summary-sig-name"><code>RefreshLine</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>item</span>)</span></code>
 <br />
@@ -986,6 +1003,12 @@ Sets the item text colour.</td></tr>
           <span class=summary-sig-arg>visited</span>)</span></code>
 <br />
 Sets whether an hypertext item was visited.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.customtreectrl.CustomTreeCtrl-class.html#SetItemWindow" class="summary-sig-name"><code>SetItemWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>wnd</span>)</span></code>
+<br />
+Sets the window for the given item</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.lib.customtreectrl.CustomTreeCtrl-class.html#SetItemWindowEnabled" class="summary-sig-name"><code>SetItemWindowEnabled</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>item</span>,
@@ -1389,6 +1412,16 @@ EVT_TREE_ITEM_COLLAPSED events.</p>
           <span class=sig-arg>item</span>)</span>
   </h3>
 <p>Delete item children.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteItemWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteItemWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Deletes the window associated to an item (if any).</p>
   <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
@@ -1944,6 +1977,22 @@ This is applied only if gradient and Windows Vista styles are disabled.</p>
   </dd></dl>
 </td></tr></table>
 
+<a name="GetMaxWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMaxWidth</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>respect_expansion_state</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Returns the maximum width of the CustomTreeCtrl.
+If respect_expansion_state is True, only the expanded items (and their
+children) will be measured. Otherwise all the items are expanded and
+their width measured.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#GetMaxWidth"><code>wx.Window.GetMaxWidth</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
 <a name="GetNext"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">GetNext</span>(<span class=sig-arg>self</span>,
@@ -2003,6 +2052,16 @@ This method has no sense if you do not call GetFirstChild() before.</p>
           <span class=sig-arg>item</span>)</span>
   </h3>
 <p>Gets the previous sibling of an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPrevVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPrevVisible</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the previous visible item.</p>
   <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
@@ -2891,6 +2950,17 @@ This is useful when something is dragged from outside the CustomTreeCtrl.</p>
   </dd></dl>
 </td></tr></table>
 
+<a name="SetItemWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>wnd</span>)</span>
+  </h3>
+<p>Sets the window for the given item</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
 <a name="SetItemWindowEnabled"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">SetItemWindowEnabled</span>(<span class=sig-arg>self</span>,
@@ -3112,7 +3182,7 @@ case-sensitive alphabetical order).</p>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.4.2</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -3120,7 +3190,7 @@ case-sensitive alphabetical order).</p>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Tue Aug  7 12:50:11 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Sep 26 13:48:40 2007</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

@@ -12,9 +12,9 @@ There are a few ways that you can help out the wxPython project.  If any of thes
 
 <p>
 <ul>
-<p><li><b>Hardware</b>: The more platforms I have to test on the better wxPython will be.  I have a copy of i386 Solaris, it would be great to have a box to run it on.  (Of course a real Sparc would be cool too!)  
+<!-- <p><li><b>Hardware</b>: The more platforms I have to test on the better wxPython will be.  I have a copy of i386 Solaris, it would be great to have a box to run it on.  (Of course a real Sparc would be cool too!)   -->
 
-<p><li><b>Documentation</b>: The current wxPython docs are actually the wxWidgets C++ docs.  This is fine for programmers who have a strong OOP background, or at least a bit of C++ experience, but it doesn't cut it for people who are newbies, only know Python or who are jumping off the VB bandwagon.  With this in mind, anyone who wants to contribute sections to the wxPython Wiki, or <a href="http://wiki.wxpython.org/">wxPyWiki</a>, or provide any other form of wxPython specific documentation would be greatly appreciated.
+<!-- <p><li><b>Documentation</b>: The current wxPython docs are actually the wxWidgets C++ docs.  This is fine for programmers who have a strong OOP background, or at least a bit of C++ experience, but it doesn't cut it for people who are newbies, only know Python or who are jumping off the VB bandwagon.  With this in mind, anyone who wants to contribute sections to the wxPython Wiki, or <a href="http://wiki.wxpython.org/">wxPyWiki</a>, or provide any other form of wxPython specific documentation would be greatly appreciated. -->
 
 <p><li><b>Library code and patches</b>: Have you developed some classes using wxPython that might be useful to others?  Or how about changes to existing code to fix bugs or enhance features?  Send them my way and I'll include it in  wxPython if I like it.  Be sure to take a look at the <a href="codeguidelines.php">wxPython Coding Guidelines</a> first.
 
@@ -43,7 +43,7 @@ Any CEO's out there that want to <i>sponsor</i> wxPython?  Just pretend it's a l
 Seriously though, my dream is to find a way to work full-time on developing, supporting and writing about wxPython and still be able to pay the mortgage and put food on the table.  Unless I happen to find a 1980 certificate for 10,000 shares of Microsoft buried in the basement I expect I'll have to come up with a creative arrangement with one or more business entities to make this happen...
 
 <p>
-<b>UPDATE:</b>  My dream has come true and for the past couple years <a href="http://www.osafoundation.org">OSAF</a> has been sponsoring my work on wxPython!
+<b>UPDATE:</b>  My dream has come true and for the past few years <a href="http://www.osafoundation.org">OSAF</a> has been sponsoring my work on wxPython!
 <p><div align="center"><a href="http://www.osafoundation.org/"><img src="images/OSAFLogo.gif" width="559" height="64" alt="" border="0"></a></div>
 </ul>
 

@@ -1,6 +1,45 @@
 Recent Changes for wxPython
 =====================================================================
 
+2.8.6.1
+-------
+* 26-Oct-2007
+
+wxMac: Fixed paste bug when the clipboard contains unicode text.
+
+AUI: Added missing event binders for the notebok tab events.
+
+wxMac: Fixed bug that resulted in portions of virtual listctrl's to
+not be repainted when scrolling with PgUp/PgDown/Home/End.
+
+wxMac: Fixed bug that broke tab traversal when tabbing runs into a
+wx.StaticBox. 
+
+wxGTK:  Add wx.Window.GetGtkWidget.
+
+All: Undprecated wx.ListCtrl.[G|S]etItemSpacing
+
+All: Fixed wx.Palette constructor wrapper.  It takes three seqences of
+integers to specify the R, G, and B values for each color in the
+palette, which must all be the same length and which must contain
+integer values in the range of 0..255 inclusive.
+
+Thanks to some grunt work from Edouard TISSERANT, wxPython now has the
+needed tweaks in config.py to be able to be built with mingw32.  See
+BUILD.txt for details.
+
+Changes in wx.GraphicsContext to make things like the half-pixel
+offsets more consistent across platforms.
+
+wxMSW: If freezing a top-level window wxWidgets will actually freeze
+the TLW's children instead.  This works around a feature of MS Windows
+that allowed windows beneath the frozen one in Z-order to paint
+through, and also mouse events clicking through to the lower window.
+
+
+
+
+
 2.8.6.0
 -------
 * 27-Sept-2007
@@ -73,7 +112,7 @@ for each OS version, all builds are now Universal and work on both
 Panther and Tiger, and on PPC and i386.
 
 On the Linux side the debian and ubuntu packages will support multiple
-versions of Python if the Debian/Ubuntu release is setup to support
+versions of Python if the Debian/Ubuntu release is set up to support
 more than one version.  To check which versions you can expect to get
 you can run "pyversions -s".  Also there is a new package available
 that contains a debug version of the wxPython extension modules, that

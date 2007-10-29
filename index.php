@@ -23,8 +23,9 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
-<li><i>(27-Sept-2007)</i> <b>wxPython 2.8.6.0</b>has been <a href="download.php">released</a>.  This release is mostly about fixing a number of bugs and
-inconsistencies in wxWidgets and wxPython.  
+<li><i>(26-Oct-2007)</i> <b>wxPython 2.8.6.1</b> is now <a href="download.php">available.</a>  This release has some important bug fixes and is a general improvement over 2.8.6.0.
+
+<p><li><i>(27-Sept-2007)</i> <b>wxPython 2.8.6.0</b>has been <a href="download.php">released</a>.  This release is mostly about fixing a number of bugs and inconsistencies in wxWidgets and wxPython.  
 
      
 <p><li><i>(13-Sept-2007)</i> The <b>mail lists are up</b> and are working on processing all the queued messages.  This was definitely a "when it rains it pours" kind of situation, see the <a href="http://dotsrc.org/news/">DotSrc news archive</a> for more details.

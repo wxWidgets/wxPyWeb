@@ -41,6 +41,7 @@ Welcome to the home of wxPython, a blending of the
 <p><li><i>(20-Jan-2007)</i> <b>wxPython 2.8.1.1</b> has been released.   This release adds a few minor enhancements and a number of bug fixes designed to further stabalize
 the 2.8.x release series.
 
+<!--     
 <p><li><i>(11-Dec-2006)</i> The wxPython reference docs have been put on a server that doesn't choke on large files like this one does.  You can now access the <a href="http://wxpython.wxcommunity.com/docs/api/"><b>API docs</b></a> at <a href="http://wxcommunity.com/">wxCommunity</a>.  Please update your bookmarks.  As always you can also <a href="download.php#documentation">download a tarball</a> containing the html files to access locally if you wish.
 
 <p><li><i>(11-Dec-2006)</i> <b>wxPython 2.8.0.1</b> has been released.  This is the first in a new <a href="http://wiki.wxpython.org/index.cgi/ReleaseSeries">stable release series</a>, and includes a few new widget classes and other enhancements since 2.7.2.  
@@ -58,6 +59,7 @@ the 2.8.x release series.
 <p><li>A snapshot of the new style wxPython reference docs is available <a href="docs/api/">here</a>.  While most of the content is not yet present, the docs are still usable, and in fact helpful since they already accurately document what classes and methods are present in wxPython and what the parameter names are.
 
 <p><li>Robin's OSCON 2006 tutorial and presentation slides are <a href="presentations.php">available</a>.
+-->
 </ul>
 <p>
 </td></tr></table>

@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.7.1</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -489,7 +489,8 @@ Return x^y...</td></tr>
           <span class=summary-sig-arg>kind</span>,
           <span class=summary-sig-arg>order</span>)</span></code>
 <br />
-Return array of indices that sort a along the given axis.</td></tr>
+Perform an indirect sort along the given axis using the algorithm specified
+by the kind keyword.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#astype" class="summary-sig-name"><code>astype</code></a>(<span class=summary-sig-arg>a</span>,
           <span class=summary-sig-arg>t</span>)</span></code>
@@ -546,11 +547,13 @@ a.copy(<a href="#id1" name="id2"><span class="rst-problematic" id="id2">|</span>
           <span class=summary-sig-arg>out</span>)</span></code>
 </td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="diagonal"></a><span class="summary-sig"><span class="summary-sig-name">diagonal</span>(<span class=summary-sig-arg>a</span>,
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#diagonal" class="summary-sig-name"><code>diagonal</code></a>(<span class=summary-sig-arg>a</span>,
           <span class=summary-sig-arg>offset</span>,
           <span class=summary-sig-arg>axis1</span>,
           <span class=summary-sig-arg>axis2</span>)</span></code>
-</td></tr>
+<br />
+If a is 2-d, return the diagonal of self with the given offset, i.e., the
+collection of elements of the form a[i,i+offset].</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#dump" class="summary-sig-name"><code>dump</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
 <br />
@@ -589,9 +592,10 @@ it.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#mean" class="summary-sig-name"><code>mean</code></a>(<span class=summary-sig-arg>a</span>,
           <span class=summary-sig-arg>axis</span>,
-          <span class=summary-sig-arg>dtype</span>)</span></code>
+          <span class=summary-sig-arg>dtype</span>,
+          <span class=summary-sig-arg>out</span>)</span></code>
 <br />
-Average the array over the given axis.</td></tr>
+Returns the average of the array elements.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><a name="min"></a><span class="summary-sig"><span class="summary-sig-name">min</span>(<span class=summary-sig-arg>a</span>,
           <span class=summary-sig-arg>axis</span>)</span></code>
@@ -660,7 +664,8 @@ Rounds to 'decimals' places.</td></tr>
           <span class=summary-sig-arg>v</span>,
           <span class=summary-sig-arg>side</span>)</span></code>
 <br />
-v -- array of keys to be searched for in a.</td></tr>
+Find the indices into a sorted array such that if the corresponding keys in
+v were inserted before the indices the order of a would be preserved.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#setfield" class="summary-sig-name"><code>setfield</code></a>(<span class=summary-sig-arg>m</span>,
           <span class=summary-sig-arg>value</span>,
@@ -680,7 +685,8 @@ places val into field of the given array defined by the data type and offset.</t
           <span class=summary-sig-arg>kind</span>,
           <span class=summary-sig-arg>order</span>)</span></code>
 <br />
-Sort a along the given axis.</td></tr>
+Perform an inplace sort along the given axis using the algorithm specified
+by the kind keyword.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#squeeze" class="summary-sig-name"><code>squeeze</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
 <br />
@@ -691,8 +697,8 @@ m.squeeze() eliminate all length-1 dimensions</td></tr>
           <span class=summary-sig-arg>dtype</span>,
           <span class=summary-sig-arg>out</span>)</span></code>
 <br />
-The standard deviation isa measure of the spread of a
-distribution.</td></tr>
+Returns the standard deviation of the array elements, a measure of the
+spread of a distribution.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#sum" class="summary-sig-name"><code>sum</code></a>(<span class=summary-sig-arg>a</span>,
           <span class=summary-sig-arg>axis</span>,
@@ -748,10 +754,13 @@ a.transpose(*axes)
 
 Returns a view of 'a' with axes transposed.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="var"></a><span class="summary-sig"><span class="summary-sig-name">var</span>(<span class=summary-sig-arg>a</span>,
+  <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#var" class="summary-sig-name"><code>var</code></a>(<span class=summary-sig-arg>a</span>,
           <span class=summary-sig-arg>axis</span>,
-          <span class=summary-sig-arg>dtype</span>)</span></code>
-</td></tr>
+          <span class=summary-sig-arg>dtype</span>,
+          <span class=summary-sig-arg>out</span>)</span></code>
+<br />
+Returns the variance of the array elements, a measure of the spread of a
+distribution.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="numpy.ndarray-class.html#view" class="summary-sig-name"><code>view</code></a>(<span class="summary-sig-vararg">...</span>)</span></code>
 <br />
@@ -987,23 +996,37 @@ rawdata -- a binary string with the data (or a list if Object array)</dd>
           <span class=sig-arg>order</span>=<span class=sig-default>None</span>)</span>
   </h3>
 <pre class="literalblock">
-Return array of indices that sort a along the given axis.
+Perform an indirect sort along the given axis using the algorithm specified
+by the kind keyword. It returns an array of indices of the same shape as
+'a' that index data along the given axis in sorted order.
 
-Keyword arguments:
+:Parameters:
 
-axis  -- axis to be indirectly sorted (default -1)
-kind  -- sorting algorithm (default 'quicksort')
-         Possible values: 'quicksort', 'mergesort', or 'heapsort'
-order -- If a has fields defined, then the order keyword can be the
-         field name to sort on or a list (or tuple) of field names
-         to indicate the order that fields should be used to define
-         the sort.         
+    axis : integer
+        Axis to be indirectly sorted. None indicates that the flattened
+        array should be used. Default is -1.
 
-Returns: array of indices that sort a along the specified axis.
+    kind : string
+        Sorting algorithm to use. Possible values are 'quicksort',
+        'mergesort', or 'heapsort'. Default is 'quicksort'.
 
-This method executes an indirect sort along the given axis using the
-algorithm specified by the kind keyword. It returns an array of indices of
-the same shape as 'a' that index data along the given axis in sorted order.
+    order : list type or None
+        When a is an array with fields defined, this argument specifies
+        which fields to compare first, second, etc.  Not all fields need be
+        specified.
+
+:Returns:
+
+    indices : integer array
+        Array of indices that sort 'a' along the specified axis.
+
+:SeeAlso:
+
+  - lexsort : indirect stable sort with multiple keys
+  - sort : inplace sort
+
+:Notes:
+------
 
 The various sorts are characterized by average speed, worst case
 performance, need for work space, and whether they are stable. A stable
@@ -1018,9 +1041,9 @@ available algorithms have the following properties:
 |'heapsort' |   3   | O(n*log(n)) |     0      |   no  |
 |------------------------------------------------------|
 
-All the sort algorithms make temporary copies of the data when the sort is
-not along the last axis. Consequently, sorts along the last axis are faster
-and use less space than sorts along other axis.
+All the sort algorithms make temporary copies of the data when the sort is not
+along the last axis. Consequently, sorts along the last axis are faster and use
+less space than sorts along other axis.
 </pre>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
@@ -1058,7 +1081,7 @@ Copy of array cast to type t
   </h3>
 <p>Swap the bytes in the array.</p>
 <p>Swap the bytes in the array.  Return the byteswapped array.  If the first
-argument is TRUE, byteswap in-place and return a reference to self.</p>
+argument is True, byteswap in-place and return a reference to self.</p>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
       <dd>
@@ -1108,6 +1131,82 @@ only if m is already in fortran order.;</dd>
 </dd>
 </dl>
   <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="diagonal"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">diagonal</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>offset</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>axis1</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>axis2</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>If a is 2-d, return the diagonal of self with the given offset, i.e., the
+collection of elements of the form a[i,i+offset]. If a is n-d with n &gt; 2,
+then the axes specified by axis1 and axis2 are used to determine the 2-d
+subarray whose diagonal is returned. The shape of the resulting array can
+be determined by removing axis1 and axis2 and appending an index to the
+right equal to the size of the resulting diagonals.</p>
+<div class="rst-section" id="examples">
+<h1 class="heading"><a name="rst-examples">Examples</a></h1>
+<pre class="rst-doctest-block">
+&gt;&gt;&gt; a = arange(4).reshape(2,2)
+&gt;&gt;&gt; a
+array([[0, 1],
+       [2, 3]])
+&gt;&gt;&gt; a.diagonal()
+array([0, 3])
+&gt;&gt;&gt; a.diagonal(1)
+array([1])
+</pre>
+<pre class="rst-doctest-block">
+&gt;&gt;&gt; a = arange(8).reshape(2,2,2)
+&gt;&gt;&gt; a
+array([[[0, 1],
+        [2, 3]],
+</pre>
+<blockquote>
+<dl class="rst-docutils">
+<dt>[[4, 5],</dt>
+<dd>[6, 7]]])</dd>
+</dl>
+</blockquote>
+<pre class="rst-doctest-block">
+&gt;&gt;&gt; a.diagonal(0,-2,-1)
+array([[0, 3],
+       [4, 7]])
+</pre>
+</div>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<dl class="rst-docutils">
+<dt>array_of_diagonals <span class="classifier-delimiter">:</span> <span class="rst-classifier">same type as original array</span></dt>
+<dd>If a is 2-d, then a 1-d array containing the diagonal is returned.
+If a is n-d, n &gt; 2, then an array of diagonals is returned.</dd>
+</dl>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <ul class="rst-simple">
+<li>diag : matlab workalike for 1-d and 2-d arrays.</li>
+<li>diagflat : creates diagonal arrays</li>
+<li>trace : sum along diagonals</li>
+</ul>
+</p>
+
+<p><b>Parameters:</b> <dl class="rst-docutils">
+<dt>offset <span class="classifier-delimiter">:</span> <span class="rst-classifier">integer</span></dt>
+<dd>Offset of the diagonal from the main diagonal. Can be both positive
+and negative. Defaults to main diagonal.</dd>
+<dt>axis1 <span class="classifier-delimiter">:</span> <span class="rst-classifier">integer</span></dt>
+<dd>Axis to be used as the first axis of the 2-d subarrays from which
+the diagonals should be taken. Defaults to first index.</dd>
+<dt>axis2 <span class="classifier-delimiter">:</span> <span class="rst-classifier">integer</span></dt>
+<dd>Axis to be used as the second axis of the 2-d subarrays from which
+the diagonals should be taken. Defaults to second index.</dd>
+</dl>
+</p>
+
   </dd></dl>
 </td></tr></table>
 
@@ -1168,7 +1267,7 @@ None
           <span class=sig-arg>offset</span>)</span>
   </h3>
 <p>Returns a field of the given array as a certain type. A field is a view of
-the array's data with each itemsize determined by the given type and the
+the array data with each itemsize determined by the given type and the
 offset into the current array.</p>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
@@ -1202,15 +1301,48 @@ copy of first array item as Python scalar
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">mean</span>(<span class=sig-arg>a</span>,
           <span class=sig-arg>axis</span>=<span class=sig-default>None</span>,
-          <span class=sig-arg>dtype</span>=<span class=sig-default>None</span>)</span>
+          <span class=sig-arg>dtype</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>out</span>=<span class=sig-default>None</span>)</span>
   </h3>
-<p>Average the array over the given axis.  If the axis is None,
-average over all dimensions of the array.  Equivalent to</p>
+<p>Returns the average of the array elements.  The average is taken over the
+flattened array by default, otherwise over the specified axis.</p>
+<div class="rst-section" id="notes">
+<h1 class="heading"><a name="rst-notes">Notes</a></h1>
 <blockquote>
-a.sum(axis, dtype) / size(a, axis).</blockquote>
-<p>The optional dtype argument is the data type for intermediate
-calculations in the sum.</p>
+The mean is the sum of the elements along the axis divided by the
+number of elements.</blockquote>
+</div>
   <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<dl class="rst-docutils">
+<dt>mean <span class="classifier-delimiter">:</span> <span class="rst-classifier">The return type varies, see above.</span></dt>
+<dd>A new array holding the result is returned unless out is specified,
+in which case a reference to out is returned.</dd>
+</dl>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <ul class="rst-simple">
+<li>var : variance</li>
+<li>std : standard deviation</li>
+</ul>
+</p>
+
+<p><b>Parameters:</b> <dl class="rst-docutils">
+<dt>axis <span class="classifier-delimiter">:</span> <span class="rst-classifier">integer</span></dt>
+<dd>Axis along which the means are computed. The default is
+to compute the standard deviation of the flattened array.</dd>
+<dt>dtype <span class="classifier-delimiter">:</span> <span class="rst-classifier">type</span></dt>
+<dd>Type to use in computing the means. For arrays of
+integer type the default is float32, for arrays of float types it
+is the same as the array type.</dd>
+<dt>out <span class="classifier-delimiter">:</span> <span class="rst-classifier">ndarray</span></dt>
+<dd>Alternative output array in which to place the result. It must have
+the same shape as the expected output but the type will be cast if
+necessary.</dd>
+</dl>
+</p>
+
   </dd></dl>
 </td></tr></table>
 
@@ -1289,7 +1421,7 @@ of length a.shape[axis] or a scalar.</p>
   </h3>
 <p>Return a new array from this one.  The new array must have the same number
 of elements as self.  Also always returns a view or raises a ValueError if
-that is impossible.;</p>
+that is impossible.</p>
   <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
@@ -1358,46 +1490,40 @@ out (a)
           <span class=sig-arg>v</span>,
           <span class=sig-arg>side</span>=<span class=sig-default>'left'</span>)</span>
   </h3>
-<dl class="rst-docutils">
-<dt>Required arguments:</dt>
-<dd>v -- array of keys to be searched for in a.</dd>
-<dt>Keyword arguments:</dt>
-<dd>side -- {'left', 'right'}, (default 'left').</dd>
-<dt>Returns:</dt>
-<dd>index array with the same shape as keys.</dd>
-</dl>
-<p>The array to be searched must be 1-D and is assumed to be sorted in
-ascending order.</p>
-<p>The method call</p>
+<p>Find the indices into a sorted array such that if the corresponding keys in
+v were inserted before the indices the order of a would be preserved.  If
+side='left', then the first such index is returned. If side='right', then
+the last such index is returned. If there is no such index because the key
+is out of bounds, then the length of a is returned, i.e., the key would
+need to be appended. The returned index array has the same shape as v.</p>
+<hr class="rst-docutils" />
 <blockquote>
-a.searchsorted(v, side='left')</blockquote>
-<p>returns an index array with the same shape as v such that for each value i
-in the index and the corresponding key in v the following holds:</p>
-<blockquote>
-a[j] &lt; key &lt;= a[i] for all j &lt; i,</blockquote>
-<p>If such an index does not exist, a.size() is used. Consequently, i is the
-index of the first item in 'a' that is &gt;= key. If the key were to be
-inserted into a in the slot before the index i, then the order of a would
-be preserved and i would be the smallest index with that property.</p>
-<p>The method call</p>
-<blockquote>
-a.searchsorted(v, side='right')</blockquote>
-<p>returns an index array with the same shape as v such that for each value i
-in the index and the corresponding key in v the following holds:</p>
-<blockquote>
-a[j] &lt;= key &lt; a[i] for all j &lt; i,</blockquote>
-<p>If such an index does not exist, a.size() is used. Consequently, i is the
-index of the first item in 'a' that is &gt; key. If the key were to be
-inserted into a in the slot before the index i, then the order of a would
-be preserved and i would be the largest index with that property.</p>
+The array a must be 1-d and is assumed to be sorted in ascending order.
+Searchsorted uses binary search to find the required insertion points.</blockquote>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
       <dd>
-<pre class="literalblock">
-index array
-</pre>
+<dl class="rst-docutils">
+<dt>indices <span class="classifier-delimiter">:</span> <span class="rst-classifier">integer array</span></dt>
+<dd>The returned array has the same shape as v.</dd>
+</dl>
       </dd>
     </dl>
+<p><b>See Also:</b> <ul class="rst-simple">
+<li>sort</li>
+<li>histogram</li>
+</ul>
+</p>
+
+<p><b>Parameters:</b> <dl class="rst-docutils">
+<dt>v <span class="classifier-delimiter">:</span> <span class="rst-classifier">array or list type</span></dt>
+<dd>Array of keys to be searched for in a.</dd>
+<dt>side <span class="classifier-delimiter">:</span> <span class="rst-classifier">string</span></dt>
+<dd>Possible values are : 'left', 'right'. Default is 'left'. Return
+the first or last index where the key could be inserted.</dd>
+</dl>
+</p>
+
   </dd></dl>
 </td></tr></table>
 
@@ -1428,28 +1554,41 @@ None
           <span class=sig-arg>order</span>=<span class=sig-default>None</span>)</span>
   </h3>
 <pre class="literalblock">
-Sort a along the given axis.
+Perform an inplace sort along the given axis using the algorithm specified
+by the kind keyword.
 
-Keyword arguments:
+:Parameters:
 
-axis  -- axis to be sorted (default -1)
-kind  -- sorting algorithm (default 'quicksort')
-         Possible values: 'quicksort', 'mergesort', or 'heapsort'.
-order -- If a has fields defined, then the order keyword can be the
-         field name to sort on or a list (or tuple) of field names
-         to indicate the order that fields should be used to define
-         the sort.         
+    axis : integer
+        Axis to be sorted along. None indicates that the flattened array
+        should be used. Default is -1.
 
-Returns: None.
+    kind : string
+        Sorting algorithm to use. Possible values are 'quicksort',
+        'mergesort', or 'heapsort'. Default is 'quicksort'.
 
-This method sorts 'a' in place along the given axis using the algorithm
-specified by the kind keyword.
+    order : list type or None
+        When a is an array with fields defined, this argument specifies
+        which fields to compare first, second, etc.  Not all fields need be
+        specified.
 
-The various sorts may characterized by average speed, worst case
+:Returns:
+
+    None
+
+:SeeAlso:
+
+  - argsort : indirect sort
+  - lexsort : indirect stable sort on multiple keys
+  - searchsorted : find keys in sorted array
+
+:Notes:
+------
+
+The various sorts are characterized by average speed, worst case
 performance, need for work space, and whether they are stable. A stable
-sort keeps items with the same key in the same relative order and is most
-useful when used with argsort where the key might differ from the items
-being sorted. The three available algorithms have the following properties:
+sort keeps items with the same key in the same relative order. The three
+available algorithms have the following properties:
 
 |------------------------------------------------------|
 |    kind   | speed |  worst case | work space | stable|
@@ -1459,9 +1598,9 @@ being sorted. The three available algorithms have the following properties:
 |'heapsort' |   3   | O(n*log(n)) |     0      |   no  |
 |------------------------------------------------------|
 
-All the sort algorithms make temporary copies of the data when the sort is
-not along the last axis. Consequently, sorts along the last axis are faster
-and use less space than sorts along other axis.
+All the sort algorithms make temporary copies of the data when the sort is not
+along the last axis. Consequently, sorts along the last axis are faster and use
+less space than sorts along other axis.
 </pre>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
@@ -1490,25 +1629,48 @@ None
           <span class=sig-arg>dtype</span>=<span class=sig-default>None</span>,
           <span class=sig-arg>out</span>=<span class=sig-default>None</span>)</span>
   </h3>
-<pre class="literalblock">
-The standard deviation isa measure of the spread of a
-distribution.
-
-The standard deviation is the square root of the average of the
-squared deviations from the mean, i.e.
-    std = sqrt(mean((x - x.mean())**2,axis=0)).
-
-For multidimensional arrays, std is computed by default along the
-first axis.
-</pre>
+<p>Returns the standard deviation of the array elements, a measure of the
+spread of a distribution. The standard deviation is computed for the
+flattened array by default, otherwise over the specified axis.</p>
+<div class="rst-section" id="notes">
+<h1 class="heading"><a name="rst-notes">Notes</a></h1>
+<blockquote>
+The standard deviation is the square root of the average of the squared
+deviations from the mean, i.e. var = sqrt(mean((x - x.mean())**2)).  The
+computed standard deviation is biased, i.e., the mean is computed by
+dividing by the number of elements, N, rather than by N-1.</blockquote>
+</div>
   <dl><dt></dt><dd>
     <dl><dt><b>Returns:</b></dt>
       <dd>
-<pre class="literalblock">
-standard deviation
-</pre>
+<dl class="rst-docutils">
+<dt>standard deviation <span class="classifier-delimiter">:</span> <span class="rst-classifier">The return type varies, see above.</span></dt>
+<dd>A new array holding the result is returned unless out is specified,
+in which case a reference to out is returned.</dd>
+</dl>
       </dd>
     </dl>
+<p><b>See Also:</b> <ul class="rst-simple">
+<li>var : variance</li>
+<li>mean : average</li>
+</ul>
+</p>
+
+<p><b>Parameters:</b> <dl class="rst-docutils">
+<dt>axis <span class="classifier-delimiter">:</span> <span class="rst-classifier">integer</span></dt>
+<dd>Axis along which the standard deviation is computed. The default is
+to compute the standard deviation of the flattened array.</dd>
+<dt>dtype <span class="classifier-delimiter">:</span> <span class="rst-classifier">type</span></dt>
+<dd>Type to use in computing the standard deviation. For arrays of
+integer type the default is float32, for arrays of float types it
+is the same as the array type.</dd>
+<dt>out <span class="classifier-delimiter">:</span> <span class="rst-classifier">ndarray</span></dt>
+<dd>Alternative output array in which to place the result. It must have
+the same shape as the expected output but the type will be cast if
+necessary.</dd>
+</dl>
+</p>
+
   </dd></dl>
 </td></tr></table>
 
@@ -1705,6 +1867,58 @@ array([[1, 3],
        [2, 4]])
 </pre>
   <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="var"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">var</span>(<span class=sig-arg>a</span>,
+          <span class=sig-arg>axis</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>dtype</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>out</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns the variance of the array elements, a measure of the spread of a
+distribution.  The variance is computed for the flattened array by default,
+otherwise over the specified axis.</p>
+<div class="rst-section" id="notes">
+<h1 class="heading"><a name="rst-notes">Notes</a></h1>
+<blockquote>
+The variance is the average of the squared deviations from the mean, i.e.
+var = mean((x - x.mean())**2).  The computed variance is biased, i.e.,
+the mean is computed by dividing by the number of elements, N, rather
+than by N-1.</blockquote>
+</div>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+<dl class="rst-docutils">
+<dt>variance <span class="classifier-delimiter">:</span> <span class="rst-classifier">The return type varies, see above.</span></dt>
+<dd>A new array holding the result is returned unless out is specified,
+in which case a reference to out is returned.</dd>
+</dl>
+      </dd>
+    </dl>
+<p><b>See Also:</b> <ul class="rst-simple">
+<li>std : standard deviation</li>
+<li>mean: average</li>
+</ul>
+</p>
+
+<p><b>Parameters:</b> <dl class="rst-docutils">
+<dt>axis <span class="classifier-delimiter">:</span> <span class="rst-classifier">integer</span></dt>
+<dd>Axis along which the variance is computed. The default is to
+compute the variance of the flattened array.</dd>
+<dt>dtype <span class="classifier-delimiter">:</span> <span class="rst-classifier">type</span></dt>
+<dd>Type to use in computing the variance. For arrays of integer type
+the default is float32, for arrays of float types it is the same as
+the array type.</dd>
+<dt>out <span class="classifier-delimiter">:</span> <span class="rst-classifier">ndarray</span></dt>
+<dd>Alternative output array in which to place the result. It must have
+the same shape as the expected output but the type will be cast if
+necessary.</dd>
+</dl>
+</p>
+
   </dd></dl>
 </td></tr></table>
 
@@ -2119,7 +2333,7 @@ array([[1, 3],
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.6.0</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.7.1</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -2127,7 +2341,7 @@ array([[1, 3],
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Sep 26 13:48:29 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Nov 28 16:11:56 2007</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

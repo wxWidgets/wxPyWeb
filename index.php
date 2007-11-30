@@ -23,7 +23,15 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
-<li><i>(26-Oct-2007)</i> <b>wxPython 2.8.6.1</b> is now <a href="download.php">available.</a>  This release has some important bug fixes and is a general improvement over 2.8.6.0.
+
+<li><i>(29-Nov-2007)</i> <b>wxPython 2.8.7.1</b> is now <a href="download.php">available.</a>  This release has had some bugs
+fixed, some minor patches applied, and also incorporates the Google
+Summer of Code 2007 version of XRCed, and adds the Editra source code
+editor. More details are in the <a href="recentchanges.php">Recent Changes</a> document.
+<p>
+<b>NOTE</b>: On Mac OS X 10.5 (Leopard) the Python 2.5 binaries of wxPython expect to be used with the user-installed version of <a href="http://python.org/download/">MacPython</a>, <b><i>not</i></b> the Apple installed version. A fix for this issue is being worked on for the next release. In the meantime you can either install MacPython 2.5.1 and adjust your paths so that that Python is used, or you can stick with Apple's Python and the wxPython 2.8.4.0 that comes with Leopard.
+
+<p><li><i>(26-Oct-2007)</i> <b>wxPython 2.8.6.1</b> is now <a href="download.php">available.</a>  This release has some important bug fixes and is a general improvement over 2.8.6.0.
 
 <p><li><i>(27-Sept-2007)</i> <b>wxPython 2.8.6.0</b>has been <a href="download.php">released</a>.  This release is mostly about fixing a number of bugs and inconsistencies in wxWidgets and wxPython.  
 

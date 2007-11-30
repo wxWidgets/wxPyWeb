@@ -4,7 +4,7 @@
 #
 # Author:      Robin Dunn
 #
-# RCS-ID:      $Id: wxPythonFull.spec.in 47277 2007-07-09 21:21:45Z RD $
+# RCS-ID:      $Id: wxPythonFull.spec.in 49867 2007-11-12 19:04:21Z RD $
 # Copyright:   (c) 2004 by Total Control Software
 # Licence:     wxWindows license
 #----------------------------------------------------------------------
@@ -89,7 +89,7 @@
 %define pref 	   %{_prefix}
 %define python 	   /usr/bin/python%{pyver}
 %define tarname    wxPython-src
-%define version    2.8.6.1
+%define version    2.8.7.1
 %define ver2       2.8
 
 %define chartype   %(if [ "%{unicode}" = "1" ]; then echo unicode; else echo ansi; fi)
@@ -301,6 +301,7 @@ strip $RPM_BUILD_ROOT%{pref}/lib*/python%{pyver}/site-packages/wx-%{ver2}*-%{por
 cd $WXDIR/wxPython
 mkdir -p $RPM_BUILD_ROOT%{pref}/bin
 for s in \
+        editra \
 	helpviewer \
 	img2png \
 	img2py \
@@ -334,6 +335,7 @@ install -m 644 wx/py/PyCrust_32.png $RPM_BUILD_ROOT%{_datadir}/pixmaps/PyCrust.p
 install -m 644 wx/tools/XRCed/XRCed_16.png $RPM_BUILD_ROOT%{_datadir}/icons/hicolor/16x16/apps/XRCed.png
 install -m 644 wx/tools/XRCed/XRCed_32.png $RPM_BUILD_ROOT%{_datadir}/icons/hicolor/32x32/apps/XRCed.png
 install -m 644 wx/tools/XRCed/XRCed_32.png $RPM_BUILD_ROOT%{_datadir}/pixmaps/XRCed.png
+install -m 644 wx/tools/Editra/pixmaps/editra.png $RPM_BUILD_ROOT%{_datadir}/pixmaps/editra.png
 
 # install Mandrake menu items
 mkdir -p $RPM_BUILD_ROOT%{_libdir}/menu
@@ -353,12 +355,12 @@ cat > $RPM_BUILD_ROOT%{_libdir}/menu/%{pkgname} <<EOF
 	title="PyCrust" \\
 	longtitle="GUI Python Shell with Filling"
 ?package(%{pkgname}): \\
-	command="%{_bindir}/pyalamode" \\
+	command="%{_bindir}/editra" \\
 	needs="X11" \\
-	icon="PyCrust.png" \\
+	icon="editra.png" \\
 	section="Applications/Development/Tools" \\
-	title="PyAlaMode" \\
-	longtitle="GUI Python Shell with Filling and editor windows"
+	title="Editra" \\
+	longtitle="Programmer's Text Editor"
 ?package(%{pkgname}): \\
 	command="%{_bindir}/xrced" \\
 	needs="X11" \\

@@ -51,6 +51,11 @@ use anything else.
 </b><br>
 <div align="right">-- Mark Evans</div>
 
+<p>
+<b>This toolkit has transformed the way I work. 
+</b><br>
+<div align="right">-- Dr. Daniel B. Koch </div>
+
 
 </font>
 </ul>

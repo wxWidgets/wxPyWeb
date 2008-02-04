@@ -3,6 +3,6 @@
 </HEAD>
 
 <?php require('_frame_before.in') ?>
-http://www.writely.com/View.aspx?docid=bd7prph4rzxj
+http://docs.google.com/Doc?id=ah2sk2p9kmhc_bd7prph4rzxj
 <?php require('_frame_after.in') ?>
 

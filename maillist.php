@@ -13,9 +13,8 @@
 </td><td align="right">
 <font style="font-family: sans-serif; font-weight: bold;">
 <a href="mailto:wxpython-users@lists.wxwidgets.org">List Mail Address</a><br>
-<a href="mailto:wxPython-users-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to List</a><br>
-<a href="mailto:wxpython-users-digest-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to Daily Digest</a><br>
-<a href="http://lists.wxwidgets.org/">Archive</a><br>
+<a href="http://lists.wxwidgets.org/mailman/listinfo/wxpython-users">Subscribe to List</a><br>
+<a href="http://lists.wxwidgets.org/pipermail/wxpython-users/">Archive</a><br>
 <a href="http://news.gmane.org/gmane.comp.python.wxpython">Gmane</a><br>
 </font>
 </td></tr>
@@ -26,9 +25,8 @@
 </td><td align="right">
 <font style="font-family: sans-serif; font-weight: bold;">
 <a href="mailto:wxpython-docs@lists.wxwidgets.org">List Mail Address</a><br>
-<a href="mailto:wxpython-docs-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to List</a><br>
-<a href="mailto:wxpython-docs-digest-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to Daily Digest</a><br>
-<a href="http://lists.wxwidgets.org/">Archive</a><br>
+<a href="http://lists.wxwidgets.org/mailman/listinfo/wxpython-docs">Subscribe to List</a><br>
+<a href="http://lists.wxwidgets.org/pipermail/wxpython-docs">Archive</a><br>
 </font>
 </td></tr>
 
@@ -38,9 +36,8 @@
 </td><td align="right">
 <font style="font-family: sans-serif; font-weight: bold;">
 <a href="mailto:wxpython-mac@lists.wxwidgets.org">List Mail Address</a><br>
-<a href="mailto:wxpython-mac-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to List</a><br>
-<a href="mailto:wxpython-mac-digest-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to Daily Digest</a><br>
-<a href="http://lists.wxwidgets.org/">Archive</a><br>
+<a href="http://lists.wxwidgets.org/mailman/listinfo/wxpython-mac">Subscribe to List</a><br>
+<a href="http://lists.wxwidgets.org/pipermail/wxpython-mac">Archive</a><br>
 </font>
 </td></tr>
 
@@ -50,9 +47,8 @@
 </td><td align="right">
 <font style="font-family: sans-serif; font-weight: bold;">
 <a href="mailto:wxpython-dev@lists.wxwidgets.org">List Mail Address</a><br>
-<a href="mailto:wxpython-dev-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to List</a><br>
-<a href="mailto:wxpython-dev-digest-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to Daily Digest</a><br>
-<a href="http://lists.wxwidgets.org/">Archive</a><br>
+<a href="http://lists.wxwidgets.org/mailman/listinfo/wxpython-dev">Subscribe to List</a><br>
+<a href="http://lists.wxwidgets.org/pipermail/wxpython-dev">Archive</a><br>
 <a href="http://news.gmane.org/gmane.comp.python.wxpython.devel">Gmane</a><br>
 </font>
 </td></tr>
@@ -64,9 +60,8 @@
 </td><td align="right">
 <font style="font-family: sans-serif; font-weight: bold;">
 <a href="mailto:wx-users@lists.wxwidgets.org">List Mail Address</a><br>
-<a href="mailto:wx-users-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to List</a><br>
-<a href="mailto:wx-users-digest-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to Daily Digest</a><br>
-<a href="http://lists.wxwidgets.org/">Archive</a><br>
+<a href="http://lists.wxwidgets.org/mailman/listinfo/wx-users">Subscribe to List</a><br>
+<a href="http://lists.wxwidgets.org/pipermail/wx-users">Archive</a><br>
 <a href="http://news.gmane.org/gmane.comp.lib.wxwidgets.general">Gmane</a><br>
 </font>
 </td></tr>
@@ -77,9 +72,8 @@
 </td><td align="right">
 <font style="font-family: sans-serif; font-weight: bold;">
 <a href="mailto:wx-dev@lists.wxwidgets.org">List Mail Address</a><br>
-<a href="mailto:wx-dev-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to List</a><br>
-<a href="mailto:wx-dev-digest-subscribe@lists.wxwidgets.org?subject=Just%20Click%20%22SEND%22!">Subscribe to Daily Digest</a><br>
-<a href="http://lists.wxwidgets.org/">Archive</a><br>
+<a href="http://lists.wxwidgets.org/mailman/listinfo/wx-dev">Subscribe to List</a><br>
+<a href="http://lists.wxwidgets.org/pipermail/wx-dev">Archive</a><br>
 <a href="http://news.gmane.org/gmane.comp.lib.wxwidgets.devel">Gmane</a><br>
 </font>
 </td></tr>

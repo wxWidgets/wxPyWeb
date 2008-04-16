@@ -106,7 +106,7 @@ Work on wxPython is sponsored by:
 -->
 
 
-<a href="http://www.manning.com/affiliate/idevaffiliate.php?id=189_118_1_27"><img src="http://www.manning.com/affiliate/banners/Free ebook ad 5.gif" border="0"></a>
+<a href="http://www.manning.com/affiliate/idevaffiliate.php?id=189_118_1_27"><img src="http://www.manning.com/affiliate/banners/Free ebook ad 5.gif" border="0" width="631s" height="156" alt=""></a>
 
 
 

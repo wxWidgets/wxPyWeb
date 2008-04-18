@@ -19,7 +19,7 @@
 </font>
 </td></tr>
 
-<tr><td width="66%" valign="top">
+<!-- <tr><td width="66%" valign="top">
 <font size="+1" style="font-family: sans-serif; font-weight: bold;">wxPython-docs</font><br>
 <font style="font-style: normal; font-weight: normal; font-family: serif;">This list is for discussing wxPython documentation in all its forms, including the current C++ reference docs, magazine articles, the wxPyWiki site, HOW-TOs, the eventual wxPython Book, etc.</font>
 </td><td align="right">
@@ -29,7 +29,7 @@
 <a href="http://lists.wxwidgets.org/pipermail/wxpython-docs">Archive</a><br>
 </font>
 </td></tr>
-
+-->
 <tr><td width="66%" valign="top">
 <font size="+1" style="font-family: sans-serif; font-weight: bold;">wxPython-mac</font><br>
 <font style="font-style: normal; font-weight: normal; font-family: serif;">Discussions about porting wxPython to the Apple Macintosh are held on this list.</font>

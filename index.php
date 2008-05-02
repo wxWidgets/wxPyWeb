@@ -105,9 +105,9 @@ Work on wxPython is sponsored by:
 <div align="center"><a href="http://www.osafoundation.org/"><img src="images/OSAFLogo.gif" width="559" height="64" alt="" border="0"></a></div>
 -->
 
-
+<!--
 <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=189_118_1_27"><img src="http://www.manning.com/affiliate/banners/Free ebook ad 5.gif" border="0" width="631s" height="156" alt=""></a>
-
+-->
 
 
 <?php require('_footer.in') ?>

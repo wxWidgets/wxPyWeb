@@ -89,26 +89,10 @@ All modules contributed to wxPython should have a module that can be dropped int
 <p>The overview should be some descriptive text that gives basic information about the classes being demoed, their capabilites, limitations, etc.  If appropriate you could also give info about the API of the contributed classes.  In some cases you could just set overview to <tt>wx.lib.yourContrib.__doc__</tt>.  
 
 <h3>Making Patches</h3>
-For any updates to wxPython code, including updates to your contribution once I have accepted it and checked it in to CVS, you'll need to use patch files to send updates to me.  This way I can easily merge your changes with any that I have made.  I will no longer accept full source code replacements for updates.
+For any updates to wxPython code, including updates to your contribution once I have accepted it and checked it in to the SVN repository, you'll need to use patch files to send updates to me.  This way I can easily merge your changes with any that I have made.  I will no longer accept full source code replacements for updates.
 
-<p>The easiest way to do a patch against the latest version of the code is to use CVS.  If you're not familiar with CVS here are some notes for wxWidgets in general:
-<ul>
-    <a href="http://wxwidgets.org/cvs.htm">http://wxwidgets.org/cvs.htm</a><br>
-    <a href="http://wxwidgets.org/technote/patches.htm">http://wxwidgets.org/technote/patches.htm</a><br>
-</ul>
+<p>The easiest way to do a patch against the latest version of the code is to use SVN.  You simply need to have a current copy of the workspace checked out to your local system and then use the <a href="http://svnbook.red-bean.com/en/1.4/svn.ref.svn.c.diff.html">svn diff</a> command to make the patch file.  You may also want to review <a href="http://wxwidgets.org/docs/technote/patches.htm">this page</a>.
 <p>
-We're currently working on the main CVS tunk (HEAD) for the 2.7 releases, and the 2.6.x releases are being maintined on a branch.  If you want to make changes and patches for the 2.6.x version of the code you just need to add a "<tt>-r WX_2_6_BRANCH</tt>" when issuing cvs commands to specify that you are dealing with that branch.
-<p>
-For most types of contribs you can send the patches directly to me if you don't want to deal with Sourceforge. Also, if you don't want to check out all of wxWidgets from CVS you can use a cvs command like this to get just wxPython:
-<pre>
-    cvs checkout wxWidgets/wxPython
-</pre>
-
-<p>Then you just need to make your changes or updates to the files in your local source tree checked out from CVS and then use a command like this to make the patch:
-<pre>
-	cd wxWidgets
-	cvs diff -u4 > mypatch.patch 
-</pre> 
 
 <h3>License</h3>
 You will need to license your contributed code with the <a href="http://wxwidgets.org/newlicen.htm">wxWidgets License</a>, which is essentially the LGPL with a few extensions that make the code just a little bit more Free.  To set the license that your source code uses it is sufficient to just put something like "License: wxWidgets" in the header.  By the way, the <a href="http://www.opensource.org/licenses/wxwindows.php">wxWidgets Library License</a> is now certified by the <a href="http://www.opensource.org/">Open Source Initiative</a>.

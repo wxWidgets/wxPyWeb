@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.platebtn.PlateButton</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.platebtn-module.html">Module&nbsp;platebtn</a> ::
+        Class&nbsp;PlateButton
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.platebtn.PlateButton-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type PlateButton</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+               <a href="wx.Control-class.html"><code>Control</code></a> --+    
+                         |    
+                 <a href="wx.PyControl-class.html"><code>PyControl</code></a> --+
+                             |
+                            <b>PlateButton</b>
+</pre><br />
+
+<hr/>
+
+<p>PlateButton is a custom type of flat button with support for
+displaying bitmaps and having an attached dropdown menu.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id_</span>,
+          <span class=summary-sig-arg>label</span>,
+          <span class=summary-sig-arg>bmp</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Create a PlateButton
+&#64;keyword label: Buttons label text
+&#64;keyword bmp: Buttons bitmap
+&#64;keyword style: Button style</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#AcceptsFocus" class="summary-sig-name"><code>AcceptsFocus</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Can this window have the focus?</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#Disable" class="summary-sig-name"><code>Disable</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Disable the control</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#DoGetBestSize" class="summary-sig-name"><code>DoGetBestSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculate the best size of the button
+&#64;return: wx.Size</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#Enable" class="summary-sig-name"><code>Enable</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Enable/Disable the control</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#GetBackgroundBrush" class="summary-sig-name"><code>GetBackgroundBrush</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Get the brush for drawing the background of the button
+&#64;return: wx.Brush
+&#64;note: used internally when on gtk</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#GetBitmapDisabled" class="summary-sig-name"><code>GetBitmapDisabled</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the bitmap of the disable state
+&#64;return: wx.Bitmap or None</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#GetBitmapLabel" class="summary-sig-name"><code>GetBitmapFocus</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the label bitmap
+&#64;return: wx.Bitmap or None</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#GetBitmapLabel" class="summary-sig-name"><code>GetBitmapHover</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the label bitmap
+&#64;return: wx.Bitmap or None</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#GetBitmapLabel" class="summary-sig-name"><code>GetBitmapLabel</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the label bitmap
+&#64;return: wx.Bitmap or None</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#GetLabel" class="summary-sig-name"><code>GetLabelText</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Generic way of getting a label from any window, for identification
+purposes.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#GetMenu" class="summary-sig-name"><code>GetMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the menu associated with this button or None if no
+menu is associated with it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#HasTransparentBackground" class="summary-sig-name"><code>HasTransparentBackground</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Override setting of background fill</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#OnErase" class="summary-sig-name"><code>OnErase</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+Trap the erase event to keep the background transparent
+on windows.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#OnFocus" class="summary-sig-name"><code>OnFocus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+Set the visual focus state if need be</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#OnKeyUp" class="summary-sig-name"><code>OnKeyUp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+Execute a single button press action when the Return key is pressed
+and this control has the focus.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#OnKillFocus" class="summary-sig-name"><code>OnKillFocus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+Set the visual state back to normal when focus is lost
+unless the control is currently in a pressed state.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#OnLeftDown" class="summary-sig-name"><code>OnLeftDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+Sets the pressed state and depending on the click position will
+show the popup menu if one has been set.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#OnLeftUp" class="summary-sig-name"><code>OnLeftUp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+Post a button event if the control was previously in a
+pressed state.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#OnMenuClose" class="summary-sig-name"><code>OnMenuClose</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>evt</span>)</span></code>
+<br />
+Refresh the control to a proper state after the menu has been
+dismissed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetBitmap" class="summary-sig-name"><code>SetBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+<br />
+Set the bitmap displayed in the button
+&#64;param bmp: wx.Bitmap</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetBitmapDisabled" class="summary-sig-name"><code>SetBitmapDisabled</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+<br />
+Set the bitmap for the disabled state
+&#64;param bmp: wx.Bitmap</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetBitmap" class="summary-sig-name"><code>SetBitmapFocus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+<br />
+Set the bitmap displayed in the button
+&#64;param bmp: wx.Bitmap</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetBitmap" class="summary-sig-name"><code>SetBitmapHover</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+<br />
+Set the bitmap displayed in the button
+&#64;param bmp: wx.Bitmap</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetBitmap" class="summary-sig-name"><code>SetBitmapLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+<br />
+Set the bitmap displayed in the button
+&#64;param bmp: wx.Bitmap</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetBitmap" class="summary-sig-name"><code>SetBitmapSelected</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+<br />
+Set the bitmap displayed in the button
+&#64;param bmp: wx.Bitmap</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetFocus" class="summary-sig-name"><code>SetFocus</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Set this control to have the focus</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetFont" class="summary-sig-name"><code>SetFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+<br />
+Adjust size of control when font changes</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetLabel" class="summary-sig-name"><code>SetLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>label</span>)</span></code>
+<br />
+Set the label of the button
+&#64;param label: lable string</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetLabelColor" class="summary-sig-name"><code>SetLabelColor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>normal</span>,
+          <span class=summary-sig-arg>hlight</span>,
+          <span class=summary-sig-arg>press</span>)</span></code>
+<br />
+Set the color of the label.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetMenu" class="summary-sig-name"><code>SetMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menu</span>)</span></code>
+<br />
+Set the menu that can be shown when clicking on the
+drop arrow of the button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetPressColor" class="summary-sig-name"><code>SetPressColor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>color</span>)</span></code>
+<br />
+Set the color used for highlighting the pressed state
+&#64;param color: wx.Color
+&#64;note: also resets all text colours as necessary</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetState" class="summary-sig-name"><code>SetState</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>state</span>)</span></code>
+<br />
+Manually set the state of the button
+&#64;param state: one of the PLATE_* values
+&#64;note: the state may be altered by mouse actions</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetWindowStyle" class="summary-sig-name"><code>SetWindowStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Sets the window style bytes, the updates take place
+immediately no need to call refresh afterwards.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#SetWindowVariant" class="summary-sig-name"><code>SetWindowVariant</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>variant</span>)</span></code>
+<br />
+Set the variant/font size of this control</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#ShouldInheritColours" class="summary-sig-name"><code>ShouldInheritColours</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Overridden base class virtual.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#ShowMenu" class="summary-sig-name"><code>ShowMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Show the dropdown menu if one is associated with this control</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn.PlateButton-class.html#ToggleState" class="summary-sig-name"><code>ToggleState</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Toggle button state</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.lib.platebtn.PlateButton-class.html#BitmapDisabled"><code>BitmapDisabled</code></a></b>: Property for accessing the bitmap for the disabled state</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.lib.platebtn.PlateButton-class.html#BitmapFocus"><code>BitmapFocus</code></a></b>: Property for accessing the default bitmap</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.lib.platebtn.PlateButton-class.html#BitmapHover"><code>BitmapHover</code></a></b>: Property for accessing the default bitmap</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.lib.platebtn.PlateButton-class.html#BitmapLabel"><code>BitmapLabel</code></a></b>: Property for accessing the default bitmap</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.lib.platebtn.PlateButton-class.html#BitmapSelected"><code>BitmapSelected</code></a></b>: Property for accessing the default bitmap</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.lib.platebtn.PlateButton-class.html#LabelText"><code>LabelText</code></a></b>: Property for getting the label of the button</td></tr></table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id_</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>label</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>bmp</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>u'button'</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Create a PlateButton
+&#64;keyword label: Buttons label text
+&#64;keyword bmp: Buttons bitmap
+&#64;keyword style: Button style</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyControl-class.html#__init__"><code>wx.PyControl.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AcceptsFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AcceptsFocus</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Can this window have the focus?</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#AcceptsFocus"><code>wx.Window.AcceptsFocus</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Disable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Disable</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Disable the control</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#Disable"><code>wx.Window.Disable</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoGetBestSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoGetBestSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Calculate the best size of the button
+&#64;return: wx.Size</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyControl-class.html#DoGetBestSize"><code>wx.PyControl.DoGetBestSize</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Enable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Enable</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Enable/Disable the control</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#Enable"><code>wx.Window.Enable</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBackgroundBrush"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBackgroundBrush</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Get the brush for drawing the background of the button
+&#64;return: wx.Brush
+&#64;note: used internally when on gtk</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBitmapDisabled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBitmapDisabled</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the bitmap of the disable state
+&#64;return: wx.Bitmap or None</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBitmapLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBitmapFocus</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the label bitmap
+&#64;return: wx.Bitmap or None</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBitmapLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBitmapHover</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the label bitmap
+&#64;return: wx.Bitmap or None</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBitmapLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBitmapLabel</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get the label bitmap
+&#64;return: wx.Bitmap or None</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLabelText</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Generic way of getting a label from any window, for identification
+purposes.  The interpretation of this function differs from class to
+class. For frames and dialogs, the value returned is the title. For
+buttons or static text controls, it is the button text. This function
+can be useful for meta-programs such as testing tools or special-needs
+access programs)which need to identify windows by name.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+String      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the menu associated with this button or None if no
+menu is associated with it.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasTransparentBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasTransparentBackground</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Override setting of background fill</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#HasTransparentBackground"><code>wx.Window.HasTransparentBackground</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnErase"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnErase</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>)</span>
+  </h3>
+<p>Trap the erase event to keep the background transparent
+on windows.
+&#64;param evt: wx.EVT_ERASE_BACKGROUND</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnFocus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>)</span>
+  </h3>
+<p>Set the visual focus state if need be</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnKeyUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnKeyUp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>)</span>
+  </h3>
+<p>Execute a single button press action when the Return key is pressed
+and this control has the focus.
+&#64;param evt: wx.EVT_KEY_UP</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnKillFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnKillFocus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>)</span>
+  </h3>
+<p>Set the visual state back to normal when focus is lost
+unless the control is currently in a pressed state.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnLeftDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnLeftDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>)</span>
+  </h3>
+<p>Sets the pressed state and depending on the click position will
+show the popup menu if one has been set.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnLeftUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnLeftUp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>)</span>
+  </h3>
+<p>Post a button event if the control was previously in a
+pressed state.
+&#64;param evt: wx.MouseEvent</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMenuClose"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMenuClose</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>evt</span>)</span>
+  </h3>
+<p>Refresh the control to a proper state after the menu has been
+dismissed.
+&#64;param evt: wx.EVT_MENU_CLOSE</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBitmap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>)</span>
+  </h3>
+<p>Set the bitmap displayed in the button
+&#64;param bmp: wx.Bitmap</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBitmapDisabled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBitmapDisabled</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>)</span>
+  </h3>
+<p>Set the bitmap for the disabled state
+&#64;param bmp: wx.Bitmap</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBitmapFocus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>)</span>
+  </h3>
+<p>Set the bitmap displayed in the button
+&#64;param bmp: wx.Bitmap</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBitmapHover</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>)</span>
+  </h3>
+<p>Set the bitmap displayed in the button
+&#64;param bmp: wx.Bitmap</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBitmapLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>)</span>
+  </h3>
+<p>Set the bitmap displayed in the button
+&#64;param bmp: wx.Bitmap</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBitmapSelected</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>)</span>
+  </h3>
+<p>Set the bitmap displayed in the button
+&#64;param bmp: wx.Bitmap</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFocus</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Set this control to have the focus</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetFocus"><code>wx.Window.SetFocus</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>font</span>)</span>
+  </h3>
+<p>Adjust size of control when font changes</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetFont"><code>wx.Window.SetFont</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>label</span>)</span>
+  </h3>
+<p>Set the label of the button
+&#64;param label: lable string</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetLabel"><code>wx.Window.SetLabel</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLabelColor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLabelColor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>normal</span>,
+          <span class=sig-arg>hlight</span>=<span class=sig-default>wx.Colour(-1,&nbsp;-1,&nbsp;-1,&nbsp;255)</span>,
+          <span class=sig-arg>press</span>=<span class=sig-default>wx.Colour(-1,&nbsp;-1,&nbsp;-1,&nbsp;255)</span>)</span>
+  </h3>
+<p>Set the color of the label. The optimal label color is usually
+automatically selected depending on the button color. In some
+cases the colors that are choosen may not be optimal.</p>
+<p>The normal state must be specified, if the other two params are left
+Null they will be automatically guessed based on the normal color. To
+prevent this automatic color choices from happening either specify
+a color or None for the other params.</p>
+<p>&#64;param normal: Label color for normal state
+&#64;keyword hlight: Color for when mouse is hovering over
+&#64;keyword press: Color for when button is pressed</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menu</span>)</span>
+  </h3>
+<p>Set the menu that can be shown when clicking on the
+drop arrow of the button.
+&#64;param menu: wxMenu to use as a PopupMenu
+&#64;note: Arrow is not drawn unless a menu is set</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPressColor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPressColor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>color</span>)</span>
+  </h3>
+<p>Set the color used for highlighting the pressed state
+&#64;param color: wx.Color
+&#64;note: also resets all text colours as necessary</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetState"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetState</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>state</span>)</span>
+  </h3>
+<p>Manually set the state of the button
+&#64;param state: one of the PLATE_* values
+&#64;note: the state may be altered by mouse actions</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetWindowStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetWindowStyle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>style</span>)</span>
+  </h3>
+<p>Sets the window style bytes, the updates take place
+immediately no need to call refresh afterwards.
+&#64;param style: bitmask of PB_STYLE_* values</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetWindowStyleFlag"><code>wx.Window.SetWindowStyleFlag</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetWindowVariant"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetWindowVariant</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>variant</span>)</span>
+  </h3>
+<p>Set the variant/font size of this control</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetWindowVariant"><code>wx.Window.SetWindowVariant</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShouldInheritColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShouldInheritColours</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Overridden base class virtual. If the parent has non-default
+colours then we want this control to inherit them.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#ShouldInheritColours"><code>wx.Window.ShouldInheritColours</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Show the dropdown menu if one is associated with this control</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ToggleState"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ToggleState</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Toggle button state</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BitmapDisabled"></a>
+<h3>BitmapDisabled</h3>
+<p>Property for accessing the bitmap for the disabled state</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">BitmapDisabled</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BitmapFocus"></a>
+<h3>BitmapFocus</h3>
+<p>Property for accessing the default bitmap</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">BitmapLabel</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BitmapHover"></a>
+<h3>BitmapHover</h3>
+<p>Property for accessing the default bitmap</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">BitmapLabel</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BitmapLabel"></a>
+<h3>BitmapLabel</h3>
+<p>Property for accessing the default bitmap</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">BitmapLabel</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="BitmapSelected"></a>
+<h3>BitmapSelected</h3>
+<p>Property for accessing the default bitmap</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">BitmapLabel</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="LabelText"></a>
+<h3>LabelText</h3>
+<p>Property for getting the label of the button</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><span class="summary-sig-name">LabelText</span>(...)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Jun 23 15:18:59 2008</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

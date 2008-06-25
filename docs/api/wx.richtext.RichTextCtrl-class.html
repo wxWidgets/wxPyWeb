@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.7.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -478,12 +478,20 @@ Get the common set of styles for the range</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">wxRichTextStyleSheet</font></td>
   <td><code><a name="GetStyleSheet"></a><span class="summary-sig"><span class="summary-sig-name">GetStyleSheet</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Cursor</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#GetTextCursor" class="summary-sig-name"><code>GetTextCursor</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get text cursor</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#GetUncombinedStyle" class="summary-sig-name"><code>GetUncombinedStyle</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>position</span>,
           <span class=summary-sig-arg>style</span>)</span></code>
 <br />
 Get the content (uncombined) attributes for this position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Cursor</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#GetURLCursor" class="summary-sig-name"><code>GetURLCursor</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get URL cursor</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
   <td><code><a name="GetValue"></a><span class="summary-sig"><span class="summary-sig-name">GetValue</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
@@ -803,6 +811,16 @@ RICHTEXT_SETSTYLE_PARAGRAPHS_ONLY, RICHTEXT_SETSTYLE_CHARACTERS_ONLY</td></tr>
           <span class=summary-sig-arg>styleSheet</span>)</span></code>
 <br />
 Set style sheet, if any.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#SetTextCursor" class="summary-sig-name"><code>SetTextCursor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cursor</span>)</span></code>
+<br />
+Set text cursor</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.richtext.RichTextCtrl-class.html#SetURLCursor" class="summary-sig-name"><code>SetURLCursor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cursor</span>)</span></code>
+<br />
+Set URL cursor</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><a name="SetValue"></a><span class="summary-sig"><span class="summary-sig-name">SetValue</span>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>value</span>)</span></code>
@@ -2244,6 +2262,19 @@ bool      </dd>
   </dd></dl>
 </td></tr></table>
 
+<a name="GetTextCursor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTextCursor</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get text cursor</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Cursor      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
 <a name="GetUncombinedStyle"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">GetUncombinedStyle</span>(<span class=sig-arg>self</span>,
@@ -2272,6 +2303,19 @@ bool      </dd>
   </dd></dl>
 </td></tr></table>
 
+<a name="GetURLCursor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetURLCursor</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Get URL cursor</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Cursor      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
 <a name="HasCharacterAttributes"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">HasCharacterAttributes</span>(<span class=sig-arg>self</span>,
@@ -2281,7 +2325,7 @@ bool      </dd>
 <p>Test if this whole range has character attributes of the specified
 kind. If any of the attributes are different within the range, the
 test fails. You can use this to implement, for example, bold button
-updating. style must have flags indicating which attributes are of
+updating. <tt class="rst-docutils literal"><span class="pre">style</span></tt> must have flags indicating which attributes are of
 interest.</p>
   <dl><dt></dt><dd>
     <dl><dt><b>Parameters:</b></dt>
@@ -3245,6 +3289,40 @@ bool      </dd>
   </dd></dl>
 </td></tr></table>
 
+<a name="SetTextCursor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTextCursor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>cursor</span>)</span>
+  </h3>
+<p>Set text cursor</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>cursor</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Cursor)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetURLCursor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetURLCursor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>cursor</span>)</span>
+  </h3>
+<p>Set URL cursor</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>cursor</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Cursor)</i>
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
 <a name="ShowPosition"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">ShowPosition</span>(<span class=sig-arg>self</span>,
@@ -3698,10 +3776,10 @@ long      </dd>
   <dd>
     <dl>
       <dt><b>Get Method:</b></dt>
-      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-41730368</span>(...)</span>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-42768096</span>(...)</span>
       </dd>
       <dt><b>Set Method:</b></dt>
-      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-41730488</span>(...)</span>
+      <dd><span class="summary-sig"><span class="summary-sig-name">unknown-42768216</span>(...)</span>
       </dd>
     </dl>
   </dd>
@@ -3737,7 +3815,7 @@ long      </dd>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.7.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -3745,7 +3823,7 @@ long      </dd>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Nov 28 16:13:13 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Jun 23 15:18:52 2008</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

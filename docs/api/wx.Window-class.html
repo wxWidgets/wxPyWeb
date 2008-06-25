@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.7.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -353,6 +353,10 @@ Converts to screen coordinates from coordinates relative to this window.</td></t
           <span class=summary-sig-arg>y</span>)</span></code>
 <br />
 Converts to screen coordinates from coordinates relative to this window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><a name="ClientToWindowSize"></a><span class="summary-sig"><span class="summary-sig-name">ClientToWindowSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>size</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">bool</font></td>
   <td><code><span class="summary-sig"><a href="wx.Window-class.html#Close" class="summary-sig-name"><code>Close</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>force</span>)</span></code>
@@ -434,6 +438,11 @@ or None.    <i>(Static method)</i>
           <span class=summary-sig-arg>winid</span>)</span></code>
 <br />
 Find a child of this window by window ID</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Window-class.html#FindWindowByLabel" class="summary-sig-name"><code>FindWindowByLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>label</span>)</span></code>
+<br />
+Find a child of this window by label</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">Window</font></td>
   <td><code><span class="summary-sig"><a href="wx.Window-class.html#FindWindowByName" class="summary-sig-name"><code>FindWindowByName</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>name</span>)</span></code>
@@ -560,6 +569,9 @@ Return the cursor associated with this window.</td></tr>
   <td><code><span class="summary-sig"><a href="wx.Window-class.html#GetDefaultAttributes" class="summary-sig-name"><code>GetDefaultAttributes</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
 Get the default attributes for an instance of this class.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetDefaultBorder"></a><span class="summary-sig"><span class="summary-sig-name">GetDefaultBorder</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">DropTarget</font></td>
   <td><code><span class="summary-sig"><a href="wx.Window-class.html#GetDropTarget" class="summary-sig-name"><code>GetDropTarget</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
 <br />
@@ -705,6 +717,10 @@ Get the window size.</td></tr>
 <br />
 Return the sizer associated with the window by a previous call to
 SetSizer or None if there isn't one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.Window-class.html#GetSizerProps" class="summary-sig-name"><code>GetSizerProps</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a dictionary of prop name + value</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">(width, height)</font></td>
   <td><code><span class="summary-sig"><a href="wx.Window-class.html#GetSizeTuple" class="summary-sig-name"><code>GetSizeTuple</code></a>()</span></code>
 <br />
@@ -1141,6 +1157,9 @@ This normally does not need to be called by application code.</td></tr>
 <br />
 Sets the window's cursor.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDefaultSizerProps"></a><span class="summary-sig"><span class="summary-sig-name">SetDefaultSizerProps</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.Window-class.html#SetDimensions" class="summary-sig-name"><code>SetDimensions</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>x</span>,
           <span class=summary-sig-arg>y</span>,
@@ -1153,7 +1172,7 @@ Sets the position and size of the window in pixels.</td></tr>
   <td><code><span class="summary-sig"><a href="wx.Window-class.html#SetDoubleBuffered" class="summary-sig-name"><code>SetDoubleBuffered</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>on</span>)</span></code>
 <br />
-Currently wxGTK2 only.</td></tr>
+Put the native window into double buffered or composited mode.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.Window-class.html#SetDropTarget" class="summary-sig-name"><code>SetDropTarget</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>dropTarget</span>)</span></code>
@@ -1314,6 +1333,16 @@ Sets the window to have the given layout sizer.</td></tr>
 The same as SetSizer, except it also sets the size hints for the
 window based on the sizer's minimum size.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSizerProp"></a><span class="summary-sig"><span class="summary-sig-name">SetSizerProp</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>prop</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSizerProps"></a><span class="summary-sig"><span class="summary-sig-name">SetSizerProps</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>props</span>,
+          <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.Window-class.html#SetSizeWH" class="summary-sig-name"><code>SetSizeWH</code></a>(<span class=summary-sig-arg>self</span>,
           <span class=summary-sig-arg>width</span>,
           <span class=summary-sig-arg>height</span>)</span></code>
@@ -1452,6 +1481,10 @@ validators.</td></tr>
           <span class=summary-sig-arg>y</span>)</span></code>
 <br />
 Moves the pointer to the given position on the window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">Size</font></td>
+  <td><code><a name="WindowToClientSize"></a><span class="summary-sig"><span class="summary-sig-name">WindowToClientSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>size</span>)</span></code>
+</td></tr>
 </table><br />
 
 
@@ -1735,7 +1768,7 @@ recapture mouse.</p>
           <span class=sig-arg>direction</span>=<span class=sig-default>BOTH</span>)</span>
   </h3>
 <p>Centers the window.  The parameter specifies the direction for
-cetering, and may be wx.HORIZONTAL, wx.VERTICAL or wx.BOTH. It may
+centering, and may be wx.HORIZONTAL, wx.VERTICAL or wx.BOTH. It may
 also include wx.CENTER_ON_SCREEN flag if you want to center the window
 on the entire screen and not on its parent window.  If it is a
 top-level window and has no parent then it will always be centered
@@ -1774,7 +1807,7 @@ relative to the screen.</p>
           <span class=sig-arg>direction</span>=<span class=sig-default>BOTH</span>)</span>
   </h3>
 <p>Centers the window.  The parameter specifies the direction for
-cetering, and may be wx.HORIZONTAL, wx.VERTICAL or wx.BOTH. It may
+centering, and may be wx.HORIZONTAL, wx.VERTICAL or wx.BOTH. It may
 also include wx.CENTER_ON_SCREEN flag if you want to center the window
 on the entire screen and not on its parent window.  If it is a
 top-level window and has no parent then it will always be centered
@@ -2174,6 +2207,27 @@ Window      </dd>
   </dd></dl>
 </td></tr></table>
 
+<a name="FindWindowByLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindWindowByLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>label</span>)</span>
+  </h3>
+<p>Find a child of this window by label</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>label</b></code>
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=String)</i>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+Window      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
 <a name="FindWindowByName"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">FindWindowByName</span>(<span class=sig-arg>self</span>,
@@ -2323,7 +2377,7 @@ int      </dd>
 <p>This function returns the best acceptable minimal size for the
 window, if applicable. For example, for a static text control, it will
 be the minimal size such that the control label is not truncated. For
-windows containing subwindows (suzh aswx.Panel), the size returned by
+windows containing subwindows (such as wx.Panel), the size returned by
 this function will be the same as the size the window would have had
 after calling Fit.</p>
   <dl><dt></dt><dd>
@@ -2341,7 +2395,7 @@ Size      </dd>
 <p>This function returns the best acceptable minimal size for the
 window, if applicable. For example, for a static text control, it will
 be the minimal size such that the control label is not truncated. For
-windows containing subwindows (suzh aswx.Panel), the size returned by
+windows containing subwindows (such as wx.Panel), the size returned by
 this function will be the same as the size the window would have had
 after calling Fit.</p>
   <dl><dt></dt><dd>
@@ -2986,6 +3040,15 @@ SetSizer or None if there isn't one.</p>
       <dd>
 Sizer      </dd>
     </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSizerProps"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSizerProps</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a dictionary of prop name + value</p>
+  <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
 
@@ -4542,7 +4605,7 @@ equal to -1.</p>
 default should be used.</td>
 </tr>
 <tr class="rst"><td class="rst">wx.SIZE_USE_EXISTING</td>
-<td class="rst">Axisting dimensions should be used if
+<td class="rst">Existing dimensions should be used if
 -1 values are supplied.</td>
 </tr>
 <tr class="rst"><td class="rst">wxSIZE_ALLOW_MINUS_ONE</td>
@@ -4585,7 +4648,7 @@ default values.</td>
   <h3><span class="sig"><span class="sig-name">SetDoubleBuffered</span>(<span class=sig-arg>self</span>,
           <span class=sig-arg>on</span>)</span>
   </h3>
-<p>Currently wxGTK2 only.</p>
+<p>Put the native window into double buffered or composited mode.</p>
   <dl><dt></dt><dd>
     <dl><dt><b>Parameters:</b></dt>
       <dd><code><b>on</b></code>
@@ -6816,7 +6879,7 @@ integer.  On the other platforms this method returns zero.</p>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.7.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -6824,7 +6887,7 @@ integer.  On the other platforms this method returns zero.</p>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Nov 28 16:13:35 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Jun 23 15:17:40 2008</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

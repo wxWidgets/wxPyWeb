@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.7.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -75,7 +75,9 @@ to the standard wx.TreeCtrl behaviour this class supports:
 * Hyperlink-type items: they look like an hyperlink, with the proper mouse cursor on
   hovering.
 
-* Multiline text items.
+* Multiline text items (NOTE: to add a newline character in a multiline item, press
+  Shift+Enter as the Enter key alone is consumed by CustomTreeCtrl to finish the editing
+  and Ctr++Enter is consumed by the platform for tab navigation).
 
 * Enabling/disabling items (together with their plain or grayed out icons).
 
@@ -142,8 +144,8 @@ CustomTreeCtrl has been tested on the following platforms:
   * Mac OS (Thanks to John Jackson).
 
 
-Latest Revision: Andrea Gavana &#64; 09 Nov 2007, 18.00 CET
-Version 1.2
+Latest Revision: Andrea Gavana &#64; 30 May 2008, 22.00 GMT
+Version 1.6
 </pre>
 <hr/>
 
@@ -202,42 +204,6 @@ A simple replacement of wx.RendererNative.DrawTreeItemButton.</td></tr>
 <br />
 Translate the key or mouse event flag to the type of selection we
 are dealing with.</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetCheckedBitmap"></a><span class="summary-sig"><span class="summary-sig-name">GetCheckedBitmap</span>()</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetCheckedData"></a><span class="summary-sig"><span class="summary-sig-name">GetCheckedData</span>()</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetCheckedImage"></a><span class="summary-sig"><span class="summary-sig-name">GetCheckedImage</span>()</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetFlaggedBitmap"></a><span class="summary-sig"><span class="summary-sig-name">GetFlaggedBitmap</span>()</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetFlaggedData"></a><span class="summary-sig"><span class="summary-sig-name">GetFlaggedData</span>()</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetFlaggedImage"></a><span class="summary-sig"><span class="summary-sig-name">GetFlaggedImage</span>()</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetNotCheckedBitmap"></a><span class="summary-sig"><span class="summary-sig-name">GetNotCheckedBitmap</span>()</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetNotCheckedData"></a><span class="summary-sig"><span class="summary-sig-name">GetNotCheckedData</span>()</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetNotCheckedImage"></a><span class="summary-sig"><span class="summary-sig-name">GetNotCheckedImage</span>()</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetNotFlaggedBitmap"></a><span class="summary-sig"><span class="summary-sig-name">GetNotFlaggedBitmap</span>()</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetNotFlaggedData"></a><span class="summary-sig"><span class="summary-sig-name">GetNotFlaggedData</span>()</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="GetNotFlaggedImage"></a><span class="summary-sig"><span class="summary-sig-name">GetNotFlaggedImage</span>()</span></code>
-</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><code><span class="summary-sig"><a href="wx.lib.customtreectrl-module.html#GrayOut" class="summary-sig-name"><code>GrayOut</code></a>(<span class=summary-sig-arg>anImage</span>)</span></code>
 <br />
@@ -321,7 +287,7 @@ changed.</p>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.7.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -329,7 +295,7 @@ changed.</p>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Wed Nov 28 16:10:42 2007</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Jun 23 15:20:34 2008</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

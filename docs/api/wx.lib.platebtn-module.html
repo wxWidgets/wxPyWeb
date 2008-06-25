@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.platebtn</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        Module&nbsp;platebtn
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.platebtn-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.platebtn</h2>
+
+<pre class="literalblock">
+Editra Control Library: PlateButton
+
+The PlateButton is a custom owner drawn flat button, that in many ways emulates
+the buttons found the bookmark bar of the Safari browser. It can be used as a 
+drop in replacement for wx.Button/wx.BitmapButton under most circumstances. It 
+also offers a wide range of options for customizing its appearance, a 
+description of each of the main style settings is listed below.
+
+Main Button Styles:
+Any combination of the following values may be passed to the constructor's style
+keyword parameter.
+
+PB_STYLE_DEFAULT:
+Creates a flat label button with rounded corners, the highlight for mouse over
+and press states is based off of the hightlight color from the systems current
+theme.
+
+PB_STYLE_GRADIENT:
+The highlight and press states are drawn with gradient using the current
+highlight color.
+
+PB_STYLE_SQUARE:
+Instead of the default rounded shape use a rectangular shaped button with
+square edges.
+
+PB_STYLE_NB:
+This style only has an effect on Windows but does not cause harm to use on the
+platforms. It should only be used when the control is shown on a panel or other
+window that has a non solid color for a background. i.e a gradient or image is
+painted on the background of the parent window. If used on a background with
+a solid color it may cause the control to loose its transparent appearance.
+
+Other attributes can be configured after the control has been created. The
+settings that are currently available are as follows:
+
+SetBitmap: Change/Add the bitmap at any time and the control will resize and
+           refresh to display it.
+SetLabelColor: Explicitly set text colors
+SetMenu: Set the button to have a popupmenu. When a menu is set a small drop
+            arrow will be drawn on the button that can then be clicked to show
+            a menu.
+SetPressColor: Use a custom highlight color
+
+
+Overridden Methods Inherited from PyControl:
+
+SetFont: Changing the font is one way to set the size of the button, by default
+         the control will inherit its font from its parent.
+
+SetWindowVariant: Setting the window variant will cause the control to resize to
+                  the corresponding variant size. However if the button is using
+                  a bitmap the bitmap will remain unchanged and only the font
+                  will be adjusted.
+
+Requirements:
+    This module requires python2.4 or higher and wxPython2.8 or higher
+</pre>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.platebtn.PlateButton-class.html"><code>PlateButton</code></a></b></td>
+  <td>PlateButton is a custom type of flat button with support for
+displaying bitmaps and having an attached dropdown menu.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn-module.html#AdjustAlpha" class="summary-sig-name"><code>AdjustAlpha</code></a>(<span class=summary-sig-arg>colour</span>,
+          <span class=summary-sig-arg>alpha</span>)</span></code>
+<br />
+Adjust the alpha of a given colour</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn-module.html#AdjustColour" class="summary-sig-name"><code>AdjustColour</code></a>(<span class=summary-sig-arg>color</span>,
+          <span class=summary-sig-arg>percent</span>,
+          <span class=summary-sig-arg>alpha</span>)</span></code>
+<br />
+Brighten/Darken input colour by percent and adjust alpha
+channel if needed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn-module.html#BestLabelColour" class="summary-sig-name"><code>BestLabelColour</code></a>(<span class=summary-sig-arg>color</span>)</span></code>
+<br />
+Get the best color to use for the label that will be drawn on
+top of the given color.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.platebtn-module.html#GetHighlightColour" class="summary-sig-name"><code>GetHighlightColour</code></a>()</span></code>
+<br />
+Get the default highlight color
+&#64;return: wx.Color</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Function Details</th></tr>
+</table>
+
+<a name="AdjustAlpha"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AdjustAlpha</span>(<span class=sig-arg>colour</span>,
+          <span class=sig-arg>alpha</span>)</span>
+  </h3>
+<p>Adjust the alpha of a given colour</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AdjustColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AdjustColour</span>(<span class=sig-arg>color</span>,
+          <span class=sig-arg>percent</span>,
+          <span class=sig-arg>alpha</span>=<span class=sig-default>255</span>)</span>
+  </h3>
+<p>Brighten/Darken input colour by percent and adjust alpha
+channel if needed. Returns the modified color.
+&#64;param color: color object to adjust
+&#64;type color: wx.Color
+&#64;param percent: percent to adjust +(brighten) or -(darken)
+&#64;type percent: int
+&#64;keyword alpha: amount to adjust alpha channel</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="BestLabelColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">BestLabelColour</span>(<span class=sig-arg>color</span>)</span>
+  </h3>
+<p>Get the best color to use for the label that will be drawn on
+top of the given color.
+&#64;param color: background color that text will be drawn on</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHighlightColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHighlightColour</span>()</span>
+  </h3>
+<p>Get the default highlight color
+&#64;return: wx.Color</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Jun 23 15:19:36 2008</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

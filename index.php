@@ -4,7 +4,6 @@
 <?php require('_header.in') ?>
 <?php require('_navigation.in') ?>
 
-
 <p>
 
 <a name="top"></a>

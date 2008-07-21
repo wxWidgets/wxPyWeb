@@ -23,13 +23,15 @@ Welcome to the home of wxPython, a blending of the
 <p>
 <ul>
 
+<li><i>(18-July-2008)</i> <b>wxPython 2.8.8.1</b> is now <a href="download.php">available.</a> This is a minor bugfix release with several fixes for problems discovered in the 2.8.8.0 release.  More details are in the <a href="recentchanges.php">Recent Changes</a> document.
+<p>
+
+
 <li><i>(23-June-2008)</i> <b>wxPython 2.8.8.0</b> is now <a href="download.php">available.</a>  This release had a number of
 further refinements and enhancements on the stable 2.8 source tree
 since the previous release.   On Mac OS X 10.5 (Leopard) the Python
 2.5 binaries of wxPython are able to be used with either Apple's
-system Python, or with the Python.org version. 
-More details are in the <a href="recentchanges.php">Recent Changes</a> document.
-<p>
+system Python, or with the Python.org version. <p>
 
 <li><i>(29-Nov-2007)</i> <b>wxPython 2.8.7.1</b> is now <a href="download.php">available.</a>  This release has had some bugs
 fixed, some minor patches applied, and also incorporates the Google

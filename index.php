@@ -23,39 +23,42 @@ Welcome to the home of wxPython, a blending of the
 <p>
 <ul>
 
-<li><i>(18-July-2008)</i> <b>wxPython 2.8.8.1</b> is now <a href="download.php">available.</a> This is a minor bugfix release with several fixes for problems discovered in the 2.8.8.0 release.  More details are in the <a href="recentchanges.php">Recent Changes</a> document.
+<li><i>(28-Sept-2008)</i> <b>wxPython 2.8.9.0</b> is now <a href="download.php">available.</a> This release adds support for using Cairo for drawing on wx windows, adds a Win64 build, and various other fixes and enhancements.  More details are in the <a href="recentchanges.php">Recent Changes</a> document.
+</li><p>
+
+<li><i>(18-July-2008)</i> <b>wxPython 2.8.8.1</b> This is a minor bugfix release with several fixes for problems discovered in the 2.8.8.0 release.
 <p>
 
 
-<li><i>(23-June-2008)</i> <b>wxPython 2.8.8.0</b> is now <a href="download.php">available.</a>  This release had a number of
+<li><i>(23-June-2008)</i> <b>wxPython 2.8.8.0</b>  This release had a number of
 further refinements and enhancements on the stable 2.8 source tree
 since the previous release.   On Mac OS X 10.5 (Leopard) the Python
 2.5 binaries of wxPython are able to be used with either Apple's
 system Python, or with the Python.org version. <p>
 
-<li><i>(29-Nov-2007)</i> <b>wxPython 2.8.7.1</b> is now <a href="download.php">available.</a>  This release has had some bugs
+<li><i>(29-Nov-2007)</i> <b>wxPython 2.8.7.1</b>  This release has had some bugs
 fixed, some minor patches applied, and also incorporates the Google
 Summer of Code 2007 version of XRCed, and adds the Editra source code
 editor.
 <p>
 <b>NOTE</b>: On Mac OS X 10.5 (Leopard) the Python 2.5 binaries of wxPython expect to be used with the user-installed version of <a href="http://python.org/download/">MacPython</a>, <b><i>not</i></b> the Apple installed version. A fix for this issue is being worked on for the next release. In the meantime you can either install MacPython 2.5.1 and adjust your paths so that that Python is used, or you can stick with Apple's Python and the wxPython 2.8.4.0 that comes with Leopard.
 
-<p><li><i>(26-Oct-2007)</i> <b>wxPython 2.8.6.1</b> is now <a href="download.php">available.</a>  This release has some important bug fixes and is a general improvement over 2.8.6.0.
+<p><li><i>(26-Oct-2007)</i> <b>wxPython 2.8.6.1</b>  This release has some important bug fixes and is a general improvement over 2.8.6.0.
 
-<p><li><i>(27-Sept-2007)</i> <b>wxPython 2.8.6.0</b>has been <a href="download.php">released</a>.  This release is mostly about fixing a number of bugs and inconsistencies in wxWidgets and wxPython.  
+<p><li><i>(27-Sept-2007)</i> <b>wxPython 2.8.6.0</b>  This release is mostly about fixing a number of bugs and inconsistencies in wxWidgets and wxPython.  
 
      
 <p><li><i>(13-Sept-2007)</i> The <b>mail lists are up</b> and are working on processing all the queued messages.  This was definitely a "when it rains it pours" kind of situation, see the <a href="http://dotsrc.org/news/">DotSrc news archive</a> for more details.
 
 <p><li><i>(10-Sept-2007)</i> Yes, the <b>mail lists are down</b> and have been since the 8th.  There were multiple disk failures in RAID5 array of the machine that <a href="http://dotsrc.org/">hosts</a> the mail lists.  The hardware has been replaced and data is being restored from tape backups.
      
-<p><li><i>(8-Aug-2007)</i> <b>wxPython 2.8.4.2</b>has been <a href="download.php">released</a>.  This release includes several fixes and a few additions and improvements, as well as new build features for <a href="http://wiki.wxpython.org/InstallingOnUbuntuOrDebian">Debian/Ubuntu</a> and OS X.
+<p><li><i>(8-Aug-2007)</i> <b>wxPython 2.8.4.2</b> This release includes several fixes and a few additions and improvements, as well as new build features for <a href="http://wiki.wxpython.org/InstallingOnUbuntuOrDebian">Debian/Ubuntu</a> and OS X.
   
-<p><li><i>(14-May-2007)</i> <b>wxPython 2.8.4.0</b> has been <a href="download.php">released</a>, with lots of updates, fixes and improvements.
+<p><li><i>(14-May-2007)</i> <b>wxPython 2.8.4.0</b>  lots of updates, fixes and improvements.
 
-<p><li><i>(22-Mar-2007)</i> <b>wxPython 2.8.3.0</b> has been released.   This release includes a number of bug fixes and also some new enhancements, including updates to the XRCed tool and the new InspectionTool.  
+<p><li><i>(22-Mar-2007)</i> <b>wxPython 2.8.3.0</b> This release includes a number of bug fixes and also some new enhancements, including updates to the XRCed tool and the new InspectionTool.  
 
-<p><li><i>(20-Jan-2007)</i> <b>wxPython 2.8.1.1</b> has been released.   This release adds a few minor enhancements and a number of bug fixes designed to further stabalize
+<p><li><i>(20-Jan-2007)</i> <b>wxPython 2.8.1.1</b>  This release adds a few minor enhancements and a number of bug fixes designed to further stabalize
 the 2.8.x release series.
 
 <!--     

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.graphics.GraphicsPath</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.graphics-module.html">Module&nbsp;graphics</a> ::
+        Class&nbsp;GraphicsPath
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.graphics.GraphicsPath-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type GraphicsPath</h2>
+
+<pre class="base-tree">
+    <a href="__builtin__.object-class.html"><code>object</code></a> --+    
+             |    
+<a href="wx.lib.graphics.GraphicsObject-class.html"><code>GraphicsObject</code></a> --+
+                 |
+                <b>GraphicsPath</b>
+</pre><br />
+
+<hr/>
+
+<p>A GraphicsPath is a representaion of a geometric path, essentially
+a collection of lines and curves.  Paths can be used to define
+areas to be stroked and filled on a GraphicsContext.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#AddArc" class="summary-sig-name"><code>AddArc</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>radius</span>,
+          <span class=summary-sig-arg>startAngle</span>,
+          <span class=summary-sig-arg>endAngle</span>,
+          <span class=summary-sig-arg>clockwise</span>)</span></code>
+<br />
+Adds an arc of a circle centering at (x,y) with radius, from
+startAngle to endAngle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#AddArcToPoint" class="summary-sig-name"><code>AddArcToPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x1</span>,
+          <span class=summary-sig-arg>y1</span>,
+          <span class=summary-sig-arg>x2</span>,
+          <span class=summary-sig-arg>y2</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Adds a an arc to two tangents connecting (current) to (x1,y1)
+and (x1,y1) to (x2,y2), also a straight line from (current) to
+(x1,y1)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#AddCircle" class="summary-sig-name"><code>AddCircle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Appends a new closed sub-path as a circle around (x,y).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#AddCurveToPoint" class="summary-sig-name"><code>AddCurveToPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cx1</span>,
+          <span class=summary-sig-arg>cy1</span>,
+          <span class=summary-sig-arg>cx2</span>,
+          <span class=summary-sig-arg>cy2</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Adds a cubic Bezier curve from the current point, using two
+control points and an end point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#AddEllipse" class="summary-sig-name"><code>AddEllipse</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+<br />
+Appends an elipse fitting into the given rectangle as a closed sub-path.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#AddLineToPoint" class="summary-sig-name"><code>AddLineToPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Adds a straight line from the current point to (x,y)</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#AddPath" class="summary-sig-name"><code>AddPath</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>path</span>)</span></code>
+<br />
+Appends the given path to this path.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#AddQuadCurveToPoint" class="summary-sig-name"><code>AddQuadCurveToPoint</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Adds a quadratic Bexier curve from the current point, using a
+control point and an end point.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#AddRectangle" class="summary-sig-name"><code>AddRectangle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>)</span></code>
+<br />
+Adds a new rectanlge as a closed sub-path.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#AddRoundedRectangle" class="summary-sig-name"><code>AddRoundedRectangle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>w</span>,
+          <span class=summary-sig-arg>h</span>,
+          <span class=summary-sig-arg>radius</span>)</span></code>
+<br />
+Adds a new rounded rectanlge as a closed sub-path.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#Clone" class="summary-sig-name"><code>Clone</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return a new path initialized with the current contents of this path.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#CloseSubpath" class="summary-sig-name"><code>CloseSubpath</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Adds a line segment to the path from the current point to the
+beginning of the current sub-path, and closes this sub-path.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#Contains" class="summary-sig-name"><code>Contains</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>fillStyle</span>)</span></code>
+<br />
+Returns True if the point lies within the path.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#GetBox" class="summary-sig-name"><code>GetBox</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the bounding box enclosing all points on this path.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#GetCurrentPoint" class="summary-sig-name"><code>GetCurrentPoint</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the current point of the path, which is conceptually the
+final point reached by the last path operation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#GetNativePath" class="summary-sig-name"><code>GetNativePath</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the path as a cairo.Path object.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#MoveToPoint" class="summary-sig-name"><code>MoveToPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Begins a new sub-path at (x,y) by moving the &quot;current point&quot; there.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsPath-class.html#Transform" class="summary-sig-name"><code>Transform</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>matrix</span>)</span></code>
+<br />
+Transforms each point in this path by the matirx</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="AddArc"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddArc</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>radius</span>,
+          <span class=sig-arg>startAngle</span>,
+          <span class=sig-arg>endAngle</span>,
+          <span class=sig-arg>clockwise</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Adds an arc of a circle centering at (x,y) with radius, from
+startAngle to endAngle.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddArcToPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddArcToPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x1</span>,
+          <span class=sig-arg>y1</span>,
+          <span class=sig-arg>x2</span>,
+          <span class=sig-arg>y2</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Adds a an arc to two tangents connecting (current) to (x1,y1)
+and (x1,y1) to (x2,y2), also a straight line from (current) to
+(x1,y1)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddCircle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddCircle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Appends a new closed sub-path as a circle around (x,y).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddCurveToPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddCurveToPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>cx1</span>,
+          <span class=sig-arg>cy1</span>,
+          <span class=sig-arg>cx2</span>,
+          <span class=sig-arg>cy2</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Adds a cubic Bezier curve from the current point, using two
+control points and an end point.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddEllipse"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddEllipse</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>w</span>,
+          <span class=sig-arg>h</span>)</span>
+  </h3>
+<p>Appends an elipse fitting into the given rectangle as a closed sub-path.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddLineToPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddLineToPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Adds a straight line from the current point to (x,y)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddPath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddPath</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>path</span>)</span>
+  </h3>
+<p>Appends the given path to this path.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddQuadCurveToPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddQuadCurveToPoint</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Adds a quadratic Bexier curve from the current point, using a
+control point and an end point.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddRectangle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddRectangle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>w</span>,
+          <span class=sig-arg>h</span>)</span>
+  </h3>
+<p>Adds a new rectanlge as a closed sub-path.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddRoundedRectangle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddRoundedRectangle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>w</span>,
+          <span class=sig-arg>h</span>,
+          <span class=sig-arg>radius</span>)</span>
+  </h3>
+<p>Adds a new rounded rectanlge as a closed sub-path.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Clone"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Clone</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return a new path initialized with the current contents of this path.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CloseSubpath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CloseSubpath</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Adds a line segment to the path from the current point to the
+beginning of the current sub-path, and closes this sub-path.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Contains"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Contains</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>fillStyle</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Returns True if the point lies within the path.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBox"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBox</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the bounding box enclosing all points on this path.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCurrentPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCurrentPoint</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the current point of the path, which is conceptually the
+final point reached by the last path operation.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNativePath"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNativePath</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the path as a cairo.Path object.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MoveToPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MoveToPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Begins a new sub-path at (x,y) by moving the &quot;current point&quot; there.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Transform"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Transform</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>matrix</span>)</span>
+  </h3>
+<p>Transforms each point in this path by the matirx</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Sat Sep 27 18:21:02 2008</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

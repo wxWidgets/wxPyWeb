@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.graphics.GraphicsMatrix</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.graphics-module.html">Module&nbsp;graphics</a> ::
+        Class&nbsp;GraphicsMatrix
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.graphics.GraphicsMatrix-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type GraphicsMatrix</h2>
+
+<pre class="base-tree">
+    <a href="__builtin__.object-class.html"><code>object</code></a> --+    
+             |    
+<a href="wx.lib.graphics.GraphicsObject-class.html"><code>GraphicsObject</code></a> --+
+                 |
+                <b>GraphicsMatrix</b>
+</pre><br />
+
+<hr/>
+
+<p>A matrix holds an affine transformations, such as a scale,
+rotation, shear, or a combination of these, and is used to convert
+between different coordinante spaces.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Clone"></a><span class="summary-sig"><span class="summary-sig-name">Clone</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsMatrix-class.html#Concat" class="summary-sig-name"><code>Concat</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>matrix</span>)</span></code>
+<br />
+Concatenates the matrix passed with the current matrix.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsMatrix-class.html#Get" class="summary-sig-name"><code>Get</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the component values of the matrix as a tuple.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetNativeMatrix"></a><span class="summary-sig"><span class="summary-sig-name">GetNativeMatrix</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsMatrix-class.html#Invert" class="summary-sig-name"><code>Invert</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Inverts the matrix.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsMatrix-class.html#IsEqual" class="summary-sig-name"><code>IsEqual</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>matrix</span>)</span></code>
+<br />
+Returns True if the elements of the transformation matricies are equal.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsMatrix-class.html#IsIdentity" class="summary-sig-name"><code>IsIdentity</code></a>()</span></code>
+<br />
+Returns True if this is the identity matrix.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsMatrix-class.html#Rotate" class="summary-sig-name"><code>Rotate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>angle</span>)</span></code>
+<br />
+Rotates the matrix in radians</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsMatrix-class.html#Scale" class="summary-sig-name"><code>Scale</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>xScale</span>,
+          <span class=summary-sig-arg>yScale</span>)</span></code>
+<br />
+Scale the matrix</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsMatrix-class.html#Set" class="summary-sig-name"><code>Set</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>a</span>,
+          <span class=summary-sig-arg>b</span>,
+          <span class=summary-sig-arg>c</span>,
+          <span class=summary-sig-arg>d</span>,
+          <span class=summary-sig-arg>tx</span>,
+          <span class=summary-sig-arg>ty</span>)</span></code>
+<br />
+Set the componenets of the matrix by value, default values
+are the identity matrix.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsMatrix-class.html#TransformDistance" class="summary-sig-name"><code>TransformDistance</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dx</span>,
+          <span class=summary-sig-arg>dy</span>)</span></code>
+<br />
+Applies this matrix to a distance (ie.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsMatrix-class.html#TransformPoint" class="summary-sig-name"><code>TransformPoint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Applies this matrix to a point and returns the result</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.graphics.GraphicsMatrix-class.html#Translate" class="summary-sig-name"><code>Translate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dx</span>,
+          <span class=summary-sig-arg>dy</span>)</span></code>
+<br />
+Translate the metrix.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="Concat"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Concat</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>matrix</span>)</span>
+  </h3>
+<p>Concatenates the matrix passed with the current matrix.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Get"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Get</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return the component values of the matrix as a tuple.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Invert"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Invert</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Inverts the matrix.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsEqual"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsEqual</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>matrix</span>)</span>
+  </h3>
+<p>Returns True if the elements of the transformation matricies are equal.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsIdentity"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsIdentity</span>()</span>
+  </h3>
+<p>Returns True if this is the identity matrix.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Rotate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Rotate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>angle</span>)</span>
+  </h3>
+<p>Rotates the matrix in radians</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Scale"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Scale</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>xScale</span>,
+          <span class=sig-arg>yScale</span>)</span>
+  </h3>
+<p>Scale the matrix</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Set"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Set</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>a</span>=<span class=sig-default>1.0</span>,
+          <span class=sig-arg>b</span>=<span class=sig-default>0.0</span>,
+          <span class=sig-arg>c</span>=<span class=sig-default>0.0</span>,
+          <span class=sig-arg>d</span>=<span class=sig-default>1.0</span>,
+          <span class=sig-arg>tx</span>=<span class=sig-default>0.0</span>,
+          <span class=sig-arg>ty</span>=<span class=sig-default>0.0</span>)</span>
+  </h3>
+<p>Set the componenets of the matrix by value, default values
+are the identity matrix.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="TransformDistance"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">TransformDistance</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dx</span>,
+          <span class=sig-arg>dy</span>)</span>
+  </h3>
+<p>Applies this matrix to a distance (ie. performs all transforms
+except translations.)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="TransformPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">TransformPoint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Applies this matrix to a point and returns the result</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Translate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Translate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dx</span>,
+          <span class=sig-arg>dy</span>)</span>
+  </h3>
+<p>Translate the metrix.  This shifts the origin.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Sat Sep 27 18:21:20 2008</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

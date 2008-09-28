@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -108,6 +108,16 @@ Check(self, unsigned int index, int check=True)</td></tr>
           <span class=summary-sig-arg>name</span>)</span></code>
 <br />
 Do the 2nd phase and create the GUI control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CheckListBox-class.html#GetChecked" class="summary-sig-name"><code>GetChecked</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return a tuple of integers corresponding to the checked items in
+the control, based on <a href="wx.CheckListBox-class.html#IsChecked" class="link"><code>IsChecked</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CheckListBox-class.html#GetCheckedStrings" class="summary-sig-name"><code>GetCheckedStrings</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return a tuple of strings corresponding to the checked
+items of the control, based on <a href="wx.CheckListBox-class.html#GetChecked" class="link"><code>GetChecked</code></a>.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">int</font></td>
   <td><code><a name="GetItemHeight"></a><span class="summary-sig"><span class="summary-sig-name">GetItemHeight</span>(<span class=summary-sig-arg>self</span>)</span></code>
 </td></tr>
@@ -116,6 +126,18 @@ Do the 2nd phase and create the GUI control.</td></tr>
           <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
 <br />
 IsChecked(self, unsigned int index) -&gt; bool</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CheckListBox-class.html#SetChecked" class="summary-sig-name"><code>SetChecked</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>indexes</span>)</span></code>
+<br />
+Sets the checked state of items if the index of the item is 
+found in the indexes sequence.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.CheckListBox-class.html#SetCheckedStrings" class="summary-sig-name"><code>SetCheckedStrings</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>indexes</span>)</span></code>
+<br />
+Sets the checked state of items if the item's string is found
+in the strings sequence.</td></tr>
 </table><br />
 
 
@@ -124,7 +146,9 @@ IsChecked(self, unsigned int index) -&gt; bool</td></tr>
 <tr bgcolor="#70b0f0" class="summary">
   <th colspan="2">Property Summary</th></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><b><a href="wx.CheckListBox-class.html#ItemHeight"><code>ItemHeight</code></a></b>: See <a href="wx.CheckListBox-class.html#GetItemHeight" class="link"><code>GetItemHeight</code></a></td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CheckListBox-class.html#Checked"><code>Checked</code></a></b>: GetChecked(self)</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CheckListBox-class.html#CheckedStrings"><code>CheckedStrings</code></a></b>: GetCheckedStrings(self)</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.CheckListBox-class.html#ItemHeight"><code>ItemHeight</code></a></b>: GetItemHeight(self) -&gt; int</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
   <td><b><a href="wx.CheckListBox-class.html#thisown"><code>thisown</code></a></b>: The membership flag</td></tr></table><br />
 
 
@@ -200,12 +224,54 @@ bool      </dd>
   </dd></dl>
 </td></tr></table>
 
+<a name="GetChecked"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetChecked</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return a tuple of integers corresponding to the checked items in
+the control, based on <a href="wx.CheckListBox-class.html#IsChecked" class="link"><code>IsChecked</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCheckedStrings"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCheckedStrings</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Return a tuple of strings corresponding to the checked
+items of the control, based on <a href="wx.CheckListBox-class.html#GetChecked" class="link"><code>GetChecked</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
 <a name="IsChecked"></a>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">IsChecked</span>(<span class="sig-vararg">*args</span>,
           <span class="sig-kwarg">**kwargs</span>)</span>
   </h3>
 <p>IsChecked(self, unsigned int index) -&gt; bool</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetChecked"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetChecked</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>indexes</span>)</span>
+  </h3>
+<p>Sets the checked state of items if the index of the item is 
+found in the indexes sequence.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCheckedStrings"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCheckedStrings</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>indexes</span>)</span>
+  </h3>
+<p>Sets the checked state of items if the item's string is found
+in the strings sequence.</p>
   <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
@@ -219,9 +285,49 @@ bool      </dd>
 </table>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
 
+<a name="Checked"></a>
+<h3>Checked</h3>
+<p>GetChecked(self)</p>
+<p>Return a tuple of integers corresponding to the checked items in
+the control, based on <a href="wx.CheckListBox-class.html#IsChecked" class="link"><code>IsChecked</code></a>.</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CheckListBox-class.html#GetChecked" class="summary-sig-name"><code>GetChecked</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CheckListBox-class.html#SetChecked" class="summary-sig-name"><code>SetChecked</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>indexes</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="CheckedStrings"></a>
+<h3>CheckedStrings</h3>
+<p>GetCheckedStrings(self)</p>
+<p>Return a tuple of strings corresponding to the checked
+items of the control, based on <a href="wx.CheckListBox-class.html#GetChecked" class="link"><code>GetChecked</code></a>.</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CheckListBox-class.html#GetCheckedStrings" class="summary-sig-name"><code>GetCheckedStrings</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.CheckListBox-class.html#SetCheckedStrings" class="summary-sig-name"><code>SetCheckedStrings</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>indexes</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
 <a name="ItemHeight"></a>
 <h3>ItemHeight</h3>
-<p>See <a href="wx.CheckListBox-class.html#GetItemHeight" class="link"><code>GetItemHeight</code></a></p>
+<p>GetItemHeight(self) -&gt; int</p>
 <dl>
   <dt></dt>
   <dd>
@@ -256,7 +362,7 @@ bool      </dd>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.8.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.0</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -264,7 +370,7 @@ bool      </dd>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Sat Jul 19 12:45:38 2008</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Sat Sep 27 18:24:13 2008</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

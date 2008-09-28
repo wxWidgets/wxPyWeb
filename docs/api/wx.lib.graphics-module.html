@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.graphics</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        Module&nbsp;graphics
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.graphics-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.graphics</h2>
+
+<p>This module implements an API similar to wx.GraphicsContext and the
+related classes.  The implementation for all platforms is done using
+Cairo, via the wx.lib.wxcairo glue module.</p>
+<p>Why do this?  Why not just use wx.GraphicsContext everywhere?  Using
+Cairo on every platform enables us to more easily be totally
+consistent on all platforms.  Implementing it in Python means that it
+is easy to fill in the gaps in functionality with features of Cairo
+that GraphicsContext may not provide, like converting text to a path,
+using compositing operators, or being able to provide an
+implementation for things like context.Clear().</p>
+<p>Why not just use Cairo directly?  There may be times when you do want
+to use wx.GrpahicsContext, so being able to share code between that
+and this implementation is nice.  Also, I like the class hierarchy and
+API exposed by the wx.GraphicsContext classes a little better than
+Cairo's.</p>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.graphics.GraphicsBitmap-class.html"><code>GraphicsBitmap</code></a></b></td>
+  <td>A GraphicsBitmap is a wrapper around a cairo ImageSurface.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.graphics.GraphicsBrush-class.html"><code>GraphicsBrush</code></a></b></td>
+  <td>A Brush is used to define how fills are painted.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.graphics.GraphicsContext-class.html"><code>GraphicsContext</code></a></b></td>
+  <td>The GraphicsContext is the object which facilitates drawing to a surface.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.graphics.GraphicsFont-class.html"><code>GraphicsFont</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.graphics.GraphicsMatrix-class.html"><code>GraphicsMatrix</code></a></b></td>
+  <td>A matrix holds an affine transformations, such as a scale,
+rotation, shear, or a combination of these, and is used to convert
+between different coordinante spaces.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.graphics.GraphicsObject-class.html"><code>GraphicsObject</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.graphics.GraphicsPath-class.html"><code>GraphicsPath</code></a></b></td>
+  <td>A GraphicsPath is a representaion of a geometric path, essentially
+a collection of lines and curves.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.graphics.GraphicsPen-class.html"><code>GraphicsPen</code></a></b></td>
+  <td>A Pen is used to define the properties of how a stroke is drawn.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Property"></a><span class="summary-sig"><span class="summary-sig-name">Property</span>(<span class=summary-sig-arg>function</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Sat Sep 27 18:22:41 2008</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

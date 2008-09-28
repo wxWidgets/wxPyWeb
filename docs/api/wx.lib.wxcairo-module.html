@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.wxcairo</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        Module&nbsp;wxcairo
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.wxcairo-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.wxcairo</h2>
+
+<p>This module provides some glue code that allows the pycairo package to
+be used for drawing direclty on wx.DCs.  In cairo terms, the DC is the
+drawing surface.  The <code>CairoContextFromDC</code> function in this module
+will return an instance of the pycairo Context class that is ready for
+drawing, using the native cairo surface type for the current platform.</p>
+<p>This module requires the pycairo pacakge, and makes use of ctypes for 
+fetching the pycairo C API and also for digging into the cairo library 
+itself.</p>
+<p>To use Cairo with wxPython you will need to have a few dependencies
+installed.  On Linux and other unix-like systems you may already have
+them, or can easily get them with your system's package manager.  Just
+check if libcairo and pycairo are installed.</p>
+<p>On Mac you can get Cairo from MacPorts or Fink.  If you are also using
+MacPorts or Fink for your Python installation then you should be able
+to get pycairo the same way.  Otherwise it's real easy to build and
+install pycairo for the Python framework installation.  Just get the
+source tarball from <a class="rst-reference" href="http://pypi.python.org/pypi/pycairo">http://pypi.python.org/pypi/pycairo</a> and do the
+normal 'python setup.py install' dance.</p>
+<p>On Windows you can get a Cairo DLL from here:</p>
+<blockquote>
+<a class="rst-reference" href="http://www.gtk.org/download-windows.html">http://www.gtk.org/download-windows.html</a></blockquote>
+<p>You'll also want to get the zlib and libpng binaries from the same
+page.  Once you get those files extract the DLLs from each of the zip
+files and copy them to some place on your PATH.  Finally, there is an
+installer for the pycairo pacakge here:</p>
+<blockquote>
+<a class="rst-reference" href="http://wxpython.org/cairo/">http://wxpython.org/cairo/</a></blockquote>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.wxcairo.Pycairo_CAPI-class.html"><code>Pycairo_CAPI</code></a></b></td>
+  <td>&nbsp;</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.wxcairo-module.html#BitmapFromImageSurface" class="summary-sig-name"><code>BitmapFromImageSurface</code></a>(<span class=summary-sig-arg>surface</span>)</span></code>
+<br />
+Create a wx.Bitmap from a Cairo ImageSurface.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.wxcairo-module.html#ContextFromDC" class="summary-sig-name"><code>ContextFromDC</code></a>(<span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Creates and returns a Cairo context object using the wxDC as the
+surface.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.wxcairo-module.html#FontFaceFromFont" class="summary-sig-name"><code>FontFaceFromFont</code></a>(<span class=summary-sig-arg>font</span>)</span></code>
+<br />
+Creates and returns a cairo.FontFace object from the native
+information in a wx.Font.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.wxcairo-module.html#ImageSurfaceFromBitmap" class="summary-sig-name"><code>ImageSurfaceFromBitmap</code></a>(<span class=summary-sig-arg>bitmap</span>)</span></code>
+<br />
+Create an ImageSurface from a wx.Bitmap</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.wxcairo-module.html#voidp" class="summary-sig-name"><code>voidp</code></a>(<span class=summary-sig-arg>ptr</span>)</span></code>
+<br />
+Convert a SWIGged void* type to a ctypes c_void_p</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Function Details</th></tr>
+</table>
+
+<a name="BitmapFromImageSurface"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">BitmapFromImageSurface</span>(<span class=sig-arg>surface</span>)</span>
+  </h3>
+<p>Create a wx.Bitmap from a Cairo ImageSurface.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ContextFromDC"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ContextFromDC</span>(<span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Creates and returns a Cairo context object using the wxDC as the
+surface.  (Only window, client, paint and memory DC's are allowed
+at this time.)</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FontFaceFromFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FontFaceFromFont</span>(<span class=sig-arg>font</span>)</span>
+  </h3>
+<p>Creates and returns a cairo.FontFace object from the native
+information in a wx.Font.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ImageSurfaceFromBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ImageSurfaceFromBitmap</span>(<span class=sig-arg>bitmap</span>)</span>
+  </h3>
+<p>Create an ImageSurface from a wx.Bitmap</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="voidp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">voidp</span>(<span class=sig-arg>ptr</span>)</span>
+  </h3>
+<p>Convert a SWIGged void* type to a ctypes c_void_p</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.0</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Sat Sep 27 18:23:17 2008</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

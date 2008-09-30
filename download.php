@@ -63,7 +63,7 @@ Like any other complex piece of software, wxPython requires other software in or
 <table width="100%" border="1" cellspacing="0" cellpadding="8" bgcolor="#BCB8E7">
 <tr><td><font face="sans-serif" size="+1"><b>Prebuilt Binaries</b></font><br>
 
-<p><strong><font color="#FF0000">NOTE</font></strong>: The links below are for the binaries and source for wxPython <b>2.8.9.0</b>.  The download page for the previous stable <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a> is <a href="download-2.6.4.0.php">here</a>.  Other prior versions (stable or development) are available directly from <a href="https://sourceforge.net/project/showfiles.php?group_id=10718">SourceForge</a>.  
+<p><strong><font color="#FF0000">NOTE</font></strong>: The links below are for the binaries and source for wxPython <b>2.8.9.1</b>.  The download page for the previous stable <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a> is <a href="download-2.6.4.0.php">here</a>.  Other prior versions (stable or development) are available directly from <a href="https://sourceforge.net/project/showfiles.php?group_id=10718">SourceForge</a>.  
 
 <p><strong><font color="#FF0000">NOTE 2</font></strong>: wxPython now supports having more than one wxPython runtime installed at the same time, and provides a mechanism for choosing a non-default version at runtime if the app needs to.  Please read <a href="http://wiki.wxpython.org/index.cgi/MultiVersionInstalls">MultiVersionInstalls</a> for all the gory details.
 
@@ -94,18 +94,18 @@ The Win32 version of wxPython is distributed as a set of standard self-installin
 	<li> Command-line scripts for some wxPython tools
 </ul></font></td>
 <td align="center" nowrap>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.9.0-py23.exe">win32-unicode</a>
-<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.9.0-py23.exe">win32-ansi</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.9.1-py23.exe">win32-unicode</a>
+<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.9.1-py23.exe">win32-ansi</a>
 </td>
 <td align="center" nowrap>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.9.0-py24.exe">win32-unicode</a>
-<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.9.0-py24.exe">win32-ansi</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.9.1-py24.exe">win32-unicode</a>
+<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.9.1-py24.exe">win32-ansi</a>
 </td>
 <td align="center" nowrap>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.9.0-py25.exe">win32-unicode</a>
-<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.9.0-py25.exe">win32-ansi</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.9.1-py25.exe">win32-unicode</a>
+<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.9.1-py25.exe">win32-ansi</a>
 <br><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win64-unicode-2.8.9.0-py25.exe">win64-unicode</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win64-unicode-2.8.9.1-py25.exe">win64-unicode</a>
 </td>
 </tr>
 <tr>
@@ -118,13 +118,13 @@ The Win32 version of wxPython is distributed as a set of standard self-installin
 	<li>The wxWidgets documentaion, in a MS HTMLHelp file
 </ul></font></td>
 <td colspan="3" align="center">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-docs-demos-2.8.9.0.exe">win32-docs-demos</a></td>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-docs-demos-2.8.9.1.exe">win32-docs-demos</a></td>
 </tr>
 </table>
 </div>
 
 <p>If you have a need to compile other Python extension modules or applications that link with the <i>same version</i> of the wxWidgets DLL that wxPython does, then you will want to get the development package.  It includes a snapshot of the wx headers and the import libraries found on my system when I made the wxPython binaries.
-<ul><li><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-devel-2.8.9.0.tar.bz2">wxPython2.8-win32-devel</a></li></ul>
+<ul><li><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-devel-2.8.9.1.tar.bz2">wxPython2.8-win32-devel</a></li></ul>
 <p>
 </td></tr>
 
@@ -156,13 +156,13 @@ The Max OSX version of wxPython is distributed as a set of mountable disk images
 </ul></font></td>
 
 <td align="center" nowrap>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-unicode-2.8.9.0-universal-py2.4.dmg">osx-unicode</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-ansi-2.8.9.0-universal-py2.4.dmg">osx-ansi</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-unicode-2.8.9.1-universal-py2.4.dmg">osx-unicode</a><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-ansi-2.8.9.1-universal-py2.4.dmg">osx-ansi</a>
 </td>
 
 <td align="center" nowrap>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-unicode-2.8.9.0-universal-py2.5.dmg">osx-unicode</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-ansi-2.8.9.0-universal-py2.5.dmg">osx-ansi</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-unicode-2.8.9.1-universal-py2.5.dmg">osx-unicode</a><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-ansi-2.8.9.1-universal-py2.5.dmg">osx-ansi</a>
 </td>
 
 
@@ -177,11 +177,11 @@ The Max OSX version of wxPython is distributed as a set of mountable disk images
 	<li>The wxWidgets documentaion, bundled in a viewer application
 </ul></font></td>
 <td align="center" nowrap>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-docs-demos-2.8.9.0-universal-py2.4.dmg"><font size="-1">osx-docs-demos</font></a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-docs-demos-2.8.9.1-universal-py2.4.dmg"><font size="-1">osx-docs-demos</font></a>
 </td>
 
 <td align="center" nowrap>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-docs-demos-2.8.9.0-universal-py2.5.dmg"><font size="-1">osx-docs-demos</font></a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-docs-demos-2.8.9.1-universal-py2.5.dmg"><font size="-1">osx-docs-demos</font></a>
 </td>
 
 </tr>
@@ -215,14 +215,14 @@ These RPMs each contain the following:
 
 
 <td align="center"  valign="top" nowrap><b>Fedora Core 6, Python 2.4</b><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-common-gtk2-unicode-2.8.9.0-fc6_py2.4.i386.rpm">common-gtk2-unicode</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-common-gtk2-ansi-2.8.9.0-fc6_py2.4.i386.rpm">common-gtk2-ansi</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-common-gtk2-unicode-2.8.9.1-fc6_py2.4.i386.rpm">common-gtk2-unicode</a><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-common-gtk2-ansi-2.8.9.1-fc6_py2.4.i386.rpm">common-gtk2-ansi</a>
 </td>
 </tr><tr>
 
 <td align="center" valign="top" nowrap><b>Fedora Core 7, Python 2.5</b><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-common-gtk2-unicode-2.8.9.0-fc7_py2.5.i386.rpm">common-gtk2-unicode</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-common-gtk2-ansi-2.8.9.0-fc7_py2.5.i386.rpm">common-gtk2-ansi</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-common-gtk2-unicode-2.8.9.1-fc7_py2.5.i386.rpm">common-gtk2-unicode</a><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-common-gtk2-ansi-2.8.9.1-fc7_py2.5.i386.rpm">common-gtk2-ansi</a>
 </td>
 </tr><tr>
 
@@ -237,15 +237,15 @@ These RPMs each contain the following:
 </font></td>
 
 <td align="center" valign="top" nowrap><b>Fedora Core 6, Python 2.4</b><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-gtk2-unicode-2.8.9.0-fc6_py2.4.i386.rpm">gtk2-unicode</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-gtk2-ansi-2.8.9.0-fc6_py2.4.i386.rpm">gtk2-ansi</a><br><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-gtk2-unicode-2.8.9.1-fc6_py2.4.i386.rpm">gtk2-unicode</a><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-gtk2-ansi-2.8.9.1-fc6_py2.4.i386.rpm">gtk2-ansi</a><br><br>
 </td>
 </tr><tr>
 
 
 <td align="center" valign="top" nowrap><b>Fedora Core 7, Python 2.5</b><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-gtk2-unicode-2.8.9.0-fc7_py2.5.i386.rpm">gtk2-unicode</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-gtk2-ansi-2.8.9.0-fc7_py2.5.i386.rpm">gtk2-ansi</a><br><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-gtk2-unicode-2.8.9.1-fc7_py2.5.i386.rpm">gtk2-unicode</a><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-gtk2-ansi-2.8.9.1-fc7_py2.5.i386.rpm">gtk2-ansi</a><br><br>
 </td>
 </tr><tr>
 
@@ -257,14 +257,14 @@ These RPMs each contain the following:
 </font></td>
 
 <td align="center" valign="top" nowrap><b>Fedora Core 6, Python 2.4</b><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-devel-gtk2-unicode-2.8.9.0-fc6_py2.4.i386.rpm">devel-gtk2-unicode</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-devel-gtk2-ansi-2.8.9.0-fc6_py2.4.i386.rpm">devel-gtk2-ansi</a><br><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-devel-gtk2-unicode-2.8.9.1-fc6_py2.4.i386.rpm">devel-gtk2-unicode</a><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-devel-gtk2-ansi-2.8.9.1-fc6_py2.4.i386.rpm">devel-gtk2-ansi</a><br><br>
 </td>
 </tr><tr>
 
 <td align="center" valign="top" nowrap><b>Fedora Core 7, Python 2.5</b><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-devel-gtk2-unicode-2.8.9.0-fc7_py2.5.i386.rpm">devel-gtk2-unicode</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-devel-gtk2-ansi-2.8.9.0-fc7_py2.5.i386.rpm">devel-gtk2-ansi</a><br><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-devel-gtk2-unicode-2.8.9.1-fc7_py2.5.i386.rpm">devel-gtk2-unicode</a><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-devel-gtk2-ansi-2.8.9.1-fc7_py2.5.i386.rpm">devel-gtk2-ansi</a><br><br>
 </td>
 </tr><tr>
 
@@ -292,13 +292,13 @@ There are wxWidgets and wxPython packages in the standard software repositories 
 <font face="sans-serif" size="+1"><b>Documentation</b></font><br><br>
 This is the wxWidgets/wxPython documentation, in HTML format. For other documentaion options see the <a href="http://wxwidgets.org/">wxWidgets site</a>.
 
-<ul><li><a href="http://downloads.sourceforge.net/wxpython/wxPython-docs-2.8.9.0.tar.bz2">wxPython-docs</a>
+<ul><li><a href="http://downloads.sourceforge.net/wxpython/wxPython-docs-2.8.9.1.tar.bz2">wxPython-docs</a>
 </ul>
 
 <p><a name="newdocs">
 Thre is an effort underway to create a Python-specific set of reference docs for wxPython.  While much of the content is not yet present, the docs are still usable, and in fact helpful since they already accurately document what classes and methods are present in wxPython and what the parameter names are.  A downloadable archive of the new docs is now made as part of the release builds, and it can also be accessed online <a href="docs/api/">here</a>.
 
-<ul><li><a href="http://downloads.sourceforge.net/wxpython/wxPython-newdocs-2.8.9.0.tar.bz2">wxPython-newdocs</a>
+<ul><li><a href="http://downloads.sourceforge.net/wxpython/wxPython-newdocs-2.8.9.1.tar.bz2">wxPython-newdocs</a>
 </ul>
 
 <p>
@@ -309,7 +309,7 @@ Thre is an effort underway to create a Python-specific set of reference docs for
 <font face="sans-serif" size="+1"><b>Demo and Sample Apps</b></font><br><br>
 Since the RPMs no longer include the demo or samples, it is now packaged separately.  Why did I do this?  Well the demo is intended to be a learning tool, but when installed from the RPM all the demo files are owned by root.  As a separate tarball you can put the files where ever you want and since they'll be owned by you when you untar them you can play and tweak to your heart's desire.
 
-<ul><li><a href="http://downloads.sourceforge.net/wxpython/wxPython-demo-2.8.9.0.tar.bz2">wxPython-demo</a>
+<ul><li><a href="http://downloads.sourceforge.net/wxpython/wxPython-demo-2.8.9.1.tar.bz2">wxPython-demo</a>
 </ul>
 <p>
 </td></tr>
@@ -330,8 +330,8 @@ Here are the wxPython sources and all you'll need (besides the prerequisites out
 <p>Be sure to read the <a href="BUILD.html">BUILD</a> and <a href="INSTALL.html">INSTALL</a> instructions if you are wanting to use the sources to build your own copy of wxPython.
 
 <ul>
-<li><a href="http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.9.0.tar.bz2">wxPython-src</a>
-<li><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-2.8.9.0-1.src.rpm">wxPython src rpm</a>
+<li><a href="http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.9.1.tar.bz2">wxPython-src</a>
+<li><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-2.8.9.1-1.src.rpm">wxPython src rpm</a>
 <li><a href="wxPython.spec">RPM spec file</a>
 </ul>
 
@@ -341,7 +341,7 @@ Here are the wxPython sources and all you'll need (besides the prerequisites out
     rpmbuild -ta --define 'pyver 2.3' \
                  --define 'port gtk' \
                  --define 'unicode 0' \
-                 wxPython-src-2.8.9.0.tar.bz2
+                 wxPython-src-2.8.9.1.tar.bz2
 </pre> 
 
 

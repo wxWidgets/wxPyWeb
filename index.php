@@ -23,7 +23,9 @@ Welcome to the home of wxPython, a blending of the
 <p>
 <ul>
 
-<li><i>(28-Sept-2008)</i> <b>wxPython 2.8.9.0</b> is now <a href="download.php">available.</a> This release adds support for using Cairo for drawing on wx windows, adds a Win64 build, and various other fixes and enhancements.  More details are in the <a href="recentchanges.php">Recent Changes</a> document.
+<li>(29-Sept-2008)</i> <b>wxPython 2.8.9.1</b> is now <a href="download.php">available.</a> This release fixes a compatibility problem with Python 2.4.</li><p>
+
+<li><i>(28-Sept-2008)</i> <b>wxPython 2.8.9.0</b> This release adds support for using Cairo for drawing on wx windows, adds a Win64 build, and various other fixes and enhancements.  More details are in the <a href="recentchanges.php">Recent Changes</a> document.
 </li><p>
 
 <li><i>(18-July-2008)</i> <b>wxPython 2.8.8.1</b> This is a minor bugfix release with several fixes for problems discovered in the 2.8.8.0 release.

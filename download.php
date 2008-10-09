@@ -85,6 +85,7 @@ The Win32 version of wxPython is distributed as a set of standard self-installin
 <td align="center" nowrap><b>Python 2.3</b></td>
 <td align="center" nowrap><b>Python 2.4</b></td>
 <td align="center" nowrap><b>Python 2.5</b></td>
+<td align="center" nowrap><b>Python 2.6</b></td>
 </tr><tr>
 <td><b>wxPython runtime</b><br> 
 <font size="-1">Install one or more of these.  They each contain:
@@ -107,6 +108,12 @@ The Win32 version of wxPython is distributed as a set of standard self-installin
 <br><br>
 <a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win64-unicode-2.8.9.1-py25.exe">win64-unicode</a>
 </td>
+<td align="center" nowrap>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.9.1-py26.exe">win32-unicode</a>
+<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.9.1-py26.exe">win32-ansi</a>
+<br><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win64-unicode-2.8.9.1-py26.exe">win64-unicode</a>
+</td>
 </tr>
 <tr>
 <td><b>Docs, Demo, Samples, etc.</b><br>
@@ -117,7 +124,7 @@ The Win32 version of wxPython is distributed as a set of standard self-installin
 	<li>Start Menu launchers for the demo and tools such as PyCrust and XRCed
 	<li>The wxWidgets documentaion, in a MS HTMLHelp file
 </ul></font></td>
-<td colspan="3" align="center">
+<td colspan="4" align="center">
 <a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-docs-demos-2.8.9.1.exe">win32-docs-demos</a></td>
 </tr>
 </table>
@@ -146,6 +153,7 @@ The Max OSX version of wxPython is distributed as a set of mountable disk images
 <td align="center">&nbsp;</td>
 <td align="center" nowrap><b>Python 2.4</b></td>
 <td align="center" nowrap><b>Python 2.5</b></td>
+<td align="center" nowrap><b>Python 2.6</b></td>
 </tr><tr>
 <td><b>wxPython runtime</b><br> 
 <font size="-1">Install one or more of these.  They each contain:
@@ -166,6 +174,12 @@ The Max OSX version of wxPython is distributed as a set of mountable disk images
 </td>
 
 
+<td align="center" nowrap>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-unicode-2.8.9.1-universal-py2.6.dmg">osx-unicode</a><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-ansi-2.8.9.1-universal-py2.6.dmg">osx-ansi</a>
+</td>
+
+
 </tr>
 <tr>
 <td><b>Docs, Demo, Samples, etc.</b><br>
@@ -182,6 +196,10 @@ The Max OSX version of wxPython is distributed as a set of mountable disk images
 
 <td align="center" nowrap>
 <a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-docs-demos-2.8.9.1-universal-py2.5.dmg"><font size="-1">osx-docs-demos</font></a>
+</td>
+
+<td align="center" nowrap>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-docs-demos-2.8.9.1-universal-py2.6.dmg"><font size="-1">osx-docs-demos</font></a>
 </td>
 
 </tr>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.multidirdialog.MultiDirDialog</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.multidirdialog-module.html">Module&nbsp;multidirdialog</a> ::
+        Class&nbsp;MultiDirDialog
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type MultiDirDialog</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+        <a href="wx.TopLevelWindow-class.html"><code>TopLevelWindow</code></a> --+    
+                         |    
+                    <a href="wx.Dialog-class.html"><code>Dialog</code></a> --+
+                             |
+                            <b>MultiDirDialog</b>
+</pre><br />
+
+<hr/>
+
+<p>A different implementation of wx.DirDialog which allows multiple
+folders to be selected at once.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>message</span>,
+          <span class=summary-sig-arg>title</span>,
+          <span class=summary-sig-arg>defaultPath</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#BindEvents" class="summary-sig-name"><code>BindEvents</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Binds the events to specific methods.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#CreateButtons" class="summary-sig-name"><code>CreateButtons</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Creates the Ok, cancel and new folder bitmap buttons.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#GetPaths" class="summary-sig-name"><code>GetPaths</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the folders selected by the user.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#LayoutItems" class="summary-sig-name"><code>LayoutItems</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Layout the widgets using sizers.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#OnCancel" class="summary-sig-name"><code>OnCancel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the Cancel wx.EVT_BUTTON event for the dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#OnClose" class="summary-sig-name"><code>OnClose</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+User canceled the dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#OnKeyUp" class="summary-sig-name"><code>OnKeyUp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_CHAR_HOOK event for the dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#OnOk" class="summary-sig-name"><code>OnOk</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the Ok wx.EVT_BUTTON event for the dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#OnSelChanged" class="summary-sig-name"><code>OnSelChanged</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_TREE_SEL_CHANGED event for the tree control associated
+with MultiDirDialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#RecurseTopDir" class="summary-sig-name"><code>RecurseTopDir</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>treeCtrl</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>itemText</span>)</span></code>
+<br />
+Recurse a directory tree to include the parent-folder.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#SetProperties" class="summary-sig-name"><code>SetProperties</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>title</span>)</span></code>
+<br />
+Sets few properties for the dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.multidirdialog.MultiDirDialog-class.html#SetupDirCtrl" class="summary-sig-name"><code>SetupDirCtrl</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>defaultPath</span>)</span></code>
+<br />
+Setup the wx.GenericDirCtrl (icons, labels, etc...).</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>message</span>=<span class=sig-default>u'Choose&nbsp;a&nbsp;directory'</span>,
+          <span class=sig-arg>title</span>=<span class=sig-default>u'Browse&nbsp;For&nbsp;Folders'</span>,
+          <span class=sig-arg>defaultPath</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>536878144</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>'multidirdialog'</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Default class constructor.</p>
+<p>&#64;param parent: the dialog parent widget;
+&#64;param message: the message to show on the dialog;
+&#64;param title: the dialog title;
+&#64;param defaultPath: the default path, or the empty string;
+&#64;param style: the custom dir dialog style;
+&#64;param pos: the dialog position;
+&#64;param size: the dialog size;
+&#64;param name: the dialog name.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Dialog-class.html#__init__"><code>wx.Dialog.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="BindEvents"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">BindEvents</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Binds the events to specific methods.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateButtons"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateButtons</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Creates the Ok, cancel and new folder bitmap buttons.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPaths"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPaths</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the folders selected by the user.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LayoutItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LayoutItems</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Layout the widgets using sizers.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCancel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCancel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the Cancel wx.EVT_BUTTON event for the dialog.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnClose"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnClose</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>User canceled the dialog.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnKeyUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnKeyUp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_CHAR_HOOK event for the dialog.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnOk"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnOk</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the Ok wx.EVT_BUTTON event for the dialog.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSelChanged"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSelChanged</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_TREE_SEL_CHANGED event for the tree control associated
+with MultiDirDialog.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RecurseTopDir"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RecurseTopDir</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>treeCtrl</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>itemText</span>)</span>
+  </h3>
+<p>Recurse a directory tree to include the parent-folder.</p>
+<p>&#64;param treeCtrl: the tree control associated with wx.GenericDirCtrl;
+&#64;param item: the selected tree control item;
+&#64;param itemText: the selected tree control item text.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetProperties"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetProperties</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>title</span>)</span>
+  </h3>
+<p>Sets few properties for the dialog.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetupDirCtrl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetupDirCtrl</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>defaultPath</span>)</span>
+  </h3>
+<p>Setup the wx.GenericDirCtrl (icons, labels, etc...).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:51:36 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

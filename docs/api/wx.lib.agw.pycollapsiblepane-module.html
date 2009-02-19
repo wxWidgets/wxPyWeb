@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.pycollapsiblepane</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        Module&nbsp;pycollapsiblepane
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.pycollapsiblepane-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.agw.pycollapsiblepane</h2>
+
+<div class="rst-section" id="description">
+<h1 class="heading"><a name="rst-description">Description</a></h1>
+<p>A collapsible pane is a container with an embedded button-like control which
+can be used by the user to collapse or expand the pane's contents.
+Once constructed you should use the GetPane() function to access the pane and
+add your controls inside it (i.e. use the window returned from GetPane as the
+parent for the controls which must go in the pane, NOT the PyCollapsiblePane
+itself!).</p>
+<p>Note that because of its nature of control which can dynamically (and drastically)
+change its size at run-time under user-input, when putting PyCollapsiblePane
+inside a wx.Sizer you should be careful to add it with a proportion value of zero;
+this is because otherwise all other windows with non-null proportion values would
+automatically get resized each time the user expands or collapse the pane window
+resulting usually in a weird, flickering effect.</p>
+</div>
+<div class="rst-section" id="usage-sample">
+<h1 class="heading"><a name="rst-usage-sample">Usage Sample</a></h1>
+<p>collpane = PyCollapsiblePane(self, -1, &quot;Details:&quot;)</p>
+<p># add the pane with a zero proportion value to the 'sz' sizer which contains it
+sz.Add(collpane, 0, wx.GROW|wx.ALL, 5)</p>
+<p># now add a test label in the collapsible pane using a sizer to layout it:
+win = collpane.GetPane()
+paneSz = wx.BoxSizer(wx.VERTICAL)
+paneSz.Add(wx.StaticText(win, -1, &quot;test!&quot;), 1, wx.GROW|wx.ALL, 2)
+win.SetSizer(paneSz)
+paneSz.SetSizeHints(win)</p>
+</div>
+<div class="rst-section" id="license-and-version">
+<h1 class="heading"><a name="rst-license-and-version">License And Version:</a></h1>
+<p>PyCollapsiblePane is freeware and distributed under the wxPython license.</p>
+<p>Latest Revision: Andrea Gavana &#64; 15 Oct 2008, 22.30 GMT
+Version 0.1</p>
+</div>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.pycollapsiblepane.GTKExpander-class.html"><code>GTKExpander</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.pycollapsiblepane.PyCollapsiblePane-class.html"><code>PyCollapsiblePane</code></a></b></td>
+  <td>&nbsp;</td></tr>
+</table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:54:33 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

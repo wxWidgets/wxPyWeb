@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.hypertreelist</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        Module&nbsp;hypertreelist
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.hypertreelist-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.agw.hypertreelist</h2>
+
+<pre class="literalblock">
+Description
+===========
+
+HyperTreeList is a class that mimics the behaviour of wx.gizmos.TreeListCtrl, with
+almost the same base functionalities plus some more enhancements. This class does
+not rely on the native control, as it is a full owner-drawn tree-list control.
+
+HyperTreeList is somewhat an hybrid between CustomTreeCtrl and wx.gizmos.TreeListCtrl.
+
+In addition to the standard wx.gizmos.TreeListCtrl behaviour this class supports:
+
+* CheckBox-type items: checkboxes are easy to handle, just selected or unselected
+  state with no particular issues in handling the item's children;
+
+* RadioButton-type items: since I elected to put radiobuttons in HyperTreeList, I
+  needed some way to handle them, that made sense. So, I used the following approach:
+     - All peer-nodes that are radiobuttons will be mutually exclusive. In other words,
+       only one of a set of radiobuttons that share a common parent can be checked at
+       once. If a radiobutton node becomes checked, then all of its peer radiobuttons
+       must be unchecked.
+     - If a radiobutton node becomes unchecked, then all of its child nodes will become
+       inactive.
+
+* Hyperlink-type items: they look like an hyperlink, with the proper mouse cursor on
+  hovering.
+
+* Multiline text items.
+
+* Enabling/disabling items (together with their plain or grayed out icons).
+
+* Whatever non-toplevel widget can be attached next to a tree item.
+
+* Whatever non-toplevel widget can be attached next to a list item.
+
+* Column headers are fully customizable in terms of icons, colour, font, alignment etc...
+
+* Default selection style, gradient (horizontal/vertical) selection style and Windows
+  Vista selection style.
+
+* Customized drag and drop images built on the fly.
+
+* Setting the HyperTreeList item buttons to a personalized imagelist.
+
+* Setting the HyperTreeList check/radio item icons to a personalized imagelist.
+
+* Changing the style of the lines that connect the items (in terms of wx.Pen styles).
+
+* Using an image as a HyperTreeList background (currently only in &quot;tile&quot; mode).
+
+And a lot more. Check the demo for an almost complete review of the functionalities.
+
+
+Base Functionalities
+====================
+
+HyperTreeList supports all the wx.TreeCtrl styles, except:
+  - TR_EXTENDED: supports for this style is on the todo list (Am I sure of this?).
+
+Plus it has 3 more styles to handle checkbox-type items:
+  - TR_AUTO_CHECK_CHILD : automatically checks/unchecks the item children;
+  - TR_AUTO_CHECK_PARENT : automatically checks/unchecks the item parent;
+  - TR_AUTO_TOGGLE_CHILD: automatically toggles the item children.
+
+All the methods available in wx.gizmos.TreeListCtrl are also available in HyperTreeList.
+
+
+Events
+======
+
+All the events supported by wx.gizmos.TreeListCtrl are also available in HyperTreeList,
+with a few exceptions:
+
+  - EVT_TREE_GET_INFO (don't know what this means);
+  - EVT_TREE_SET_INFO (don't know what this means);
+  - EVT_TREE_ITEM_MIDDLE_CLICK (not implemented, but easy to add);
+  - EVT_TREE_STATE_IMAGE_CLICK: no need for that, look at the checking events below.
+
+Plus, HyperTreeList supports the events related to the checkbutton-type items:
+
+  - EVT_TREE_ITEM_CHECKING: an item is being checked;
+  - EVT_TREE_ITEM_CHECKED: an item has been checked.
+
+And to hyperlink-type items:
+
+  - EVT_TREE_ITEM_HYPERLINK: an hyperlink item has been clicked (this event is sent
+    after the EVT_TREE_SEL_CHANGED event).
+
+
+Supported Platforms
+===================
+
+HyperTreeList has been tested on the following platforms:
+  * Windows (Windows XP);
+
+
+Latest Revision: Andrea Gavana &#64; 15 Oct 2008, 22.00 GMT
+Version 0.4
+</pre>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.hypertreelist.EditTextCtrl-class.html"><code>EditTextCtrl</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.hypertreelist.HyperTreeList-class.html"><code>HyperTreeList</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.hypertreelist.TreeListColumnInfo-class.html"><code>TreeListColumnInfo</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.hypertreelist.TreeListHeaderWindow-class.html"><code>TreeListHeaderWindow</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.hypertreelist.TreeListItem-class.html"><code>TreeListItem</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html"><code>TreeListMainWindow</code></a></b></td>
+  <td>&nbsp;</td></tr>
+</table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:53:33 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

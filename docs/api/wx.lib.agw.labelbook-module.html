@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.labelbook</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        Module&nbsp;labelbook
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.labelbook-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.agw.labelbook</h2>
+
+<pre class="literalblock">
+Description
+===========
+
+LabelBook and FlatImageBook are a quasi-full implementations of the wx.Notebook,
+and designed to be a drop-in replacement for wx.Notebook. The API functions are
+similar so one can expect the function to behave in the same way.
+LabelBook anf FlatImageBook share their appearance with wx.Toolbook and
+wx.Listbook, while having more options for custom drawings, label positioning,
+mouse pointing and so on. Moreover, they retain also some visual characteristics
+of the Outlook address book.
+
+Some features:
+
+  - They are generic controls;
+  - Supports for left, right, top (FlatImageBook only), bottom (FlatImageBook
+    only) book styles;
+  - Possibility to draw images only, text only or both (FlatImageBook only);
+  - Support for a &quot;pin-button&quot;, that allows the user to shrink/expand the book
+    tab area;
+  - Shadows behind tabs (LabelBook only);
+  - Gradient shading of the tab area (LabelBook only);
+  - Web-like mouse pointing on tabs style (LabelBook only);
+  - Many customizable colours (tab area, active tab text, tab borders, active
+    tab, highlight) - LabelBook only.
+  
+And much more. See the demo for a quasi-complete review of all the functionalities
+of LabelBook and FlatImageBook.
+
+
+Events
+======
+
+LabelBook and FlatImageBook implement 4 events:
+
+  - EVT_IMAGENOTEBOOK_PAGE_CHANGING;
+  - EVT_IMAGENOTEBOOK_PAGE_CHANGED;
+  - EVT_IMAGENOTEBOOK_PAGE_CLOSING;
+  - EVT_IMAGENOTEBOOK_PAGE_CLOSED.
+
+
+Supported Platforms
+===================
+
+LabelBook and FlatImageBook have been tested on the following platforms:
+  * Windows (Windows XP);
+  * Linux Ubuntu (Dapper 6.06)
+
+
+License And Version:
+===================
+
+LabelBook and FlatImageBook are freeware and distributed under the wxPython license. 
+
+Latest Revision: Andrea Gavana &#64; 15 Oct 2008, 22.30 GMT
+Version 0.1.
+</pre>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.labelbook.FlatBookBase-class.html"><code>FlatBookBase</code></a></b></td>
+  <td>Base class for the containing window for LabelBook and 
+FlatImageBook.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.labelbook.FlatImageBook-class.html"><code>FlatImageBook</code></a></b></td>
+  <td>Default implementation of the image book, it is like a wx.Notebook, 
+except that images are used to control the different pages.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.labelbook.ImageContainer-class.html"><code>ImageContainer</code></a></b></td>
+  <td>Base class for FlatImageBook image container.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.labelbook.ImageContainerBase-class.html"><code>ImageContainerBase</code></a></b></td>
+  <td>Base class for FlatImageBook image container.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.labelbook.ImageInfo-class.html"><code>ImageInfo</code></a></b></td>
+  <td>This class holds all the information (caption, image, etc...) 
+belonging to a single tab in <code>ImageNotebook</code>.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.labelbook.ImageNotebookEvent-class.html"><code>ImageNotebookEvent</code></a></b></td>
+  <td>This events will be sent when a EVT_IMAGENOTEBOOK_PAGE_CHANGED, 
+EVT_IMAGENOTEBOOK_PAGE_CHANGING, EVT_IMAGENOTEBOOK_PAGE_CLOSING, 
+EVT_IMAGENOTEBOOK_PAGE_CLOSED is mapped in the parent.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.labelbook.LabelBook-class.html"><code>LabelBook</code></a></b></td>
+  <td>An implementation of a notebook control - except that instead of 
+having tabs to show labels, it labels to the right or left (arranged 
+horozontally).</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.labelbook.LabelContainer-class.html"><code>LabelContainer</code></a></b></td>
+  <td>Base class for LabelBook.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:52:21 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

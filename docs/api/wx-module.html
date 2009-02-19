@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -575,6 +575,9 @@ items in a <a href="wx.GridBagSizer-class.html" class="link"><code>wx.GridBagSiz
   <b><a href="wx.GnomePrintDC-class.html"><code>GnomePrintDC</code></a></b></td>
   <td>Proxy of C++ GnomePrintDC class</td></tr>
 <tr><td width="15%">
+  <b><a href="wx.GraphicsBitmap-class.html"><code>GraphicsBitmap</code></a></b></td>
+  <td>Proxy of C++ GraphicsBitmap class</td></tr>
+<tr><td width="15%">
   <b><a href="wx.GraphicsBrush-class.html"><code>GraphicsBrush</code></a></b></td>
   <td>A wx.GraphicsBrush is a native representation of a brush.</td></tr>
 <tr><td width="15%">
@@ -1093,6 +1096,9 @@ stderr streams.</td></tr>
 <tr><td width="15%">
   <b><a href="wx.PyPanel-class.html"><code>PyPanel</code></a></b></td>
   <td>Proxy of C++ PyPanel class</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.PyPickerBase-class.html"><code>PyPickerBase</code></a></b></td>
+  <td>Proxy of C++ PyPickerBase class</td></tr>
 <tr><td width="15%">
   <b><a href="wx.PyPreviewControlBar-class.html"><code>PyPreviewControlBar</code></a></b></td>
   <td>Proxy of C++ PyPreviewControlBar class</td></tr>
@@ -1879,7 +1885,7 @@ convert a Python string or unicode object to or from a wxString.</td></tr>
   <td><code><span class="summary-sig"><a href="wx-module.html#deprecatedWrapper" class="summary-sig-name"><code>GetElapsedTime</code></a>(<span class="summary-sig-vararg">*args</span>,
           <span class="summary-sig-kwarg">**kwargs</span>)</span></code>
 <br />
-&lt;function GetElapsedTime at 0x1aa60c8&gt; is deprecated</td></tr>
+&lt;function GetElapsedTime at 0x1a1b8c0&gt; is deprecated</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">String</font></td>
   <td><code><a name="GetEmailAddress"></a><span class="summary-sig"><span class="summary-sig-name">GetEmailAddress</span>()</span></code>
 </td></tr>
@@ -2364,6 +2370,9 @@ A static text control that emulates a hyperlink.</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">PyPanel</font></td>
   <td><code><a name="PrePyPanel"></a><span class="summary-sig"><span class="summary-sig-name">PrePyPanel</span>()</span></code>
 </td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">PyPickerBase</font></td>
+  <td><code><a name="PrePyPickerBase"></a><span class="summary-sig"><span class="summary-sig-name">PrePyPickerBase</span>()</span></code>
+</td></tr>
 <tr><td align="right" valign="top" width="15%"><font size="-1">PyScrolledWindow</font></td>
   <td><code><a name="PrePyScrolledWindow"></a><span class="summary-sig"><span class="summary-sig-name">PrePyScrolledWindow</span>()</span></code>
 </td></tr>
@@ -2679,8 +2688,8 @@ DC      </dd>
   </h3>
 <p>Creates a bitmap from an array of bits.  You should only use this
 function for monochrome bitmaps (depth 1) in portable programs: in
-this case the bits parameter should contain an XBM image.  For other
-bit depths, the behaviour is platform dependent.</p>
+this case the bits parameter should contain an XBM image as a data
+string.  For other bit depths, the behaviour is platform dependent.</p>
   <dl><dt></dt><dd>
     <dl><dt><b>Parameters:</b></dt>
       <dd><code><b>bits</b></code>
@@ -3622,7 +3631,7 @@ string      </dd>
   <h3><span class="sig"><span class="sig-name">GetElapsedTime</span>(<span class="sig-vararg">*args</span>,
           <span class="sig-kwarg">**kwargs</span>)</span>
   </h3>
-<p>&lt;function GetElapsedTime at 0x1aa60c8&gt; is deprecated</p>
+<p>&lt;function GetElapsedTime at 0x1a1b8c0&gt; is deprecated</p>
   <dl><dt></dt><dd>
   </dd></dl>
 </td></tr></table>
@@ -4274,10 +4283,9 @@ CollapsiblePane      </dd>
 <table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
   <h3><span class="sig"><span class="sig-name">PreColourPickerCtrl</span>()</span>
   </h3>
-<p>This control allows the user to select a colour. The generic
-implementation is a button which brings up a <a href="wx.ColourDialog-class.html" class="link"><code>wx.ColourDialog</code></a> when
-clicked. Native implementations may differ but this is usually a
-(small) widget which give access to the colour-chooser dialog.
+<p>This control allows the user to select a colour. The implementation
+varies by platform but is usually a button which brings up a
+<a href="wx.ColourDialog-class.html" class="link"><code>wx.ColourDialog</code></a> when clicked.
 Window Styles
 -------------</p>
 <blockquote>
@@ -4815,7 +4823,7 @@ bool      </dd>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -4823,7 +4831,7 @@ bool      </dd>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Sun Sep 28 15:06:06 2008</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:52:59 2009</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.speedmeter</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        Module&nbsp;speedmeter
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.speedmeter-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.agw.speedmeter</h2>
+
+<p>Description:</p>
+<p>SpeedMeter tries to reproduce the behavior of some car controls (but not only),
+by creating an &quot;angular&quot; control (actually, circular). I remember to have seen
+it somewhere, and i decided to implement it in wxPython.</p>
+<p>SpeedMeter starts its construction from an empty bitmap, and it uses some
+functions of the wx.DC class to create the rounded effects. everything is
+processed in the draw() method of SpeedMeter class.</p>
+<p>This implementation allows you to use either directly the wx.PaintDC, or the
+better (for me) double buffered style with wx.BufferedPaintDC. the double
+buffered implementation has been adapted from the wxPython wiki example:</p>
+<p><a class="rst-reference" href="http://wiki.wxpython.org/index.cgi/doublebuffereddrawing">http://wiki.wxpython.org/index.cgi/doublebuffereddrawing</a></p>
+<p>Usage:</p>
+<dl class="rst-docutils">
+<dt>speedwindow1 = SM.SpeedMeter(parent,</dt>
+<dd>bufferedstyle,
+extrastyle,
+mousestyle
+)</dd>
+</dl>
+<p>None of the options (a part of parent class) are strictly required, if you
+use the defaults you get a very simple SpeedMeter. For the full listing of
+the input parameters, see the SpeedMeter __init__() method.</p>
+<p>Methods and Settings:</p>
+<p>SpeedMeter is highly customizable, and in particular you can set:</p>
+<ul class="rst-simple">
+<li>The start and end angle of existence for SpeedMeter;</li>
+<li>The intervals in which you divide the SpeedMeter (numerical values);</li>
+<li>The corresponding thicks for the intervals;</li>
+<li>The interval colours (different intervals may have different filling colours);</li>
+<li>The ticks font and colour;</li>
+<li>The background colour (outsize the SpeedMeter region);</li>
+<li>The external arc colour;</li>
+<li>The hand (arrow) colour;</li>
+<li>The hand's shadow colour;</li>
+<li>The hand's style (&quot;arrow&quot; or &quot;hand&quot;);</li>
+<li>The partial filler colour;</li>
+<li>The number of secondary (intermediate) ticks;</li>
+<li>The direction of increasing speed (&quot;advance&quot; or &quot;reverse&quot;);</li>
+<li>The text to be drawn in the middle and its font;</li>
+<li>The icon to be drawn in the middle;</li>
+<li>The first and second gradient colours (that fills the SpeedMeter control);</li>
+<li>The current value.</li>
+</ul>
+<p>For more info on methods and initial styles, please refer to the __init__()
+method for SpeedMeter or to the specific functions.</p>
+<p>SpeedMeter control is freeware and distributed under the wxPython license.</p>
+<p>Latest revision: Andrea Gavana &#64; 15 oct 2008, 10.00 GMT
+Version 0.1</p>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.speedmeter.BufferedWindow-class.html"><code>BufferedWindow</code></a></b></td>
+  <td>A Buffered window class.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html"><code>SpeedMeter</code></a></b></td>
+  <td>&nbsp;</td></tr>
+</table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:55:21 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

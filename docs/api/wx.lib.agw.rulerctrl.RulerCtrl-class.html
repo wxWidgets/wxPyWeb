@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.rulerctrl.RulerCtrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.rulerctrl-module.html">Module&nbsp;rulerctrl</a> ::
+        Class&nbsp;RulerCtrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type RulerCtrl</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+    
+                         |    
+                   <a href="wx.PyPanel-class.html"><code>PyPanel</code></a> --+
+                             |
+                            <b>RulerCtrl</b>
+</pre><br />
+
+<hr/>
+
+RulerCtrl implements a ruler window that can be placed on top, bottom, 
+left or right to any wxPython widget. It is somewhat similar to the 
+rulers you can find in text editors software, though not so powerful.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>orient</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#AddIndicator" class="summary-sig-name"><code>AddIndicator</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Adds an indicator to RulerCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#CheckStyle" class="summary-sig-name"><code>CheckStyle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Adjust the RulerCtrl style accordingly to borders, units...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#Draw" class="summary-sig-name"><code>Draw</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Actually draws the whole RulerCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#DrawOnParent" class="summary-sig-name"><code>DrawOnParent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>indicator</span>)</span></code>
+<br />
+Actually draws the thin line over the drawing parent window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#FindLinearTickSizes" class="summary-sig-name"><code>FindLinearTickSizes</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>UPP</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#GetBounds" class="summary-sig-name"><code>GetBounds</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the RulerCtrl bounds (its rect).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#GetDrawingParent" class="summary-sig-name"><code>GetDrawingParent</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the window to which RulerCtrl draws a thin line over.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#GetIndicator" class="summary-sig-name"><code>GetIndicator</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mousePos</span>)</span></code>
+<br />
+Returns the indicator located at the mouse position mousePos (if 
+any).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#GetTimeFormat" class="summary-sig-name"><code>GetTimeFormat</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the time format.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#Invalidate" class="summary-sig-name"><code>Invalidate</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Invalidates the ticks calculations.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#LabelMajor" class="summary-sig-name"><code>LabelMajor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>label</span>)</span></code>
+<br />
+Sets whether the major ticks should be labeled or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#LabelMinor" class="summary-sig-name"><code>LabelMinor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>label</span>)</span></code>
+<br />
+Sets whether the minor ticks should be labeled or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#LabelString" class="summary-sig-name"><code>LabelString</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>d</span>,
+          <span class=summary-sig-arg>major</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#OfflimitsPixels" class="summary-sig-name"><code>OfflimitsPixels</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>start</span>,
+          <span class=summary-sig-arg>end</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#OnEraseBackground" class="summary-sig-name"><code>OnEraseBackground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_ERASE_BACKGROUND event for RulerCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#OnMouseEvents" class="summary-sig-name"><code>OnMouseEvents</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_MOUSE_EVENTS event for RulerCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#OnPaint" class="summary-sig-name"><code>OnPaint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_PAINT event for RulerCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#OnSize" class="summary-sig-name"><code>OnSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SIZE event for RulerCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetBackgroundColour" class="summary-sig-name"><code>SetBackgroundColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the RulerCtrl background colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetBounds" class="summary-sig-name"><code>SetBounds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>left</span>,
+          <span class=summary-sig-arg>top</span>,
+          <span class=summary-sig-arg>right</span>,
+          <span class=summary-sig-arg>bottom</span>)</span></code>
+<br />
+Sets the bounds for RulerCtrl (its rect).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetDrawingParent" class="summary-sig-name"><code>SetDrawingParent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dparent</span>)</span></code>
+<br />
+Sets the window to which RulerCtrl draws a thin line over.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetFlip" class="summary-sig-name"><code>SetFlip</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>flip</span>)</span></code>
+<br />
+Sets whether the orientation of the tick marks should be reversed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetFonts" class="summary-sig-name"><code>SetFonts</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>minorFont</span>,
+          <span class=summary-sig-arg>majorFont</span>)</span></code>
+<br />
+Sets the fonts for minor and major tick labels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetFormat" class="summary-sig-name"><code>SetFormat</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>format</span>)</span></code>
+<br />
+Sets the format for RulerCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetIndicatorColour" class="summary-sig-name"><code>SetIndicatorColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Requires PIL to change the image palette.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetIndicatorValue" class="summary-sig-name"><code>SetIndicatorValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sendEvent</span>)</span></code>
+<br />
+Sets the indicator value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetLabelColour" class="summary-sig-name"><code>SetLabelColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the labels colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetLabelEdges" class="summary-sig-name"><code>SetLabelEdges</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>labelEdges</span>)</span></code>
+<br />
+Sets whether the edge values should always be displayed or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetLog" class="summary-sig-name"><code>SetLog</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>log</span>)</span></code>
+<br />
+Sets whether RulerCtrl should have a logarithminc scale or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetOrientation" class="summary-sig-name"><code>SetOrientation</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>orient</span>)</span></code>
+<br />
+Sets the RulerCtrl orientation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetRange" class="summary-sig-name"><code>SetRange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>min</span>,
+          <span class=summary-sig-arg>max</span>)</span></code>
+<br />
+Sets the RulerCtrl range.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetSpacing" class="summary-sig-name"><code>SetSpacing</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>spacing</span>)</span></code>
+<br />
+Sets the RulerCtrl spacing between labels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetTickPenColour" class="summary-sig-name"><code>SetTickPenColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the pen colour to draw the ticks.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetTimeFormat" class="summary-sig-name"><code>SetTimeFormat</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>format</span>)</span></code>
+<br />
+Sets the time format.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#SetUnits" class="summary-sig-name"><code>SetUnits</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>units</span>)</span></code>
+<br />
+Sets the units that should be displayed beside the labels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#Tick" class="summary-sig-name"><code>Tick</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>d</span>,
+          <span class=summary-sig-arg>major</span>)</span></code>
+<br />
+Tick a particular position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#TickMajor" class="summary-sig-name"><code>TickMajor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>tick</span>)</span></code>
+<br />
+Sets whether the major ticks should be tick or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#TickMinor" class="summary-sig-name"><code>TickMinor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>tick</span>)</span></code>
+<br />
+Sets whether the minor ticks should be tick or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html#Update" class="summary-sig-name"><code>Update</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Updates all the ticks calculations.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>16777216</span>,
+          <span class=sig-arg>orient</span>=<span class=sig-default>4</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  <p>Default class constructor.</p>
+  Non-wxPython related parameter:
+  <ul>
+    <li>
+      orient: sets the orientation of the RulerCtrl.
+    </li>
+  </ul>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyPanel-class.html#__init__"><code>wx.PyPanel.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddIndicator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddIndicator</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+  Adds an indicator to RulerCtrl. You should pass a unique id and a 
+  starting value for the indicator.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CheckStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CheckStyle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Adjust the RulerCtrl style accordingly to borders, units...
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Draw"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Draw</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+  Actually draws the whole RulerCtrl.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawOnParent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawOnParent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>indicator</span>)</span>
+  </h3>
+  Actually draws the thin line over the drawing parent window.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindLinearTickSizes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindLinearTickSizes</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>UPP</span>)</span>
+  </h3>
+  Used internally.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBounds</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the RulerCtrl bounds (its rect).
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDrawingParent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDrawingParent</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the window to which RulerCtrl draws a thin line over.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetIndicator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetIndicator</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mousePos</span>)</span>
+  </h3>
+  Returns the indicator located at the mouse position mousePos (if 
+  any).
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTimeFormat"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTimeFormat</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the time format.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Invalidate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Invalidate</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Invalidates the ticks calculations.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LabelMajor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LabelMajor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>label</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Sets whether the major ticks should be labeled or not.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LabelMinor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LabelMinor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>label</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Sets whether the minor ticks should be labeled or not.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LabelString"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LabelString</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>d</span>,
+          <span class=sig-arg>major</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+  Used internally.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OfflimitsPixels"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OfflimitsPixels</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>start</span>,
+          <span class=sig-arg>end</span>)</span>
+  </h3>
+  Used internally.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnEraseBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnEraseBackground</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_ERASE_BACKGROUND event for RulerCtrl.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseEvents"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseEvents</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_MOUSE_EVENTS event for RulerCtrl.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPaint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPaint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_PAINT event for RulerCtrl.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_SIZE event for RulerCtrl.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBackgroundColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBackgroundColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+  Sets the RulerCtrl background colour.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetBackgroundColour"><code>wx.Window.SetBackgroundColour</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBounds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBounds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>left</span>,
+          <span class=sig-arg>top</span>,
+          <span class=sig-arg>right</span>,
+          <span class=sig-arg>bottom</span>)</span>
+  </h3>
+  Sets the bounds for RulerCtrl (its rect).
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDrawingParent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDrawingParent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dparent</span>)</span>
+  </h3>
+  Sets the window to which RulerCtrl draws a thin line over.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFlip"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFlip</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>flip</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Sets whether the orientation of the tick marks should be 
+  reversed.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFonts"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFonts</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>minorFont</span>,
+          <span class=sig-arg>majorFont</span>)</span>
+  </h3>
+  Sets the fonts for minor and major tick labels.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFormat"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFormat</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>format</span>)</span>
+  </h3>
+  Sets the format for RulerCtrl.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetIndicatorColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetIndicatorColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+  Requires PIL to change the image palette.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetIndicatorValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetIndicatorValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sendEvent</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Sets the indicator value.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLabelColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLabelColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>wx.Colour()</span>)</span>
+  </h3>
+  Sets the labels colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLabelEdges"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLabelEdges</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>labelEdges</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Sets whether the edge values should always be displayed or not.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLog"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLog</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>log</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Sets whether RulerCtrl should have a logarithminc scale or not.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetOrientation"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetOrientation</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>orient</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+  Sets the RulerCtrl orientation.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>min</span>,
+          <span class=sig-arg>max</span>)</span>
+  </h3>
+  Sets the RulerCtrl range.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSpacing"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSpacing</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>spacing</span>)</span>
+  </h3>
+  Sets the RulerCtrl spacing between labels.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTickPenColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTickPenColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>wx.Colour()</span>)</span>
+  </h3>
+  Sets the pen colour to draw the ticks.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTimeFormat"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTimeFormat</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>format</span>=<span class=sig-default>3</span>)</span>
+  </h3>
+  Sets the time format.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetUnits"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetUnits</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>units</span>)</span>
+  </h3>
+  Sets the units that should be displayed beside the labels.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Tick"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Tick</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>pos</span>,
+          <span class=sig-arg>d</span>,
+          <span class=sig-arg>major</span>)</span>
+  </h3>
+  Tick a particular position.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="TickMajor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">TickMajor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>tick</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Sets whether the major ticks should be tick or not.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="TickMinor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">TickMinor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>tick</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Sets whether the minor ticks should be tick or not.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Update"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Update</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+  Updates all the ticks calculations.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#Update"><code>wx.Window.Update</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:52:00 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

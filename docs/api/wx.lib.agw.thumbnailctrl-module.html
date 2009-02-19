@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.thumbnailctrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        Module&nbsp;thumbnailctrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.thumbnailctrl-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.agw.thumbnailctrl</h2>
+
+<p>Description:</p>
+<p>Thumbnailctrl is a widget that can be used to display a series of images in
+a &quot;thumbnail&quot; format; it mimics, for example, the windows explorer behavior
+when you select the &quot;view thumbnails&quot; option.
+Basically, by specifying a folder that contains some image files, the files
+in the folder are displayed as miniature versions of the actual images in
+a wx.scrolledwindow.</p>
+<p>The code is partly based on wxVillaLib, a wxWidgets implementation of this
+control. However, ThumbnailCtrl wouldn't have been so fast and complete
+without the suggestions and hints from Peter Damoc. So, if he accepts the
+mention, this control is his as much as mine.</p>
+<p>Usage:</p>
+<p>ThumbnailCtrl.__init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition,
+size = wx.DefaultSize, thumboutline=THUMB_OUTLINE_RECT,
+thumbfilter=THUMB_FILTER_IMAGES):</p>
+<p>For the full listing of the input parameters, see the ThumbnailCtrl __init__()
+method.</p>
+<p>Methods and Settings:</p>
+<p>With ThumbnailCtrl you can:</p>
+<ul class="rst-simple">
+<li>Create different thumb outlines (none, images only, full, etc...);</li>
+<li>Highlight thumbnails on mouse hovering;</li>
+<li>Show/hide file names below thumbs;</li>
+<li>Change thumb caption font;</li>
+<li>Zoom in/out thumbs (done via ctrl key + mouse wheel or with &quot;+&quot; and &quot;-&quot; chars,
+with zoom factor value customizable);</li>
+<li>Rotate thumbs with these specifications:
+a) &quot;d&quot; key rotates 90 degrees clockwise;
+b) &quot;s&quot; key rotates 90 degrees counter-clockwise;
+c) &quot;a&quot; key rotates 180 degrees</li>
+<li>Delete files/thumbnails (via the &quot;del&quot; key);</li>
+<li>Drag and drop thumbs from ThumbnailCtrl to whatever application you want;</li>
+<li>Use local (when at least one thumb is selected) or global (no need for
+thumb selection) popup menus;</li>
+<li>Show/hide a wx.combobox at the top of ThumbnailCtrl: this combobox contains
+working directory information and it has history entries;</li>
+<li>possibility to show tooltips on thumbs, which display file information
+(like file name, size, last modification date and thumb size).</li>
+</ul>
+<p>For more info on methods and initial styles, please refer to the __init__()
+method for ThumbnailCtrl or to the specific functions.</p>
+<p><a href="#id1" name="id2"><span class="rst-problematic" id="id2">|</span></a>=========================================================================== |
+| NOTE: ThumbnailCtrl <em>requires</em> PIL (Python Imaging Library) library to     |
+| be installed.                                                              |
+<a href="#id3" name="id4"><span class="rst-problematic" id="id4">|</span></a>=========================================================================== |</p>
+<p>Side-note: using highlight thumbnails on mouse hovering may be slow on slower
+computers.</p>
+<p>ThumbnailCtrl control is freeware and distributed under the wxPython license.</p>
+<p>Latest revision: andrea gavana &#64; 15 Oct 2008, 22.30 GMT
+Version 0.7</p>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html"><code>ScrolledThumbnail</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.thumbnailctrl.Thumb-class.html"><code>Thumb</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.thumbnailctrl.ThumbnailCtrl-class.html"><code>ThumbnailCtrl</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.thumbnailctrl.ThumbnailEvent-class.html"><code>ThumbnailEvent</code></a></b></td>
+  <td>&nbsp;</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl-module.html#CmpThumb" class="summary-sig-name"><code>CmpThumb</code></a>(<span class=summary-sig-arg>first</span>,
+          <span class=summary-sig-arg>second</span>)</span></code>
+<br />
+Compares two thumbs in terms of file names and ids.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="getDataBL"></a><span class="summary-sig"><span class="summary-sig-name">getDataBL</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="getDataSH"></a><span class="summary-sig"><span class="summary-sig-name">getDataSH</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="getDataTR"></a><span class="summary-sig"><span class="summary-sig-name">getDataTR</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetMondrianBitmap"></a><span class="summary-sig"><span class="summary-sig-name">GetMondrianBitmap</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetMondrianData"></a><span class="summary-sig"><span class="summary-sig-name">GetMondrianData</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetMondrianImage"></a><span class="summary-sig"><span class="summary-sig-name">GetMondrianImage</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="getShadow"></a><span class="summary-sig"><span class="summary-sig-name">getShadow</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl-module.html#opj" class="summary-sig-name"><code>opj</code></a>(<span class=summary-sig-arg>path</span>)</span></code>
+<br />
+Convert paths to the platform-specific separator</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl-module.html#SortFiles" class="summary-sig-name"><code>SortFiles</code></a>(<span class=summary-sig-arg>items</span>,
+          <span class=summary-sig-arg>sorteditems</span>,
+          <span class=summary-sig-arg>filenames</span>)</span></code>
+<br />
+Sort files in alphabetical order.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Function Details</th></tr>
+</table>
+
+<a name="CmpThumb"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CmpThumb</span>(<span class=sig-arg>first</span>,
+          <span class=sig-arg>second</span>)</span>
+  </h3>
+<p>Compares two thumbs in terms of file names and ids.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="opj"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">opj</span>(<span class=sig-arg>path</span>)</span>
+  </h3>
+<p>Convert paths to the platform-specific separator</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SortFiles"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SortFiles</span>(<span class=sig-arg>items</span>,
+          <span class=sig-arg>sorteditems</span>,
+          <span class=sig-arg>filenames</span>)</span>
+  </h3>
+<p>Sort files in alphabetical order.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:52:10 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

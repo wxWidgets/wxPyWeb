@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.flatmenu.FlatMenuBase</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.flatmenu-module.html">Module&nbsp;flatmenu</a> ::
+        Class&nbsp;FlatMenuBase
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type FlatMenuBase</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+           <a href="wx.PopupWindow-class.html"><code>PopupWindow</code></a> --+    
+                         |    
+         <a href="wx.lib.agw.flatmenu.ShadowPopupWindow-class.html"><code>ShadowPopupWindow</code></a> --+
+                             |
+                            <b>FlatMenuBase</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.agw.flatmenu.FlatMenu-class.html"><code>FlatMenu</code></a></dd></dl>
+
+<hr/>
+
+Base class for generic flat menu derived from wx.PopupWindow.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#AdjustPosition" class="summary-sig-name"><code>AdjustPosition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Adjusts position so the menu will be fully visible on screen.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#Dismiss" class="summary-sig-name"><code>Dismiss</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dismissParent</span>,
+          <span class=summary-sig-arg>resetOwner</span>)</span></code>
+<br />
+Dismisses the popup window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#GetMenuOwner" class="summary-sig-name"><code>GetMenuOwner</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the menu logical owner, the owner does not necessarly mean the 
+menu parent, it can also be the window that popped up it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#GetRootMenu" class="summary-sig-name"><code>GetRootMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the top level menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#OnChildDismiss" class="summary-sig-name"><code>OnChildDismiss</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Handles children dismiss.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#OnDismiss" class="summary-sig-name"><code>OnDismiss</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Fires an event EVT_FLAT_MENU_DISMISSED and handle menu dismiss.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#Popup" class="summary-sig-name"><code>Popup</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>parent</span>)</span></code>
+<br />
+Popups menu at point 'pt'.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#ScrollDown" class="summary-sig-name"><code>ScrollDown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Scroll one unit down.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#ScrollUp" class="summary-sig-name"><code>ScrollUp</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Scroll one unit up.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#SetOwnerHeight" class="summary-sig-name"><code>SetOwnerHeight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>height</span>)</span></code>
+<br />
+Sets the menu owner height, this will be used to position the menu 
+below or above the owner.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>=<span class=sig-default>None</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  Default class constructor.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.flatmenu.ShadowPopupWindow-class.html#__init__"><code>wx.lib.agw.flatmenu.ShadowPopupWindow.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AdjustPosition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AdjustPosition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+  Adjusts position so the menu will be fully visible on screen.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Dismiss"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Dismiss</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dismissParent</span>,
+          <span class=sig-arg>resetOwner</span>)</span>
+  </h3>
+  Dismisses the popup window.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMenuOwner"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMenuOwner</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the menu logical owner, the owner does not necessarly mean 
+  the menu parent, it can also be the window that popped up it.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRootMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRootMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Gets the top level menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnChildDismiss"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnChildDismiss</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Handles children dismiss.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnDismiss"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnDismiss</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Fires an event EVT_FLAT_MENU_DISMISSED and handle menu dismiss.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Popup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Popup</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>,
+          <span class=sig-arg>parent</span>)</span>
+  </h3>
+  Popups menu at point 'pt'. 'pt' assumed to be in screen coordinates. 
+  However, if parent is not None, 'pt' is translated into the screen 
+  coordinates using parent.ClientToScreen().
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ScrollDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ScrollDown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Scroll one unit down. By default this function is empty, let derived 
+  class do something.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ScrollUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ScrollUp</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Scroll one unit up. By default this function is empty, let derived 
+  class do something.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetOwnerHeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetOwnerHeight</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>height</span>)</span>
+  </h3>
+  Sets the menu owner height, this will be used to position the menu 
+  below or above the owner.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:53:26 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

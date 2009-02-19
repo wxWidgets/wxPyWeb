@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.cubecolourdialog.CubeColourDialog</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.cubecolourdialog-module.html">Module&nbsp;cubecolourdialog</a> ::
+        Class&nbsp;CubeColourDialog
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type CubeColourDialog</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+        <a href="wx.TopLevelWindow-class.html"><code>TopLevelWindow</code></a> --+    
+                         |    
+                    <a href="wx.Dialog-class.html"><code>Dialog</code></a> --+
+                             |
+                            <b>CubeColourDialog</b>
+</pre><br />
+
+<hr/>
+
+This is the CubeColourDialog main class implementation.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>colourData</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#AssignColourValue" class="summary-sig-name"><code>AssignColourValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>attribute</span>,
+          <span class=summary-sig-arg>colourVal</span>,
+          <span class=summary-sig-arg>maxVal</span>,
+          <span class=summary-sig-arg>position</span>)</span></code>
+<br />
+Common code to handle spin control changes.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#CalcCuboid" class="summary-sig-name"><code>CalcCuboid</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculates the RGB colour cube vertices.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#CalcRects" class="summary-sig-name"><code>CalcRects</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculates the brightness control user-selected rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#CalcSlopes" class="summary-sig-name"><code>CalcSlopes</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculates the line slopes in the RGB colour cube.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#DoLayout" class="summary-sig-name"><code>DoLayout</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Layouts all the controls in the <a 
+href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+class="link"><code>CubeColourDialog</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#DrawAll" class="summary-sig-name"><code>DrawAll</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Draws all the custom controls after a colour change.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#DrawAlpha" class="summary-sig-name"><code>DrawAlpha</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Refreshes the alpha channel control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#DrawBright" class="summary-sig-name"><code>DrawBright</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Refreshes the brightness control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#DrawHSB" class="summary-sig-name"><code>DrawHSB</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Refreshes the HSB colour wheel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#DrawMarkers" class="summary-sig-name"><code>DrawMarkers</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Draws the markers for all the controls.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#DrawRGB" class="summary-sig-name"><code>DrawRGB</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Refreshes the RGB colour cube.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#GetColourData" class="summary-sig-name"><code>GetColourData</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a wxPython compatible wx.ColourData.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#GetHSVAColour" class="summary-sig-name"><code>GetHSVAColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a 4-elements tuple of hue, saturation, brightness, alpha 
+components.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#GetRGBAColour" class="summary-sig-name"><code>GetRGBAColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a 4-elements tuple of red, green, blue, alpha components.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#InitDialog" class="summary-sig-name"><code>InitDialog</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Initialize the <a 
+href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+class="link"><code>CubeColourDialog</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnAddCustom"></a><span class="summary-sig"><span class="summary-sig-name">OnAddCustom</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#OnAlphaSpin" class="summary-sig-name"><code>OnAlphaSpin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SPINCTRL event for the alpha channel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#OnCancel" class="summary-sig-name"><code>OnCancel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the Cancel wx.EVT_BUTTON event for <a 
+href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+class="link"><code>CubeColourDialog</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#OnCloseWindow" class="summary-sig-name"><code>OnCloseWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+User canceled the dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnKeyUp"></a><span class="summary-sig"><span class="summary-sig-name">OnKeyUp</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#OnOk" class="summary-sig-name"><code>OnOk</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the Ok wx.EVT_BUTTON event for <a 
+href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+class="link"><code>CubeColourDialog</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#OnShowAlpha" class="summary-sig-name"><code>OnShowAlpha</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Shows/hides the alpha channel control in <a 
+href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+class="link"><code>CubeColourDialog</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#OnSpinCtrl" class="summary-sig-name"><code>OnSpinCtrl</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SPINCTRL event for RGB and HSB colours.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#SetCodes" class="summary-sig-name"><code>SetCodes</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets the HTML/MS Access codes (if any) in the text controls.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#SetPanelColours" class="summary-sig-name"><code>SetPanelColours</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Assigns colours to the colour panels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#SetProperties" class="summary-sig-name"><code>SetProperties</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets some initial properties (sizes, values).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#SetSpinVals" class="summary-sig-name"><code>SetSpinVals</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets the values for all the spin controls.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#SetWindowStyleFlag" class="summary-sig-name"><code>SetWindowStyleFlag</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Sets the <a 
+href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+class="link"><code>CubeColourDialog</code></a> window style flags.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html#ShowModal" class="summary-sig-name"><code>ShowModal</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Overridden wx.Dialog.ShowModal.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>colourData</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>1</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  Default class constructor.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>colourData</b></code> -
+         a wxPython wx.ColourData;
+<p/>
+      <dd><code><b>style</b></code> -
+         can be either None or CCD_SHOW_ALPHA, depending if you want to 
+        hide the alpha channel control or not.
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Dialog-class.html#__init__"><code>wx.Dialog.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AssignColourValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AssignColourValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>attribute</span>,
+          <span class=sig-arg>colourVal</span>,
+          <span class=sig-arg>maxVal</span>,
+          <span class=sig-arg>position</span>)</span>
+  </h3>
+  Common code to handle spin control changes.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalcCuboid"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalcCuboid</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Calculates the RGB colour cube vertices.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalcRects"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalcRects</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Calculates the brightness control user-selected rect.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalcSlopes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalcSlopes</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Calculates the line slopes in the RGB colour cube.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoLayout"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoLayout</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Layouts all the controls in the <a 
+  href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+  class="link"><code>CubeColourDialog</code></a>.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawAll</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Draws all the custom controls after a colour change.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawAlpha"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawAlpha</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Refreshes the alpha channel control.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawBright"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawBright</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Refreshes the brightness control.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawHSB"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawHSB</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Refreshes the HSB colour wheel.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawMarkers"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawMarkers</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+  Draws the markers for all the controls.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRGB"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRGB</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Refreshes the RGB colour cube.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetColourData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetColourData</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns a wxPython compatible wx.ColourData.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHSVAColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHSVAColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns a 4-elements tuple of hue, saturation, brightness, alpha 
+  components.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRGBAColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRGBAColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns a 4-elements tuple of red, green, blue, alpha 
+  components.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InitDialog"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InitDialog</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Initialize the <a 
+  href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+  class="link"><code>CubeColourDialog</code></a>.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#InitDialog"><code>wx.Window.InitDialog</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnAlphaSpin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnAlphaSpin</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_SPINCTRL event for the alpha channel.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCancel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCancel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the Cancel wx.EVT_BUTTON event for <a 
+  href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+  class="link"><code>CubeColourDialog</code></a>.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCloseWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCloseWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  User canceled the dialog.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnOk"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnOk</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the Ok wx.EVT_BUTTON event for <a 
+  href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+  class="link"><code>CubeColourDialog</code></a>.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnShowAlpha"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnShowAlpha</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Shows/hides the alpha channel control in <a 
+  href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+  class="link"><code>CubeColourDialog</code></a>.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSpinCtrl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSpinCtrl</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_SPINCTRL event for RGB and HSB colours.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCodes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCodes</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Sets the HTML/MS Access codes (if any) in the text controls.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPanelColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPanelColours</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Assigns colours to the colour panels.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetProperties"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetProperties</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Sets some initial properties (sizes, values).
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSpinVals"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSpinVals</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Sets the values for all the spin controls.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetWindowStyleFlag"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetWindowStyleFlag</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>style</span>)</span>
+  </h3>
+  Sets the <a 
+  href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html" 
+  class="link"><code>CubeColourDialog</code></a> window style flags.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetWindowStyleFlag"><code>wx.Window.SetWindowStyleFlag</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowModal"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowModal</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Overridden wx.Dialog.ShowModal.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Dialog-class.html#ShowModal"><code>wx.Dialog.ShowModal</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:51:26 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

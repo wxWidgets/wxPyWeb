@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.flatmenu</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        Module&nbsp;flatmenu
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.flatmenu-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.agw.flatmenu</h2>
+
+<pre class="literalblock">
+Description
+===========
+
+FlatMenu, like the name implies, it is a generic menu implementation. 
+I tried to provide a full functionality for menus, menubar and toolbar.
+
+
+FlatMenu supports the following features:
+
+  - Fires all the events (UI &amp; Cmd);
+  - Check items;
+  - Separators;
+  - Enabled / Disabled menu items;
+  - Images on items;
+  - Toolbar support, with images and separators;
+  - Controls in toolbar (work in progress);
+  - Toolbar tools tooltips (done: thanks to Peter Kort);
+  - Accelerators for menus;
+  - Accelerators for menubar;
+  - Radio items in menus;
+  - Integration with AUI;
+  - Scrolling when menu is too big to fit the screen (in progress);
+  - Menu navigation with keyboard;
+  - Drop down arrow button to the right of the menu, it always contains the
+    &quot;Customize&quot; option, which will popup an options dialog. The dialog has the
+    following abilities:
+      (a) Ability to add/remove menus;
+      (b) Select different colour schemes for the menu bar / toolbar;
+      (c) Control various options, such as: colour for highlight menu item, draw
+          border around menus (classic look only);
+      (d) Toolbar floating appearance.
+  - Allows user to specify grey bitmap for disabled menus/toolbar tools;
+  - If no grey bitmap is provided, it generates one from the existing bitmap;
+  - Hidden toolbar items / menu bar items - will appear in a small popmenu
+    to the right if they are hidden;
+  - 4 different colour schemes for the menu bar (more can easily added);
+  - Scrolling is available if the menu height is greater than the screen height;
+  - Context menus for menu items;
+  - Show/hide the drop down arrow which allows the customization of FlatMenu;
+  - Multiple columns menu window;
+  - Tooltips for menus and toolbar items on a wx.StatusBar (if present);
+  - Transparency (alpha channel) for menu windows (for platforms supporting it);
+  - First attempt in adding controls to FlatToolbar;
+  - Added a MiniBar (thanks to Vladiuz);
+  - Added wx.ToolBar methods AddCheckTool/AddRadioTool (thanks to Vladiuz).
+  
+
+Events
+======
+
+FlatMenu implements this event for menus and toolbar tools:
+
+  - EVT_FLAT_MENU_SELECTED
+  - EVT_FLAT_MENU_ITEM_MOUSE_OUT
+  - EVT_FLAT_MENU_ITEM_MOUSE_OVER
+
+Supported Platforms
+===================
+
+FlatMenu v0.8 has been tested on the following platforms:
+  * Windows (Windows XP);
+  * Linux Ubuntu (Dapper 6.06)
+v0.9.* has been tested on
+  * Windows (Windows XP, Vista);
+
+License And Version:
+===================
+
+FlatMenu is freeware and distributed under the wxPython license.
+Version 0.9.2
+</pre>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.FlatMenu-class.html"><code>FlatMenu</code></a></b></td>
+  <td>A Flat popup menu generic implementation.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html"><code>FlatMenuBar</code></a></b></td>
+  <td>Implements the generic owner-drawn menu bar for FlatMenu.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html"><code>FlatMenuBase</code></a></b></td>
+  <td>Base class for generic flat menu derived from wx.PopupWindow.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.FlatMenuButton-class.html"><code>FlatMenuButton</code></a></b></td>
+  <td>A nice small class that functions like wx.BitmapButton, the reason I 
+did not used BitmapButton is that on Linux, it has some extra margins 
+that I can't seem to be able to remove.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.FlatMenuEvent-class.html"><code>FlatMenuEvent</code></a></b></td>
+  <td>Event class that supports the FlatMenu-compatible event called 
+EVT_FLAT_MENU_SELECTED.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.FlatMenuItem-class.html"><code>FlatMenuItem</code></a></b></td>
+  <td>A class that represents an item in a menu.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.FlatMenuItemGroup-class.html"><code>FlatMenuItemGroup</code></a></b></td>
+  <td>A class that manages a group of radio menu items.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.FlatToolbarItem-class.html"><code>FlatToolbarItem</code></a></b></td>
+  <td>This class represents a toolbar item.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.FocusHandler-class.html"><code>FocusHandler</code></a></b></td>
+  <td>A focus event handler.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.mcPopupWindow-class.html"><code>mcPopupWindow</code></a></b></td>
+  <td>Since Max OS does not support wx.PopupWindow, this is an 
+alternative.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.MenuEntryInfo-class.html"><code>MenuEntryInfo</code></a></b></td>
+  <td>Internal class which holds information about a menu.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.MenuKbdRedirector-class.html"><code>MenuKbdRedirector</code></a></b></td>
+  <td>A keyboard event handler.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.ShadowPopupWindow-class.html"><code>ShadowPopupWindow</code></a></b></td>
+  <td>Base class for generic FlatMenu derived from wx.PopupWindow.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.StatusBarTimer-class.html"><code>StatusBarTimer</code></a></b></td>
+  <td>Timer used for deleting StatusBar long help after _DELAY seconds.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.flatmenu.ToolBarItem-class.html"><code>ToolBarItem</code></a></b></td>
+  <td>A simple class that holds information about a toolbar item.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu-module.html#ConvertToMonochrome" class="summary-sig-name"><code>ConvertToMonochrome</code></a>(<span class=summary-sig-arg>bmp</span>)</span></code>
+<br />
+Converts a bitmap to monochrome colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu-module.html#HeightDefault" class="summary-sig-name"><code>HeightDefault</code></a>(<span class=summary-sig-arg>h</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu-module.html#MSWGetCreateWindowCoords" class="summary-sig-name"><code>MSWGetCreateWindowCoords</code></a>(<span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>)</span></code>
+<br />
+Creates window coordinates for MS platforms.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu-module.html#WidthDefault" class="summary-sig-name"><code>WidthDefault</code></a>(<span class=summary-sig-arg>w</span>)</span></code>
+<br />
+Used internally.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Function Details</th></tr>
+</table>
+
+<a name="ConvertToMonochrome"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ConvertToMonochrome</span>(<span class=sig-arg>bmp</span>)</span>
+  </h3>
+  Converts a bitmap to monochrome colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HeightDefault"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HeightDefault</span>(<span class=sig-arg>h</span>)</span>
+  </h3>
+  Used internally.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MSWGetCreateWindowCoords"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MSWGetCreateWindowCoords</span>(<span class=sig-arg>pos</span>,
+          <span class=sig-arg>size</span>)</span>
+  </h3>
+  Creates window coordinates for MS platforms.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="WidthDefault"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">WidthDefault</span>(<span class=sig-arg>w</span>)</span>
+  </h3>
+  Used internally.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:55:02 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

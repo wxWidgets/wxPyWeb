@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.labelbook.LabelContainer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.labelbook-module.html">Module&nbsp;labelbook</a> ::
+        Class&nbsp;LabelContainer
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.labelbook.LabelContainer-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type LabelContainer</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+    
+                         |    
+        <a href="wx.lib.agw.labelbook.ImageContainerBase-class.html"><code>ImageContainerBase</code></a> --+
+                             |
+                            <b>LabelContainer</b>
+</pre><br />
+
+<hr/>
+
+Base class for LabelBook.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#CanDoBottomStyle" class="summary-sig-name"><code>CanDoBottomStyle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Allows the parent to examine the children type.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#DrawBackgroundBitmap" class="summary-sig-name"><code>DrawBackgroundBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Draws a bitmap as the background of the control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#DrawLabel" class="summary-sig-name"><code>DrawLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>bmp</span>,
+          <span class=summary-sig-arg>imgInfo</span>,
+          <span class=summary-sig-arg>orientationLeft</span>,
+          <span class=summary-sig-arg>imgIdx</span>,
+          <span class=summary-sig-arg>selected</span>,
+          <span class=summary-sig-arg>hover</span>)</span></code>
+<br />
+Draws label using the specified dc.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#DrawRegularHover" class="summary-sig-name"><code>DrawRegularHover</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Draws a rounded rectangle around the current tab.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#DrawWebHover" class="summary-sig-name"><code>DrawWebHover</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>caption</span>,
+          <span class=summary-sig-arg>xCoord</span>,
+          <span class=summary-sig-arg>yCoord</span>)</span></code>
+<br />
+Draws a web style hover effect (cursor set to hand &amp; text is 
+underlined).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#GetColour" class="summary-sig-name"><code>GetColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>which</span>)</span></code>
+<br />
+Returns a colour for a parameter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#GetTabAreaWidth" class="summary-sig-name"><code>GetTabAreaWidth</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the width of the tab area.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#InitializeColors" class="summary-sig-name"><code>InitializeColors</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Initializes the colors map to be used for this control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#OnEraseBackground" class="summary-sig-name"><code>OnEraseBackground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_ERASE_BACKGROUND event for LabelContainer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#OnMouseLeaveWindow" class="summary-sig-name"><code>OnMouseLeaveWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEAVE_WINDOW event for LabelContainer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#OnMouseLeftDown" class="summary-sig-name"><code>OnMouseLeftDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEFT_DOWN event for LabelContainer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#OnMouseLeftUp" class="summary-sig-name"><code>OnMouseLeftUp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEFT_UP event for LabelContainer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#OnMouseMove" class="summary-sig-name"><code>OnMouseMove</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_MOTION event for LabelContainer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#OnPaint" class="summary-sig-name"><code>OnPaint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_PAINT event for LabelContainer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#OnSize" class="summary-sig-name"><code>OnSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SIZE event for LabelContainer.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#Resize" class="summary-sig-name"><code>Resize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Actually resizes the tab area.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#SetBackgroundBitmap" class="summary-sig-name"><code>SetBackgroundBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+<br />
+Sets the background bitmap for the control</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#SetColour" class="summary-sig-name"><code>SetColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>which</span>,
+          <span class=summary-sig-arg>color</span>)</span></code>
+<br />
+Sets a colour for a parameter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.labelbook.LabelContainer-class.html#SetTabAreaWidth" class="summary-sig-name"><code>SetTabAreaWidth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+<br />
+Sets the width of the tab area.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>'LabelContainer'</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  <p>Default class constructor.</p>
+  Parameters: &#64;param parent - parent window &#64;param id - Window 
+  id &#64;param pos - Window position &#64;param size - Window size 
+  &#64;param style - possible style INB_XXX
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.labelbook.ImageContainerBase-class.html#__init__"><code>wx.lib.agw.labelbook.ImageContainerBase.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CanDoBottomStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CanDoBottomStyle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Allows the parent to examine the children type. Some implementation 
+  (such as LabelBook), does not support top/bottom images, only 
+  left/right.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.labelbook.ImageContainerBase-class.html#CanDoBottomStyle"><code>wx.lib.agw.labelbook.ImageContainerBase.CanDoBottomStyle</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawBackgroundBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawBackgroundBitmap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+  Draws a bitmap as the background of the control.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>bmp</span>,
+          <span class=sig-arg>imgInfo</span>,
+          <span class=sig-arg>orientationLeft</span>,
+          <span class=sig-arg>imgIdx</span>,
+          <span class=sig-arg>selected</span>,
+          <span class=sig-arg>hover</span>)</span>
+  </h3>
+  Draws label using the specified dc.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawRegularHover"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawRegularHover</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+  Draws a rounded rectangle around the current tab.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawWebHover"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawWebHover</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>caption</span>,
+          <span class=sig-arg>xCoord</span>,
+          <span class=sig-arg>yCoord</span>)</span>
+  </h3>
+  Draws a web style hover effect (cursor set to hand &amp; text is 
+  underlined).
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>which</span>)</span>
+  </h3>
+  Returns a colour for a parameter.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTabAreaWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTabAreaWidth</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the width of the tab area.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InitializeColors"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InitializeColors</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Initializes the colors map to be used for this control.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnEraseBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnEraseBackground</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_ERASE_BACKGROUND event for LabelContainer.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.labelbook.ImageContainerBase-class.html#OnEraseBackground"><code>wx.lib.agw.labelbook.ImageContainerBase.OnEraseBackground</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseLeaveWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseLeaveWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_LEAVE_WINDOW event for LabelContainer.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.labelbook.ImageContainerBase-class.html#OnMouseLeaveWindow"><code>wx.lib.agw.labelbook.ImageContainerBase.OnMouseLeaveWindow</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseLeftDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseLeftDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_LEFT_DOWN event for LabelContainer.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.labelbook.ImageContainerBase-class.html#OnMouseLeftDown"><code>wx.lib.agw.labelbook.ImageContainerBase.OnMouseLeftDown</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseLeftUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseLeftUp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_LEFT_UP event for LabelContainer.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.labelbook.ImageContainerBase-class.html#OnMouseLeftUp"><code>wx.lib.agw.labelbook.ImageContainerBase.OnMouseLeftUp</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseMove"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseMove</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_MOTION event for LabelContainer.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.labelbook.ImageContainerBase-class.html#OnMouseMove"><code>wx.lib.agw.labelbook.ImageContainerBase.OnMouseMove</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPaint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPaint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_PAINT event for LabelContainer.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_SIZE event for LabelContainer.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.labelbook.ImageContainerBase-class.html#OnSize"><code>wx.lib.agw.labelbook.ImageContainerBase.OnSize</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Resize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Resize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Actually resizes the tab area.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBackgroundBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBackgroundBitmap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>)</span>
+  </h3>
+  Sets the background bitmap for the control
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>which</span>,
+          <span class=sig-arg>color</span>)</span>
+  </h3>
+  Sets a colour for a parameter.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTabAreaWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTabAreaWidth</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>width</span>)</span>
+  </h3>
+  Sets the width of the tab area.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:52:03 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,3274 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.customtreectrl.CustomTreeCtrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.customtreectrl-module.html">Module&nbsp;customtreectrl</a> ::
+        Class&nbsp;CustomTreeCtrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type CustomTreeCtrl</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                        
+         |                        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                    
+             |                    
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+                
+                 |                
+            <a href="wx.Window-class.html"><code>Window</code></a> --+            
+                     |            
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+        
+                         |        
+            <a href="wx.ScrolledWindow-class.html"><code>ScrolledWindow</code></a> --+    
+                             |    
+              <a href="wx.PyScrolledWindow-class.html"><code>PyScrolledWindow</code></a> --+
+                                 |
+                                <b>CustomTreeCtrl</b>
+</pre><br />
+
+<dl><dt><b>Known Subclasses:</b></dt>
+<dd>
+    <a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html"><code>TreeListMainWindow</code></a></dd></dl>
+
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>ctstyle</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="AcceptsFocus"></a><span class="summary-sig"><span class="summary-sig-name">AcceptsFocus</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#AddRoot" class="summary-sig-name"><code>AddRoot</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>ct_type</span>,
+          <span class=summary-sig-arg>wnd</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>selImage</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Adds a root to the CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#AdjustMyScrollbars" class="summary-sig-name"><code>AdjustMyScrollbars</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Adjust the wx.ScrolledWindow scrollbars.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#AppendItem" class="summary-sig-name"><code>AppendItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parentId</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>ct_type</span>,
+          <span class=summary-sig-arg>wnd</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>selImage</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Appends an item as a last child of its parent.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#AssignButtonsImageList" class="summary-sig-name"><code>AssignButtonsImageList</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>imageList</span>)</span></code>
+<br />
+Assigns the button image list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#AssignImageList" class="summary-sig-name"><code>AssignImageList</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>imageList</span>)</span></code>
+<br />
+Assigns the normal image list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#AssignStateImageList" class="summary-sig-name"><code>AssignStateImageList</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>imageList</span>)</span></code>
+<br />
+Assigns the state image list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#AutoCheckChild" class="summary-sig-name"><code>AutoCheckChild</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>checked</span>)</span></code>
+<br />
+Transverses the tree and checks/unchecks the items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#AutoCheckParent" class="summary-sig-name"><code>AutoCheckParent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>checked</span>)</span></code>
+<br />
+Traverses up the tree and checks/unchecks parent items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#AutoToggleChild" class="summary-sig-name"><code>AutoToggleChild</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Transverses the tree and toggles the items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#CalculateLevel" class="summary-sig-name"><code>CalculateLevel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>level</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>align</span>)</span></code>
+<br />
+Calculates the level of an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#CalculateLineHeight" class="summary-sig-name"><code>CalculateLineHeight</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculates the height of a line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#CalculatePositions" class="summary-sig-name"><code>CalculatePositions</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculates all the positions of the visible items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#CalculateSize" class="summary-sig-name"><code>CalculateSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>level</span>,
+          <span class=summary-sig-arg>align</span>)</span></code>
+<br />
+Calculates overall position and size of an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#CheckChilds" class="summary-sig-name"><code>CheckChilds</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>checked</span>)</span></code>
+<br />
+Programatically check/uncheck item children.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#CheckItem" class="summary-sig-name"><code>CheckItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>checked</span>)</span></code>
+<br />
+Actually checks/uncheks an item, sending (eventually) the two
+events EVT_TREE_ITEM_CHECKING/EVT_TREE_ITEM_CHECKED.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#CheckItem2" class="summary-sig-name"><code>CheckItem2</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>checked</span>,
+          <span class=summary-sig-arg>torefresh</span>)</span></code>
+<br />
+Used internally to avoid EVT_TREE_ITEM_CHECKED events.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#CheckSameLevel" class="summary-sig-name"><code>CheckSameLevel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>checked</span>)</span></code>
+<br />
+Uncheck radio items which are on the same level of the checked one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#ChildrenClosing" class="summary-sig-name"><code>ChildrenClosing</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+We are about to destroy the item children.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#Collapse" class="summary-sig-name"><code>Collapse</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Collapse an item, sending a EVT_TREE_ITEM_COLLAPSING and
+EVT_TREE_ITEM_COLLAPSED events.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#CollapseAndReset" class="summary-sig-name"><code>CollapseAndReset</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Collapse the given item and deletes its children.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#Delete" class="summary-sig-name"><code>Delete</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Delete an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#DeleteAllItems" class="summary-sig-name"><code>DeleteAllItems</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Delete all items in the CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#DeleteChildren" class="summary-sig-name"><code>DeleteChildren</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Delete item children.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#DeleteItemWindow" class="summary-sig-name"><code>DeleteItemWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Deletes the window associated to an item (if any).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#DoGetBestSize" class="summary-sig-name"><code>DoGetBestSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Something is better than nothing...</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#DoInsertItem" class="summary-sig-name"><code>DoInsertItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parentId</span>,
+          <span class=summary-sig-arg>previous</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>ct_type</span>,
+          <span class=summary-sig-arg>wnd</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>selImage</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Actually inserts an item in the tree.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#DoSelectItem" class="summary-sig-name"><code>DoSelectItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>unselect_others</span>,
+          <span class=summary-sig-arg>extended_select</span>)</span></code>
+<br />
+Actually selects/unselects an item, sending a EVT_TREE_SEL_CHANGED event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#DrawHorizontalGradient" class="summary-sig-name"><code>DrawHorizontalGradient</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>hasfocus</span>)</span></code>
+<br />
+Gradient fill from colour 1 to colour 2 from left to right.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#DrawVerticalGradient" class="summary-sig-name"><code>DrawVerticalGradient</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>hasfocus</span>)</span></code>
+<br />
+Gradient fill from colour 1 to colour 2 from top to bottom.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#DrawVistaRectangle" class="summary-sig-name"><code>DrawVistaRectangle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>hasfocus</span>)</span></code>
+<br />
+Draw the selected item(s) with the Windows Vista style.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#Edit" class="summary-sig-name"><code>Edit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Internal function.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#EditLabel" class="summary-sig-name"><code>EditLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Starts editing an item label.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#EnableChildren" class="summary-sig-name"><code>EnableChildren</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Enables/disables item children.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#EnableItem" class="summary-sig-name"><code>EnableItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>enable</span>,
+          <span class=summary-sig-arg>torefresh</span>)</span></code>
+<br />
+Enables/disables an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#EnableSelectionGradient" class="summary-sig-name"><code>EnableSelectionGradient</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Globally enables/disables drawing of gradient selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#EnableSelectionVista" class="summary-sig-name"><code>EnableSelectionVista</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Globally enables/disables drawing of Windows Vista selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#EnsureVisible" class="summary-sig-name"><code>EnsureVisible</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Ensure that an item is visible in CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#Expand" class="summary-sig-name"><code>Expand</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Expands an item, sending a EVT_TREE_ITEM_EXPANDING and
+EVT_TREE_ITEM_EXPANDED events.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#ExpandAll" class="summary-sig-name"><code>ExpandAll</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Expands all CustomTreeCtrl items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#ExpandAllChildren" class="summary-sig-name"><code>ExpandAllChildren</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Expands all the items children of the input item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#FillArray" class="summary-sig-name"><code>FillArray</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>array</span>)</span></code>
+<br />
+Internal function.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#FindItem" class="summary-sig-name"><code>FindItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>idParent</span>,
+          <span class=summary-sig-arg>prefixOrig</span>)</span></code>
+<br />
+Finds the first item starting with the given prefix after the given item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#Freeze" class="summary-sig-name"><code>Freeze</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Freeze CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetBackgroundImage" class="summary-sig-name"><code>GetBackgroundImage</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the CustomTreeCtrl background image (can be none).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetBorderPen" class="summary-sig-name"><code>GetBorderPen</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the pen used to draw the selected item border.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetBoundingRect" class="summary-sig-name"><code>GetBoundingRect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>textOnly</span>)</span></code>
+<br />
+Gets the bounding rectangle of the item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetButtonsImageList" class="summary-sig-name"><code>GetButtonsImageList</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the buttons image list (from which application-defined button images are taken).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetChildrenCount" class="summary-sig-name"><code>GetChildrenCount</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>recursively</span>)</span></code>
+<br />
+Gets the item children count.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetClassDefaultAttributes" class="summary-sig-name"><code>GetClassDefaultAttributes</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the class default attributes.    <i>(Class method)</i>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetConnectionPen" class="summary-sig-name"><code>GetConnectionPen</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the pen used to draw the connecting lines between items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetControlBmp" class="summary-sig-name"><code>GetControlBmp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>checkbox</span>,
+          <span class=summary-sig-arg>checked</span>,
+          <span class=summary-sig-arg>enabled</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Get a native looking checkbox or radio button bitmap
+&#64;keyword checkbox: Get a checkbox=True, radiobutton=False
+&#64;keyword checked: contorl is marked or not</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetCount" class="summary-sig-name"><code>GetCount</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the global number of items in the tree.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetDisabledColour" class="summary-sig-name"><code>GetDisabledColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the items disabled colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetEditControl" class="summary-sig-name"><code>GetEditControl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a pointer to the edit TextCtrl if the item is being edited or
+None otherwise (it is assumed that no more than one item may be edited
+simultaneously).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetFirstChild" class="summary-sig-name"><code>GetFirstChild</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Gets the item first child.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetFirstGradientColour" class="summary-sig-name"><code>GetFirstGradientColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the first gradient colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetFirstVisibleItem" class="summary-sig-name"><code>GetFirstVisibleItem</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the first visible item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetGradientStyle" class="summary-sig-name"><code>GetGradientStyle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the gradient style:
+0: horizontal gradient
+1: vertical gradient</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetHilightFocusColour" class="summary-sig-name"><code>GetHilightFocusColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the colour used to highlight focused selected items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetHilightNonFocusColour" class="summary-sig-name"><code>GetHilightNonFocusColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the colour used to highlight unfocused selected items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetHyperTextFont" class="summary-sig-name"><code>GetHyperTextFont</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the font used to render an hypertext item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetHyperTextNewColour" class="summary-sig-name"><code>GetHyperTextNewColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the colour used to render a non-visited hypertext item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetHyperTextVisitedColour" class="summary-sig-name"><code>GetHyperTextVisitedColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the colour used to render a visited hypertext item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetImageList" class="summary-sig-name"><code>GetImageList</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the normal image list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetImageListCheck" class="summary-sig-name"><code>GetImageListCheck</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the image list used to build the check/radio buttons.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetIndent" class="summary-sig-name"><code>GetIndent</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the item indentation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemBackgroundColour" class="summary-sig-name"><code>GetItemBackgroundColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the item background colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemFont" class="summary-sig-name"><code>GetItemFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the item font.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemImage" class="summary-sig-name"><code>GetItemImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>which</span>)</span></code>
+<br />
+Returns the item image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemParent" class="summary-sig-name"><code>GetItemParent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Gets the item parent.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetPyData" class="summary-sig-name"><code>GetItemPyData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the data associated to an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemText" class="summary-sig-name"><code>GetItemText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the item text.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemTextColour" class="summary-sig-name"><code>GetItemTextColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the item text colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemType" class="summary-sig-name"><code>GetItemType</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the item type:
+0: normal
+1: checkbox item
+2: radiobutton item</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemVisited" class="summary-sig-name"><code>GetItemVisited</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether an hypertext item was visited.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemWindow" class="summary-sig-name"><code>GetItemWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the window associated to the item (if any).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemWindowEnabled" class="summary-sig-name"><code>GetItemWindowEnabled</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether the window associated to the item is enabled.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetLastChild" class="summary-sig-name"><code>GetLastChild</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Gets the item last child.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetLineHeight" class="summary-sig-name"><code>GetLineHeight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the line height for the given item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetMaxWidth" class="summary-sig-name"><code>GetMaxWidth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>respect_expansion_state</span>)</span></code>
+<br />
+Returns the maximum width of the CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetNext" class="summary-sig-name"><code>GetNext</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Gets the next item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetNextActiveItem" class="summary-sig-name"><code>GetNextActiveItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>down</span>)</span></code>
+<br />
+Returns the next active item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetNextChild" class="summary-sig-name"><code>GetNextChild</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>cookie</span>)</span></code>
+<br />
+Gets the item next child based on the 'cookie' parameter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetNextSibling" class="summary-sig-name"><code>GetNextSibling</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Gets the next sibling of an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetNextVisible" class="summary-sig-name"><code>GetNextVisible</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the next visible item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetPrevSibling" class="summary-sig-name"><code>GetPrevSibling</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Gets the previous sibling of an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetPrevVisible" class="summary-sig-name"><code>GetPrevVisible</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the previous visible item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetPyData" class="summary-sig-name"><code>GetPyData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the data associated to an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetRootItem" class="summary-sig-name"><code>GetRootItem</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the root item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetSecondGradientColour" class="summary-sig-name"><code>GetSecondGradientColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the second gradient colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetSelection" class="summary-sig-name"><code>GetSelection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the current selection: TR_SINGLE only.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetSelections" class="summary-sig-name"><code>GetSelections</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a list of selected items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetSpacing" class="summary-sig-name"><code>GetSpacing</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the spacing between the start and the text.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetStateImageList" class="summary-sig-name"><code>GetStateImageList</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the state image list (from which application-defined state images are taken).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetTreeStyle" class="summary-sig-name"><code>GetTreeStyle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the CustomTreeCtrl style.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#HandleHyperLink" class="summary-sig-name"><code>HandleHyperLink</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Handles the hyperlink items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#HasButtons" class="summary-sig-name"><code>HasButtons</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns whether CustomTreeCtrl has the TR_AHS_BUTTONS flag.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#HasChildren" class="summary-sig-name"><code>HasChildren</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether an item has children or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#HideWindows" class="summary-sig-name"><code>HideWindows</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Hides the windows associated to the items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#HitTest" class="summary-sig-name"><code>HitTest</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>point</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Calculates which (if any) item is under the given point, returning the tree item
+at this point plus extra information flags.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#InsertItem" class="summary-sig-name"><code>InsertItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parentId</span>,
+          <span class=summary-sig-arg>input</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>ct_type</span>,
+          <span class=summary-sig-arg>wnd</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>selImage</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Inserts an item after the given previous.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#InsertItemByIndex" class="summary-sig-name"><code>InsertItemByIndex</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parentId</span>,
+          <span class=summary-sig-arg>before</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>ct_type</span>,
+          <span class=summary-sig-arg>wnd</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>selImage</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Auxiliary function to cope with the C++ hideous multifunction.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#InsertItemByItem" class="summary-sig-name"><code>InsertItemByItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parentId</span>,
+          <span class=summary-sig-arg>idPrevious</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>ct_type</span>,
+          <span class=summary-sig-arg>wnd</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>selImage</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Auxiliary function to cope with the C++ hideous multifunction.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#IsBold" class="summary-sig-name"><code>IsBold</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether the item font is bold or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#IsDescendantOf" class="summary-sig-name"><code>IsDescendantOf</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Checks if the given item is under another one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#IsExpanded" class="summary-sig-name"><code>IsExpanded</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether the item is expanded or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#IsItalic" class="summary-sig-name"><code>IsItalic</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether the item font is italic or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#IsItemChecked" class="summary-sig-name"><code>IsItemChecked</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether an item is checked or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#IsItemEnabled" class="summary-sig-name"><code>IsItemEnabled</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether an item is enabled or disabled.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#IsItemHyperText" class="summary-sig-name"><code>IsItemHyperText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether an item is hypertext or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#IsSelected" class="summary-sig-name"><code>IsSelected</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether the item is selected or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#IsVisible" class="summary-sig-name"><code>IsVisible</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether the item is visible or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#ItemHasChildren" class="summary-sig-name"><code>ItemHasChildren</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether the item has children or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnCompareItems" class="summary-sig-name"><code>OnCompareItems</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item1</span>,
+          <span class=summary-sig-arg>item2</span>)</span></code>
+<br />
+Returns whether 2 items have the same text.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnDestroy" class="summary-sig-name"><code>OnDestroy</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_WINDOW_DESTROY event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnEraseBackground" class="summary-sig-name"><code>OnEraseBackground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_ERASE_BACKGROUND event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnGetToolTip" class="summary-sig-name"><code>OnGetToolTip</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Process the tooltip event, to speed up event processing.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnInternalIdle" class="summary-sig-name"><code>OnInternalIdle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Performs operations in idle time (essentially drawing).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnKeyDown" class="summary-sig-name"><code>OnKeyDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_CHAR event, sending a EVT_TREE_KEY_DOWN event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnKillFocus" class="summary-sig-name"><code>OnKillFocus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_KILL_FOCUS event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnMouse" class="summary-sig-name"><code>OnMouse</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles a bunch of wx.EVT_MOUSE_EVENTS events.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnPaint" class="summary-sig-name"><code>OnPaint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_PAINT event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnRenameAccept" class="summary-sig-name"><code>OnRenameAccept</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Called by TreeTextCtrl, to accept the changes and to send the
+EVT_TREE_END_LABEL_EDIT event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnRenameCancelled" class="summary-sig-name"><code>OnRenameCancelled</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Called by TreeTextCtrl, to cancel the changes and to send the
+EVT_TREE_END_LABEL_EDIT event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnRenameTimer" class="summary-sig-name"><code>OnRenameTimer</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+The timer for renaming has expired.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnSetFocus" class="summary-sig-name"><code>OnSetFocus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SET_FOCUS event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnSize" class="summary-sig-name"><code>OnSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SIZE event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#PaintItem" class="summary-sig-name"><code>PaintItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>level</span>,
+          <span class=summary-sig-arg>align</span>)</span></code>
+<br />
+Actually paint an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#PaintLevel" class="summary-sig-name"><code>PaintLevel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>level</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>align</span>)</span></code>
+<br />
+Paint a level of CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#PrependItem" class="summary-sig-name"><code>PrependItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>ct_type</span>,
+          <span class=summary-sig-arg>wnd</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>selImage</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Appends an item as a first child of parent.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="RecurseOnChildren"></a><span class="summary-sig"><span class="summary-sig-name">RecurseOnChildren</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>maxwidth</span>,
+          <span class=summary-sig-arg>respect_expansion_state</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#RefreshLine" class="summary-sig-name"><code>RefreshLine</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Refreshes a damaged item line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#RefreshSelected" class="summary-sig-name"><code>RefreshSelected</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Refreshes a damaged selected item line.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#RefreshSelectedUnder" class="summary-sig-name"><code>RefreshSelectedUnder</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Refreshes the selected items under the given item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#RefreshSubtree" class="summary-sig-name"><code>RefreshSubtree</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Refreshes a damaged subtree of an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#ResetTextControl" class="summary-sig-name"><code>ResetTextControl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Called by TreeTextCtrl when it marks itself for deletion.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#ScrollTo" class="summary-sig-name"><code>ScrollTo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Scrolls the specified item into view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SelectItem" class="summary-sig-name"><code>SelectItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>select</span>)</span></code>
+<br />
+Selects/deselects an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SelectItemRange" class="summary-sig-name"><code>SelectItemRange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item1</span>,
+          <span class=summary-sig-arg>item2</span>)</span></code>
+<br />
+Selects all the items between item1 and item2.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SendDeleteEvent" class="summary-sig-name"><code>SendDeleteEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Actully sends the EVT_TREE_DELETE_ITEM event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetBackgroundColour" class="summary-sig-name"><code>SetBackgroundColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Changes the background colour of CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetBackgroundImage" class="summary-sig-name"><code>SetBackgroundImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>image</span>)</span></code>
+<br />
+Sets the CustomTreeCtrl background image (can be none).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetBorderPen" class="summary-sig-name"><code>SetBorderPen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pen</span>)</span></code>
+<br />
+Sets the pen used to draw the selected item border.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetButtonsImageList" class="summary-sig-name"><code>SetButtonsImageList</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>imageList</span>)</span></code>
+<br />
+Sets the buttons image list (from which application-defined button images are taken).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetConnectionPen" class="summary-sig-name"><code>SetConnectionPen</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pen</span>)</span></code>
+<br />
+Sets the pen used to draw the connecting lines between items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetDisabledColour" class="summary-sig-name"><code>SetDisabledColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the items disabled colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetFirstGradientColour" class="summary-sig-name"><code>SetFirstGradientColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the first gradient colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetFont" class="summary-sig-name"><code>SetFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+<br />
+Sets the CustomTreeCtrl font.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetForegroundColour" class="summary-sig-name"><code>SetForegroundColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Changes the foreground colour of CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetGradientStyle" class="summary-sig-name"><code>SetGradientStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>vertical</span>)</span></code>
+<br />
+Sets the gradient style:
+0: horizontal gradient
+1: vertical gradient</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetHilightFocusColour" class="summary-sig-name"><code>SetHilightFocusColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the colour used to highlight focused selected items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetHilightNonFocusColour" class="summary-sig-name"><code>SetHilightNonFocusColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the colour used to highlight unfocused selected items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetHyperTextFont" class="summary-sig-name"><code>SetHyperTextFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+<br />
+Sets the font used to render an hypertext item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetHyperTextNewColour" class="summary-sig-name"><code>SetHyperTextNewColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the colour used to render a non-visited hypertext item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetHyperTextVisitedColour" class="summary-sig-name"><code>SetHyperTextVisitedColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the colour used to render a visited hypertext item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetImageList" class="summary-sig-name"><code>SetImageList</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>imageList</span>)</span></code>
+<br />
+Sets the normal image list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetImageListCheck" class="summary-sig-name"><code>SetImageListCheck</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>sizex</span>,
+          <span class=summary-sig-arg>sizey</span>,
+          <span class=summary-sig-arg>imglist</span>)</span></code>
+<br />
+Sets the check image list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetIndent" class="summary-sig-name"><code>SetIndent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>indent</span>)</span></code>
+<br />
+Sets item indentation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemBackgroundColour" class="summary-sig-name"><code>SetItemBackgroundColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+<br />
+Sets the item background colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemBold" class="summary-sig-name"><code>SetItemBold</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>bold</span>)</span></code>
+<br />
+Sets the item font bold/unbold.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemDropHighlight" class="summary-sig-name"><code>SetItemDropHighlight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>highlight</span>)</span></code>
+<br />
+Gives the item the visual feedback for drag and drop operations.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemFont" class="summary-sig-name"><code>SetItemFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+<br />
+Sets the item font.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemHasChildren" class="summary-sig-name"><code>SetItemHasChildren</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>has</span>)</span></code>
+<br />
+Forces the appearance of the button next to the item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemHyperText" class="summary-sig-name"><code>SetItemHyperText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>hyper</span>)</span></code>
+<br />
+Sets whether the item is hypertext or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemImage" class="summary-sig-name"><code>SetItemImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>which</span>)</span></code>
+<br />
+Sets the item image, depending on the item state.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemItalic" class="summary-sig-name"><code>SetItemItalic</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>italic</span>)</span></code>
+<br />
+Sets the item font italic/non-italic.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetPyData" class="summary-sig-name"><code>SetItemPyData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Sets the data associated to an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemText" class="summary-sig-name"><code>SetItemText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Sets the item text.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemTextColour" class="summary-sig-name"><code>SetItemTextColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>col</span>)</span></code>
+<br />
+Sets the item text colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemVisited" class="summary-sig-name"><code>SetItemVisited</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>visited</span>)</span></code>
+<br />
+Sets whether an hypertext item was visited.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemWindow" class="summary-sig-name"><code>SetItemWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>wnd</span>)</span></code>
+<br />
+Sets the window for the given item</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemWindowEnabled" class="summary-sig-name"><code>SetItemWindowEnabled</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Enables/disables the window associated to the item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetPyData" class="summary-sig-name"><code>SetPyData</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Sets the data associated to an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetSecondGradientColour" class="summary-sig-name"><code>SetSecondGradientColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the second gradient colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetSpacing" class="summary-sig-name"><code>SetSpacing</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>spacing</span>)</span></code>
+<br />
+Sets item spacing.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetStateImageList" class="summary-sig-name"><code>SetStateImageList</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>imageList</span>)</span></code>
+<br />
+Sets the state image list (from which application-defined state images are taken).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetTreeStyle" class="summary-sig-name"><code>SetTreeStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>styles</span>)</span></code>
+<br />
+Sets the CustomTreeCtrl style.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#ShouldInheritColours" class="summary-sig-name"><code>ShouldInheritColours</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+We don't inherit colours from anyone.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SortChildren" class="summary-sig-name"><code>SortChildren</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Sorts the children of the given item using OnCompareItems method of CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#TagAllChildrenUntilLast" class="summary-sig-name"><code>TagAllChildrenUntilLast</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>crt_item</span>,
+          <span class=summary-sig-arg>last_item</span>,
+          <span class=summary-sig-arg>select</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#TagNextChildren" class="summary-sig-name"><code>TagNextChildren</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>crt_item</span>,
+          <span class=summary-sig-arg>last_item</span>,
+          <span class=summary-sig-arg>select</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#Thaw" class="summary-sig-name"><code>Thaw</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Thaw CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#TileBackground" class="summary-sig-name"><code>TileBackground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Tiles the background image to fill all the available area.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#Toggle" class="summary-sig-name"><code>Toggle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Toggles the item state (collapsed/expanded).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#ToggleItemSelection" class="summary-sig-name"><code>ToggleItemSelection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Toggles the item selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#UnCheckRadioParent" class="summary-sig-name"><code>UnCheckRadioParent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>checked</span>)</span></code>
+<br />
+Used internally to handle radio node parent correctly.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#Unselect" class="summary-sig-name"><code>Unselect</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Unselects the current selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#UnselectAll" class="summary-sig-name"><code>UnselectAll</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Unselect all the items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#UnselectAllChildren" class="summary-sig-name"><code>UnselectAllChildren</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Unselects all the children of the given item.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>5</span>,
+          <span class=sig-arg>ctstyle</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>validator</span>=<span class=sig-default>&lt;wx._core.Validator;&nbsp;proxy&nbsp;of&nbsp;&lt;Swig&nbsp;Object&nbsp;of&nbsp;type&nbsp;'wxVal...</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>'CustomTreeCtrl'</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Default class constructor.</p>
+<p>parent: parent window. Must not be none.</p>
+<p>id: window identifier. A value of -1 indicates a default value.</p>
+<p>pos: window position.</p>
+<p>size: window size. If the default size (-1, -1) is specified then the window is sized appropriately.</p>
+<p>style: the underlying wx.ScrolledWindow style + CustomTreeCtrl window style. This can be one of:</p>
+<blockquote>
+TR_NO_BUTTONS
+TR_HAS_BUTTONS                          # draw collapsed/expanded btns
+TR_NO_LINES                             # don't draw lines at all
+TR_LINES_AT_ROOT                        # connect top-level nodes
+TR_TWIST_BUTTONS                        # draw mac-like twist buttons
+TR_SINGLE                               # single selection mode     
+TR_MULTIPLE                             # can select multiple items
+TR_EXTENDED                             # todo: allow extended selection
+TR_HAS_VARIABLE_ROW_HEIGHT              # allows rows to have variable height
+TR_EDIT_LABELS                          # can edit item labels
+TR_ROW_LINES                            # put border around items
+TR_HIDE_ROOT                            # don't display root node
+TR_FULL_ROW_HIGHLIGHT                   # highlight full horizontal space
+TR_AUTO_CHECK_CHILD                     # only meaningful for checkboxes
+TR_AUTO_CHECK_PARENT                    # only meaningful for checkboxes
+TR_AUTO_TOGGLE_CHILD                    # only meaningful for checkboxes</blockquote>
+<p>ctstyle: kept for backward compatibility.</p>
+<p>validator: window validator.</p>
+<p>name: window name.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyScrolledWindow-class.html#__init__"><code>wx.PyScrolledWindow.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddRoot"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddRoot</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>ct_type</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>wnd</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>image</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>selImage</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>data</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Adds a root to the CustomTreeCtrl. Only one root must exist.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AdjustMyScrollbars"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AdjustMyScrollbars</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Adjust the wx.ScrolledWindow scrollbars.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AppendItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AppendItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parentId</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>ct_type</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>wnd</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>image</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>selImage</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>data</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Appends an item as a last child of its parent.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AssignButtonsImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AssignButtonsImageList</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>imageList</span>)</span>
+  </h3>
+<p>Assigns the button image list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AssignImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AssignImageList</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>imageList</span>)</span>
+  </h3>
+<p>Assigns the normal image list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AssignStateImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AssignStateImageList</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>imageList</span>)</span>
+  </h3>
+<p>Assigns the state image list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AutoCheckChild"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AutoCheckChild</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>checked</span>)</span>
+  </h3>
+<p>Transverses the tree and checks/unchecks the items. Meaningful only for check items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AutoCheckParent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AutoCheckParent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>checked</span>)</span>
+  </h3>
+<p>Traverses up the tree and checks/unchecks parent items.
+Meaningful only for check items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AutoToggleChild"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AutoToggleChild</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Transverses the tree and toggles the items. Meaningful only for check items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalculateLevel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalculateLevel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>level</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>align</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Calculates the level of an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalculateLineHeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalculateLineHeight</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Calculates the height of a line.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalculatePositions"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalculatePositions</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Calculates all the positions of the visible items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalculateSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalculateSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>level</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>align</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Calculates overall position and size of an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CheckChilds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CheckChilds</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>checked</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Programatically check/uncheck item children. Does not generate EVT_TREE_CHECK* events.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CheckItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CheckItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>checked</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Actually checks/uncheks an item, sending (eventually) the two
+events EVT_TREE_ITEM_CHECKING/EVT_TREE_ITEM_CHECKED.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CheckItem2"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CheckItem2</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>checked</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>torefresh</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Used internally to avoid EVT_TREE_ITEM_CHECKED events.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CheckSameLevel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CheckSameLevel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>checked</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Uncheck radio items which are on the same level of the checked one.
+Used internally.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ChildrenClosing"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ChildrenClosing</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>We are about to destroy the item children.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Collapse"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Collapse</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Collapse an item, sending a EVT_TREE_ITEM_COLLAPSING and
+EVT_TREE_ITEM_COLLAPSED events.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CollapseAndReset"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CollapseAndReset</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Collapse the given item and deletes its children.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Delete"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Delete</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Delete an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteAllItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteAllItems</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Delete all items in the CustomTreeCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteChildren"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteChildren</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Delete item children.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteItemWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteItemWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Deletes the window associated to an item (if any).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoGetBestSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoGetBestSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Something is better than nothing...</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyScrolledWindow-class.html#DoGetBestSize"><code>wx.PyScrolledWindow.DoGetBestSize</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoInsertItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoInsertItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parentId</span>,
+          <span class=sig-arg>previous</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>ct_type</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>wnd</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>image</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>selImage</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>data</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Actually inserts an item in the tree.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoSelectItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoSelectItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>unselect_others</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>extended_select</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Actually selects/unselects an item, sending a EVT_TREE_SEL_CHANGED event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawHorizontalGradient"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawHorizontalGradient</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>hasfocus</span>)</span>
+  </h3>
+<p>Gradient fill from colour 1 to colour 2 from left to right.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawVerticalGradient"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawVerticalGradient</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>hasfocus</span>)</span>
+  </h3>
+<p>Gradient fill from colour 1 to colour 2 from top to bottom.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawVistaRectangle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawVistaRectangle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>hasfocus</span>)</span>
+  </h3>
+<p>Draw the selected item(s) with the Windows Vista style.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Edit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Edit</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Internal function. Starts the editing of an item label, sending a
+EVT_TREE_BEGIN_LABEL_EDIT event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EditLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EditLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Starts editing an item label.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableChildren"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableChildren</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Enables/disables item children. Used internally.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>torefresh</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Enables/disables an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableSelectionGradient"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableSelectionGradient</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Globally enables/disables drawing of gradient selection.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableSelectionVista"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableSelectionVista</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Globally enables/disables drawing of Windows Vista selection.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnsureVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnsureVisible</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Ensure that an item is visible in CustomTreeCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Expand"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Expand</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Expands an item, sending a EVT_TREE_ITEM_EXPANDING and
+EVT_TREE_ITEM_EXPANDED events.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ExpandAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ExpandAll</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Expands all CustomTreeCtrl items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ExpandAllChildren"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ExpandAllChildren</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Expands all the items children of the input item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FillArray"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FillArray</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>array</span>=<span class=sig-default>[]</span>)</span>
+  </h3>
+<p>Internal function. Used to populate an array of selected items when
+the style TR_MULTIPLE is used.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>idParent</span>,
+          <span class=sig-arg>prefixOrig</span>)</span>
+  </h3>
+<p>Finds the first item starting with the given prefix after the given item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Freeze"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Freeze</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Freeze CustomTreeCtrl.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#Freeze"><code>wx.Window.Freeze</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBackgroundImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBackgroundImage</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the CustomTreeCtrl background image (can be none).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBorderPen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBorderPen</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the pen used to draw the selected item border.
+The border pen is not used if the Windows Vista style is applied.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBoundingRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBoundingRect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>textOnly</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Gets the bounding rectangle of the item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetButtonsImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetButtonsImageList</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the buttons image list (from which application-defined button images are taken).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetChildrenCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetChildrenCount</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>recursively</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Gets the item children count.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetConnectionPen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetConnectionPen</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the pen used to draw the connecting lines between items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetControlBmp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetControlBmp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>checkbox</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>checked</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>enabled</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>x</span>=<span class=sig-default>16</span>,
+          <span class=sig-arg>y</span>=<span class=sig-default>16</span>)</span>
+  </h3>
+<p>Get a native looking checkbox or radio button bitmap
+&#64;keyword checkbox: Get a checkbox=True, radiobutton=False
+&#64;keyword checked: contorl is marked or not</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCount</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the global number of items in the tree.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDisabledColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDisabledColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the items disabled colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEditControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEditControl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a pointer to the edit TextCtrl if the item is being edited or
+None otherwise (it is assumed that no more than one item may be edited
+simultaneously).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFirstChild"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFirstChild</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Gets the item first child.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFirstGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFirstGradientColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the first gradient colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFirstVisibleItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFirstVisibleItem</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the first visible item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGradientStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGradientStyle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the gradient style:
+0: horizontal gradient
+1: vertical gradient</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHilightFocusColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHilightFocusColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the colour used to highlight focused selected items.
+This is applied only if gradient and Windows Vista styles are disabled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHilightNonFocusColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHilightNonFocusColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the colour used to highlight unfocused selected items.
+This is applied only if gradient and Windows Vista styles are disabled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHyperTextFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHyperTextFont</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the font used to render an hypertext item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHyperTextNewColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHyperTextNewColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the colour used to render a non-visited hypertext item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHyperTextVisitedColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHyperTextVisitedColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the colour used to render a visited hypertext item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetImageList</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the normal image list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetImageListCheck"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetImageListCheck</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the image list used to build the check/radio buttons.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetIndent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetIndent</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the item indentation.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemBackgroundColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemBackgroundColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the item background colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the item font.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>which</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Returns the item image.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemParent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemParent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Gets the item parent.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPyData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemPyData</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the data associated to an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the item text.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemTextColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the item text colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemType"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemType</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the item type:
+0: normal
+1: checkbox item
+2: radiobutton item</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemVisited"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemVisited</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether an hypertext item was visited.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the window associated to the item (if any).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemWindowEnabled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemWindowEnabled</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether the window associated to the item is enabled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLastChild"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLastChild</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Gets the item last child.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLineHeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLineHeight</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the line height for the given item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMaxWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMaxWidth</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>respect_expansion_state</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Returns the maximum width of the CustomTreeCtrl.
+If respect_expansion_state is True, only the expanded items (and their
+children) will be measured. Otherwise all the items are expanded and
+their width measured.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#GetMaxWidth"><code>wx.Window.GetMaxWidth</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNext"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNext</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Gets the next item. Only for internal use right now.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNextActiveItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNextActiveItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>down</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Returns the next active item. Used Internally at present.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNextChild"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNextChild</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>cookie</span>)</span>
+  </h3>
+<p>Gets the item next child based on the 'cookie' parameter.
+This method has no sense if you do not call GetFirstChild() before.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNextSibling"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNextSibling</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Gets the next sibling of an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNextVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNextVisible</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the next visible item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPrevSibling"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPrevSibling</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Gets the previous sibling of an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPrevVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPrevVisible</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the previous visible item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPyData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPyData</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the data associated to an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRootItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRootItem</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the root item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSecondGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSecondGradientColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the second gradient colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSelection</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the current selection: TR_SINGLE only.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSelections"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSelections</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a list of selected items. This can be used only if CustomTreeCtrl has
+the TR_MULTIPLE style set.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSpacing"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSpacing</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the spacing between the start and the text.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetStateImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetStateImageList</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the state image list (from which application-defined state images are taken).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTreeStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTreeStyle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the CustomTreeCtrl style.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HandleHyperLink"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HandleHyperLink</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Handles the hyperlink items. Put in a separate method to avoid repetitive
+calls to the same code spread aound the file.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasButtons"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasButtons</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns whether CustomTreeCtrl has the TR_AHS_BUTTONS flag.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasChildren"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasChildren</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether an item has children or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HideWindows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HideWindows</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Hides the windows associated to the items. Used internally.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HitTest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HitTest</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>point</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Calculates which (if any) item is under the given point, returning the tree item
+at this point plus extra information flags. Flags is a bitlist of the following:</p>
+<p>TREE_HITTEST_ABOVE            above the client area
+TREE_HITTEST_BELOW            below the client area
+TREE_HITTEST_NOWHERE          no item has been hit
+TREE_HITTEST_ONITEMBUTTON     on the button associated to an item
+TREE_HITTEST_ONITEMICON       on the icon associated to an item
+TREE_HITTEST_ONITEMCHECKICON  on the check/radio icon, if present
+TREE_HITTEST_ONITEMINDENT     on the indent associated to an item
+TREE_HITTEST_ONITEMLABEL      on the label (string) associated to an item
+TREE_HITTEST_ONITEMRIGHT      on the right of the label associated to an item
+TREE_HITTEST_TOLEFT           on the left of the client area
+TREE_HITTEST_TORIGHT          on the right of the client area
+TREE_HITTEST_ONITEMUPPERPART  on the upper part (first half) of the item
+TREE_HITTEST_ONITEMLOWERPART  on the lower part (second half) of the item
+TREE_HITTEST_ONITEM           anywhere on the item</p>
+<p>Note: both the item (if any, None otherwise) and the flag are always returned as a tuple.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#HitTest"><code>wx.Window.HitTest</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parentId</span>,
+          <span class=sig-arg>input</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>ct_type</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>wnd</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>image</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>selImage</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>data</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Inserts an item after the given previous.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertItemByIndex"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertItemByIndex</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parentId</span>,
+          <span class=sig-arg>before</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>ct_type</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>wnd</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>image</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>selImage</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>data</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Auxiliary function to cope with the C++ hideous multifunction.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertItemByItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertItemByItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parentId</span>,
+          <span class=sig-arg>idPrevious</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>ct_type</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>wnd</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>image</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>selImage</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>data</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Auxiliary function to cope with the C++ hideous multifunction.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsBold"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsBold</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether the item font is bold or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsDescendantOf"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsDescendantOf</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Checks if the given item is under another one.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsExpanded"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsExpanded</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether the item is expanded or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsItalic"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsItalic</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether the item font is italic or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsItemChecked"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsItemChecked</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether an item is checked or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsItemEnabled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsItemEnabled</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether an item is enabled or disabled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsItemHyperText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsItemHyperText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether an item is hypertext or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsSelected"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsSelected</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether the item is selected or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsVisible</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether the item is visible or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ItemHasChildren"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ItemHasChildren</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether the item has children or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCompareItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCompareItems</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item1</span>,
+          <span class=sig-arg>item2</span>)</span>
+  </h3>
+<p>Returns whether 2 items have the same text.
+Override this function in the derived class to change the sort order of the items
+in the CustomTreeCtrl. The function should return a negative, zero or positive
+value if the first item is less than, equal to or greater than the second one.</p>
+<p>The base class version compares items alphabetically.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnDestroy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnDestroy</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_WINDOW_DESTROY event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnEraseBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnEraseBackground</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_ERASE_BACKGROUND event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnGetToolTip"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnGetToolTip</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Process the tooltip event, to speed up event processing. Does not actually
+get a tooltip.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnInternalIdle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnInternalIdle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Performs operations in idle time (essentially drawing).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyScrolledWindow-class.html#OnInternalIdle"><code>wx.PyScrolledWindow.OnInternalIdle</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnKeyDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnKeyDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_CHAR event, sending a EVT_TREE_KEY_DOWN event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnKillFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnKillFocus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_KILL_FOCUS event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouse"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouse</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles a bunch of wx.EVT_MOUSE_EVENTS events.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPaint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPaint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_PAINT event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnRenameAccept"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnRenameAccept</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Called by TreeTextCtrl, to accept the changes and to send the
+EVT_TREE_END_LABEL_EDIT event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnRenameCancelled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnRenameCancelled</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Called by TreeTextCtrl, to cancel the changes and to send the
+EVT_TREE_END_LABEL_EDIT event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnRenameTimer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnRenameTimer</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>The timer for renaming has expired. Start editing.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSetFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSetFocus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_SET_FOCUS event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_SIZE event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PaintItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PaintItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>level</span>,
+          <span class=sig-arg>align</span>)</span>
+  </h3>
+<p>Actually paint an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PaintLevel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PaintLevel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>level</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>align</span>)</span>
+  </h3>
+<p>Paint a level of CustomTreeCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PrependItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PrependItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>ct_type</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>wnd</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>image</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>selImage</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>data</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Appends an item as a first child of parent.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RefreshLine"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RefreshLine</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Refreshes a damaged item line.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RefreshSelected"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RefreshSelected</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Refreshes a damaged selected item line.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RefreshSelectedUnder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RefreshSelectedUnder</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Refreshes the selected items under the given item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RefreshSubtree"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RefreshSubtree</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Refreshes a damaged subtree of an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetTextControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetTextControl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Called by TreeTextCtrl when it marks itself for deletion.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ScrollTo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ScrollTo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Scrolls the specified item into view.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SelectItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SelectItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>select</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Selects/deselects an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SelectItemRange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SelectItemRange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item1</span>,
+          <span class=sig-arg>item2</span>)</span>
+  </h3>
+<p>Selects all the items between item1 and item2.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SendDeleteEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SendDeleteEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Actully sends the EVT_TREE_DELETE_ITEM event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBackgroundColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBackgroundColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Changes the background colour of CustomTreeCtrl.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetBackgroundColour"><code>wx.Window.SetBackgroundColour</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBackgroundImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBackgroundImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>image</span>)</span>
+  </h3>
+<p>Sets the CustomTreeCtrl background image (can be none).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBorderPen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBorderPen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pen</span>)</span>
+  </h3>
+<p>Sets the pen used to draw the selected item border.
+The border pen is not used if the Windows Vista style is applied.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetButtonsImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetButtonsImageList</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>imageList</span>)</span>
+  </h3>
+<p>Sets the buttons image list (from which application-defined button images are taken).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetConnectionPen"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetConnectionPen</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pen</span>)</span>
+  </h3>
+<p>Sets the pen used to draw the connecting lines between items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDisabledColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDisabledColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Sets the items disabled colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFirstGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFirstGradientColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the first gradient colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>font</span>)</span>
+  </h3>
+<p>Sets the CustomTreeCtrl font.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetFont"><code>wx.Window.SetFont</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetForegroundColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetForegroundColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Changes the foreground colour of CustomTreeCtrl.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetForegroundColour"><code>wx.Window.SetForegroundColour</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGradientStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGradientStyle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>vertical</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Sets the gradient style:
+0: horizontal gradient
+1: vertical gradient</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHilightFocusColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHilightFocusColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Sets the colour used to highlight focused selected items.
+This is applied only if gradient and Windows Vista styles are disabled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHilightNonFocusColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHilightNonFocusColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Sets the colour used to highlight unfocused selected items.
+This is applied only if gradient and Windows Vista styles are disabled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHyperTextFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHyperTextFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>font</span>)</span>
+  </h3>
+<p>Sets the font used to render an hypertext item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHyperTextNewColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHyperTextNewColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Sets the colour used to render a non-visited hypertext item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHyperTextVisitedColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHyperTextVisitedColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+<p>Sets the colour used to render a visited hypertext item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetImageList</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>imageList</span>)</span>
+  </h3>
+<p>Sets the normal image list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetImageListCheck"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetImageListCheck</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>sizex</span>,
+          <span class=sig-arg>sizey</span>,
+          <span class=sig-arg>imglist</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the check image list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetIndent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetIndent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>indent</span>)</span>
+  </h3>
+<p>Sets item indentation.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemBackgroundColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemBackgroundColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>col</span>)</span>
+  </h3>
+<p>Sets the item background colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemBold"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemBold</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>bold</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Sets the item font bold/unbold.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemDropHighlight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemDropHighlight</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>highlight</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Gives the item the visual feedback for drag and drop operations.
+This is useful when something is dragged from outside the CustomTreeCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>font</span>)</span>
+  </h3>
+<p>Sets the item font.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemHasChildren"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemHasChildren</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>has</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Forces the appearance of the button next to the item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemHyperText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemHyperText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>hyper</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Sets whether the item is hypertext or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>image</span>,
+          <span class=sig-arg>which</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Sets the item image, depending on the item state.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemItalic"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemItalic</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>italic</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Sets the item font italic/non-italic.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPyData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemPyData</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>data</span>)</span>
+  </h3>
+<p>Sets the data associated to an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+<p>Sets the item text.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemTextColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>col</span>)</span>
+  </h3>
+<p>Sets the item text colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemVisited"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemVisited</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>visited</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Sets whether an hypertext item was visited.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>wnd</span>)</span>
+  </h3>
+<p>Sets the window for the given item</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemWindowEnabled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemWindowEnabled</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Enables/disables the window associated to the item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPyData"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPyData</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>data</span>)</span>
+  </h3>
+<p>Sets the data associated to an item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSecondGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSecondGradientColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the second gradient colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSpacing"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSpacing</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>spacing</span>)</span>
+  </h3>
+<p>Sets item spacing.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetStateImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetStateImageList</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>imageList</span>)</span>
+  </h3>
+<p>Sets the state image list (from which application-defined state images are taken).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTreeStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTreeStyle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>styles</span>)</span>
+  </h3>
+<p>Sets the CustomTreeCtrl style. See __init__ method for the styles explanation.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShouldInheritColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShouldInheritColours</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>We don't inherit colours from anyone.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#ShouldInheritColours"><code>wx.Window.ShouldInheritColours</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SortChildren"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SortChildren</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Sorts the children of the given item using OnCompareItems method of CustomTreeCtrl. 
+You should override that method to change the sort order (the default is ascending
+case-sensitive alphabetical order).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="TagAllChildrenUntilLast"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">TagAllChildrenUntilLast</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>crt_item</span>,
+          <span class=sig-arg>last_item</span>,
+          <span class=sig-arg>select</span>)</span>
+  </h3>
+<p>Used internally.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="TagNextChildren"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">TagNextChildren</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>crt_item</span>,
+          <span class=sig-arg>last_item</span>,
+          <span class=sig-arg>select</span>)</span>
+  </h3>
+<p>Used internally.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Thaw"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Thaw</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Thaw CustomTreeCtrl.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#Thaw"><code>wx.Window.Thaw</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="TileBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">TileBackground</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Tiles the background image to fill all the available area.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Toggle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Toggle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Toggles the item state (collapsed/expanded).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ToggleItemSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ToggleItemSelection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Toggles the item selection.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UnCheckRadioParent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UnCheckRadioParent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>checked</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+<p>Used internally to handle radio node parent correctly.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Unselect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Unselect</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Unselects the current selection.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UnselectAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UnselectAll</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Unselect all the items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UnselectAllChildren"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UnselectAllChildren</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Unselects all the children of the given item.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Method Details</th></tr>
+</table>
+
+<a name="GetClassDefaultAttributes"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetClassDefaultAttributes</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the class default attributes.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:54:16 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

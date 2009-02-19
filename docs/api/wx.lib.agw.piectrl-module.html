@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.piectrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        Module&nbsp;piectrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.piectrl-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.agw.piectrl</h2>
+
+<pre class="literalblock">
+Description:
+
+PieCtrl/ProgressPie are simple classes that reproduce the behavior of a pie
+chart. They use only pure wxPython classes/methods, without external dependencies.
+PieCtrl is somewhat a &quot;static&quot; control, that you may create in order to display
+a simple pie chart on a wx.Panel or similar. ProgressPie tries to emulate the
+behavior of wx.ProgressDialog, but using a pie chart instead of a gauge.
+
+
+Usage:
+
+An example of use of PieCtrl is as follows:
+
+# create a simple PieCtrl with 3 sectors
+mypie = PieCtrl(panel, -1, wx.DefaultPosition, wx.Size(180,270))
+
+part = PiePart()
+
+part.SetLabel(&quot;serieslabel_1&quot;)
+part.SetValue(300)
+part.SetColour(wx.Colour(200, 50, 50))
+mypie._series.append(part)
+
+part = PiePart()
+
+part.SetLabel(&quot;series label 2&quot;)
+part.SetValue(200)
+part.SetColour(wx.Colour(50, 200, 50))
+mypie._series.append(part)
+
+part = PiePart()
+
+part.SetLabel(&quot;helloworld label 3&quot;)
+part.SetValue(50)
+part.SetColour(wx.Colour(50, 50, 200))
+mypie._series.append(part)
+
+An example of use of ProgressPie is as follows:
+
+# create a progresspie
+MyProgressPie = ProgressPie(panel, 100, 50, -1, wx.DefaultPosition,
+                            wx.Size(180, 200), wx.SIMPLE_BORDER)
+
+MyProgressPie.SetBackColour(wx.Colour(150, 200, 255))
+myprogresspie.SetFilledcolour(wx.Colour(255, 0, 0))
+MyProgressPie.SetUnfilledColour(wx.WHITE)
+MyProgressPie.SetHeight(20)
+
+For the full listing of the input parameters, see the PieCtrl __init__()
+method.
+
+
+Methods and Settings:
+
+With PieCtrl you can:
+
+- Create a PieCtrl with different sectors;
+- Set the sector values, colours and labels;
+- Assign a legend to the PieCtrl;
+- Use an image as the PieCtrl background;
+- Change the vertical rotation (perspective) of the PieCtrl;
+- Show/hide the segment edges.
+
+For more info on methods and initial styles, please refer to the __init__()
+method for PieCtrl or to the specific functions.
+
+
+PieCtrl control is freeware and distributed under the wxPython license.
+
+Latest revision: Andrea Gavana &#64; 15 Oct 2008, 10.00 GMT
+Version 0.1
+</pre>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.piectrl.PieCtrl-class.html"><code>PieCtrl</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.piectrl.PieCtrlLegend-class.html"><code>PieCtrlLegend</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.piectrl.PiePart-class.html"><code>PiePart</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.piectrl.ProgressPie-class.html"><code>ProgressPie</code></a></b></td>
+  <td>&nbsp;</td></tr>
+</table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:53:44 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

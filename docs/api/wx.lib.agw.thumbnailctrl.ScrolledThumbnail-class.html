@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.thumbnailctrl.ScrolledThumbnail</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.thumbnailctrl-module.html">Module&nbsp;thumbnailctrl</a> ::
+        Class&nbsp;ScrolledThumbnail
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type ScrolledThumbnail</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+    
+                         |    
+            <a href="wx.ScrolledWindow-class.html"><code>ScrolledWindow</code></a> --+
+                             |
+                            <b>ScrolledThumbnail</b>
+</pre><br />
+
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>thumboutline</span>,
+          <span class=summary-sig-arg>thumbfilter</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#CalculateBestCaption" class="summary-sig-name"><code>CalculateBestCaption</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>caption</span>,
+          <span class=summary-sig-arg>sw</span>,
+          <span class=summary-sig-arg>width</span>)</span></code>
+<br />
+Calculate the best caption based on the actual zoom.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#Clear" class="summary-sig-name"><code>Clear</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Clears ThumbnailCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#DeleteFiles" class="summary-sig-name"><code>DeleteFiles</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Deletes the selected thumbs and their associated files.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#DrawThumbnail" class="summary-sig-name"><code>DrawThumbnail</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>,
+          <span class=summary-sig-arg>thumb</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+Draws the visible thumbnails.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#EnableDragging" class="summary-sig-name"><code>EnableDragging</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Enables/disables thumbs drag and drop.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#EnableToolTips" class="summary-sig-name"><code>EnableToolTips</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Globally enables/disables thumb file information.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetCaption" class="summary-sig-name"><code>GetCaption</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Not used at present.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetCaptionFont" class="summary-sig-name"><code>GetCaptionFont</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the font for all the thumb captions.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetCaptionHeight" class="summary-sig-name"><code>GetCaptionHeight</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>begRow</span>,
+          <span class=summary-sig-arg>count</span>)</span></code>
+<br />
+Returns the height for the file name caption.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetGlobalPopupMenu" class="summary-sig-name"><code>GetGlobalPopupMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns global thumbs popup menu (no need of thumb selection).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetHighlightPointed" class="summary-sig-name"><code>GetHighlightPointed</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns whether the thumb pointed should be highlighted or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetItem" class="summary-sig-name"><code>GetItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+Returns the item at position &quot;index&quot;.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetItemCount" class="summary-sig-name"><code>GetItemCount</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of thumbs.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetItemIndex" class="summary-sig-name"><code>GetItemIndex</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>)</span></code>
+<br />
+Returns the thumb index at position (x, y).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetOriginalImage" class="summary-sig-name"><code>GetOriginalImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+Returns the bitmap associated to a thumb.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetPaintRect" class="summary-sig-name"><code>GetPaintRect</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the Paint bounding rect for the OnPaint() method.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetPointed" class="summary-sig-name"><code>GetPointed</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the pointed thumb index.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetPointedItem" class="summary-sig-name"><code>GetPointedItem</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the pointed thumb.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetPopupMenu" class="summary-sig-name"><code>GetPopupMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns thumbs popup menu when at least one thumb is selected.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetSelectedItem" class="summary-sig-name"><code>GetSelectedItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>index</span>)</span></code>
+<br />
+Returns the selected thumb.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetSelection" class="summary-sig-name"><code>GetSelection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>selIndex</span>)</span></code>
+<br />
+Returns the selected thumb.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetSelectionColour" class="summary-sig-name"><code>GetSelectionColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the colour used to indicate a selected thumb.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetShowDir" class="summary-sig-name"><code>GetShowDir</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the working directory with images.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetThumbBorder" class="summary-sig-name"><code>GetThumbBorder</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the thumb border.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetThumbHeight" class="summary-sig-name"><code>GetThumbHeight</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the thumb height.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetThumbInfo" class="summary-sig-name"><code>GetThumbInfo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>thumb</span>)</span></code>
+<br />
+Returns thumbs information.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetThumbOutline" class="summary-sig-name"><code>GetThumbOutline</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the thumb outline style on selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetThumbSize" class="summary-sig-name"><code>GetThumbSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the thumb size as width, height and border.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetThumbWidth" class="summary-sig-name"><code>GetThumbWidth</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the thumb width.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#GetZoomFactor" class="summary-sig-name"><code>GetZoomFactor</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the zoom factor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#InsertItem" class="summary-sig-name"><code>InsertItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>thumb</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Inserts thumb in the specified position &quot;pos&quot;.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#IsAudio" class="summary-sig-name"><code>IsAudio</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fname</span>)</span></code>
+<br />
+Not used at present.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#IsAudioVideo" class="summary-sig-name"><code>IsAudioVideo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fname</span>)</span></code>
+<br />
+Not used at present.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#IsSelected" class="summary-sig-name"><code>IsSelected</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>indx</span>)</span></code>
+<br />
+Returns whether a thumb is selected or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#IsVideo" class="summary-sig-name"><code>IsVideo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fname</span>)</span></code>
+<br />
+Not used at present.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#ListDirectory" class="summary-sig-name"><code>ListDirectory</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>directory</span>,
+          <span class=summary-sig-arg>fileExtList</span>)</span></code>
+<br />
+Gets list of file info objects for files of particular extensions.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#LoadImages" class="summary-sig-name"><code>LoadImages</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>newfile</span>,
+          <span class=summary-sig-arg>imagecount</span>)</span></code>
+<br />
+Threaded method to load images.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#OnChar" class="summary-sig-name"><code>OnChar</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_CHAR event for ThumbnailCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#OnMouseDClick" class="summary-sig-name"><code>OnMouseDClick</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEFT_DCLICK event for ThumbnailCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#OnMouseDown" class="summary-sig-name"><code>OnMouseDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEFT_DOWN and wx.EVT_RIGHT_DOWN events for ThumbnailCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#OnMouseLeave" class="summary-sig-name"><code>OnMouseLeave</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEAVE_WINDOW event for ThumbnailCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#OnMouseMove" class="summary-sig-name"><code>OnMouseMove</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_MOTION event for ThumbnailCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#OnMouseUp" class="summary-sig-name"><code>OnMouseUp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEFT_UP and wx.EVT_RIGHT_UP events for ThumbnailCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#OnMouseWheel" class="summary-sig-name"><code>OnMouseWheel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_MOUSEWHEEL event for ThumbnailCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#OnPaint" class="summary-sig-name"><code>OnPaint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_PAINT event for ThumbnailCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#OnResize" class="summary-sig-name"><code>OnResize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SIZE event for ThumbnailCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#OnThumbChanged" class="summary-sig-name"><code>OnThumbChanged</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wxEVT_THUMBNAILS_THUMB_CHANGED event for ThumbnailCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#RemoveItemAt" class="summary-sig-name"><code>RemoveItemAt</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>count</span>)</span></code>
+<br />
+Removes thumbs in the specified position &quot;pos&quot;.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#Rotate" class="summary-sig-name"><code>Rotate</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>angle</span>)</span></code>
+<br />
+Rotates the selected thumbs by the angle specified by &quot;angle&quot; (in degrees!!!).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#ScrollToSelected" class="summary-sig-name"><code>ScrollToSelected</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Scrolls the wx.ScrolledWindow to the thumb selected.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetCaption" class="summary-sig-name"><code>SetCaption</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>caption</span>)</span></code>
+<br />
+Not used at present.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetCaptionFont" class="summary-sig-name"><code>SetCaptionFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+<br />
+Sets the font for all the thumb captions.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetGlobalPopupMenu" class="summary-sig-name"><code>SetGlobalPopupMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>gpmenu</span>)</span></code>
+<br />
+Sets global thumbs popup menu (no need of thumb selection).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetHighlightPointed" class="summary-sig-name"><code>SetHighlightPointed</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>highlight</span>)</span></code>
+<br />
+Sets whether the thumb pointed should be highlighted or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetLabelControl" class="summary-sig-name"><code>SetLabelControl</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>statictext</span>)</span></code>
+<br />
+Not used at present.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetOrientation" class="summary-sig-name"><code>SetOrientation</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>orient</span>)</span></code>
+<br />
+Not used at present.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetPopupMenu" class="summary-sig-name"><code>SetPopupMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menu</span>)</span></code>
+<br />
+Sets thumbs popup menu when at least one thumb is selected.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetSelection" class="summary-sig-name"><code>SetSelection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Sets thumb selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetSelectionColour" class="summary-sig-name"><code>SetSelectionColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the colour used to indicate a selected thumb.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetThumbOutline" class="summary-sig-name"><code>SetThumbOutline</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>outline</span>)</span></code>
+<br />
+Sets the thumb outline style on selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetThumbSize" class="summary-sig-name"><code>SetThumbSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>width</span>,
+          <span class=summary-sig-arg>height</span>,
+          <span class=summary-sig-arg>border</span>)</span></code>
+<br />
+Sets the thumb size as width, height and border.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SetZoomFactor" class="summary-sig-name"><code>SetZoomFactor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>zoom</span>)</span></code>
+<br />
+Sets the zoom factor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#ShowDir" class="summary-sig-name"><code>ShowDir</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dir</span>,
+          <span class=summary-sig-arg>filter</span>)</span></code>
+<br />
+Shows thumbnails for a particular folder.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#ShowFileNames" class="summary-sig-name"><code>ShowFileNames</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span></code>
+<br />
+Sets whether the user wants to show file names under the thumbs or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#SortItems" class="summary-sig-name"><code>SortItems</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sorts the items accordingly to the cmpthumb function.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#ThreadImage" class="summary-sig-name"><code>ThreadImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>filenames</span>)</span></code>
+<br />
+Threaded method to load images.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#UpdateItems" class="summary-sig-name"><code>UpdateItems</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Updates thumb items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#UpdateProp" class="summary-sig-name"><code>UpdateProp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>checkSize</span>)</span></code>
+<br />
+Updates ThumbnailCtrl wx.ScrolledWindow and visible thumbs.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#UpdateShow" class="summary-sig-name"><code>UpdateShow</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Updates thumb items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#ZoomIn" class="summary-sig-name"><code>ZoomIn</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Zooms the thumbs in.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.thumbnailctrl.ScrolledThumbnail-class.html#ZoomOut" class="summary-sig-name"><code>ZoomOut</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Zooms the thumbs out.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>thumboutline</span>=<span class=sig-default>4</span>,
+          <span class=sig-arg>thumbfilter</span>=<span class=sig-default>1</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<pre class="literalblock">
+Default class constructor. Non-default parameters are:
+- thumboutline: outline style for ThumbnailCtrl, which may be:
+  a) THUMB_OUTLINE_NONE: no outline is drawn on selection;
+  b) THUMB_OUTLINE_FULL: full outline (image+caption) is drawn on
+     selection;
+  c) THUMB_OUTLINE_RECT: only thimb bounding rect is drawn on selection
+     (default);
+  d) THUMB_OUTLINE_IMAGE: only image bounding rect is drwan.
+
+- thumbfilter: filter for image/video/audio files. Actually only
+  THUMB_FILTER_IMAGES is implemented.
+</pre>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.ScrolledWindow-class.html#__init__"><code>wx.ScrolledWindow.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalculateBestCaption"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalculateBestCaption</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>caption</span>,
+          <span class=sig-arg>sw</span>,
+          <span class=sig-arg>width</span>)</span>
+  </h3>
+<p>Calculate the best caption based on the actual zoom.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Clear"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Clear</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Clears ThumbnailCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteFiles"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteFiles</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Deletes the selected thumbs and their associated files. Be careful!!!</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawThumbnail"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawThumbnail</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>,
+          <span class=sig-arg>thumb</span>,
+          <span class=sig-arg>index</span>)</span>
+  </h3>
+<p>Draws the visible thumbnails.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableDragging"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableDragging</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Enables/disables thumbs drag and drop.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableToolTips"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableToolTips</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Globally enables/disables thumb file information.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCaption"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCaption</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Not used at present.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCaptionFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCaptionFont</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the font for all the thumb captions.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCaptionHeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCaptionHeight</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>begRow</span>,
+          <span class=sig-arg>count</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Returns the height for the file name caption.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGlobalPopupMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGlobalPopupMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns global thumbs popup menu (no need of thumb selection).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHighlightPointed"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHighlightPointed</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns whether the thumb pointed should be highlighted or not.
+Please be aware that this functionality may be slow on slower computers.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>)</span>
+  </h3>
+<p>Returns the item at position &quot;index&quot;.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemCount</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the number of thumbs.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemIndex"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemIndex</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>)</span>
+  </h3>
+<p>Returns the thumb index at position (x, y).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetOriginalImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetOriginalImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns the bitmap associated to a thumb.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPaintRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPaintRect</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the Paint bounding rect for the OnPaint() method.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPointed"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPointed</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the pointed thumb index.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPointedItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPointedItem</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the pointed thumb.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPopupMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPopupMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns thumbs popup menu when at least one thumb is selected.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSelectedItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSelectedItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>index</span>)</span>
+  </h3>
+<p>Returns the selected thumb.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSelection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>selIndex</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Returns the selected thumb.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSelectionColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSelectionColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the colour used to indicate a selected thumb.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetShowDir"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetShowDir</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the working directory with images.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetThumbBorder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetThumbBorder</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the thumb border.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetThumbHeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetThumbHeight</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the thumb height.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetThumbInfo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetThumbInfo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>thumb</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Returns thumbs information.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetThumbOutline"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetThumbOutline</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the thumb outline style on selection.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetThumbSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetThumbSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the thumb size as width, height and border.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetThumbWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetThumbWidth</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the thumb width.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetZoomFactor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetZoomFactor</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the zoom factor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>thumb</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>Inserts thumb in the specified position &quot;pos&quot;.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsAudio"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsAudio</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fname</span>)</span>
+  </h3>
+<p>Not used at present.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsAudioVideo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsAudioVideo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fname</span>)</span>
+  </h3>
+<p>Not used at present.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsSelected"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsSelected</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>indx</span>)</span>
+  </h3>
+<p>Returns whether a thumb is selected or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsVideo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsVideo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fname</span>)</span>
+  </h3>
+<p>Not used at present.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ListDirectory"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ListDirectory</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>directory</span>,
+          <span class=sig-arg>fileExtList</span>)</span>
+  </h3>
+<p>Gets list of file info objects for files of particular extensions.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="LoadImages"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">LoadImages</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>newfile</span>,
+          <span class=sig-arg>imagecount</span>)</span>
+  </h3>
+<p>Threaded method to load images. Used internally.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnChar"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnChar</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_CHAR event for ThumbnailCtrl. You have these choices:</p>
+<ol class="rst-arabic simple">
+<li>&quot;d&quot; key rotates 90 degrees clockwise the selected thumbs;</li>
+<li>&quot;s&quot; key rotates 90 degrees counter-clockwise the selected thumbs;</li>
+<li>&quot;a&quot; key rotates 180 degrees the selected thumbs;</li>
+<li>&quot;Del&quot; key deletes the selected thumbs;</li>
+<li>&quot;+&quot; key zooms in;</li>
+<li>&quot;-&quot; key zooms out.</li>
+</ol>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseDClick"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseDClick</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_LEFT_DCLICK event for ThumbnailCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_LEFT_DOWN and wx.EVT_RIGHT_DOWN events for ThumbnailCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseLeave"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseLeave</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_LEAVE_WINDOW event for ThumbnailCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseMove"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseMove</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_MOTION event for ThumbnailCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseUp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_LEFT_UP and wx.EVT_RIGHT_UP events for ThumbnailCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseWheel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseWheel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_MOUSEWHEEL event for ThumbnailCtrl.
+If you hold down the ctrl key, you can zoom in/out with the mouse wheel.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPaint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPaint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_PAINT event for ThumbnailCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnResize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnResize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_SIZE event for ThumbnailCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnThumbChanged"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnThumbChanged</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wxEVT_THUMBNAILS_THUMB_CHANGED event for ThumbnailCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveItemAt"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveItemAt</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>,
+          <span class=sig-arg>count</span>)</span>
+  </h3>
+<p>Removes thumbs in the specified position &quot;pos&quot;.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Rotate"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Rotate</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>angle</span>=<span class=sig-default>90</span>)</span>
+  </h3>
+<p>Rotates the selected thumbs by the angle specified by &quot;angle&quot; (in degrees!!!).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ScrollToSelected"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ScrollToSelected</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Scrolls the wx.ScrolledWindow to the thumb selected.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCaption"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCaption</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>caption</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+<p>Not used at present.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetCaptionFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetCaptionFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>font</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the font for all the thumb captions.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGlobalPopupMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGlobalPopupMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>gpmenu</span>)</span>
+  </h3>
+<p>Sets global thumbs popup menu (no need of thumb selection).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHighlightPointed"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHighlightPointed</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>highlight</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Sets whether the thumb pointed should be highlighted or not.
+Please be aware that this functionality may be slow on slower computers.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLabelControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLabelControl</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>statictext</span>)</span>
+  </h3>
+<p>Not used at present.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetOrientation"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetOrientation</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>orient</span>=<span class=sig-default>8</span>)</span>
+  </h3>
+<p>Not used at present.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPopupMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPopupMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menu</span>)</span>
+  </h3>
+<p>Sets thumbs popup menu when at least one thumb is selected.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSelection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Sets thumb selection.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSelectionColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSelectionColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the colour used to indicate a selected thumb.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetThumbOutline"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetThumbOutline</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>outline</span>)</span>
+  </h3>
+<p>Sets the thumb outline style on selection.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetThumbSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetThumbSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>width</span>,
+          <span class=sig-arg>height</span>,
+          <span class=sig-arg>border</span>=<span class=sig-default>6</span>)</span>
+  </h3>
+<p>Sets the thumb size as width, height and border.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetZoomFactor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetZoomFactor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>zoom</span>=<span class=sig-default>1.3999999999999999</span>)</span>
+  </h3>
+<p>Sets the zoom factor.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowDir"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowDir</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dir</span>,
+          <span class=sig-arg>filter</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+<p>Shows thumbnails for a particular folder.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowFileNames"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowFileNames</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>show</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Sets whether the user wants to show file names under the thumbs or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SortItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SortItems</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sorts the items accordingly to the cmpthumb function.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ThreadImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ThreadImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>filenames</span>)</span>
+  </h3>
+<p>Threaded method to load images. Used internally.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateItems</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Updates thumb items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateProp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateProp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>checkSize</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Updates ThumbnailCtrl wx.ScrolledWindow and visible thumbs.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateShow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateShow</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Updates thumb items.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ZoomIn"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ZoomIn</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Zooms the thumbs in.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ZoomOut"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ZoomOut</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Zooms the thumbs out.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:52:03 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

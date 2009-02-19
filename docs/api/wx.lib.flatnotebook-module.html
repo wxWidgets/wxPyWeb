@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -50,210 +50,10 @@ function setFrame(url1, url2){
 <!-- =========== START OF MODULE DESCRIPTION =========== -->
 <h2 class="module">Module wx.lib.flatnotebook</h2>
 
-<p>The FlatNotebook is a full implementation of the wx.Notebook, and 
-designed to be a drop-in replacement for wx.Notebook. The API functions 
-are similar so one can expect the function to behave in the same way.</p>
-Some features:
-<ul>
-  <li>
-    The buttons are highlighted a la Firefox style
-  </li>
-  <li>
-    The scrolling is done for bulks of tabs (so, the scrolling is 
-    faster and better)
-  </li>
-  <li>
-    The buttons area is never overdrawn by tabs (unlike many other 
-    implementations I saw)
-  </li>
-  <li>
-    It is a generic control
-  </li>
-  <li>
-    Currently there are 5 differnt styles - VC8, VC 71, Standard, 
-    Fancy and Firefox 2;
-  </li>
-  <li>
-    Mouse middle click can be used to close tabs
-  </li>
-  <li>
-    A function to add right click menu for tabs (simple as 
-    SetRightClickMenu)
-  </li>
-  <li>
-    All styles has bottom style as well (they can be drawn in the 
-    bottom of screen)
-  </li>
-  <li>
-    An option to hide 'X' button or navigation buttons 
-    (separately)
-  </li>
-  <li>
-    Gradient coloring of the selected tabs and border
-  </li>
-  <li>
-    Support for drag 'n' drop of tabs, both in the same notebook or to 
-    another notebook
-  </li>
-  <li>
-    Possibility to have closing button on the active tab directly
-  </li>
-  <li>
-    Support for disabled tabs
-  </li>
-  <li>
-    Colours for active/inactive tabs, and captions
-  </li>
-  <li>
-    Background of tab area can be painted in gradient (VC8 style 
-    only)
-  </li>
-  <li>
-    Colourful tabs - a random gentle colour is generated for each new 
-    tab (very cool, VC8 style only)
-  </li>
-</ul>
-<p>And much more.</p>
-<p>License And Version:</p>
-<p>FlatNotebook Is Freeware And Distributed Under The wxPython 
-License.</p>
-<p>Latest Revision: Andrea Gavana &#64; 14 Jul 2008, 22.00 GMT</p>
-Version 2.5.
+<p>Attention! FlatNotebook now lives in wx.lib.agw, together with
+its friends in the Advanced Generic Widgets family.</p>
+<p>Please update your code!</p>
 <hr/>
-
-<!-- =========== START OF CLASSES =========== -->
-<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="summary">
-  <th colspan="2">Classes</th></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.FlatNotebook-class.html"><code>FlatNotebook</code></a></b></td>
-  <td>Display one or more windows in a notebook.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.FlatNotebookEvent-class.html"><code>FlatNotebookEvent</code></a></b></td>
-  <td>This events will be sent when a EVT_FLATNOTEBOOK_PAGE_CHANGED, 
-EVT_FLATNOTEBOOK_PAGE_CHANGING, EVT_FLATNOTEBOOK_PAGE_CLOSING, 
-EVT_FLATNOTEBOOK_PAGE_CLOSED and EVT_FLATNOTEBOOK_PAGE_CONTEXT_MENU is 
-mapped in the parent.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.FNBDropSource-class.html"><code>FNBDropSource</code></a></b></td>
-  <td>Give some custom UI feedback during the drag and drop operation in 
-this function.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.FNBRenderer-class.html"><code>FNBRenderer</code></a></b></td>
-  <td>Parent class for the 4 renderers defined: <i>Standard</i>, 
-<i>VC71</i>, <i>Fancy</i> and <i>VC8</i>.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.FNBRendererDefault-class.html"><code>FNBRendererDefault</code></a></b></td>
-  <td>This class handles the drawing of tabs using the <i>Standard</i> 
-renderer.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.FNBRendererFancy-class.html"><code>FNBRendererFancy</code></a></b></td>
-  <td>This class handles the drawing of tabs using the <i>Fancy</i> 
-renderer.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.FNBRendererFirefox2-class.html"><code>FNBRendererFirefox2</code></a></b></td>
-  <td>This class handles the drawing of tabs using the <i>Firefox 2</i> 
-renderer.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.FNBRendererMgr-class.html"><code>FNBRendererMgr</code></a></b></td>
-  <td>This class represents a manager that handles all the 4 renderers 
-defined and calls the appropriate one when drawing is needed.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.FNBRendererVC71-class.html"><code>FNBRendererVC71</code></a></b></td>
-  <td>This class handles the drawing of tabs using the <i>VC71</i> 
-renderer.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.FNBRendererVC8-class.html"><code>FNBRendererVC8</code></a></b></td>
-  <td>This class handles the drawing of tabs using the <i>VC8</i> 
-renderer.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.PageContainer-class.html"><code>PageContainer</code></a></b></td>
-  <td>This class acts as a container for the pages you add to <a 
-href="wx.lib.flatnotebook.FlatNotebook-class.html" 
-class="link"><code>FlatNotebook</code></a>.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.PageInfo-class.html"><code>PageInfo</code></a></b></td>
-  <td>This class holds all the information (caption, image, etc...) 
-belonging to a single tab in <a 
-href="wx.lib.flatnotebook.FlatNotebook-class.html" 
-class="link"><code>FlatNotebook</code></a>.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.flatnotebook.TabNavigatorWindow-class.html"><code>TabNavigatorWindow</code></a></b></td>
-  <td>This class is used to create a modal dialog that enables &quot;Smart 
-Tabbing&quot;, similar to what you would get by hitting Alt+Tab on 
-Windows.</td></tr>
-</table><br />
-
-
-<!-- =========== START OF FUNCTION SUMMARY =========== -->
-<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="summary">
-  <th colspan="2">Function Summary</th></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><a name="DrawButton"></a><span class="summary-sig"><span class="summary-sig-name">DrawButton</span>(<span class=summary-sig-arg>dc</span>,
-          <span class=summary-sig-arg>rect</span>,
-          <span class=summary-sig-arg>focus</span>,
-          <span class=summary-sig-arg>upperTabs</span>)</span></code>
-</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook-module.html#LightColour" class="summary-sig-name"><code>LightColour</code></a>(<span class=summary-sig-arg>color</span>,
-          <span class=summary-sig-arg>percent</span>)</span></code>
-<br />
-Brighten input colour by percent.</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook-module.html#PaintStraightGradientBox" class="summary-sig-name"><code>PaintStraightGradientBox</code></a>(<span class=summary-sig-arg>dc</span>,
-          <span class=summary-sig-arg>rect</span>,
-          <span class=summary-sig-arg>startColor</span>,
-          <span class=summary-sig-arg>endColor</span>,
-          <span class=summary-sig-arg>vertical</span>)</span></code>
-<br />
-Draws a gradient colored box from startColor to endColor.</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><span class="summary-sig"><a href="wx.lib.flatnotebook-module.html#RandomColour" class="summary-sig-name"><code>RandomColour</code></a>()</span></code>
-<br />
-Creates a random colour.</td></tr>
-</table><br />
-
-
-<!-- =========== START OF FUNCTION DETAILS =========== -->
-<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="details">
-  <th colspan="2">Function Details</th></tr>
-</table>
-
-<a name="LightColour"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">LightColour</span>(<span class=sig-arg>color</span>,
-          <span class=sig-arg>percent</span>)</span>
-  </h3>
-  Brighten input colour by percent.
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-
-<a name="PaintStraightGradientBox"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">PaintStraightGradientBox</span>(<span class=sig-arg>dc</span>,
-          <span class=sig-arg>rect</span>,
-          <span class=sig-arg>startColor</span>,
-          <span class=sig-arg>endColor</span>,
-          <span class=sig-arg>vertical</span>=<span class=sig-default>True</span>)</span>
-  </h3>
-  Draws a gradient colored box from startColor to endColor.
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-
-<a name="RandomColour"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">RandomColour</span>()</span>
-  </h3>
-  Creates a random colour.
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-<br />
-
 
 <!-- =========== START OF NAVBAR =========== -->
 <table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
@@ -266,7 +66,7 @@ Creates a random colour.</td></tr>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -274,7 +74,7 @@ Creates a random colour.</td></tr>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Sun Sep 28 15:07:42 2008</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:55:05 2009</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

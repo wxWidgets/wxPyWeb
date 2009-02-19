@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.rulerctrl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        Module&nbsp;rulerctrl
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.rulerctrl-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.agw.rulerctrl</h2>
+
+<pre class="literalblock">
+Description
+===========
+
+RulerCtrl implements a ruler window that can be placed on top, bottom, left or right
+to any wxPython widget. It is somewhat similar to the rulers you can find in text
+editors software, though not so powerful.
+RulerCtrl has the following characteristics:
+
+  - Can be horizontal or vertical;
+  - 4 built-in formats: integer, real, time and linearDB formats;
+  - Units (as cm, dB, inches) can be displayed together with the label values;
+  - Possibility to add a number of &quot;paragraph indicators&quot;, small arrows that point at
+    the current indicator position;
+  - Customizable background colour, tick colour, label colour;
+  - Possibility to flip the ruler (i.e. changing the tick alignment);
+  - Changing individually the indicator colour (requires PIL at the moment);
+  - Different window borders are supported (wx.STATIC_BORDER, wx.SUNKEN_BORDER,
+    wx.DOUBLE_BORDER, wx.NO_BORDER, wx.RAISED_BORDER, wx.SIMPLE_BORDER);
+  - Logarithmic scale available;
+  - Possibility to draw a thin line over a selected window when moving an indicator,
+    which emulates the text editors software.
+  
+
+And a lot more. See the demo for a review of the functionalities (even if also the
+demo does not include all the options supported by RulerCtrl).
+
+Events
+======
+
+RulerCtrl implements the following events related to indicators:
+
+  - EVT_INDICATOR_CHANGING: the user is about to change the position of one indicator;
+  - EVT_INDICATOR_CHANGED: the user has changed the position of one indicator.
+
+
+Supported Platforms
+===================
+
+RulerCtrl has been tested on the following platforms:
+  * Windows (Windows XP);
+  * Linux Ubuntu (Dapper 6.06)
+
+
+License And Version:
+===================
+
+RulerCtrl is freeware and distributed under the wxPython license. 
+
+
+Latest Revision: Andrea Gavana &#64; 15 Oct 2008, 22.30 GMT
+Version 0.1
+</pre>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.rulerctrl.Indicator-class.html"><code>Indicator</code></a></b></td>
+  <td>This class holds all the information about a single indicator inside 
+RulerCtrl.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.rulerctrl.Label-class.html"><code>Label</code></a></b></td>
+  <td>Auxilary class.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.rulerctrl.RulerCtrl-class.html"><code>RulerCtrl</code></a></b></td>
+  <td>RulerCtrl implements a ruler window that can be placed on top, bottom, 
+left or right to any wxPython widget.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.rulerctrl.RulerCtrlEvent-class.html"><code>RulerCtrlEvent</code></a></b></td>
+  <td>Represent details of the events that the RulerCtrl object sends.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl-module.html#ConvertPILToWX" class="summary-sig-name"><code>ConvertPILToWX</code></a>(<span class=summary-sig-arg>pil</span>,
+          <span class=summary-sig-arg>alpha</span>)</span></code>
+<br />
+Convert PIL Image Into wx.Image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl-module.html#ConvertWXToPIL" class="summary-sig-name"><code>ConvertWXToPIL</code></a>(<span class=summary-sig-arg>bmp</span>)</span></code>
+<br />
+Convert wx.Image Into PIL Image.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetIndicatorBitmap"></a><span class="summary-sig"><span class="summary-sig-name">GetIndicatorBitmap</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetIndicatorData"></a><span class="summary-sig"><span class="summary-sig-name">GetIndicatorData</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetIndicatorImage"></a><span class="summary-sig"><span class="summary-sig-name">GetIndicatorImage</span>()</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.rulerctrl-module.html#MakePalette" class="summary-sig-name"><code>MakePalette</code></a>(<span class=summary-sig-arg>tr</span>,
+          <span class=summary-sig-arg>tg</span>,
+          <span class=summary-sig-arg>tb</span>)</span></code>
+<br />
+Creates A Palette To Be Applied On An Image Based On Input Colour.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Function Details</th></tr>
+</table>
+
+<a name="ConvertPILToWX"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ConvertPILToWX</span>(<span class=sig-arg>pil</span>,
+          <span class=sig-arg>alpha</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Convert PIL Image Into wx.Image.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ConvertWXToPIL"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ConvertWXToPIL</span>(<span class=sig-arg>bmp</span>)</span>
+  </h3>
+  Convert wx.Image Into PIL Image.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="MakePalette"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">MakePalette</span>(<span class=sig-arg>tr</span>,
+          <span class=sig-arg>tg</span>,
+          <span class=sig-arg>tb</span>)</span>
+  </h3>
+  Creates A Palette To Be Applied On An Image Based On Input 
+  Colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:52:00 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

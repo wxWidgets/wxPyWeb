@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.flatmenu.FlatMenuBar</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.flatmenu-module.html">Module&nbsp;flatmenu</a> ::
+        Class&nbsp;FlatMenuBar
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type FlatMenuBar</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+
+                         |
+                        <b>FlatMenuBar</b>
+</pre><br />
+
+<hr/>
+
+Implements the generic owner-drawn menu bar for FlatMenu.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>iconSize</span>,
+          <span class=summary-sig-arg>spacer</span>,
+          <span class=summary-sig-arg>options</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#ActivateMenu" class="summary-sig-name"><code>ActivateMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menuInfo</span>)</span></code>
+<br />
+Activates menu which its info is menuInfo.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#ActivateNextMenu" class="summary-sig-name"><code>ActivateNextMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Activates next menu and make sure all other are non-active.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#ActivatePreviousMenu" class="summary-sig-name"><code>ActivatePreviousMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Activates previous menu and make sure all other are non-active.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#AddCheckTool" class="summary-sig-name"><code>AddCheckTool</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>toolId</span>,
+          <span class=summary-sig-arg>label</span>,
+          <span class=summary-sig-arg>bitmap1</span>,
+          <span class=summary-sig-arg>bitmap2</span>,
+          <span class=summary-sig-arg>shortHelp</span>,
+          <span class=summary-sig-arg>longHelp</span>)</span></code>
+<br />
+Adds a new check (or toggle) tool to the toolbar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#AddControl" class="summary-sig-name"><code>AddControl</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>control</span>)</span></code>
+<br />
+Adds any control to the toolbar, typically e.g.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#AddRadioTool" class="summary-sig-name"><code>AddRadioTool</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>toolId</span>,
+          <span class=summary-sig-arg>label</span>,
+          <span class=summary-sig-arg>bitmap1</span>,
+          <span class=summary-sig-arg>bitmap2</span>,
+          <span class=summary-sig-arg>shortHelp</span>,
+          <span class=summary-sig-arg>longHelp</span>)</span></code>
+<br />
+Adds a new radio tool to the toolbar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#AddSeparator" class="summary-sig-name"><code>AddSeparator</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Adds a separator for spacing groups of tools in toolbar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#AddTool" class="summary-sig-name"><code>AddTool</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>toolId</span>,
+          <span class=summary-sig-arg>label</span>,
+          <span class=summary-sig-arg>bitmap1</span>,
+          <span class=summary-sig-arg>bitmap2</span>,
+          <span class=summary-sig-arg>kind</span>,
+          <span class=summary-sig-arg>shortHelp</span>,
+          <span class=summary-sig-arg>longHelp</span>)</span></code>
+<br />
+Adds a tool to the toolbar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#Append" class="summary-sig-name"><code>Append</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menu</span>,
+          <span class=summary-sig-arg>title</span>)</span></code>
+<br />
+Adds the item to the end of the menu bar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#AppendToolbarItem" class="summary-sig-name"><code>AppendToolbarItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Deprecated since version 0.9.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#ClearBitmaps" class="summary-sig-name"><code>ClearBitmaps</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>start</span>)</span></code>
+<br />
+Restores a wx.NullBitmap for the menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#CreateMoreMenu" class="summary-sig-name"><code>CreateMoreMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Creates the drop down menu and populate it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#DoGiveHelp" class="summary-sig-name"><code>DoGiveHelp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>hit</span>)</span></code>
+<br />
+Gives tooltips and help in StatusBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#DoMouseMove" class="summary-sig-name"><code>DoMouseMove</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>leftIsDown</span>)</span></code>
+<br />
+Handles mouse move event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#DoToolbarAction" class="summary-sig-name"><code>DoToolbarAction</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>idx</span>)</span></code>
+<br />
+Performs a toolbar button pressed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DrawAll"></a><span class="summary-sig"><span class="summary-sig-name">DrawAll</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#DrawMoreButton" class="summary-sig-name"><code>DrawMoreButton</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>fr</span>,
+          <span class=summary-sig-arg>state</span>)</span></code>
+<br />
+Draws 'more' button to the right side of the menu bar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#DrawToolbar" class="summary-sig-name"><code>DrawToolbar</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Draws the toolbar with the given dc &amp; rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#DrawToolbarItem" class="summary-sig-name"><code>DrawToolbarItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>idx</span>,
+          <span class=summary-sig-arg>state</span>)</span></code>
+<br />
+Draws a toolbar item button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#FindMenu" class="summary-sig-name"><code>FindMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>title</span>)</span></code>
+<br />
+Returns the index of the menu with the given title or wx.NOT_FOUND if 
+no such menu exists in this menubar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#FindMenuItem" class="summary-sig-name"><code>FindMenuItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Returns a FlatMenuItem according to its id.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#GetActiveToolbarItem" class="summary-sig-name"><code>GetActiveToolbarItem</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the active toolbar item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#GetInvisibleMenuItemCount" class="summary-sig-name"><code>GetInvisibleMenuItemCount</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns number of invisible menu items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#GetInvisibleToolbarItemCount" class="summary-sig-name"><code>GetInvisibleToolbarItemCount</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns number of invisible toolbar items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#GetLastVisibleMenu" class="summary-sig-name"><code>GetLastVisibleMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the index of the last visible menu on the menu bar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#GetMenu" class="summary-sig-name"><code>GetMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menuIdx</span>)</span></code>
+<br />
+Returns the menu at menuIndex (zero-based), user must not release this 
+menu!.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#GetMoreMenuButtonRect" class="summary-sig-name"><code>GetMoreMenuButtonRect</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a rectangle surrounding the menu button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#HitTest" class="summary-sig-name"><code>HitTest</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>)</span></code>
+<br />
+HitTest method for FlatMenuBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#Insert" class="summary-sig-name"><code>Insert</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>menu</span>,
+          <span class=summary-sig-arg>title</span>)</span></code>
+<br />
+Inserts the menu at the given position into the menu bar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnAccelCmd" class="summary-sig-name"><code>OnAccelCmd</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Single function to handle any accelerator key used inside the 
+menubar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnCustimizeDlg" class="summary-sig-name"><code>OnCustimizeDlg</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the customize dialog here.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnEraseBg" class="summary-sig-name"><code>OnEraseBg</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_ERASE_BACKGROUND event for FlatMenuBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnIdle" class="summary-sig-name"><code>OnIdle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_IDLE event for FlatMenuBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnLeaveMenuBar" class="summary-sig-name"><code>OnLeaveMenuBar</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles mouse leave event for FlatMenuBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnLeaveWindow" class="summary-sig-name"><code>OnLeaveWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEAVE_WINDOW event for FlatMenuBar (GTK Only).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnLeftDown" class="summary-sig-name"><code>OnLeftDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEFT_DOWN event for FlatMenuBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnLeftUp" class="summary-sig-name"><code>OnLeftUp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEFT_UP event for FlatMenuBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnMenuDismissed" class="summary-sig-name"><code>OnMenuDismissed</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles menu dismiss event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnMouseMove" class="summary-sig-name"><code>OnMouseMove</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles mouse move event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnPaint" class="summary-sig-name"><code>OnPaint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_PAINT event for FlatMenuBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnSize" class="summary-sig-name"><code>OnSize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SIZE event for FlatMenuBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#OnStatusBarTimer" class="summary-sig-name"><code>OnStatusBarTimer</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Handles the timer expiring to delete the longHelp in the 
+StatusBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#PopupMoreMenu" class="summary-sig-name"><code>PopupMoreMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Popups the 'more' menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#PositionAUI" class="summary-sig-name"><code>PositionAUI</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mgr</span>,
+          <span class=summary-sig-arg>fixToolbar</span>)</span></code>
+<br />
+Positions the control inside wxAUI frame manager.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#ProcessMouseMoveFromMenu" class="summary-sig-name"><code>ProcessMouseMoveFromMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>)</span></code>
+<br />
+This function is called from child menus, this allow a child menu to 
+pass the mouse movement event to the menu bar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#Remove" class="summary-sig-name"><code>Remove</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Removes the menu from the menu bar and returns the menu object - the 
+caller is responsible for deleting it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#RemoveHelp" class="summary-sig-name"><code>RemoveHelp</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Removes the tooltips and statusbar help (if any) for a button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#ResetToolbarItems" class="summary-sig-name"><code>ResetToolbarItems</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#SetLCDMonitor" class="summary-sig-name"><code>SetLCDMonitor</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>lcd</span>)</span></code>
+<br />
+Sets whether the PC monitor is an LCD or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#SetUpdateInterval" class="summary-sig-name"><code>SetUpdateInterval</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>interval</span>)</span></code>
+<br />
+Sets the updateUI interval for toolbar items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#ShowCustomize" class="summary-sig-name"><code>ShowCustomize</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span></code>
+<br />
+Shows/hides the drop-down arrow which allows customization of 
+FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#UpdateAcceleratorTable" class="summary-sig-name"><code>UpdateAcceleratorTable</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Updates the parent accelerator table.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenuBar-class.html#UpdateItem" class="summary-sig-name"><code>UpdateItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+An item with ID was modified.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>iconSize</span>=<span class=sig-default>16</span>,
+          <span class=sig-arg>spacer</span>=<span class=sig-default>3</span>,
+          <span class=sig-arg>options</span>=<span class=sig-default>5</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  Default class constructor. Parameters: &#64;param parent menu bar 
+  parent
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>id</b></code> -
+         window id
+<p/>
+      <dd><code><b>iconSize</b></code> -
+         size of the icons in the toolbar (see Resources.py)
+<p/>
+      <dd><code><b>options</b></code> -
+         <ul>
+          <li>
+            FM_OPT_IS_LCD - not sure what it is :) gotta ask 
+            Andrea.
+          </li>
+          <li>
+            FM_OPT_MINIBAR - use this if you plan to use toolbar 
+            only.
+          </li>
+          <li>
+            FM_OPT_SHOW_CUSTOMIZE - show &quot;customize link&quot; in 
+            MoreMenu, you will need to write your own handler. See 
+            demo.
+          </li>
+          <li>
+            FM_OPT_SHOW_TOOLBAR - set this option is you are planing 
+            to use the toolbar.
+          </li>
+        </ul>
+<p/>
+      </dd>
+    </dl>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Panel-class.html#__init__"><code>wx.Panel.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ActivateMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ActivateMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menuInfo</span>)</span>
+  </h3>
+  Activates menu which its info is menuInfo.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ActivateNextMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ActivateNextMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Activates next menu and make sure all other are non-active.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ActivatePreviousMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ActivatePreviousMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Activates previous menu and make sure all other are non-active.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddCheckTool"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddCheckTool</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>toolId</span>,
+          <span class=sig-arg>label</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>bitmap1</span>=<span class=sig-default>&lt;wx._gdi.Bitmap;&nbsp;proxy&nbsp;of&nbsp;&lt;Swig&nbsp;Object&nbsp;of&nbsp;type&nbsp;'wxBitmap&nbsp;...</span>,
+          <span class=sig-arg>bitmap2</span>=<span class=sig-default>&lt;wx._gdi.Bitmap;&nbsp;proxy&nbsp;of&nbsp;&lt;Swig&nbsp;Object&nbsp;of&nbsp;type&nbsp;'wxBitmap&nbsp;...</span>,
+          <span class=sig-arg>shortHelp</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>longHelp</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+  Adds a new check (or toggle) tool to the toolbar. See 
+  FlatMenuBar.AddTool for parameter descriptions.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddControl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddControl</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>control</span>)</span>
+  </h3>
+  <p>Adds any control to the toolbar, typically e.g. a combobox.</p>
+  &#64;param control The control to be added.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddRadioTool"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddRadioTool</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>toolId</span>,
+          <span class=sig-arg>label</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>bitmap1</span>=<span class=sig-default>&lt;wx._gdi.Bitmap;&nbsp;proxy&nbsp;of&nbsp;&lt;Swig&nbsp;Object&nbsp;of&nbsp;type&nbsp;'wxBitmap&nbsp;...</span>,
+          <span class=sig-arg>bitmap2</span>=<span class=sig-default>&lt;wx._gdi.Bitmap;&nbsp;proxy&nbsp;of&nbsp;&lt;Swig&nbsp;Object&nbsp;of&nbsp;type&nbsp;'wxBitmap&nbsp;...</span>,
+          <span class=sig-arg>shortHelp</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>longHelp</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+  <p>Adds a new radio tool to the toolbar. Consecutive radio tools form a 
+  radio group such that exactly one button in the group is pressed at any 
+  moment, in other words whenever a button in the group is pressed the 
+  previously pressed button is automatically released. You should avoid 
+  having the radio groups of only one element as it would be impossible 
+  for the user to use such button.</p>
+  By default, the first button in the radio group is initially 
+  pressed, the others are not. See FlatMenuBar.AddTool for parameter 
+  descriptions.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddSeparator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddSeparator</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Adds a separator for spacing groups of tools in toolbar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddTool"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddTool</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>toolId</span>,
+          <span class=sig-arg>label</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>bitmap1</span>=<span class=sig-default>&lt;wx._gdi.Bitmap;&nbsp;proxy&nbsp;of&nbsp;&lt;Swig&nbsp;Object&nbsp;of&nbsp;type&nbsp;'wxBitmap&nbsp;...</span>,
+          <span class=sig-arg>bitmap2</span>=<span class=sig-default>&lt;wx._gdi.Bitmap;&nbsp;proxy&nbsp;of&nbsp;&lt;Swig&nbsp;Object&nbsp;of&nbsp;type&nbsp;'wxBitmap&nbsp;...</span>,
+          <span class=sig-arg>kind</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>shortHelp</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>longHelp</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+  <p>Adds a tool to the toolbar.</p>
+  &#64;param toolId An integer by which the tool may be identified in 
+  subsequent operations. &#64;param kind May be wxITEM_NORMAL for a 
+  normal button (default), wxITEM_CHECK for a checkable tool (such tool 
+  stays pressed after it had been toggled) or wxITEM_RADIO for a 
+  checkable tool which makes part of a radio group of tools each of which 
+  is automatically unchecked whenever another button in the group is 
+  checked &#64;param bitmap1 The primary tool bitmap. &#64;param bitmap2 
+  The bitmap used when the tool is disabled. If it is equal to 
+  wxNullBitmap, the disabled bitmap is automatically generated by greing 
+  the normal one. &#64;param shortHelpString This string is used for the 
+  tools tooltip &#64;param longHelpString This string is shown in the 
+  statusbar (if any) of the parent frame when the mouse pointer is inside 
+  the tool
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Append"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Append</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menu</span>,
+          <span class=sig-arg>title</span>)</span>
+  </h3>
+  Adds the item to the end of the menu bar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AppendToolbarItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AppendToolbarItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+  Deprecated since version 0.9.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClearBitmaps"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClearBitmaps</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>start</span>)</span>
+  </h3>
+  Restores a wx.NullBitmap for the menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateMoreMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateMoreMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Creates the drop down menu and populate it.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoGiveHelp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoGiveHelp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>hit</span>)</span>
+  </h3>
+  Gives tooltips and help in StatusBar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoMouseMove"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoMouseMove</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>,
+          <span class=sig-arg>leftIsDown</span>)</span>
+  </h3>
+  Handles mouse move event.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoToolbarAction"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoToolbarAction</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>idx</span>)</span>
+  </h3>
+  Performs a toolbar button pressed.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawMoreButton"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawMoreButton</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>fr</span>,
+          <span class=sig-arg>state</span>)</span>
+  </h3>
+  Draws 'more' button to the right side of the menu bar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawToolbar"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawToolbar</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+  Draws the toolbar with the given dc &amp; rect.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawToolbarItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawToolbarItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>idx</span>,
+          <span class=sig-arg>state</span>)</span>
+  </h3>
+  Draws a toolbar item button.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>title</span>)</span>
+  </h3>
+  Returns the index of the menu with the given title or wx.NOT_FOUND 
+  if no such menu exists in this menubar. The title parameter may specify 
+  either the menu title (with accelerator characters, i.e. 
+  &quot;&amp;File&quot;) or just the menu label (&quot;File&quot;) 
+  indifferently.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindMenuItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindMenuItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>)</span>
+  </h3>
+  Returns a FlatMenuItem according to its id.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetActiveToolbarItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetActiveToolbarItem</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the active toolbar item.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetInvisibleMenuItemCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetInvisibleMenuItemCount</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns number of invisible menu items. Valid only after 
+  wx.EVT_PAINT has been processed after resize.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetInvisibleToolbarItemCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetInvisibleToolbarItemCount</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns number of invisible toolbar items. Valid only after 
+  wx.EVT_PAINT has been processed after resize.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLastVisibleMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLastVisibleMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the index of the last visible menu on the menu bar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menuIdx</span>)</span>
+  </h3>
+  Returns the menu at menuIndex (zero-based), user must not release 
+  this menu!.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMoreMenuButtonRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMoreMenuButtonRect</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns a rectangle surrounding the menu button.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HitTest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HitTest</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>)</span>
+  </h3>
+  HitTest method for FlatMenuBar.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#HitTest"><code>wx.Window.HitTest</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Insert"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Insert</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>,
+          <span class=sig-arg>menu</span>,
+          <span class=sig-arg>title</span>)</span>
+  </h3>
+  Inserts the menu at the given position into the menu bar. Inserting 
+  menu at position 0 will insert it in the very beginning of it, 
+  inserting at position GetMenuCount() is the same as calling 
+  Append().
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnAccelCmd"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnAccelCmd</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Single function to handle any accelerator key used inside the 
+  menubar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCustimizeDlg"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCustimizeDlg</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the customize dialog here.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnEraseBg"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnEraseBg</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_ERASE_BACKGROUND event for FlatMenuBar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnIdle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnIdle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_IDLE event for FlatMenuBar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnLeaveMenuBar"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnLeaveMenuBar</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles mouse leave event for FlatMenuBar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnLeaveWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnLeaveWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_LEAVE_WINDOW event for FlatMenuBar (GTK 
+  Only).
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnLeftDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnLeftDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_LEFT_DOWN event for FlatMenuBar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnLeftUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnLeftUp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_LEFT_UP event for FlatMenuBar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMenuDismissed"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMenuDismissed</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles menu dismiss event.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseMove"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseMove</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles mouse move event.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPaint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPaint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_PAINT event for FlatMenuBar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_SIZE event for FlatMenuBar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnStatusBarTimer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnStatusBarTimer</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Handles the timer expiring to delete the longHelp in the 
+  StatusBar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PopupMoreMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PopupMoreMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Popups the 'more' menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PositionAUI"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PositionAUI</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mgr</span>,
+          <span class=sig-arg>fixToolbar</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Positions the control inside wxAUI frame manager.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessMouseMoveFromMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessMouseMoveFromMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>)</span>
+  </h3>
+  This function is called from child menus, this allow a child menu to 
+  pass the mouse movement event to the menu bar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Remove"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Remove</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+  Removes the menu from the menu bar and returns the menu object - the 
+  caller is responsible for deleting it. This function may be used 
+  together with FlatMenuBar.Insert to change the menubar dynamically.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemoveHelp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemoveHelp</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Removes the tooltips and statusbar help (if any) for a button.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResetToolbarItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResetToolbarItems</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Used internally.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLCDMonitor"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLCDMonitor</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>lcd</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Sets whether the PC monitor is an LCD or not.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetUpdateInterval"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetUpdateInterval</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>interval</span>)</span>
+  </h3>
+  Sets the updateUI interval for toolbar items. All UpdateUI events 
+  are sent from within OnIdle() handler, the default is 20 
+  milliseconds.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowCustomize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowCustomize</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>show</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Shows/hides the drop-down arrow which allows customization of 
+  FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateAcceleratorTable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateAcceleratorTable</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Updates the parent accelerator table.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+  An item with ID was modified. This function is called by FlatMenu in 
+  case an item was modified directly and not via updateUI event.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:54:01 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

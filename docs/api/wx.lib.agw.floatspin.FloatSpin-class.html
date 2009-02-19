@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.floatspin.FloatSpin</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.floatspin-module.html">Module&nbsp;floatspin</a> ::
+        Class&nbsp;FloatSpin
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.floatspin.FloatSpin-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type FloatSpin</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+               <a href="wx.Control-class.html"><code>Control</code></a> --+    
+                         |    
+                 <a href="wx.PyControl-class.html"><code>PyControl</code></a> --+
+                             |
+                            <b>FloatSpin</b>
+</pre><br />
+
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>value</span>,
+          <span class=summary-sig-arg>min_val</span>,
+          <span class=summary-sig-arg>max_val</span>,
+          <span class=summary-sig-arg>increment</span>,
+          <span class=summary-sig-arg>digits</span>,
+          <span class=summary-sig-arg>extrastyle</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#ClampValue" class="summary-sig-name"><code>ClampValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>var</span>)</span></code>
+<br />
+Clamps var between _min and _max depending on if the range has
+been specified.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#DoGetBestSize" class="summary-sig-name"><code>DoGetBestSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculates the best size for FloatSpin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#DoSendEvent" class="summary-sig-name"><code>DoSendEvent</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Send the event to the parent.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#GetDefaultValue" class="summary-sig-name"><code>GetDefaultValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the FloatSpin default value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#GetDigits" class="summary-sig-name"><code>GetDigits</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of digits shown.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#GetFont" class="summary-sig-name"><code>GetFont</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the underline wx.TextCtrl font.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#GetFormat" class="summary-sig-name"><code>GetFormat</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the string format in use.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#GetIncrement" class="summary-sig-name"><code>GetIncrement</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the increment for every EVT_FLOATSPIN event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#GetMax" class="summary-sig-name"><code>GetMax</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the maximum value for FloatSpin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#GetMin" class="summary-sig-name"><code>GetMin</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the minimum value for FloatSpin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#GetSnapToTicks" class="summary-sig-name"><code>GetSnapToTicks</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns whether the snap to ticks option is active or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#GetTextCtrl" class="summary-sig-name"><code>GetTextCtrl</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the underline wx.TextCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#GetValue" class="summary-sig-name"><code>GetValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the FloatSpin value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#HasRange" class="summary-sig-name"><code>HasRange</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns whether FloatSpin has a range or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#InRange" class="summary-sig-name"><code>InRange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Returns whether a value is inside FloatSpin range.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#IsDefaultValue" class="summary-sig-name"><code>IsDefaultValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns whether the current value is the default value or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#IsFinite" class="summary-sig-name"><code>IsFinite</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Tries to determine if a value is finite or infinite/nan.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#OnChar" class="summary-sig-name"><code>OnChar</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_CHAR for the underline wx.TextCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#OnDestroy" class="summary-sig-name"><code>OnDestroy</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Tries to correctly handle the control destruction under MSW.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#OnFocus" class="summary-sig-name"><code>OnFocus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SET_FOCUS event for FloatSpin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#OnKillFocus" class="summary-sig-name"><code>OnKillFocus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_KILL_FOCUS event for FloatSpin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#OnMouseWheel" class="summary-sig-name"><code>OnMouseWheel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_MOUSEWHEEL for FloatSpin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#OnSpinDown" class="summary-sig-name"><code>OnSpinDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SPIN_DOWN for FloatSpin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#OnSpinMouseDown" class="summary-sig-name"><code>OnSpinMouseDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEFT_DOWN event for the underline wx.SpinButton.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#OnSpinUp" class="summary-sig-name"><code>OnSpinUp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_SPIN_UP for FloatSpin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#OnTextEnter" class="summary-sig-name"><code>OnTextEnter</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_TEXT_ENTER for the underline wx.TextCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#ReplaceDoubleZero" class="summary-sig-name"><code>ReplaceDoubleZero</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>strs</span>)</span></code>
+<br />
+Replaces the (somewhat) python ugly '+e000' with +e00.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#SetDefaultValue" class="summary-sig-name"><code>SetDefaultValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>defaultvalue</span>)</span></code>
+<br />
+Sets the FloatSpin default value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#SetDigits" class="summary-sig-name"><code>SetDigits</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>digits</span>)</span></code>
+<br />
+Sets the number of digits to show.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#SetFont" class="summary-sig-name"><code>SetFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+<br />
+Set the underline wx.TextCtrl font.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#SetFormat" class="summary-sig-name"><code>SetFormat</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fmt</span>)</span></code>
+<br />
+Set the string format to use.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#SetIncrement" class="summary-sig-name"><code>SetIncrement</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>increment</span>)</span></code>
+<br />
+Sets the increment for every EVT_FLOATSPIN event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#SetRange" class="summary-sig-name"><code>SetRange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>min_val</span>,
+          <span class=summary-sig-arg>max_val</span>)</span></code>
+<br />
+Set the allowed range.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#SetRangeDontClampValue" class="summary-sig-name"><code>SetRangeDontClampValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>min_val</span>,
+          <span class=summary-sig-arg>max_val</span>)</span></code>
+<br />
+Set the allowed range.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#SetSnapToTicks" class="summary-sig-name"><code>SetSnapToTicks</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>forceticks</span>)</span></code>
+<br />
+Force the value to always be divisible by the increment.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#SetToDefaultValue" class="summary-sig-name"><code>SetToDefaultValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets FloatSpin value to its default value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#SetValue" class="summary-sig-name"><code>SetValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Sets the FloatSpin value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.floatspin.FloatSpin-class.html#SyncSpinToText" class="summary-sig-name"><code>SyncSpinToText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>send_event</span>,
+          <span class=summary-sig-arg>force_valid</span>)</span></code>
+<br />
+Synchronize the underline wx.TextCtrl with wx.SpinButton.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>(95,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>0.0</span>,
+          <span class=sig-arg>min_val</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>max_val</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>increment</span>=<span class=sig-default>1.0</span>,
+          <span class=sig-arg>digits</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>extrastyle</span>=<span class=sig-default>2</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>'FloatSpin'</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Default class constructor. Non-default parameters are:</p>
+<ul class="rst-simple">
+<li>value: is the current value for FloatSpin;</li>
+<li>min_val: the minimum value, ignored if None</li>
+<li>max_val: the maximum value, ignored if None</li>
+<li>increment: the increment for every evt_floatspin events;</li>
+<li>digits: number of representative digits for your floating point numbers;</li>
+<li>extrastyle: one of the following:
+a) FS_LEFT: align underline wx.TextCtrl left;
+b) FS_RIGHT: align underline wx.TextCtrl right;
+c) FS_CENTRE: align underline wx.TextCtrl center;
+plus the possibility to use FS_READONLY, that makes the underline wx.TextCtrl
+read-only (no edits possible).</li>
+</ul>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyControl-class.html#__init__"><code>wx.PyControl.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ClampValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ClampValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>var</span>)</span>
+  </h3>
+<p>Clamps var between _min and _max depending on if the range has
+been specified.</p>
+<p>Returns a clamped copy of var.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoGetBestSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoGetBestSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Calculates the best size for FloatSpin.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyControl-class.html#DoGetBestSize"><code>wx.PyControl.DoGetBestSize</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoSendEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoSendEvent</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Send the event to the parent.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDefaultValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDefaultValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the FloatSpin default value.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDigits"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDigits</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the number of digits shown.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFont</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the underline wx.TextCtrl font.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#GetFont"><code>wx.Window.GetFont</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFormat"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFormat</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the string format in use.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetIncrement"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetIncrement</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the increment for every EVT_FLOATSPIN event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMax"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMax</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the maximum value for FloatSpin. It cabe be a
+number or None if no maximum is present.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMin</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the minimum value for FloatSpin. It can be a
+number or None if no minimum is present.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSnapToTicks"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSnapToTicks</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns whether the snap to ticks option is active or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTextCtrl"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTextCtrl</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the underline wx.TextCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the FloatSpin value.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasRange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasRange</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns whether FloatSpin has a range or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InRange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InRange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Returns whether a value is inside FloatSpin range.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsDefaultValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsDefaultValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns whether the current value is the default value or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsFinite"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsFinite</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Tries to determine if a value is finite or infinite/nan.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnChar"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnChar</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_CHAR for the underline wx.TextCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnDestroy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnDestroy</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Tries to correctly handle the control destruction under MSW.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnFocus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_SET_FOCUS event for FloatSpin.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnKillFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnKillFocus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_KILL_FOCUS event for FloatSpin.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseWheel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseWheel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_MOUSEWHEEL for FloatSpin.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSpinDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSpinDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_SPIN_DOWN for FloatSpin.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSpinMouseDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSpinMouseDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_LEFT_DOWN event for the underline wx.SpinButton.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSpinUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSpinUp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_SPIN_UP for FloatSpin.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnTextEnter"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnTextEnter</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_TEXT_ENTER for the underline wx.TextCtrl.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ReplaceDoubleZero"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ReplaceDoubleZero</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>strs</span>)</span>
+  </h3>
+<p>Replaces the (somewhat) python ugly '+e000' with +e00.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDefaultValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDefaultValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>defaultvalue</span>)</span>
+  </h3>
+<p>Sets the FloatSpin default value.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDigits"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDigits</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>digits</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+<p>Sets the number of digits to show. If digits &lt; 0, FloatSpin tries to
+calculate the best number of digits based on input __init__ values.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>font</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Set the underline wx.TextCtrl font.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetFont"><code>wx.Window.SetFont</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFormat"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFormat</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fmt</span>=<span class=sig-default>'%f'</span>)</span>
+  </h3>
+<p>Set the string format to use.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetIncrement"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetIncrement</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>increment</span>)</span>
+  </h3>
+<p>Sets the increment for every EVT_FLOATSPIN event.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>min_val</span>,
+          <span class=sig-arg>max_val</span>)</span>
+  </h3>
+<p>Set the allowed range. If max_val or min_val are None, then
+they are ignored.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRangeDontClampValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRangeDontClampValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>min_val</span>,
+          <span class=sig-arg>max_val</span>)</span>
+  </h3>
+<p>Set the allowed range. If max_val or min_val are None, then
+they are ignored. Doesn't modify the current value.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSnapToTicks"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSnapToTicks</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>forceticks</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Force the value to always be divisible by the increment. Initially false.
+This uses the default value as the basis, you will get strange results
+for very large differences between the current value and default value
+when the increment is very small.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetToDefaultValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetToDefaultValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets FloatSpin value to its default value.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>)</span>
+  </h3>
+<p>Sets the FloatSpin value.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SyncSpinToText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SyncSpinToText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>send_event</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>force_valid</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Synchronize the underline wx.TextCtrl with wx.SpinButton.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:53:47 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.buttonpanel.ButtonInfo</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.buttonpanel-module.html">Module&nbsp;buttonpanel</a> ::
+        Class&nbsp;ButtonInfo
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type ButtonInfo</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+            
+         |            
+    <a href="wx.Object-class.html"><code>Object</code></a> --+        
+             |        
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+    
+                 |    
+           <a href="wx.lib.agw.buttonpanel.Control-class.html"><code>Control</code></a> --+
+                     |
+                    <b>ButtonInfo</b>
+</pre><br />
+
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>bmp</span>,
+          <span class=summary-sig-arg>status</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>kind</span>,
+          <span class=summary-sig-arg>shortHelp</span>,
+          <span class=summary-sig-arg>longHelp</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#AddStatus" class="summary-sig-name"><code>AddStatus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>name</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+<br />
+Add a programmer-defined status in addition to the 5 default status:
+- Normal;
+- Disabled;
+- Hover;
+- Pressed;
+- Toggled.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#CheckRefresh" class="summary-sig-name"><code>CheckRefresh</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>status</span>)</span></code>
+<br />
+Checks whether a ButtonPanel repaint is needed or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#Draw" class="summary-sig-name"><code>Draw</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Draws the button on ButtonPanel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Enable"></a><span class="summary-sig"><span class="summary-sig-name">Enable</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetBestSize" class="summary-sig-name"><code>GetBestSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the best size for the button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetBitmap" class="summary-sig-name"><code>GetBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>status</span>)</span></code>
+<br />
+Returns the associated bitmap.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetId" class="summary-sig-name"><code>GetId</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the button id.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetKind" class="summary-sig-name"><code>GetKind</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the button type (standard or toggle).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetLongHelp" class="summary-sig-name"><code>GetLongHelp</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the help string shown in the statusbar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetRect" class="summary-sig-name"><code>GetRect</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the button rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetShortHelp" class="summary-sig-name"><code>GetShortHelp</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the help string shown in a tootip.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetStatus" class="summary-sig-name"><code>GetStatus</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the button status.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetText" class="summary-sig-name"><code>GetText</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the text associated to the button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetTextAlignment" class="summary-sig-name"><code>GetTextAlignment</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the text alignment in the button (bottom or right).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetToggled" class="summary-sig-name"><code>GetToggled</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns whether a wx.ITEM_CHECK button is toggled or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#HasText" class="summary-sig-name"><code>HasText</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns whether the button has text or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="IsEnabled"></a><span class="summary-sig"><span class="summary-sig-name">IsEnabled</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetBitmap" class="summary-sig-name"><code>SetBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>,
+          <span class=summary-sig-arg>status</span>)</span></code>
+<br />
+Sets the associated bitmap.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetId" class="summary-sig-name"><code>SetId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>)</span></code>
+<br />
+Sets the button id.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetKind" class="summary-sig-name"><code>SetKind</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>kind</span>)</span></code>
+<br />
+Sets the button type (standard or toggle).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetLongHelp" class="summary-sig-name"><code>SetLongHelp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>help</span>)</span></code>
+<br />
+Sets the help string to be shown in the statusbar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetRect" class="summary-sig-name"><code>SetRect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span></code>
+<br />
+Sets the button rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetShortHelp" class="summary-sig-name"><code>SetShortHelp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>help</span>)</span></code>
+<br />
+Sets the help string to be shown in a tootip.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetStatus" class="summary-sig-name"><code>SetStatus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>status</span>)</span></code>
+<br />
+Sets the button status.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetText" class="summary-sig-name"><code>SetText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Sets the text of the button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetTextAlignment" class="summary-sig-name"><code>SetTextAlignment</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>alignment</span>)</span></code>
+<br />
+Sets the text alignment in the button (bottom or right).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetToggled" class="summary-sig-name"><code>SetToggled</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>toggle</span>)</span></code>
+<br />
+Sets a wx.ITEM_CHECK button toggled/not toggled.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#Bitmap"><code>Bitmap</code></a></b>: Returns the associated bitmap.</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#Id"><code>Id</code></a></b>: Returns the button id.</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#Rect"><code>Rect</code></a></b>: Returns the button rect.</td></tr><tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><b><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#Status"><code>Status</code></a></b>: Returns the button status.</td></tr></table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>bmp</span>=<span class=sig-default>&lt;wx._gdi.Bitmap;&nbsp;proxy&nbsp;of&nbsp;&lt;Swig&nbsp;Object&nbsp;of&nbsp;type&nbsp;'wxBitmap&nbsp;...</span>,
+          <span class=sig-arg>status</span>=<span class=sig-default>'Normal'</span>,
+          <span class=sig-arg>text</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>kind</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>shortHelp</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>longHelp</span>=<span class=sig-default>''</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<pre class="literalblock">
+Default class constructor.
+
+Parameters:
+- parent: the parent window (ButtonPanel);
+- id: the button id;
+- bmp: the associated bitmap;
+- status: button status (pressed, hovered, normal).
+- text: text to be displayed either below of to the right of the button
+- kind: button kind, may be wx.ITEM_NORMAL for standard buttons or
+  wx.ITEM_CHECK for toggle buttons;
+- shortHelp: a short help to be shown in the button tooltip;
+- longHelp: this string is shown in the statusbar (if any) of the parent
+  frame when the mouse pointer is inside the button.
+</pre>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.buttonpanel.Control-class.html#__init__"><code>wx.lib.agw.buttonpanel.Control.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddStatus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddStatus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>'Custom'</span>,
+          <span class=sig-arg>bmp</span>=<span class=sig-default>&lt;wx._gdi.Bitmap;&nbsp;proxy&nbsp;of&nbsp;&lt;Swig&nbsp;Object&nbsp;of&nbsp;type&nbsp;'wxBitmap&nbsp;...</span>)</span>
+  </h3>
+<p>Add a programmer-defined status in addition to the 5 default status:
+- Normal;
+- Disabled;
+- Hover;
+- Pressed;
+- Toggled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CheckRefresh"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CheckRefresh</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>status</span>)</span>
+  </h3>
+<p>Checks whether a ButtonPanel repaint is needed or not. Convenience function.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Draw"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Draw</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Draws the button on ButtonPanel. Actually the drawing is done in BPArt.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.buttonpanel.Control-class.html#Draw"><code>wx.lib.agw.buttonpanel.Control.Draw</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBestSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBestSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the best size for the button.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.buttonpanel.Control-class.html#GetBestSize"><code>wx.lib.agw.buttonpanel.Control.GetBestSize</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBitmap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>status</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns the associated bitmap.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetId</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the button id.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.buttonpanel.Control-class.html#GetId"><code>wx.lib.agw.buttonpanel.Control.GetId</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetKind"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetKind</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the button type (standard or toggle).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLongHelp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLongHelp</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the help string shown in the statusbar.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRect</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the button rect.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetShortHelp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetShortHelp</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the help string shown in a tootip.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetStatus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetStatus</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the button status.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetText</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the text associated to the button.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTextAlignment"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTextAlignment</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the text alignment in the button (bottom or right).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetToggled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetToggled</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns whether a wx.ITEM_CHECK button is toggled or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HasText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HasText</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns whether the button has text or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetBitmap"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetBitmap</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>,
+          <span class=sig-arg>status</span>=<span class=sig-default>'Normal'</span>)</span>
+  </h3>
+<p>Sets the associated bitmap.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetId"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetId</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>)</span>
+  </h3>
+<p>Sets the button id.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetKind"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetKind</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>kind</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Sets the button type (standard or toggle).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetLongHelp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetLongHelp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>help</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+<p>Sets the help string to be shown in the statusbar.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRect</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>rect</span>)</span>
+  </h3>
+<p>Sets the button rect.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetShortHelp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetShortHelp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>help</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+<p>Sets the help string to be shown in a tootip.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetStatus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetStatus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>status</span>)</span>
+  </h3>
+<p>Sets the button status.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+<p>Sets the text of the button.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTextAlignment"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTextAlignment</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>alignment</span>)</span>
+  </h3>
+<p>Sets the text alignment in the button (bottom or right).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetToggled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetToggled</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>toggle</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Sets a wx.ITEM_CHECK button toggled/not toggled.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF PROPERTY DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Property Details</th></tr>
+</table>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Bitmap"></a>
+<h3>Bitmap</h3>
+<p>Returns the associated bitmap.</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetBitmap" class="summary-sig-name"><code>GetBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>status</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetBitmap" class="summary-sig-name"><code>SetBitmap</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>,
+          <span class=summary-sig-arg>status</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Id"></a>
+<h3>Id</h3>
+<p>Returns the button id.</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetId" class="summary-sig-name"><code>GetId</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetId" class="summary-sig-name"><code>SetId</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Rect"></a>
+<h3>Rect</h3>
+<p>Returns the button rect.</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetRect" class="summary-sig-name"><code>GetRect</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetRect" class="summary-sig-name"><code>SetRect</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>rect</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+
+<a name="Status"></a>
+<h3>Status</h3>
+<p>Returns the button status.</p>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Get Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#GetStatus" class="summary-sig-name"><code>GetStatus</code></a>(<span class=summary-sig-arg>self</span>)</span>
+      </dd>
+      <dt><b>Set Method:</b></dt>
+      <dd><span class="summary-sig"><a href="wx.lib.agw.buttonpanel.ButtonInfo-class.html#SetStatus" class="summary-sig-name"><code>SetStatus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>status</span>)</span>
+      </dd>
+    </dl>
+  </dd>
+</dl></td></tr></table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:51:33 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

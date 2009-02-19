@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.flatnotebook.FlatNotebook</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.flatnotebook-module.html">Module&nbsp;flatnotebook</a> ::
+        Class&nbsp;FlatNotebook
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type FlatNotebook</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+    
+                         |    
+                   <a href="wx.PyPanel-class.html"><code>PyPanel</code></a> --+
+                             |
+                            <b>FlatNotebook</b>
+</pre><br />
+
+<hr/>
+
+<p>Display one or more windows in a notebook.</p>
+<b>Events</b>:
+<ul>
+  <li>
+    <b>EVT_FLATNOTEBOOK_PAGE_CHANGING</b>: sent when the active page 
+    in the notebook is changing
+  </li>
+  <li>
+    <b>EVT_FLATNOTEBOOK_PAGE_CHANGED</b>: sent when the active page in 
+    the notebook has changed
+  </li>
+  <li>
+    <b>EVT_FLATNOTEBOOK_PAGE_CLOSING</b>: sent when a page in the 
+    notebook is closing
+  </li>
+  <li>
+    <b>EVT_FLATNOTEBOOK_PAGE_CLOSED</b>: sent when a page in the 
+    notebook has been closed
+  </li>
+  <li>
+    <b>EVT_FLATNOTEBOOK_PAGE_CONTEXT_MENU</b>: sent when the user 
+    clicks a tab in the notebook with the right mouse button
+  </li>
+</ul>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#AddPage" class="summary-sig-name"><code>AddPage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>select</span>,
+          <span class=summary-sig-arg>imageId</span>)</span></code>
+<br />
+Add a page to the <a 
+href="wx.lib.agw.flatnotebook.FlatNotebook-class.html" 
+class="link"><code>FlatNotebook</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#AdvanceSelection" class="summary-sig-name"><code>AdvanceSelection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>forward</span>)</span></code>
+<br />
+Cycles through the tabs.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#AssignImageList" class="summary-sig-name"><code>AssignImageList</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>imageList</span>)</span></code>
+<br />
+Assigns the image list for the page control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#DeleteAllPages" class="summary-sig-name"><code>DeleteAllPages</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Deletes all the pages.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#DeletePage" class="summary-sig-name"><code>DeletePage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page</span>)</span></code>
+<br />
+Deletes the specified page, and the associated window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#DoGetBestSize" class="summary-sig-name"><code>DoGetBestSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Overrides DoGetBestSize to handle sizers nicely.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#EnableTab" class="summary-sig-name"><code>EnableTab</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page</span>,
+          <span class=summary-sig-arg>enabled</span>)</span></code>
+<br />
+Enables or disables a tab.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#EnsureVisible" class="summary-sig-name"><code>EnsureVisible</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page</span>)</span></code>
+<br />
+Ensures that a tab is visible.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetActiveTabColour" class="summary-sig-name"><code>GetActiveTabColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the active tab colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetActiveTabTextColour" class="summary-sig-name"><code>GetActiveTabTextColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Get the active tab text colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetBorderColour" class="summary-sig-name"><code>GetBorderColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the border colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetCurrentPage" class="summary-sig-name"><code>GetCurrentPage</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the currently selected notebook page or None.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetEnabled" class="summary-sig-name"><code>GetEnabled</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page</span>)</span></code>
+<br />
+Returns whether a tab is enabled or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetGradientColourBorder" class="summary-sig-name"><code>GetGradientColourBorder</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the tab border colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetGradientColourFrom" class="summary-sig-name"><code>GetGradientColourFrom</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets first gradient colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetGradientColourTo" class="summary-sig-name"><code>GetGradientColourTo</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets second gradient colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetImageList" class="summary-sig-name"><code>GetImageList</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the associated image list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetNonActiveTabTextColour" class="summary-sig-name"><code>GetNonActiveTabTextColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the non active tabs text colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetPadding" class="summary-sig-name"><code>GetPadding</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the amount of space around each page's icon and label, in 
+pixels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetPage" class="summary-sig-name"><code>GetPage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page</span>)</span></code>
+<br />
+Returns the window at the given page position, or None.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetPageBestSize" class="summary-sig-name"><code>GetPageBestSize</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Return the page best size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetPageCount" class="summary-sig-name"><code>GetPageCount</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of pages in the <a 
+href="wx.lib.agw.flatnotebook.FlatNotebook-class.html" 
+class="link"><code>FlatNotebook</code></a> control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetPageImage" class="summary-sig-name"><code>GetPageImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>nPage</span>)</span></code>
+<br />
+Returns the image index for the given page.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetPageIndex" class="summary-sig-name"><code>GetPageIndex</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>win</span>)</span></code>
+<br />
+Returns the index at which the window is found.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetPageShapeAngle" class="summary-sig-name"><code>GetPageShapeAngle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page_index</span>)</span></code>
+<br />
+Returns the angle associated to a tab.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetPageText" class="summary-sig-name"><code>GetPageText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>nPage</span>)</span></code>
+<br />
+Returns the tab caption.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetPreviousSelection" class="summary-sig-name"><code>GetPreviousSelection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the previous selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetSelection" class="summary-sig-name"><code>GetSelection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the currently selected page, or -1 if none was selected.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetTabArea" class="summary-sig-name"><code>GetTabArea</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the associated page.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#GetTabAreaColour" class="summary-sig-name"><code>GetTabAreaColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the area behind the tabs colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#Init" class="summary-sig-name"><code>Init</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Initializes all the class attributes.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#InsertPage" class="summary-sig-name"><code>InsertPage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>indx</span>,
+          <span class=summary-sig-arg>page</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>select</span>,
+          <span class=summary-sig-arg>imageId</span>)</span></code>
+<br />
+Inserts a new page at the specified position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#OnDropTarget" class="summary-sig-name"><code>OnDropTarget</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>x</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>nTabPage</span>,
+          <span class=summary-sig-arg>wnd_oldContainer</span>)</span></code>
+<br />
+Handles the drop action from a DND operation.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#OnNavigationKey" class="summary-sig-name"><code>OnNavigationKey</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_NAVIGATION_KEY event for <a 
+href="wx.lib.agw.flatnotebook.FlatNotebook-class.html" 
+class="link"><code>FlatNotebook</code></a>.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#RemovePage" class="summary-sig-name"><code>RemovePage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page</span>)</span></code>
+<br />
+Deletes the specified page, without deleting the associated 
+window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetActiveTabColour" class="summary-sig-name"><code>SetActiveTabColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>color</span>)</span></code>
+<br />
+Sets the active tab colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetActiveTabTextColour" class="summary-sig-name"><code>SetActiveTabTextColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>textColour</span>)</span></code>
+<br />
+Sets the text colour for the active tab.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetAllPagesShapeAngle" class="summary-sig-name"><code>SetAllPagesShapeAngle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>angle</span>)</span></code>
+<br />
+Sets the angle associated to all the tab.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetGradientColourBorder" class="summary-sig-name"><code>SetGradientColourBorder</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>border</span>)</span></code>
+<br />
+Sets the tab border colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetGradientColourFrom" class="summary-sig-name"><code>SetGradientColourFrom</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fr</span>)</span></code>
+<br />
+Sets the starting colour for the gradient.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetGradientColours" class="summary-sig-name"><code>SetGradientColours</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fr</span>,
+          <span class=summary-sig-arg>to</span>,
+          <span class=summary-sig-arg>border</span>)</span></code>
+<br />
+Sets the gradient colours for the tab.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetGradientColourTo" class="summary-sig-name"><code>SetGradientColourTo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>to</span>)</span></code>
+<br />
+Sets the ending colour for the gradient.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetImageList" class="summary-sig-name"><code>SetImageList</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>imageList</span>)</span></code>
+<br />
+Sets the image list for the page control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetNavigatorIcon" class="summary-sig-name"><code>SetNavigatorIcon</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>bmp</span>)</span></code>
+<br />
+Set the icon used by the <a 
+href="wx.lib.agw.flatnotebook.TabNavigatorWindow-class.html" 
+class="link"><code>TabNavigatorWindow</code></a></td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetNonActiveTabTextColour" class="summary-sig-name"><code>SetNonActiveTabTextColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>color</span>)</span></code>
+<br />
+Sets the non active tabs text colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetPadding" class="summary-sig-name"><code>SetPadding</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>padding</span>)</span></code>
+<br />
+Sets the amount of space around each page's icon and label, in 
+pixels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetPageImage" class="summary-sig-name"><code>SetPageImage</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page</span>,
+          <span class=summary-sig-arg>image</span>)</span></code>
+<br />
+Sets the image index for the given page.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetPageShapeAngle" class="summary-sig-name"><code>SetPageShapeAngle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page_index</span>,
+          <span class=summary-sig-arg>angle</span>)</span></code>
+<br />
+Sets the angle associated to a tab.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetPageText" class="summary-sig-name"><code>SetPageText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Sets the text for the given page.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetRightClickMenu" class="summary-sig-name"><code>SetRightClickMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menu</span>)</span></code>
+<br />
+Sets the popup menu associated to a right click on a tab.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetSelection" class="summary-sig-name"><code>SetSelection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>page</span>)</span></code>
+<br />
+Sets the selection for the given page.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetTabAreaColour" class="summary-sig-name"><code>SetTabAreaColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>color</span>)</span></code>
+<br />
+Sets the area behind the tabs colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html#SetWindowStyleFlag" class="summary-sig-name"><code>SetWindowStyleFlag</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Sets the <a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html" 
+class="link"><code>FlatNotebook</code></a> window style flags.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>name</span>=<span class=sig-default>'FlatNotebook'</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  <p>Default class constructor.</p>
+  All the parameters are as in wxPython class construction, except the 
+  'style': this can be assigned to whatever combination of FNB_* 
+  styles.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyPanel-class.html#__init__"><code>wx.PyPanel.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddPage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddPage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>select</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>imageId</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+  Add a page to the <a 
+  href="wx.lib.agw.flatnotebook.FlatNotebook-class.html" 
+  class="link"><code>FlatNotebook</code></a>.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>page</b></code> -
+         Specifies the new page.
+<p/>
+      <dd><code><b>text</b></code> -
+         Specifies the text for the new page.
+<p/>
+      <dd><code><b>select</b></code> -
+         Specifies whether the page should be selected.
+<p/>
+      <dd><code><b>imageId</b></code> -
+         <p>Specifies the optional image index for the new page.</p>
+        Return value: True if successful, False otherwise.
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AdvanceSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AdvanceSelection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>forward</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Cycles through the tabs. The call to this function generates the 
+  page changing events.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AssignImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AssignImageList</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>imageList</span>)</span>
+  </h3>
+  Assigns the image list for the page control.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteAllPages"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteAllPages</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Deletes all the pages.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeletePage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeletePage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page</span>)</span>
+  </h3>
+  Deletes the specified page, and the associated window. The call to 
+  this function generates the page changing events.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoGetBestSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoGetBestSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Overrides DoGetBestSize to handle sizers nicely.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.PyPanel-class.html#DoGetBestSize"><code>wx.PyPanel.DoGetBestSize</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableTab"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableTab</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page</span>,
+          <span class=sig-arg>enabled</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Enables or disables a tab.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnsureVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnsureVisible</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page</span>)</span>
+  </h3>
+  Ensures that a tab is visible.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetActiveTabColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetActiveTabColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the active tab colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetActiveTabTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetActiveTabTextColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Get the active tab text colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBorderColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBorderColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the border colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCurrentPage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCurrentPage</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the currently selected notebook page or None.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetEnabled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetEnabled</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page</span>)</span>
+  </h3>
+  Returns whether a tab is enabled or not.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGradientColourBorder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGradientColourBorder</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Gets the tab border colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGradientColourFrom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGradientColourFrom</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Gets first gradient colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGradientColourTo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGradientColourTo</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Gets second gradient colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetImageList</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the associated image list.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNonActiveTabTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNonActiveTabTextColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the non active tabs text colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPadding"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPadding</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the amount of space around each page's icon and label, in 
+  pixels.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page</span>)</span>
+  </h3>
+  Returns the window at the given page position, or None.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPageBestSize"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPageBestSize</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Return the page best size.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPageCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPageCount</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the number of pages in the <a 
+  href="wx.lib.agw.flatnotebook.FlatNotebook-class.html" 
+  class="link"><code>FlatNotebook</code></a> control.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPageImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPageImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>nPage</span>)</span>
+  </h3>
+  Returns the image index for the given page. Image is an index into 
+  the image list which was set with SetImageList.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPageIndex"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPageIndex</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>win</span>)</span>
+  </h3>
+  Returns the index at which the window is found.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPageShapeAngle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPageShapeAngle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page_index</span>)</span>
+  </h3>
+  Returns the angle associated to a tab.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPageText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPageText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>nPage</span>)</span>
+  </h3>
+  Returns the tab caption.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPreviousSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPreviousSelection</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the previous selection.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSelection</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the currently selected page, or -1 if none was selected.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTabArea"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTabArea</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the associated page.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTabAreaColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTabAreaColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the area behind the tabs colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Init"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Init</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Initializes all the class attributes.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertPage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertPage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>indx</span>,
+          <span class=sig-arg>page</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>select</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>imageId</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+  Inserts a new page at the specified position.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>indx</b></code> -
+         Specifies the position of the new page.
+<p/>
+      <dd><code><b>page</b></code> -
+         Specifies the new page.
+<p/>
+      <dd><code><b>text</b></code> -
+         Specifies the text for the new page.
+<p/>
+      <dd><code><b>select</b></code> -
+         Specifies whether the page should be selected.
+<p/>
+      <dd><code><b>imageId</b></code> -
+         <p>Specifies the optional image index for the new page.</p>
+        Return value: True if successful, False otherwise.
+<p/>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnDropTarget"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnDropTarget</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>x</span>,
+          <span class=sig-arg>y</span>,
+          <span class=sig-arg>nTabPage</span>,
+          <span class=sig-arg>wnd_oldContainer</span>)</span>
+  </h3>
+  Handles the drop action from a DND operation.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnNavigationKey"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnNavigationKey</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_NAVIGATION_KEY event for <a 
+  href="wx.lib.agw.flatnotebook.FlatNotebook-class.html" 
+  class="link"><code>FlatNotebook</code></a>.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RemovePage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RemovePage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page</span>)</span>
+  </h3>
+  Deletes the specified page, without deleting the associated 
+  window.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetActiveTabColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetActiveTabColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>color</span>)</span>
+  </h3>
+  Sets the active tab colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetActiveTabTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetActiveTabTextColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>textColour</span>)</span>
+  </h3>
+  Sets the text colour for the active tab.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAllPagesShapeAngle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAllPagesShapeAngle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>angle</span>)</span>
+  </h3>
+  Sets the angle associated to all the tab.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGradientColourBorder"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGradientColourBorder</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>border</span>)</span>
+  </h3>
+  Sets the tab border colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGradientColourFrom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGradientColourFrom</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fr</span>)</span>
+  </h3>
+  Sets the starting colour for the gradient.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGradientColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGradientColours</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>fr</span>,
+          <span class=sig-arg>to</span>,
+          <span class=sig-arg>border</span>)</span>
+  </h3>
+  Sets the gradient colours for the tab.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGradientColourTo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGradientColourTo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>to</span>)</span>
+  </h3>
+  Sets the ending colour for the gradient.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetImageList"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetImageList</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>imageList</span>)</span>
+  </h3>
+  Sets the image list for the page control.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetNavigatorIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetNavigatorIcon</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>bmp</span>)</span>
+  </h3>
+  Set the icon used by the <a 
+  href="wx.lib.agw.flatnotebook.TabNavigatorWindow-class.html" 
+  class="link"><code>TabNavigatorWindow</code></a>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetNonActiveTabTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetNonActiveTabTextColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>color</span>)</span>
+  </h3>
+  Sets the non active tabs text colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPadding"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPadding</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>padding</span>)</span>
+  </h3>
+  Sets the amount of space around each page's icon and label, in 
+  pixels. NB: only the horizontal padding is considered.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPageImage"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPageImage</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page</span>,
+          <span class=sig-arg>image</span>)</span>
+  </h3>
+  Sets the image index for the given page. Image is an index into the 
+  image list which was set with SetImageList.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPageShapeAngle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPageShapeAngle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page_index</span>,
+          <span class=sig-arg>angle</span>)</span>
+  </h3>
+  Sets the angle associated to a tab.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetPageText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetPageText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page</span>,
+          <span class=sig-arg>text</span>)</span>
+  </h3>
+  Sets the text for the given page.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetRightClickMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetRightClickMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menu</span>)</span>
+  </h3>
+  Sets the popup menu associated to a right click on a tab.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSelection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>page</span>)</span>
+  </h3>
+  Sets the selection for the given page. The call to this function 
+  generates the page changing events
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTabAreaColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTabAreaColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>color</span>)</span>
+  </h3>
+  Sets the area behind the tabs colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetWindowStyleFlag"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetWindowStyleFlag</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>style</span>)</span>
+  </h3>
+  Sets the <a href="wx.lib.agw.flatnotebook.FlatNotebook-class.html" 
+  class="link"><code>FlatNotebook</code></a> window style flags.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#SetWindowStyleFlag"><code>wx.Window.SetWindowStyleFlag</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:53:19 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -4,7 +4,7 @@
 #
 # Author:      Robin Dunn
 #
-# RCS-ID:      $Id: wxPythonFull.spec.in 49867 2007-11-12 19:04:21Z RD $
+# RCS-ID:      $Id: wxPythonFull.spec.in 57746 2009-01-02 04:37:41Z RD $
 # Copyright:   (c) 2004 by Total Control Software
 # Licence:     wxWindows license
 #----------------------------------------------------------------------
@@ -89,7 +89,7 @@
 %define pref 	   %{_prefix}
 %define python 	   /usr/bin/python%{pyver}
 %define tarname    wxPython-src
-%define version    2.8.9.1
+%define version    2.8.9.2
 %define ver2       2.8
 
 %define chartype   %(if [ "%{unicode}" = "1" ]; then echo unicode; else echo ansi; fi)
@@ -419,8 +419,6 @@ rm %{wxpref}/bin/wx-config
 %doc wxPython/docs/*
 %dir %{pref}/lib*/python%{pyver}/site-packages/wx-%{ver2}*-%{port}-%{chartype}
 %{pref}/lib*/python%{pyver}/site-packages/wx-%{ver2}*-%{port}-%{chartype}/*
-%dir %{pref}/lib*/python%{pyver}/site-packages/wxaddons
-%{pref}/lib*/python%{pyver}/site-packages/wxaddons/*
 %dir %{wxpref}
 %dir %{wxpref}/lib
 %{wxpref}/lib/libwx_*

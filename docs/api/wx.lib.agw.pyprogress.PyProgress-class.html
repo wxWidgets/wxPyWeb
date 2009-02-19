@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.pyprogress.PyProgress</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.pyprogress-module.html">Module&nbsp;pyprogress</a> ::
+        Class&nbsp;PyProgress
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.pyprogress.PyProgress-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type PyProgress</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                    
+         |                    
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                
+             |                
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+            
+                 |            
+            <a href="wx.Window-class.html"><code>Window</code></a> --+        
+                     |        
+        <a href="wx.TopLevelWindow-class.html"><code>TopLevelWindow</code></a> --+    
+                         |    
+                    <a href="wx.Dialog-class.html"><code>Dialog</code></a> --+
+                             |
+                            <b>PyProgress</b>
+</pre><br />
+
+<hr/>
+
+PyProgress is similar to wx.ProgressDialog in indeterminated mode, but 
+with a different gauge appearance and a different spinning behavior. The 
+moving gauge can be drawn with a single solid colour or with a shading 
+gradient foreground. The gauge background colour is user customizable. 
+The bar does not move always from the beginning to the end as in 
+wx.ProgressDialog in indeterminated mode, but spins cyclically forward 
+and backward.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>title</span>,
+          <span class=summary-sig-arg>message</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#CreateLabel" class="summary-sig-name"><code>CreateLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>sizer</span>)</span></code>
+<br />
+Creates the wx.StaticText that holds the elapsed time label.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#DisableAbort" class="summary-sig-name"><code>DisableAbort</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Disables the Cancel button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#EnableAbort" class="summary-sig-name"><code>EnableAbort</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Enables or disables the Cancel button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#EnableClose" class="summary-sig-name"><code>EnableClose</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>enable</span>)</span></code>
+<br />
+Enables or disables the Close button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#GetFirstGradientColour" class="summary-sig-name"><code>GetFirstGradientColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the gauge first gradient colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#GetGaugeBackground" class="summary-sig-name"><code>GetGaugeBackground</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the gauge background colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#GetGaugeProportion" class="summary-sig-name"><code>GetGaugeProportion</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the relative proportion between the sliding bar and the whole 
+gauge.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#GetGaugeSteps" class="summary-sig-name"><code>GetGaugeSteps</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of steps the gauge performs before switching from 
+forward to backward (or vice-versa) movement.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#GetSecondGradientColour" class="summary-sig-name"><code>GetSecondGradientColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the gauge second gradient colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#OnCancel" class="summary-sig-name"><code>OnCancel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_BUTTON event for the Cancel button.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#OnClose" class="summary-sig-name"><code>OnClose</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_CLOSE event for PyProgress.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#OnDestroy" class="summary-sig-name"><code>OnDestroy</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_WINDOW_DESTROY event for PyProgress.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#ReenableOtherWindows" class="summary-sig-name"><code>ReenableOtherWindows</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Re-enables the other windows if using wx.WindowDisabler.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#SetFirstGradientColour" class="summary-sig-name"><code>SetFirstGradientColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the gauge first gradient colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#SetGaugeBackground" class="summary-sig-name"><code>SetGaugeBackground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the gauge background colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#SetGaugeProportion" class="summary-sig-name"><code>SetGaugeProportion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>proportion</span>)</span></code>
+<br />
+Sets the relative proportion between the sliding bar and the whole 
+gauge.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#SetGaugeSteps" class="summary-sig-name"><code>SetGaugeSteps</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>steps</span>)</span></code>
+<br />
+Sets the number of steps the gauge performs before switching from 
+forward to backward (or vice-versa) movement.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#SetSecondGradientColour" class="summary-sig-name"><code>SetSecondGradientColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the gauge second gradient colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#SetTimeLabel" class="summary-sig-name"><code>SetTimeLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>val</span>,
+          <span class=summary-sig-arg>label</span>)</span></code>
+<br />
+Sets the elapsed time label.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#ShowDialog" class="summary-sig-name"><code>ShowDialog</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>show</span>)</span></code>
+<br />
+Show the dialog.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.pyprogress.PyProgress-class.html#UpdatePulse" class="summary-sig-name"><code>UpdatePulse</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>newmsg</span>)</span></code>
+<br />
+Update the progress dialog with a (optionally) new message.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>title</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>message</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>6</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  Default class constructor.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Dialog-class.html#__init__"><code>wx.Dialog.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CreateLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CreateLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>sizer</span>)</span>
+  </h3>
+  Creates the wx.StaticText that holds the elapsed time label.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DisableAbort"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DisableAbort</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Disables the Cancel button.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableAbort"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableAbort</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Enables or disables the Cancel button.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableClose"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableClose</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Enables or disables the Close button.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFirstGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFirstGradientColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the gauge first gradient colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGaugeBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGaugeBackground</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the gauge background colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGaugeProportion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGaugeProportion</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the relative proportion between the sliding bar and the 
+  whole gauge.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetGaugeSteps"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetGaugeSteps</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the number of steps the gauge performs before switching from 
+  forward to backward (or vice-versa) movement.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSecondGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSecondGradientColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the gauge second gradient colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnCancel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnCancel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_BUTTON event for the Cancel button.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnClose"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnClose</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_CLOSE event for PyProgress.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnDestroy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnDestroy</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_WINDOW_DESTROY event for PyProgress.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ReenableOtherWindows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ReenableOtherWindows</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Re-enables the other windows if using wx.WindowDisabler.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFirstGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFirstGradientColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+  Sets the gauge first gradient colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGaugeBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGaugeBackground</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+  Sets the gauge background colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGaugeProportion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGaugeProportion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>proportion</span>)</span>
+  </h3>
+  Sets the relative proportion between the sliding bar and the whole 
+  gauge.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetGaugeSteps"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetGaugeSteps</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>steps</span>)</span>
+  </h3>
+  Sets the number of steps the gauge performs before switching from 
+  forward to backward (or vice-versa) movement.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSecondGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSecondGradientColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>)</span>
+  </h3>
+  Sets the gauge second gradient colour.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTimeLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTimeLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>val</span>,
+          <span class=sig-arg>label</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+  Sets the elapsed time label.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ShowDialog"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ShowDialog</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>show</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Show the dialog.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdatePulse"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdatePulse</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>newmsg</span>=<span class=sig-default>''</span>)</span>
+  </h3>
+  Update the progress dialog with a (optionally) new message.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:51:29 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

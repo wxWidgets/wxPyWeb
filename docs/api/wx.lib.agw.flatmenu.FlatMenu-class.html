@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.flatmenu.FlatMenu</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.flatmenu-module.html">Module&nbsp;flatmenu</a> ::
+        Class&nbsp;FlatMenu
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.flatmenu.FlatMenu-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type FlatMenu</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                        
+         |                        
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                    
+             |                    
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+                
+                 |                
+            <a href="wx.Window-class.html"><code>Window</code></a> --+            
+                     |            
+           <a href="wx.PopupWindow-class.html"><code>PopupWindow</code></a> --+        
+                         |        
+         <a href="wx.lib.agw.flatmenu.ShadowPopupWindow-class.html"><code>ShadowPopupWindow</code></a> --+    
+                             |    
+                  <a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html"><code>FlatMenuBase</code></a> --+
+                                 |
+                                <b>FlatMenu</b>
+</pre><br />
+
+<hr/>
+
+A Flat popup menu generic implementation.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#AdvanceSelection" class="summary-sig-name"><code>AdvanceSelection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>down</span>)</span></code>
+<br />
+Advance forward or backward the current selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#Append" class="summary-sig-name"><code>Append</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>helpString</span>,
+          <span class=summary-sig-arg>kind</span>)</span></code>
+<br />
+Appends an item to this menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#AppendCheckItem" class="summary-sig-name"><code>AppendCheckItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>helpString</span>)</span></code>
+<br />
+Appends a wx.ITEM_CHECK item to this menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#AppendItem" class="summary-sig-name"><code>AppendItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menuItem</span>)</span></code>
+<br />
+Appends an item to this menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#AppendMenu" class="summary-sig-name"><code>AppendMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>subMenu</span>,
+          <span class=summary-sig-arg>helpString</span>)</span></code>
+<br />
+Appends a menu to this menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#AppendRadioItem" class="summary-sig-name"><code>AppendRadioItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>helpString</span>)</span></code>
+<br />
+Appends a wx.ITEM_RADIO item to this menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#AppendSeparator" class="summary-sig-name"><code>AppendSeparator</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Appends a wx.ITEM_SEPARATOR item to this menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#Clear" class="summary-sig-name"><code>Clear</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Clears the menu items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#CloseSubMenu" class="summary-sig-name"><code>CloseSubMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>itemIdx</span>,
+          <span class=summary-sig-arg>alwaysClose</span>)</span></code>
+<br />
+Close a child sub-menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#Destroy" class="summary-sig-name"><code>Destroy</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Destroys an item from the menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#Dismiss" class="summary-sig-name"><code>Dismiss</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dismissParent</span>,
+          <span class=summary-sig-arg>resetOwner</span>)</span></code>
+<br />
+Dismisses the popup window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#DoAction" class="summary-sig-name"><code>DoAction</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>itemIdx</span>)</span></code>
+<br />
+Performs an action based on user selection.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#DoDrawMenu" class="summary-sig-name"><code>DoDrawMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Actually draws the menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#DrawLeftMargin" class="summary-sig-name"><code>DrawLeftMargin</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>menuRect</span>)</span></code>
+<br />
+Draws the menu left margin.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#DrawSelection" class="summary-sig-name"><code>DrawSelection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>oldSelection</span>)</span></code>
+<br />
+Redraws the menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#FindItem" class="summary-sig-name"><code>FindItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>itemId</span>,
+          <span class=summary-sig-arg>menu</span>)</span></code>
+<br />
+Finds an item inside the menu based on its id.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#FindMenuItemPos" class="summary-sig-name"><code>FindMenuItemPos</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>itemId</span>,
+          <span class=summary-sig-arg>menu</span>)</span></code>
+<br />
+Finds an item and its position inside the menu based on its id.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#FindMenuItemPosSimple" class="summary-sig-name"><code>FindMenuItemPosSimple</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Finds an item and its position inside the menu based on its id.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetAccelArray"></a><span class="summary-sig"><span class="summary-sig-name">GetAccelArray</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetAccelTable" class="summary-sig-name"><code>GetAccelTable</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the menu accelerator table.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetAllItems" class="summary-sig-name"><code>GetAllItems</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menu</span>,
+          <span class=summary-sig-arg>items</span>)</span></code>
+<br />
+Internal function to help recurse thru all over the menu items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetBorderXWidth" class="summary-sig-name"><code>GetBorderXWidth</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the menu border x-width.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetBorderYWidth" class="summary-sig-name"><code>GetBorderYWidth</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the menu border y-width.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetItemHeight" class="summary-sig-name"><code>GetItemHeight</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the height of a particular item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetLeftMarginWidth" class="summary-sig-name"><code>GetLeftMarginWidth</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the menu left margin width.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetMenuBar"></a><span class="summary-sig"><span class="summary-sig-name">GetMenuBar</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetMenuBarForSubMenu"></a><span class="summary-sig"><span class="summary-sig-name">GetMenuBarForSubMenu</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetMenuItemWidth" class="summary-sig-name"><code>GetMenuItemWidth</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>menuItem</span>)</span></code>
+<br />
+Returns the width of a particular item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetMenuRect" class="summary-sig-name"><code>GetMenuRect</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the menu rect.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetMenuWidth" class="summary-sig-name"><code>GetMenuWidth</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the menu width.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetNumberColumns" class="summary-sig-name"><code>GetNumberColumns</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of columns for a menu window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetRightMarginWidth" class="summary-sig-name"><code>GetRightMarginWidth</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the menu right margin width.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#GetSiblingGroupItem" class="summary-sig-name"><code>GetSiblingGroupItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#HitTest" class="summary-sig-name"><code>HitTest</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+HitTest method for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#Insert" class="summary-sig-name"><code>Insert</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>helpString</span>,
+          <span class=summary-sig-arg>kind</span>)</span></code>
+<br />
+Inserts an item into the menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#InsertItem" class="summary-sig-name"><code>InsertItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Inserts an item into the menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#InsertSeparator" class="summary-sig-name"><code>InsertSeparator</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Inserts a wx.ITEM_SEPARATOR item in teh position 'pos'.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnChar" class="summary-sig-name"><code>OnChar</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>key</span>)</span></code>
+<br />
+Handles key events for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnEraseBg" class="summary-sig-name"><code>OnEraseBg</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_ERASE_BACKGROUND event for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnKeyDown" class="summary-sig-name"><code>OnKeyDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_KEY_DOWN event for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnKillFocus" class="summary-sig-name"><code>OnKillFocus</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_KILL_FOCUS event for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnMouseEnterWindow" class="summary-sig-name"><code>OnMouseEnterWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_ENTER_WINDOW event for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnMouseLeaveWindow" class="summary-sig-name"><code>OnMouseLeaveWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEAVE_WINDOW event for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnMouseLeftDown" class="summary-sig-name"><code>OnMouseLeftDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEFT_DOWN event for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnMouseLeftUp" class="summary-sig-name"><code>OnMouseLeftUp</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_LEFT_UP event for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnMouseMove" class="summary-sig-name"><code>OnMouseMove</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_MOTION event for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnMouseRightDown" class="summary-sig-name"><code>OnMouseRightDown</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_RIGHT_DOWN event for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnPaint" class="summary-sig-name"><code>OnPaint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_PAINT event for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OnTimer" class="summary-sig-name"><code>OnTimer</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_TIMER event for FlatMenu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#OpenItemContextMenu" class="summary-sig-name"><code>OpenItemContextMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>itemIdx</span>)</span></code>
+<br />
+Open an item's context menu (if any).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#Popup" class="summary-sig-name"><code>Popup</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>owner</span>,
+          <span class=summary-sig-arg>parent</span>)</span></code>
+<br />
+Pops up the menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#ProcessMouseLClick" class="summary-sig-name"><code>ProcessMouseLClick</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Processes mouse left clicks.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#ProcessMouseLClickEnd" class="summary-sig-name"><code>ProcessMouseLClickEnd</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Processes mouse left clicks.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#ProcessMouseMove" class="summary-sig-name"><code>ProcessMouseMove</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Processes mouse movements.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#ProcessMouseRClick" class="summary-sig-name"><code>ProcessMouseRClick</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Processes mouse right clicks.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#RefreshChilds" class="summary-sig-name"><code>RefreshChilds</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+In some cases, we need to perform a recursive refresh for all opened 
+submenu from this.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#Remove" class="summary-sig-name"><code>Remove</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Removes an item from the menu.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#ResizeMenu" class="summary-sig-name"><code>ResizeMenu</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Resizes the menu to the correct size.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#ScrollDown" class="summary-sig-name"><code>ScrollDown</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Scrolls the menu down (for very tall menus).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#ScrollUp" class="summary-sig-name"><code>ScrollUp</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Scrolls the menu up (for very tall menus).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#SendCmdEvent" class="summary-sig-name"><code>SendCmdEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>itemIdx</span>)</span></code>
+<br />
+Actually sends menu command events.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#SendOverItem" class="summary-sig-name"><code>SendOverItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>itemIdx</span>,
+          <span class=summary-sig-arg>over</span>)</span></code>
+<br />
+Sends a mouse over/mouse out event on menu items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#SendUIEvent" class="summary-sig-name"><code>SendUIEvent</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>itemIdx</span>)</span></code>
+<br />
+Actually sends menu UI events.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#SetMenuBar" class="summary-sig-name"><code>SetMenuBar</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mb</span>)</span></code>
+<br />
+Attaches this menu to a menubar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#SetNumberColumns" class="summary-sig-name"><code>SetNumberColumns</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>numCols</span>)</span></code>
+<br />
+Sets the number of columns for a menu window.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetSubMenuBar"></a><span class="summary-sig"><span class="summary-sig-name">SetSubMenuBar</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>mb</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#TryOpenSubMenu" class="summary-sig-name"><code>TryOpenSubMenu</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>itemIdx</span>,
+          <span class=summary-sig-arg>selectFirst</span>)</span></code>
+<br />
+If itemIdx is an item with submenu, open it.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#TryScrollButtons" class="summary-sig-name"><code>TryScrollButtons</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#UpdateItem" class="summary-sig-name"><code>UpdateItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Updates an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.flatmenu.FlatMenu-class.html#UpdateRadioGroup" class="summary-sig-name"><code>UpdateRadioGroup</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Updates a group of radio items.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>=<span class=sig-default>None</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  Default class constructor.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#__init__"><code>wx.lib.agw.flatmenu.FlatMenuBase.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AdvanceSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AdvanceSelection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>down</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Advance forward or backward the current selection.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Append"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Append</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>helpString</span>,
+          <span class=sig-arg>kind</span>)</span>
+  </h3>
+  Appends an item to this menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AppendCheckItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AppendCheckItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>helpString</span>)</span>
+  </h3>
+  Appends a wx.ITEM_CHECK item to this menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AppendItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AppendItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menuItem</span>)</span>
+  </h3>
+  Appends an item to this menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AppendMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AppendMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>subMenu</span>,
+          <span class=sig-arg>helpString</span>)</span>
+  </h3>
+  Appends a menu to this menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AppendRadioItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AppendRadioItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>helpString</span>)</span>
+  </h3>
+  Appends a wx.ITEM_RADIO item to this menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AppendSeparator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AppendSeparator</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Appends a wx.ITEM_SEPARATOR item to this menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Clear"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Clear</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Clears the menu items.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CloseSubMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CloseSubMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>itemIdx</span>,
+          <span class=sig-arg>alwaysClose</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+  Close a child sub-menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Destroy"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Destroy</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+  Destroys an item from the menu.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#Destroy"><code>wx.Window.Destroy</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Dismiss"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Dismiss</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dismissParent</span>,
+          <span class=sig-arg>resetOwner</span>)</span>
+  </h3>
+  Dismisses the popup window.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#Dismiss"><code>wx.lib.agw.flatmenu.FlatMenuBase.Dismiss</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoAction"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoAction</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>itemIdx</span>)</span>
+  </h3>
+  Performs an action based on user selection.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoDrawMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoDrawMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+  Actually draws the menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawLeftMargin"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawLeftMargin</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>menuRect</span>)</span>
+  </h3>
+  Draws the menu left margin.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawSelection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawSelection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>,
+          <span class=sig-arg>oldSelection</span>=<span class=sig-default>-1</span>)</span>
+  </h3>
+  Redraws the menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>itemId</span>,
+          <span class=sig-arg>menu</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+  Finds an item inside the menu based on its id.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindMenuItemPos"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindMenuItemPos</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>itemId</span>,
+          <span class=sig-arg>menu</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+  Finds an item and its position inside the menu based on its id.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindMenuItemPosSimple"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindMenuItemPosSimple</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+  Finds an item and its position inside the menu based on its id.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAccelTable"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAccelTable</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the menu accelerator table.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAllItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAllItems</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menu</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>items</span>=<span class=sig-default>[]</span>)</span>
+  </h3>
+  Internal function to help recurse thru all over the menu items.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBorderXWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBorderXWidth</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the menu border x-width.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetBorderYWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetBorderYWidth</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the menu border y-width.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemHeight"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemHeight</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the height of a particular item.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetLeftMarginWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetLeftMarginWidth</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the menu left margin width.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMenuItemWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMenuItemWidth</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>menuItem</span>)</span>
+  </h3>
+  Returns the width of a particular item.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMenuRect"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMenuRect</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the menu rect.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMenuWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMenuWidth</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the menu width.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNumberColumns"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNumberColumns</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the number of columns for a menu window.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetRightMarginWidth"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetRightMarginWidth</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Returns the menu right margin width.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSiblingGroupItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSiblingGroupItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+  Used internally.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HitTest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HitTest</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+  HitTest method for FlatMenu.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Window-class.html#HitTest"><code>wx.Window.HitTest</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Insert"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Insert</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>,
+          <span class=sig-arg>id</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>helpString</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>kind</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+  Inserts an item into the menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+  Inserts an item into the menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="InsertSeparator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">InsertSeparator</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+  Inserts a wx.ITEM_SEPARATOR item in teh position 'pos'.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnChar"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnChar</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>key</span>)</span>
+  </h3>
+  Handles key events for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnEraseBg"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnEraseBg</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_ERASE_BACKGROUND event for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnKeyDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnKeyDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_KEY_DOWN event for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnKillFocus"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnKillFocus</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_KILL_FOCUS event for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseEnterWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseEnterWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_ENTER_WINDOW event for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseLeaveWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseLeaveWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_LEAVE_WINDOW event for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseLeftDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseLeftDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_LEFT_DOWN event for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseLeftUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseLeftUp</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_LEFT_UP event for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseMove"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseMove</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_MOTION event for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseRightDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseRightDown</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_RIGHT_DOWN event for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPaint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPaint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_PAINT event for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnTimer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnTimer</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Handles the wx.EVT_TIMER event for FlatMenu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OpenItemContextMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OpenItemContextMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>itemIdx</span>)</span>
+  </h3>
+  Open an item's context menu (if any).
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Popup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Popup</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pt</span>,
+          <span class=sig-arg>owner</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>parent</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+  Pops up the menu.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#Popup"><code>wx.lib.agw.flatmenu.FlatMenuBase.Popup</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessMouseLClick"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessMouseLClick</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+  Processes mouse left clicks.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessMouseLClickEnd"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessMouseLClickEnd</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+  Processes mouse left clicks.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessMouseMove"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessMouseMove</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+  Processes mouse movements.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ProcessMouseRClick"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ProcessMouseRClick</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+  Processes mouse right clicks.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RefreshChilds"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RefreshChilds</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  In some cases, we need to perform a recursive refresh for all opened 
+  submenu from this.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Remove"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Remove</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+  Removes an item from the menu.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResizeMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResizeMenu</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Resizes the menu to the correct size.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ScrollDown"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ScrollDown</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Scrolls the menu down (for very tall menus).
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#ScrollDown"><code>wx.lib.agw.flatmenu.FlatMenuBase.ScrollDown</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ScrollUp"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ScrollUp</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Scrolls the menu up (for very tall menus).
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.flatmenu.FlatMenuBase-class.html#ScrollUp"><code>wx.lib.agw.flatmenu.FlatMenuBase.ScrollUp</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SendCmdEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SendCmdEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>itemIdx</span>)</span>
+  </h3>
+  Actually sends menu command events.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SendOverItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SendOverItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>itemIdx</span>,
+          <span class=sig-arg>over</span>)</span>
+  </h3>
+  Sends a mouse over/mouse out event on menu items.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SendUIEvent"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SendUIEvent</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>itemIdx</span>)</span>
+  </h3>
+  Actually sends menu UI events.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMenuBar"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMenuBar</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>mb</span>)</span>
+  </h3>
+  Attaches this menu to a menubar.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetNumberColumns"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetNumberColumns</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>numCols</span>)</span>
+  </h3>
+  Sets the number of columns for a menu window.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="TryOpenSubMenu"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">TryOpenSubMenu</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>itemIdx</span>,
+          <span class=sig-arg>selectFirst</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+  If itemIdx is an item with submenu, open it.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="TryScrollButtons"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">TryScrollButtons</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+  Used internally.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+  Updates an item.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="UpdateRadioGroup"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">UpdateRadioGroup</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+  Updates a group of radio items.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:53:51 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

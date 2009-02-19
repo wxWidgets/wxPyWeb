@@ -23,6 +23,9 @@ Welcome to the home of wxPython, a blending of the
 <p>
 <ul>
 
+<li><i>(16-Feb-2009)</i> <b>wxPython 2.8.9.2</b> This release adds the wx.lib.agw package, adds an event watcher to the widget inspection tool, and fixes a bunch of bugs.</li><p>
+
+
 <li><i>(8-Oct-2008)</i> A set of wxPython binaries for <b>Python 2.6</b> on the Mac and Windows (32-bit and 64-bit) are now available.</li><p>
 
 <li><i>(29-Sept-2008)</i> <b>wxPython 2.8.9.1</b> is now <a href="download.php">available.</a> This release fixes a compatibility problem with Python 2.4.</li><p>

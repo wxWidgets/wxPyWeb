@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -50,197 +50,10 @@ function setFrame(url1, url2){
 <!-- =========== START OF MODULE DESCRIPTION =========== -->
 <h2 class="module">Module wx.lib.buttonpanel</h2>
 
-<p>With <a href="wx.lib.buttonpanel.ButtonPanel-class.html" class="link"><code>ButtonPanel</code></a> class you have a panel with gradient coloring
-on it and with the possibility to place some buttons on it. Using a
-standard panel with normal wx.Buttons leads to an ugly result: the
-buttons are placed correctly on the panel - but with grey area around
-them.  Gradient coloring is kept behind the images - this was achieved
-due to the PNG format and the transparency of the bitmaps.</p>
-<p>The image are functioning like a buttons and can be caught in your
-code using the usual self.Bind(wx.EVT_BUTTON, self.OnButton) method.</p>
-<p>The control is generic, and support theming (well, I tested it under
-Windows with the three defauls themes: grey, blue, silver and the
-classic look).</p>
-<div class="rst-section" id="usage">
-<h1 class="heading"><a name="rst-usage">Usage</a></h1>
-<p>ButtonPanel supports 4 alignments: left, right, top, bottom, which have a
-different meaning and behavior wrt wx.Toolbar. The easiest thing is to try
-the demo to understand, but I'll try to explain how it works.</p>
-<p>CASE 1: ButtonPanel has a main caption text</p>
-<p>Left alignment means ButtonPanel is horizontal, with the text aligned to the
-left. When you shrink the demo frame, if there is not enough room for all
-the controls to be shown, the controls closest to the text are hidden;</p>
-<p>Right alignment means ButtonPanel is horizontal, with the text aligned to the
-right. Item layout as above;</p>
-<p>Top alignment means ButtonPanel is vertical, with the text aligned to the top.
-Item layout as above;</p>
-<p>Bottom alignment means ButtonPanel is vertical, with the text aligned to the
-bottom. Item layout as above.</p>
-<p>CASE 2: ButtonPanel has <em>no</em> main caption text
-In this case, left and right alignment are the same (as top and bottom are the same),
-but the layout strategy changes: now if there is not enough room for all the controls
-to be shown, the last added items are hidden (&quot;last&quot; means on the far right for
-horizontal ButtonPanels and far bottom for vertical ButtonPanels).</p>
-<p>The following example shows a simple implementation that uses ButtonPanel
-inside a very simple frame:</p>
-<pre class="rst-literal-block">
-class MyFrame(wx.Frame):
-
-    def __init__(self, parent, id=-1, title=&quot;ButtonPanel&quot;, pos=wx.DefaultPosition,
-                 size=(800, 600), style=wx.DEFAULT_FRAME_STYLE):
-               
-        wx.Frame.__init__(self, parent, id, title, pos, size, style)
-
-        mainPanel = wx.Panel(self, -1)
-        self.logtext = wx.TextCtrl(mainPanel, -1, &quot;&quot;, style=wx.TE_MULTILINE)
-
-        vSizer = wx.BoxSizer(wx.VERTICAL) 
-        mainPanel.SetSizer(vSizer) 
-
-        alignment = BP_ALIGN_RIGHT 
-
-        titleBar = ButtonPanel(mainPanel, -1, &quot;A Simple Test &amp; Demo&quot;)
-
-        btn1 = ButtonInfo(titleBar, wx.NewId(), wx.Bitmap(&quot;png4.png&quot;, wx.BITMAP_TYPE_PNG))
-        titleBar.AddButton(btn1)
-        self.Bind(wx.EVT_BUTTON, self.OnButton, btn1)
-
-        btn2 = ButtonInfo(titleBar, wx.NewId(), wx.Bitmap(&quot;png3.png&quot;, wx.BITMAP_TYPE_PNG))
-        titleBar.AddButton(btn2)
-        self.Bind(wx.EVT_BUTTON, self.OnButton, btn2)
-
-        btn3 = ButtonInfo(titleBar, wx.NewId(), wx.Bitmap(&quot;png2.png&quot;, wx.BITMAP_TYPE_PNG))
-        titleBar.AddButton(btn3)
-        self.Bind(wx.EVT_BUTTON, self.OnButton, btn3)
-
-        btn4 = ButtonInfo(titleBar, wx.NewId(), wx.Bitmap(&quot;png1.png&quot;, wx.BITMAP_TYPE_PNG))
-        titleBar.AddButton(btn4)
-        self.Bind(wx.EVT_BUTTON, self.OnButton, btn4)
-
-        vSizer.Add(titleBar, 0, wx.EXPAND)
-        vSizer.Add((20, 20))
-        vSizer.Add(self.logtext, 1, wx.EXPAND|wx.ALL, 5)
-
-        titleBar.DoLayout()
-        vSizer.Layout()
-
-# our normal wxApp-derived class, as usual
-
-app = wx.PySimpleApp()
-
-frame = MyFrame(None)
-app.SetTopWindow(frame)
-frame.Show()
-
-app.MainLoop()
-</pre>
-<p>License And Version:</p>
-<p>ButtonPanel Is Freeware And Distributed Under The wxPython License.</p>
-<p>Latest Revision: Andrea Gavana &#64; 12 Oct 2006, 17.00 GMT
-Version 0.3.</p>
-</div>
+<p>Attention! ButtonPanel now lives in wx.lib.agw, together with
+its friends in the Advanced Generic Widgets family.</p>
+<p>Please update your code!</p>
 <hr/>
-
-<!-- =========== START OF CLASSES =========== -->
-<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="summary">
-  <th colspan="2">Classes</th></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.buttonpanel.BoxSizer-class.html"><code>BoxSizer</code></a></b></td>
-  <td>&nbsp;</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.buttonpanel.BPArt-class.html"><code>BPArt</code></a></b></td>
-  <td>BPArt is an art provider class which does all of the drawing for ButtonPanel.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.buttonpanel.ButtonInfo-class.html"><code>ButtonInfo</code></a></b></td>
-  <td>&nbsp;</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.buttonpanel.ButtonPanel-class.html"><code>ButtonPanel</code></a></b></td>
-  <td>&nbsp;</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.buttonpanel.ButtonPanelText-class.html"><code>ButtonPanelText</code></a></b></td>
-  <td>&nbsp;</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.buttonpanel.Control-class.html"><code>Control</code></a></b></td>
-  <td>&nbsp;</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.buttonpanel.Separator-class.html"><code>Separator</code></a></b></td>
-  <td>&nbsp;</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.buttonpanel.Sizer-class.html"><code>Sizer</code></a></b></td>
-  <td>Sizer</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.buttonpanel.StatusBarTimer-class.html"><code>StatusBarTimer</code></a></b></td>
-  <td>Timer used for deleting StatusBar long help after _DELAY seconds.</td></tr>
-</table><br />
-
-
-<!-- =========== START OF FUNCTION SUMMARY =========== -->
-<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="summary">
-  <th colspan="2">Function Summary</th></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><span class="summary-sig"><a href="wx.lib.buttonpanel-module.html#BrightenColour" class="summary-sig-name"><code>BrightenColour</code></a>(<span class=summary-sig-arg>color</span>,
-          <span class=summary-sig-arg>factor</span>)</span></code>
-<br />
-Bright the input colour by a factor.</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><span class="summary-sig"><a href="wx.lib.buttonpanel-module.html#GrayOut" class="summary-sig-name"><code>GrayOut</code></a>(<span class=summary-sig-arg>anImage</span>)</span></code>
-<br />
-Convert the given image (in place) to a grayed-out version,
-appropriate for a 'Disabled' appearance.</td></tr>
-<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
-  <td><code><span class="summary-sig"><a href="wx.lib.buttonpanel-module.html#MakeGray" class="summary-sig-name"><code>MakeGray</code></a>((<span class=summary-sig-arg>r</span>,
-           <span class=summary-sig-arg>g</span>,
-           <span class=summary-sig-arg>b</span>),
-          <span class=summary-sig-arg>factor</span>,
-          <span class=summary-sig-arg>maskColor</span>)</span></code>
-<br />
-Make a pixel grayed-out.</td></tr>
-</table><br />
-
-
-<!-- =========== START OF FUNCTION DETAILS =========== -->
-<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="details">
-  <th colspan="2">Function Details</th></tr>
-</table>
-
-<a name="BrightenColour"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">BrightenColour</span>(<span class=sig-arg>color</span>,
-          <span class=sig-arg>factor</span>)</span>
-  </h3>
-<p>Bright the input colour by a factor.</p>
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-
-<a name="GrayOut"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">GrayOut</span>(<span class=sig-arg>anImage</span>)</span>
-  </h3>
-<p>Convert the given image (in place) to a grayed-out version,
-appropriate for a 'Disabled' appearance.</p>
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-
-<a name="MakeGray"></a>
-<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
-  <h3><span class="sig"><span class="sig-name">MakeGray</span>((<span class=sig-arg>r</span>,
-           <span class=sig-arg>g</span>,
-           <span class=sig-arg>b</span>),
-          <span class=sig-arg>factor</span>,
-          <span class=sig-arg>maskColor</span>)</span>
-  </h3>
-<p>Make a pixel grayed-out. If the pixel matches the maskColor, it won't be
-changed.</p>
-  <dl><dt></dt><dd>
-  </dd></dl>
-</td></tr></table>
-<br />
-
 
 <!-- =========== START OF NAVBAR =========== -->
 <table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
@@ -253,7 +66,7 @@ changed.</p>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -261,7 +74,7 @@ changed.</p>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Sun Sep 28 15:07:38 2008</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:53:54 2009</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

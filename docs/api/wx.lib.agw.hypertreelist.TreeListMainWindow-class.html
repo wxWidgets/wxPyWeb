@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.hypertreelist.TreeListMainWindow</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.hypertreelist-module.html">Module&nbsp;hypertreelist</a> ::
+        Class&nbsp;TreeListMainWindow
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type TreeListMainWindow</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                            
+         |                            
+    <a href="wx.Object-class.html"><code>Object</code></a> --+                        
+             |                        
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+                    
+                 |                    
+            <a href="wx.Window-class.html"><code>Window</code></a> --+                
+                     |                
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+            
+                         |            
+            <a href="wx.ScrolledWindow-class.html"><code>ScrolledWindow</code></a> --+        
+                             |        
+              <a href="wx.PyScrolledWindow-class.html"><code>PyScrolledWindow</code></a> --+    
+                                 |    
+                    <a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html"><code>CustomTreeCtrl</code></a> --+
+                                     |
+                                    <b>TreeListMainWindow</b>
+</pre><br />
+
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__init__"></a><span class="summary-sig"><span class="summary-sig-name">__init__</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>validator</span>,
+          <span class=summary-sig-arg>name</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#AddRoot" class="summary-sig-name"><code>AddRoot</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>ct_type</span>,
+          <span class=summary-sig-arg>wnd</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>selImage</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Adds a root to the HyperTreeList.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#AdjustMyScrollbars" class="summary-sig-name"><code>AdjustMyScrollbars</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Adjust the wx.ScrolledWindow scrollbars.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="CalculateLevel"></a><span class="summary-sig"><span class="summary-sig-name">CalculateLevel</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>level</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>x_colstart</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#CalculatePositions" class="summary-sig-name"><code>CalculatePositions</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Calculates all the positions of the visible items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="CalculateSize"></a><span class="summary-sig"><span class="summary-sig-name">CalculateSize</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#ChildrenClosing" class="summary-sig-name"><code>ChildrenClosing</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+We are about to destroy the item children.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#Delete" class="summary-sig-name"><code>Delete</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Delete an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#DeleteAllItems" class="summary-sig-name"><code>DeleteAllItems</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Delete all items in the CustomTreeCtrl.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="DeleteRoot"></a><span class="summary-sig"><span class="summary-sig-name">DeleteRoot</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#DoInsertItem" class="summary-sig-name"><code>DoInsertItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>previous</span>,
+          <span class=summary-sig-arg>text</span>,
+          <span class=summary-sig-arg>ct_type</span>,
+          <span class=summary-sig-arg>wnd</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>selImage</span>,
+          <span class=summary-sig-arg>data</span>)</span></code>
+<br />
+Actually inserts an item in the tree.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#EditLabel" class="summary-sig-name"><code>EditLabel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Starts editing an item label.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#EnableItem" class="summary-sig-name"><code>EnableItem</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>enable</span>,
+          <span class=summary-sig-arg>torefresh</span>)</span></code>
+<br />
+Enables/disables an item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetBestColumnWidth"></a><span class="summary-sig"><span class="summary-sig-name">GetBestColumnWidth</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>column</span>,
+          <span class=summary-sig-arg>parent</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetColumnCount"></a><span class="summary-sig"><span class="summary-sig-name">GetColumnCount</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetFirstExpandedItem"></a><span class="summary-sig"><span class="summary-sig-name">GetFirstExpandedItem</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetFirstVisibleItem"></a><span class="summary-sig"><span class="summary-sig-name">GetFirstVisibleItem</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>fullRow</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetItemImage"></a><span class="summary-sig"><span class="summary-sig-name">GetItemImage</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>column</span>,
+          <span class=summary-sig-arg>which</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#GetItemText" class="summary-sig-name"><code>GetItemText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the item text.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetItemWidth"></a><span class="summary-sig"><span class="summary-sig-name">GetItemWidth</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>column</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#GetItemWindow" class="summary-sig-name"><code>GetItemWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>column</span>)</span></code>
+<br />
+Returns the window associated to the item (if any).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#GetItemWindowEnabled" class="summary-sig-name"><code>GetItemWindowEnabled</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>column</span>)</span></code>
+<br />
+Returns whether the window associated to the item is enabled.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetMainColumn"></a><span class="summary-sig"><span class="summary-sig-name">GetMainColumn</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetNextExpanded"></a><span class="summary-sig"><span class="summary-sig-name">GetNextExpanded</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetPrevChild"></a><span class="summary-sig"><span class="summary-sig-name">GetPrevChild</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>cookie</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="GetPrevExpanded"></a><span class="summary-sig"><span class="summary-sig-name">GetPrevExpanded</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#GetPrevVisible" class="summary-sig-name"><code>GetPrevVisible</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the previous visible item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="HideItem"></a><span class="summary-sig"><span class="summary-sig-name">HideItem</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>hide</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#HideWindows" class="summary-sig-name"><code>HideWindows</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Hides the windows associated to the items.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#HitTest" class="summary-sig-name"><code>HitTest</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>point</span>,
+          <span class=summary-sig-arg>flags</span>)</span></code>
+<br />
+Calculates which (if any) item is under the given point, returning the tree item
+at this point plus extra information flags.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#IsItemEnabled" class="summary-sig-name"><code>IsItemEnabled</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether an item is enabled or disabled.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#IsItemVisible" class="summary-sig-name"><code>IsItemVisible</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns whether the item is visible or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="IsVirtual"></a><span class="summary-sig"><span class="summary-sig-name">IsVirtual</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#OnMouse" class="summary-sig-name"><code>OnMouse</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles a bunch of wx.EVT_MOUSE_EVENTS events.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#OnPaint" class="summary-sig-name"><code>OnPaint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the wx.EVT_PAINT event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnRenameAccept"></a><span class="summary-sig"><span class="summary-sig-name">OnRenameAccept</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#OnRenameCancelled" class="summary-sig-name"><code>OnRenameCancelled</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Called by TreeTextCtrl, to cancel the changes and to send the
+EVT_TREE_END_LABEL_EDIT event.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#OnRenameTimer" class="summary-sig-name"><code>OnRenameTimer</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+The timer for renaming has expired.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="OnScroll"></a><span class="summary-sig"><span class="summary-sig-name">OnScroll</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="PaintItem"></a><span class="summary-sig"><span class="summary-sig-name">PaintItem</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="PaintLevel"></a><span class="summary-sig"><span class="summary-sig-name">PaintLevel</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>level</span>,
+          <span class=summary-sig-arg>y</span>,
+          <span class=summary-sig-arg>x_maincol</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#ScrollTo" class="summary-sig-name"><code>ScrollTo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Scrolls the specified item into view.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetDragItem"></a><span class="summary-sig"><span class="summary-sig-name">SetDragItem</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetItemImage"></a><span class="summary-sig"><span class="summary-sig-name">SetItemImage</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>image</span>,
+          <span class=summary-sig-arg>column</span>,
+          <span class=summary-sig-arg>which</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#SetItemText" class="summary-sig-name"><code>SetItemText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Sets the item text.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#SetItemWindow" class="summary-sig-name"><code>SetItemWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>window</span>,
+          <span class=summary-sig-arg>column</span>)</span></code>
+<br />
+Sets the window associated to the item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.hypertreelist.TreeListMainWindow-class.html#SetItemWindowEnabled" class="summary-sig-name"><code>SetItemWindowEnabled</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>,
+          <span class=summary-sig-arg>enable</span>,
+          <span class=summary-sig-arg>column</span>)</span></code>
+<br />
+Enables/disables the window associated to the item.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="SetMainColumn"></a><span class="summary-sig"><span class="summary-sig-name">SetMainColumn</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>column</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="AddRoot"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddRoot</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>ct_type</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>wnd</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>image</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>selImage</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>data</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Adds a root to the HyperTreeList. Only one root must exist.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#AddRoot"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.AddRoot</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AdjustMyScrollbars"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AdjustMyScrollbars</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Adjust the wx.ScrolledWindow scrollbars.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#AdjustMyScrollbars"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.AdjustMyScrollbars</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CalculatePositions"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CalculatePositions</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Calculates all the positions of the visible items.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#CalculatePositions"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.CalculatePositions</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ChildrenClosing"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ChildrenClosing</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>We are about to destroy the item children.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#ChildrenClosing"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.ChildrenClosing</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Delete"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Delete</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Delete an item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#Delete"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.Delete</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DeleteAllItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DeleteAllItems</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Delete all items in the CustomTreeCtrl.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#DeleteAllItems"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.DeleteAllItems</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DoInsertItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DoInsertItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>previous</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>ct_type</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>wnd</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>image</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>selImage</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>data</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Actually inserts an item in the tree.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#DoInsertItem"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.DoInsertItem</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EditLabel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EditLabel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>column</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Starts editing an item label.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#EditLabel"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.EditLabel</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="EnableItem"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">EnableItem</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>torefresh</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Enables/disables an item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#EnableItem"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.EnableItem</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>column</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns the item text.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemText"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.GetItemText</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>column</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns the window associated to the item (if any).</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemWindow"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.GetItemWindow</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemWindowEnabled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemWindowEnabled</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>column</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Returns whether the window associated to the item is enabled.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetItemWindowEnabled"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.GetItemWindowEnabled</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPrevVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPrevVisible</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>fullRow</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Returns the previous visible item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#GetPrevVisible"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.GetPrevVisible</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HideWindows"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HideWindows</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Hides the windows associated to the items. Used internally.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#HideWindows"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.HideWindows</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="HitTest"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">HitTest</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>point</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>0</span>)</span>
+  </h3>
+<p>Calculates which (if any) item is under the given point, returning the tree item
+at this point plus extra information flags. Flags is a bitlist of the following:</p>
+<p>TREE_HITTEST_ABOVE            above the client area
+TREE_HITTEST_BELOW            below the client area
+TREE_HITTEST_NOWHERE          no item has been hit
+TREE_HITTEST_ONITEMBUTTON     on the button associated to an item
+TREE_HITTEST_ONITEMICON       on the icon associated to an item
+TREE_HITTEST_ONITEMCHECKICON  on the check/radio icon, if present
+TREE_HITTEST_ONITEMINDENT     on the indent associated to an item
+TREE_HITTEST_ONITEMLABEL      on the label (string) associated to an item
+TREE_HITTEST_ONITEMRIGHT      on the right of the label associated to an item
+TREE_HITTEST_TOLEFT           on the left of the client area
+TREE_HITTEST_TORIGHT          on the right of the client area
+TREE_HITTEST_ONITEMUPPERPART  on the upper part (first half) of the item
+TREE_HITTEST_ONITEMLOWERPART  on the lower part (second half) of the item
+TREE_HITTEST_ONITEM           anywhere on the item</p>
+<p>Note: both the item (if any, None otherwise) and the flag are always returned as a tuple.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#HitTest"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.HitTest</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsItemEnabled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsItemEnabled</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether an item is enabled or disabled.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#IsItemEnabled"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.IsItemEnabled</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsItemVisible"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsItemVisible</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns whether the item is visible or not.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouse"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouse</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles a bunch of wx.EVT_MOUSE_EVENTS events.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnMouse"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.OnMouse</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPaint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPaint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the wx.EVT_PAINT event.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnPaint"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.OnPaint</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnRenameCancelled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnRenameCancelled</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Called by TreeTextCtrl, to cancel the changes and to send the
+EVT_TREE_END_LABEL_EDIT event.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnRenameCancelled"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.OnRenameCancelled</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnRenameTimer"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnRenameTimer</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>The timer for renaming has expired. Start editing.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#OnRenameTimer"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.OnRenameTimer</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ScrollTo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ScrollTo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Scrolls the specified item into view.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#ScrollTo"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.ScrollTo</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>text</span>,
+          <span class=sig-arg>column</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the item text.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemText"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.SetItemText</code></a> <i>(inherited documentation)</i>
+</dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>window</span>,
+          <span class=sig-arg>column</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the window associated to the item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemWindow"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.SetItemWindow</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetItemWindowEnabled"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetItemWindowEnabled</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>,
+          <span class=sig-arg>enable</span>=<span class=sig-default>True</span>,
+          <span class=sig-arg>column</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Enables/disables the window associated to the item.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.customtreectrl.CustomTreeCtrl-class.html#SetItemWindowEnabled"><code>wx.lib.agw.customtreectrl.CustomTreeCtrl.SetItemWindowEnabled</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:52:14 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

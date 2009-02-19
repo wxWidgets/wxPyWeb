@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.speedmeter.SpeedMeter</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.speedmeter-module.html">Module&nbsp;speedmeter</a> ::
+        Class&nbsp;SpeedMeter
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.speedmeter.SpeedMeter-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type SpeedMeter</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+        <a href="wx.lib.agw.speedmeter.BufferedWindow-class.html"><code>BufferedWindow</code></a> --+
+                         |
+                        <b>SpeedMeter</b>
+</pre><br />
+
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>extrastyle</span>,
+          <span class=summary-sig-arg>bufferedstyle</span>,
+          <span class=summary-sig-arg>mousestyle</span>)</span></code>
+<br />
+Default class constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#CircleCoords" class="summary-sig-name"><code>CircleCoords</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>radius</span>,
+          <span class=summary-sig-arg>angle</span>,
+          <span class=summary-sig-arg>centerX</span>,
+          <span class=summary-sig-arg>centerY</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#Draw" class="summary-sig-name"><code>Draw</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>dc</span>)</span></code>
+<br />
+Draws everything on the empty bitmap.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#DrawExternalArc" class="summary-sig-name"><code>DrawExternalArc</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>draw</span>)</span></code>
+<br />
+Specify wheter or not you wish to draw the external (thicker) arc.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetAngleRange" class="summary-sig-name"><code>GetAngleRange</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the range of existence for SpeedMeter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetArcColour" class="summary-sig-name"><code>GetArcColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the external arc colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetDirection" class="summary-sig-name"><code>GetDirection</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the direction of advancing SpeedMeter value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetFillerColour" class="summary-sig-name"><code>GetFillerColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the partial filler colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetFirstGradientColour" class="summary-sig-name"><code>GetFirstGradientColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the first gradient colour (near the ticks).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetHandColour" class="summary-sig-name"><code>GetHandColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the hand (arrow indicator) colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetHandStyle" class="summary-sig-name"><code>GetHandStyle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Sets the style for the hand (arrow indicator).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetIntersection" class="summary-sig-name"><code>GetIntersection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>current</span>,
+          <span class=summary-sig-arg>intervals</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetIntervalColours" class="summary-sig-name"><code>GetIntervalColours</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the colours for the intervals.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetIntervals" class="summary-sig-name"><code>GetIntervals</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the intervals for SpeedMeter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetMiddleIcon" class="summary-sig-name"><code>GetMiddleIcon</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the icon to be drawn near the center of SpeedMeter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetMiddleIconDimens" class="summary-sig-name"><code>GetMiddleIconDimens</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Used internally.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetMiddleText" class="summary-sig-name"><code>GetMiddleText</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the text to be drawn near the center of SpeedMeter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetMiddleTextColour" class="summary-sig-name"><code>GetMiddleTextColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the colour for the text in the middle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetMiddleTextFont" class="summary-sig-name"><code>GetMiddleTextFont</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the font for the text in the middle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetNumberOfSecondaryTicks" class="summary-sig-name"><code>GetNumberOfSecondaryTicks</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the number of secondary (intermediate) ticks.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetSecondGradientColour" class="summary-sig-name"><code>GetSecondGradientColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the first gradient colour (near the center).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetShadowColour" class="summary-sig-name"><code>GetShadowColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the hand's shadow colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetSpeedBackground" class="summary-sig-name"><code>GetSpeedBackground</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the background colour outside the SpeedMeter control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetSpeedStyle" class="summary-sig-name"><code>GetSpeedStyle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns a list of strings and a list of integers containing the styles.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetSpeedValue" class="summary-sig-name"><code>GetSpeedValue</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the current value for SpeedMeter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetTicks" class="summary-sig-name"><code>GetTicks</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the ticks for SpeedMeter intervals (main ticks string values).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetTicksColour" class="summary-sig-name"><code>GetTicksColour</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the ticks colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#GetTicksFont" class="summary-sig-name"><code>GetTicksFont</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Gets the ticks font.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#OnMouseMotion" class="summary-sig-name"><code>OnMouseMotion</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the mouse events.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetAngleRange" class="summary-sig-name"><code>SetAngleRange</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>start</span>,
+          <span class=summary-sig-arg>end</span>)</span></code>
+<br />
+Sets the range of existence for SpeedMeter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetArcColour" class="summary-sig-name"><code>SetArcColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the external arc colour (thicker line).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetDirection" class="summary-sig-name"><code>SetDirection</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>direction</span>)</span></code>
+<br />
+Sets the direction of advancing SpeedMeter value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetFillerColour" class="summary-sig-name"><code>SetFillerColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the partial filler colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetFirstGradientColour" class="summary-sig-name"><code>SetFirstGradientColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the first gradient colour (near the ticks).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetHandColour" class="summary-sig-name"><code>SetHandColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the hand (arrow indicator) colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetHandStyle" class="summary-sig-name"><code>SetHandStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>style</span>)</span></code>
+<br />
+Sets the style for the hand (arrow indicator).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetIntervalColours" class="summary-sig-name"><code>SetIntervalColours</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colours</span>)</span></code>
+<br />
+Sets the colours for the intervals.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetIntervals" class="summary-sig-name"><code>SetIntervals</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>intervals</span>)</span></code>
+<br />
+Sets the intervals for SpeedMeter (main ticks numeric values).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetMiddleIcon" class="summary-sig-name"><code>SetMiddleIcon</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>icon</span>)</span></code>
+<br />
+Sets the icon to be drawn near the center of SpeedMeter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetMiddleText" class="summary-sig-name"><code>SetMiddleText</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>text</span>)</span></code>
+<br />
+Sets the text to be drawn near the center of SpeedMeter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetMiddleTextColour" class="summary-sig-name"><code>SetMiddleTextColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the colour for the text in the middle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetMiddleTextFont" class="summary-sig-name"><code>SetMiddleTextFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+<br />
+Sets the font for the text in the middle.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetNumberOfSecondaryTicks" class="summary-sig-name"><code>SetNumberOfSecondaryTicks</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>ticknum</span>)</span></code>
+<br />
+Sets the number of secondary (intermediate) ticks.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetSecondGradientColour" class="summary-sig-name"><code>SetSecondGradientColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the second gradient colour (near the center).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetShadowColour" class="summary-sig-name"><code>SetShadowColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the hand's shadow colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetSpeedBackground" class="summary-sig-name"><code>SetSpeedBackground</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the background colour outside the SpeedMeter control.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetSpeedValue" class="summary-sig-name"><code>SetSpeedValue</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>value</span>)</span></code>
+<br />
+Sets the current value for SpeedMeter.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetTicks" class="summary-sig-name"><code>SetTicks</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>ticks</span>)</span></code>
+<br />
+Sets the ticks for SpeedMeter intervals (main ticks string values).</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetTicksColour" class="summary-sig-name"><code>SetTicksColour</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Sets the ticks colour.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.speedmeter.SpeedMeter-class.html#SetTicksFont" class="summary-sig-name"><code>SetTicksFont</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>font</span>)</span></code>
+<br />
+Sets the ticks font.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>extrastyle</span>=<span class=sig-default>8</span>,
+          <span class=sig-arg>bufferedstyle</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>mousestyle</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<pre class="literalblock">
+Default class constructor.
+
+Non standard wxPython parameters are:
+
+a) extrastyle: this value specifies the SpeedMeter styles:
+   - SM_ROTATE_TEXT: draws the ticks rotated: the ticks are rotated
+                     accordingly to the tick marks positions;
+   - SM_DRAW_SECTORS: different intervals are painted in differend colours
+                      (every sector of the circle has its own colour);
+   - SM_DRAW_PARTIAL_SECTORS: every interval has its own colour, but only
+                              a circle corona is painted near the ticks;
+   - SM_DRAW_HAND: the hand (arrow indicator) is drawn;
+   - SM_DRAW_SHADOW: a shadow for the hand is drawn;
+   - SM_DRAW_PARTIAL_FILLER: a circle corona that follows the hand position
+                             is drawn near the ticks;
+   - SM_DRAW_SECONDARY_TICKS: intermediate (smaller) ticks are drawn between
+                              principal ticks;
+   - SM_DRAW_MIDDLE_TEXT: some text is printed in the middle of the control
+                          near the center;
+   - SM_DRAW_MIDDLE_ICON: an icon is drawn in the middle of the control near
+                          the center;
+   - SM_DRAW_GRADIENT: a gradient of colours will fill the control;
+   - SM_DRAW_FANCY_TICKS: with this style you can use xml tags to create
+                          some custom text and draw it at the ticks position.
+                          see wx.lib.fancytext for the tags.
+
+b) bufferedstyle: this value allows you to use the normal wx.PaintDC or the
+                  double buffered drawing options:
+   - SM_NORMAL_DC uses the normal wx.PaintDC;
+   - SM_BUFFERED_DC uses the double buffered drawing style.
+
+c) mousestyle: this value allows you to use the mouse to change the SpeedMeter
+               value interactively with left click/drag events:
+
+   - SM_MOUSE_TRACK: the mouse left click/drag allow you to change the
+                     SpeedMeter value interactively.
+</pre>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.speedmeter.BufferedWindow-class.html#__init__"><code>wx.lib.agw.speedmeter.BufferedWindow.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="CircleCoords"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">CircleCoords</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>radius</span>,
+          <span class=sig-arg>angle</span>,
+          <span class=sig-arg>centerX</span>,
+          <span class=sig-arg>centerY</span>)</span>
+  </h3>
+<p>Used internally.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Draw"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Draw</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>dc</span>)</span>
+  </h3>
+<p>Draws everything on the empty bitmap.
+Here all the chosen styles are applied.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.lib.agw.speedmeter.BufferedWindow-class.html#Draw"><code>wx.lib.agw.speedmeter.BufferedWindow.Draw</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawExternalArc"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawExternalArc</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>draw</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+<p>Specify wheter or not you wish to draw the external (thicker) arc.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetAngleRange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetAngleRange</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the range of existence for SpeedMeter.
+The returned values are in radians.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetArcColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetArcColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the external arc colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetDirection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetDirection</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the direction of advancing SpeedMeter value.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFillerColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFillerColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the partial filler colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFirstGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFirstGradientColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the first gradient colour (near the ticks).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHandColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHandColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the hand (arrow indicator) colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetHandStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetHandStyle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Sets the style for the hand (arrow indicator).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetIntersection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetIntersection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>current</span>,
+          <span class=sig-arg>intervals</span>)</span>
+  </h3>
+<p>Used internally.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetIntervalColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetIntervalColours</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the colours for the intervals.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetIntervals"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetIntervals</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the intervals for SpeedMeter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMiddleIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMiddleIcon</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the icon to be drawn near the center of SpeedMeter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMiddleIconDimens"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMiddleIconDimens</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Used internally.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMiddleText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMiddleText</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the text to be drawn near the center of SpeedMeter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMiddleTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMiddleTextColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the colour for the text in the middle.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetMiddleTextFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetMiddleTextFont</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the font for the text in the middle.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetNumberOfSecondaryTicks"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetNumberOfSecondaryTicks</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the number of secondary (intermediate) ticks.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSecondGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSecondGradientColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the first gradient colour (near the center).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetShadowColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetShadowColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the hand's shadow colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSpeedBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSpeedBackground</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the background colour outside the SpeedMeter control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSpeedStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSpeedStyle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns a list of strings and a list of integers containing the styles.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetSpeedValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetSpeedValue</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the current value for SpeedMeter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTicks"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTicks</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the ticks for SpeedMeter intervals (main ticks string values).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTicksColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTicksColour</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the ticks colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetTicksFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetTicksFont</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Gets the ticks font.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnMouseMotion"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnMouseMotion</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the mouse events.</p>
+<p>Here only left clicks/drags are involved. Should SpeedMeter have something more?</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetAngleRange"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetAngleRange</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>start</span>=<span class=sig-default>0</span>,
+          <span class=sig-arg>end</span>=<span class=sig-default>3.1415926535897931</span>)</span>
+  </h3>
+<p>Sets the range of existence for SpeedMeter.
+This values <em>must</em> be specifiend in radians.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetArcColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetArcColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the external arc colour (thicker line).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetDirection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetDirection</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>direction</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the direction of advancing SpeedMeter value.</p>
+<p>Specifying &quot;advance&quot; will move the hand in clock-wise direction (like normal
+car speed control), while using &quot;reverse&quot; will move it counterclock-wise
+direction.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFillerColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFillerColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the partial filler colour.</p>
+<p>A circle corona near the ticks will be filled with this colour, from
+the starting value to the current value of SpeedMeter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetFirstGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetFirstGradientColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the first gradient colour (near the ticks).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHandColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHandColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the hand (arrow indicator) colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetHandStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetHandStyle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the style for the hand (arrow indicator).</p>
+<p>By specifying &quot;Hand&quot; SpeedMeter will draw a polygon that simulates the car
+speed control indicator. Using &quot;Arrow&quot; will force SpeedMeter to draw a
+simple arrow.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetIntervalColours"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetIntervalColours</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colours</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the colours for the intervals.
+Every intervals (circle sector) should have a colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetIntervals"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetIntervals</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>intervals</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the intervals for SpeedMeter (main ticks numeric values).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMiddleIcon"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMiddleIcon</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>icon</span>)</span>
+  </h3>
+<p>Sets the icon to be drawn near the center of SpeedMeter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMiddleText"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMiddleText</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>text</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the text to be drawn near the center of SpeedMeter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMiddleTextColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMiddleTextColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the colour for the text in the middle.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetMiddleTextFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetMiddleTextFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>font</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the font for the text in the middle.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetNumberOfSecondaryTicks"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetNumberOfSecondaryTicks</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>ticknum</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the number of secondary (intermediate) ticks.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSecondGradientColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSecondGradientColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the second gradient colour (near the center).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetShadowColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetShadowColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the hand's shadow colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSpeedBackground"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSpeedBackground</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the background colour outside the SpeedMeter control.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetSpeedValue"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetSpeedValue</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>value</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the current value for SpeedMeter.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTicks"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTicks</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>ticks</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the ticks for SpeedMeter intervals (main ticks string values).</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTicksColour"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTicksColour</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the ticks colour.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="SetTicksFont"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">SetTicksFont</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>font</span>=<span class=sig-default>None</span>)</span>
+  </h3>
+<p>Sets the ticks font.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:53:51 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

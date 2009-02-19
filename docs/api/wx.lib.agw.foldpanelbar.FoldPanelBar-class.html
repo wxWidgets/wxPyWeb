@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.foldpanelbar.FoldPanelBar</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.foldpanelbar-module.html">Module&nbsp;foldpanelbar</a> ::
+        Class&nbsp;FoldPanelBar
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type FoldPanelBar</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+
+                         |
+                        <b>FoldPanelBar</b>
+</pre><br />
+
+<hr/>
+
+<p>The FoldPanelBar is a class which can maintain a list of
+collapsable panels.  Once a panel is collapsed, only it's caption
+bar is visible to the user. This will provide more space for the
+other panels, or allow the user to close panels which are not used
+often to get the most out of the work area.</p>
+<p>This control is easy to use. Simply create it as a child for a
+panel or sash window, and populate panels with
+<a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#AddFoldPanel" class="link"><code>AddFoldPanel</code></a>. Then use the <a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#AddFoldPanelWindow" class="link"><code>AddFoldPanelWindow</code></a> to add
+<a href="wx.Window-class.html" class="link"><code>wx.Window</code></a> derived controls to the current fold panel. Use
+<a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#AddFoldPanelSeparator" class="link"><code>AddFoldPanelSeparator</code></a> to put separators between the groups of
+controls that need a visual separator to group them
+together. After all is constructed, the user can fold the panels
+by doubleclicking on the bar or single click on the arrow, which
+will indicate the collapsed or expanded state.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>pos</span>,
+          <span class=summary-sig-arg>size</span>,
+          <span class=summary-sig-arg>style</span>,
+          <span class=summary-sig-arg>extraStyle</span>)</span></code>
+<br />
+Default Class Constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#AddFoldPanel" class="summary-sig-name"><code>AddFoldPanel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>caption</span>,
+          <span class=summary-sig-arg>collapsed</span>,
+          <span class=summary-sig-arg>foldIcons</span>,
+          <span class=summary-sig-arg>cbstyle</span>)</span></code>
+<br />
+Adds a fold panel to the list of panels.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#AddFoldPanelSeparator" class="summary-sig-name"><code>AddFoldPanelSeparator</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>panel</span>,
+          <span class=summary-sig-arg>colour</span>,
+          <span class=summary-sig-arg>Spacing</span>,
+          <span class=summary-sig-arg>leftSpacing</span>,
+          <span class=summary-sig-arg>rightSpacing</span>)</span></code>
+<br />
+Adds a separator line to the current FoldPanel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#AddFoldPanelWindow" class="summary-sig-name"><code>AddFoldPanelWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>panel</span>,
+          <span class=summary-sig-arg>window</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>Spacing</span>,
+          <span class=summary-sig-arg>leftSpacing</span>,
+          <span class=summary-sig-arg>rightSpacing</span>)</span></code>
+<br />
+Adds a <a href="wx.Window-class.html" class="link"><code>wx.Window</code></a> derived instance to the referenced
+FoldPanel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#ApplyCaptionStyle" class="summary-sig-name"><code>ApplyCaptionStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>foldpanel</span>,
+          <span class=summary-sig-arg>cbstyle</span>)</span></code>
+<br />
+Sets the style of the caption bar (<a href="wx.lib.agw.foldpanelbar.CaptionBar-class.html" class="link"><code>CaptionBar</code></a>) of the
+FoldPanel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#ApplyCaptionStyleAll" class="summary-sig-name"><code>ApplyCaptionStyleAll</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cbstyle</span>)</span></code>
+<br />
+Sets the style of all the caption bars of the FoldPanel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#Collapse" class="summary-sig-name"><code>Collapse</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>foldpanel</span>)</span></code>
+<br />
+Collapses the given FoldPanel reference, and updates the
+foldpanel bar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#Expand" class="summary-sig-name"><code>Expand</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>foldpanel</span>)</span></code>
+<br />
+Expands the given FoldPanel reference, and updates the
+foldpanel bar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#GetCaptionStyle" class="summary-sig-name"><code>GetCaptionStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>foldpanel</span>)</span></code>
+<br />
+Returns the currently used caption style for the FoldPanel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#GetCount" class="summary-sig-name"><code>GetCount</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the number of panels in the FoldPanelBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#GetFoldPanel" class="summary-sig-name"><code>GetFoldPanel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Returns the panel associated with the index &quot;item&quot;.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#GetPanelsLength" class="summary-sig-name"><code>GetPanelsLength</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>collapsed</span>,
+          <span class=summary-sig-arg>expanded</span>)</span></code>
+<br />
+Returns the length of the panels that are expanded and
+collapsed.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#IsVertical" class="summary-sig-name"><code>IsVertical</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns whether the CaptionBar has default orientation or not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#OnPressCaption" class="summary-sig-name"><code>OnPressCaption</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the EVT_CAPTIONBAR event in the FoldPanelBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#OnSizePanel" class="summary-sig-name"><code>OnSizePanel</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the EVT_SIZE event for the FoldPanelBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#RedisplayFoldPanelItems" class="summary-sig-name"><code>RedisplayFoldPanelItems</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Resizes the fold panels so they match the width.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#RefreshPanelsFrom" class="summary-sig-name"><code>RefreshPanelsFrom</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>item</span>)</span></code>
+<br />
+Refreshes all the panels from given index down to last one.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#RepositionCollapsedToBottom" class="summary-sig-name"><code>RepositionCollapsedToBottom</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Repositions all the collapsed panels to the bottom.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><a href="wx.lib.agw.foldpanelbar.CaptionBarStyle-class.html" 
+          class="link"><code>CaptionBarStyle</code></a></font></td>
+<td><b><a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#EmptyCaptionBarStyle"><code>EmptyCaptionBarStyle</code></a></b> = <span title="&lt;wx.lib.agw.foldpanelbar.CaptionBarStyle instance at 0x1ce9998&gt;"><code>&lt;wx.lib.agw.foldpanelbar.CaptionB<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>pos</span>=<span class=sig-default>wx.Point(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>size</span>=<span class=sig-default>wx.Size(-1,&nbsp;-1)</span>,
+          <span class=sig-arg>style</span>=<span class=sig-default>2621440</span>,
+          <span class=sig-arg>extraStyle</span>=<span class=sig-default>0</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Default Class Constructor.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Panel-class.html#__init__"><code>wx.Panel.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddFoldPanel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddFoldPanel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>caption</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>collapsed</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>foldIcons</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>cbstyle</span>=<span class=sig-default>&lt;wx.lib.agw.foldpanelbar.CaptionBarStyle&nbsp;instance&nbsp;at&nbsp;0x1c...</span>)</span>
+  </h3>
+<p>Adds a fold panel to the list of panels.</p>
+<p>If the flag collapsed is set to True, the panel is collapsed
+initially.  The FoldPanel item which is returned, can be used
+as a reference to perform actions upon the fold panel like
+collapsing it, expanding it, or deleting it from the list.</p>
+<p>Use this foldpanel to add windows to it. Please consult
+<a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#AddFoldPanelWindow" class="link"><code>AddFoldPanelWindow</code></a> and <a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#AddFoldPanelSeparator" class="link"><code>AddFoldPanelSeparator</code></a> to know how
+to add items derived from <a href="wx.Window-class.html" class="link"><code>wx.Window</code></a> to the panels.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddFoldPanelSeparator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddFoldPanelSeparator</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>panel</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>wx.Colour()</span>,
+          <span class=sig-arg>Spacing</span>=<span class=sig-default>8</span>,
+          <span class=sig-arg>leftSpacing</span>=<span class=sig-default>2</span>,
+          <span class=sig-arg>rightSpacing</span>=<span class=sig-default>2</span>)</span>
+  </h3>
+<p>Adds a separator line to the current FoldPanel.</p>
+<p>The seperator is a simple line which is drawn and is no real
+component.  It can be used to separate groups of controls
+which belong to each other.  The colour is adjustable, and it
+takes the same Spacing, leftSpacing and rightSpacing as
+<a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#AddFoldPanelWindow" class="link"><code>AddFoldPanelWindow</code></a>.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddFoldPanelWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddFoldPanelWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>panel</span>,
+          <span class=sig-arg>window</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>Spacing</span>=<span class=sig-default>8</span>,
+          <span class=sig-arg>leftSpacing</span>=<span class=sig-default>2</span>,
+          <span class=sig-arg>rightSpacing</span>=<span class=sig-default>2</span>)</span>
+  </h3>
+<p>Adds a <a href="wx.Window-class.html" class="link"><code>wx.Window</code></a> derived instance to the referenced
+FoldPanel.</p>
+<p>IMPORTANT: Make the window be a child of the FoldPanel. See
+example that follows. The flags to be used are:</p>
+<blockquote>
+<ul class="rst-simple">
+<li>FPB_ALIGN_WIDTH: Which means the wxWindow to be added
+will be aligned to fit the width of the FoldPanel when
+it is resized.  Very handy for sizer items, buttons and
+text boxes.</li>
+<li>FPB_ALIGN_LEFT: Aligns left instead of fitting the
+width of the child window to be added. Use either this
+one or FPB_ALIGN_WIDTH.</li>
+</ul>
+</blockquote>
+<p>The wx.Window to be added can be slightly indented from left
+and right so it is more visibly placed in the FoldPanel. Use
+Spacing &gt; 0 to give the control an y offset from the previous
+wx.Window added, use leftSpacing to give it a slight indent
+from the left, and rightSpacing also reserves a little space
+on the right so the wxWindow can be properly placed in the
+FoldPanel.</p>
+<p>The following example adds a FoldPanel to the FoldPanelBar and
+adds two wx.Window derived controls to the FoldPanel:</p>
+<pre class="rst-literal-block">
+# create the FoldPanelBar
+&gt;&gt;&gt; m_pnl = FoldPanelBar(self, wx.ID_ANY, wx.DefaultPosition,
+                         wx.DefaultSize, FPB_DEFAULT_STYLE,
+                         FPB_COLLAPSE_TO_BOTTOM)
+
+# add a foldpanel to the control. &quot;Test me&quot; is the caption and it is
+# initially not collapsed.
+&gt;&gt;&gt; item = m_pnl.AddFoldPanel(&quot;Test me&quot;, False)
+
+# now add a button to the fold panel. Mind that the button should be
+# made child of the FoldPanel and not of the main form.
+&gt;&gt;&gt; m_pnl.AddFoldPanelWindow(item, wx.Button(item, ID_COLLAPSEME,
+                            &quot;Collapse Me&quot;))
+
+# add a separator between the two controls. This is purely a visual
+# line that can have a certain color and also the indents and width
+# aligning like a control.
+&gt;&gt;&gt; m_pnl.AddFoldPanelSeparator(item)
+
+# now add a text ctrl. Also very easy. Align this on width so that
+# when the control gets wider the text control also sizes along.
+&gt;&gt;&gt; m_pnl.AddFoldPanelWindow(item, wx.TextCtrl(item, wx.ID_ANY, &quot;Comment&quot;),
+                             FPB_ALIGN_WIDTH, FPB_DEFAULT_SPACING, 20)
+</pre>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ApplyCaptionStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ApplyCaptionStyle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>foldpanel</span>,
+          <span class=sig-arg>cbstyle</span>)</span>
+  </h3>
+<p>Sets the style of the caption bar (<a href="wx.lib.agw.foldpanelbar.CaptionBar-class.html" class="link"><code>CaptionBar</code></a>) of the
+FoldPanel.</p>
+<p>The changes are applied immediately. All styles not set in the
+CaptionBarStyle class are not applied. Use the CaptionBar
+reference to indicate what captionbar you want to apply the
+style to. To apply one style to all CaptionBar items, use
+<a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html#ApplyCaptionStyleAll" class="link"><code>ApplyCaptionStyleAll</code></a></p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ApplyCaptionStyleAll"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ApplyCaptionStyleAll</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>cbstyle</span>)</span>
+  </h3>
+<p>Sets the style of all the caption bars of the FoldPanel.</p>
+<p>The changes are applied immediately.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Collapse"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Collapse</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>foldpanel</span>)</span>
+  </h3>
+<p>Collapses the given FoldPanel reference, and updates the
+foldpanel bar.</p>
+<p>In the FPB_COLLAPSE_TO_BOTTOM style, all collapsed captions
+are put at the bottom of the control. In the normal mode, they
+stay where they are.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Expand"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Expand</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>foldpanel</span>)</span>
+  </h3>
+<p>Expands the given FoldPanel reference, and updates the
+foldpanel bar.</p>
+<p>In the FPB_COLLAPSE_TO_BOTTOM style, they will be removed from
+the bottom and the order where the panel originally was placed
+is restored.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCaptionStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCaptionStyle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>foldpanel</span>)</span>
+  </h3>
+<p>Returns the currently used caption style for the FoldPanel.</p>
+<p>It is returned as a CaptionBarStyle class. After modifying it,
+it can be set again.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCount"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCount</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the number of panels in the FoldPanelBar.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetFoldPanel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetFoldPanel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Returns the panel associated with the index &quot;item&quot;.</p>
+<p>See the example at the bottom of the module, especially the events
+for the &quot;Collapse Me&quot; and &quot;Expand Me&quot; buttons.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPanelsLength"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPanelsLength</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>collapsed</span>,
+          <span class=sig-arg>expanded</span>)</span>
+  </h3>
+<p>Returns the length of the panels that are expanded and
+collapsed.</p>
+<p>This is useful to determine quickly what size is used to
+display, and what is left at the bottom (right) to align the
+collapsed panels.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsVertical"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsVertical</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns whether the CaptionBar has default orientation or not.</p>
+<p>Default is vertical.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPressCaption"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPressCaption</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the EVT_CAPTIONBAR event in the FoldPanelBar.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnSizePanel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnSizePanel</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the EVT_SIZE event for the FoldPanelBar.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RedisplayFoldPanelItems"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RedisplayFoldPanelItems</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Resizes the fold panels so they match the width.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RefreshPanelsFrom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RefreshPanelsFrom</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>item</span>)</span>
+  </h3>
+<p>Refreshes all the panels from given index down to last one.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RepositionCollapsedToBottom"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RepositionCollapsedToBottom</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Repositions all the collapsed panels to the bottom.</p>
+<p>When it is not possible to align them to the bottom, stick
+them behind the visible panels. The Rect holds the slack area
+left between last repositioned panel and the bottom
+panels. This needs to get a refresh.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EmptyCaptionBarStyle"></a>
+<h3>EmptyCaptionBarStyle</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <a href="wx.lib.agw.foldpanelbar.CaptionBarStyle-class.html" 
+          class="link"><code>CaptionBarStyle</code></a>
+
+      </dd>
+<span title="&lt;wx.lib.agw.foldpanelbar.CaptionBarStyle instance at 0x1ce9998&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx.lib.agw.foldpanelbar.CaptionBarStyle instance at 0x1ce9998&gt;        </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:53:23 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

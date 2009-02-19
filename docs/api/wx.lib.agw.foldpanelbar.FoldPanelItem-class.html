@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.foldpanelbar.FoldPanelItem</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        <a href="wx.lib.agw.foldpanelbar-module.html">Module&nbsp;foldpanelbar</a> ::
+        Class&nbsp;FoldPanelItem
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Type FoldPanelItem</h2>
+
+<pre class="base-tree">
+<a href="__builtin__.object-class.html"><code>object</code></a> --+                
+         |                
+    <a href="wx.Object-class.html"><code>Object</code></a> --+            
+             |            
+    <a href="wx.EvtHandler-class.html"><code>EvtHandler</code></a> --+        
+                 |        
+            <a href="wx.Window-class.html"><code>Window</code></a> --+    
+                     |    
+                 <a href="wx.Panel-class.html"><code>Panel</code></a> --+
+                         |
+                        <b>FoldPanelItem</b>
+</pre><br />
+
+<hr/>
+
+<p>This class is a child sibling of the <a href="wx.lib.agw.foldpanelbar.FoldPanelBar-class.html" class="link"><code>FoldPanelBar</code></a> class. It will
+contain a <a href="wx.lib.agw.foldpanelbar.CaptionBar-class.html" class="link"><code>CaptionBar</code></a> class for receiving of events, and a the
+rest of the area can be populated by a <a href="wx.Panel-class.html" class="link"><code>wx.Panel</code></a> derived class.</p>
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>parent</span>,
+          <span class=summary-sig-arg>id</span>,
+          <span class=summary-sig-arg>caption</span>,
+          <span class=summary-sig-arg>foldIcons</span>,
+          <span class=summary-sig-arg>collapsed</span>,
+          <span class=summary-sig-arg>cbstyle</span>)</span></code>
+<br />
+Default Class Constructor.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#AddSeparator" class="summary-sig-name"><code>AddSeparator</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>colour</span>,
+          <span class=summary-sig-arg>Spacing</span>,
+          <span class=summary-sig-arg>leftSpacing</span>,
+          <span class=summary-sig-arg>rightSpacing</span>)</span></code>
+<br />
+Adds a separator item to the list of items on this panel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#AddWindow" class="summary-sig-name"><code>AddWindow</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>window</span>,
+          <span class=summary-sig-arg>flags</span>,
+          <span class=summary-sig-arg>Spacing</span>,
+          <span class=summary-sig-arg>leftSpacing</span>,
+          <span class=summary-sig-arg>rightSpacing</span>)</span></code>
+<br />
+Adds a window item to the list of items on this panel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#ApplyCaptionStyle" class="summary-sig-name"><code>ApplyCaptionStyle</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cbstyle</span>)</span></code>
+<br />
+Applies the style defined in cbstyle to the CaptionBar.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Collapse"></a><span class="summary-sig"><span class="summary-sig-name">Collapse</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="Expand"></a><span class="summary-sig"><span class="summary-sig-name">Expand</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#GetCaptionLength" class="summary-sig-name"><code>GetCaptionLength</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns height of caption only.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#GetCaptionStyle" class="summary-sig-name"><code>GetCaptionStyle</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns the current style of the captionbar in a
+CaptionBarStyle class.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#GetItemPos" class="summary-sig-name"><code>GetItemPos</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns item's position.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#GetPanelLength" class="summary-sig-name"><code>GetPanelLength</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns size of panel.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#IsExpanded" class="summary-sig-name"><code>IsExpanded</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns expanded or collapsed status.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#IsVertical" class="summary-sig-name"><code>IsVertical</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Returns wether the CaptionBar Has Default Orientation Or Not.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#OnPaint" class="summary-sig-name"><code>OnPaint</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the EVT_PAINT event in the FoldPanelItem.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#OnPressCaption" class="summary-sig-name"><code>OnPressCaption</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>event</span>)</span></code>
+<br />
+Handles the EVT_CAPTIONBAR event in the FoldPanelItem.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#Reposition" class="summary-sig-name"><code>Reposition</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>pos</span>)</span></code>
+<br />
+Repositions this FoldPanelBar and reports the length occupied
+for the next FoldPanelBar in the list.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#ResizePanel" class="summary-sig-name"><code>ResizePanel</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Resizes the panel.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF PROPERTY SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Property Summary</th></tr>
+</table><br />
+
+
+<!-- =========== START OF CLASS VARIABLE SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Class Variable Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1"><a href="wx.lib.agw.foldpanelbar.CaptionBarStyle-class.html" 
+          class="link"><code>CaptionBarStyle</code></a></font></td>
+<td><b><a href="wx.lib.agw.foldpanelbar.FoldPanelItem-class.html#EmptyCaptionBarStyle"><code>EmptyCaptionBarStyle</code></a></b> = <span title="&lt;wx.lib.agw.foldpanelbar.CaptionBarStyle instance at 0x1ce99e0&gt;"><code>&lt;wx.lib.agw.foldpanelbar.CaptionB<span class="variable-ellipsis">...</span></code>
+</span></td></tr>
+</table><br />
+
+
+<!-- =========== START OF INSTANCE METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Instance Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>parent</span>,
+          <span class=sig-arg>id</span>=<span class=sig-default>-1</span>,
+          <span class=sig-arg>caption</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>foldIcons</span>=<span class=sig-default>None</span>,
+          <span class=sig-arg>collapsed</span>=<span class=sig-default>False</span>,
+          <span class=sig-arg>cbstyle</span>=<span class=sig-default>&lt;wx.lib.agw.foldpanelbar.CaptionBarStyle&nbsp;instance&nbsp;at&nbsp;0x1c...</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+<p>Default Class Constructor.</p>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Overrides:</b></dt>
+      <dd><a href="wx.Panel-class.html#__init__"><code>wx.Panel.__init__</code></a></dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddSeparator"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddSeparator</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>colour</span>=<span class=sig-default>wx.Colour()</span>,
+          <span class=sig-arg>Spacing</span>=<span class=sig-default>8</span>,
+          <span class=sig-arg>leftSpacing</span>=<span class=sig-default>5</span>,
+          <span class=sig-arg>rightSpacing</span>=<span class=sig-default>10</span>)</span>
+  </h3>
+<p>Adds a separator item to the list of items on this panel.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="AddWindow"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AddWindow</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>window</span>,
+          <span class=sig-arg>flags</span>=<span class=sig-default>1</span>,
+          <span class=sig-arg>Spacing</span>=<span class=sig-default>8</span>,
+          <span class=sig-arg>leftSpacing</span>=<span class=sig-default>2</span>,
+          <span class=sig-arg>rightSpacing</span>=<span class=sig-default>2</span>)</span>
+  </h3>
+<p>Adds a window item to the list of items on this panel.</p>
+<p>The flags are FPB_ALIGN_LEFT for a non sizing window element,
+and FPB_ALIGN_WIDTH for a width aligned item. The Spacing
+parameter reserves a number of pixels before the window
+element, and leftSpacing is an indent.  rightSpacing is only
+relevant when the style FPB_ALIGN_WIDTH is chosen.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ApplyCaptionStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ApplyCaptionStyle</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>cbstyle</span>)</span>
+  </h3>
+<p>Applies the style defined in cbstyle to the CaptionBar.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCaptionLength"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCaptionLength</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns height of caption only. This is for folding
+calculation purposes.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetCaptionStyle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetCaptionStyle</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns the current style of the captionbar in a
+CaptionBarStyle class.</p>
+<p>This can be used to change and set back the changes.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetItemPos"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetItemPos</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns item's position.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="GetPanelLength"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">GetPanelLength</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns size of panel.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsExpanded"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsExpanded</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns expanded or collapsed status.  If the panel is
+expanded, True is returned.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="IsVertical"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">IsVertical</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Returns wether the CaptionBar Has Default Orientation Or Not.</p>
+<p>Default is vertical.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPaint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPaint</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the EVT_PAINT event in the FoldPanelItem.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="OnPressCaption"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">OnPressCaption</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>event</span>)</span>
+  </h3>
+<p>Handles the EVT_CAPTIONBAR event in the FoldPanelItem.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Reposition"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Reposition</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>pos</span>)</span>
+  </h3>
+<p>Repositions this FoldPanelBar and reports the length occupied
+for the next FoldPanelBar in the list.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="ResizePanel"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">ResizePanel</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+<p>Resizes the panel.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF CLASS VARIABLE DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Class Variable Details</th></tr>
+</table>
+<table width="100%" class="var-details" bgcolor="#e0e0e0"><tr><td>
+<a name="EmptyCaptionBarStyle"></a>
+<h3>EmptyCaptionBarStyle</h3>
+<dl>
+  <dt></dt>
+  <dd>
+    <dl>
+      <dt><b>Type:</b></dt>
+      <dd>
+          <a href="wx.lib.agw.foldpanelbar.CaptionBarStyle-class.html" 
+          class="link"><code>CaptionBarStyle</code></a>
+
+      </dd>
+<span title="&lt;wx.lib.agw.foldpanelbar.CaptionBarStyle instance at 0x1ce99e0&gt;">      <dt><b>Value:</b></dt>
+      <dd><table><tr><td>
+<pre class="variable">
+&lt;wx.lib.agw.foldpanelbar.CaptionBarStyle instance at 0x1ce99e0&gt;        </pre>
+        </td></tr></table></dd>
+</span>    </dl>
+  </dd>
+</dl></td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:54:44 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.shapedbutton</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        Module&nbsp;shapedbutton
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.shapedbutton-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.agw.shapedbutton</h2>
+
+<p>Description:</p>
+<p>ShapedButton tries to fill the lack of &quot;custom shaped&quot; controls in wxPython
+(that depends on the same lack in wxWidgets). It can be used to build round
+buttons or elliptic buttons.</p>
+<p>I have stolen some code from wx.lib.buttons in order to recreate the same
+classes (GenButton, GenBitmapButton, GenBitmapTextButton, GenToggleButton,
+GenBitmapToggleButton, GenBitmapTextToggleButton). Here you have the same
+classes (with &quot;Gen&quot; replaced by &quot;S&quot;), with the same event handling, but they
+are rounded/elliptical buttons.</p>
+<p>ShapedButton is based on a wx.Window, in which 2 images are drawn depending
+on the button state (pressed or not pressed). The 2 images have been stolen
+from Audacity (written with wxWidgets) and rearranged/reshaped/restyled
+using adobe PhotoShop.
+Changing the button colour in runtime was more difficult, but using some
+intelligent instruction from the PIL library it can be done.</p>
+<p>ShapedButton reacts on mouse events <em>only</em> if the mouse event occurred inside
+the circle/ellipse, even if ShapedButton is built on a rectangular window.
+This behavior is a lot different with respect to Audacity round buttons.</p>
+<p>Usage:</p>
+<p>The ShapedButton constructions, excluding wxPython parameter are, for the
+6 Classes:</p>
+<dl class="rst-docutils">
+<dt>MyShapedButton = SButton(parent,</dt>
+<dd>label)</dd>
+<dt>MyShapedButton = SBitmapButton(parent,</dt>
+<dd>bitmap)</dd>
+<dt>MyShapedButton = SBitmapTextButton(parent,</dt>
+<dd>bitmap,
+label)</dd>
+<dt>MyShapedButton = SToggleButton(parent,</dt>
+<dd>label)</dd>
+<dt>MyShapedButton = SBitmapToggleButton(parent,</dt>
+<dd>bitmap)</dd>
+<dt>MyShapedButton = SBitmapTextToggleButton(parent,</dt>
+<dd>bitmap,
+label)</dd>
+</dl>
+<p>The ShapedButton construction and usage is quite similar to the wx.lib.buttons
+implementation.
+For the full listing of the input parameters, see the ShapedButton __init__()
+method.</p>
+<p>Methods and Settings:</p>
+<p>With ShapedButton you can:</p>
+<ul class="rst-simple">
+<li>create rounded/elliptical buttons/togglebuttons;</li>
+<li>Set images for the enabled/disabled/focused/selected state of the button;</li>
+<li>Draw the focus indicator (or disable it);</li>
+<li>Set label colour and font;</li>
+<li>Apply a rotation to the ShapedButton label;</li>
+<li>Change ShapedButton shape and text orientation in runtime.</li>
+</ul>
+<p>For more info on methods and initial styles, please refer to the __init__()
+method for ShapedButton or to the specific functions.</p>
+<p><a href="#id1" name="id2"><span class="rst-problematic" id="id2">|</span></a>=========================================================================== |
+| NOTE: ShapedButton <em>requires</em> PIL (Python Imaging Library) library to      |
+|       be installed.                                                        |
+<a href="#id3" name="id4"><span class="rst-problematic" id="id4">|</span></a>=========================================================================== |</p>
+<p>ShapedButton control is freeware and distributed under the wxPython license.</p>
+<p>Latest revision: Andrea Gavana &#64; 15 Oct 2008, 10.00 GMT
+Version 0.3</p>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.shapedbutton.SBitmapButton-class.html"><code>SBitmapButton</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.shapedbutton.SBitmapTextButton-class.html"><code>SBitmapTextButton</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.shapedbutton.SBitmapTextToggleButton-class.html"><code>SBitmapTextToggleButton</code></a></b></td>
+  <td>A ShapedButton toggle bitmap button with a text label.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.shapedbutton.SBitmapToggleButton-class.html"><code>SBitmapToggleButton</code></a></b></td>
+  <td>A ShapedButton toggle bitmap button.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.shapedbutton.SButton-class.html"><code>SButton</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.shapedbutton.SButtonEvent-class.html"><code>SButtonEvent</code></a></b></td>
+  <td>Event sent from the generic buttons when the button is activated.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.shapedbutton.SToggleButton-class.html"><code>SToggleButton</code></a></b></td>
+  <td>A ShapedButton toggle button.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.shapedbutton-module.html#opj" class="summary-sig-name"><code>opj</code></a>(<span class=summary-sig-arg>path</span>)</span></code>
+<br />
+Convert paths to the platform-specific separator.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Function Details</th></tr>
+</table>
+
+<a name="opj"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">opj</span>(<span class=sig-arg>path</span>)</span>
+  </h3>
+<p>Convert paths to the platform-specific separator.</p>
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:52:41 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

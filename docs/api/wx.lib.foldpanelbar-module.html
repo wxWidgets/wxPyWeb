@@ -28,7 +28,7 @@ function setFrame(url1, url2){
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -50,100 +50,10 @@ function setFrame(url1, url2){
 <!-- =========== START OF MODULE DESCRIPTION =========== -->
 <h2 class="module">Module wx.lib.foldpanelbar</h2>
 
-<p>The <a href="wx.lib.foldpanelbar.FoldPanelBar-class.html" class="link"><code>FoldPanelBar</code></a> is a control that contains multiple panels (of type
-<a href="wx.lib.foldpanelbar.FoldPanelItem-class.html" class="link"><code>FoldPanelItem</code></a>) that can be expanded or collapsed. The captionbar of
-the FoldPanel can be customized by setting it to a horizontal gradient
-style, vertical gradient style, a single color, a rectangle or filled
-rectangle. The FoldPanel items can be collapsed in place or to the
-bottom of the control. <a href="wx.Window-class.html" class="link"><code>wx.Window</code></a> derived controls can be added
-dynamically, and separated by separator lines.  FoldPanelBar is
-freeware and distributed under the wxPython license.</p>
-<div class="rst-section" id="how-does-it-work">
-<h1 class="heading"><a name="rst-how-does-it-work">How does it work</a></h1>
-<p>The internals of the FoldPanelBar is a list of FoldPanelItem objects. Through
-the reference of FoldPanel these panels can be controlled by adding new controls
-to a FoldPanel or adding new FoldPanels to the FoldPanelBar. 
-The CaptionBar fires events to the parent (container of all panel items) when a
-sub-panel needs resizing (either folding or expanding). The fold or expand process
-is simply a resize of the panel so it looks like all controls on it are gone. All
-controls are still child of the FoldPanel they are located on. If they don't
-handle the event (and they won't) then the owner of the FoldPanelBar gets the
-events. This is what you need to handle the controls. There isn't much to it just
-a lot of calculations to see what panel belongs where. There are no sizers
-involved in the panels, everything is purely x-y positioning.</p>
-</div>
-<div class="rst-section" id="what-can-it-do-and-what-not">
-<h1 class="heading"><a name="rst-what-can-it-do-and-what-not">What can it do and what not?</a></h1>
-<blockquote>
-<ol class="rst-loweralpha">
-<li><dl class="first rst-docutils">
-<dt>What it can do:</dt>
-<dd><ul class="first last rst-simple">
-<li>Run-time addition of panels (no deletion just yet)</li>
-<li>Run time addition of controls to the panel (it will be resized accordingly)</li>
-<li>Creating panels in collapsed mode or expanded mode</li>
-<li>Various modes of caption behaviour and filling to make it more appealing</li>
-<li>Panels can be folded and collapsed (or all of them) to allow more space</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p class="first">What it cannot do:</p>
-<blockquote>
-<ul class="rst-simple">
-<li>Selection of a panel like in a list ctrl</li>
-<li>Dragging and dropping the panels</li>
-<li>Re-ordering the panels (not yet)</li>
-</ul>
-</blockquote>
-</li>
-</ol>
-</blockquote>
-</div>
-<div class="rst-section" id="supported-platforms">
-<h1 class="heading"><a name="rst-supported-platforms">Supported platforms</a></h1>
-<dl class="rst-docutils">
-<dt>FoldPanelBar is supported on the following platforms: </dt>
-<dd><ul class="first last rst-simple">
-<li>Windows (Verified on Windows XP, 2000)</li>
-<li>Linux/Unix (GTK2) (Thanks To Toni Brkic And Robin Dunn)</li>
-<li>Mac OSX (Thanks To Robin Dunn For The CaptionBar Size Patch)</li>
-</ul>
-</dd>
-</dl>
-<p>FoldPanelBar is based upon Jorgen Bodde's C++ implementation.
-Latest Revision: Andrea Gavana &#64; 05 Nov 2005, 23.30 CET</p>
-</div>
+<p>Attention! FoldPanelBar now lives in wx.lib.agw, together with
+its friends in the Advanced Generic Widgets family.</p>
+<p>Please update your code!</p>
 <hr/>
-
-<!-- =========== START OF CLASSES =========== -->
-<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="summary">
-  <th colspan="2">Classes</th></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.foldpanelbar.CaptionBar-class.html"><code>CaptionBar</code></a></b></td>
-  <td>This class is a graphical caption component that consists of a
-caption and a clickable arrow.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.foldpanelbar.CaptionBarEvent-class.html"><code>CaptionBarEvent</code></a></b></td>
-  <td>This event will be sent when a EVT_CAPTIONBAR is mapped in the parent.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.foldpanelbar.CaptionBarStyle-class.html"><code>CaptionBarStyle</code></a></b></td>
-  <td>This class encapsulates the styles you wish to set for the
-<a href="wx.lib.foldpanelbar.CaptionBar-class.html" class="link"><code>CaptionBar</code></a> (this is the part of the FoldPanel where the caption
-is displayed).</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.foldpanelbar.FoldPanelBar-class.html"><code>FoldPanelBar</code></a></b></td>
-  <td>The FoldPanelBar is a class which can maintain a list of
-collapsable panels.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.foldpanelbar.FoldPanelItem-class.html"><code>FoldPanelItem</code></a></b></td>
-  <td>This class is a child sibling of the <a href="wx.lib.foldpanelbar.FoldPanelBar-class.html" class="link"><code>FoldPanelBar</code></a> class.</td></tr>
-<tr><td width="15%">
-  <b><a href="wx.lib.foldpanelbar.FoldWindowItem-class.html"><code>FoldWindowItem</code></a></b></td>
-  <td>This class is a child sibling of the <a href="wx.lib.foldpanelbar.FoldPanelItem-class.html" class="link"><code>FoldPanelItem</code></a> class.</td></tr>
-</table><br />
-
 
 <!-- =========== START OF NAVBAR =========== -->
 <table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
@@ -156,7 +66,7 @@ collapsable panels.</td></tr>
       <table border="0" cellpadding="0" cellspacing="0">
       <tr><th class="navbar" align="center">
         <p class="nomargin">
-          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.1</a>
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
       </p></th></tr></table>
     </th>
   </tr>
@@ -164,7 +74,7 @@ collapsable panels.</td></tr>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Sun Sep 28 15:08:01 2008</font></td>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:53:54 2009</font></td>
     <td align="right"><a href="http://epydoc.sourceforge.net"
                       ><font size="-2">http://epydoc.sf.net</font></a></td>
   </tr>

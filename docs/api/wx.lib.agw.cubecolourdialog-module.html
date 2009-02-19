@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.cubecolourdialog</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        Module&nbsp;cubecolourdialog
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.cubecolourdialog-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.agw.cubecolourdialog</h2>
+
+<p>The CubeColourDialog is an alternative implementation of 
+wx.ColourDialog, and it offers different functionalities with respect to 
+the default wxPython one. It can be used as a replacement of 
+wx.ColourDialog with exactly the same syntax and methods.</p>
+Some features:
+<ul>
+  <li>
+    RGB components may be controlled using spin controls or with mouse 
+    gestures on a 3D RGB cube, with the 3 components laying on the X, Y, 
+    Z axes;
+  </li>
+  <li>
+    HSB components may be controlled using spin controls or with mouse 
+    gestures on a 2D colour wheel;
+  </li>
+  <li>
+    Brightness has its own vertical slider to play with;
+  </li>
+  <li>
+    The colour alpha channel can be controlled using another vertical 
+    slider, or via spin control;
+  </li>
+  <li>
+    The colour alpha channel controls can be completely hidden at 
+    startup or the choice to use the alpha channel can be left to the 
+    user while playing with the dialog, via a simple wx.CheckBox;
+  </li>
+  <li>
+    The &quot;old colour&quot; and &quot;new colour&quot; are 
+    displayed in two small custom panel, which support alpha transparency 
+    and texture;
+  </li>
+  <li>
+    CubeColourDialog displays also the HTML colour code in hexadecimal 
+    format;
+  </li>
+  <li>
+    When available, a corresponding &quot;Web Safe&quot; colour is 
+    generated using a 500 web colours &quot;database&quot; (a dictionary 
+    inside the widget source code). Web Safe colours are recognized by 
+    all the browsers;
+  </li>
+  <li>
+    When available, a corresponding &quot;HTML name&quot; for the 
+    selected colour is displayed, by using the same 500 web colours 
+    &quot;database&quot;;
+  </li>
+  <li>
+    When available, a corresponding &quot;Microsoft Access Code&quot; 
+    for the selected colour is displayed, by using the same 500 web 
+    colours &quot;database&quot;.
+  </li>
+</ul>
+<p>And much more.</p>
+<p>License And Version:</p>
+<p>CubeColourDialog is freeware and distributed under the wxPython 
+license.</p>
+<p>Latest Revision: Andrea Gavana &#64; 15 Oct 2008, 10.00 GMT</p>
+Version 0.2.
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.cubecolourdialog.AlphaCtrl-class.html"><code>AlphaCtrl</code></a></b></td>
+  <td>Implements the drawing, mouse handling and sizing routines for the 
+alpha channel control.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.cubecolourdialog.BaseLineCtrl-class.html"><code>BaseLineCtrl</code></a></b></td>
+  <td>Base class used to hold common code for the Alpha channel control and 
+the brightness palette control.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.cubecolourdialog.BasePyControl-class.html"><code>BasePyControl</code></a></b></td>
+  <td>Base class used to hold common code for the HSB colour wheel and the 
+RGB colour cube.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.cubecolourdialog.BrightCtrl-class.html"><code>BrightCtrl</code></a></b></td>
+  <td>Implements the drawing, mouse handling and sizing routines for the 
+brightness palette control.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.cubecolourdialog.Colour-class.html"><code>Colour</code></a></b></td>
+  <td>This is a subclass of wx.Colour, which adds Hue, Saturation and 
+Brightness capability to the base class.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.cubecolourdialog.ColourPanel-class.html"><code>ColourPanel</code></a></b></td>
+  <td>Simple custom class used to display &quot;old&quot; and 
+&quot;new&quot; colour panels, with alpha blending capabilities.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.cubecolourdialog.CubeColourDialog-class.html"><code>CubeColourDialog</code></a></b></td>
+  <td>This is the CubeColourDialog main class implementation.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.cubecolourdialog.CustomPanel-class.html"><code>CustomPanel</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.cubecolourdialog.HSVWheel-class.html"><code>HSVWheel</code></a></b></td>
+  <td>Implements the drawing, mouse handling and sizing routines for the HSV 
+colour wheel.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.cubecolourdialog.LineDescription-class.html"><code>LineDescription</code></a></b></td>
+  <td>Simple class to store description and constants for a line in 2D 
+space.</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.cubecolourdialog.RGBCube-class.html"><code>RGBCube</code></a></b></td>
+  <td>Implements the drawing, mouse handling and sizing routines for the RGB 
+cube colour.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Function Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#AngleFromPoint" class="summary-sig-name"><code>AngleFromPoint</code></a>(<span class=summary-sig-arg>pt</span>,
+          <span class=summary-sig-arg>center</span>)</span></code>
+<br />
+Returns the angle between the x-axis and the line connecting the 
+center and the point pt.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#deg2rad" class="summary-sig-name"><code>deg2rad</code></a>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Transforms degrees into radians.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#Distance" class="summary-sig-name"><code>Distance</code></a>(<span class=summary-sig-arg>pt1</span>,
+          <span class=summary-sig-arg>pt2</span>)</span></code>
+<br />
+Returns the distance between 2 points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#DrawCheckerBoard" class="summary-sig-name"><code>DrawCheckerBoard</code></a>(<span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>rect</span>,
+          <span class=summary-sig-arg>checkColour</span>,
+          <span class=summary-sig-arg>box</span>)</span></code>
+<br />
+Draws a checkerboard on a wx.DC.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#FindC" class="summary-sig-name"><code>FindC</code></a>(<span class=summary-sig-arg>line</span>)</span></code>
+<br />
+Internal function.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#Intersection" class="summary-sig-name"><code>Intersection</code></a>(<span class=summary-sig-arg>line1</span>,
+          <span class=summary-sig-arg>line2</span>)</span></code>
+<br />
+Calculates the intersection point between 2 lines.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#PointOnLine" class="summary-sig-name"><code>PointOnLine</code></a>(<span class=summary-sig-arg>pt1</span>,
+          <span class=summary-sig-arg>pt2</span>,
+          <span class=summary-sig-arg>length</span>,
+          <span class=summary-sig-arg>maxLen</span>)</span></code>
+<br />
+Internal function.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#PtFromAngle" class="summary-sig-name"><code>PtFromAngle</code></a>(<span class=summary-sig-arg>angle</span>,
+          <span class=summary-sig-arg>sat</span>,
+          <span class=summary-sig-arg>center</span>)</span></code>
+<br />
+Given the angle with respect to the x-axis, returns the point based on 
+the saturation value.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#rad2deg" class="summary-sig-name"><code>rad2deg</code></a>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Transforms radians into degrees.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#RestoreOldDC" class="summary-sig-name"><code>RestoreOldDC</code></a>(<span class=summary-sig-arg>dc</span>,
+          <span class=summary-sig-arg>oldPen</span>,
+          <span class=summary-sig-arg>oldBrush</span>,
+          <span class=summary-sig-arg>oldMode</span>)</span></code>
+<br />
+Restores the old settings for a wx.DC.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#rgb2html" class="summary-sig-name"><code>rgb2html</code></a>(<span class=summary-sig-arg>colour</span>)</span></code>
+<br />
+Transforms a RGB triplet into an html hex string.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#scaletomax" class="summary-sig-name"><code>scaletomax</code></a>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Normalize a value as a function of the radius.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#Slope" class="summary-sig-name"><code>Slope</code></a>(<span class=summary-sig-arg>pt1</span>,
+          <span class=summary-sig-arg>pt2</span>)</span></code>
+<br />
+Calculates the slope of the line connecting 2 points.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="wx.lib.agw.cubecolourdialog-module.html#toscale" class="summary-sig-name"><code>toscale</code></a>(<span class=summary-sig-arg>x</span>)</span></code>
+<br />
+Normalize a value as a function of the radius.</td></tr>
+</table><br />
+
+
+<!-- =========== START OF FUNCTION DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Function Details</th></tr>
+</table>
+
+<a name="AngleFromPoint"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">AngleFromPoint</span>(<span class=sig-arg>pt</span>,
+          <span class=sig-arg>center</span>)</span>
+  </h3>
+  Returns the angle between the x-axis and the line connecting the 
+  center and the point pt.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="deg2rad"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">deg2rad</span>(<span class=sig-arg>x</span>)</span>
+  </h3>
+  Transforms degrees into radians.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Distance"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Distance</span>(<span class=sig-arg>pt1</span>,
+          <span class=sig-arg>pt2</span>)</span>
+  </h3>
+  Returns the distance between 2 points.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="DrawCheckerBoard"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">DrawCheckerBoard</span>(<span class=sig-arg>dc</span>,
+          <span class=sig-arg>rect</span>,
+          <span class=sig-arg>checkColour</span>,
+          <span class=sig-arg>box</span>=<span class=sig-default>5</span>)</span>
+  </h3>
+  Draws a checkerboard on a wx.DC. Used for the Alpha channel control 
+  and the colour panels.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="FindC"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">FindC</span>(<span class=sig-arg>line</span>)</span>
+  </h3>
+  Internal function.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Intersection"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Intersection</span>(<span class=sig-arg>line1</span>,
+          <span class=sig-arg>line2</span>)</span>
+  </h3>
+  Calculates the intersection point between 2 lines.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PointOnLine"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PointOnLine</span>(<span class=sig-arg>pt1</span>,
+          <span class=sig-arg>pt2</span>,
+          <span class=sig-arg>length</span>,
+          <span class=sig-arg>maxLen</span>)</span>
+  </h3>
+  Internal function.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="PtFromAngle"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">PtFromAngle</span>(<span class=sig-arg>angle</span>,
+          <span class=sig-arg>sat</span>,
+          <span class=sig-arg>center</span>)</span>
+  </h3>
+  Given the angle with respect to the x-axis, returns the point based 
+  on the saturation value.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="rad2deg"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">rad2deg</span>(<span class=sig-arg>x</span>)</span>
+  </h3>
+  Transforms radians into degrees.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="RestoreOldDC"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">RestoreOldDC</span>(<span class=sig-arg>dc</span>,
+          <span class=sig-arg>oldPen</span>,
+          <span class=sig-arg>oldBrush</span>,
+          <span class=sig-arg>oldMode</span>)</span>
+  </h3>
+  Restores the old settings for a wx.DC.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="rgb2html"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">rgb2html</span>(<span class=sig-arg>colour</span>)</span>
+  </h3>
+  Transforms a RGB triplet into an html hex string.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="scaletomax"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">scaletomax</span>(<span class=sig-arg>x</span>)</span>
+  </h3>
+  Normalize a value as a function of the radius.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="Slope"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">Slope</span>(<span class=sig-arg>pt1</span>,
+          <span class=sig-arg>pt2</span>)</span>
+  </h3>
+  Calculates the slope of the line connecting 2 points.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="toscale"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">toscale</span>(<span class=sig-arg>x</span>)</span>
+  </h3>
+  Normalize a value as a function of the radius.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:52:48 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>wx.lib.agw.balloontip</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+<script language="javascript">
+<!--
+function setFrame(url1, url2){
+    parent.frames[1].location.href = url1;
+    parent.frames[2].location.href = url2;
+}
+-->
+</script>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="wx-module.html">Package&nbsp;wx</a> ::
+        <a href="wx.lib-module.html">Package&nbsp;lib</a> ::
+        <a href="wx.lib.agw-module.html">Package&nbsp;agw</a> ::
+        Module&nbsp;balloontip
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="wx.lib.agw.balloontip-module.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF MODULE DESCRIPTION =========== -->
+<h2 class="module">Module wx.lib.agw.balloontip</h2>
+
+<pre class="literalblock">
+Description:
+
+BalloonTip is a class that allows you to display tooltips in a balloon style
+window (actually a frame), similarly to the windows xp balloon help. There is
+also an arrow that points to the center of the control designed as a &quot;target&quot;
+for the BalloonTip.
+
+What it can do:
+
+- Set the balloon shape as a rectangle or a rounded rectangle;
+- Set an icon to the top-left of the BalloonTip frame;
+- Set a title at the top of the BalloonTip frame;
+- Automatic &quot;best&quot; placement of BalloonTip frame depending on the target
+  control/window position;
+- Runtime customization of title/tip fonts and foreground colours;
+- Runtime change of BalloonTip frame shape;
+- Set the balloon background colour;
+- Possibility to set the delay after which the BalloonTip is displayed;
+- Possibility to set the delay after which the BalloonTip is destroyed;
+- Three different behaviors for the BalloonTip window (regardless the delay
+  destruction time set):
+  a) Destroy by leave: the BalloonTip is destroyed when the mouse leaves the
+     target control/window;
+  b) Destroy by click: the BalloonTip is destroyed when you click on any area
+     of the target control/window;
+  c) Destroy by button: the BalloonTip is destroyed when you click on the
+     top-right close button;
+- Possibility to enable/disable globally the BalloonTip on you application.
+- Set the BalloonTip also for the taskbaricon (revised 7 september 2005)
+
+
+Usage example:
+
+# let's suppose that in your application you have a wx.TextCtrl defined as:
+
+mytextctrl = wx.TextCtrl(panel, -1, &quot;i am a textctrl&quot;)
+
+# you can define your BalloonTip as follows:
+
+tipballoon = BalloonTip(topicon=None, toptitle=&quot;textctrl&quot;,
+                        message=&quot;this is a textctrl&quot;,
+                        shape=BT_ROUNDED,
+                        tipstyle=BT_LEAVE)
+
+# set the BalloonTip target
+tipballoon.SetTarget(mytextctrl)
+# set the BalloonTip background colour
+tipballoon.SetBalloonColour(wx.white)
+# set the font for the balloon title
+tipballoon.SetTitleFont(wx.Font(9, wx.SWISS, wx.NORMAL, wx.BOLD, False))
+# set the colour for the balloon title
+tipballoon.SetTitleColour(wx.BLACK)
+# leave the message font as default
+tipballoon.SetMessageFont()
+# set the message (tip) foreground colour
+tipballoon.SetMessageColour(wx.LIGHT_GREY)
+# set the start delay for the BalloonTip
+tipballoon.SetStartDelay(1000)
+# set the time after which the BalloonTip is destroyed
+tipballoon.SetEndDelay(3000)
+
+
+BalloonTip is freeware and distributed under the wxPython license.
+
+Latest revision: Andrea Gavana &#64; 15 Oct 2008, 10.00 GMT
+Version 0.1
+</pre>
+<hr/>
+
+<!-- =========== START OF CLASSES =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Classes</th></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.balloontip.BalloonFrame-class.html"><code>BalloonFrame</code></a></b></td>
+  <td>&nbsp;</td></tr>
+<tr><td width="15%">
+  <b><a href="wx.lib.agw.balloontip.BalloonTip-class.html"><code>BalloonTip</code></a></b></td>
+  <td>&nbsp;</td></tr>
+</table><br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="wx-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" align="right" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr><th class="navbar" align="center">
+        <p class="nomargin">
+          <a class="navbar" target="_top" href="http://wxPython.org/">wxPython&nbsp;2.8.9.2</a>
+      </p></th></tr></table>
+    </th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1.20050511.rpd on Mon Feb 16 12:55:02 2009</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>

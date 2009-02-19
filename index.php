@@ -43,6 +43,7 @@ since the previous release.   On Mac OS X 10.5 (Leopard) the Python
 2.5 binaries of wxPython are able to be used with either Apple's
 system Python, or with the Python.org version. <p>
 
+<!--    
 <li><i>(29-Nov-2007)</i> <b>wxPython 2.8.7.1</b>  This release has had some bugs
 fixed, some minor patches applied, and also incorporates the Google
 Summer of Code 2007 version of XRCed, and adds the Editra source code
@@ -68,7 +69,7 @@ editor.
 <p><li><i>(20-Jan-2007)</i> <b>wxPython 2.8.1.1</b>  This release adds a few minor enhancements and a number of bug fixes designed to further stabalize
 the 2.8.x release series.
 
-<!--     
+ 
 <p><li><i>(11-Dec-2006)</i> The wxPython reference docs have been put on a server that doesn't choke on large files like this one does.  You can now access the <a href="http://wxpython.wxcommunity.com/docs/api/"><b>API docs</b></a> at <a href="http://wxcommunity.com/">wxCommunity</a>.  Please update your bookmarks.  As always you can also <a href="download.php#documentation">download a tarball</a> containing the html files to access locally if you wish.
 
 <p><li><i>(11-Dec-2006)</i> <b>wxPython 2.8.0.1</b> has been released.  This is the first in a new <a href="http://wiki.wxpython.org/index.cgi/ReleaseSeries">stable release series</a>, and includes a few new widget classes and other enhancements since 2.7.2.  

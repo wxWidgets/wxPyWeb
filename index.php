@@ -22,6 +22,8 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
+<li><i>(22-May-2009)</i> The wx and wxPython mail lists are moving to Google Groups.  See the <a href="maillist.php">mail list page</a> for the new addresses and links.</li><p>
+
 <li><i>(14-May-2009)</i> <b>wxPython 2.8.10.1</b> This release fixes the problem with using Python 2.6's default manifest, and updates wxcairo to work with the latest PyCairo.  More details are in the <a href="recentchanges.php">Recent Changes</a> document.</li><p>
 
 <li><i>(16-Feb-2009)</i> <b>wxPython 2.8.9.2</b> This release adds the wx.lib.agw package, adds an event watcher to the widget inspection tool, and fixes a bunch of bugs.  </li><p>

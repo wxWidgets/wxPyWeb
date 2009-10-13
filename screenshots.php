@@ -85,7 +85,6 @@ Here are various screenshots of wxPython apps developed by some folks on the wxP
 And finally, here are some links to screenshots of wxPython apps out in the wild web:
 <p>
 <ul>
-	<li><a href="http://www.scopal.com/information06.htm">ScoPal</a>: A digital oscilloscope is controlled by a PC, using wxPython
 	<li><a href="http://www.sensi.org/~ak/pyslsk/">PySoulSeek</a>: A GUI for the SoulSeek P2P network</li>
 	<li><a href="http://ipodder.sourceforge.net/screenshots/index.php">iPodder</a>: a cross platform podcast receiver</li>
 	<li>[Please send me links...]

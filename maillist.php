@@ -9,7 +9,19 @@
 <p>
 The wxPython mail lists are an excellent resource for anyone who is using wxPython, especially newbies who are just learning wxPython.  Nearly anyone on the wxPython-useres list will tell you that it is one of the best and friendliest that they have ever seen and a great source of help, not only while they were first learning wxPython, but also when they tackled some of the more complex subjects.  
 </p>
-<p>Each and every one of the list subscribers contribute to that excellence and friendliness.  You are encouraged to stay involved with the mail list.  Don't just ask your question and then fade away.  If you are helped then please try to pass it on someday when somebody asks a question that you know the answer to.  The more you help then the more you learn yourself.  Please keep the tone and language used in your messages friendly, helpful and professional.  If your granny would smack you for saying something that is rude or insensitive then don't send it to our mail lists.  If you don't have much experience with mail lists in the past then you may want to read one of the <a href="http://lmgtfy.com/?q=mail+list+etiquette">etiquette documents</a> out there to help you get aquatinted with good behavior. 
+<p>Each and every one of the list subscribers contribute to that
+  excellence and friendliness.  You are encouraged to stay involved
+  with the mail list.  Don't just ask your question and then fade
+  away.  If you are helped then please try to pass it on someday when
+  somebody asks a question that you know the answer to.  The more you
+  help then the more you learn yourself.  Please keep the tone and
+  language used in your messages friendly, helpful and professional.
+  If your granny would smack you for saying something that is rude or
+  insensitive then don't send it to our mail lists.  If you don't have
+  much experience with mail lists in the past then you may want to
+  read one of
+  the <a href="http://lmgtfy.com/?q=mail+list+etiquette">etiquette
+    documents</a> out there to help you get acquainted with good behavior. 
 </p>
 <p>
 Please note that you must be subscribed to the list to be able to send mail messages to it.  This is done to help reduce the amount of spam messages going through the lists.  Any subscriber found to be posting spam messages to the list will be reported and banned from the list.

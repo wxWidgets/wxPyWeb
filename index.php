@@ -22,7 +22,7 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
-<li><i>(14-May-2010)</i><b>wxPython 2.8.11.0</b> Adds Python 2.7 builds, PySlices, new pubsub implementation, lots of updates to AGW, and lots of bugs fixed.  More details are in the <a href="recentchanges.php">Recent Changes</a> document.</li><p>
+<li><i>(14-May-2010)</i> <b>wxPython 2.8.11.0</b> Adds Python 2.7 builds, PySlices, new pubsub implementation, lots of updates to AGW, and lots of bugs fixed.  More details are in the <a href="recentchanges.php">Recent Changes</a> document.</li><p>
 
 <li><i>(22-May-2009)</i> The wx and wxPython mail lists are moving to Google Groups.  See the <a href="maillist.php">mail list page</a> for the new addresses and links.</li><p>
 

@@ -383,7 +383,7 @@ wxPython2.9-osx-carbon-py2.6</a>
 
 <tr><td nowrap><font size="-1">
 <a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-2.9.1.1-carbon-py2.7.dmg">
-osx-carbon-py2.7</a>
+wxPython2.9-osx-carbon-py2.7</a>
 </font></td>
 <td></td>
 </tr>

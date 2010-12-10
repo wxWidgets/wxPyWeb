@@ -22,6 +22,8 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
+<li><i>(9-Dec-2010)</i> <b>wxPython 2.8 Application Development Cookbook</b> by Cody Precord is published and <a href="#wxPyCookbook">available</a> for purchase.</li><p>
+
 <li><i>(19-October-2010)</i> <b>wxPython 2.9.1.1</b> The first public release of wxPython from the 2.9 development <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a>, with lots and lots (and lots) of changes, enhancements and fixes.  Details are in the <a href="recentchanges.php">Recent Changes</a> document.</li><p>
 
 <li><i>(14-May-2010)</i> <b>wxPython 2.8.11.0</b> Adds Python 2.7 builds, PySlices, new pubsub implementation, lots of updates to AGW, and lots of bugs fixed.  </li><p>
@@ -105,23 +107,44 @@ the 2.8.x release series.
 <br>
 <table width="100%" border="1" cellspacing="0" bgcolor="#BCB8E7"><tr><td>
 <table width="100%" border="0" cellspacing="0" cellpadding="8"><tr><td>
-<a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&tag=wxpython-20&camp=1789&creative=9325&path=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2F1932394621%2Fqid%3D1142131449%2Fsr%3D2-1%2Fref%3Dpd_bbs_b_2_1%3Fs%3Dbooks%26v%3Dglance%26n%3D283155"><img src="images/wxPyBook_cover_150.png" border="0" alt="wxPython in Action" align="left"></a>
+<a href="http://www.amazon.com/gp/product/1932394621?ie=UTF8&tag=wxpython-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1932394621"><img src="images/wxPyBook_cover_150.png" border="0" alt="wxPython in Action" align="left"></a>
 </td><td>&nbsp;
-</td><td valign="top"><br>
-Now available for purchase at a bookstore near you, the book that you have all been waiting for...
-<br><br>
+</td><td valign="top">
 <font size="+2"><b>wxPython in Action</b></font>
 <br>by Noel Rappin and Robin Dunn
 <br><br>
-Also available as an <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=189_23">e-book</a>.
+
+This is the first book about wxPython and offers a friendly tutorial to help you get started, a detailed guide to UI programming practices, and many samples of using wxPython to create and use user interface elements.  It covers an impressive amount of information  delivered at a measured pace, encouraging experimentation and learning by doing.
+
 <p>
-Affiliate Links:  
-<a href="http://www.manning.com/affiliate/idevaffiliate.php?id=189_23">Manning</a>
-<a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&tag=wxpython-20&camp=1789&creative=9325&path=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2F1932394621%2Fqid%3D1142131449%2Fsr%3D2-1%2Fref%3Dpd_bbs_b_2_1%3Fs%3Dbooks%26v%3Dglance%26n%3D283155">Amazon</a>
-<a href="http://service.bfast.com/bfast/click?bfmid=2181&sourceid=41606065&bfpid=1932394621&bfmtype=book">Barnes & Noble</a>
+Available from:  
+<a href="http://www.manning.com/affiliate/idevaffiliate.php?id=189_23">Manning</a>,
+<a href="http://www.amazon.com/gp/product/1932394621?ie=UTF8&tag=wxpython-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1932394621">Amazon</a>, and as an <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=189_23">eBook</a>.
+
 </td>
-</tr></table>
-</tr></table>
+</tr>
+</table>
+
+</tr><tr><td>
+<table width="100%" border="0" cellspacing="0" cellpadding="8"><tr><td valign="top">
+<a name="wxPyCookbook">
+<a href="http://www.amazon.com/gp/product/1849511780?ie=UTF8&tag=wxpython-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1849511780">
+<img src="images/wxPyCookbook-cover-large.jpg" alt="wxPyCookbook-cover-large" width="150" height="185" align="left"/>
+</a>
+</td><td>&nbsp;
+</td><td valign="top">
+<font size="+2"><b>wxPython 2.8 Application Development Cookbook</b></font>
+<br>by Cody Precord
+<br><br>
+
+This book includes a wealth of information on wxPython, application design, and programming approaches. The content of this book is based around wxPython 2.8 but the ideas are applicable to 2.9 and forward as well.  There are more than 80 practical recipes for developing feature-rich applications using wxPython, and plenty of example code to help you learn to quickly create robust, reliable, and reusable wxPython applications.
+
+<p>
+Available from:  <a href="https://www.packtpub.com/wxpython-2-8-application-development-cookbook/book">Packt Publishing</a>, <a href="http://www.amazon.com/gp/product/1849511780?ie=UTF8&tag=wxpython-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1849511780">Amazon</a>, and as an <a href="https://www.packtpub.com/wxpython-2-8-application-development-cookbook/book">eBook</a>.
+</td></tr>
+</table>
+</td></tr>
+</table>
 <br>
 <br>
 <br>

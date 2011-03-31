@@ -12,7 +12,7 @@ People who are familiar with wxPython and wxWidgets, and who are willing to help
 <p>You can learn more about IRC at <a href="http://www.irchelp.org/">IRC Help</a>.  You may also want to read <a href="http://wiki.wxwidgets.org/IRC">this</a>.  If you expect to be using IRC more than just once or twice then registering your nickname is a good idea.  See the <a href="http://freenode.net/faq.shtml">Freenode FAQ</a> for details.
 </p>
 <p>
-The same rules apply to IRC channels as for <a href="maillist.php">mail lists</a>, namely: be polite, be patient, be helpful, be kind, and avoid the 3 W's: no whining, no whingeing and don't be a weenie.  In other words, do not type anything that your granny might smack you for if she saw it.
+The same rules apply to IRC channels as for <a href="maillist.php">mail lists</a>, namely: be polite, be patient, be helpful, be kind, and avoid the 3 W's: no whining, no whinging and don't be a weenie.  In other words, do not type anything that your granny might smack you for if she saw it.
 </p>
 
 <table width="100%" border="1" cellspacing="0" cellpadding="8" bgcolor="#BCB8E7">

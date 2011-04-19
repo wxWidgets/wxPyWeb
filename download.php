@@ -13,7 +13,7 @@
 <table width="100%" border="1" cellspacing="0" cellpadding="8" bgcolor="#BCB8E7">
 <tr><td>
 <font face="sans-serif" size="+1"><b>Stable Release</b></font><br>
-These files are for the most recent release in the "stable" <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a> of wxPython, version <b>2.8.11.0</b>.  The files for the current development release, <b>2.9.1.1</b>, are available <a href="#unstable">below</a>.
+These files are for the most recent release in the "stable" <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a> of wxPython, version <b>2.8.12.0</b>.  The files for the current development release, <b>2.9.1.1</b>, are available <a href="#unstable">below</a>.
 </td></tr>
 <tr><td>
 
@@ -28,34 +28,25 @@ Choose an installer that matches the version of Python you will be using.  If yo
 <table border="0" cellspacing="0" cellpadding="4">
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.11.0-py25.exe">
-wxPython2.8-win32-unicode-py25</a>
-<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.11.0-py25.exe">
-wxPython2.8-win32-ansi-py25</a>
-</font></td>
-<td align="top"><font size="-1">32-bit Python 2.5</td>
-</tr>
-
-<tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.11.0-py26.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.12.0-py26.exe">
 wxPython2.8-win32-unicode-py26</a>
-<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.11.0-py26.exe">
+<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.12.0-py26.exe">
 wxPython2.8-win32-ansi-py26</a>
 </font></td>
 <td><font size="-1">32-bit Python 2.6</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win64-unicode-2.8.11.0-py26.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win64-unicode-2.8.12.0-py26.exe">
 wxPython2.8-win64-unicode-py26</a>
 </font></td>
 <td><font size="-1">64-bit Python 2.6</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.11.0-py27.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.12.0-py27.exe">
 wxPython2.8-win32-unicode-py27</a>
-<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.11.0-py27.exe">
+<br><a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-ansi-2.8.12.0-py27.exe">
 wxPython2.8-win32-ansi-py27</a>
 </font></td>
 <td><font size="-1">32-bit Python 2.7</td>
@@ -63,7 +54,7 @@ wxPython2.8-win32-ansi-py27</a>
 
 <tr>
 <td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win64-unicode-2.8.11.0-py27.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win64-unicode-2.8.12.0-py27.exe">
 wxPython2.8-win64-unicode-py27</a>
 </font></td>
 <td><font size="-1">64-bit Python 2.7</td>
@@ -81,8 +72,8 @@ This installer contains the infamous wxPython demo, other samples, and wxWidgets
 <table border="0" cellspacing="0" cellpadding="4">
 <tr>
 <td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-docs-demos-2.8.11.0.exe">
-wxPython2.8-win32-docs-demos.exe</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-docs-demos-2.8.12.0.exe">
+wxPython2.8-win32-docs-demos</a>
 </font></td>
 </tr></table>
 </div></p>
@@ -98,11 +89,9 @@ These archives contain the wxWidgets headers, libraries and other files that mig
 <table border="0" cellspacing="0" cellpadding="4">
 <tr>
 <td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-devel-2.8.11.0-msvc7.tar.bz2">
-wxPython2.8-win32-devel for MSVC 7.1</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-devel-2.8.11.0-msvc9.tar.bz2">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-devel-2.8.12.0-msvc9.tar.bz2">
 wxPython2.8-win32-devel for MSVC 9</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win64-devel-2.8.11.0-msvc9x64.tar.bz2">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-win64-devel-2.8.12.0-msvc9x64.tar.bz2">
 wxPython2.8-win64-devel for MSVC 9</a>
 </font></td>
 </tr>
@@ -120,28 +109,19 @@ The wxPython binaries for OSX are mountable disk images.  Simply double click to
 <p><div style="padding-left: 1cm;">
 <table border="0" cellspacing="0" cellpadding="4">
 <tr>
-<td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-unicode-2.8.11.0-universal-py2.5.dmg">
-wxPython2.8-osx-unicode-py2.5</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-ansi-2.8.11.0-universal-py2.5.dmg">
-wxPython2.8-osx-ansi-py2.5</a>
-</font></td>
-<td><font size="-1"></td>
-</tr>
-
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-unicode-2.8.11.0-universal-py2.6.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-unicode-2.8.12.0-universal-py2.6.dmg">
 wxPython2.8-osx-unicode-py2.6</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-ansi-2.8.11.0-universal-py2.6.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-ansi-2.8.12.0-universal-py2.6.dmg">
 wxPython2.8-osx-ansi-py2.6</a>
 </font></td>
 <td><font size="-1"></td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-unicode-2.8.11.0-universal-py2.7.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-unicode-2.8.12.0-universal-py2.7.dmg">
 wxPython2.8-osx-unicode-py2.7</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-ansi-2.8.11.0-universal-py2.7.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-ansi-2.8.12.0-universal-py2.7.dmg">
 wxPython2.8-osx-ansi-py2.7</a>
 </font></td>
 <td><font size="-1"></td>
@@ -161,21 +141,14 @@ These disk images contain the wxPython demo, the documentation, some other sampl
 <table border="0" cellspacing="0" cellpadding="4">
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-docs-demos-2.8.11.0-universal-py2.5.dmg">
-wxPython2.8-osx-docs-demos-py2.5</a>
-</font></td>
-<td><font size="-1"></td>
-</tr>
-
-<tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-docs-demos-2.8.11.0-universal-py2.6.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-docs-demos-2.8.12.0-universal-py2.6.dmg">
 wxPython2.8-osx-docs-demos-py2.6</a>
 </font></td>
 <td></td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-docs-demos-2.8.11.0-universal-py2.7.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.8-osx-docs-demos-2.8.12.0-universal-py2.7.dmg">
 wxPython2.8-osx-docs-demos-py2.7</a>
 </font></td>
 <td><font size="-1"></td>
@@ -206,19 +179,19 @@ If you need to build wxPython yourself then you can do so with the first file in
 <table border="0" cellspacing="0" cellpadding="4">
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.11.0.tar.bz2">wxPython-src</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.12.0.tar.bz2">wxPython-src</a>
 </font></td>
 <td><font size="-1">All of the wxWidgets and wxPython source code.</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-docs-2.8.11.0.tar.bz2">wxPython-docs</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-docs-2.8.12.0.tar.bz2">wxPython-docs</a>
 </font></td>
 <td><font size="-1">The plain HTML files for the wxWidgets documentation</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-demo-2.8.11.0.tar.bz2">wxPython-demo</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-demo-2.8.12.0.tar.bz2">wxPython-demo</a>
 </font></td>
 <td><font size="-1">The source code for the wxPython demo and other sample applications.</td>
 </tr>

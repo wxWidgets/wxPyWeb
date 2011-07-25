@@ -26,7 +26,7 @@ Style Guide</a> in the wiki.
 
 <p>
 <h3>Compatibility</h3>
-I release wxPython binaries for both Python 2.4 and Python 2.5. This means that any contributions to wxPython also need to be at least <b>Python 2.4 compatible</b>.
+I release wxPython binaries for both Python 2.6 and Python 2.7. This means that any contributions to wxPython also need to be at least <b>Python 2.6 compatible</b>.
 
 <p>
 

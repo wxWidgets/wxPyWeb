@@ -22,11 +22,14 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
+
+<li><i>(23-July-2011)</i> Two at once! Both <b>wxPython 2.8.12.1</b> and <b>wxPython 2.9.2.1</b> have been released.  2.9.2.1 is the next iteration from the wxPython development <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a>, and 2.8.12.1 contains a minor, but important bug fix in the Bind method. Details are in the <a href="recentchanges.php">Recent Changes</a> document.</li><p>
+
 <li><i>(19-April-2011)</i> <b>wxPython 2.8.12.0</b> This is a new release from the 2.8 stable <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a>.  No major features or enhancements have been added to the core library, so this release is mostly bug fixes in both the C++ and Python parts of the project, plus some enhancements in the wx.lib package. </li><p>
 
 <li><i>(9-Dec-2010)</i> <b>wxPython 2.8 Application Development Cookbook</b> by Cody Precord is published and <a href="#wxPyCookbook">available</a> for purchase.</li><p>
 
-<li><i>(19-October-2010)</i> <b>wxPython 2.9.1.1</b> The first public release of wxPython from the 2.9 development <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a>, with lots and lots (and lots) of changes, enhancements and fixes.  Details are in the <a href="recentchanges.php">Recent Changes</a> document.</li><p>
+<li><i>(19-October-2010)</i> <b>wxPython 2.9.1.1</b> The first public release of wxPython from the 2.9 development <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a>, with lots and lots (and lots) of changes, enhancements and fixes.  </li><p>
 
 <li><i>(14-May-2010)</i> <b>wxPython 2.8.11.0</b> Adds Python 2.7 builds, PySlices, new pubsub implementation, lots of updates to AGW, and lots of bugs fixed.  </li><p>
 

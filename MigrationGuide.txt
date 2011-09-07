@@ -86,6 +86,29 @@ preparing for the move to 2.9.x by making the changes now while still
 working with wxPython 2.8.
 
 
+wx.TextAttr.Merge
+-----------------
+
+I don't remember exactly why I did this but in 2.9 I commented out the
+static version of wxTextAttr::Merge and uncommented the non-static
+method.  So in other words what we have now is a wrapper for::
+
+    void Merge(const wxTextAttr& overlay)
+
+instead of::
+
+    static wxTextAttr Merge(const wxTextAttr& base, const wxTextAttr& overlay)
+
+The non-static version will still do a merge, but will merge it into
+self instead of making a new instance of the wx.TextAttr::
+
+    base.Merge(overlay) # base is modified
+
+If you prefer the old semantics then you can use the new Combine
+static method like this::
+
+    newAttr = wx.TextAttr.Combine(overlay, base, None)
+
 
 
 Miscellaneous Other Stuff
@@ -107,10 +130,11 @@ Upcoming Changes in Project Phoenix
 
 The remainder of this document describes some migration issues for
 Project Phoenix, which will one day replace the current wxPython
-implementation.   These changes do not yet apply to any released
-version of Python and are currently provided for information purposes
-and for a glimpse into the future.  For more information about Project
-Phoenix please see the ProjectPhoenix_ pages in the wiki.
+implementation.  These changes do not yet apply to any released
+version of Python and are currently provided only for informational
+purposes and for a glimpse into the future.  For more information
+about Project Phoenix please see the ProjectPhoenix_ pages in the
+wiki.
 
 .. _ProjectPhoenix: http://wiki.wxpython.org/ProjectPhoenix
 
@@ -138,10 +162,10 @@ wx.PreFrame(), etc.  Now in the Phoenix build of wxPython that is no
 longer neccessary and you can just call the class with no parameters
 like normal.
 
-For those renamed items that are more commonly used I'll add some
-alias that will issue a DeprecationWarning for the first release or
-two after we switch over to the Phoenix version of the code, and then
-remove them in a later release.
+For those renamed items that are more commonly used in the old
+wxPython I'll add some alias that will issue a DeprecationWarning for
+the first release or two after we switch over to the Phoenix version
+of the code, and then remove them in a later release.
 
 
 

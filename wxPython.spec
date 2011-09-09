@@ -89,7 +89,7 @@
 %define pref 	   %{_prefix}
 %define python 	   /usr/bin/python%{pyver}
 %define tarname    wxPython-src
-%define version    2.9.2.0
+%define version    2.9.2.3
 %define ver2       2.9
 
 %define chartype   %(if [ "%{unicode}" = "1" ]; then echo unicode; else echo ansi; fi)

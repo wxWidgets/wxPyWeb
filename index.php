@@ -22,8 +22,9 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
-<li><i>(8-Sept-2011)</i> <b>wxPython 2.9.2.3</b> has been released.  This release fixes a bug that was causing the base class methods of
-wx.richtext.RichTextCtrl to be called incorrectly, causing a crash.
+<li><i>(8-Sept-2011)</i> Here we go again.  <b>wxPython 2.9.2.3</b> has been released. This build fixes an indentation bug that crept in somewhere along the way and that caused the Mac installer to fail as it compiled the .py files
+
+<p><li><i>(8-Sept-2011)</i> <b>wxPython 2.9.2.3</b> has been released.  This release fixes a bug that was causing the base class methods of wx.richtext.RichTextCtrl to be called incorrectly, causing a crash.
 
 <p><li><i>(6-Sept-2011)</i> <b>wxPython 2.9.2.2</b> has been released.  This build adds some fixes for some annoying and subtle bugs, and also a couple nice new features.  The Cairo version of the wx.GraphicsContext back-end can now be used on Windows, and there is a new module in the library that helps wx applications to update themselves when new versions of the software are released. Details are in the <a href="recentchanges.php">Recent Changes</a> document.</li><p>
 

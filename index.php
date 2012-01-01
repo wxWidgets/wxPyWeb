@@ -22,7 +22,9 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
-<li><i>(28-Dec-2011)</i> <b>wxPython (classic) 2.9.3.0</b> has been released.  Among other things, this build adds some classes produced by one of the Google Summer of Code projects, wx.html2.WebView and related classes.  This gives wxPython the ability to embed a native HTML/CSS/JS renderer using the same API and events on all platforms. More details are in the <a href="recentchanges.php">Recent Changes</a> document.</li>
+<li><i>(31-Dec-2011)</i> Happy New Year! <b>wxPython (classic) 2.9.3.1</b> has been released. This release takes care of a few bugs discovered in the installers and documentation of the previous release, and a few other things.  More details are in the <a href="recentchanges.php">Recent Changes</a> document.</li>
+
+<p><li><i>(28-Dec-2011)</i> <b>wxPython (classic) 2.9.3.0</b> has been released.  Among other things, this build adds some classes produced by one of the Google Summer of Code projects, wx.html2.WebView and related classes.  This gives wxPython the ability to embed a native HTML/CSS/JS renderer using the same API and events on all platforms. More details are in the <a href="recentchanges.php">Recent Changes</a> document.</li>
 
 <p><li><i>(8-Sept-2011)</i> Here we go again.  <b>wxPython 2.9.2.4</b> has been released. This build fixes an indentation bug that crept in somewhere along the way and that caused the Mac installer to fail as it compiled the .py files
 

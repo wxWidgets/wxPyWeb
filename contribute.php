@@ -42,9 +42,11 @@ Any CEO's out there that want to <i>sponsor</i> wxPython?  Just pretend it's a l
 <p>
 Seriously though, my dream is to find a way to work full-time on developing, supporting and writing about wxPython and still be able to pay the mortgage and put food on the table.  Unless I happen to find a 1980 certificate for 10,000 shares of Microsoft buried in the basement I expect I'll have to come up with a creative arrangement with one or more business entities to make this happen...
 
+<!--
 <p>
 <b>UPDATE:</b>  My dream has come true and for the past few years <a href="http://www.osafoundation.org">OSAF</a> has been sponsoring my work on wxPython!
 <p><div align="center"><a href="http://www.osafoundation.org/"><img src="images/OSAFLogo.gif" width="559" height="64" alt="" border="0"></a></div>
+-->
 </ul>
 
 <?php require('_footer.in') ?>

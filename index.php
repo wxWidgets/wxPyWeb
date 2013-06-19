@@ -121,6 +121,7 @@ the 2.8.x release series.
 
 <br>
 <br>
+<a name="books" />
 <table width="100%" border="1" cellspacing="0" bgcolor="#BCB8E7"><tr><td>
 <table width="100%" border="0" cellspacing="0" cellpadding="8"><tr><td>
 <a href="http://www.amazon.com/gp/product/1932394621?ie=UTF8&tag=wxpython-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1932394621"><img src="images/wxPyBook_cover_150.png" border="0" alt="wxPython in Action" align="left"></a>

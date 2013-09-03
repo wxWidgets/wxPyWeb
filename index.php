@@ -22,7 +22,9 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
-<li><i>(23-July-2012)</i> <b>wxPython (classic) 2.9.4.0</b> has been released.  There have been a few enhancements and additions, and lots of bugs fixed.  More details are in the <a href="recentchanges.php">Recent Changes</a> document.</li>
+<li><i>(31-Aug-2013)</i> <b>wxPython (classic) 2.9.5.0</b> has been released.  This is another mostly bug fix release, both in wxWidgets and wxPython. More details are in the <a href="recentchanges.php">Recent Changes</a> document.</li>
+
+<p><li><i>(23-July-2012)</i> <b>wxPython (classic) 2.9.4.0</b> has been released.  There have been a few enhancements and additions, and lots of bugs fixed. </li>
 
 <p><li><i>(31-Dec-2011)</i> Happy New Year! <b>wxPython (classic) 2.9.3.1</b> has been released. This release takes care of a few bugs discovered in the installers and documentation of the previous release, and a few other things.</li>
 
@@ -32,6 +34,7 @@ Welcome to the home of wxPython, a blending of the
 
 <p><li><i>(8-Sept-2011)</i> <b>wxPython 2.9.2.3</b> has been released.  This release fixes a bug that was causing the base class methods of wx.richtext.RichTextCtrl to be called incorrectly, causing a crash.
 
+<!--    
 <p><li><i>(6-Sept-2011)</i> <b>wxPython 2.9.2.2</b> has been released.  This build adds some fixes for some annoying and subtle bugs, and also a couple nice new features.  The Cairo version of the wx.GraphicsContext back-end can now be used on Windows, and there is a new module in the library that helps wx applications to update themselves when new versions of the software are released. Details are in the <a href="recentchanges.php">Recent Changes</a> document.</li><p>
 
 <p></p><li><i>(23-July-2011)</i> Two at once! Both <b>wxPython 2.8.12.1</b> and <b>wxPython 2.9.2.1</b> have been released.  2.9.2.1 is the next iteration from the wxPython development <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a>, and 2.8.12.1 contains a minor, but important bug fix in the Bind method. </li><p>
@@ -68,7 +71,6 @@ since the previous release.   On Mac OS X 10.5 (Leopard) the Python
 2.5 binaries of wxPython are able to be used with either Apple's
 system Python, or with the Python.org version. <p>
 
-<!--    
 <li><i>(29-Nov-2007)</i> <b>wxPython 2.8.7.1</b>  This release has had some bugs
 fixed, some minor patches applied, and also incorporates the Google
 Summer of Code 2007 version of XRCed, and adds the Editra source code

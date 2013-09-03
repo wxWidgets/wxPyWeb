@@ -12,8 +12,8 @@
 <a name="stable"></a>
 <table width="100%" border="1" cellspacing="0" cellpadding="8" bgcolor="#BCB8E7">
 <tr><td>
-<font face="sans-serif" size="+1"><b>Stable Release</b></font><br>
-The files in this section are for the most recent release in the "stable" <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a> of wxPython, version <b>2.8.12.1</b>.  The files for the current development release, <b>2.9.4.0</b>, are available <a href="#unstable">below</a>.
+<font face="sans-serif" size="+1"><b>Old Stable Release</b></font><br>
+The files in this section are for the most recent release in the "stable" <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a> of wxPython, version <b>2.8.12.1</b>.  In this context, "stable" means that the APIs are mostly frozen and backwards compatible between subreleases, not neccessarily any more or less buggy than the development series. The files for the current development release, <b>2.9.5.0</b>, are available <a href="#devel">below</a>.
 </td></tr>
 <tr><td>
 
@@ -235,12 +235,11 @@ If you need to build wxPython yourself then you can do so with the first file in
 
 
 
-<a name="unstable"></a>  
+<a name="devel"></a>  
 <table width="100%" border="1" cellspacing="0" cellpadding="8" bgcolor="#BCB8E7">
 <tr><td>
 <font face="sans-serif" size="+1"><b>Development Release</b></font><br>
-These files are for the most recent release in the "unstable" or development <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a> of wxPython, version <b>2.9.4.0</b>.  In this context "unstable" does <b>not</b> mean that it is more buggy than the stable series, but rather that the API is allowed to change in ways that are not backwards compatible (although that really doesn't happen very often.)
-</td></tr>
+These files are for the most recent release in the development <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a> of wxPython, version <b>2.9.5.0</b>.  This being not a "stable" release does not mean that it is more buggy, only that the APIs are allowed to evolve in non-backwards compatible ways if needed, although that doesn't actually happen very often.</td></tr>
 <tr><td>
 
 
@@ -254,21 +253,21 @@ Choose an installer that matches the version of Python you will be using.  If yo
 <table border="0" cellspacing="0" cellpadding="4">
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-win32-2.9.4.0-py26.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-win32-2.9.5.0-py26.exe">
 wxPython2.9-win32-py26</a>
 </font></td>
 <td><font size="-1">32-bit Python 2.6</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-win64-2.9.4.0-py26.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-win64-2.9.5.0-py26.exe">
 wxPython2.9-win64-py26</a>
 </font></td>
 <td><font size="-1">64-bit Python 2.6</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-win32-2.9.4.0-py27.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-win32-2.9.5.0-py27.exe">
 wxPython2.9-win32-py27</a>
 </font></td>
 <td><font size="-1">32-bit Python 2.7</td>
@@ -276,7 +275,7 @@ wxPython2.9-win32-py27</a>
 
 <tr>
 <td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-win64-2.9.4.0-py27.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-win64-2.9.5.0-py27.exe">
 wxPython2.9-win64-py27</a>
 </font></td>
 <td><font size="-1">64-bit Python 2.7</td>
@@ -294,7 +293,7 @@ This installer contains the infamous wxPython demo, other samples, and wxWidgets
 <table border="0" cellspacing="0" cellpadding="4">
 <tr>
 <td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-win32-docs-demos-2.9.4.0.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-win32-docs-demos-2.9.5.0.exe">
 wxPython2.9-win32-docs-demos.exe</a>
 </font></td>
 </tr></table>
@@ -311,8 +310,8 @@ These installers contain the wxWidgets headers, libraries and other files that m
 <table border="0" cellspacing="0" cellpadding="4">
 <tr>
 <td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxWidgets2.9-devel-win32-2.9.4.0.exe">32-bit binaries for MSVC 9</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxWidgets2.9-devel-win64-2.9.4.0.exe">64-bit binaries for MSVC 9</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxWidgets2.9-devel-win32-2.9.5.0.exe">32-bit binaries for MSVC 9</a><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxWidgets2.9-devel-win64-2.9.5.0.exe">64-bit binaries for MSVC 9</a>
 </font></td>
 </tr>
 </table>
@@ -329,21 +328,21 @@ The wxPython binaries for OSX are mountable disk images.  Simply double click to
 <p><div style="padding-left: 1cm;">
 <table border="0" cellspacing="0" cellpadding="4">
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-2.9.4.0-carbon-py2.6.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-2.9.5.0-carbon-py2.6.dmg">
 wxPython2.9-osx-carbon-py2.6</a>
 </font></td>
 <td></td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-2.9.4.0-carbon-py2.7.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-2.9.5.0-carbon-py2.7.dmg">
 wxPython2.9-osx-carbon-py2.7</a>
 </font></td>
 <td></td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-2.9.4.0-cocoa-py2.7.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-2.9.5.0-cocoa-py2.7.dmg">
 wxPython2.9-osx-cocoa-py2.7</a>
 </font></td>
 <td></td>
@@ -363,21 +362,21 @@ These disk images contain the wxPython demo, the documentation, some other sampl
 <table border="0" cellspacing="0" cellpadding="4">
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-docs-demos-2.9.4.0-carbon-py2.6.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-docs-demos-2.9.5.0-carbon-py2.6.dmg">
 wxPython2.9-osx-docs-demos-carbon-py2.6</a>
 </font></td>
 <td></td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-docs-demos-2.9.4.0-carbon-py2.7.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-docs-demos-2.9.5.0-carbon-py2.7.dmg">
 wxPython2.9-osx-docs-demos-carbon-py2.7</a>
 </font></td>
 <td></td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-docs-demos-2.9.4.0-cocoa-py2.7.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython2.9-osx-docs-demos-2.9.5.0-cocoa-py2.7.dmg">
 wxPython2.9-osx-docs-demos-cocoa-py2.7</a>
 </font></td>
 <td></td>
@@ -408,19 +407,19 @@ If you need to build wxPython yourself then you can do so with the first file in
 <table border="0" cellspacing="0" cellpadding="4">
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-src-2.9.4.0.tar.bz2">wxPython-src</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-src-2.9.5.0.tar.bz2">wxPython-src</a>
 </font></td>
 <td><font size="-1">All of the wxWidgets and wxPython source code.</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-docs-2.9.4.0.tar.bz2">wxPython-docs</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-docs-2.9.5.0.tar.bz2">wxPython-docs</a>
 </font></td>
 <td><font size="-1">The plain HTML files for the wxWidgets documentation</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-demo-2.9.4.0.tar.bz2">wxPython-demo</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-demo-2.9.5.0.tar.bz2">wxPython-demo</a>
 </font></td>
 <td><font size="-1">The source code for the wxPython demo and other sample applications.</td>
 </tr>

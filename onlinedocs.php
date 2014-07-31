@@ -3,6 +3,6 @@
 </HEAD>
 
 <?php require('_frame_before.in') ?>
-"http://wxwidgets.org/manuals/stable/wx_contents.html"
+"http://docs.wxwidgets.org/stable/"
 <?php require('_frame_after.in') ?>
 

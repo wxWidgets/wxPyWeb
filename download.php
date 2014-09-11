@@ -27,21 +27,21 @@ Choose an installer that matches the version of Python you will be using.  If yo
 <table border="0" cellspacing="0" cellpadding="4">
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-win32-3.0.1.0-py26.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-win32-3.0.1.1-py26.exe">
 wxPython3.0-win32-py26</a>
 </font></td>
 <td><font size="-1">32-bit Python 2.6</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-win64-3.0.1.0-py26.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-win64-3.0.1.1-py26.exe">
 wxPython3.0-win64-py26</a>
 </font></td>
 <td><font size="-1">64-bit Python 2.6</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-win32-3.0.1.0-py27.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-win32-3.0.1.1-py27.exe">
 wxPython3.0-win32-py27</a>
 </font></td>
 <td><font size="-1">32-bit Python 2.7</td>
@@ -49,7 +49,7 @@ wxPython3.0-win32-py27</a>
 
 <tr>
 <td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-win64-3.0.1.0-py27.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-win64-3.0.1.1-py27.exe">
 wxPython3.0-win64-py27</a>
 </font></td>
 <td><font size="-1">64-bit Python 2.7</td>
@@ -67,7 +67,7 @@ This installer contains the infamous wxPython demo, other samples, and wxWidgets
 <table border="0" cellspacing="0" cellpadding="4">
 <tr>
 <td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-win32-docs-demos-3.0.1.0.exe">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-win32-docs-demos-3.0.1.1.exe">
 wxPython3.0-win32-docs-demos.exe</a>
 </font></td>
 </tr></table>
@@ -84,8 +84,8 @@ These installers contain the wxWidgets headers, libraries and other files that m
 <table border="0" cellspacing="0" cellpadding="4">
 <tr>
 <td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxWidgets3.0-devel-win32-3.0.1.0.exe">32-bit binaries for MSVC 9</a><br>
-<a href="http://downloads.sourceforge.net/wxpython/wxWidgets3.0-devel-win64-3.0.1.0.exe">64-bit binaries for MSVC 9</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxWidgets3.0-devel-win32-3.0.1.1.exe">32-bit binaries for MSVC 9</a><br>
+<a href="http://downloads.sourceforge.net/wxpython/wxWidgets3.0-devel-win64-3.0.1.1.exe">64-bit binaries for MSVC 9</a>
 </font></td>
 </tr>
 </table>
@@ -102,21 +102,21 @@ The wxPython binaries for OSX are mountable disk images.  Simply double click to
 <p><div style="padding-left: 1cm;">
 <table border="0" cellspacing="0" cellpadding="4">
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-3.0.1.0-carbon-py2.6.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-3.0.1.1-carbon-py2.6.dmg">
 wxPython3.0-osx-carbon-py2.6</a>
 </font></td>
 <td></td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-3.0.1.0-carbon-py2.7.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-3.0.1.1-carbon-py2.7.dmg">
 wxPython3.0-osx-carbon-py2.7</a>
 </font></td>
 <td></td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-3.0.1.0-cocoa-py2.7.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-3.0.1.1-cocoa-py2.7.dmg">
 wxPython3.0-osx-cocoa-py2.7</a>
 </font></td>
 <td></td>
@@ -136,21 +136,21 @@ These disk images contain the wxPython demo, the documentation, some other sampl
 <table border="0" cellspacing="0" cellpadding="4">
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-docs-demos-3.0.1.0-carbon-py2.6.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-docs-demos-3.0.1.1-carbon-py2.6.dmg">
 wxPython3.0-osx-docs-demos-carbon-py2.6</a>
 </font></td>
 <td></td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-docs-demos-3.0.1.0-carbon-py2.7.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-docs-demos-3.0.1.1-carbon-py2.7.dmg">
 wxPython3.0-osx-docs-demos-carbon-py2.7</a>
 </font></td>
 <td></td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-docs-demos-3.0.1.0-cocoa-py2.7.dmg">
+<a href="http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-docs-demos-3.0.1.1-cocoa-py2.7.dmg">
 wxPython3.0-osx-docs-demos-cocoa-py2.7</a>
 </font></td>
 <td></td>
@@ -181,19 +181,19 @@ If you need to build wxPython yourself then you can do so with the first file in
 <table border="0" cellspacing="0" cellpadding="4">
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-src-3.0.1.0.tar.bz2">wxPython-src</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-src-3.0.1.1.tar.bz2">wxPython-src</a>
 </font></td>
 <td><font size="-1">All of the wxWidgets and wxPython source code.</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-docs-3.0.1.0.tar.bz2">wxPython-docs</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-docs-3.0.1.1.tar.bz2">wxPython-docs</a>
 </font></td>
 <td><font size="-1">The plain HTML files for the wxWidgets documentation</td>
 </tr>
 
 <tr><td nowrap><font size="-1">
-<a href="http://downloads.sourceforge.net/wxpython/wxPython-demo-3.0.1.0.tar.bz2">wxPython-demo</a>
+<a href="http://downloads.sourceforge.net/wxpython/wxPython-demo-3.0.1.1.tar.bz2">wxPython-demo</a>
 </font></td>
 <td><font size="-1">The source code for the wxPython demo and other sample applications.</td>
 </tr>

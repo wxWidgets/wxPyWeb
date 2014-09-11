@@ -22,7 +22,9 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
-<li><i>(5-Sept-2014)</i> <b>wxPython (classic) 3.0.1.0</b> has been released. (Finally! Sorry, life and work has kept me busy.) No new features but lots of bug fixes in wxWidgets. Please see the <a href="recentchanges.php">Recent Changes</a> document.</li>
+<li><i>(10-Sept-2014)</i> <b>wxPython (classic) 3.0.1.1</b> has been released. This build adds updates for some of the 3rd-party code that was missed in the last build.  Please see the <a href="recentchanges.php">Recent Changes</a> document.</li>
+
+<p><li><i>(5-Sept-2014)</i> <b>wxPython (classic) 3.0.1.0</b> has been released. (Finally! Sorry, life and work has kept me busy.) No new features but lots of bug fixes in wxWidgets.</li>
 
 <p><li><i>(25-Dec-2013)</i> <b>wxPython (classic) 3.0.0.0</b> has been released.  No new features but lots of bug fixes in wxWidgets and of course the bump (finally!) up to 3.0.</li>
 

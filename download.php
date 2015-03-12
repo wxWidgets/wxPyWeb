@@ -98,6 +98,10 @@ These installers contain the wxWidgets headers, libraries and other files that m
 <font face="sans-serif" size="+1"><b>Mac OSX Binaries</b></font><br>
 The wxPython binaries for OSX are mountable disk images.  Simply double click to mount the image and then run the installer application in the image.  Be sure to download the image that matches the version of Python that you want to use it with.  The files with "carbon" in the name use the Carbon API for implementing the GUI, are compatible with PPC and i386 machines and will work on OSX 10.5 and onwards.  The file with "cocoa" in the name use the Cocoa API for implementing the GUI, requires at least OSX 10.5, and supports either 32-bit or 64-bit architectures.  If you would like to have both the Carbon and Cocoa versions installed you will need to do something like install the Carbon build for Python 2.6 and install the Cocoa build for Python 2.7.
 
+<p><b>NOTE:</b> This installer is not signed by Apple, so by default
+your Mac will tell you it is corrupted and will not install it.  You
+can get around this by temporarily relaxing the security settings in
+System Preferences.  In the Security & Privacy section set "Allow applications downloaded from" to "Anywhere."
 
 <p><div style="padding-left: 1cm;">
 <table border="0" cellspacing="0" cellpadding="4">

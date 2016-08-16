@@ -1,5 +1,5 @@
 <HTML>
-<HEAD><TITLE>wxPython Coding Guidelines</TITLE>
+<HEAD><TITLE>wxPython Bookshelf</TITLE>
 </HEAD>
 <BODY BGCOLOR="#FFFFFF">
 <?php require('_header.in') ?>
@@ -32,7 +32,7 @@ This is just a list of Python books, and related tech books that Robin has writt
 <div align="left"><table><tr><td>
 <a href="https://www.amazon.com/gp/product/1785287737/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1785287737&linkCode=as2&tag=wxpython-20&linkId=07bd78a71114d58ac49e6d90669bb5f1"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1785287737&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=wxpython-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=wxpython-20&l=am2&o=1&a=1785287737" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 </td><td>
-<a  href="https://www.amazon.com/gp/product/1785287737/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1785287737&linkCode=as2&tag=wxpython-20&linkId=a1fc5f5e08dce0eec16d26a76aca3719">WxPython Application Development Cookbook</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=wxpython-20&l=am2&o=1&a=1785287737" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a  href="https://www.amazon.com/gp/product/1785287737/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1785287737&linkCode=as2&tag=wxpython-20&linkId=a1fc5f5e08dce0eec16d26a76aca3719">wxPython Application Development Cookbook</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=wxpython-20&l=am2&o=1&a=1785287737" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 </td></tr></table></div>
 
 

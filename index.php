@@ -142,14 +142,7 @@ the 2.8.x release series.
 <br><br>
 
 This is the first book about wxPython and offers a friendly tutorial to help you get started, a detailed guide to UI programming practices, and many samples of using wxPython to create and use user interface elements.  It covers an impressive amount of information  delivered at a measured pace, encouraging experimentation and learning by doing.
-
-<p>
-Available from:  
-<a href="http://www.manning.com/affiliate/idevaffiliate.php?id=189_23">Manning</a>,
-<a href="http://www.amazon.com/gp/product/1932394621?ie=UTF8&tag=wxpython-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1932394621">Amazon</a>, and as an <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=189_23">eBook</a>.
-
-</td>
-</tr>
+</td></tr>
 </table>
 
 </tr><tr><td>
@@ -166,11 +159,12 @@ Available from:
 
 This book includes a wealth of information on wxPython, application design, and programming approaches. The content of this book is based around wxPython 2.8 but the ideas are applicable to 2.9 and forward as well.  There are more than 80 practical recipes for developing feature-rich applications using wxPython, and plenty of example code to help you learn to quickly create robust, reliable, and reusable wxPython applications.
 
-<p>
-Available from:  <a href="https://www.packtpub.com/wxpython-2-8-application-development-cookbook/book">Packt Publishing</a>, <a href="http://www.amazon.com/gp/product/1849511780?ie=UTF8&tag=wxpython-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1849511780">Amazon</a>, and as an <a href="https://www.packtpub.com/wxpython-2-8-application-development-cookbook/book">eBook</a>.
 </td></tr>
 </table>
 </td></tr>
+<tr><td><br><br><center>
+Also, be sure to check out the other books on the <a href="bookshelf.php">wxPython Bookshelf</a>.
+</center><br><br></td></tr>
 </table>
 <br>
 <br>

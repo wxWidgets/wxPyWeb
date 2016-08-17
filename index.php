@@ -10,7 +10,6 @@
 
 Welcome to the home of wxPython, a blending of the
 <a href="http://wxwidgets.org/" target="_top">wxWidgets</a> C++ class library  with the <a href="http://www.python.org/" target="_top">Python</a> programming language.
-
 <p>
 <br>
 <br>
@@ -22,9 +21,22 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
+<li><i>(Summer 2016)</i> The <b>wxPython Phoenix</b> train is back on the tracks and moving forward at full steam ahead! 
+
+<p><i>"Phoenix"</i> is the code name of the next generation of the wxPython project.  The primary goals of the project are to make it much easier&mdash;through increased automation&mdash;to develop, maintain, and enhance wxPython in the future, and to remove old hacks and other cruft that are no longer needed and which tends to cause confusion for new users. The secondary goals are to make wxPython <i>"...better, stronger, faster."</i> than he was before.
+
+<p>While Phoenix is currently in a pre-alpha state, it is already in a very usable state and many people are already using it in their projects.  You can download binary wheels for Python 2.7 and 3.[45] on Windows and OSX from the <a href="https://wxpython.org/Phoenix/snapshot-builds/">snapshots folder</a>. Be sure to check the <a href="https://wxpython.org/Phoenix/snapshot-builds/README.txt">README</a> file there for more details about what is there and how to use it.  Alpha #1 is on the horizon, at which point Phoenix will start being available directly from PyPI.
+
+<p>If you want to learn more about Phoenix or to help with the effort, please join the <a href="https://groups.google.com/forum/#!forum/wxpython-dev">wxPython-dev group</a>.  You can also track development or submit PRs at the <a href="https://github.com/wxWidgets/Phoenix">Phoenix GitHub project</a>.  
+
+<p>Finally, members of the wxPython community have joined together to make pledges towards a bounty reward for the completion of the Phoenix release, with the primary goal of jump-starting development.  If you are interested in making a pledge, please read this <a href="https://groups.google.com/d/msg/wxpython-users/-ey4AysT9ao/UYTh4TuSBQAJ">message thread</a> and contact David Hughes. No actual money will be requested or transferred until the release is completed. 
+
+</li>
+
+
 <li><i>(28-Nov-2014)</i> <b>wxPython (classic) 3.0.2.0</b> has been released. This build includes fixes for some annoying bugs, and also adds various improvements from wxWidgets. Please see the <a href="recentchanges.php">Recent Changes</a> document for more details.</li>
 
-<p><i>(10-Sept-2014)</i> <b>wxPython (classic) 3.0.1.1</b> has been released. This build adds updates for some of the 3rd-party code that was missed in the last build.</li>
+<!--    <p><i>(10-Sept-2014)</i> <b>wxPython (classic) 3.0.1.1</b> has been released. This build adds updates for some of the 3rd-party code that was missed in the last build.</li>
 
 <p><li><i>(5-Sept-2014)</i> <b>wxPython (classic) 3.0.1.0</b> has been released. (Finally! Sorry, life and work has kept me busy.) No new features but lots of bug fixes in wxWidgets.</li>
 
@@ -42,7 +54,7 @@ Welcome to the home of wxPython, a blending of the
 
 <p><li><i>(8-Sept-2011)</i> <b>wxPython 2.9.2.3</b> has been released.  This release fixes a bug that was causing the base class methods of wx.richtext.RichTextCtrl to be called incorrectly, causing a crash.
 
-<!--    
+
 <p><li><i>(6-Sept-2011)</i> <b>wxPython 2.9.2.2</b> has been released.  This build adds some fixes for some annoying and subtle bugs, and also a couple nice new features.  The Cairo version of the wx.GraphicsContext back-end can now be used on Windows, and there is a new module in the library that helps wx applications to update themselves when new versions of the software are released. Details are in the <a href="recentchanges.php">Recent Changes</a> document.</li><p>
 
 <p></p><li><i>(23-July-2011)</i> Two at once! Both <b>wxPython 2.8.12.1</b> and <b>wxPython 2.9.2.1</b> have been released.  2.9.2.1 is the next iteration from the wxPython development <a href="http://wiki.wxpython.org/ReleaseSeries">release series</a>, and 2.8.12.1 contains a minor, but important bug fix in the Bind method. </li><p>

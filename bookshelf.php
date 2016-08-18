@@ -10,7 +10,7 @@
 -->
 <h2>wxPython Bookshelf</h2>
 <p>
-This is just a list of Python books, and related tech books that Robin has written, contributed to, read, or would like to read. 
+This is just a list of Python books, and other related tech books, that Robin has written, contributed to, read, or would like to read. 
 
 <p>
 

@@ -14,6 +14,8 @@ This is just a list of Python books, and related tech books that Robin has writt
 
 <p>
 
+<table width="100%" border="1" cellspacing="0" cellpadding="8" bgcolor="#BCB8E7"><tr><td>
+
 <div align="left"><table><tr><td>
 <a href="https://www.amazon.com/gp/product/1932394621/ref=as_li_ss_il?ie=UTF8&linkCode=li3&tag=wxpython-20&linkId=694ebf3bdd32e373117dbfeaa68afadc" target="_blank"><img border="1" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1932394621&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=wxpython-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=wxpython-20&l=li3&o=1&a=1932394621" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 </td><td>
@@ -147,6 +149,10 @@ This is just a list of Python books, and related tech books that Robin has writt
 <div align="right"><table><tr><td>
 </td><td>
 </td></tr></table></div>
+
+
+
+</td></tr></table>
 
 <p>
 

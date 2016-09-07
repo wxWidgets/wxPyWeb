@@ -144,7 +144,9 @@ This is just a list of Python books, and other related tech books, that Robin ha
 
 
 <div align="left"><table><tr><td>
+<a href="https://www.amazon.com/gp/product/B01LMUAYSO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01LMUAYSO&linkCode=as2&tag=wxpython-20&linkId=8ac13ee4a153a4a7f77e7d1405af78d6"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01LMUAYSO&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=wxpython-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=wxpython-20&l=am2&o=1&a=B01LMUAYSO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 </td><td>
+<a  href="https://www.amazon.com/gp/product/B01LMUAYSO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01LMUAYSO&linkCode=as2&tag=wxpython-20&linkId=3410ace32528d209534192d9dabfd6a2">Python 201: Intermediate Python</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=wxpython-20&l=am2&o=1&a=B01LMUAYSO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 </td></tr></table></div>
 
 

@@ -22,7 +22,9 @@ Welcome to the home of wxPython, a blending of the
 <p>
 <ul>
 
-<li><i>(16-April-2017)</i> <b>wxPython 4.0.0a1</b> is now available on <a href="https://pypi.python.org/pypi/wxPython/4.0.0a1">PyPI</a>. This is the first official release of the new Phoenix version of wxPython. More updates to this website are forthcoming, but in the meantime you can learn more about this new release in the <a href="https://github.com/wxWidgets/Phoenix/blob/master/README.rst">README</a> and <a href="https://github.com/wxWidgets/Phoenix/blob/master/CHANGES.rst">CHANGES</a> documents, as well as the <a href="https://wxpython.org/Phoenix/docs/html/MigrationGuide.html">Migration Guide</a> and the new <a href="https://wxpython.org/Phoenix/docs/html/main.html">API reference</a> documentation.
+<li><i>(16-April-2017)</i> <b>wxPython 4.0.0a1</b> is now available on <a href="https://pypi.python.org/pypi/wxPython/4.0.0a1">PyPI</a>. This is the first official release of the new Phoenix version of wxPython, including support for Python 2.7 and 3.4+, installation from PyPI, fully self-contained and relocatable so it can be installed in virtual environments, etc.
+
+<p>More updates to this website are forthcoming, but in the meantime you can learn more about this new release in the <a href="https://github.com/wxWidgets/Phoenix/blob/master/README.rst">README</a> and <a href="https://github.com/wxWidgets/Phoenix/blob/master/CHANGES.rst">CHANGES</a> documents, as well as the <a href="https://wxpython.org/Phoenix/docs/html/MigrationGuide.html">Migration Guide</a> and the new <a href="https://wxpython.org/Phoenix/docs/html/main.html">API reference</a> documentation.
 </li>
 
 <p><li><i>(Summer 2016)</i> The <b>wxPython Phoenix</b> train is back on the tracks and moving forward at full steam ahead! 

@@ -21,7 +21,11 @@ Welcome to the home of wxPython, a blending of the
 <div align="center"><font size="+3" style="font-family: sans-serif;"><b>News</b></font></div>
 <p>
 <ul>
-<li><i>(Summer 2016)</i> The <b>wxPython Phoenix</b> train is back on the tracks and moving forward at full steam ahead! 
+
+<li><i>(16-April-2017)</i> <b>wxPython 4.0.0a1</b> is now available on <a href="https://pypi.python.org/pypi/wxPython/4.0.0a1">PyPI</a>. This is the first official release of the new Phoenix version of wxPython. More updates to this website are forthcoming, but in the meantime you can learn more about this new release in the <a href="https://github.com/wxWidgets/Phoenix/blob/master/README.rst">README</a> and <a href="https://github.com/wxWidgets/Phoenix/blob/master/CHANGES.rst">CHANGES</a> documents, as well as the <a href="https://wxpython.org/Phoenix/docs/html/MigrationGuide.html">Migration Guide</a> and the new <a href="https://wxpython.org/Phoenix/docs/html/main.html">API reference</a> documentation.
+</li>
+
+<p><li><i>(Summer 2016)</i> The <b>wxPython Phoenix</b> train is back on the tracks and moving forward at full steam ahead! 
 
 <p><i>"Phoenix"</i> is the code name of the next generation of the wxPython project.  The primary goals of the project are to make it much easier&mdash;through increased automation&mdash;to develop, maintain, and enhance wxPython in the future, and to remove old hacks and other cruft that are no longer needed and which tends to cause confusion for new users. The secondary goals are to make wxPython <i>"...better, stronger, faster."</i> than he was before.
 

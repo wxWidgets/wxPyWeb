@@ -1,0 +1,49 @@
+title: wxPython 4.0.0a3 Release
+date: 2017-06-03 18:03
+author: Robin
+tags: Development, Release
+Category: News
+slug: wxpython-4.0.0a3-release
+status: published
+
+**wxPython 4.0.0a3** is now available at [PyPI](https://pypi.python.org/pypi/wxPython/4.0.0a3)
+
+Changes include the following: 
+
+* Fixed a few cases where the GIL was not acquired before building tuples
+of values. The problems associated with this (hangs or crashes) were
+sporadic and seemingly random, and did not appear until there was a
+background thread that was very busy. Running under a debug build of Python
+revealed the problem almost immediately. Yay Python!
+
+* Return an integer value from `wx.DC.GetHandle` instead of a wrapped
+`voidptr` object, similar to how it is done for `wx.Window.GetHandle`.
+
+* Make `wx.TreeItemID` hashable, with meaningful hash value and equality
+operators, so it can be used as a dictionary key in Py3.
+
+* Fixed crash in `wx.grid.GridTable.GetAttr`, and potentially other cases
+of classes derived from `wx.RefCounter`.
+
+* Add `ShowPage` and `IsRunning` methods to `wx.adv.Wizard`.
+
+* Fixed various GTK specific bugs and other cleanup in `wx.lib.agw.aui`.
+
+* Updated to SIP 4.19.2
+
+* Restored builders for Python 3.4 to the buildbot.
+
+* Restore the wrappers for `GetPaperSize` and `SetPaperSize` to `wx.PrintData`.
+
+* Fix crashing problem when a `wx.TreeItemId` was compared with `None`.
+
+* Fix for missing checkbox images in `CheckListCtrlMixin` on Linux and OSX.
+
+* Fix another crashing problem in propgrid, and a few other propgrid issues too.
+
+* The release version of the documentation can now be found at
+[https://docs.wxPython.org/](https://docs.wxPython.org/). The documentation
+created during the snapshot builds is still located at  
+[https://wxPython.org/Phoenix/docs/html/](https://wxPython.org/Phoenix/docs/html/).
+
+

@@ -1,0 +1,22 @@
+Title: wxPython 4.0.0a1 Release
+Date: 2017-04-16 16:00
+Author: Robin
+Tags: Development, Release
+Category: News
+slug: wxpython-4.0.0a1-release
+Status: published
+
+**wxPython 4.0.0a1** is now available on [PyPI](https://pypi.python.org/pypi/wxPython/4.0.0a1). 
+This is the first official release of the new Phoenix version of wxPython, including
+support for Python 2.7 and 3.4+, installation from PyPI, fully self-contained
+and relocatable so it can be installed in virtual environments, etc.
+
+More updates to this website are forthcoming, but in the meantime you can
+learn more about this new release in the 
+[README](https://github.com/wxWidgets/Phoenix/blob/master/README.rst)
+and [CHANGES](https://github.com/wxWidgets/Phoenix/blob/master/CHANGES.rst)
+documents, as well as the 
+[Migration Guide](https://wxpython.org/Phoenix/docs/html/MigrationGuide.html)
+and the new [API reference](https://wxpython.org/Phoenix/docs/html/main.html)
+documentation.
+

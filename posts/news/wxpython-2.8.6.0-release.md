@@ -1,0 +1,37 @@
+Title: wxPython 2.8.6.0
+Date: 2007-09-27 22:18
+Author: Robin
+Tags: Release
+Category: News
+slug: wxpython-2.8.6.0-release
+Status: published
+
+wxPython 2.8.6.0 has been released. Details are found
+[here](http://wxpython.org/recentchanges.php), and the download page is
+[here](http://wxpython.org/download.php).
+
+An interesting thing about this release is that I made the build,
+uploaded about a gig's worth of installers and packages, and everything
+else that goes into making a release, all while being out of town and
+away from the machines doing all the work. I was able to make all the
+final tests and adjustments on my new Mac, using [VMware
+Fusion](http://www.vmware.com/products/fusion/) for the Windows and
+Linux specific work, and then used
+[Mercurial](http://www.selenic.com/mercurial/wiki/) over an ssh tunnel
+to push my changes back home to my master build and release machine. The
+next part was easy, since I have been doing mostly automated builds for
+a few years now. I just start it going via a ssh login and then checked
+on it a few hours later from the hotel to see if it's done. At that
+point things started to get a little tricky, mainly because I usually do
+the rest of the release process by hand and in person. Since the full
+build is about a gigabyte of binaries I transfered just a few of them to
+my local machine for testing, and then I had to deal with uploading
+remotely from the build machine to
+[SourceForge](https://sourceforge.net/projects/wxpython/) and our [APT
+repository](http://apt.wxwidgets.org/dists/), all while I had a flaky
+wireless connection here and while attending various meetings. Then I
+realized that the software I usually use for editing the website is only
+installed on a machine at home. Well anyway, I muddled through and
+managed to get it done, and now I know where my release process could
+use a bit more streamlining and automation...
+

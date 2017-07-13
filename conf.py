@@ -17,16 +17,18 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Your Name"  # (translatable)
-BLOG_TITLE = "Demo Site"  # (translatable)
+BLOG_AUTHOR = "Robin Dunn"  # (translatable)
+BLOG_TITLE = "wxPython"  # (translatable)
+
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://example.com/"
+SITE_URL = "/" #"https://wxPython.org/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
-BLOG_EMAIL = "joe@demo.site"
-BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)
+
+BLOG_EMAIL = "robin@alldunn.com"
+BLOG_DESCRIPTION = "wxPython's home page, news feed and blog."  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -140,6 +142,20 @@ NAVIGATION_LINKS = {
     ),
 }
 
+# # From Pelican
+# MENUITEMS = (
+#     ('About',           '/pages/about.html'),
+#     ('News',            '/category/news.html'),
+#     ('Documentation',   '/pages/documentation.html'),
+#     ('Downloads',       '/pages/downloads.html'),
+#     ('Support',         '/pages/support.html'),
+#     ('Developers',      '/pages/developers.html'),
+#     ('Blog',            '/category/blog.html'),
+# )
+
+
+
+
 # Name of the theme to use.
 THEME = "bootstrap3"
 
@@ -182,17 +198,28 @@ THEME_COLOR = '#5670d4'
 #     )
 
 POSTS = (
-    ("posts/*.rst", "posts", "post.tmpl"),
-    ("posts/*.md", "posts", "post.tmpl"),
-    ("posts/*.txt", "posts", "post.tmpl"),
-    ("posts/*.html", "posts", "post.tmpl"),
+    ("posts/news/*.rst", "news", "post.tmpl"),
+    ("posts/news/*.md", "news", "post.tmpl"),
+    ("posts/news/*.txt", "news", "post.tmpl"),
+    ("posts/news/*.html", "news", "post.tmpl"),
+
+    ("posts/blog/*.rst", "blog", "post.tmpl"),
+    ("posts/blog/*.md", "blog", "post.tmpl"),
+    ("posts/blog/*.txt", "blog", "post.tmpl"),
+    ("posts/blog/*.html", "blog", "post.tmpl"),
 )
 PAGES = (
+    ("pages/index.md", "", "page.tmpl"),
     ("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.md", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
     ("pages/*.html", "pages", "page.tmpl"),
 )
+
+# Since this site's main page will be a static page instead of the main blog
+# page, set this to avoid a conflict, so the blog posts will not generate
+# /index.html
+INDEX_PATH = "postsindex"
 
 
 # Below this point, everything is optional
@@ -283,14 +310,14 @@ COMPILERS = {
 
 # Create by default posts in one file format?
 # Set to False for two-file posts, with separate metadata.
-# ONE_FILE_POSTS = True
+ONE_FILE_POSTS = True
 
 # Preferred metadata format for new posts
 # "Nikola": reST comments wrapped in a comment if needed (default)
 # "YAML": YAML wrapped in "---"
 # "TOML": TOML wrapped in "+++"
 # "Pelican": Native markdown metadata or reST docinfo fields. Nikola style for other formats.
-# METADATA_FORMAT = "Nikola"
+METADATA_FORMAT = "Nikola"
 
 # Use date-based path when creating posts?
 # Can be enabled on a per-post basis with `nikola new_post -d`.
@@ -349,11 +376,12 @@ POSTS_SECTIONS = True
 
 # Associate a description with a section. For use in meta description on
 # section index pages or elsewhere in themes.
-# POSTS_SECTION_DESCRIPTIONS = {
-#     DEFAULT_LANG: {
-#         'how-to': 'Learn how-to things properly with these amazing tutorials.',
-#     },
-# }
+POSTS_SECTION_DESCRIPTIONS = {
+    DEFAULT_LANG: {
+        'news': 'wxPython News',
+        'blog': "wxForty-Two, a.k.a Robin's Ramblings"
+    },
+}
 
 # Sections are determined by their output directory as set in POSTS by default,
 # but can alternatively be determined from file metadata instead.
@@ -362,21 +390,22 @@ POSTS_SECTIONS = True
 # Names are determined from the output directory name automatically or the
 # metadata label. Unless overwritten below, names will use title cased and
 # hyphens replaced by spaces.
-# POSTS_SECTION_NAME = {
-#    DEFAULT_LANG: {
-#        'posts': 'Blog Posts',
-#        'uncategorized': 'Odds and Ends',
-#    },
-# }
+POSTS_SECTION_NAME = {
+    DEFAULT_LANG: {
+        'news': 'wxPython News',
+        'blog': 'wxForty-Two Blog',
+    },
+}
 
 # Titles for per-section index pages. Can be either one string where "{name}"
 # is substituted or the POSTS_SECTION_NAME, or a dict of sections. Note
 # that the INDEX_PAGES option is also applied to section page titles.
-# POSTS_SECTION_TITLE = {
-#     DEFAULT_LANG: {
-#         'how-to': 'How-to and Tutorials',
-#     },
-# }
+POSTS_SECTION_TITLE = {
+    DEFAULT_LANG: {
+        'news': 'wxPython News',
+        'blog': 'wxForty-Two Blog',
+    },
+}
 
 # A list of dictionaries specifying sections which translate to each other.
 # For example:
@@ -1100,7 +1129,10 @@ PRETTY_URLS = False
 # Note: most Nikola-specific extensions are done via the Nikola plugin system,
 #       with the MarkdownExtension class and should not be added here.
 # The default is ['fenced_code', 'codehilite']
-MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.codehilite', 'markdown.extensions.extra']
+MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 
+                       'markdown.extensions.codehilite', 
+                       'markdown.extensions.extra',
+                       'markdown.extensions.meta']
 
 # Extra options to pass to the pandoc command.
 # by default, it's empty, is a list of strings, for example
@@ -1129,14 +1161,14 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 
 # Show link to source for the posts?
 # Formerly known as HIDE_SOURCELINK (inverse)
-# SHOW_SOURCELINK = True
+SHOW_SOURCELINK = False
 # Copy the source files for your pages?
 # Setting it to False implies SHOW_SOURCELINK = False
-# COPY_SOURCES = True
+COPY_SOURCES = False
 
 # Modify the number of Post per Index Page
 # Defaults to 10
-# INDEX_DISPLAY_POST_COUNT = 10
+INDEX_DISPLAY_POST_COUNT = 8
 
 # By default, Nikola generates RSS files for the website and for tags, and
 # links to it.  Set this to False to disable everything RSS-related.
@@ -1267,6 +1299,13 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 #     "markdown_metadata": {"summary": "description", "modified": "updated"}
 # }
 # Other examples: https://getnikola.com/handbook.html#mapping-metadata-from-other-formats
+
+METADATA_MAPPING = {
+    "rest_docinfo":      {"summary": "description", "modified": "updated"},
+    "markdown_metadata": {"summary": "description", "modified": "updated"},
+    "html_metadata":     {"summary": "description", "modified": "updated"}
+}
+
 
 # If you hate "Filenames with Capital Letters and Spaces.md", you should
 # set this to true.

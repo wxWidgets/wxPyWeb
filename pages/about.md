@@ -1,4 +1,0 @@
-Title: About
-Slug: about
-
-

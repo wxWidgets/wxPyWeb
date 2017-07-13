@@ -1,18 +1,16 @@
-Title: About 42
-Date: 2007-09-16 16:00
-Author: Robin
-Slug: about-42
-Status: hidden
+.. title: About 42
+.. date: 2007-09-16 16:00
+.. author: Robin
+.. slug: about-42
 
-![42]({filename}/images/2007/09/42.png)
+.. image:: /images/2007/09/42.png
+   :alt: 42
 
-As anyone who has read [Douglas
-Adams'](http://en.wikipedia.org/wiki/Douglas_adams) [*Hitchhiker's Guide
-to the
-Galaxy*](http://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy)
+As anyone who has read `Douglas Adams <http://en.wikipedia.org/wiki/Douglas_adams>`_ 
+`*Hitchhiker's Guide to the Galaxy* <http://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy>`_
 series of books will tell you, 42 is **The Answer** to **Life, the
 Universe and Everything**, which was calculated by the second greatest
-computer in all of time and space, named Deep Thought, taking a mere
+computer in all of time and space, named *Deep Thought*, taking a mere
 seven and a half million years to do so. Unfortunately the great
 philosophers who constructed Deep Thought neglected to make it able to
 determine what the *question* is!
@@ -26,9 +24,13 @@ as the Vogons.
 
 A wxPython user once took the opportunity to express to me his glee at
 discovering wxPython and all the potential it enabled him to have in his
-projects, and said, "wxPython is kind of like 42. I'm not quite sure
-what the question is yet, but I feel much better and more able to tackle
-any problem since I already know what the answer is!" So I thought that
+projects, and said, 
+
+	*"wxPython is kind of like 42. I'm not quite sure what the question is
+	yet, but I feel much better and more able to tackle any problem since I
+	already know what the answer is!"*
+
+So I thought that
 this would be a good theme for this Blog to have. It's been quite a
 while since I read the the five books of the H2G2 trilogy so I don't
 have a lot of obscure references or quotes floating around at the top of
@@ -37,10 +39,11 @@ while.
 
 So, welcome to my blog. Do you know where your towel is?
 
-![Towel
-Day]({filename}/images/2007/09/towelday_towel.jpg)
+.. image:: /images/2007/09/towelday_towel.jpg
+   :alt: Towel Day
 
 So long, and thanks for reading!
 
-[42 Quotes]({filename}42-quotes.md)
+See also: `42 Quotes <42-quotes.html>`_
+
 

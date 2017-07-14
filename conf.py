@@ -17,7 +17,7 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Robin Dunn"  # (translatable)
+BLOG_AUTHOR = "The wxPython Team"  # (translatable)
 BLOG_TITLE = "wxPython"  # (translatable)
 
 # This is the main URL for your site. It will be used
@@ -136,7 +136,11 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/pages/about.html",           "About"),
+        ((("/pages/overview.html",    "Overview"), 
+          ("/pages/screenshots.html", "Screenshots"), 
+          ("/pages/license.html",     "License")),
+          "About"),
+
         ("/news/index.html",            "News"),
         ("/pages/documentation.html",   "Documentation"),
         ("/pages/downloads.html",       "Downloads"),
@@ -154,7 +158,10 @@ NAVIGATION_LINKS = {
 
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+#THEME = "bootstrap3"
+#THEME = "bootstrap3-jinja"
+THEME = "custom"
+#THEME = "material-theme"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
@@ -337,7 +344,7 @@ METADATA_FORMAT = "Nikola"
 # Nikola supports logo display.  If you have one, you can put the URL here.
 # Final output is <img src="LOGO_URL" id="logo" alt="BLOG_TITLE">.
 # The URL may be relative to the site root.
-# LOGO_URL = ''
+#LOGO_URL = '/images/phoenix_main.png'
 
 # If you want to hide the title of your website (for example, if your logo
 # already contains the text), set this to False.
@@ -926,7 +933,7 @@ IMAGE_FOLDERS = {'images': 'images'}
 # )
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
-# INDEX_TEASERS = False
+INDEX_TEASERS = True
 
 # HTML fragments with the Read more... links.
 # The following tags exist and are replaced for you:

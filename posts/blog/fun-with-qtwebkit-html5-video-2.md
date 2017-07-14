@@ -6,8 +6,8 @@ Category: Blog
 Slug: fun-with-qtwebkit-html5-video-2
 Status: published
 
-See [my
-post](http://blog.enthought.com/open-source/fun-with-qtwebkit-html5-video/)
+See 
+[my post](http://blog.enthought.com/open-source/fun-with-qtwebkit-html5-video/)
 at the [Enthought Blog](http://blog.enthought.com/) about one of the
 things I've been working on there.
 

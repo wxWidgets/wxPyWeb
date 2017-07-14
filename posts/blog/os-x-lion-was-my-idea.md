@@ -17,6 +17,8 @@ back to how they thought up the wonderful new idea the directors used a
 different actor who was younger, thinner, cuter, handsomer, and had way
 better hair than the real person.
 
+<!-- TEASER_END -->
+
 A few weeks ago I realized that I had the same experience with Mac OS X
 Lion.  Way back in 2007 I wrote a
 [post](http://wxpython.org/blog/2007/11/20/my-mac-gripes/) in this blog

@@ -136,24 +136,21 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archives"),
-        ("/categories/index.html", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        ("/pages/about.html",           "About"),
+        ("/news/index.html",            "News"),
+        ("/pages/documentation.html",   "Documentation"),
+        ("/pages/downloads.html",       "Downloads"),
+        ("/pages/support.html",         "Support"),
+        ("/pages/developers.html",      "Developers"),
+
+        ((('/blog/index.html',          'wxForty-Two'),
+          ('/pages/about-42.html',      'About 42'),
+          ('/archive.html',             'Archives'),
+          ('/categories/index.html',    'Tags')),
+          'Blog'),
+
     ),
 }
-
-# # From Pelican
-# MENUITEMS = (
-#     ('About',           '/pages/about.html'),
-#     ('News',            '/category/news.html'),
-#     ('Documentation',   '/pages/documentation.html'),
-#     ('Downloads',       '/pages/downloads.html'),
-#     ('Support',         '/pages/support.html'),
-#     ('Developers',      '/pages/developers.html'),
-#     ('Blog',            '/category/blog.html'),
-# )
-
-
 
 
 # Name of the theme to use.
@@ -209,7 +206,9 @@ POSTS = (
     ("posts/blog/*.html", "blog", "post.tmpl"),
 )
 PAGES = (
-    ("pages/index.md", "", "page.tmpl"),
+    # Put the index.html page in /
+    ("pages/index.*", "", "page.tmpl"),
+    # and all the rest in /pages
     ("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.md", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),

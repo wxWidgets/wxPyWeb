@@ -1,22 +1,23 @@
-.. title: Welcome to wxPython!
-.. slug: index
-.. tags:
-.. link:
-.. description:
-
-
-
-.. Note:: TODO: Move this content to ``About/Overview`` and change this to be a simple intro paragraph plus the last couple items from the News category...
+<!--
+.. title: Overview
+.. slug: overview
+.. date: 2017-07-14 16:40:06 UTC
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+-->
 
 What is wxPython?
 -----------------
 
-`wxPython <http://wxPython.org/>`_ is a cross-platform **GUI toolkit** for
-the `Python <http://www.python.org/>`_ programming language. It allows Python
+[wxPython](http://wxPython.org/) is a cross-platform **GUI toolkit** for
+the [Python](http://www.python.org/) programming language. It allows Python
 programmers to create programs with a robust, highly functional graphical
 user interface, simply and easily. It is implemented as a set of Python
 extension modules that wrap the GUI components of the popular
-`wxWidgets <http://wxwidgets.org/>`_ cross platform library, which is written
+[wxWidgets](http://wxwidgets.org/) cross platform library, which is written
 in C++. 
 
 Like Python and wxWidgets, wxPython is **Open Source** which means that
@@ -61,10 +62,12 @@ differences tend to be minor and some applications can use Phoenix
 with slight, or even with no modifications.  In some other cases the
 correct way to do things was also available in Classic and it's only
 the wrong way that has been removed from Phoenix.  For more
-information there is a **Migration Guide** document available at: https://docs.wxpython.org/MigrationGuide.html.
+information there is a **Migration Guide** document available at: 
+[https://docs.wxpython.org/MigrationGuide.html](https://docs.wxpython.org/MigrationGuide.html).
 
 The new **wxPython API reference documentation**, including all Python-specific
 additions and customizations, and also docs for the ``wx.lib`` package, is
-located at: https://docs.wxpython.org/main.html.
+located at: [https://docs.wxpython.org/main.html](https://docs.wxpython.org/main.html).
+
 
 

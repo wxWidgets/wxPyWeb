@@ -6,7 +6,11 @@ Category: Blog
 Slug: new-wxpython-book
 Status: published
 
-[![wxPython Cookbook](http://wxPython.org/blog/wp-content/uploads/2010/12/wxPyCookbook-cover-small.jpg "wxPyCookbook-cover-small")](http://www.amazon.com/gp/product/1849511780?ie=UTF8&tag=wxpython-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1849511780)The
+
+
+<a href="http://www.amazon.com/gp/product/1849511780?ie=UTF8&tag=wxpython-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1849511780"><img src="/images/2010/12/wxPyCookbook-cover-small.jpg"></a>
+
+The
 wxPython community now has a 2nd book about our favorite UI toolkit. The
 book is "[wxPython 2.8 Application Development
 Cookbook](http://www.amazon.com/gp/product/1849511780?ie=UTF8&tag=wxpython-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1849511780)"

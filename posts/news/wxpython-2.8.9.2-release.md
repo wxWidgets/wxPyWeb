@@ -10,9 +10,7 @@ Status: published
 wx.lib.agw package, adds an event watcher to the widget inspection tool,
 and fixes a bunch of bugs.
 
--   [Changes](http://wxpython.org/CHANGES.html) in 2.8.9.2[  
-     
-   ](http://wxpython.org/CHANGES.html#id1)
+-   [Changes](http://wxpython.org/CHANGES.html) in 2.8.9.2
 -   [Download](http://wxpython.org/download.php) (source, Windows and
     Mac binaries)
 -   [APT](http://wiki.wxpython.org/InstallingOnUbuntuOrDebian)(Debian or

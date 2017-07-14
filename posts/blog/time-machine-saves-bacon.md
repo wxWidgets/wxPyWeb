@@ -15,9 +15,9 @@ if that's what you're thinking (come on, admit it, you *know* you were)
 then you're wrong. Keep reading for some info about another kind of Time
 Machine, and another kind of Bacon.
 
-<!--more-->
+<!-- TEASER_END -->
 
-### A brief history of Time Machines
+## A brief history of Time Machines
 
 First on the list, of course, is [*The Time
 Machine*](http://en.wikipedia.org/wiki/The_Time_Machine) by one of the
@@ -104,12 +104,12 @@ appreciate it too, and it is the little things like time travel that can
 really help to build a loyal community around a software development
 tool and build strength for the future.
 
-### What about saving the bacon?
+## What about saving the bacon?
 
 So, if you're still reading along at this point and haven't wandered off
 into the space-time continuum yourself, you're probably wondering what
 all this has to do with saving
-[bacon](http://wxPython.org/blog/wp-content/uploads/2008/06/bacon.wav "bacon.wav")...
+[bacon](/images/2008/06/bacon.wav "bacon.wav")...
 Well the time machine that is affecting my life today is [Apple's Time
 Machine](http://www.apple.com/macosx/features/timemachine.html) and the
 bacon in question is mine. Here's the story: Several days ago the

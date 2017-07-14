@@ -53,10 +53,10 @@ work to roll down to wxPython and the community. Of course, on the
 somebody you know would be interested in sponsoring at least part-time
 work on wxPython, please do contact me.
 
-![naturalfireworks.jpg](http://wxPython.org/blog/wp-content/uploads/2008/01/naturalfireworks.jpg)
+![naturalfireworks.jpg](/images/2008/01/naturalfireworks.jpg)
 
  
 
-**Update**: This news was noticed by the [New York
-Times](http://www.nytimes.com/idg/IDG_002570DE00740E18002573CC004F945F.html?ref=technology).
+**Update**: This news was noticed by the 
+[New York Times](http://www.nytimes.com/idg/IDG_002570DE00740E18002573CC004F945F.html?ref=technology).
 

@@ -46,5 +46,5 @@ then that means that there are about three quarters of a million users
 running a wxPython application on their computers and they may not even
 know it.  Good job guys, I'm impressed!
 
-![snap002.png](http://wxPython.org/blog/wp-content/uploads/2009/03/snap002.png)
+![snap002.png](/images/2009/03/snap002.png)
 

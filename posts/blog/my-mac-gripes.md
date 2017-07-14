@@ -26,7 +26,7 @@ now. During that time I've added some things to the list, and also have
 removed several as I got used to them and was no longer able to gripe
 about them.
 
-<!--more-->
+<!-- TEASER_END -->
 
 Given who I am and [what I work on](http://wxPython.org/) it is probably
 not too surprising that all of these gripes are about basic User
@@ -84,7 +84,7 @@ tell you where one window ends in the overlap area and another begins. A
 simple border on the windows would help a lot in these situations, (and
 would also provide something to grab with the mouse for resizing!)
 
-[![ishot-1.png](http://wxpython.org/blog/wp-content/uploads/2007/11/ishot-1.png "ishot-1.png")](http://wxPython.org/blog/wp-content/uploads/2007/11/ishot-1.png "ishot-1.png")
+![ishot-1.png](/images/2007/11/ishot-1.png "ishot-1.png")
 
 ### Menu Mnemonics
 
@@ -147,7 +147,7 @@ small image and enlarge it very much without it looking like crap! It
 monstrosity like that, so I suffer with the itty-bitty one that
 occasionally gets lost among the dozens of windows on my desktops.
 
-[![ishot-3.png](http://wxpython.org/blog/wp-content/uploads/2007/11/ishot-3.png "ishot-3.png")](http://wxPython.org/blog/wp-content/uploads/2007/11/ishot-3.png "ishot-3.png")
+![ishot-3.png](/images/2007/11/ishot-3.png "ishot-3.png")
 
 ### Select and middle button paste
 

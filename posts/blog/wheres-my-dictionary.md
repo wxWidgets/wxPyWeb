@@ -17,6 +17,6 @@ I think that sentence could win an award if there was a
 most-big-words-used-where-small-words-would-do-fine contest. Good thing
 that my dictionary is only a
 [Spotlight](http://www.apple.com/macosx/features/300.html#spotlight)
-search away... [type][type][type]... Ah so that's what it means. Yes, I
-agree. \<wink!\>
+search away... \[type]\[type]\[type]... Ah so that's what it means. Yes, I
+agree. {{% emoji winking_face %}}
 

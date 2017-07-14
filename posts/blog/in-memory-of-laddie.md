@@ -6,7 +6,7 @@ Category: Blog
 Slug: in-memory-of-laddie
 Status: published
 
-![My dog Laddie]({filename}/images/2010/05/Laddie-2-767x1024.png)
+![My dog Laddie](/images/2010/05/Laddie-2-767x1024.png)
 
 **Tribute to a Dog** {style="text-align: center;"}
 --------------------

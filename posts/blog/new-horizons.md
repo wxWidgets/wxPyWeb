@@ -14,6 +14,8 @@ the [wxPython](http://wxPython.org) community know about it, and also to
 let you know about some aspects of the job that some may find a little
 surprising, before you hear about it as rumors or gossip.
 
+<!-- TEASER_END -->
+
 First of all, I'm sure that most of you have heard of
 [Enthought](http://enthought.com), but in case the name is new to you
 Enthought has been the go-to guys for all things related to Python and

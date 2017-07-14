@@ -6,7 +6,7 @@ Category: Blog
 Slug: whyteboard-gets-noticed
 Status: published
 
-[![Whyteboard](http://wxPython.org/blog/wp-content/uploads/2010/06/wbpdf-300x240.png "Whyteboard")](http://wxPython.org/blog/wp-content/uploads/2010/06/wbpdf.png)
+[![](/images/2010/06/wbpdf-300x240.png "Whyteboard")](/images/2010/06/wbpdf.png)
 
 [Whyteboard](http://whyteboard.org/), a useful application written using
 wxPython for the GUI, was just

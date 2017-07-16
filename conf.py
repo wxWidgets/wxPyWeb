@@ -19,10 +19,14 @@ import time
 # Data about this site
 BLOG_AUTHOR = "The wxPython Team"  # (translatable)
 BLOG_TITLE = "wxPython"  # (translatable)
+USE_TEST_SITE = True
 
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "/" #"https://wxPython.org/"
+if USE_TEST_SITE:
+    SITE_URL = "http://test.wxPython.org/"
+else:
+    SITE_URL = "https://wxPython.org/" 
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
@@ -136,6 +140,7 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        #("/",                       "Home"),
         ((("/pages/overview/",      "Overview"), 
           ("/pages/screenshots/",   "Screenshots"), 
           ("/pages/license/",       "License"),
@@ -671,6 +676,8 @@ REDIRECTIONS = []
 #     ]
 # }
 
+# TODO: add --delete but only after adding flags to exclude some folders on
+# the the site that wont' be kept in version control, like Phoenix, etc.
 DEPLOY_COMMANDS = {
     'default': [
         "rsync -avP output/ wxpython-site:wxpython-site/htdocs"],
@@ -1024,7 +1031,10 @@ COMMENT_SYSTEM = "disqus"
 # depends on what comment system you use. The default is
 # "nikolademo" which is a test account for Disqus. More information
 # is in the manual.
-COMMENT_SYSTEM_ID = "nikolademo"
+if USE_TEST_SITE:
+    COMMENT_SYSTEM_ID = "testwxpython"
+else:
+    COMMENT_SYSTEM_ID = "wxpython"
 
 # Enable annotations using annotateit.org?
 # If set to False, you can still enable them for individual posts and pages

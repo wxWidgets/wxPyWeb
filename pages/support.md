@@ -13,4 +13,5 @@
 * how to submit problem reports (with a runnable sample)
 * Mail lists
 * IRC Channel
-* link to pages/documentation.html
+* Stackoverflow
+* link to pages/documentation

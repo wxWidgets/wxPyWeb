@@ -13,7 +13,7 @@ interfaces for their Python applications, that run with little or no
 modifications on Windows, Macs and Linux or other unix-like systems.
 <p></p>
 
-<a class="btn btn-primary btn-lg" href="pages/overview.html" role="button">Learn more</a>
+<a class="btn btn-primary btn-lg" href="pages/overview" role="button">Learn more</a>
 </div></div></div>
 
 

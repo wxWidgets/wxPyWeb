@@ -136,23 +136,22 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ((("/pages/overview.html",    "Overview"), 
-          ("/pages/screenshots.html", "Screenshots"), 
-          ("/pages/license.html",     "License"),
-          ("/pages/history.html",     "History"),   
-          #("/pages/credits.html",     "Credits"),   
+        ((("/pages/overview/",      "Overview"), 
+          ("/pages/screenshots/",   "Screenshots"), 
+          ("/pages/license/",       "License"),
+          ("/pages/history/",       "History"),   
           ), "About"),
 
-        ("/news/index.html",            "News"),
-        ("/pages/documentation.html",   "Documentation"),
-        ("/pages/downloads.html",       "Downloads"),
-        ("/pages/support.html",         "Support"),
-        ("/pages/developers.html",      "Developers"),
+        ("/news/",                  "News"),
+        ("/pages/documentation/",   "Documentation"),
+        ("/pages/downloads/",       "Downloads"),
+        ("/pages/support/",         "Support"),
+        ("/pages/developers/",      "Developers"),
 
-        ((('/blog/index.html',          'wxForty-Two'),
-          ('/pages/about-42.html',      'About 42'),
-          ('/archive.html',             'Archives'),
-          ('/categories/index.html',    'Tags')
+        ((('/blog/',                'wxForty-Two'),
+          ('/pages/about-42/',      'About 42'),
+          ('/archive/',             'Archives'),
+          ('/categories/',          'Tags')
           ), 'Blog'),
 
     ),
@@ -1075,7 +1074,7 @@ STRIP_INDEXES = False
 # This can be disabled on a per-page/post basis by adding
 #    .. pretty_url: False
 # to the metadata.
-PRETTY_URLS = False
+PRETTY_URLS = True
 
 # If True, publish future dated posts right away instead of scheduling them.
 # Defaults to False.

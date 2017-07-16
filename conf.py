@@ -138,8 +138,10 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ((("/pages/overview.html",    "Overview"), 
           ("/pages/screenshots.html", "Screenshots"), 
-          ("/pages/license.html",     "License")),
-          "About"),
+          ("/pages/license.html",     "License"),
+          ("/pages/history.html",     "History"),   
+          #("/pages/credits.html",     "Credits"),   
+          ), "About"),
 
         ("/news/index.html",            "News"),
         ("/pages/documentation.html",   "Documentation"),
@@ -150,8 +152,8 @@ NAVIGATION_LINKS = {
         ((('/blog/index.html',          'wxForty-Two'),
           ('/pages/about-42.html',      'About 42'),
           ('/archive.html',             'Archives'),
-          ('/categories/index.html',    'Tags')),
-          'Blog'),
+          ('/categories/index.html',    'Tags')
+          ), 'Blog'),
 
     ),
 }
@@ -669,6 +671,11 @@ REDIRECTIONS = []
 #         "rsync -rav --delete output/ joe@my.site:/srv/www/site",
 #     ]
 # }
+
+DEPLOY_COMMANDS = {
+    'default': [
+        "rsync -avP output/ wxpython-site:wxpython-site/htdocs"],
+}
 
 # github_deploy configuration
 # For more details, read the manual:

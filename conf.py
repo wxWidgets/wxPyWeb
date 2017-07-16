@@ -150,7 +150,7 @@ NAVIGATION_LINKS = {
 
         ((('/blog/',                'wxForty-Two'),
           ('/pages/about-42/',      'About 42'),
-          ('/archive/',             'Archives'),
+          ('/archive.html',         'Archive'),
           ('/categories/',          'Tags')
           ), 'Blog'),
 

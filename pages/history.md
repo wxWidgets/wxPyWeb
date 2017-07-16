@@ -98,7 +98,7 @@ TBW...
 
 The "recent" changes page of wxPython goes all the way back to release 0.3
 in 1998. That was a long time ago, with many releases made since then. The
-changelog is updated for each reelase and is viewable [here](pages/CHANGES.html). 
+changelog is updated for each release and is viewable [here](/pages/changes). 
 
 
 

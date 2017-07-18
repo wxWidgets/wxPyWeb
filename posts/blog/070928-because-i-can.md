@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, Software
 Category: Blog
 Slug: because-i-can
-Status: published
+nocomments: True
 
 For most of the time that I was actively using CVS (about a decade or
 so) if I wasn't using the command line interface then I most likely was

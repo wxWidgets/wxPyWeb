@@ -4,7 +4,7 @@ Author: Robin
 Tags: General
 Category: Blog
 Slug: its-alive
-Status: published
+nocomments: True
 
 Watch as the Phoenix spreads her wings over Python 3:
 

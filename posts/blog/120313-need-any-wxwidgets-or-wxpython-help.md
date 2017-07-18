@@ -4,7 +4,7 @@ Author: Robin
 Tags: General
 Category: Blog
 Slug: need-any-wxwidgets-or-wxpython-help
-Status: published
+nocomments: True
 
 My current long-term consulting project will be coming to an end soon,
 so I am currently looking for some short-term paying projects to fill in

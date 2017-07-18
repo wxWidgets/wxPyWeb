@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, Software
 Category: Blog
 Slug: commit-count-big-deal
-Status: published
+nocomments: True
 
 [This
 announcement](http://sourceforge.net/forum/forum.php?forum_id=960188)

@@ -4,7 +4,7 @@ Author: Robin
 Tags: General
 Category: Blog
 Slug: fun-with-qtwebkit-html5-video-2
-Status: published
+nocomments: True
 
 See 
 [my post](http://blog.enthought.com/open-source/fun-with-qtwebkit-html5-video/)

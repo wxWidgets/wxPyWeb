@@ -4,7 +4,7 @@ Author: Robin
 Tags: Life, Mac, Software
 Category: Blog
 Slug: os-x-lion-was-my-idea
-Status: published
+nocomments: True
 
 Several months ago Microsoft had an ad campaign where they would have an
 average Joe or Jane talk about some cool wizbang feature of Windows 7

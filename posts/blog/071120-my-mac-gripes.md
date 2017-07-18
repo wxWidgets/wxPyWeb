@@ -4,7 +4,7 @@ Author: Robin
 Tags: General, Hardware, Mac
 Category: Blog
 Slug: my-mac-gripes
-Status: published
+nocomments: True
 
 As [mentioned](http://wxpython.org/blog/2007/09/17/one-month-with-mac/)
 before, my experiences with the new Mac haven't all been roses. There

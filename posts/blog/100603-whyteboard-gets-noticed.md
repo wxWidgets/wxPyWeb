@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, Linux, Mac, Software, Windows
 Category: Blog
 Slug: whyteboard-gets-noticed
-Status: published
+nocomments: True
 
 [![](/images/2010/06/wbpdf-300x240.png "Whyteboard")](/images/2010/06/wbpdf.png)
 

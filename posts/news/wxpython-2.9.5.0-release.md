@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, Release
 Category: News
 slug: wxpython-2.9.5.0-release
-Status: published
+nocomments: True
 
 **wxPython (classic) 2.9.5.0** has been released.  This is another mostly bug fix 
 release, both in wxWidgets and wxPython.

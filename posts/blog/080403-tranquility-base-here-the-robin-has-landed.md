@@ -4,7 +4,7 @@ Author: Robin
 Tags: Life, Work
 Category: Blog
 Slug: tranquility-base-here-the-robin-has-landed
-Status: published
+nocomments: True
 
 Since a number of folks have expressed interest and concern I thought I
 would give a quick update on my working situation. This week I've

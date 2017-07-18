@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, Software
 Category: Blog
 Slug: project-phoenix
-Status: published
+nocomments: True
 
 For a couple years now myself and a few others have been hinting that a
 totally new way to develop wxPython is possible and is just over the

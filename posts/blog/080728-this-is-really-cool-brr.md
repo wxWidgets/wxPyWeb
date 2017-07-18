@@ -4,7 +4,7 @@ Author: Robin
 Tags: General, Work
 Category: Blog
 Slug: this-is-really-cool-brr
-Status: published
+nocomments: True
 
 I found out last week at the [OSCON](http://en.oreilly.com/oscon2008/)
 conference that my software is being used at the South Pole by the

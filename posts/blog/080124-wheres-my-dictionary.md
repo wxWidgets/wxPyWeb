@@ -4,7 +4,7 @@ Author: Robin
 Tags: General, Quotes
 Category: Blog
 Slug: wheres-my-dictionary
-Status: published
+nocomments: True
 
 I saw this sentence today on
 [ArsTechnica](http://arstechnica.com/news.ars/post/20080123-kde-goes-cross-platform-with-windows-mac-os-x-support.html):

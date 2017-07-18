@@ -4,7 +4,8 @@ Author: Robin
 Tags: Development, Release, Software
 Category: News
 slug: wxpython-2.8.12.0-release
-Status: published
+nocomments: True
+
 
 This is pretty much a bug-fix only release, although some of the 3rd
 party modules in wx.lib have also been updated and include some new

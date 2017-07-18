@@ -4,7 +4,7 @@ Author: Robin
 Tags: General, Quotes
 Category: Blog
 Slug: po-tay-toe-po-tah-toe
-Status: published
+nocomments: True
 
 Last week on
 [wxPython-users](http://news.gmane.org/gmane.comp.python.wxpython) a

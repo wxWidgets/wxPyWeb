@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, Release
 Category: News
 slug: wxpython-2.8.12.1-release
-Status: published
+nocomments: True
 
 Two at once! Both **wxPython 2.8.12.1** and **wxPython 2.9.2.1** have been released.  
 2.9.2.1 is the next iteration from the wxPython development 

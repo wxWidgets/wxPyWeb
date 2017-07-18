@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, Release
 Category: News
 slug: wxpython-2.9.3.1-release
-Status: published
+nocomments: True
 
 Happy New Year! **wxPython (classic) 2.9.3.1** has been released. This
 release takes care of a few bugs discovered in the installers and

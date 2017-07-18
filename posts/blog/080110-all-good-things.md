@@ -4,7 +4,7 @@ Author: Robin
 Tags: Life, Work
 Category: Blog
 Slug: all-good-things
-Status: published
+nocomments: True
 
 As they say, all good things must come to an end. However no matter how
 much you expect the inevitable, it's still a bit of a downer when it

@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, Phoenix
 Category: News
 slug: phoenix-on-the-way
-Status: published
+nocomments: True
 
 The **wxPython Phoenix** train is back on the tracks and moving forward at
 full steam ahead!

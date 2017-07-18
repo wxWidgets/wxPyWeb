@@ -4,7 +4,6 @@ Author: Robin
 Tags: Development, Release
 Category: News
 slug: wxpython-3.0.2.0-release
-Status: published
 
 **wxPython (classic) 3.0.2.0** has been released. This build includes
 fixes for some annoying bugs, and also adds various improvements from

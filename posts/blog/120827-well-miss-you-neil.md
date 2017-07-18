@@ -4,7 +4,7 @@ Author: Robin
 Tags: Life
 Category: Blog
 Slug: well-miss-you-neil
-Status: published
+nocomments: True
 
 ![Neil Armstrong](/images/2012/08/neil_armstrong.jpeg "Neil Armstrong")
 

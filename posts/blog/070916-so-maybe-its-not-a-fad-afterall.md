@@ -4,7 +4,7 @@ Author: Robin
 Tags: General, Life
 Category: Blog
 Slug: so-maybe-its-not-a-fad-afterall
-Status: published
+nocomments: True
 
 A few years ago I realized that this whole "blogging thing" wasn't just
 a passing fad, and decided that maybe I should jump on the bandwagon and

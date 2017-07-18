@@ -4,7 +4,7 @@ Author: Robin
 Tags: General, Quotes
 Category: Blog
 Slug: as-seen-in-wxpython-users
-Status: published
+nocomments: True
 
 I got a good chuckle out of this quote:
 

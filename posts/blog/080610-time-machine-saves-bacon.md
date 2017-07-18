@@ -4,7 +4,7 @@ Author: Robin
 Tags: Life, Mac
 Category: Blog
 Slug: time-machine-saves-bacon
-Status: published
+nocomments: True
 
 Yeah, I know what you're thinking... That headline sounds like something
 you might read while standing in the checkout line at the supermarket

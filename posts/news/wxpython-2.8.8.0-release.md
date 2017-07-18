@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, Release, Software
 Category: News
 slug: wxpython-2.8.8.0-release
-Status: published
+nocomments: True
 
 After a much longer than anticipated time since 2.8.7.1, wxPython
 2.8.8.0 has been released.

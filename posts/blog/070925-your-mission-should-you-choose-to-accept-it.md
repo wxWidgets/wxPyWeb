@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, General, Software
 Category: Blog
 Slug: your-mission-should-you-choose-to-accept-it
-Status: published
+nocomments: True
 
 A few weeks ago I sent the following challenge to the
 [PYxIDEs](http://pyxides.stani.be/) list, and I thought it might be a

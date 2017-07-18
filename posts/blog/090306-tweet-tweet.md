@@ -4,7 +4,7 @@ Author: Robin
 Tags: General, Life
 Category: Blog
 Slug: tweet-tweet
-Status: published
+nocomments: True
 
 A number of people have asked me about it and so I finally decided that
 it is high time that I give the whole [twitter](http://twitter.com)

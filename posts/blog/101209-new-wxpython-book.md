@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, General
 Category: Blog
 Slug: new-wxpython-book
-Status: published
+nocomments: True
 
 
 

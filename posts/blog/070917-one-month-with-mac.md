@@ -4,7 +4,7 @@ Author: Robin
 Tags: Hardware, Linux, Mac
 Category: Blog
 Slug: one-month-with-mac
-Status: published
+nocomments: True
 
 It's been about a month since I switched my primary computer to a
 [MacBook Pro](http://www.apple.com/macbookpro/), (2.4 GHz, 4G ram, with

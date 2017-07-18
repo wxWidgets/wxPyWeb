@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, General
 Category: Blog
 Slug: python-book-deals
-Status: published
+nocomments: True
 
 While browsing around on the [Packt
 Publishing](http://www.packtpub.com/) web site after looking at the page

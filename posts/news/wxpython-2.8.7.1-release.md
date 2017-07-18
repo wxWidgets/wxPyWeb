@@ -4,7 +4,7 @@ Author: Robin
 Tags: Release, Software
 Category: News
 slug: wxpython-2.8.7.1-release
-Status: published
+nocomments: True
 
 I've just released the new **2.8.7.1** build of **wxPython**. This
 release has had some bugs fixed, some minor patches applied, and also

@@ -4,7 +4,7 @@ Author: Robin
 Tags: Release
 Category: News
 slug: wxpython-2.8.6.0-release
-Status: published
+nocomments: True
 
 wxPython 2.8.6.0 has been released. Details are found
 [here](http://wxpython.org/recentchanges.php), and the download page is

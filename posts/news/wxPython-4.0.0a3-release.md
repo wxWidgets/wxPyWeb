@@ -4,7 +4,6 @@ author: Robin
 tags: Development, Release
 Category: News
 slug: wxpython-4.0.0a3-release
-status: published
 
 **wxPython 4.0.0a3** is now available at [PyPI](https://pypi.python.org/pypi/wxPython/4.0.0a3)
 

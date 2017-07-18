@@ -4,7 +4,7 @@ Author: Robin
 Tags: Release, Software
 Category: News
 slug: wxpython-2.9.1.1-release
-Status: published
+nocomments: True
 
 The 2.9.1.1 release of wxPython is now available for download at
  <http://wxpython.org/download.php>.  This is the first official release

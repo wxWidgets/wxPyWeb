@@ -4,7 +4,6 @@ Author: Robin
 Tags: Development, Release
 Category: News
 slug: wxpython-4.0.0a1-release
-Status: published
 
 **wxPython 4.0.0a1** is now available on [PyPI](https://pypi.python.org/pypi/wxPython/4.0.0a1). 
 This is the first official release of the new Phoenix version of wxPython, including

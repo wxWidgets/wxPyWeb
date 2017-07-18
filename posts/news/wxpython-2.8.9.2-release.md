@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, Release, Software
 Category: News
 slug: wxpython-2.8.9.2-release
-Status: published
+nocomments: True
 
  wxPython 2.8.9.2 has just been released.  This release adds the
 wx.lib.agw package, adds an event watcher to the widget inspection tool,

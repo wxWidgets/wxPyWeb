@@ -4,7 +4,7 @@ Author: Robin
 Tags: Life, Software, Work
 Category: Blog
 Slug: new-horizons
-Status: published
+nocomments: True
 
 For the past few months I have been working for
 [Enthought](http://enthought.com) and helping out with a new upcoming

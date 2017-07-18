@@ -4,7 +4,7 @@ Author: Robin
 Tags: General, Life
 Category: Blog
 Slug: happy-towel-day
-Status: published
+nocomments: True
 
 Do you know where your [towel](http://www.towelday.org/) is?
 

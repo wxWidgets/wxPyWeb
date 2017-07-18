@@ -4,7 +4,7 @@ Author: Robin
 Tags: Development, Release
 Category: News
 slug: wxpython-2.9.3.0-release
-Status: published
+nocomments: True
 
 **wxPython (classic) 2.9.3.0** has been released.  Among other things, this 
 build adds some classes produced by one of the Google Summer of Code

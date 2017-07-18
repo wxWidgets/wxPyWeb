@@ -4,7 +4,7 @@ Author: Robin
 Tags: Linux, Mac, TooCool, Windows
 Category: Blog
 Slug: time-to-kick-myself-again
-Status: published
+nocomments: True
 
 Ever have one of those moments when you see some product or service and
 you think, "*Doh! I should have thought of that!*" because it is

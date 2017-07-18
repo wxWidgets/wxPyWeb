@@ -1,8 +1,6 @@
 #!/bin/python
 """
-Hello World, part 2
-
-Hello World, but with more guts.
+Hello World, but with more meat.
 """
 
 import wx

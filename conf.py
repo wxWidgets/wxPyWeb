@@ -140,20 +140,49 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        #("/",                       "Home"),
-        ((("/pages/overview/",      "Overview"), 
-          ("/pages/screenshots/",   "Screenshots"), 
-          ("/pages/license/",       "License"),
-          ("/pages/history/",       "History"),   
-          ), "About"),
+        #("/",                                       "Home"),
 
-        ("/news/",                  "News"),
-        ("/pages/documentation/",   "Documentation"),
-        ("/pages/downloads/",       "Downloads"),
-        ("/pages/support/",         "Support"),
-        ("/pages/developers/",      "Developers"),
+        ((("/pages/overview/",                      "Overview"), 
+          ("/pages/screenshots/",                   "Screenshots"), 
+          ("/pages/license/",                       "License"),
+          ("/pages/history/",                       "History"),   
+          ), 
+        "About"),
 
-        ((('/blog/',                'wxForty-Two'),
+        ("/news/",                                  "News"),
+        ("/pages/downloads/",                       "Downloads"),
+
+        ((("https://docs.wxpython.org/main.html",   "API Reference"),
+          ("https://wiki.wxpython.org/",            "wxPython Wiki"),
+          ("/pages/bookshelf/",                     "wxPython Bookshelf"),
+          ("/pages/changes/",                       "Changelog"),
+          #("/pages/documentation/",                 "Other"),
+          ), 
+        "Documentation"),
+
+        ((("https://github.com/wxWidgets/Phoenix/issues",   "Issue Tracker"),
+          ("/pages/maillists/",                     "Mail Lists"),
+          ("/pages/irc/",                           "IRC Channel"),
+          ("https://stackoverflow.com/questions/tagged/wxpython", "StackOverflow"),
+          ("/pages/how-to-submit-issue/",           "How to report issues"),
+          #("/pages/support/",                       "Other"),
+          ), 
+        "Support"),
+
+          # overview and links, how to submit PR, etc.
+        ((("/pages/wxpython-github",                "wxPython at GitHub"),  
+          # overview and link to waterfall display, snapshots folder
+          ("/pages/wxpython-buildbot",              "Buildbot"),            
+          ("/pages/changes/",                       "Changelog"),
+          ("/pages/maillists/",                     "wxPython-dev mail list"),
+          # coding style, etc.
+          ("/pages/contributor-guide",              "Contributor Guide"), 
+          ("https://wxpython.org/Phoenix/docs/html/main.html",  "Docs built daily"),
+          #("/pages/developers/",                    "Other"),
+          ),
+        "Developers"),
+
+        ((('/blog/',                'wxForty-Two Blog'),
           ('/pages/about-42/',      'About 42'),
           ('/archive.html',         'Archive'),
           ('/categories/',          'Tags')
@@ -559,7 +588,7 @@ HIDDEN_CATEGORIES = []
 
 # If ENABLE_AUTHOR_PAGES is set to True and there is more than one
 # author, author pages are generated.
-# ENABLE_AUTHOR_PAGES = True
+ENABLE_AUTHOR_PAGES = False
 
 # Path to author pages. Final locations are:
 # output / TRANSLATION[lang] / AUTHOR_PATH / index.html (list of authors)
@@ -678,7 +707,7 @@ REDIRECTIONS = []
 # }
 
 # TODO: add --delete but only after adding flags to exclude some folders on
-# the the site that wont' be kept in version control, like Phoenix, etc.
+# the the site that won't be kept in version control, like Phoenix, etc.
 DEPLOY_COMMANDS = {
     'default': [
         "rsync -avP output/ wxpython-site:wxpython-site/htdocs"],

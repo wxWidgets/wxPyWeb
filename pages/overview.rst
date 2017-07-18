@@ -120,7 +120,7 @@ is all about. The finished application looks like these screenshots when run:
 
 .. raw:: html
 
-	&nbsp;
+	<p></p>
 
 
 .. image:: /images/HelloWorld2-msw.png

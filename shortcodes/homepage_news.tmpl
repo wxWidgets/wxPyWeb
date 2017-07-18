@@ -1,0 +1,57 @@
+##
+## A shortcode template to include a few blog posts into a non-post page
+## Adapted from index.tmpl
+##
+## Expected Parameters:
+##     num: the maximum number of posts to include
+##     slug: the section_slug of the posts to include, or "all"
+##
+
+<%namespace name="comments" file="comments_helper.tmpl"/>
+
+<%
+count = 0
+%>
+
+<div class="homepage_news">
+<div class="postindex">
+% for post in site.posts:
+	% if slug == "all" or slug == post.section_slug():
+		<% count += 1 %>
+		% if count > int(num): 
+			</div></div>
+		    <% return STOP_RENDERING %>    
+		% endif
+
+	    <article class="h-entry post-${post.meta('type')}">
+	    <header>
+	        <h2 class="p-name entry-title"><a href="${post.permalink()}" class="u-url">${post.title()|h}</a></h2>
+	        <div class="metadata">
+	            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+	            % if author_pages_generated:
+	                <a href="${_link('author', post.author())}">${post.author()|h}</a>
+	            % else:
+	                ${post.author()|h}
+	            % endif
+	            </span></p>
+	            <p class="dateline"><a href="${post.permalink()}" rel="bookmark"><time class="published dt-published" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time></a></p>
+	            % if not post.meta('nocomments') and site_has_comments:
+	                <p class="commentline">${comments.comment_link(post.permalink(), post._base_path)}</p>
+	            % endif
+	        </div>
+	    </header>
+	    %if index_teasers:
+	        <div class="p-summary entry-summary">
+	            ${post.text(teaser_only=True)} 
+	        </div>
+	    %else:
+	        <div class="e-content entry-content">
+	            ${post.text(teaser_only=False)}
+	        </div>
+	    %endif
+	    </article>
+
+	% endif
+% endfor
+</div>
+</div>

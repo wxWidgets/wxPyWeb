@@ -165,9 +165,10 @@ NAVIGATION_LINKS = {
 
 # Name of the theme to use.
 #THEME = "bootstrap3"
-#THEME = "bootstrap3-jinja"
-THEME = "custom"
 #THEME = "material-theme"
+#THEME = "custom"
+THEME = "wxpy-theme"
+
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
@@ -220,12 +221,12 @@ POSTS = (
 )
 PAGES = (
     # Put the index.html page in /
-    ("pages/index.*", "", "page.tmpl"),
+    ("pages/index.*", "", "story.tmpl"),
     # and all the rest in /pages
-    ("pages/*.rst", "pages", "page.tmpl"),
-    ("pages/*.md", "pages", "page.tmpl"),
-    ("pages/*.txt", "pages", "page.tmpl"),
-    ("pages/*.html", "pages", "page.tmpl"),
+    ("pages/*.rst", "pages", "story.tmpl"),
+    ("pages/*.md", "pages", "story.tmpl"),
+    ("pages/*.txt", "pages", "story.tmpl"),
+    ("pages/*.html", "pages", "story.tmpl"),
 )
 
 # Since this site's main page will be a static page instead of the main blog
@@ -354,7 +355,7 @@ METADATA_FORMAT = "Nikola"
 
 # If you want to hide the title of your website (for example, if your logo
 # already contains the text), set this to False.
-# SHOW_BLOG_TITLE = True
+SHOW_BLOG_TITLE = False
 
 # Writes tag cloud data in form of tag_cloud_data.json.
 # Warning: this option will change its default value to False in v8!
@@ -1420,7 +1421,9 @@ UNSLUGIFY_TITLES = True
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {}
+GLOBAL_CONTEXT = {
+    'header_logo': '<img src="/images/header-logo.png" />'
+}
 
 # Add functions here and they will be called with template
 # GLOBAL_CONTEXT as parameter when the template is about to be

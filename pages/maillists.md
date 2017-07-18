@@ -40,6 +40,13 @@ messages to it. This is done to help reduce the amount of spam messages
 going through the lists. Any subscriber found to be posting spam messages
 to the list will be reported and banned from the list.
 
+When reporting problems or asking for help on any of the maillist/groups be
+sure to give all the relevant details of your environment (platform, Python
+version, wxPython version) and also include a small, runnable [sample
+application](https://wiki.wxpython.org/MakingSampleApps) which demonstrates
+your issue.  If you don't then it is very likely that the only response you
+will get is a request to do so.
+
 
 ## The Maillists/Groups
 

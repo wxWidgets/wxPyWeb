@@ -18,7 +18,7 @@ modifications on Windows, Macs and Linux or other unix-like systems.
 </font>
 <p></p>
 
-<a class="btn btn-primary btn-lg" href="pages/overview" role="button">Learn more</a>
+<a class="btn btn-primary btn-lg" href="/pages/overview" role="button">Learn more</a>
 </div></div></div>
 
 
@@ -27,3 +27,4 @@ modifications on Windows, Macs and Linux or other unix-like systems.
 
 {{% homepage_news num=2 slug=news %}}
 
+<center><a class="btn btn-primary" href="/news" role="button">More news</a></center>

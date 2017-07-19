@@ -10,14 +10,16 @@
 .. type: text
 -->
 
-> "The 90s called, they want their website back..."
+> "The 2000s called, they want their website back..."
 
-Not any more!  I finally gave the old clunky site back to the 90s and have
-implemented a brand new site using the awesome static site generator
-[Nikola](https://getnikola.com/).  The new site combines most of what was
-on the old site, plus a [news feed](/news/) (you're reading a news post right now)
-and I also resurrected my old [wxForty-Two blog](/blog/) from the wordpress
-graveyard and added it here too.  
+Not any more!  I finally gave the old clunky site back to the dinosaurs and
+have implemented a brand new site, which you are gazing at now, using the
+awesome static site generator [Nikola](https://getnikola.com/).  The new
+site combines most of what was on the old site, plus a 
+[news feed](/news/) (you're reading a news post right now) and I also 
+resurrected my old [wxForty-Two blog](/blog/) from the wordpress graveyard 
+and added it here too. Being a static site I no longer have to worry about the 
+perpetual stream of wordpress security issues.
 
 <!-- TEASER_END -->
 

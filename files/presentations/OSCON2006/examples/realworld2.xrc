@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource>
+  <object class="wxPanel" name="PANEL1">
+    <object class="wxBoxSizer">
+      <orient>wxVERTICAL</orient>
+      <object class="sizeritem">
+        <object class="wxStaticText">
+          <label>Account Information</label>
+          <font>
+            <size>18</size>
+            <family>swiss</family>
+            <style>normal</style>
+            <weight>bold</weight>
+            <underlined>0</underlined>
+          </font>
+        </object>
+        <flag>wxALL</flag>
+        <border>5</border>
+      </object>
+      <object class="sizeritem">
+        <object class="wxStaticLine"/>
+        <flag>wxEXPAND</flag>
+      </object>
+      <object class="sizeritem">
+        <object class="wxFlexGridSizer">
+          <cols>2</cols>
+          <vgap>5</vgap>
+          <hgap>5</hgap>
+          <object class="sizeritem">
+            <object class="wxStaticText">
+              <label>Name:</label>
+            </object>
+            <flag>wxALIGN_RIGHT|wxALIGN_CENTRE_VERTICAL</flag>
+          </object>
+          <growablecols>1</growablecols>
+          <object class="sizeritem">
+            <object class="wxTextCtrl" name="name"/>
+            <flag>wxEXPAND</flag>
+          </object>
+          <object class="sizeritem">
+            <object class="wxStaticText">
+              <label>Address:</label>
+            </object>
+            <flag>wxALIGN_RIGHT|wxALIGN_CENTRE_VERTICAL</flag>
+          </object>
+          <object class="sizeritem">
+            <object class="wxTextCtrl" name="addr1"/>
+            <flag>wxEXPAND</flag>
+          </object>
+          <object class="spacer">
+            <size>0,0</size>
+          </object>
+          <object class="sizeritem">
+            <object class="wxTextCtrl" name="addr2"/>
+            <flag>wxEXPAND</flag>
+          </object>
+          <object class="sizeritem">
+            <object class="wxStaticText">
+              <label>City, State, Zip:</label>
+            </object>
+            <flag>wxALIGN_RIGHT|wxALIGN_CENTRE_VERTICAL</flag>
+          </object>
+          <object class="sizeritem">
+            <object class="wxBoxSizer">
+              <orient>wxHORIZONTAL</orient>
+              <object class="sizeritem">
+                <object class="wxTextCtrl" name="city">
+                  <size>150,-1</size>
+                </object>
+                <option>1</option>
+              </object>
+              <object class="sizeritem">
+                <object class="wxTextCtrl" name="state">
+                  <size>50,-1</size>
+                </object>
+                <flag>wxLEFT|wxRIGHT</flag>
+                <border>5</border>
+              </object>
+              <object class="sizeritem">
+                <object class="wxTextCtrl" name="zipcode">
+                  <size>70,-1</size>
+                </object>
+              </object>
+            </object>
+            <flag>wxEXPAND</flag>
+          </object>
+          <object class="sizeritem">
+            <object class="wxStaticText">
+              <label>Phone:</label>
+            </object>
+            <flag>wxALIGN_RIGHT|wxALIGN_CENTRE_VERTICAL</flag>
+          </object>
+          <object class="sizeritem">
+            <object class="wxTextCtrl" name="phone"/>
+            <flag>wxEXPAND</flag>
+          </object>
+          <object class="sizeritem">
+            <object class="wxStaticText">
+              <label>Email:</label>
+            </object>
+            <flag>wxALIGN_RIGHT|wxALIGN_CENTRE_VERTICAL</flag>
+          </object>
+          <object class="sizeritem">
+            <object class="wxTextCtrl" name="email"/>
+            <flag>wxEXPAND</flag>
+          </object>
+        </object>
+        <flag>wxALL|wxEXPAND</flag>
+        <border>10</border>
+      </object>
+      <object class="sizeritem">
+        <object class="wxBoxSizer">
+          <orient>wxHORIZONTAL</orient>
+          <object class="spacer">
+            <size>20,20</size>
+            <option>1</option>
+          </object>
+          <object class="sizeritem">
+            <object class="wxButton" name="SaveBtn">
+              <label>Save</label>
+            </object>
+          </object>
+          <object class="spacer">
+            <size>20,20</size>
+            <option>1</option>
+          </object>
+          <object class="sizeritem">
+            <object class="wxButton" name="CancelBtn">
+              <label>Cancel</label>
+            </object>
+          </object>
+          <object class="spacer">
+            <size>20,20</size>
+            <option>1</option>
+          </object>
+        </object>
+        <flag>wxEXPAND</flag>
+      </object>
+    </object>
+  </object>
+</resource>

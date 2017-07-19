@@ -25,8 +25,11 @@ USE_TEST_SITE = True
 # in a prominent link. Don't forget the protocol (http/https)!
 if USE_TEST_SITE:
     SITE_URL = "http://test.wxPython.org/"
+    SITE_DIR = "wxpython-testsite"
 else:
     SITE_URL = "https://wxPython.org/" 
+    SITE_DIR = "wxpython-site"
+
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
@@ -688,7 +691,8 @@ USE_BASE_TAG = False
 # relative URL.
 #
 # If you don't need any of these, just set to []
-REDIRECTIONS = []
+REDIRECTIONS = [ ("docs/index.html", "http://docs.wxpython.org/"),
+                ]
 
 # Presets of commands to execute to deploy. Can be anything, for
 # example, you may use rsync:
@@ -706,11 +710,9 @@ REDIRECTIONS = []
 #     ]
 # }
 
-# TODO: add --delete but only after adding flags to exclude some folders on
-# the the site that won't be kept in version control, like Phoenix, etc.
 DEPLOY_COMMANDS = {
     'default': [
-        "rsync -avP output/ wxpython-site:wxpython-site/htdocs"],
+        "rsync -avP --delete-after --exclude-from=rsync-exclude.txt output/ wxpython-site:{}/htdocs".format(SITE_DIR)],
 }
 
 # github_deploy configuration

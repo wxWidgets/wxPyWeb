@@ -27,9 +27,9 @@ A wxPython user once took the opportunity to express to me his glee at
 discovering wxPython and all the potential it enabled him to have in his
 projects, and said, 
 
->*"wxPython is kind of like 42. I'm not quite sure what the question is
->yet, but I feel much better and more able to tackle any problem since I
->already know what the answer is!"*
+> *"wxPython is kind of like 42. I'm not quite sure what the question is
+> yet, but I feel much better and more able to tackle any problem since I
+> already know what the answer is!"*
 
 So I thought that this would be a good theme for this Blog to have. It's
 been quite a while since I read the the five books of the H2G2 trilogy so I
@@ -43,7 +43,7 @@ So, welcome to my blog. Do you know where your towel is?
 
 So long, and thanks for reading!
 
-See also: [42 Quotes](42-quotes.html)
+See also: [42 Quotes](/pages/42-quotes/)
 
 
 

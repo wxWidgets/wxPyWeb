@@ -64,3 +64,28 @@ based on open standards.
 GNUmed is based on third party projects such as free software/open source
 DBMS PostgreSQL and is written mostly in Python. It is supported by a
 graphical user interface (GUI) based on wxPython.
+
+
+
+Robot Framework IDE (RIDE)
+--------------------------
+
+.. class:: thumbnails
+
+    .. thumbnail:: /screenshots/RIDE_on_Linux_cell_editor.png 
+    .. thumbnail:: /screenshots/RIDE_on_Linux_text_editor.png 
+    .. thumbnail:: /screenshots/RIDE_on_Linux_test_runner.png 
+
+
+RIDE is is a test data editor for `Robot Framework <http://robotframework.org/>`_ 
+test data. Navigate through your Test Suites folders, and run them
+filtering by Tags. Edit Test Cases in the Cell Editor with context help and
+code highlighting, or use the Text Editor for space formatted files. Select
+the language binding to run Robot Framework, like Jython or Python, and
+then open on your browser the Log or Report files with a click. It runs on
+Linux, Mac and Windows.
+
+
+
+
+

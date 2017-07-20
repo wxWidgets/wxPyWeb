@@ -13,21 +13,22 @@
 > "The 2000s called, they want their website back..."
 
 Not any more!  I finally gave the old clunky site back to the dinosaurs and
-have implemented a brand new site, which you are gazing at now, using the
-awesome static site generator [Nikola](https://getnikola.com/).  The new
-site combines most of what was on the old site, plus a 
-[news feed](/news/) (you're reading a news post right now) and I also 
-resurrected my old [wxForty-Two blog](/blog/) from the wordpress graveyard 
-and added it here too. Being a static site I no longer have to worry about the 
-perpetual stream of wordpress security issues.
+have implemented a brand new site (using the awesome static site generator
+[Nikola](https://getnikola.com/)) which you are gazing adoringly at now.
+The new site combines most of what was on the old site, plus a  [news
+feed](/news/) (you're reading a **news post** right now) and I also
+resurrected my old [wxForty-Two blog](/blog/) from the wordpress graveyard
+and added it here too. Being a static site I no longer have to worry about
+the  perpetual stream of wordpress security issues.
 
 <!-- TEASER_END -->
 
 There is still some style and template tweaking that I have planned, plus
 some more content, but thanks to Nikola I am *a lot* further on than I
 thought I would be by now. And since posts and content are edited in ReST
-or Markdown it should be lots easier to keep things up to date and add new
-content as needed.
+or Markdown (or tons of 
+[other options](https://getnikola.com/handbook.html#supported-input-formats)) 
+it should be lots easier to keep things up to date and add new content as needed.
 
 For those who care about the details, I'm using a custom theme based on
 Nikola's stock [bootstrap3](http://getbootstrap.com/) theme, using

@@ -31,11 +31,12 @@ or Markdown (or tons of
 it should be lots easier to keep things up to date and add new content as needed.
 
 For those who care about the details, I'm using a custom theme based on
-Nikola's stock [bootstrap3](http://getbootstrap.com/) theme, using
+Nikola's stock [bootstrap3](http://getbootstrap.com/) theme, and using
 [Mako](http://www.makotemplates.org/) for the template engine. I customized
 the base template to enable adding the panels on the right side of the page
-(or at the bottom if you are browsing on a phone.) I also created a
-"shortcode" template that is used to inject the most recent news posts on
-the front page, enabling a combination of, in Nikola's terminology, "page"
-and "index". And of course there has been some CSS tweaks too. Fun stuff.
+(or at the bottom if you are browsing on a phone or other width challenged
+screen.) I also created a "shortcode" template that is used to inject the
+most recent news posts on the front page, enabling a combination of, in
+Nikola's terminology, "page" and "index". And of course there has been some
+CSS tweaks too. Fun stuff.
 

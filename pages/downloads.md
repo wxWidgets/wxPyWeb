@@ -97,8 +97,8 @@ Each day that there are commits to wxPython Phoenix's master branch, the
 build". If successful then the resulting wheels, docs, and source archives
 will be uploaded to the [snapshots folder](https://wxpython.org/Phoenix
 /snapshot-builds/). Although these are not technically official releases,
-and may have new undiscovered and unsolved bugs, quite a few people use
-them successfully.
+and may have new undiscovered and unsolved bugs, more than a few people use
+them successfully in their own projects.
 
 ### GitHub
 

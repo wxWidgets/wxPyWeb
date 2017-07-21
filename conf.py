@@ -155,7 +155,7 @@ NAVIGATION_LINKS = {
         ("/news/",                                  "News"),
         ("/pages/downloads/",                       "Downloads"),
 
-        ((("https://docs.wxpython.org/main.html",   "API Reference"),
+        ((("https://docs.wxpython.org/",            "API Reference"),
           ("https://wiki.wxpython.org/",            "wxPython Wiki"),
           ("/pages/bookshelf/",                     "wxPython Bookshelf"),
           ("/pages/changes/",                       "Changelog"),
@@ -182,7 +182,7 @@ NAVIGATION_LINKS = {
           ("/pages/maillists/",                     "wxPython-dev mail list"),
           # coding style, etc.
           ("/pages/contributor-guide",              "Contributor Guide"), 
-          ("https://wxpython.org/Phoenix/docs/html/main.html",  "Docs built daily"),
+          ("https://wxpython.org/Phoenix/docs/html/","Docs built daily"),
           #("/pages/developers/",                    "Other"),
           ),
         "Developers"),

@@ -66,7 +66,7 @@ https://docs.wxpython.org/MigrationGuide.html.
 
 The new **wxPython API reference documentation**, including all Python-specific
 additions and customizations, and also docs for the ``wx.lib`` package, is
-located at: https://docs.wxpython.org/main.html.
+located at: https://docs.wxpython.org/.
 
 
 

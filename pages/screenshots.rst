@@ -77,8 +77,9 @@ Robot Framework IDE (RIDE)
     .. thumbnail:: /screenshots/RIDE_on_Linux_test_runner.png 
 
 
-RIDE is is a test data editor for `Robot Framework <http://robotframework.org/>`_ 
-test data. Navigate through your Test Suites folders, and run them
+`RIDE <https://github.com/robotframework/RIDE>`_ is is a test data 
+editor for `Robot Framework <http://robotframework.org/>`_ test data. 
+Navigate through your Test Suites folders, and run them
 filtering by Tags. Edit Test Cases in the Cell Editor with context help and
 code highlighting, or use the Text Editor for space formatted files. Select
 the language binding to run Robot Framework, like Jython or Python, and
@@ -87,5 +88,16 @@ Linux, Mac and Windows.
 
 
 
+OutWiker - the tree notes organizer
+-----------------------------------
+
+.. class:: thumbnails
+
+    .. thumbnail:: /screenshots/outwiker_2.0.0_01_en.png
+    .. thumbnail:: /screenshots/outwiker_2.0.0_02_en.png
+    .. thumbnail:: /screenshots/outwiker_2.0.0_05_en.png
 
 
+`OutWiker <http://jenyay.net/Outwiker/English>`_ is designed to store notes in a tree. Such programs are called "outliner", personal wiki, or tree-like editors. OutWiker's main difference from the other similar programs is keeping the tree of notes in the form of directories on disk, and encouraging changing the base by external sources and programs.
+
+Also any number of files can be attached to the page. OutWiker can contain pages of different types, currently supports three types of pages: plain text, HTML pages and wiki pages, but the number of types of pages will increase in future.

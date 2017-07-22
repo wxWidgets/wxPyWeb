@@ -12,9 +12,15 @@
 This is just a list of Python books, and other related tech books, that
 Robin has written, contributed to, read, or would like to read.
 
+<div class="well well-lg">
+
+NOTE: if you have an ad-blocker running then you may not see the images for
+the books on this page, as they are being served up by Amazon's ad system.
+
+</div>
+
 
 <table width="100%" cellspacing="0" cellpadding="8" style="marin:10px;"><tr><td>
-
 
 
 <div align="left"><table><tr><td>

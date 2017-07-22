@@ -36,7 +36,7 @@ submitting your bug report to the wxPython Phoenix project.
    c. Python version
    d. If your wxPython binaries did not come from PyPI, where did you get it? Did you build it yourself?
    e. Steps needed to reproduce the issue
-   f. A `small runnable sample <https://wiki.wxpython.org/MakingSampleApps>`_ application that can be used to reproduce the issue, see also `SSCCE.org <http://sscce.org/>`_ 
+   f. A `small runnable sample <https://wiki.wxpython.org/MakingSampleApps>`_ application that can be used to reproduce the issue, see also `SSCCE <http://sscce.org/>`_ and `MCVE <https://stackoverflow.com/help/mcve>`_.
 
 
 

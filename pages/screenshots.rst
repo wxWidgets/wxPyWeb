@@ -101,3 +101,15 @@ OutWiker - the tree notes organizer
 `OutWiker <http://jenyay.net/Outwiker/English>`_ is designed to store notes in a tree. Such programs are called "outliner", personal wiki, or tree-like editors. OutWiker's main difference from the other similar programs is keeping the tree of notes in the form of directories on disk, and encouraging changing the base by external sources and programs.
 
 Also any number of files can be attached to the page. OutWiker can contain pages of different types, currently supports three types of pages: plain text, HTML pages and wiki pages, but the number of types of pages will increase in future.
+
+
+BetaMatch
+---------
+
+.. class:: thumbnails
+
+    .. thumbnail:: /screenshots/BetaMatch.png
+
+`BetaMatch <http://www.mnw-scan.com/>`_ is a very specialized software system for
+component matching of antennas. A demo version can be downloaded from the site if 
+anybody is interested in playing around.

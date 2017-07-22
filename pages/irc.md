@@ -30,7 +30,6 @@ namely: be polite, be patient, be helpful, be kind, and avoid the 3 W's: no
 whining, no whinging and don't be a weenie.  In other words, do not type
 anything that your granny might smack you for if she saw you do it. 
 
-<iframe 
-src="http://webchat.freenode.net?channels=wxwidgets%2Cwxpython&uio=Mj10cnVlJjk9dHJ1ZSYxMT0yMzYa9" 
-width="100%" height="650"></iframe>
+<iframe src="http://webchat.freenode.net?channels=%23wxwidgets%23%2Cwxpython&uio=OT10cnVlJjExPTIxNQ6c" width="100%" height="600"></iframe>
+
 

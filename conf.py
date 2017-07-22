@@ -19,7 +19,7 @@ import time
 # Data about this site
 BLOG_AUTHOR = "The wxPython Team"  # (translatable)
 BLOG_TITLE = "wxPython"  # (translatable)
-USE_TEST_SITE = True
+USE_TEST_SITE = False
 
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!

@@ -14,7 +14,7 @@
 
 Not any more!  I finally gave the old clunky site back to the dinosaurs and
 have implemented a brand new site (using the awesome static site generator
-[Nikola](https://getnikola.com/)) which you are gazing adoringly at now.
+[Nikola](https://getnikola.com/)) which you are gazing at with much adoration now.
 The new site combines most of what was on the old site, plus a  [news
 feed](/news/) (you're reading a **news post** right now) and I also
 resurrected my old [wxForty-Two blog](/blog/) from the wordpress graveyard

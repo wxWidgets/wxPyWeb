@@ -693,7 +693,8 @@ USE_BASE_TAG = False
 # relative URL.
 #
 # If you don't need any of these, just set to []
-REDIRECTIONS = [ ("docs/index.html", "http://docs.wxpython.org/"),
+REDIRECTIONS = [ ("docs/index.html",     "http://docs.wxpython.org/"),
+                 ("docs/api/index.html", "http://docs.wxpython.org/"),
                 ]
 
 # Presets of commands to execute to deploy. Can be anything, for

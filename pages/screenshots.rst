@@ -113,3 +113,24 @@ BetaMatch
 `BetaMatch <http://www.mnw-scan.com/>`_ is a very specialized software system for
 component matching of antennas. A demo version can be downloaded from the site if 
 anybody is interested in playing around.
+
+
+DisplayCAL
+----------
+
+.. class:: thumbnails
+
+    .. thumbnail:: /screenshots/DisplayCAL-screenshot-GNOME.png
+    .. thumbnail:: /screenshots/DisplayCAL-screenshot-GNOME-edit-testchart.png
+    .. thumbnail:: /screenshots/DisplayCAL-screenshot-GNOME-profile-information.png
+    .. thumbnail:: /screenshots/DisplayCAL-screenshot-GNOME-view-curves.png
+
+
+
+`DisplayCAL <https://displaycal.net/>`_ is a display calibration and
+profiling solution with a focus on accuracy and versatility. At its core it
+relies on ArgyllCMS, an open source color management system, to take
+measurements, create calibrations and profiles, and for a variety of other
+advanced color related tasks.
+
+

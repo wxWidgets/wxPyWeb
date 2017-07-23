@@ -41,3 +41,7 @@ most recent news posts on the front page, enabling a combination of, in
 Nikola's terminology, "page" and "index". And of course there has been some
 CSS tweaks too. Fun stuff.
 
+### One more thing...
+
+For the curious, the website repository is on GitHub, at 
+<https://github.com/wxWidgets/wxPyWeb>.

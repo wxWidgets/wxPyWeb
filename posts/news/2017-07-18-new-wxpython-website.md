@@ -3,7 +3,7 @@
 .. slug: new-wxpython-website
 .. date: 2017-07-18 23:14:08 UTC
 .. author: Robin
-.. tags: 
+.. tags: General
 .. category: 
 .. link: 
 .. description: 

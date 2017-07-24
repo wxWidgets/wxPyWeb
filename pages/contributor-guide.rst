@@ -25,7 +25,7 @@ building upon the guidelines in the
 
 1. If your contribution is intended to fix a bug or other issue, make
    sure that there is a **GitHub issue** created for it. If there
-   isn't, then [create one](/pages/reporting-issues/).  This is not
+   isn't, then `create one </pages/how-to-submit-issue/>`_.  This is not
    necessary for enhancements or new features.
 
 2. If your contribution is large or complex it may be a good idea to

@@ -134,3 +134,23 @@ measurements, create calibrations and profiles, and for a variety of other
 advanced color related tasks.
 
 
+
+Pyspread
+--------
+
+.. class:: thumbnails
+
+    .. thumbnail:: /screenshots/pyspread_screenshot_main_window.png
+    .. thumbnail:: /screenshots/pyspread_screenshot_sinus_large.png
+    .. thumbnail:: /screenshots/pyspread_screenshot_basemap_large.png
+
+`Pyspread <https://manns.github.io/pyspread/>`_ is a non-traditional
+spreadsheet application that is based on and written in the programming
+language Python. The goal of pyspread is to be the most pythonic
+spreadsheet. Pyspread expects Python expressions in its grid cells, which
+makes a spreadsheet specific language obsolete. Each cell returns a Python
+object that can be accessed from other cells. These objects can represent
+anything including lists or matrices.
+
+
+

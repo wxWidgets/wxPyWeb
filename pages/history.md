@@ -42,9 +42,9 @@ discovered.
 
 So instead of working on my prototype I worked with Harri Pasanen in 
 Finland to advance the Python bindings for wxWidgets, otherwise known 
-as wxPython 0.2, also with some help from Edward Zimmerman.  The
+as wxPython 0.2, also with some help from Edward Zimmerman. <!-- The
 mailing list announcement of that release is archived  
-[here]([http://www.google.com/groups?selm=PA.95Jul27032244%40ok.tekla.fi&oe=UTF-8).
+[here](http://www.google.com/groups?selm=PA.95Jul27032244%40ok.tekla.fi&oe=UTF-8). -->
 We got it to be functional enough that I could do my prototype for my 
 boss using Python, but wxPython was a nightmare to maintain and to 
 enhance because everything (C++ extension module code, Python proxy 
@@ -54,7 +54,7 @@ places in wxPython code to add the support for the enhancement or fix
 to wxPython.  When it reached many tens of thousands of lines of code 
 it got to be very awkward and fragile to work on in that manner.  Add 
 to that the fact that there was no central source code repository
-(this was also long before [[http://sf.net/|SourceForge]]'s time) and 
+(this was also long before [SourceForge](http://sf.net/)'s time) and 
 so we were emailing code changes to each other and you can get an 
 inkling for the difficulties involved.
 

@@ -4,7 +4,7 @@
 .. date: 2017-07-18 23:14:08 UTC
 .. author: Robin
 .. tags: General
-.. category: 
+.. category: News
 .. link: 
 .. description: 
 .. type: text

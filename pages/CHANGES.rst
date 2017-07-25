@@ -9,6 +9,58 @@ wxPython Changelog
 ==================
 
 
+4.0.0b1
+-------
+* 22-July-2017
+
+PyPI:   https://pypi.python.org/pypi/wxPython/4.0.0b1 :html:`<br>`
+Extras: https://extras.wxPython.org/wxPython4/extras/
+
+Changes in this release include the following:
+
+* Various little tweaks and fixes in some of the demo samples.
+
+* Fixes in wx.lib.imagebrowser so it looks and acts better on OSX.
+
+* Fixed problem due to wxModules not being initialized when non-core
+  extensions are imported.
+
+* Fixed issue in wx.TreeItemId comparison methods affecting PyCrust and
+  other tools.
+
+* Restore the simplified names for the wxGridSelectionModes enum that were
+  present in Classic.
+
+* Add accessors for the internal widgets in the wx.EditableListBox.
+
+* Fixes in wx.lib.eventwatcher to avoid deprecated methods and other Phoenix
+  related changes.
+
+* Correctly transfer ownership of the input stream in wx.FSFile.
+
+* Ensure the license files are getting into the source tarball and the
+  binary wheel files.
+
+* Add wrappers for the classes derived from wxImageHandler.
+
+* Fix wx.lib.plot.polyline to not attempt to draw the spline if there are
+  less than 3 points.
+
+* Transfer the ownership of the prop arg in wx.propgrid.PGProperty.AddChild
+  and AddPrivateChild. Various other fixes in wx.propgrid classes for
+  backwards compatibility and to fix problems caused by mismatches between
+  customizations that were done for Classic and how Phoenix does things by
+  default. Also solved some problems in the PropertyGrid sample in the demo.
+
+* Add missing HtmlCell.FindCellByPos.
+
+* Enhance the DLG_UNIT convenience function such that if something other than
+  a wx.Point or wx.Size was passed in then the return value will be a tuple.
+  This eliminates some surprises that are possible due to auto-conversion of
+  tuples to points or sizes.
+
+
+
 
 4.0.0a3
 -------
@@ -130,7 +182,7 @@ and some applications can use Phoenix with slight, or even no modifications.
 In some other cases the correct way to do things was also available in Classic
 and it's only the wrong way that has been removed from Phoenix.  For more
 information there is a Migration Guide document available at:
-https://wxpython.org/Phoenix/docs/html/MigrationGuide.html
+https://wxpython.org/Phoenix/docs/html/main.html
 
 The new wxPython API reference documentation, including all Python-specific
 additions and customizations, and docs for the wx.lib package, is located at:
@@ -3375,9 +3427,7 @@ life of OGL within wxPython by making it more easily maintainable and
 less prone to getting rusty as there seems to be less and less
 interest in maintaining the C++ version.  At this point there are just
 a couple minor known compatibility differences, please see the
-MigrationGuide_ file for details.
-
-.. _MigrationGuide: MigrationGuide.html
+MigrationGuide file for details.
 
 EVT_STC_POSCHANGED has been removed as it has been deprecated in
 Scintilla for several releases now.
@@ -3431,12 +3481,9 @@ box.
 -----------------------------------------------
 * 2-Apr-2004
 
-(See also the MigrationGuide_ file for details about some of the
+(See also the MigrationGuide file for details about some of the
 big changes that have happened in this release and how you should
 adapt your code.)
-
-.. _MigrationGuide: MigrationGuide.html
-
 
 The wxWindows project and library is now known as wxWidgets.  Please
 see http://www.wxwindows.org/name.htm for more details.  This won't

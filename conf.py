@@ -437,12 +437,12 @@ POSTS_SECTION_DESCRIPTIONS = {
 # Names are determined from the output directory name automatically or the
 # metadata label. Unless overwritten below, names will use title cased and
 # hyphens replaced by spaces.
-POSTS_SECTION_NAME = {
-    DEFAULT_LANG: {
-        'news': 'wxPython News',
-        'blog': 'wxForty-Two Blog',
-    },
-}
+# POSTS_SECTION_NAME = {
+#     DEFAULT_LANG: {
+#         'news': 'wxPython News',
+#         'blog': 'wxForty-Two Blog',
+#     },
+# }
 
 # Titles for per-section index pages. Can be either one string where "{name}"
 # is substituted or the POSTS_SECTION_NAME, or a dict of sections. Note
@@ -932,7 +932,8 @@ IMAGE_THUMBNAIL_FORMAT = '{name}.thumbnail{ext}'
 # If False, index-1.html has the second-newest posts, index-2.html the third-newest,
 # and index-n.html the oldest posts. When this is active, old posts can be moved
 # to other index pages when new posts are added.
-# INDEXES_STATIC = True
+INDEXES_STATIC = False
+
 #
 # (translatable) If PRETTY_URLS is set to True, this setting will be used to create
 # prettier URLs for index pages, such as page/2/index.html instead of index-2.html.

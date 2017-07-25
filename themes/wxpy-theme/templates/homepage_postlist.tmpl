@@ -1,0 +1,36 @@
+## -*- coding: utf-8 -*-
+<%block name="content">
+<!-- Begin post-list ${post_list_id} -->
+<div class="homepage_news">
+<div class="postindex">
+<div id="${post_list_id}" class="post-list">
+    %if posts:
+        %for post in posts:
+            <article class="h-entry post-${post.meta('type')}">
+            <header>
+                <h2 class="p-name entry-title"><a href="${post.permalink()}" class="u-url">${post.title()|h}</a></h2>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    % if author_pages_generated:
+                        <a href="${_link('author', post.author())}">${post.author()|h}</a>
+                    % else:
+                        ${post.author()|h}
+                    % endif
+                    </span></p>
+                    <p class="dateline"><a href="${post.permalink()}" rel="bookmark"><time class="published dt-published" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time></a></p>
+                    % if not post.meta('nocomments') and site_has_comments:
+                        <p class="commentline">${comments.comment_link(post.permalink(), post._base_path)}</p>
+                    % endif
+                </div>
+            </header>
+            <div class="p-summary entry-summary">
+                ${post.text(teaser_only=True)} 
+            </div>
+            </article>
+        %endfor
+    %endif
+</div>
+</div>
+</div>
+<!-- End post-list ${post_list_id} -->
+</%block>

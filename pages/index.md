@@ -25,6 +25,11 @@ modifications on Windows, Macs and Linux or other unix-like systems.
 
 # Latest News
 
-{{% homepage_news num=3 slug=news %}}
+{{% post-list stop=3 
+			  sections=news 
+			  template=homepage_postlist.tmpl 
+			  %}}
+{{% /post-list %}}
+
 
 <center><a class="btn btn-primary" href="/news" role="button">More news</a></center>

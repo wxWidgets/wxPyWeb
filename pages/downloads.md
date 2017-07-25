@@ -56,13 +56,20 @@ extra files which are part of each release, which are hosted at
 <https://extras.wxPython.org/wxPython4/extras/>. 
 The things you will find there are:
 
-* A tarball containing the [wxPython API documentation](https://docs.wxpython.org) which you can use for off-line reading of the API reference material.
+* A tarball containing the **wxPython API documentation**, which is the
+same content available at <https://docs.wxpython.org>. You can use this
+copy of the reference docs for local off-line reading of the API reference
+material.  Look for a file named like `wxPython-docs-VERSION.tar.gz`.
 
-* A tarball containing the wxPython demo and samples.
+* A tarball containing the **wxPython demo** and **samples**. It is highly
+encouraged for new wxPython users, and experienced ones too, to download
+this file. It is a great learning resource with tons of examples showing
+how to use various components of the wxPython library. Look for a file
+named like `wxPython-demo-VERSION.tar.gz`.
 
 * Zip files with `*.pdb` files which are Visual Studio debugger information files. 
 
-* Binary wheel files for a few flavors of Linux. 
+* Binary wheel files for a few flavors of **Linux**. 
 
 
 ### Yes, we have Linux Wheels. Sort of.
@@ -71,12 +78,12 @@ Because of the differences between distributions (mainly different versions
 of the core libraries installed by default, but also platform architecture
 and etc.) it is not possible to host binary wheel files for Linux on PyPI
 unless they can be made to work within the constraints of 
-[PEP 513](https://www.python.org/dev/peps/pep-0513/) 
-Unfortunately, attempts to pound the wxPython peg into the `manylinux1`
-hole have not been very successful. Maybe `manylinux2` will be a better
-fit. In the meantime if you have a Linux similar enough to those used to
-build the wheels located on SourceForge then you can use them and not need
-to build the wheels yourself.
+[PEP 513](https://www.python.org/dev/peps/pep-0513/) Unfortunately, attempts to
+pound the wxPython peg into the `manylinux1` hole have not been very
+successful. Maybe `manylinux2` will be a better fit. In the meantime if you
+have a Linux similar enough to those used to build the wheels located on
+SourceForge then you can use them and not need to build the wheels
+yourself.
 
 Since there are various options for distro and wx port (GTK2 or GTK3) then
 the files can not all be located in the same folder for easy access by pip.

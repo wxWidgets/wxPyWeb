@@ -25,6 +25,6 @@ modifications on Windows, Macs and Linux or other unix-like systems.
 
 # Latest News
 
-{{% homepage_news num=2 slug=news %}}
+{{% homepage_news num=3 slug=news %}}
 
 <center><a class="btn btn-primary" href="/news" role="button">More news</a></center>

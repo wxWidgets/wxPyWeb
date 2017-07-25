@@ -98,9 +98,16 @@ OutWiker - the tree notes organizer
     .. thumbnail:: /screenshots/outwiker_2.0.0_05_en.png
 
 
-`OutWiker <http://jenyay.net/Outwiker/English>`_ is designed to store notes in a tree. Such programs are called "outliner", personal wiki, or tree-like editors. OutWiker's main difference from the other similar programs is keeping the tree of notes in the form of directories on disk, and encouraging changing the base by external sources and programs.
+`OutWiker <http://jenyay.net/Outwiker/English>`_ is designed to store
+notes in a tree. Such programs are called "outliner", personal wiki, or
+tree-like editors. OutWiker's main difference from the other similar
+programs is keeping the tree of notes in the form of directories on disk,
+and encouraging changing the base by external sources and programs.
 
-Also any number of files can be attached to the page. OutWiker can contain pages of different types, currently supports three types of pages: plain text, HTML pages and wiki pages, but the number of types of pages will increase in future.
+Also any number of files can be attached to the page. OutWiker can contain
+pages of different types, currently supports three types of pages: plain
+text, HTML pages and wiki pages, but the number of types of pages will
+increase in future.
 
 
 BetaMatch

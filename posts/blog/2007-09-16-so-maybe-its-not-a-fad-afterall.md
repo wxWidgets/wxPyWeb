@@ -19,8 +19,8 @@ actually moving forward with this project. However a few days ago a
 family member asked me to set up a blog for them on my site, and I
 decided that I couldn't make excuses to myself any longer and that it is
 past time that I do one for myself. So I set this up at the same time as
-the other blog and here it is. Now I have a place to write about [Life,
-the Universe, and Everything](/pages/about-42.html), and
+the other blog and here it is. Now I have a place to write about 
+[Life, the Universe, and Everything](/pages/about-42/), and
 anything else that tickles my fancy from time to time. Hopefully you'll
 enjoy reading as much as I hope to enjoy writing it.
 

@@ -24,10 +24,10 @@ USE_TEST_SITE = False
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 if USE_TEST_SITE:
-    SITE_URL = "http://test.wxPython.org/"
+    SITE_URL = "http://test.wxpython.org/"
     SITE_DIR = "wxpython-testsite"
 else:
-    SITE_URL = "https://wxPython.org/" 
+    SITE_URL = "https://wxpython.org/" 
     SITE_DIR = "wxpython-site"
 
 # This is the URL where Nikola's output will be deployed.
@@ -1294,19 +1294,20 @@ INDEX_DISPLAY_POST_COUNT = 8
 # """ % SITE_URL
 #
 # If you prefer a Google search form, here's an example that should just work:
-# SEARCH_FORM = """
-# <!-- Google custom search -->
-# <form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
-# <div class="form-group">
-# <input type="text" name="q" class="form-control" placeholder="Search">
-# </div>
-# <button type="submit" class="btn btn-primary">
-# 	<span class="glyphicon glyphicon-search"></span>
-# </button>
-# <input type="hidden" name="sitesearch" value="%s">
-# </form>
-# <!-- End of custom search -->
-# """ % SITE_URL
+SEARCH_FORM = """
+<!-- Google custom search -->
+<form method="get" action="https://www.google.com/search" 
+    class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary btn-xs">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="%s">
+</form>
+<!-- End of custom search -->
+""" % SITE_URL
 
 # Use content distribution networks for jQuery, twitter-bootstrap css and js,
 # and html5shiv (for older versions of Internet Explorer)

@@ -161,7 +161,6 @@ NAVIGATION_LINKS = {
           ("/pages/changes/",                       "Changelog"),
           ("https://github.com/wxWidgets/Phoenix/blob/master/README.rst", 
                                                     "Project README")
-          #("/pages/documentation/",                 "Other"),
           ), 
         "Documentation"),
 
@@ -170,20 +169,15 @@ NAVIGATION_LINKS = {
           ("/pages/irc/",                           "IRC Channel"),
           ("https://stackoverflow.com/questions/tagged/wxpython", "StackOverflow"),
           ("/pages/how-to-submit-issue/",           "How to report issues"),
-          #("/pages/support/",                       "Other"),
           ), 
         "Support"),
 
-          # overview and links, how to submit PR, etc.
-        ((("/pages/wxpython-github",                "wxPython at GitHub"),  
-          # overview and link to waterfall display, snapshots folder
-          ("/pages/wxpython-buildbot",              "Buildbot"),            
+        ((("/pages/github",                         "wxPython at GitHub"),  
+          ("/pages/buildbot",                       "Buildbot"),            
           ("/pages/changes/",                       "Changelog"),
           ("/pages/maillists/",                     "wxPython-dev mail list"),
-          # coding style, etc.
           ("/pages/contributor-guide",              "Contributor Guide"), 
           ("https://wxpython.org/Phoenix/docs/html/","Docs built daily"),
-          #("/pages/developers/",                    "Other"),
           ),
         "Developers"),
 
@@ -191,7 +185,8 @@ NAVIGATION_LINKS = {
           ('/pages/about-42/',      'About 42'),
           ('/archive.html',         'Archive'),
           ('/categories/',          'Tags')
-          ), 'Blog'),
+          ), 
+        'Blog'),
 
     ),
 }
@@ -693,8 +688,11 @@ USE_BASE_TAG = False
 # relative URL.
 #
 # If you don't need any of these, just set to []
-REDIRECTIONS = [ ("docs/index.html",     "http://docs.wxpython.org/"),
-                 ("docs/api/index.html", "http://docs.wxpython.org/"),
+REDIRECTIONS = [ ("index.php",              "index.html"),
+                 ("download.php",           "/pages/downloads/"),
+                 ("presenations.php",       "/pages/presenations/"),
+                 ("bookshelf.php",          "/pages/bookshelf/"),
+                 ("irc.php",                "/pages/irc/"),
                 ]
 
 # Presets of commands to execute to deploy. Can be anything, for

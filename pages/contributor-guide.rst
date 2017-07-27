@@ -1,4 +1,3 @@
-<!--
 .. title: Contributor Guide
 .. slug: contributor-guide
 .. date: 2017-07-16 22:59:58 UTC
@@ -7,7 +6,6 @@
 .. link: 
 .. description: 
 .. type: text
--->
 
 If you don't have a lot of experience with submitting patches or PRs (pull
 requests) to an OpenSource project please start by reading the
@@ -17,6 +15,30 @@ have experience, just to make sure that you're "on the same page".) The
 document provides a clear and concise set of general guidelines for
 contributing to projects which will help streamline the process for both
 you and the project maintainers.
+
+If you don't have much **git and GitHub experience** then you may want
+to review some appropriate tutorial, reference or other help documents
+before you dive into the deep end of the contributor pool.  You should have
+at least a conceptual understanding (and know how to find the details when
+you need them) of things like github *forks*, git *clones*, *branching*,
+*merging*, *local and remote repositories*, *upstream repository*, 
+*pull requests* and *issue tracking* at GitHub, and so on.
+
+Here are a few resources to help you **get up to speed** on using git and
+GitHub, be sure to google for more info when you don't understand how to do
+something:
+
+* `Git Cheat Sheet <https://services.github.com/on-demand/downloads/github-git-cheat-sheet/>`_
+* `The Git Book <https://book.git-scm.com/>`_
+* `Learn Git Branching <http://learngitbranching.js.org/>`_ tutorial
+
+:html:`<p>`
+
+* `All GitHub Help <https://help.github.com/>`_
+* `Fork a Repo <https://help.github.com/articles/fork-a-repo/>`_
+* `The GitHub Flow <https://help.github.com/articles/github-flow/>`_ and the 
+  coresponding `visual guide <https://guides.github.com/introduction/flow/>`_
+
 
 The rest of this page will simply emphasize a few of the important things, 
 building upon the guidelines in the 

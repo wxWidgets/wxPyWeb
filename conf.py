@@ -173,12 +173,11 @@ NAVIGATION_LINKS = {
           ), 
         "Support"),
 
-        ((("/pages/github",                         "wxPython at GitHub"),  
-          ("/pages/buildbot",                       "Buildbot"),            
+        ((("/pages/contributor-guide",              "Contributor Guide"), 
           ("/pages/changes/",                       "Changelog"),
           ("/pages/maillists/",                     "wxPython-dev mail list"),
-          ("/pages/contributor-guide",              "Contributor Guide"), 
           ("https://wxpython.org/Phoenix/docs/html/","Docs built daily"),
+          ("http://buildbot.wxpython.org/",         "Buildbot"),
           ),
         "Developers"),
 
@@ -1117,7 +1116,7 @@ STRIP_INDEXES = False
 # from indexing and other robotic spidering. * is supported. Will only be effective
 # if SITE_URL points to server root. The list is used to exclude resources from
 # /robots.txt and /sitemap.xml, and to inform search engines about /sitemapindex.xml.
-# ROBOTS_EXCLUSIONS = ["/archive.html", "/category/*.html"]
+ROBOTS_EXCLUSIONS = ["/archive.html", "/category/*.html", "/classic/*", ]
 
 # Instead of putting files in <slug>.html, put them in <slug>/index.html.
 # No web server configuration is required. Also enables STRIP_INDEXES.

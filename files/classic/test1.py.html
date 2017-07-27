@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>/home/work/data/html/wxPython/test1.py.html</title>
+<meta name="Generator" content="Vim/6.2">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#f5deb3" text="#000000">
+<pre>
+<font color="#0000ff">#!/usr/bin/env python</font>
+<font color="#0000ff">#----------------------------------------------------------------------------</font>
+<font color="#0000ff"># Name:         test1.py</font>
+<font color="#0000ff"># Purpose:      A minimal wxPython program</font>
+<font color="#0000ff">#</font>
+<font color="#0000ff"># Author:       Robin Dunn</font>
+<font color="#0000ff">#</font>
+<font color="#0000ff"># Created:</font>
+<font color="#0000ff"># Licence:      wxWindows license</font>
+<font color="#0000ff">#----------------------------------------------------------------------------</font>
+
+
+<font color="#a020f0">import</font> wx
+
+<font color="#a52a2a"><b>class</b></font> <font color="#008b8b">MyFrame</font>(wx.Frame):
+    <font color="#a52a2a"><b>def</b></font> <font color="#008b8b">__init__</font>(self, parent, id, title):
+        wx.Frame.__init__(self, parent, id, title)
+        self.Bind(wx.EVT_MOVE, self.OnMove)
+        self.Bind(wx.EVT_SIZE, self.OnSize)
+
+    <font color="#a52a2a"><b>def</b></font> <font color="#008b8b">OnSize</font>(self, event):
+        size = event.GetSize()
+        <font color="#a52a2a"><b>print</b></font> <span style="background-color: #f5deb3">&quot;</span><font color="#ff00ff">size:</font><span style="background-color: #f5deb3">&quot;</span>, size.width, size.height
+
+    <font color="#a52a2a"><b>def</b></font> <font color="#008b8b">OnMove</font>(self, event):
+        pos = event.GetPosition()
+        <font color="#a52a2a"><b>print</b></font> <span style="background-color: #f5deb3">&quot;</span><font color="#ff00ff">pos:</font><span style="background-color: #f5deb3">&quot;</span>, pos.x, pos.y
+
+
+
+<font color="#a52a2a"><b>class</b></font> <font color="#008b8b">MyApp</font>(wx.App):
+    <font color="#a52a2a"><b>def</b></font> <font color="#008b8b">OnInit</font>(self):
+        frame = MyFrame(None, -1, <span style="background-color: #f5deb3">&quot;</span><font color="#ff00ff">This is a test</font><span style="background-color: #f5deb3">&quot;</span>)
+        frame.Show(True)
+        self.SetTopWindow(frame)
+        <font color="#a52a2a"><b>return</b></font> True
+
+
+<font color="#a52a2a"><b>def</b></font> <font color="#008b8b">main</font>():
+    app = MyApp(0)
+    app.MainLoop()
+
+
+<font color="#a52a2a"><b>if</b></font> __name__ == <span style="background-color: #f5deb3">&quot;</span><font color="#ff00ff">__main__</font><span style="background-color: #f5deb3">&quot;</span>:
+    main()
+
+</pre>
+</body>
+</html>

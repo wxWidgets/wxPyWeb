@@ -39,6 +39,9 @@ something:
 * `The GitHub Flow <https://help.github.com/articles/github-flow/>`_ and the 
   coresponding `visual guide <https://guides.github.com/introduction/flow/>`_
 
+If you like to use **GUI Tools** to work with your version control systems, my 
+favorite is `SourceTree <https://www.sourcetreeapp.com/>`_ but there are 
+`several others <https://www.google.com/search?q=git+gui+client>`_ available.
 
 The rest of this page will simply emphasize a few of the important things, 
 building upon the guidelines in the 

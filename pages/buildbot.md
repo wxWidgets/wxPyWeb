@@ -1,6 +1,6 @@
 <!--
 .. title: wxPython BuildBot
-.. slug: wxpython-buildbot
+.. slug: buildbot
 .. date: 2017-07-16 22:59:28 UTC
 .. tags: 
 .. category: 
@@ -9,4 +9,14 @@
 .. type: text
 -->
 
-Write your page here.
+What is a BuildBot?
+
+How wxPython is using BuildBot
+
+Where is it?
+
+What else does it do?
+
+"Daily" snapshots
+
+

@@ -158,6 +158,7 @@ NAVIGATION_LINKS = {
         ((("https://docs.wxpython.org/",            "API Reference"),
           ("https://wiki.wxpython.org/",            "wxPython Wiki"),
           ("/pages/bookshelf/",                     "wxPython Bookshelf"),
+          ("/pages/presentations/",                 "Presentations"),
           ("/pages/changes/",                       "Changelog"),
           ("https://github.com/wxWidgets/Phoenix/blob/master/README.rst", 
                                                     "Project README")

@@ -11,10 +11,10 @@
 
 From time to time Robin has given talks and tutorials about wxPython at software development conferences. Some of the slides and other materials are available here.
 
-* [OSCON 2003](/presenations/OSCON2003/)
+* [OSCON 2003](/presentations/OSCON2003/)
 
-* [OSCON 2004](/presenations/OSCON2004/)
+* [OSCON 2004](/presentations/OSCON2004/)
 
-* [OSCON 2006](/presenations/OSCON2006/)
+* [OSCON 2006](/presentations/OSCON2006/)
 
-* [OSCON 2008](/presenations/OSCON2008/)
+* [OSCON 2008](/presentations/OSCON2008/)

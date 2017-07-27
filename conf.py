@@ -690,7 +690,7 @@ USE_BASE_TAG = False
 # If you don't need any of these, just set to []
 REDIRECTIONS = [ ("index.php",              "index.html"),
                  ("download.php",           "/pages/downloads/"),
-                 ("presenations.php",       "/pages/presenations/"),
+                 ("presentations.php",      "/pages/presentations/"),
                  ("bookshelf.php",          "/pages/bookshelf/"),
                  ("irc.php",                "/pages/irc/"),
                 ]

@@ -161,3 +161,31 @@ anything including lists or matrices.
 
 
 
+Larch
+-----
+
+.. class:: thumbnails
+
+    .. thumbnail:: /screenshots/Larch-Mapviewer_XRD_Display.png
+    .. thumbnail:: /screenshots/Larch-Mapviewer_correlation_maps.png
+    .. thumbnail:: /screenshots/Larch-XRFDisplay.png
+
+`Larch <http://xraypy.github.io/xraylarch/>`_ is an open-source library and
+toolkit for processing and analyzing scientific data. Initially designed
+for X-ray spectroscopic and scattering data collected at modern synchrotron
+sources, Larch provides a wide selection of algorithms for processing such
+X-ray data. It also provides many tools for organizing complex data sets
+and processing and analyzing arrays of scientific data.
+
+
+dicompyler
+----------
+
+.. class:: thumbnails
+
+    .. thumbnail:: /screenshots/dicompyler-2dview_mac.png
+    .. thumbnail:: /screenshots/dicompyler-2dview_pet_win7.png
+
+`dicompyler <https://github.com/bastula/dicompyler/wiki>`_ is an extensible 
+open source radiation therapy research platform based on the DICOM
+standard. It also functions as a cross-platform DICOM RT viewer.

@@ -80,15 +80,15 @@ and etc.) it is not possible to host binary wheel files for Linux on PyPI
 unless they can be made to work within the constraints of 
 [PEP 513](https://www.python.org/dev/peps/pep-0513/) Unfortunately, attempts to
 pound the wxPython peg into the `manylinux1` hole have not been very
-successful. Maybe `manylinux2` will be a better fit. In the meantime if you
-have a Linux similar enough to those used to build the wheels located on
-SourceForge then you can use them and not need to build the wheels
-yourself.
+successful. Maybe `manylinux2` will be a better fit. In the meantime, if you
+have a Linux similar enough to those used to build the wheels located under the 
+[wxPython Extras linux](https://extras.wxpython.org/wxPython4/extras/linux/) 
+folder, then you can use them and not need to build the wheels yourself.
 
 Since there are various options for distro and wx port (GTK2 or GTK3) then
 the files can not all be located in the same folder for easy access by pip.
 This simply just means that you'll need to drill down a little further to
-find the URL to give to pip.  For example, to get the GTK3 Phoenix builds
+find the URL to give to pip.  For example, to get the GTK3 wxPython builds
 for Ubuntu 16.04 (and 16.10, LinuxMint 18, and probably others) you can use
 a pip command like this:
 

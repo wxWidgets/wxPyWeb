@@ -1,9 +1,9 @@
 <!--
-.. title: wxPython Builds for Linux via Pip
+.. title: Building wxPython for Linux via Pip
 .. slug: 2017-08-17-builds-for-linux-with-pip
 .. author: Mesalu
 .. date: 2017-08-17 19:14:19 UTC
-.. tags: Build Linux
+.. tags: Build, Linux
 .. category: Blog
 .. link: 
 .. description: 

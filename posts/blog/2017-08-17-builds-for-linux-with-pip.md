@@ -72,6 +72,18 @@ on debian based systems, or other systems that separate development
 packages from standard packages, you will need the corresponding -dev or
 -devel package in addition to the standard package.
 
+Once the appropriate packages are present on your system then wxPython
+should build with no problems, either with pip or from a source tree
+extracted from the source tarball. If it still doesn't work for you then be
+sure to look closely at the build log as there will likely be some clues
+there that may point you in the right direction.  For example:
+
+```
+checking for OpenGL headers... not found
+checking for GL/gl.h... no
+configure: error: OpenGL libraries not available
+```
+
 
 ### FAQ
 

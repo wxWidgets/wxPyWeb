@@ -18,9 +18,9 @@ part of the release process and are available from one of wxPython's
 servers. More details and some links are on the 
 [download page](/pages/downloads/).
 
-If there are no wheels for your distro, (or perhaps a close relative,) then
-read on to find out why we can't just provide wheels for all Linuxes, and
-what you need to build one for yourself.
+If there are no existing wheels there for your distro, (or perhaps a close
+relative,) then read on to find out why we can't just provide wheels for
+all Linuxes, and what you need to build one for yourself.
 
 
 ### The Problem

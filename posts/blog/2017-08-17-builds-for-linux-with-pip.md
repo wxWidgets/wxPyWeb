@@ -40,9 +40,11 @@ appropriate binary wheel for the following criteria:
 
 See how pip doesn't care for linux distribution? That's the issue. The
 binary content and dependencies of wxPython can't be delivered consistently
-via pip. There are some efforts to get around this (eg. 
-[PEP 513](https://www.python.org/dev/peps/pep-0513/) a.k.a. manylinux1) but 
-they don't quite work with wxPython yet.
+via pip. There are some efforts to get around this (eg.  [PEP
+513](https://www.python.org/dev/peps/pep-0513/) a.k.a. manylinux1) but
+they don't quite work for wxPython yet. Packages that are able to fit into
+the very narrow manylinux1 requirements can be hosted on PyPI and will
+install with pip just as smoothly as pure-python packages do.
 
 
 ### The Fix
@@ -63,7 +65,7 @@ You will need the following packages (please consult your distributions
 package list for the appropriate names) and their dependencies:
 
 - python-dev (for your version of python)
-- gtk (preferably 3, but depends on your needs)
+- gtk (preferably version 3, but depends on your needs)
 - gstreamer 
 - glut
 - webkitgtk (matching your gtk version)

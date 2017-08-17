@@ -1,7 +1,7 @@
 <!--
 .. title: Building wxPython for Linux via Pip
 .. slug: 2017-08-17-builds-for-linux-with-pip
-.. author: Mesalu
+.. author: Mesalu and Robin
 .. date: 2017-08-17 19:14:19 UTC
 .. tags: Build, Linux
 .. category: Blog
@@ -9,6 +9,19 @@
 .. description: 
 .. type: text
 -->
+
+### wxPython Wheels for Linux?
+
+Before reading further, you may want to check and see if there are already
+some wxPython wheels available for your flavor of Linux. A few are built as
+part of the release process and are available from one of wxPython's
+servers. More details and some links are on the 
+[download page](/pages/downloads/).
+
+If there are no wheels for your distro, (or perhaps a close relative,) then
+read on to find out why we can't just provide wheels for all Linuxes, and
+what you need to build one for yourself.
+
 
 ### The Problem
 

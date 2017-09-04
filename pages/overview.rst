@@ -69,13 +69,14 @@ additions and customizations, and also docs for the ``wx.lib`` package, is
 located at: https://docs.wxpython.org/.
 
 
+:html:`<a name="hello-world" />`
 
 Hello World
 -----------
 
 Every programming language and UI toolkit needs to have a **Hello World**
 example.  I think it's the law in most jurisdictions. 
-{{% emoji thinking_face %}}  Their intent is obviously to tell you
+{{% emoji thinking_face %}}  :html:`&nbsp;` Their intent is obviously to tell you
 everything  you need to know in order to select the language or toolkit for
 your own use. So,  here is wxPython's **Hello World**:
 

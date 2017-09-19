@@ -1195,6 +1195,7 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code',
                        'markdown.extensions.extra',
                        'markdown.extensions.meta',
                        'markdown.extensions.tables',
+                       'markdown.extensions.admonition',
                        ]
 
 # Extra options to pass to the pandoc command.

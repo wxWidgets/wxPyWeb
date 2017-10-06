@@ -9,7 +9,7 @@ nocomments: True
 Ever have one of those moments when you see some product or service and
 you think, "*Doh! I should have thought of that!*" because it is
 something that makes so much sense to you that you can't believe that
-you hadn't invented it yourself long before.  Well I had one of those
+you hadn't invented it yourself long before?  Well I had one of those
 moments today with [Dropbox](https://www.getdropbox.com/).  Dropbox is a
 cool service that integrates versioned shared storage on a centralized
 server with your Mac, Windows or Linux desktops.  Syncronizing files
@@ -33,8 +33,8 @@ enough, there is another special folder type that is an automatic photo
 gallery, you just need to drag the photos you want to share to a Photos
 folder and the rest is automatic.
 
-You get 2GB of space for free, and you can get up to 50GB for \$10 per
-month or \$99 per year.  If you sign up with this [referal
+You get 2GB of space for free, and you can get up to 50GB for $10 per
+month or $99 per year.  If you sign up with this [referal
 link](https://www.getdropbox.com/referrals/NTcyNzI1NTk) then you and I
 will both get an extra 250MB.
 

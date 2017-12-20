@@ -20,14 +20,20 @@ the books on this page, as they are being served up by Amazon's ad system.
 </div>
 
 
-<table width="100%" cellspacing="0" cellpadding="8" style="marin:10px;"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="8" style="margin:10px;"><tr><td>
+
+<div align="right"><table><tr><td>
+<a target="_blank" href="https://www.amazon.com/gp/product/1484232364/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1484232364&linkCode=as2&tag=wxpython-20&linkId=11e16441af614b5177d30bb0c8f2c2e5">wxPython Recipes: A Problem - Solution Approach</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=wxpython-20&l=am2&o=1&a=1484232364" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> &nbsp;
+</td><td>
+<a target="_blank"  href="https://www.amazon.com/gp/product/1484232364/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1484232364&linkCode=as2&tag=wxpython-20&linkId=7988bc28c8d9927d65b4cbc876a14a08"><img border="1" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1484232364&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=wxpython-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=wxpython-20&l=am2&o=1&a=1484232364" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td></tr></table></div>
 
 
 <div align="left"><table><tr><td>
-<a href="https://www.amazon.com/gp/product/1932394621/ref=as_li_ss_il?ie=UTF8&linkCode=li3&tag=wxpython-20&linkId=694ebf3bdd32e373117dbfeaa68afadc" target="_blank">
-<img border="1" src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1932394621&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=wxpython-20" ></a>
+<a href="https://www.amazon.com/gp/product/1785287737/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1785287737&linkCode=as2&tag=wxpython-20&linkId=07bd78a71114d58ac49e6d90669bb5f1">
+<img border="1" src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1785287737&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=wxpython-20" ></a>
 </td><td>
-<a  href="https://www.amazon.com/gp/product/1932394621/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=wxpython-20&linkId=a98e121e379b70ffa4cb1aed45e4351e">wxPython in Action</a>&nbsp;
+<a  href="https://www.amazon.com/gp/product/1785287737/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1785287737&linkCode=as2&tag=wxpython-20&linkId=a1fc5f5e08dce0eec16d26a76aca3719">wxPython Application Development Cookbook</a>&nbsp;
 </td></tr></table></div>
 
 
@@ -39,12 +45,11 @@ the books on this page, as they are being served up by Amazon's ad system.
 </td></tr></table></div>
 
 
-
 <div align="left"><table><tr><td>
-<a href="https://www.amazon.com/gp/product/1785287737/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1785287737&linkCode=as2&tag=wxpython-20&linkId=07bd78a71114d58ac49e6d90669bb5f1">
-<img border="1" src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1785287737&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=wxpython-20" ></a>
+<a href="https://www.amazon.com/gp/product/1932394621/ref=as_li_ss_il?ie=UTF8&linkCode=li3&tag=wxpython-20&linkId=694ebf3bdd32e373117dbfeaa68afadc" target="_blank">
+<img border="1" src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1932394621&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=wxpython-20" ></a>
 </td><td>
-<a  href="https://www.amazon.com/gp/product/1785287737/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1785287737&linkCode=as2&tag=wxpython-20&linkId=a1fc5f5e08dce0eec16d26a76aca3719">wxPython Application Development Cookbook</a>&nbsp;
+<a  href="https://www.amazon.com/gp/product/1932394621/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=wxpython-20&linkId=a98e121e379b70ffa4cb1aed45e4351e">wxPython in Action</a>&nbsp;
 </td></tr></table></div>
 
 
@@ -177,12 +182,8 @@ the books on this page, as they are being served up by Amazon's ad system.
 
 
 <div align="right"><table><tr><td>
-<a  href="https://www.amazon.com/gp/product/B01MZ4NGHS/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01MZ4NGHS&linkCode=as2&tag=wxpython-20&linkId=3410ace32528d209534192d9dabfd6a2">wxPython Cookbook</a>&nbsp;
 </td><td>
-<a href="https://www.amazon.com/gp/product/B01MZ4NGHS/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01MZ4NGHS&linkCode=as2&tag=wxpython-20&linkId=8ac13ee4a153a4a7f77e7d1405af78d6">
-<img border="0" src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01MZ4NGHS&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=wxpython-20" ></a>
 </td></tr></table></div>
-
 
 
 <div align="left"><table><tr><td>

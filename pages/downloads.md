@@ -18,22 +18,64 @@ from the Python Package Index (PyPI). wxPython's project page at PyPI is
 
 The source or binary wheels can be downloaded directly from the project
 page, or you can use the wonderful [pip](https://pip.pypa.io/en/stable/)
-tool to do it for you.  Just run something like this from a command-line:
+tool to do it for you.  
+
+### Windows and macOS
 
 ```
 pip install -U wxPython
 ```
 
-If you are on a supported platform with a compatible Python build, then
-that command will download the appropriate wheel file from the latest
-release, and install it in your Python environment, or active Python
-virtual environment for you.
+If you are on Windows or macOS with a compatible Python build, then the
+command shown above will download the appropriate wheel file from the
+latest release, and install it in your active Python environment or virtual
+environment.
 
-If there is no binary wheel file available for your platform or Python,
-then pip will download the source archive and will attempt to build it for
-you.
+If there is no binary wheel file available for your platform or your
+version of Python, then pip will download the source archive and will
+attempt to build it for you. There is some information about that below.
+
+### Yes, we have Linux Wheels. Sort of.
+
+Because of the differences between Linux distributions (mainly different
+versions of the core libraries installed by default, but also platform
+architecture and etc.) it is not possible to host binary wheel files for
+Linux on PyPI unless they can be made to work within the constraints of
+[PEP 513](https://www.python.org/dev/peps/pep-0513/) Unfortunately,
+attempts to pound the wxPython peg into the `manylinux1` hole have not been
+very successful. Maybe `manylinux2` will be a better fit. In the meantime,
+if you have a Linux similar enough to those used to build the wheels
+located under the 
+[wxPython Extras linux](https://extras.wxpython.org/wxPython4/extras/linux/)  
+folder, then you can use them and not need to build the wheels yourself.
+
+Since there are various options for distro and wx port (GTK2 or GTK3) then
+the files can not all be located in the same folder for easy access by pip.
+This simply just means that you'll need to drill down a little further to
+find the URL to give to pip.  For example, to get the GTK3 wxPython builds
+for Ubuntu 16.04 (and 16.10, LinuxMint 18, and probably others) you can use
+a pip command like this:
+
+```
+pip install -U \
+    -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 \
+    wxPython
+```
+
+Of course you can always download the wheel file yourself and then use pip
+to install your local copy of the file.
 
 ### Building with Pip
+
+If pip is not able to find a binary wheel file that matches your platform
+and your version of Python, then it will download the source archive and
+will try to build it for you. If you have the required compiler and
+dependent libraries installed, then this will be a feasible approach for
+you, although it can take some time to do the build. The end result will be
+the same as if there was a binary wheel available for you. In fact, pip can
+also be told to just build the wheel and not do the install. This way you
+can reuse the wheel file for different Python environments or on other
+machines, or whatever, without needing to rebuild for each one.
 
 wxPython is a very large and complex package, with several dependencies,
 and in many cases is not very easy to build. Since pip will be using the
@@ -72,36 +114,6 @@ named like `wxPython-demo-VERSION.tar.gz`.
 * Binary wheel files for a few flavors of **Linux**. 
 
 
-### Yes, we have Linux Wheels. Sort of.
-
-Because of the differences between distributions (mainly different versions
-of the core libraries installed by default, but also platform architecture
-and etc.) it is not possible to host binary wheel files for Linux on PyPI
-unless they can be made to work within the constraints of 
-[PEP 513](https://www.python.org/dev/peps/pep-0513/) Unfortunately, attempts to
-pound the wxPython peg into the `manylinux1` hole have not been very
-successful. Maybe `manylinux2` will be a better fit. In the meantime, if you
-have a Linux similar enough to those used to build the wheels located under the 
-[wxPython Extras linux](https://extras.wxpython.org/wxPython4/extras/linux/) 
-folder, then you can use them and not need to build the wheels yourself.
-
-Since there are various options for distro and wx port (GTK2 or GTK3) then
-the files can not all be located in the same folder for easy access by pip.
-This simply just means that you'll need to drill down a little further to
-find the URL to give to pip.  For example, to get the GTK3 wxPython builds
-for Ubuntu 16.04 (and 16.10, LinuxMint 18, and probably others) you can use
-a pip command like this:
-
-```
-pip install -U \
-    -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04 \
-    wxPython
-```
-
-Of course you can always download the wheel file yourself and then use pip
-to install your local copy of the file.
-
-
 
 ## The Bleeding Edge
 
@@ -133,7 +145,7 @@ Since the generated files are not committed to git you will need to go
 through several more steps to generate and build the code, but they are all
 handled by the
 [`build.py`](https://github.com/wxWidgets/Phoenix/blob/master/build.py)
-script and there is a overview of the process and needed steps in the
+script and there is a overview of the process and the needed steps in the
 [README](https://github.com/wxWidgets/Phoenix/blob/master/README.rst). If
 you get stuck then you can ask about it on 
 [wxPython-dev](https://groups.google.com/forum/#!forum/wxpython-dev).

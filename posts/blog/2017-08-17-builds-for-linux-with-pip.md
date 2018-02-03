@@ -182,9 +182,9 @@ release sources are almost always due to missing dependencies.) Once you
 think you have solved the problem go back to step 4 and try the build
 again.
 
-The next step is to install the wheel file in the virtual environment and
-give it a quick test run. (Use the actual name of the wheel file you built,
-which may be different than the one shown here.)
+**Step 6:** The next step is to install the wheel file in the virtual
+environment and give it a quick test run. (Use the actual name of the wheel
+file you built, which may be different than the one shown here.)
 
 ```
 pip install wxPython-4.0.1-cp35-cp35m-linux_x86_64.whl

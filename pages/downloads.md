@@ -46,8 +46,8 @@ attempts to pound the wxPython peg into the `manylinux1` hole have not been
 very successful. Maybe `manylinux2` will be a better fit. In the meantime,
 if you have a Linux similar enough to those used to build the wheels
 located under the 
-[wxPython Extras linux](https://extras.wxpython.org/wxPython4/extras/linux/)  
-folder, then you can use them and not need to build the wheels yourself.
+[wxPython Extras linux](https://extras.wxpython.org/wxPython4/extras/linux/) folder, 
+then you can use them and not need to build the wheels yourself.
 
 Since there are various options for distro and wx port (GTK2 or GTK3) then
 the files can not all be located in the same folder for easy access by pip.

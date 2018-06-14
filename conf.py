@@ -159,7 +159,7 @@ NAVIGATION_LINKS = {
           ("https://wiki.wxpython.org/",            "wxPython Wiki"),
           ("/pages/bookshelf/",                     "wxPython Bookshelf"),
           ("/pages/presentations/",                 "Presentations"),
-          ("/pages/changes/",                       "Changelog"),
+          ("/pages/changes/",                       "Full Changelog"),
           ("https://github.com/wxWidgets/Phoenix/blob/master/README.rst", 
                                                     "Project README")
           ), 
@@ -174,7 +174,7 @@ NAVIGATION_LINKS = {
         "Support"),
 
         ((("/pages/contributor-guide",              "Contributor Guide"), 
-          ("/pages/changes/",                       "Changelog"),
+          ("/pages/changes/",                       "Full Changelog"),
           ("/pages/maillists/",                     "wxPython-dev mail list"),
           ("https://wxpython.org/Phoenix/docs/html/","Docs built daily"),
           ("http://buildbot.wxpython.org/",         "Buildbot"),

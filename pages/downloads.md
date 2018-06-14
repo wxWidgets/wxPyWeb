@@ -14,7 +14,7 @@
 Starting with wxPython 4.0 (the first Phoenix release) the wxPython source
 archive and, for supported platforms, wxPython binary wheels are available
 from the Python Package Index (PyPI). wxPython's project page at PyPI is
-<https://pypi.python.org/pypi/wxPython>.
+<https://pypi.org/project/wxPython>.
 
 The source or binary wheels can be downloaded directly from the project
 page, or you can use the wonderful [pip](https://pip.pypa.io/en/stable/)
@@ -31,7 +31,7 @@ command shown above will download the appropriate wheel file from the
 latest release, and install it in your active Python environment or virtual
 environment.
 
-If there is no binary wheel file available for your platform or your
+If there is no binary wheel file available for your platform or for your
 version of Python, then pip will download the source archive and will
 attempt to build it for you. There is some information about that below.
 
@@ -90,10 +90,13 @@ file, but pay particular attention to the
 [prerequisites](https://github.com/wxWidgets/Phoenix/blob/master/README.rst#prerequisites) 
 section.
 
+This [post](link://slug/2017-08-17-builds-for-linux-with-pip) in the blog 
+provides some additional information and step by step instructions that should 
+work on most Linux systems.
 
 ### Extra Files
 
-In addition to the source and binaries available on PyPI there are some
+In addition to the source and binaries available on PyPI, there are some
 extra files which are part of each release, which are hosted at 
 <https://extras.wxPython.org/wxPython4/extras/>. 
 The things you will find there are:

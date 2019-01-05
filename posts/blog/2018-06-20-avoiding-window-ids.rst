@@ -11,7 +11,7 @@
 Due to some changes upstream in wxWidgets the ``wxNewId`` function has been
 deprecated. This deprecation first took effect in wxPython in the recent `4.0.2
 <link://slug/wxpython-4.0.2-release>`_ release, and has triggered some
-discussions about window IDs in the wxPython-users group. This post will give a
+discussions in the wxPython-users group about window IDs. This post will give a
 little more context and background, and also list some examples and advice I
 gave in wxPython-users so it can be more easily found than just being buried in
 a message archive.
@@ -19,8 +19,8 @@ a message archive.
 :html:`<h3>Background</h3>`
 
 About 20 years ago wxWidgets was rearchitected to use event tables to dispatch
-events to event handlers. Prior to this change when events arrived in the
-application they handled by calling the C++ virtual method intended to handle
+events to event handlers. Prior to this change, when events arrived in the
+application they were handled by calling the C++ virtual method intended to handle
 that kind of event. In other words, C++'s virtual method dispatch mechanism
 handled it. This worked well, but it was very inflexible and cumbersome.
 Switching to event tables simplified many things, increased the flexibility, and

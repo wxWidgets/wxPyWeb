@@ -2,7 +2,7 @@ title: Welcome to wxPython!
 slug: index
 tags:
 link:
-description: all about wxPython, the cross-platform GUI toolkit for the Python language
+description: All about wxPython, the cross-platform GUI toolkit for the Python language
 
 
 
@@ -26,9 +26,9 @@ modifications on Windows, Macs and Linux or other unix-like systems.
 # Latest News
 
 {{% post-list stop=3 
-			  sections=news 
-			  template=homepage_postlist.tmpl 
-			  %}}
+  sections=news 
+  template=homepage_postlist.tmpl 
+%}}
 {{% /post-list %}}
 
 

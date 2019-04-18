@@ -199,6 +199,24 @@ Python environments or virtual environments that use the same base Python
 executable that you used for this build.
 
 
+### Known Issues
+
+wxPython's build tools on Linux assume that the Python being used was configured
+with the `--enable-shared` flag. That is usually true for Pythons installed from
+the Linux distro's repositories, as well as for most known 3rd Party Python
+distributions for Linux. However, that flag is not enabled by default. So if
+your Python is one that you've configured and built yourself, then double-check
+that you used the flag. If it wasn't then you'll likely see a configuration
+error when the build gets to the wxPython portion (after it has built
+wxWidgets).
+
+Similarly, the **[pyenv](https://github.com/pyenv/pyenv)** does not use the
+`--enable-shared` flag when it builds a Python environment for you. 
+There is a note in the 
+[pyenv wiki](https://github.com/pyenv/pyenv/wiki#how-to-build-cpython-with---enable-shared) 
+that shows how to add the flag when it builds a new Python environment.
+
+
 ### FAQ
 
 Q1: "Why can't you just install the necessary packages as part of

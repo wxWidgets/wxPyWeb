@@ -8,6 +8,67 @@
 wxPython Changelog
 ==================
 
+4.0.6 "Applesauce"
+------------------
+* 21-May-2019
+
+PyPI:   https://pypi.org/project/wxPython/4.0.6 :html:`<br>`
+Extras: https://extras.wxPython.org/wxPython4/extras/ :html:`<br>`
+Pip:    ``pip install wxPython==4.0.6``
+
+This is a quick-fix release to take care of the following issues:
+
+* Fixed a probably rare, but fatal bug on OSX when calling certain overloaded
+  virtual methods with implementations in Python.
+
+* Fixed char pointers in generated stub code to have a valid pointer value.
+
+* Reverted the change that loads up install_requires from the contents of
+  requirements.txt. Split the requirements.txt file into one for install and one
+  for development.
+  
+  
+
+4.0.5 "St. Helens Day"
+----------------------
+* 18-May-2019
+
+PyPI:   https://pypi.org/project/wxPython/4.0.5 :html:`<br>`
+Extras: https://extras.wxPython.org/wxPython4/extras/ :html:`<br>`
+Pip:    ``pip install wxPython==4.0.5``
+
+Changes in this release include the following:
+
+* Added missing HtmlWindow.ScrollToAnchor method, and also a couple methods 
+  in HtmlCell too. (#1141)
+
+* Added missing setters for the wheel-related properties in wx.MouseEvent. 
+  (#1140)
+
+* Updated wxWidgets commit reference, bringing fixes for #1140, #1086 and 
+  #1147.
+
+* Fix the use of the output parameter in HtmlWindow.OnOpeningURL the same way 
+  it was fixed in HtmlWindowInterface.OnHTMLOpeningURL. (#1068)
+
+* Fixed a crashing bug when using a member of a transient wx.VisualAttributes
+  object. Also set the attributes to be read-only to simplify the fix. (#1198).
+  
+* Updated the sip being used in wxPython builds to version 4.19.16.
+
+* Added helper functions to check results of wxWidgets configure during the
+  build of wxPython. Currently used to determine if the wx webview, glcanvas,
+  and media libraries should be added to the link command. (#1138)
+
+* Fixed scrollbar issue with ListCtrlAutoWidthMixin (#1215)
+
+* Fixed file access in the wx.py and wx.tools.pywxrc packages to be Python 2 and
+  3 compatible. (#1193, #1156)
+
+* Fixes for building with Python 3.8 on Linux. (#1227)
+
+
+
 4.0.4 "What? It's 2019 already?"
 --------------------------------
 * 5-Jan-2019

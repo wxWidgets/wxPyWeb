@@ -22,6 +22,13 @@ the books on this page, as they are being served up by Amazon's ad system.
 
 <table width="100%" cellspacing="0" cellpadding="8" style="margin:10px;"><tr><td>
 
+<div align="left"><table><tr><td>
+<a target="_blank"  href="https://www.amazon.com/gp/product/B07R4FV2PN/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07R4FV2PN&linkCode=as2&tag=wxpython-20&linkId=d6082d219439685632b469ffa26dd4f8"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B07R4FV2PN&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=wxpython-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=wxpython-20&l=am2&o=1&a=B07R4FV2PN" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td><td>
+<a target="_blank" href="https://www.amazon.com/gp/product/B07R4FV2PN/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=wxpython-20&creative=9325&linkCode=as2&creativeASIN=B07R4FV2PN&linkId=5e6b0aa3ba5626f9ecca3028c7d5b7a8">Creating GUI Applications with wxPython</a>
+</td></tr></table></div>
+
+
 <div align="right"><table><tr><td>
 <a target="_blank" href="https://www.amazon.com/gp/product/1484232364/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1484232364&linkCode=as2&tag=wxpython-20&linkId=11e16441af614b5177d30bb0c8f2c2e5">wxPython Recipes: A Problem - Solution Approach</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=wxpython-20&l=am2&o=1&a=1484232364" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> &nbsp;
 </td><td>

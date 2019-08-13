@@ -1,9 +1,11 @@
-#!/bin/python
+#!/bin/env python
 """
 Hello World, but with more meat.
 """
 
 import wx
+print(wx.version())
+
 
 class HelloFrame(wx.Frame):
     """
@@ -17,12 +19,17 @@ class HelloFrame(wx.Frame):
         # create a panel in the frame
         pnl = wx.Panel(self)
 
-        # and put some text with a larger bold font on it
-        st = wx.StaticText(pnl, label="Hello World!", pos=(25,25))
+        # put some text with a larger bold font on it
+        st = wx.StaticText(pnl, label="Hello World!")
         font = st.GetFont()
         font.PointSize += 10
         font = font.Bold()
         st.SetFont(font)
+
+        # and create a sizer to manage the layout of child widgets
+        sizer = wx.BoxSizer(wx.VERTICAL)
+        sizer.Add(st, wx.SizerFlags().Border(wx.TOP|wx.LEFT, 25))
+        pnl.SetSizer(sizer)
 
         # create a menu bar
         self.makeMenuBar()
@@ -38,12 +45,12 @@ class HelloFrame(wx.Frame):
         This method builds a set of menus and binds handlers to be called
         when the menu item is selected.
         """
-        
+
         # Make a file menu with Hello and Exit items
         fileMenu = wx.Menu()
         # The "\t..." syntax defines an accelerator key that also triggers
         # the same event
-        helloItem = fileMenu.Append(-1, "&Hello...\tCtrl-H", 
+        helloItem = fileMenu.Append(-1, "&Hello...\tCtrl-H",
                 "Help string shown in status bar for this menu item")
         fileMenu.AppendSeparator()
         # When using a stock ID we don't need to specify the menu item's
@@ -85,7 +92,7 @@ class HelloFrame(wx.Frame):
 
     def OnAbout(self, event):
         """Display an About Dialog"""
-        wx.MessageBox("This is a wxPython Hello World sample", 
+        wx.MessageBox("This is a wxPython Hello World sample",
                       "About Hello World 2",
                       wx.OK|wx.ICON_INFORMATION)
 

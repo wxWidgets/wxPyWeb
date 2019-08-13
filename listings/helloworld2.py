@@ -4,8 +4,6 @@ Hello World, but with more meat.
 """
 
 import wx
-print(wx.version())
-
 
 class HelloFrame(wx.Frame):
     """

@@ -18,6 +18,8 @@ result at [Discuss wxPython](https://discuss.wxpython.org/).
 
 Some of the things I like are:
 
+<!-- TEASER_END -->
+
 * Posts can use Markdown for rich formatting.
 * Real time updates to the topic being viewed as new posts are made.
 * A bit of GitHub integration

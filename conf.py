@@ -27,7 +27,7 @@ if USE_TEST_SITE:
     SITE_URL = "http://test.wxpython.org/"
     SITE_DIR = "wxpython-testsite"
 else:
-    SITE_URL = "https://wxpython.org/" 
+    SITE_URL = "https://wxpython.org/"
     SITE_DIR = "wxpython-site"
 
 # This is the URL where Nikola's output will be deployed.
@@ -145,11 +145,11 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         #("/",                                       "Home"),
 
-        ((("/pages/overview/",                      "Overview"), 
-          ("/pages/screenshots/",                   "Screenshots"), 
+        ((("/pages/overview/",                      "Overview"),
+          ("/pages/screenshots/",                   "Screenshots"),
           ("/pages/license/",                       "License"),
-          ("/pages/history/",                       "History"),   
-          ), 
+          ("/pages/history/",                       "History"),
+          ),
         "About"),
 
         ("/news/",                                  "News"),
@@ -160,20 +160,21 @@ NAVIGATION_LINKS = {
           ("/pages/bookshelf/",                     "wxPython Bookshelf"),
           ("/pages/presentations/",                 "Presentations"),
           ("/pages/changes/",                       "Full Changelog"),
-          ("https://github.com/wxWidgets/Phoenix/blob/master/README.rst", 
+          ("https://github.com/wxWidgets/Phoenix/blob/master/README.rst",
                                                     "Project README")
-          ), 
+          ),
         "Documentation"),
 
         ((("https://github.com/wxWidgets/Phoenix/issues",   "Issue Tracker"),
-          ("/pages/maillists/",                     "Mail Lists"),
-          ("/pages/irc/",                           "IRC Channel"),
+          ("https://discuss.wxpython.org/",                 "Discussion Site"),
+          ("/pages/maillists/",                             "Mail Lists"),
+          ("/pages/irc/",                                   "IRC Channel"),
           ("https://stackoverflow.com/questions/tagged/wxpython", "StackOverflow"),
-          ("/pages/how-to-submit-issue/",           "How to report issues"),
-          ), 
+          ("/pages/how-to-submit-issue/",                   "How to report issues"),
+          ),
         "Support"),
 
-        ((("/pages/contributor-guide",              "Contributor Guide"), 
+        ((("/pages/contributor-guide",              "Contributor Guide"),
           ("/pages/changes/",                       "Full Changelog"),
           ("/pages/maillists/",                     "wxPython-dev mail list"),
           ("https://wxpython.org/Phoenix/docs/html/","Docs built daily"),
@@ -185,7 +186,7 @@ NAVIGATION_LINKS = {
           ('/pages/about-42/',      'About 42'),
           ('/archive.html',         'Archive'),
           ('/categories/',          'Tags')
-          ), 
+          ),
         'Blog'),
 
     ),
@@ -1190,8 +1191,8 @@ PRETTY_URLS = True
 # Note: most Nikola-specific extensions are done via the Nikola plugin system,
 #       with the MarkdownExtension class and should not be added here.
 # The default is ['fenced_code', 'codehilite']
-MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 
-                       'markdown.extensions.codehilite', 
+MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code',
+                       'markdown.extensions.codehilite',
                        'markdown.extensions.extra',
                        'markdown.extensions.meta',
                        'markdown.extensions.tables',
@@ -1296,7 +1297,7 @@ INDEX_DISPLAY_POST_COUNT = 8
 # If you prefer a Google search form, here's an example that should just work:
 SEARCH_FORM = """
 <!-- Google custom search -->
-<form method="get" action="https://www.google.com/search" 
+<form method="get" action="https://www.google.com/search"
     class="navbar-form navbar-right" role="search">
 <div class="form-group">
 <input type="text" name="q" class="form-control" placeholder="Search">

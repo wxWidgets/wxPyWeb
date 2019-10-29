@@ -41,7 +41,7 @@ What is wxPython Phoenix?
 
 wxPython's Project Phoenix is a new from-the-ground-up implementation of
 wxPython, created with the intent of making wxPython 
-*"better, stronger, faster than he was before."* In other words, this  new
+*"better, stronger, faster than he was before."* In other words, this  new
 implementation is focused on improving speed, maintainability and
 extensibility of wxPython, as well as removing most of the cruft that had
 accumulated over the long life of Classic wxPython.

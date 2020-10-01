@@ -2,10 +2,10 @@
 .. title: wxPython Bookshelf
 .. slug: bookshelf
 .. date: 2017-07-16 22:17:23 UTC
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
+.. tags:
+.. category:
+.. link:
+.. description:
 .. type: text
 -->
 
@@ -133,8 +133,8 @@ the books on this page, as they are being served up by Amazon's ad system.
 
 
 <div align="left"><table><tr><td>
-<a href="https://www.amazon.com/gp/product/1449340377/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449340377&linkCode=as2&tag=wxpython-20&linkId=595623127fc2e7e79f741ab89e59b30e">
-<img border="1" src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1449340377&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=wxpython-20" ></a>
+<a href="https://www.amazon.com/gp/product/178588803X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=178588803X&linkCode=as2&tag=wxpython-20&linkId=595623127fc2e7e79f741ab89e59b30e">
+<img border="1" src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=178588803X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=wxpython-20" ></a>
 </td><td>
 <a  href="https://www.amazon.com/gp/product/178588803X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=178588803X&linkCode=as2&tag=wxpython-20&linkId=458b0931eab96316cc3270272fff4e24">Learning Python Design Patterns - Second Edition</a>&nbsp;
 </td></tr></table></div>

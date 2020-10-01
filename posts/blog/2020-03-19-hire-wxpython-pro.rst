@@ -2,12 +2,14 @@
 .. slug: hire-wxpython-pro
 .. date: 2020-03-24 10:00:00 PDT
 .. author: Robin
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
+.. tags:
+.. category:
+.. link:
+.. description:
 .. type: text
 
+
+.. note:: **UPDATE**: Hi all, I am on the steady income train once again, however I am still interested in learning about opportunities that I may be well suited for. So send 'em if you've got 'em.
 
 Hi all,
 

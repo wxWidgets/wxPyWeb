@@ -173,7 +173,7 @@ This release provides the following changes:
   maintaining its own pointer. This way, if the wxApp is created by C++ code
   wxPython will still be able to get access to it. (#1126)
 
-* Several other PRs have been backported from the master branch (which will
+* Several other PRs have been back-ported from the master branch (which will
   become wxPython 4.1.0), the full list can be seen here:
   https://github.com/wxWidgets/Phoenix/pull/1357
 
@@ -353,7 +353,7 @@ Changes in this release include the following:
   wx.MemoryFSHandler. All strings are now added to the file as utf-8 encoded data,
   in both Python2 and Python3, and will be read from the virtual file the same
   way. If you need to use some other encoding for some reason you can first
-  convert the text to a bytesarray or other buffer protocol compatible object and
+  convert the text to a bytearray or other buffer protocol compatible object and
   then create the virtual file from that data. (#969)
 
 * Performance update for wx.lib.agw.customtreectrl (#1049)
@@ -386,7 +386,7 @@ Changes in this release include the following:
 * Added missing methods in wx.ListBox, SetItemForegroundColour,
   SetItemBackgroundColour and SetItemFont. (#1095)
 
-* Backported a fix in wxWidgets that avoids crashing in hhctrl.ocx when using
+* Back-ported a fix in wxWidgets that avoids crashing in hhctrl.ocx when using
   context sensitive help in 64-bit builds on Windows. (#1104)
 
 
@@ -641,7 +641,7 @@ Changes in this release include the following:
   the Python class. (#642)
 
 * Fixed wx.CallLater to explicitly hold a reference instead of depending on an
-  uncollectable cycle to keep the instance around. Like before the cycle is
+  uncollectible cycle to keep the instance around. Like before the cycle is
   broken and the saved reference is deleted after the timer expires and the
   callable has been called. (#457)
 
@@ -983,7 +983,7 @@ methods related to handling App Events, like open-files or reopen-app,
 from being handled correctly.
 
 NOTE: It appears that wxPython applications on OSX will now always be
-getting an initial Apple Event(s) sent to `MacOpenFiles` coresponding to
+getting an initial Apple Event(s) sent to `MacOpenFiles` corresponding to
 the name of the script and args on the python command-line.
 
 Added patch #15142 which adds support for building with and using GTK3

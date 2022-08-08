@@ -10,8 +10,8 @@
 -->
 
 
-Both wxPython and the wxWidgets library it is built upon are mature
-projects that are still actively developed.  wxPython's history started
+Both wxPython, and the wxWidgets library it is built upon, are mature
+projects that are still more-or-less actively developed.  wxPython's history started
 before the turn of the century, back in 1996. wxWidgets was already around
 4 years old by then, you can see more details about the history of wxWidgets
 [here](https://www.wxwidgets.org/about/history/).

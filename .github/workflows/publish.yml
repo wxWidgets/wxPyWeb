@@ -26,6 +26,16 @@ jobs:
         run: |
           nikola build
 
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.RIOBU_SSH_KEY }}
+        known_hosts: ${{ secrets.RIOBU_KNOWN_HOSTS }}
+        config: |
+          Host wxpython-site
+            HostName riobu.com
+            User rbot.wxpython
+
       - name: Publish website
         run: |
           nikola deploy

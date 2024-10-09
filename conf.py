@@ -708,7 +708,7 @@ REDIRECTIONS = [ ("index.php",              "index.html"),
 # in a `nikola deploy` command as you like.
 # DEPLOY_COMMANDS = {
 #     'default': [
-#         "rsync -rav --delete output/ joe@my.site:/srv/www/site",
+#         "rsync -ravO --delete output/ joe@my.site:/srv/www/site",
 #     ]
 # }
 

@@ -708,13 +708,13 @@ REDIRECTIONS = [ ("index.php",              "index.html"),
 # in a `nikola deploy` command as you like.
 # DEPLOY_COMMANDS = {
 #     'default': [
-#         "rsync -ravO --delete output/ joe@my.site:/srv/www/site",
+#         "rsync -rav --delete output/ joe@my.site:/srv/www/site",
 #     ]
 # }
 
 DEPLOY_COMMANDS = {
     'default': [
-        "rsync -avP --delete-after --exclude-from=rsync-exclude.txt output/ wxpython-site:{}/htdocs".format(SITE_DIR)],
+        "rsync -avPO --delete-after --exclude-from=rsync-exclude.txt output/ wxpython-site:{}/htdocs".format(SITE_DIR)],
 }
 
 # github_deploy configuration

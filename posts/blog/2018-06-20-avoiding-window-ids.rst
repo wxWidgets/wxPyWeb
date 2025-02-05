@@ -1,9 +1,9 @@
 .. title: Avoiding Window IDs
 .. slug: avoiding-window-ids
-.. date: 2018-06-20 20:25:52 PDT
+.. date: 2018-06-20 20:25:52 UTC-07:00
 .. author: Robin
 .. tags: 
-.. category: 
+.. category: Blog
 .. link: 
 .. description: 
 .. type: text

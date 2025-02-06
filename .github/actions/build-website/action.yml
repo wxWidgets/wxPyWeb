@@ -1,0 +1,19 @@
+name: Build website
+runs:
+  using: composite
+  steps:
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+
+    - name: Install dependencies
+      shell: bash
+      run: |
+        pip install -r requirements.txt
+
+    - name: Build website
+      shell: bash
+      run: |
+        nikola build

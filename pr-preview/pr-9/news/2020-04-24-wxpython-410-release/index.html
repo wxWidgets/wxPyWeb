@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wxPython 4.1.0 Released | wxPython</title>
+<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/html4css1.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://wxpython.org/news/2020-04-24-wxpython-410-release/index.html">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="The wxPython Team">
+<link rel="prev" href="../../blog/hire-wxpython-pro/index.html" title="Hire a wxPython Pro!" type="text/html">
+<link rel="next" href="../2020-11-21-wxpython-411-release/index.html" title="wxPython 4.1.1 Released" type="text/html">
+<meta property="og:site_name" content="wxPython">
+<meta property="og:title" content="wxPython 4.1.0 Released">
+<meta property="og:url" content="https://wxpython.org/news/2020-04-24-wxpython-410-release/index.html">
+<meta property="og:description" content='"Escaping the Quarantine"
+wxPython 4.1.0 is now available at
+PyPI, with some additional files at
+Extras
+Starting with this release wxPython has switched to tracking the wxWidgets
+master branch (versio'>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-04-24T00:00:00Z">
+<meta property="article:tag" content="Development">
+<meta property="article:tag" content="Phoenix">
+<meta property="article:tag" content="Release">
+<!-- wxPy: add wxpy-theme specific CSS files --><link href="../../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/wxpy.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <!-- wxPy show logo in header, above the menubar -->
+        <a href="https://wxpython.org/"><img src="../../images/header-logo.png"></a>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://wxpython.org/">
+
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="../../pages/overview/">Overview</a>
+                    </li>
+<li>
+<a href="../../pages/screenshots/">Screenshots</a>
+                    </li>
+<li>
+<a href="../../pages/license/">License</a>
+                    </li>
+<li>
+<a href="../../pages/history/">History</a>
+            </li>
+</ul>
+</li>
+<li>
+<a href="../">News</a>
+                </li>
+<li>
+<a href="../../pages/downloads/">Downloads</a>
+            </li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="https://docs.wxpython.org/">API Reference</a>
+                    </li>
+<li>
+<a href="https://wiki.wxpython.org/">wxPython Wiki</a>
+                    </li>
+<li>
+<a href="../../pages/bookshelf/">wxPython Bookshelf</a>
+                    </li>
+<li>
+<a href="../../pages/presentations/">Presentations</a>
+                    </li>
+<li>
+<a href="../../pages/changes/">Full Changelog</a>
+                    </li>
+<li>
+<a href="https://github.com/wxWidgets/Phoenix/blob/master/README.rst">Project README</a>
+            </li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="https://github.com/wxWidgets/Phoenix/issues">Issue Tracker</a>
+                    </li>
+<li>
+<a href="https://discuss.wxpython.org/">Discussion Site</a>
+                    </li>
+<li>
+<a href="../../pages/maillists/">Mail Lists</a>
+                    </li>
+<li>
+<a href="../../pages/irc/">IRC Channel</a>
+                    </li>
+<li>
+<a href="https://stackoverflow.com/questions/tagged/wxpython">StackOverflow</a>
+                    </li>
+<li>
+<a href="../../pages/how-to-submit-issue/">How to report issues</a>
+            </li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Developers <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="../../pages/contributor-guide">Contributor Guide</a>
+                    </li>
+<li>
+<a href="../../pages/changes/">Full Changelog</a>
+                    </li>
+<li>
+<a href="../../pages/maillists/">wxPython-dev mail list</a>
+                    </li>
+<li>
+<a href="https://wxpython.org/Phoenix/docs/html/">Docs built daily</a>
+                    </li>
+<li>
+<a href="http://buildbot.wxpython.org/">Buildbot</a>
+            </li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="../../blog/">wxForty-Two Blog</a>
+                    </li>
+<li>
+<a href="../../pages/about-42/">About 42</a>
+                    </li>
+<li>
+<a href="../../archive.html">Archive</a>
+                    </li>
+<li>
+<a href="../../categories/">Tags</a>
+            </li>
+</ul>
+</li>
+</ul>
+<!-- Google custom search --><form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary btn-xs">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="https://wxpython.org/">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            <div class="col-md-9"> <!-- wxPy: put the main content in a column -->
+            <div class="wxpy-content-col">
+                
+                
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">wxPython 4.1.0 Released</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    The wxPython Team
+            </span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2020-04-24T00:00:00Z" itemprop="datePublished" title="2020-04-24 00:00">2020-04-24 00:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="index.html#disqus_thread" data-disqus-identifier="cache/posts/news/2020-04-24-wxpython-4.1.0-release.html">Comments</a>
+
+
+            
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h3>"Escaping the Quarantine"</h3>
+<p><strong>wxPython 4.1.0</strong> is now available at
+<a href="https://pypi.org/project/wxPython/4.1.0">PyPI</a>, with some additional files at
+<a href="https://extras.wxPython.org/wxPython4/extras/">Extras</a></p>
+<p>Starting with this release wxPython has switched to tracking the wxWidgets
+master branch (version 3.1.x) for the wxWidgets source code, which wxPython is
+built upon, and which is included in the wxPython source archives.</p>
+<p>This will be the last release to include binaries for Python 2.7. The code will
+likely still compile and be compatible with Python 2.7 for some time, but no
+effort will be put into keeping it that way.</p>
+<p>New and improved in this release:</p>
+<ul>
+<li>
+<p>Add a sample for wx.Font.AddPrivateFont to the demo.</p>
+</li>
+<li>
+<p>Added wrappers for the OSXEnableAutomaticQuoteSubstitution,
+  OSXEnableAutomaticDashSubstitution, and OSXDisableAllSmartSubstitutions
+  methods in wx.TextCtrl. Also added OSXEnableAutomaticTabbing in wx.App.</p>
+</li>
+<li>
+<p>Added wx.ColourDialogEvent, wx.DCTextBgColourChanger, wx.DCTextBgModeChanger,
+  wx.grid.GridCellDateRenderer, wx.grid.GridCellDateEditor, wx.SystemAppearance,
+  etc.</p>
+</li>
+<li>
+<p>Many of the deprecated items in wxWidgets and wxPython are being or have
+  been removed. Be sure to test your code in a recent 4.0.x release with
+  warnings enabled so you can see which class, method or function calls you need
+  to change.</p>
+</li>
+<li>
+<p>Bug fixes in wx.lib.calendar: key navigation across month boundaries is now
+  possible; key navigation now sets the date and fires the EVT_CALENDAR event;
+  setter APIs now set the date correctly <a href="https://github.com/wxWidgets/Phoenix/issues/1230">#1230</a>.</p>
+</li>
+<li>
+<p>Switch to using a wx.Overlay in the Widget Inspection Tool to highlight
+  widgets when running on a GTK3 port.</p>
+</li>
+<li>
+<p>Fixed issue in wx.lib.agw.customtreectrl where the label editor could remain
+  stuck forever <a href="https://github.com/wxWidgets/Phoenix/issues/1235">#1235</a>.</p>
+</li>
+<li>
+<p>Grafted on a EnableSystemTheme method to the classes which support it. This
+  can be used to disable the default system theme on Windows for native widgets
+  like wx.ListCtrl, wx.TreeCtrl and wx.dataview.DataViewCtrl. It has no effect
+  on the other platforms.</p>
+</li>
+<li>
+<p>The wx.WS_EX_VALIDATE_RECURSIVELY extended style flag is obsolete, as it is
+  now the default (and only) behavior. The style flag has been added back into
+  wxPython for compatibility, but with a zero value. You can just stop using it
+  in your code with no change in behavior. <a href="https://github.com/wxWidgets/Phoenix/issues/1278">#1278</a></p>
+</li>
+<li>
+<p>Fix a sometimes crash when using a wx.Overlay by letting the wx.DCOverlay hold
+  a reference to the DC, to ensure that the DCOverlay is destroyed first.
+  <a href="https://github.com/wxWidgets/Phoenix/pull/1301">PR#1301</a></p>
+</li>
+<li>
+<p>Replaced the Vagrant VMs used for building wxPython for various Linux distros
+  with Docker images.</p>
+</li>
+<li>
+<p>Add some missing methods in wx.adv.BitmapComboBox <a href="https://github.com/wxWidgets/Phoenix/issues/1307">#1307</a></p>
+</li>
+<li>
+<p>Added the wx.svg package which contains code for parsing SVG (Scalable Vector
+  Graphics) files, and also code for integrating with wxPython. It can rasterize
+  the SVG to a wx.Bitmap of any size with no loss of quality, and it can also
+  render the SVG directly to a wx.GraphicsContext using the GC's drawing
+  primitives. <a href="https://github.com/wxWidgets/Phoenix/pull/1323">PR#1323</a></p>
+</li>
+<li>
+<p>Ported the embedding sample from Classic, which shows how to use wxPython from
+  a C++ wxWidgets application that embeds Python. <a href="https://github.com/wxWidgets/Phoenix/pull/1353">PR#1353</a></p>
+</li>
+<li>
+<p>Fixed wx.GetApp() to use wxWidgets' global wxApp instance instead of
+  maintaining its own pointer. This way, if the wxApp is created by C++ code
+  wxPython will still be able to get access to it. <a href="https://github.com/wxWidgets/Phoenix/issues/1126">#1126</a></p>
+</li>
+<li>
+<p>Added wrappers for the wx.ActivityIndicator class.</p>
+</li>
+<li>
+<p>Added wrappers for the wx.CollapsibleHeaderCtrl class.</p>
+</li>
+<li>
+<p>Fixed issues in PlotCanvas around displaying and using scrollbars. <a href="https://github.com/wxWidgets/Phoenix/issues/1428">#1428</a></p>
+</li>
+<li>
+<p>Added wx.msw.CHMHelpController, and also a wx.HelpController factory function
+  that creates an instance of the best Help Controller for the platform. <a href="https://github.com/wxWidgets/Phoenix/issues/1536">#1536</a></p>
+</li>
+<li>
+<p>Added wx.adv.GenericAnimationCtrl so the generic version of the animation classes
+  can be used even on the platforms that have a native version. Note that due to
+  internal changes to support both types of animations, some API changes in how
+  the Animation objects are created. See the AnimationCtrl.py sample in the demo
+  for the various usage patterns <a href="https://github.com/wxWidgets/Phoenix/issues/1579">#1579</a></p>
+</li>
+<li>
+<p>Added wrappers for the wx.grid.GridBlockCoords, wx.grid.GridBlocks, and
+  wx.grid.GridBlockDiffResult classes, as well as associated new methods in the
+  wx.grid.Grid class. These provide a new way to interact with blocks of
+  selected cells, including an iterator interface in wx.grid.GridBlocks which
+  should be a more efficient (time and memory) way to process large groups of
+  selections.</p>
+</li>
+</ul>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/development/index.html" rel="tag">Development</a></li>
+            <li><a class="tag p-category" href="../../categories/phoenix/index.html" rel="tag">Phoenix</a></li>
+            <li><a class="tag p-category" href="../../categories/release/index.html" rel="tag">Release</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../blog/hire-wxpython-pro/index.html" rel="prev" title="Hire a wxPython Pro!">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../2020-11-21-wxpython-411-release/index.html" rel="next" title="wxPython 4.1.1 Released">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="wxpython",
+            disqus_url="https://wxpython.org/news/2020-04-24-wxpython-410-release/index.html",
+        disqus_title="wxPython 4.1.0 Released",
+        disqus_identifier="cache/posts/news/2020-04-24-wxpython-4.1.0-release.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="wxpython";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            </div>
+
+            <!-- wxPy: load sidebar html into a smaller column -->
+            <div class="col-md-3">  
+                <aside><div class="panel panel-primary">
+    <div class="panel-heading">Quick Links</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="../../pages/overview/#hello-world">
+                <i class="fa fa-star fa-fw"></i> Hello World</a></li>
+          <li><a href="http://docs.wxpython.org/">
+                <i class="fa fa-book fa-fw"></i> API Reference</a></li>
+          <li><a href="https://wiki.wxpython.org/">
+                <i class="fa fa-info fa-fw"></i> wxPython Wiki</a></li>
+          <li><a href="https://github.com/wxWidgets/Phoenix/issues">
+                <i class="fa fa-bug fa-fw"></i> Report a Bug</a></li>
+          <li><a href="https://github.com/wxWidgets/Phoenix/">
+                <i class="fa fa-github fa-fw"></i> GitHub Repository</a></li>
+          <li><a href="https://discuss.wxpython.org/">
+                <i class="fa fa-comments fa-fw"></i> Discuss wxPython</a></li>
+<!--
+          <li><a href="https://groups.google.com/forum/#!forum/wxpython-users">
+                <i class="fa fa-envelope-o fa-fw"></i> wxPython-users</a></li>
+          <li><a href="https://groups.google.com/forum/#!forum/wxpython-dev">
+                <i class="fa fa-envelope-o fa-fw"></i> wxPython-dev</a></li>
+-->
+        </ul>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">More wx Goodies</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="https://wxwidgets.org/">
+                <i class="fa fa-star fa-fw"></i> wxWidgets</a></li>
+            <li><a href="https://github.com/wxFormBuilder/wxFormBuilder">
+                <i class="fa fa-star fa-fw"></i> wxFormBuilder</a></li>
+            <li><a href="http://wxglade.sourceforge.net/">
+                <i class="fa fa-star fa-fw"></i> wxGlade</a></li>
+        </ul>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">Friends of wxPython</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="https://www.wxwidgets.org/blog/">
+                <i class="fa fa-star fa-fw"></i> wxWidgets Blog</a></li>
+            <li><a href="http://www.blog.pythonlibrary.org/">
+                <i class="fa fa-star fa-fw"></i> Mouse vs. Python</a></li>
+            <li><a href="https://www.findmyelectric.com/">
+                <i class="fa fa-star fa-fw"></i> Find My Electric</a></li>
+        </ul>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">Follow</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="../rss.xml"><i class="fa fa-rss fa-fw"></i> News feed</a></li>
+        <li><a href="../../blog/rss.xml"><i class="fa fa-rss fa-fw"></i> Blog feed</a></li>
+        <li><a href="../../categories/"><i class="fa fa-check fa-fw"></i> Tags</a></li>
+        <li><a href="../../archive.html"><i class="fa fa-check fa-fw"></i> Archive</a></li>
+        </ul>
+</div>
+</div>
+
+                </aside>
+</div>
+            <!-- end of sidebar -->
+
+        </div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2025  The wxPython Team - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>, <a href="https://python.org" rel="nofollow">Python</a> and Magic. 
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/jquery.min.js"></script><script src="../../assets/js/bootstrap.min.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><script src="../../assets/js/fancydates.js"></script><script src="../../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

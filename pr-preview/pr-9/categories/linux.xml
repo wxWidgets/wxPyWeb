@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wxPython (Posts about Linux)</title><link>https://wxpython.org/</link><description></description><atom:link href="https://wxpython.org/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:robin@alldunn.com"&gt;The wxPython Team&lt;/a&gt; </copyright><lastBuildDate>Thu, 06 Feb 2025 04:33:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Linux Build Post Updated</title><link>https://wxpython.org/blog/2018-02-03-linux-build-info-updated/index.html</link><dc:creator>Robin</dc:creator><description>&lt;p&gt;This is just a quick post to let everyone know that the previous post in this blog,
+&lt;a href="https://wxpython.org/blog/2017-08-17-builds-for-linux-with-pip/index.html"&gt;Building wxPython for Linux via Pip&lt;/a&gt;
+has been updated to include a simple set of build steps detailing how you can build your
+own wxPython wheel on Linux or other Unix-like systems.&lt;/p&gt;</description><category>Build</category><category>Linux</category><guid>https://wxpython.org/blog/2018-02-03-linux-build-info-updated/index.html</guid><pubDate>Sat, 03 Feb 2018 22:06:40 GMT</pubDate></item><item><title>Building wxPython for Linux via Pip</title><link>https://wxpython.org/blog/2017-08-17-builds-for-linux-with-pip/index.html</link><dc:creator>Mesalu and Robin</dc:creator><description>&lt;div&gt;&lt;p&gt;[ Post updated 2018-02-03, see new &lt;strong&gt;Build Steps&lt;/strong&gt; section below. ]&lt;/p&gt;
+&lt;h4&gt;wxPython Wheels for Linux?&lt;/h4&gt;
+&lt;p&gt;Before reading further, you may want to check and see if there are already
+some wxPython wheels available for your flavor of Linux. A few are built as
+part of the release process and are available from one of wxPython's
+servers. More details and some links are on the 
+&lt;a href="https://wxpython.org/pages/downloads/"&gt;download page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If there are no existing wheels there for your distro, (or perhaps a close
+relative,) then read on to find out why we can't just provide wheels for
+all Linuxes, and what you need to build one for yourself.&lt;/p&gt;
+&lt;h4&gt;The Problem&lt;/h4&gt;
+&lt;p&gt;There have been some issues flowing into Phoenix's issue tracker since the
+release of wxPython 4.0.0b1 related to installation issues on Linux using
+pip, which have caused some overhead and soaked up unnecessary amounts of
+time. So lets start with getting some of the basics out of the way. There
+are a lot of flavors of linux. To name a few there's the Debian family,
+Debian, Ubuntu, Kubuntu, Elementary, Mint, etc., Arch, Gentoo, RHEL and CentOS,
+and so on. Each flavor has differences which can make binary distributions
+incompatible across flavors.&lt;/p&gt;
+&lt;p&gt;Why does this affect wxPython you may ask? It's just a Python package, and
+Python source is independent across operating systems after all, right?.
+Well, not all Python packages are just Python. wxPython as an example
+contains binary extension modules (compiled C or C++ code that is platform
+and architecture dependent.)  wxPython by default also contains a copy of
+the compiled version of the wxWidgets library written in C++, which also
+depends on other 3rd party libraries which need to not only be present at
+runtime, but also have their development-related files present at
+wxWidgets' and wxPython's compile time.&lt;/p&gt;
+&lt;p&gt;Pip in its infinite wisdom can detect this, and knows how to select the
+appropriate binary wheel for the following criteria:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OS (Windows, macOS, Linux)&lt;/li&gt;
+&lt;li&gt;Architecture (i386, x86_64, etc)&lt;/li&gt;
+&lt;li&gt;Python Version (2.7, 3.5, 3.6, etc)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See how pip doesn't care about the specific linux distribution? That's the
+issue. The binary content and dependencies of wxPython can't be delivered
+consistently via pip. There are some efforts to get around this (eg.  &lt;a href="https://www.python.org/dev/peps/pep-0513/"&gt;PEP
+513&lt;/a&gt; a.k.a. &lt;code&gt;manylinux1&lt;/code&gt;) but
+they don't quite work for wxPython yet. Packages that are able to fit into
+the very narrow &lt;code&gt;manylinux1&lt;/code&gt; requirements can be hosted on PyPI and will
+install with pip just as smoothly as pure-python packages do. Unfortunately
+the &lt;code&gt;manylinux1&lt;/code&gt; spec does not include a version of GTK+ and its
+dependencies that are new enough to be able to provide all the features
+that wxWidgets requires.&lt;/p&gt;
+&lt;h4&gt;The Fix&lt;/h4&gt;
+&lt;p&gt;In order to deploy to linux systems wxPython4 (Phoenix) simply builds
+itself from a source tarball as part of the pip setup process. All of the
+code generated by wxPython's build system is already present in the
+tarball, it merely needs to be compiled. This causes a very lengthy
+installation times, but is a necessary evil. Because the build is just
+that, a build, you will need all of wxWidgets and wxPython's binary
+dependencies present at build time. wxWidgets' configure will be run, and
+if it detects missing libraries the whole build, and therefore the pip
+installation, will fail.&lt;/p&gt;
+&lt;h4&gt;What You Need&lt;/h4&gt;
+&lt;p&gt;You will need the following packages (please consult your distribution's
+package list for the appropriate package names) and their dependencies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;python-dev (for your version of python)&lt;/li&gt;
+&lt;li&gt;gtk (preferably version 3, but depends on your needs)&lt;/li&gt;
+&lt;li&gt;gstreamer &lt;/li&gt;
+&lt;li&gt;gstreamer-plugins-base&lt;/li&gt;
+&lt;li&gt;glut&lt;/li&gt;
+&lt;li&gt;libwebkitgtk (matching your gtk version)&lt;/li&gt;
+&lt;li&gt;libjpeg&lt;/li&gt;
+&lt;li&gt;libpng&lt;/li&gt;
+&lt;li&gt;libtiff&lt;/li&gt;
+&lt;li&gt;libsdl&lt;/li&gt;
+&lt;li&gt;libnotify&lt;/li&gt;
+&lt;li&gt;libsm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;on Debian based systems, or other systems that separate development
+packages from standard packages, you will need the corresponding &lt;code&gt;-dev&lt;/code&gt; or
+&lt;code&gt;-devel&lt;/code&gt; package in addition to the standard package.&lt;/p&gt;
+&lt;p&gt;Once the appropriate packages are present on your system then wxPython
+should build with no problems, either with pip or from a source tree
+extracted from the source tarball. If it still doesn't work for you then be
+sure to look closely at the build log as there will likely be some clues
+there that may point you in the right direction.  For example, this:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;checking&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;OpenGL&lt;/span&gt; &lt;span class="nv"&gt;headers&lt;/span&gt;... &lt;span class="nv"&gt;not&lt;/span&gt; &lt;span class="nv"&gt;found&lt;/span&gt;
+&lt;span class="nv"&gt;checking&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;GL&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;gl&lt;/span&gt;.&lt;span class="nv"&gt;h&lt;/span&gt;... &lt;span class="nv"&gt;no&lt;/span&gt;
+&lt;span class="nv"&gt;configure&lt;/span&gt;: &lt;span class="nv"&gt;error&lt;/span&gt;: &lt;span class="nv"&gt;OpenGL&lt;/span&gt; &lt;span class="nv"&gt;libraries&lt;/span&gt; &lt;span class="nv"&gt;not&lt;/span&gt; &lt;span class="nv"&gt;available&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will tell you that the OpenGL libraries are missing. They are usually a
+dependency of the glut or freeglut packages and should have been installed
+along with that library, but perhaps your system's dependencies are
+different and you'll need to do a little investigation to determine the
+proper system packages that need to be installed.&lt;/p&gt;
+&lt;h4&gt;Build Steps&lt;/h4&gt;
+&lt;p&gt;Once you have installed the required depenency libraries, it should take
+just a few steps to build a wxPython that will work on your system with
+your Python. The steps shown here are just one option, but seems to be one
+of the simpler approaches to take, and will require nothing extra to be
+installed in your system Python. These instructions assume that you will be
+using a 3.4+ version of Python and that the executable is called "python3".
+If you are using 2.7 or the binary is called something else then adapt
+accordingly.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; The first thing we'll do is create and activate a new virtual
+environment for the build and the initial testing. This is optional, but
+highly recommended as it will ensure that there is nothing left over from a
+previous build that could trip things up. The last two commands shown here
+are just so you can verify that the python and pip commands are now being
+found in the new virtual environment instead of from the system or other
+Python environment.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cd [some tmp folder]
+
+python3 -m venv builder_py
+source builder_py/bin/activate
+
+which python
+which pip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt; Next, you'll want to update pip and add a few more packages.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;U&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;U&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;six&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;wheel&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;setuptools&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3:&lt;/strong&gt; Use pip to download the latest source archive from PyPI.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;wxPython&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4:&lt;/strong&gt; Use pip to build a wxPython wheel file. We'll also redirect the
+build output to a file so you can review it later if needed. This step will
+take a while to complete, as it will be compiling all the wxWidgets and
+wxPython source code, but you'll be able to watch the build output to
+monitor the progress. Be sure to use the actual name of the downloaded
+source archive file, which may be different than the one shown here.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip wheel -v wxPython-4.0.1.tar.gz  2&amp;gt;&amp;amp;1 | tee build.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5:&lt;/strong&gt; If the build was successful then you should now have a wxPython
+wheel file in the current working directory. If there was a problem then
+review the &lt;code&gt;build.log&lt;/code&gt; file and see if you can spot any clues as to what
+dependencies may be missing or out of date. (Build problems from wxPython
+release sources are almost always due to missing dependencies.) Once you
+think you have solved the problem go back to step 4 and try the build
+again.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 6:&lt;/strong&gt; The next step is to install the wheel file in the virtual
+environment and give it a quick test run. (Use the actual name of the wheel
+file you built, which may be different than the one shown here.)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;wxPython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;4.0.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cp35&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cp35m&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;linux_x86_64&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;whl&lt;/span&gt;
+
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s2"&gt;"import wx; a=wx.App(); wx.Frame(None,title='hello world').Show(); a.MainLoop();"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should see a new window open with a "hello world" title bar, which will
+indicate that this build was successful and this wxPython wheel can be used
+on your system. You can now use pip to install the wheel file in other
+Python environments or virtual environments that use the same base Python
+executable that you used for this build.&lt;/p&gt;
+&lt;h4&gt;Known Issues&lt;/h4&gt;
+&lt;p&gt;wxPython's build tools on Linux assume that the Python being used was configured
+with the &lt;code&gt;--enable-shared&lt;/code&gt; flag. That is usually true for Pythons installed from
+the Linux distro's repositories, as well as for most known 3rd Party Python
+distributions for Linux. However, that flag is not enabled by default. So if
+your Python is one that you've configured and built yourself, then double-check
+that you used the flag. If it wasn't then you'll likely see a configuration
+error when the build gets to the wxPython portion (after it has built
+wxWidgets).&lt;/p&gt;
+&lt;p&gt;Similarly, the &lt;strong&gt;&lt;a href="https://github.com/pyenv/pyenv"&gt;pyenv&lt;/a&gt;&lt;/strong&gt; does not use the
+&lt;code&gt;--enable-shared&lt;/code&gt; flag when it builds a Python environment for you. 
+There is a note in the 
+&lt;a href="https://github.com/pyenv/pyenv/wiki#how-to-build-cpython-with---enable-shared"&gt;pyenv wiki&lt;/a&gt; 
+that shows how to add the flag when it builds a new Python environment.&lt;/p&gt;
+&lt;h4&gt;FAQ&lt;/h4&gt;
+&lt;p&gt;Q1: "Why can't you just install the necessary packages as part of
+wxPython's installation"&lt;/p&gt;
+&lt;p&gt;A1: Lots of good reasons, among them are: Pip is NOT your linux package
+manager, Phoenix is not responsible for maintaining your system.&lt;/p&gt;
+&lt;p&gt;Q2: "I can install PyQt(4/5) just fine via pip! Why can't wxPython do the
+same?"&lt;/p&gt;
+&lt;p&gt;A2: Qt does not depend on system provided libraries other than the low-
+level basic libs. wxWidgets does, it's one of the defining differences of
+the two toolkits. As such PyQt can deliver to all linuxes in the same
+manner.&lt;/p&gt;&lt;/div&gt;</description><category>Build</category><category>Linux</category><guid>https://wxpython.org/blog/2017-08-17-builds-for-linux-with-pip/index.html</guid><pubDate>Thu, 17 Aug 2017 19:14:19 GMT</pubDate></item><item><title>Whyteboard gets noticed</title><link>https://wxpython.org/blog/whyteboard-gets-noticed/index.html</link><dc:creator>Robin</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://wxpython.org/images/2010/06/wbpdf.png"&gt;&lt;img alt="" src="https://wxpython.org/images/2010/06/wbpdf-300x240.png" title="Whyteboard"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://whyteboard.org/"&gt;Whyteboard&lt;/a&gt;, a useful application written using
+wxPython for the GUI, was just
+&lt;a href="http://sourceforge.net/blog/whyteboard-aids-in-teachable-moments/"&gt;noticed&lt;/a&gt;
+over at SourceForge.  Congrats Sproaty!&lt;/p&gt;&lt;/div&gt;</description><category>Development</category><category>Linux</category><category>Mac</category><category>Software</category><category>Windows</category><guid>https://wxpython.org/blog/whyteboard-gets-noticed/index.html</guid><pubDate>Thu, 03 Jun 2010 09:03:00 GMT</pubDate></item><item><title>Time to kick myself again</title><link>https://wxpython.org/blog/time-to-kick-myself-again/index.html</link><dc:creator>Robin</dc:creator><description>&lt;div&gt;&lt;p&gt;Ever have one of those moments when you see some product or service and
+you think, "&lt;em&gt;Doh! I should have thought of that!&lt;/em&gt;" because it is
+something that makes so much sense to you that you can't believe that
+you hadn't invented it yourself long before?  Well I had one of those
+moments today with &lt;a href="https://www.getdropbox.com/"&gt;Dropbox&lt;/a&gt;.  Dropbox is a
+cool service that integrates versioned shared storage on a centralized
+server with your Mac, Windows or Linux desktops.  Syncronizing files
+between your computers, whereever they are located, is as simple as
+dragging the files into your dropbox.  New or changed files are
+automatically replicated to your dropbox on the other computers.  If
+existing files are changed then only the deltas are transported across
+the wire, in a rsync-like fashion.&lt;/p&gt;
+&lt;p&gt;Besides the simple file sharing among your own computers, there are some
+other nice features there too.  Files are private by default, but there
+is a Public folder where you can put files you want to share with
+others, and you can easily get a public URL for them to paste into
+emails or IM messages.  You can also create a shared folder that you
+share with other Dropbox users.  Any changes you make in your shared
+folder are instantly updated to the other users' copy of the shared
+folder, and their changes are replicated back to you. In addition to all
+of that, you can easily get back to prior versions of changed files, and
+you can undelete files that have been deleted.  And as if that wasn't
+enough, there is another special folder type that is an automatic photo
+gallery, you just need to drag the photos you want to share to a Photos
+folder and the rest is automatic.&lt;/p&gt;
+&lt;p&gt;You get 2GB of space for free, and you can get up to 50GB for $10 per
+month or $99 per year.  If you sign up with this &lt;a href="https://www.getdropbox.com/referrals/NTcyNzI1NTk"&gt;referal
+link&lt;/a&gt; then you and I
+will both get an extra 250MB.&lt;/p&gt;
+&lt;p&gt;Finally, here is the real kicker:  The Dropbox user interface (setup
+wizard, preferences dialog, task bar icon, etc.) is written in
+wxPython!  If the user ID I saw when I signed up is related in some way
+to the number of users (it is just a number so that may be possible)
+then that means that there are about three quarters of a million users
+running a wxPython application on their computers and they may not even
+know it.  Good job guys, I'm impressed!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snap002.png" src="https://wxpython.org/images/2009/03/snap002.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Linux</category><category>Mac</category><category>TooCool</category><category>Windows</category><guid>https://wxpython.org/blog/time-to-kick-myself-again/index.html</guid><pubDate>Mon, 09 Mar 2009 19:16:00 GMT</pubDate></item><item><title>One month with Mac</title><link>https://wxpython.org/blog/one-month-with-mac/index.html</link><dc:creator>Robin</dc:creator><description>&lt;div&gt;&lt;p&gt;It's been about a month since I switched my primary computer to a
+&lt;a href="http://www.apple.com/macbookpro/"&gt;MacBook Pro&lt;/a&gt;, (2.4 GHz, 4G ram, with
+the new 17 inch hi-rez display) which I got for myself for my birthday.
+So I thought that this would be a good time for a review, and since I'm
+now a blogger it makes sense to share it with all of you too.&lt;/p&gt;
+&lt;p&gt;First a little background and why I decided to switch. For the past four
+or five years I've been using a &lt;a href="http://www.dell.com"&gt;Dell&lt;/a&gt; Inspiron
+8200 laptop running Linux as my primary machine. By "primary machine" I
+mean the one where I do most of my development work, web browsing,
+email, word processing and etc. I also have a few other computers on and
+under my desk which are used for developing and testing
+&lt;a href="http://wxPython.org/"&gt;wxPython&lt;/a&gt; on the various platforms I support,
+creating the binaries that I distribute, as well as some platform
+specific tasks. I was real happy using Linux as my primary desktop,
+especially for the last year and a half since I switched to
+&lt;a href="http://www.ubuntu.com/"&gt;Ubuntu&lt;/a&gt;. Almost everything I needed or wanted
+from my desktop system was available in one way or another, as well as
+plenty of things to satisfy my inner geek. However there were a few key
+things that prompted me to switch:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Even with the fantastic hardware support that Ubuntu has, I still
+    had troubles with wireless networking, especially when trying to
+    access a WEP protected network, and also troubles with suspending
+    the laptop. Every time I suspended I had to cross my fingers and
+    hope that it would come back in one piece. Even if it did restore, I
+    usually had to restart some services, and it often would not
+    suspend/resume more than a few times without needing a reboot. I
+    knew that using an Apple notebook computer and OS X instead would
+    give me excellent hardware support in these areas.&lt;/li&gt;
+&lt;li&gt;Ever since the advent of &lt;a href="http://www.vmware.com"&gt;VMware&lt;/a&gt; I've used
+    it to help me in my work, although after the Dell got to be a few
+    years old it didn't feel fast enough to depend on it as a VMware
+    host very much, especially since I had all these other computers on
+    my desk running at native speeds. Also, since Apple doesn't allow OS
+    X to be used in a virtual machine it wasn't much help there. However
+    with a fast Mac with enough memory I could easily use it as VM host
+    and run Windows and Linux VM guests on it, allowing me to have all
+    the platforms I need for my work all wrapped up in nice a portable
+    package.&lt;/li&gt;
+&lt;li&gt;Although there has been a lot of hype over the years about the
+    premium you have to pay to have Apple hardware, I don't think that
+    is very true anymore once you consider the quality of the hardware.
+    Sure, you can get cheapo PCs and not have to lay out very much cash
+    for them, but you pay for it down the road with upgrades and
+    hardware failures. Once you start comparing high end, high quality
+    hardware with good support, PCs and Apples cost about the same. I
+    did a price comparison with Dell, choosing what I would get if I
+    were to replace my old Dell with the new one, and it actually priced
+    out at a couple hundred more than what I paid for the MacBook Pro.
+    Of course that includes the Microsoft Tax which would have been
+    wasted on that machine for me because I would have installed Linux
+    on it first thing. (And getting Linux from Dell wouldn't have been
+    an option because they don't offer it on the machine I would have
+    bought from them.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All in all the transition went a lot smoother than I expected. I've used
+Mac OS X for software development related tasks for a number of years
+now, but I had never really investigated what it would take for it to be
+my day-to-day machine. I knew my way around the file-system, using some
+of the applications that Apple ships with OS X, and a few of the Free
+and Open Source development related tools that I had installed, and also
+using the compiler and debugger, but that was about it. I was worried
+that there were too many things that I would miss from Linux, or that
+would be too difficult for me to get used to, or that something would go
+wrong, or that it would take too long to make the transition and that my
+work would suffer. But it just hasn't been the case. I had the old Dell
+and the new MacBook sitting side by side for a few days while I moved
+things over, and set up the new software, but I expected to need to do
+that for a week or two. One day I surprised myself when I realized that
+I hadn't even turned on the Dell for several days and that my setup
+tasks were way ahead of schedule. The hardest thing I dealt with was
+trying to decide which IRC client to go with. (I finally settled on
+&lt;a href="http://colloquy.info/"&gt;Colloquy&lt;/a&gt;, but &lt;a href="http://linkinus.com/"&gt;Linkinus&lt;/a&gt;
+was a close second.) Every time I went to look for some software to fill
+a need for something I used regularly on the old machine, I was able to
+find something that was either Free/Open Source or that was inexpensive
+shareware. The only commercial software that I've bought so far is
+VMware, but I expect to get one or two others.&lt;/p&gt;
+&lt;p&gt;So now the Dell has had its original Windows XP reinstalled and it has
+been recycled into being the first laptop for a member of my family.
+I've been using the Mac almost exclusively for a few weeks now, and it
+has been great. There are a few things that I don't like, or at least
+haven't adjusted to yet and it hasn't been quite as stable as I expected
+(more about these in another article) but all in all I've been very
+pleased with my choice.&lt;/p&gt;
+&lt;p&gt;The three main bullet points above have been satisfied very well. I've
+had no issues with networking at all, and it seamlessly transitions from
+wired to wireless and back with no interruptions in service. I've even
+had ssh sessions that remained connected when the wireless dropped for
+several minutes, and I was able to pick up where I left off when the
+wireless link came back again.&lt;/p&gt;
+&lt;p&gt;Sleeping and resuming works wonderfully, with no crossed fingers
+required.&lt;/p&gt;
+&lt;p&gt;And &lt;a href="http://www.vmware.com/products/fusion/"&gt;VMware Fusion&lt;/a&gt; has been a
+dream come true. Its support for Windows guests is not quite as polished
+as Parallels, (but it's only a 1.0 product so I expect that to improve
+over time,) and it's support for Linux guests far out-shines that of
+Parallels. There are a few features I miss from the VMware Workstation
+product available for other platforms, but they are not that critical
+for day to day operation. I'm able to have two "large" VMs running
+simultaneously and the computer doesn't even break a sweat. For CPU and
+disk intensive things like compiles the Linux virtual machine is
+actually much faster than doing the same thing directly on the Dell
+hardware was, although it's not as fast as running it on Cyclops, which
+happens to have the same CPU as the MacBook. (Cyclops is one of the
+Linux PCs under my desk which is used for making the wxPython binary
+packages for Linux) The Windows VM is also almost as fast for
+development work as the Windows PC I was using before. I still have that
+PC running because it is doing other things for me, but I've moved my
+development work to the VM because of the convenience factor.
+Incidentally, I can have compiles running in both VMs, and still be
+using the host machine's applications without noticing any slowdowns or
+jerkiness in their UI at all.&lt;/p&gt;
+&lt;p&gt;Well, I've rambled on long enough for one article. I've not yet covered
+all the things I thought I would in this post so I expect I'll make a
+few more on this subject over the next few weeks. Stay tuned.&lt;/p&gt;&lt;/div&gt;</description><category>Hardware</category><category>Linux</category><category>Mac</category><guid>https://wxpython.org/blog/one-month-with-mac/index.html</guid><pubDate>Mon, 17 Sep 2007 01:31:00 GMT</pubDate></item></channel></rss>

@@ -9,9 +9,11 @@ runs:
         cache: 'pip'
 
     - name: Install dependencies
+      shell: bash
       run: |
         pip install -r requirements.txt
 
     - name: Build website
+      shell: bash
       run: |
         nikola build

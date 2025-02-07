@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wxPython 4.0.4 Released | wxPython</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="https://wxpython.org/news/2019-01-05-wxpython-404-release/index.html">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="The wxPython Team">
+<link rel="prev" href="../wxpython-4.0.3-release/index.html" title="wxPython 4.0.3 Released" type="text/html">
+<link rel="next" href="../2019-05-18-wxpython-405-release/index.html" title="wxPython 4.0.5 Released" type="text/html">
+<meta property="og:site_name" content="wxPython">
+<meta property="og:title" content="wxPython 4.0.4 Released">
+<meta property="og:url" content="https://wxpython.org/news/2019-01-05-wxpython-404-release/index.html">
+<meta property="og:description" content="&quot;What? It's 2019 already?&quot;
+wxPython 4.0.4 is now available at 
+PyPI, with some additional files at
+Extras
+Changes in this release include the following:
+
+
+
+
+Fixed an issue where wx.lib.intctrl would e">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-01-05T00:00:00Z">
+<meta property="article:tag" content="Development">
+<meta property="article:tag" content="Phoenix">
+<meta property="article:tag" content="Release">
+<!-- wxPy: add wxpy-theme specific CSS files --><link href="../../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/wxpy.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <!-- wxPy show logo in header, above the menubar -->
+        <a href="https://wxpython.org/"><img src="../../images/header-logo.png"></a>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://wxpython.org/">
+
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="../../pages/overview/">Overview</a>
+                    </li>
+<li>
+<a href="../../pages/screenshots/">Screenshots</a>
+                    </li>
+<li>
+<a href="../../pages/license/">License</a>
+                    </li>
+<li>
+<a href="../../pages/history/">History</a>
+            </li>
+</ul>
+</li>
+<li>
+<a href="../">News</a>
+                </li>
+<li>
+<a href="../../pages/downloads/">Downloads</a>
+            </li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="https://docs.wxpython.org/">API Reference</a>
+                    </li>
+<li>
+<a href="https://wiki.wxpython.org/">wxPython Wiki</a>
+                    </li>
+<li>
+<a href="../../pages/bookshelf/">wxPython Bookshelf</a>
+                    </li>
+<li>
+<a href="../../pages/presentations/">Presentations</a>
+                    </li>
+<li>
+<a href="../../pages/changes/">Full Changelog</a>
+                    </li>
+<li>
+<a href="https://github.com/wxWidgets/Phoenix/blob/master/README.rst">Project README</a>
+            </li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="https://github.com/wxWidgets/Phoenix/issues">Issue Tracker</a>
+                    </li>
+<li>
+<a href="https://discuss.wxpython.org/">Discussion Site</a>
+                    </li>
+<li>
+<a href="../../pages/maillists/">Mail Lists</a>
+                    </li>
+<li>
+<a href="../../pages/irc/">IRC Channel</a>
+                    </li>
+<li>
+<a href="https://stackoverflow.com/questions/tagged/wxpython">StackOverflow</a>
+                    </li>
+<li>
+<a href="../../pages/how-to-submit-issue/">How to report issues</a>
+            </li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Developers <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="../../pages/contributor-guide">Contributor Guide</a>
+                    </li>
+<li>
+<a href="../../pages/changes/">Full Changelog</a>
+                    </li>
+<li>
+<a href="../../pages/maillists/">wxPython-dev mail list</a>
+                    </li>
+<li>
+<a href="https://wxpython.org/Phoenix/docs/html/">Docs built daily</a>
+                    </li>
+<li>
+<a href="http://buildbot.wxpython.org/">Buildbot</a>
+            </li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="../../blog/">wxForty-Two Blog</a>
+                    </li>
+<li>
+<a href="../../pages/about-42/">About 42</a>
+                    </li>
+<li>
+<a href="../../archive.html">Archive</a>
+                    </li>
+<li>
+<a href="../../categories/">Tags</a>
+            </li>
+</ul>
+</li>
+</ul>
+<!-- Google custom search --><form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary btn-xs">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="https://wxpython.org/">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            <div class="col-md-9"> <!-- wxPy: put the main content in a column -->
+            <div class="wxpy-content-col">
+                
+                
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">wxPython 4.0.4 Released</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    The wxPython Team
+            </span></p>
+            <p class="dateline">
+            <a href="#" rel="bookmark">
+            <time class="published dt-published" datetime="2019-01-05T00:00:00Z" itemprop="datePublished" title="2019-01-05 00:00">2019-01-05 00:00</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="index.html#disqus_thread" data-disqus-identifier="cache/posts/news/2019-01-05-wxpython-4.0.4-release.html">Comments</a>
+
+
+            
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <h3>"What? It's 2019 already?"</h3>
+<p><strong>wxPython 4.0.4</strong> is now available at 
+<a href="https://pypi.org/project/wxPython/4.0.4">PyPI</a>, with some additional files at
+<a href="https://extras.wxPython.org/wxPython4/extras/">Extras</a></p>
+<p>Changes in this release include the following:</p>
+<!-- TEASER_END -->
+
+<ul>
+<li>
+<p>Fixed an issue where wx.lib.intctrl would erroneously attempt to use long
+  on Python3. (<a href="https://github.com/wxWidgets/Phoenix/issues/898">#898</a>)</p>
+</li>
+<li>
+<p>Include the MSVC runtime DLLs for Python 3.7 builds too.</p>
+</li>
+<li>
+<p>Clear LIBPATH_PYEXT and LIB_PYEXT for linux builds too. (<a href="https://github.com/wxWidgets/Phoenix/issues/904">#904</a>)</p>
+</li>
+<li>
+<p>Added a dependency on the Pillow package since it's used in some wx.lib.agw
+  modules. (<a href="https://github.com/wxWidgets/Phoenix/pull/908">PR#908</a>)</p>
+</li>
+<li>
+<p>Add flag to hide page in wx.lib.agw.aui.notebook. (<a href="https://github.com/wxWidgets/Phoenix/issues/895">#895</a>)</p>
+</li>
+<li>
+<p>Switch wx.lib.plot to issue deprecation warnings with PlotPendingDeprecation
+  so it doesn't have to enable all warnings to get them to be shown by default.
+  (<a href="https://github.com/wxWidgets/Phoenix/issues/902">#902</a>)</p>
+</li>
+<li>
+<p>Added a Python 3.7 builder on Fedora 28. (<a href="https://github.com/wxWidgets/Phoenix/issues/925">#925</a>)</p>
+</li>
+<li>
+<p>Fix the object ownership transfer for wx.Menu.Insert() (<a href="https://github.com/wxWidgets/Phoenix/issues/931">#931</a>)</p>
+</li>
+<li>
+<p>Added wx.Treebook.GetTreeCtrl, wx.Listbook.GetListView and
+  wx.Choicebook.GetChoiceCtrl. (<a href="https://github.com/wxWidgets/Phoenix/issues/918">#918</a>)</p>
+</li>
+<li>
+<p>Removed the wx.BookCtrlBase.RemovePage workaround as it was causing problems
+  and doesn't seem to be necessary any more. The existing wxWidgets assertions
+  are catching the out of range error just fine, however if wxWidgets was built
+  without the debug helpers turned on then it could still cause a crash. (<a href="https://github.com/wxWidgets/Phoenix/issues/888">#888</a>)</p>
+</li>
+<li>
+<p>Reverted the changes which removed the content of the wx.lib.pubsub package
+  and encouraged users to switch to the real PyPubSub package instead. Removing
+  it caused more issues than were expected so it has been restored and the code
+  updated to PyPubSub v3.3.0. Version 4.0.0 is available upstream, but it is not
+  compatible with Python 2.7. Now, wx.lib.pubsub is actually deprecated instead
+  of just trying to pass control over to the upstream PyPubSub library. (<a href="https://github.com/wxWidgets/Phoenix/issues/932">#932</a>)</p>
+</li>
+<li>
+<p>Improve calltip stability in pyshell. (<a href="https://github.com/wxWidgets/Phoenix/issues/941">#941</a>)</p>
+</li>
+<li>
+<p>Fix TypeError in wx.lib.throbber. (<a href="https://github.com/wxWidgets/Phoenix/issues/924">#924</a>)</p>
+</li>
+<li>
+<p>Fix missing parameter tool_id in
+  wx.lib.agw.ribbon.toolbar.RibbonToolBar.AddToggleTool. (<a href="https://github.com/wxWidgets/Phoenix/issues/947">#947</a>)</p>
+</li>
+<li>
+<p>Add a step to wx.Config.ReadInt to attempt converting from long to int
+  under python2. (<a href="https://github.com/wxWidgets/Phoenix/issues/384">#384</a>)</p>
+</li>
+<li>
+<p>Add virtual behavior for wx.RichTextCtrl and wx.TextCtrl's Copy/Cut/Paste methods
+  and their Can* counterparts. (<a href="https://github.com/wxWidgets/Phoenix/issues/954">#954</a>)</p>
+</li>
+<li>
+<p>Fix IO type in wx.lib.agw.thumbnailctrl  (<a href="https://github.com/wxWidgets/Phoenix/issues/959">#959</a>)</p>
+</li>
+<li>
+<p>Fix type error that would occur using pycolourchooser. (<a href="https://github.com/wxWidgets/Phoenix/issues/957">#957</a>)</p>
+</li>
+<li>
+<p>Optimize line drawing in HyperTreeList. (<a href="https://github.com/wxWidgets/Phoenix/issues/973">#973</a>)</p>
+</li>
+<li>
+<p>Add wrapper for wx.StaticBox.GetBordersForSizer and use it in the demo to do
+  platform-specific layout of the items in the StaticBox. (<a href="https://github.com/wxWidgets/Phoenix/issues/974">#974</a>)</p>
+</li>
+<li>
+<p>Update wx.Point, wx.RealPoint, and wx.Size to use floating
+  point arithmetic when conducting scalar multiplication (<a href="https://github.com/wxWidgets/Phoenix/issues/971">#971</a>)</p>
+</li>
+<li>
+<p>Fix load/save bugs in PySlices (<a href="https://github.com/wxWidgets/Phoenix/pull/978">PR#978</a>)</p>
+</li>
+<li>
+<p>Replace deprecated PIL.Image.tostring (<a href="https://github.com/wxWidgets/Phoenix/pull/1005">PR#1005</a>)</p>
+</li>
+<li>
+<p>Fix rendering and mouse sensitivity in UltimateListCtrl when adding HyperText
+  items. (<a href="https://github.com/wxWidgets/Phoenix/issues/1010">#1010</a>)</p>
+</li>
+<li>
+<p>Added a parameter to lib.agw.CustomTreeCtrl.SetItemWindow(), to allow
+  positioning the Window (a small image) on the left of text in a
+  CustomTreeItem. (<a href="https://github.com/wxWidgets/Phoenix/pull/886">#PR886</a>).</p>
+</li>
+<li>
+<p>Declared DeleteAllPages in the notebook subclasses, so the proper C++
+  implementation will be called. (<a href="https://github.com/wxWidgets/Phoenix/issues/972">#972</a>)</p>
+</li>
+<li>
+<p>Removed wx.lib.floatbar, which has been deprecated forever and probably
+  hasn't been working in nearly as long. (<a href="https://github.com/wxWidgets/Phoenix/issues/976">#976</a>)</p>
+</li>
+<li>
+<p>Updated SIP to version 4.19.13.</p>
+</li>
+<li>
+<p>Fix an issue in wx.lib.agw.aui.AuiManager where the orientation of
+  an AuiToolBar would not be updated when calling LoadPerspective. (<a href="https://github.com/wxWidgets/Phoenix/issues/917">#917</a>)</p>
+</li>
+<li>
+<p>Fixed a bug in wx.FileSystemHandler.OpenFile where the object ownership was
+  not being transferred correctly, causing a crash after a premature object
+  deletion. (<a href="https://github.com/wxWidgets/Phoenix/issues/926">#926</a>)</p>
+</li>
+<li>
+<p>Fixed wx.ListCtrl.Append when wx.LC_SORT style is used, so appending items out
+  of order does not lose the data for the remaining columns. (<a href="https://github.com/wxWidgets/Phoenix/issues/906">#906</a>)</p>
+</li>
+<li>
+<p>Add wx.Accessible, it's Windows-only, will raise a NotImplementedError
+  exception on the other platforms. (<a href="https://github.com/wxWidgets/Phoenix/issues/958">#958</a>)</p>
+</li>
+<li>
+<p>Added the ability to generate stub classes for use when optional wxWidgets
+  features are not part of the build. So far, stubs are available for
+  wx.Accessible, wx.FileSystemWatcher, wx.glcanvas, wx.media and wx.html2.</p>
+</li>
+<li>
+<p>Moved the wxpy_api.h file into the wx package at wx/include/wxPython so it
+  will be included in the wheel file. (<a href="https://github.com/wxWidgets/Phoenix/issues/961">#961</a>)</p>
+</li>
+<li>
+<p>Fixed how string data is added to a virtual file-like object in
+  wx.MemoryFSHandler. All strings are now added to the file as utf-8 encoded data,
+  in both Python2 and Python3, and will be read from the virtual file the same
+  way. If you need to use some other encoding for some reason you can first
+  convert the text to a bytesarray or other buffer protocol compatible object and
+  then create the virtual file from that data. (<a href="https://github.com/wxWidgets/Phoenix/issues/969">#969</a>)</p>
+</li>
+<li>
+<p>Performance update for wx.lib.agw.customtreectrl (<a href="https://github.com/wxWidgets/Phoenix/issues/1049">#1049</a>)</p>
+</li>
+<li>
+<p>Ensure that colours set in wx.lib.agw.customtreectrl.TreeItemAttr are
+  instances of wx.Colour. (<a href="https://github.com/wxWidgets/Phoenix/issues/1032">#1032</a>)</p>
+</li>
+<li>
+<p>Fix drawing of ticks in wx.lib.agw.speedmeter when there are negative bounds
+  values. (<a href="https://github.com/wxWidgets/Phoenix/issues/1013">#1013</a>)</p>
+</li>
+<li>
+<p>wxWidgets for Mac includes the wxJoystick class now, also update the demo.
+  (<a href="https://github.com/wxWidgets/Phoenix/issues/997">#997</a>)</p>
+</li>
+<li>
+<p>Fix wx.html.HtmlPrintout to not be seen as an abstract class, so it can be
+  instantiated. (<a href="https://github.com/wxWidgets/Phoenix/issues/1060">#1060</a>)</p>
+</li>
+<li>
+<p>Fix wx.aui.AuiNotbook.SetArtProvider to properly transfer ownership of the art
+  object from Python to C++. This possible double-deletion and related crashing
+  problems. (<a href="https://github.com/wxWidgets/Phoenix/issues/1061">#1061</a>)</p>
+</li>
+<li>
+<p>Fixed the wrappers for wx.html.HtmlWindow.OnOpeningURL to properly handle the
+  redirect output parameter. (<a href="https://github.com/wxWidgets/Phoenix/issues/1068">#1068</a>) This is a backwards-incompatible change,
+  please see the Migration Guide for details.</p>
+</li>
+<li>
+<p>TabNavigatorWindow works similarly to other programs now. It's resizable and
+  draggable so if user has tons of files with long names, it isn't an irritation
+  anymore plastered right in the middle of the screen and can't be worked with
+  easily and ESC now cancels the popup with a proper returnId. (<a href="https://github.com/wxWidgets/Phoenix/issues/1096">#1096</a>)</p>
+</li>
+<li>
+<p>Added missing methods in wx.ListBox, SetItemForegroundColour,
+  SetItemBackgroundColour and SetItemFont. (<a href="https://github.com/wxWidgets/Phoenix/issues/1095">#1095</a>)</p>
+</li>
+<li>
+<p>Backported a fix in wxWidgets that avoids crashing in hhctrl.ocx when using
+  context sensitive help in 64-bit builds on Windows. (<a href="https://github.com/wxWidgets/Phoenix/issues/1104">#1104</a>)</p>
+</li>
+</ul>
+</div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/development/index.html" rel="tag">Development</a></li>
+            <li><a class="tag p-category" href="../../categories/phoenix/index.html" rel="tag">Phoenix</a></li>
+            <li><a class="tag p-category" href="../../categories/release/index.html" rel="tag">Release</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../wxpython-4.0.3-release/index.html" rel="prev" title="wxPython 4.0.3 Released">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../2019-05-18-wxpython-405-release/index.html" rel="next" title="wxPython 4.0.5 Released">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+    
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="wxpython",
+            disqus_url="https://wxpython.org/news/2019-01-05-wxpython-404-release/index.html",
+        disqus_title="wxPython 4.0.4 Released",
+        disqus_identifier="cache/posts/news/2019-01-05-wxpython-4.0.4-release.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="wxpython";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            </div>
+
+            <!-- wxPy: load sidebar html into a smaller column -->
+            <div class="col-md-3">  
+                <aside><div class="panel panel-primary">
+    <div class="panel-heading">Quick Links</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="../../pages/overview/#hello-world">
+                <i class="fa fa-star fa-fw"></i> Hello World</a></li>
+          <li><a href="http://docs.wxpython.org/">
+                <i class="fa fa-book fa-fw"></i> API Reference</a></li>
+          <li><a href="https://wiki.wxpython.org/">
+                <i class="fa fa-info fa-fw"></i> wxPython Wiki</a></li>
+          <li><a href="https://github.com/wxWidgets/Phoenix/issues">
+                <i class="fa fa-bug fa-fw"></i> Report a Bug</a></li>
+          <li><a href="https://github.com/wxWidgets/Phoenix/">
+                <i class="fa fa-github fa-fw"></i> GitHub Repository</a></li>
+          <li><a href="https://discuss.wxpython.org/">
+                <i class="fa fa-comments fa-fw"></i> Discuss wxPython</a></li>
+<!--
+          <li><a href="https://groups.google.com/forum/#!forum/wxpython-users">
+                <i class="fa fa-envelope-o fa-fw"></i> wxPython-users</a></li>
+          <li><a href="https://groups.google.com/forum/#!forum/wxpython-dev">
+                <i class="fa fa-envelope-o fa-fw"></i> wxPython-dev</a></li>
+-->
+        </ul>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">More wx Goodies</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="https://wxwidgets.org/">
+                <i class="fa fa-star fa-fw"></i> wxWidgets</a></li>
+            <li><a href="https://github.com/wxFormBuilder/wxFormBuilder">
+                <i class="fa fa-star fa-fw"></i> wxFormBuilder</a></li>
+            <li><a href="http://wxglade.sourceforge.net/">
+                <i class="fa fa-star fa-fw"></i> wxGlade</a></li>
+        </ul>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">Friends of wxPython</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="https://www.wxwidgets.org/blog/">
+                <i class="fa fa-star fa-fw"></i> wxWidgets Blog</a></li>
+            <li><a href="http://www.blog.pythonlibrary.org/">
+                <i class="fa fa-star fa-fw"></i> Mouse vs. Python</a></li>
+            <li><a href="https://www.findmyelectric.com/">
+                <i class="fa fa-star fa-fw"></i> Find My Electric</a></li>
+        </ul>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">Follow</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="../rss.xml"><i class="fa fa-rss fa-fw"></i> News feed</a></li>
+        <li><a href="../../blog/rss.xml"><i class="fa fa-rss fa-fw"></i> Blog feed</a></li>
+        <li><a href="../../categories/"><i class="fa fa-check fa-fw"></i> Tags</a></li>
+        <li><a href="../../archive.html"><i class="fa fa-check fa-fw"></i> Archive</a></li>
+        </ul>
+</div>
+</div>
+
+                </aside>
+</div>
+            <!-- end of sidebar -->
+
+        </div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2025  The wxPython Team - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>, <a href="https://python.org" rel="nofollow">Python</a> and Magic. 
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

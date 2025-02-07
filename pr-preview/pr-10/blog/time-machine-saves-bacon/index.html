@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time Machine Saves Bacon | wxPython</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="https://wxpython.org/blog/time-machine-saves-bacon/index.html">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Robin">
+<link rel="prev" href="../tranquility-base-here-the-robin-has-landed/index.html" title='"Tranquility base here, the Robin has landed..."' type="text/html">
+<link rel="next" href="../../news/wxpython-2.8.8.0-release/index.html" title="wxPython 2.8.8.0 Released" type="text/html">
+<meta property="og:site_name" content="wxPython">
+<meta property="og:title" content="Time Machine Saves Bacon">
+<meta property="og:url" content="https://wxpython.org/blog/time-machine-saves-bacon/index.html">
+<meta property="og:description" content="Yeah, I know what you're thinking... That headline sounds like something
+you might read while standing in the checkout line at the supermarket
+next to photos of aliens from the future rescuing some ba">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2008-06-10T20:10:00Z">
+<meta property="article:tag" content="Life">
+<meta property="article:tag" content="Mac">
+<!-- wxPy: add wxpy-theme specific CSS files --><link href="../../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/wxpy.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <!-- wxPy show logo in header, above the menubar -->
+        <a href="https://wxpython.org/"><img src="../../images/header-logo.png"></a>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://wxpython.org/">
+
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="../../pages/overview/">Overview</a>
+                    </li>
+<li>
+<a href="../../pages/screenshots/">Screenshots</a>
+                    </li>
+<li>
+<a href="../../pages/license/">License</a>
+                    </li>
+<li>
+<a href="../../pages/history/">History</a>
+            </li>
+</ul>
+</li>
+<li>
+<a href="../../news/">News</a>
+                </li>
+<li>
+<a href="../../pages/downloads/">Downloads</a>
+            </li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="https://docs.wxpython.org/">API Reference</a>
+                    </li>
+<li>
+<a href="https://wiki.wxpython.org/">wxPython Wiki</a>
+                    </li>
+<li>
+<a href="../../pages/bookshelf/">wxPython Bookshelf</a>
+                    </li>
+<li>
+<a href="../../pages/presentations/">Presentations</a>
+                    </li>
+<li>
+<a href="../../pages/changes/">Full Changelog</a>
+                    </li>
+<li>
+<a href="https://github.com/wxWidgets/Phoenix/blob/master/README.rst">Project README</a>
+            </li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="https://github.com/wxWidgets/Phoenix/issues">Issue Tracker</a>
+                    </li>
+<li>
+<a href="https://discuss.wxpython.org/">Discussion Site</a>
+                    </li>
+<li>
+<a href="../../pages/maillists/">Mail Lists</a>
+                    </li>
+<li>
+<a href="../../pages/irc/">IRC Channel</a>
+                    </li>
+<li>
+<a href="https://stackoverflow.com/questions/tagged/wxpython">StackOverflow</a>
+                    </li>
+<li>
+<a href="../../pages/how-to-submit-issue/">How to report issues</a>
+            </li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Developers <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="../../pages/contributor-guide">Contributor Guide</a>
+                    </li>
+<li>
+<a href="../../pages/changes/">Full Changelog</a>
+                    </li>
+<li>
+<a href="../../pages/maillists/">wxPython-dev mail list</a>
+                    </li>
+<li>
+<a href="https://wxpython.org/Phoenix/docs/html/">Docs built daily</a>
+                    </li>
+<li>
+<a href="http://buildbot.wxpython.org/">Buildbot</a>
+            </li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+<li>
+<a href="../">wxForty-Two Blog</a>
+                    </li>
+<li>
+<a href="../../pages/about-42/">About 42</a>
+                    </li>
+<li>
+<a href="../../archive.html">Archive</a>
+                    </li>
+<li>
+<a href="../../categories/">Tags</a>
+            </li>
+</ul>
+</li>
+</ul>
+<!-- Google custom search --><form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary btn-xs">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="https://wxpython.org/">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            <div class="col-md-9"> <!-- wxPy: put the main content in a column -->
+            <div class="wxpy-content-col">
+                
+                
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Time Machine Saves Bacon</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Robin
+            </span></p>
+            <p class="dateline">
+            <a href="#" rel="bookmark">
+            <time class="published dt-published" datetime="2008-06-10T20:10:00Z" itemprop="datePublished" title="2008-06-10 20:10">2008-06-10 20:10</time></a>
+            </p>
+            
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>Yeah, I know what you're thinking... That headline sounds like something
+you might read while standing in the checkout line at the supermarket
+next to photos of aliens from the future rescuing some baby porkers from
+the path of a Vogon engineered tornado headed for the next trailer park
+on their list of sites to demolish to make room for a new highway. Well
+if that's what you're thinking (come on, admit it, you <em>know</em> you were)
+then you're wrong. Keep reading for some info about another kind of Time
+Machine, and another kind of Bacon.</p>
+<!-- TEASER_END -->
+
+<h3>A brief history of Time Machines</h3>
+<p>First on the list, of course, is <a href="http://en.wikipedia.org/wiki/The_Time_Machine"><em>The Time
+Machine</em></a> by one of the
+fathers of Science Fiction himself, H. G. Wells, written in 1895. I
+suspect that there must have been a few nuggets of truth in this
+fictional work. How else could he know that the basic themes of his work
+would continue to appeal to the masses more than a century after he
+created it? What about the many science fictional technologies that have
+become science facts over the years? Perhaps this same trans 4th
+dimensional tool was shared with Jules Verne when he wrote about the
+world-wide communications network that would be created in the 20th
+century... I expect that it was then passed on to other Sci-Fi greats
+down through the generations like Asimov, Heinlein, Bradburry, and
+others...</p>
+<p>Next, because it had an impact on my life that I still remember, I
+should mention the 1960 movie adaptation of <a href="http://en.wikipedia.org/wiki/The_Time_Machine_%281960_film%29"><em>The Time
+Machine</em></a>.
+I remember my Grandfather taking me to this movie when I was but a wee
+lad sometime in the mid 1970's. I remember having to walk the 10 or 12
+city blocks from where we parked to where the "surprise" was located. I
+thought the surprise was going to be ice cream or something and started
+complaining (loudly) when we passed a perfectly good ice cream shop
+along the way. I say "walk" but it was more like "run" because my short
+little boy legs had to keep up with my Grandpa's long, quick strides.
+Grandpa's favorite form of exercise was walking, (which is why he parked
+so far away) and if you couldn't keep up you got left in the dust. When
+we finally got to the surprise, I actually was surprised that it was a
+movie instead of ice cream, but disappointed that it wasn't a "kids
+movie" and probably did a bit more complaining at this point. I'm
+telling you all this about the trip to the theater to help you see the
+contrast of the trip back. After emerging from the theater a couple
+hours later my mind was filled with wonder and excitement, and my
+imagination was running wild and in top gear. I must have floated all
+the way back to the car because I don't remember a single step of it, or
+maybe I time traveled and just skipped ahead 30 minutes. In either case,
+from that day forward I was a definite Sci-Fi fan.</p>
+<p>Next stop on our mini time machine tour is Doc Brown's stainless steel
+De Lorian with its Flux Capacitor in <a href="http://en.wikipedia.org/wiki/Back_to_the_Future"><em>Back to the
+Future</em></a><em>.</em> What kid in
+the '80s (or half the adults for that matter) didn't dream of <em>being</em>
+Marty McFly and of the adventures that would be possible with access to
+a time machine?</p>
+<p>Also on the list are Captains Kirk, Picard, Janeway and Archer who often
+seemed to be dealing with cleaning up one mess or another related to
+paradoxes spawned from fooling around with the space-time continuum.
+(You may notice that a name is missing from that list, but personally I
+don't consider DS9 to be part of the Star Trek family. It's like the
+Sesame Street game "Which of these things is not like the others?")</p>
+<p>The next time machine that I have personal experience with is <a href="http://catb.org/esr/jargon/html/G/Guido.html">Guido's
+Time Machine</a> which is a
+well known phenomenon in the <a href="http://python.org/">Python</a> developer
+community. Here's how it works: In the early days of Python development
+some Joe Programmer pines for Python FizzlePops in the newsgroup saying
+something like "FizzlePops are a cool new thing in the furglebergle
+language. Wouldn't it be great if Python could do that?" Quite often
+there would be a response five minutes later from Guido saying something
+like "That's a great idea. I implemented it last week." After it became
+common knowledge that Guido owns a time machine we can often find
+references to it being used over much greater lengths of time, for
+example when a newly requested feature suddenly appears in prior
+releases of the software, even in releases as much as a few years old!
+PJE <a href="http://dirtsimple.org/2004/12/python-is-not-java.html">describes</a>it
+this way:</p>
+<blockquote>
+<p>Pretend that Python is a magic wand that will miraculously do whatever
+you want without you needing to lifting a finger. Ask, "how does
+Python already solve my problem?" and "What Python language feature
+most resembles my problem?" You will be absolutely astonished at how
+often it happens that thing you need is already there in some form. In
+fact, this phenomenon is so common, even among experienced Python
+programmers, that the Python community has a name for it. We call it
+"Guido's time machine", because sometimes it seems as though that's
+the only way he could've known what we needed, before we knew it
+ourselves.</p>
+</blockquote>
+<p>I've had the opportunity now and then to borrow Guido's time machine in
+my work on <a href="http://wxPython.org/">wxPython</a> and I have to admit that it
+is an utterly exhilarating experience! The wxPython users really
+appreciate it too, and it is the little things like time travel that can
+really help to build a loyal community around a software development
+tool and build strength for the future.</p>
+<h3>What about saving the bacon?</h3>
+<p>So, if you're still reading along at this point and haven't wandered off
+into the space-time continuum yourself, you're probably wondering what
+all this has to do with saving
+<a href="../../images/2008/06/bacon.wav" title="bacon.wav">bacon</a>...
+Well the time machine that is affecting my life today is <a href="http://www.apple.com/macosx/features/timemachine.html">Apple's Time
+Machine</a> and the
+bacon in question is mine. Here's the story: Several days ago the
+Software Update tool popped up telling me that there is an update to OS
+X 10.5.3 available. Since I was in the middle of work and I knew that
+this update would require a reboot I decided that I would deal with it
+later and just hid the update window and went back to work, where I
+promptly forgot about the update notice. Fast forward several days to
+this morning and I need to go out to run some errands. Just before I
+leave I notice the Software Update icon in the dock and realize that
+this would be a good time to let the update run since I wont be at my
+desk for an hour or so anyway. When I get back there's bad news on the
+screen. The update file was corrupted and so it won't be able to
+complete the install. I let it reboot expecting (with fingers crossed!)
+that it will boot back into the non-updated OS X. Nope. The boot hangs
+and eventually the machine shuts itself off. So then I boot up from an
+external drive and jump into the Disk Utility app and select the
+internal hard drive and get more bad news, something like "The file
+system is corrupted and can not be repaired by this utility. Copy your
+important data and reinitialize the hard drive as soon as possible."
+Despair! Anguish! Then my eyes fall on the other external hard drive on
+my desk, and a smile begins to curl the corners of my mouth and the
+twinkle returns to my eyes. <a href="http://www.apple.com/macosx/features/timemachine.html">Time
+Machine</a> to the
+rescue! I plug in the time machine disk and check when the last backup
+was run and find it was only about 40 minutes before the failure. YAY!</p>
+<p>So after copying the few things from the internal drive that I know that
+time machine wasn't backing up (because I told it not to) and then
+erasing and reformatting the drive, I booted from the Leopard DVD and
+told it to restore from my time machine backup. And it has been doing
+exactly that as I've been writing this post from another machine, all
+140GB worth of data, music, projects, source code, tools, applications,
+and everything else chugging along from the time machine back into the
+Mac. If you've ever had disk failures before and no recent or adequate
+backups then this is truly a beautiful sight.</p>
+<p>Thanks Apple, your Time Machine has just saved my bacon!</p>
+<p>The question remains however, do I dare attempt to do the update again?</p>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/life/index.html" rel="tag">Life</a></li>
+            <li><a class="tag p-category" href="../../categories/mac/index.html" rel="tag">Mac</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../tranquility-base-here-the-robin-has-landed/index.html" rel="prev" title='"Tranquility base here, the Robin has landed..."'>Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../news/wxpython-2.8.8.0-release/index.html" rel="next" title="wxPython 2.8.8.0 Released">Next post</a>
+            </li>
+        </ul></nav></aside></article><script>var disqus_shortname="wxpython";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            </div>
+
+            <!-- wxPy: load sidebar html into a smaller column -->
+            <div class="col-md-3">  
+                <aside><div class="panel panel-primary">
+    <div class="panel-heading">Quick Links</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="../../pages/overview/#hello-world">
+                <i class="fa fa-star fa-fw"></i> Hello World</a></li>
+          <li><a href="http://docs.wxpython.org/">
+                <i class="fa fa-book fa-fw"></i> API Reference</a></li>
+          <li><a href="https://wiki.wxpython.org/">
+                <i class="fa fa-info fa-fw"></i> wxPython Wiki</a></li>
+          <li><a href="https://github.com/wxWidgets/Phoenix/issues">
+                <i class="fa fa-bug fa-fw"></i> Report a Bug</a></li>
+          <li><a href="https://github.com/wxWidgets/Phoenix/">
+                <i class="fa fa-github fa-fw"></i> GitHub Repository</a></li>
+          <li><a href="https://discuss.wxpython.org/">
+                <i class="fa fa-comments fa-fw"></i> Discuss wxPython</a></li>
+<!--
+          <li><a href="https://groups.google.com/forum/#!forum/wxpython-users">
+                <i class="fa fa-envelope-o fa-fw"></i> wxPython-users</a></li>
+          <li><a href="https://groups.google.com/forum/#!forum/wxpython-dev">
+                <i class="fa fa-envelope-o fa-fw"></i> wxPython-dev</a></li>
+-->
+        </ul>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">More wx Goodies</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="https://wxwidgets.org/">
+                <i class="fa fa-star fa-fw"></i> wxWidgets</a></li>
+            <li><a href="https://github.com/wxFormBuilder/wxFormBuilder">
+                <i class="fa fa-star fa-fw"></i> wxFormBuilder</a></li>
+            <li><a href="http://wxglade.sourceforge.net/">
+                <i class="fa fa-star fa-fw"></i> wxGlade</a></li>
+        </ul>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">Friends of wxPython</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="https://www.wxwidgets.org/blog/">
+                <i class="fa fa-star fa-fw"></i> wxWidgets Blog</a></li>
+            <li><a href="http://www.blog.pythonlibrary.org/">
+                <i class="fa fa-star fa-fw"></i> Mouse vs. Python</a></li>
+            <li><a href="https://www.findmyelectric.com/">
+                <i class="fa fa-star fa-fw"></i> Find My Electric</a></li>
+        </ul>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">Follow</div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+<li><a href="../../news/rss.xml"><i class="fa fa-rss fa-fw"></i> News feed</a></li>
+        <li><a href="../rss.xml"><i class="fa fa-rss fa-fw"></i> Blog feed</a></li>
+        <li><a href="../../categories/"><i class="fa fa-check fa-fw"></i> Tags</a></li>
+        <li><a href="../../archive.html"><i class="fa fa-check fa-fw"></i> Archive</a></li>
+        </ul>
+</div>
+</div>
+
+                </aside>
+</div>
+            <!-- end of sidebar -->
+
+        </div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2025  The wxPython Team - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>, <a href="https://python.org" rel="nofollow">Python</a> and Magic. 
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

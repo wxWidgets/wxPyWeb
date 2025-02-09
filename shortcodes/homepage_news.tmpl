@@ -36,7 +36,7 @@ index_teasers = True
 	            % endif
 	            </span></p>
 	            <p class="dateline"><a href="${post.permalink()}" rel="bookmark"><time class="published dt-published" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time></a></p>
-	            % if not post.meta('nocomments') and site_has_comments:
+	            % if comments and not post.meta('nocomments') and site_has_comments:
 	                <p class="commentline">${comments.comment_link(post.permalink(), post._base_path)}</p>
 	            % endif
 	        </div>

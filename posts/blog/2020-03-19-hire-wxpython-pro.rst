@@ -1,9 +1,9 @@
 .. title: Hire a wxPython Pro!
 .. slug: hire-wxpython-pro
-.. date: 2020-03-24 10:00:00 PDT
+.. date: 2020-03-24 10:00:00 UTC-08:00
 .. author: Robin
 .. tags:
-.. category:
+.. category: Blog
 .. link:
 .. description:
 .. type: text

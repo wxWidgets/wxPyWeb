@@ -26,7 +26,7 @@ modifications on Windows, Macs and Linux or other unix-like systems.
 # Latest News
 
 {{% post-list stop=3 
-  sections=news 
+  categories=news 
   template=homepage_postlist.tmpl 
 %}}
 {{% /post-list %}}

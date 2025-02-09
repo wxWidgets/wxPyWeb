@@ -13,6 +13,11 @@ runs:
       run: |
         pip install -r requirements.txt
 
+    - name: Install old base theme
+      shell: bash
+      run: |
+        nikola theme -i bootstrap3
+
     - name: Build website
       shell: bash
       run: |

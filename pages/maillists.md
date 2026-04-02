@@ -32,7 +32,8 @@ Please keep the tone and language used in your messages friendly, helpful
 and professional. If your granny would smack you for saying something that
 is rude or insensitive then don't send it to our mail lists. If you don't
 have much experience with mail lists in the past then you may want to read
-one of the many [etiquette](http://lmgtfy.com/?q=mail+list+etiquette)
+one of the many
+[etiquette](https://www.startpage.com/sp/search?query=mail+list+etiquette)
 documents out there to help you get acquainted with good behavior.
 
 Please note that you must be subscribed to the list to be able to send mail
@@ -54,14 +55,14 @@ will get is a request to do so.
 :    The main list for discussing wxPython, getting questions answered, sharing 
 	 experiences, etc. All questions that are Python specific should be asked here.<br>
      [Mail Address](mailto:wxpython-users@googlegroups.com),
-     [Group URL](http://groups.google.com/group/wxpython-users)
+     [Group URL](https://groups.google.com/group/wxpython-users)
 <br>
 **wxPython-dev**
 :    This list is for coordinating between people who working on or contribute 
 	 code or documentation to wxPython, discussions about future directions, details 
 	 of issues and problems, etc.<br>
      [Mail Address](mailto:wxpython-dev@googlegroups.com),
-     [Group URL](http://groups.google.com/group/wxpython-dev)
+     [Group URL](https://groups.google.com/group/wxpython-dev)
 <br>
 **wx-users**
 :    Since many of the questions and issues encountered in wxPython
@@ -70,13 +71,13 @@ will get is a request to do so.
      for discussing general wxWidgets issues and the majority of messages
      apply to wxPython as well.  <br>
      [Mail Address](mailto:wx-users@googlegroups.com),
-     [Group URL](http://groups.google.com/group/wx-users)
+     [Group URL](https://groups.google.com/group/wx-users)
 <br>
 **wx-dev**
 :    For discussion of development issues for wxWidgets. Common topics are which 
      new features should be added, bugs needing fixed, build issues,<br>
      [Mail Address](mailto:wx-dev@googlegroups.com),
-     [Group URL](http://groups.google.com/group/wx-dev)
+     [Group URL](https://groups.google.com/group/wx-dev)
 
 
 

@@ -9,7 +9,7 @@
 
 If you don't have a lot of experience with submitting patches or PRs (pull
 requests) to an OpenSource project please start by reading the
-`Contributing to Open Source Projects <http://www.contribution-guide.org/>`_
+`Contributing to Open Source Projects <https://www.contribution-guide.org/>`_
 document.  (It's probably a good idea to review the document even if you do
 have experience, just to make sure that you're "on the same page".) The
 document provides a clear and concise set of general guidelines for
@@ -28,24 +28,23 @@ Here are a few resources to help you **get up to speed** on using git and
 GitHub, be sure to google for more info when you don't understand how to do
 something:
 
-* `Git Cheat Sheet <https://services.github.com/on-demand/downloads/github-git-cheat-sheet/>`_
-* `The Git Book <https://book.git-scm.com/>`_
-* `Learn Git Branching <http://learngitbranching.js.org/>`_ tutorial
+* `Git Cheat Sheet <https://git-scm.com/cheat-sheet/>`_
+* `The Git Book <https://git-scm.com/book/en/v2/>`_
+* `Learn Git Branching <https://learngitbranching.js.org/>`_ tutorial
 
 :html:`<p>`
 
-* `All GitHub Help <https://help.github.com/>`_
-* `Fork a Repo <https://help.github.com/articles/fork-a-repo/>`_
-* `The GitHub Flow <https://help.github.com/articles/github-flow/>`_ and the 
-  coresponding `visual guide <https://guides.github.com/introduction/flow/>`_
+* `All GitHub Help <https://docs.github.com/>`_
+* `Fork a Repo <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo/>`_
+* `The GitHub Flow <https://docs.github.com/en/get-started/using-github/github-flow/>`_
 
 If you like to use **GUI Tools** to work with your version control systems, my 
 favorite is `SourceTree <https://www.sourcetreeapp.com/>`_ but there are 
-`several others <https://www.google.com/search?q=git+gui+client>`_ available.
+`several others <https://www.startpage.com/sp/search?query=git+gui+client>`_ available.
 
 The rest of this page will simply emphasize a few of the important things, 
 building upon the guidelines in the 
-`Contributing... <http://www.contribution-guide.org/>`_ document.
+`Contributing... <https://www.contribution-guide.org/>`_ document.
 
 
 1. If your contribution is intended to fix a bug or other issue, make
@@ -67,15 +66,19 @@ building upon the guidelines in the
    that you should not make any other unrelated changes to your master
    branch until after your PR has been merged.  
 
-   For example, to create a branch for a feature that "foos the bars"::
+   For example, to create a branch for a feature that "foos the bars"
 
-      <Do a fork and clone of Phoenix if you haven't already...>
+   .. code:: bash
+
+      # Do a fork and clone of Phoenix if you haven't already... #
       $ git checkout master
       $ git pull
       $ git checkout -b foo-the-bars
-      <hack hack hack>
+
+      # hack hack hack #
       $ git push origin HEAD
-      <submit PR based on your 'foo-the-bars' branch from your GitHub fork>
+
+      # submit PR based on your 'foo-the-bars' branch from your GitHub fork #
 
 4. If there is an issue associated with your contribution, then
    **include the issue number** in your PR's description text, (for

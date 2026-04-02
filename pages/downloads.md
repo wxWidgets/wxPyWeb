@@ -42,12 +42,12 @@ Because of the differences between Linux distributions (mainly different
 versions of the core libraries installed by default, but also platform
 architecture and etc.) it is not possible to host binary wheel files for
 Linux on PyPI unless they can be made to work within the constraints of
-[PEP 513](https://www.python.org/dev/peps/pep-0513/) Unfortunately,
+[PEP 513](https://peps.python.org/pep-0513/) Unfortunately,
 attempts to pound the wxPython peg into the `manylinux1` hole have not been
 very successful. Maybe `manylinux2` will be a better fit. In the meantime,
 if you have a Linux similar enough to those used to build the wheels
 located under the 
-[wxPython Extras linux](https://extras.wxpython.org/wxPython4/extras/linux/) folder, 
+[wxPython Extras linux](https://extras.wxpython.org/wxPython4/extras/linux/) folder,
 then you can use them and not need to build the wheels yourself.
 
 Since there are various options for distro and wx port (GTK2 or GTK3) then
@@ -117,9 +117,9 @@ this file. It is a great learning resource with tons of examples showing
 how to use various components of the wxPython library. Look for a file
 named like `wxPython-demo-VERSION.tar.gz`.
 
-* Zip files with `*.pdb` files which are Visual Studio debugger information files. 
+* Zip files with `*.pdb` files which are Visual Studio debugger information files.
 
-* Binary wheel files for a few flavors of **Linux**. 
+* Binary wheel files for a few flavours of **Linux**.
 
 
 

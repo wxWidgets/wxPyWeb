@@ -38,7 +38,7 @@ Vintech RCAM-Pro
     .. thumbnail:: /screenshots/vintechrcam-win10.png   
     .. thumbnail:: /screenshots/vintechrcam-linux.png   
 
-`Vintech RCAM-Pro <http://www.vintech.bg/>`_ is a CAM system, specially
+`Vintech RCAM-Pro <https://www.vintech.bg/>`_ is a CAM system, specially
 designed for true shape nesting and programming of CNC machines for thermal
 and jet cutting of sheet parts. The system has been developed for more than
 20 years. It has accumulated technological experience from partnerships
@@ -55,7 +55,7 @@ GNUMed
     .. thumbnail:: /screenshots/gnumed-pngwB3Jpp3BF_.png  
     .. thumbnail:: /screenshots/gnumed-screenshot_004.png
 
-`GNUmed <http://wiki.gnumed.de/bin/view/Gnumed>`_ is a Free/Libre
+`GNUmed <https://www.gnumed.de/documentation/>`_ is a Free/Libre
 electronic medical record (EMR) for Unix-like systems (BSD, Linux, and UNIX
 systems), Microsoft Windows, macOS and other platforms. GNUmed aims to
 provide medical software that respects the privacy of patients and that is
@@ -78,7 +78,7 @@ Robot Framework IDE (RIDE)
 
 
 `RIDE <https://github.com/robotframework/RIDE>`_ is is a test data 
-editor for `Robot Framework <http://robotframework.org/>`_ test data. 
+editor for `Robot Framework <https://robotframework.org/>`_ test data. 
 Navigate through your Test Suites folders, and run them
 filtering by Tags. Edit Test Cases in the Cell Editor with context help and
 code highlighting, or use the Text Editor for space formatted files. Select
@@ -98,7 +98,7 @@ OutWiker - the tree notes organizer
     .. thumbnail:: /screenshots/outwiker_2.0.0_05_en.png
 
 
-`OutWiker <http://jenyay.net/Outwiker/English>`_ is designed to store
+`OutWiker <https://jenyay.net/Outwiker/English>`_ is designed to store
 notes in a tree. Such programs are called "outliner", personal wiki, or
 tree-like editors. OutWiker's main difference from the other similar
 programs is keeping the tree of notes in the form of directories on disk,
@@ -117,7 +117,7 @@ BetaMatch
 
     .. thumbnail:: /screenshots/BetaMatch.png
 
-`BetaMatch <http://www.mnw-scan.com/>`_ is a very specialized software system for
+`BetaMatch <https://www.mnw-scan.com/>`_ is a very specialized software system for
 component matching of antennas. A demo version can be downloaded from the site if 
 anybody is interested in playing around.
 
@@ -151,7 +151,7 @@ Pyspread
     .. thumbnail:: /screenshots/pyspread_screenshot_sinus_large.png
     .. thumbnail:: /screenshots/pyspread_screenshot_basemap_large.png
 
-`Pyspread <https://manns.github.io/pyspread/>`_ is a non-traditional
+`Pyspread <https://pyspread.gitlab.io>`_ is a non-traditional
 spreadsheet application that is based on and written in the programming
 language Python. The goal of pyspread is to be the most pythonic
 spreadsheet. Pyspread expects Python expressions in its grid cells, which
@@ -170,7 +170,7 @@ Larch
     .. thumbnail:: /screenshots/Larch-Mapviewer_correlation_maps.png
     .. thumbnail:: /screenshots/Larch-XRFDisplay.png
 
-`Larch <http://xraypy.github.io/xraylarch/>`_ is an open-source library and
+`Larch <https://xraypy.github.io/xraylarch/>`_ is an open-source library and
 toolkit for processing and analyzing scientific data. Initially designed
 for X-ray spectroscopic and scattering data collected at modern synchrotron
 sources, Larch provides a wide selection of algorithms for processing such

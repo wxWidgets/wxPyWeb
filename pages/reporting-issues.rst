@@ -10,16 +10,16 @@
 -->
 
 If you haven't read it recently, please start by reading at least the 
-`Submitting Bugs <http://www.contribution-guide.org/#submitting-bugs>`_
+`Submitting Bugs <https://www.contribution-guide.org/#submitting-bugs>`_
 section of the 
-`Contributing to Open Source Projects <http://www.contribution-guide.org/>`_
+`Contributing to Open Source Projects <https://www.contribution-guide.org/>`_
 document. Building upon that foundation, please follow these steps when
 submitting your bug report to the wxPython Phoenix project.
 
-1. Do your due dilligence and **search** for any previous reports or other
+1. Do your due diligence and **search** for any previous reports or other
    information about the bug you've discovered, not just the GitHub issues
    but Google for it too. You may find that it is already known, perhaps that
-   there is a workaround for it, or even that it is intended behavior and is
+   there is a workaround for it, or even that it is intended behaviour and is
    not a bug.
 
 2. If you're not on the **latest version** of wxPython, get it and try to
@@ -31,12 +31,12 @@ submitting your bug report to the wxPython Phoenix project.
 
 4. **Include the following** items in your description of the issue
 
-   a. Opperating System
+   a. Operating System
    b. wxPython version
    c. Python version
    d. If your wxPython binaries did not come from PyPI, where did you get it? Did you build it yourself?
    e. Steps needed to reproduce the issue
-   f. A `small runnable sample <https://wiki.wxpython.org/MakingSampleApps>`_ application that can be used to reproduce the issue, see also `SSCCE <http://sscce.org/>`_ and `MCVE <https://stackoverflow.com/help/mcve>`_.
+   f. A `small runnable sample <https://wiki.wxpython.org/MakingSampleApps>`_ application that can be used to reproduce the issue, see also `SSCCE <https://sscce.org/>`_ and `MCVE <https://stackoverflow.com/help/minimal-reproducible-example>`_.
 
 
 

@@ -54,7 +54,7 @@ places in wxPython code to add the support for the enhancement or fix
 to wxPython.  When it reached many tens of thousands of lines of code
 it got to be very awkward and fragile to work on in that manner.  Add
 to that the fact that there was no central source code repository
-(this was also long before [SourceForge](http://sf.net/)'s time) and
+(this was also long before [SourceForge](https://sourceforge.net/)'s time) and
 so we were emailing code changes to each other and you can get an
 inkling for the difficulties involved.
 
@@ -100,6 +100,3 @@ TBW...
 The "recent" changes page of wxPython goes all the way back to release 0.3
 in 1998. That was a long time ago, with many releases made since then. The
 changelog is updated for each release and is viewable [here](/pages/changes).
-
-
-

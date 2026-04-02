@@ -10,8 +10,8 @@
 -->
 
 
-<img src="/images/OSI-Approved-License-100x137.png" alt="OSI Approved License" 
-     style="float: right; margin: 0 0 15px 15px;">
+<img src="/images/osi-badge.svg" alt="OSI Approved License" 
+     style="float: right; margin: 0 15px 15px 15px; width: 100px;">
 
 wxPython is licenced under the "wxWindows Library Licence".
 

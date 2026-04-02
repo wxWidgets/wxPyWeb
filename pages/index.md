@@ -6,7 +6,7 @@ description: All about wxPython, the cross-platform GUI toolkit for the Python l
 
 
 
-<div class="jumbotron">
+<div class="p-5 bg-body-secondary rounded-3 mb-5">
 <div class="row home-intro">
 <div class="col-md-12 home-intro-text">
 

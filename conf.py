@@ -120,22 +120,22 @@ NAVIGATION_LINKS = {
           ("/pages/maillists/",                             "Mail Lists"),
           ("/pages/irc/",                                   "IRC Channel"),
           ("https://stackoverflow.com/questions/tagged/wxpython", "StackOverflow"),
-          ("/pages/how-to-submit-issue/",                   "How to report issues"),
+          ("/pages/how-to-submit-issue/",                   "How to Report Issues"),
           ),
         "Support"),
 
-        ((("/pages/contributor-guide",              "Contributor Guide"),
-          ("/pages/changes/",                       "Full Changelog"),
-          ("/pages/maillists/",                     "wxPython-dev mail list"),
-          ("https://wxpython.org/Phoenix/docs/html/","Docs built daily"),
-          ("http://buildbot.wxpython.org/",         "Buildbot"),
+        ((("/pages/contributor-guide",                      "Contributor Guide"),
+          ("/pages/changes/",                               "Full Changelog"),
+          # ("/pages/maillists/",                             "wxPython-dev Mail List"),
+          ("https://wxpython.org/Phoenix/docs/html/",       "Daily Built Docs"),
+          ("https://github.com/wxWidgets/Phoenix/actions",  "GitHub Dev Builds"),
           ),
         "Developers"),
 
         ((('/blog/',                'wxForty-Two Blog'),
           ('/pages/about-42/',      'About 42'),
           ('/archive.html',         'Archive'),
-          ('/categories/',          'Tags')
+          ('/tags/',                'Tags')
           ),
         'Blog'),
 
@@ -146,12 +146,47 @@ NAVIGATION_LINKS = {
 # although themes may not always support them. (translatable)
 # (Bootstrap 4: right-side of navbar, Bootblog 4: right side of title)
 NAVIGATION_ALT_LINKS = {
-    DEFAULT_LANG: ()
+    # The wxpy-theme uses these for the sidebar
+    DEFAULT_LANG: (
+        ((
+          ("/pages/overview/#hello-world",          "fa-solid fa-child-reaching",   "Hello World"),
+          ("https://docs.wxpython.org/",            "fa-solid fa-code",             "API Reference"),
+          ("https://wiki.wxpython.org/",            "fa-solid fa-book-atlas",       "wxPython Wiki"),
+          ("https://github.com/wxWidgets/Phoenix/issues/",  "fa-solid fa-bug",      "Report a Bug"),
+          ("https://github.com/wxWidgets/Phoenix/",         "fa-brands fa-github",  "GitHub Repository"),
+          ("https://discuss.wxpython.org/",                 "fa-solid fa-comments", "Discuss wxPython"),
+          # ("https://groups.google.com/forum/#!forum/wxpython-users/", "fa-solid fa-envelope", "wxPython-users"),
+          # ("https://groups.google.com/forum/#!forum/wxpython-dev/",   "fa-solid fa-envelope", "wxPython-dev"),
+          ),
+        "Quick Links"),
+
+        ((
+          ("https://wxwidgets.org/",                            "fa-solid fa-cubes",    "wxWidgets"),
+          ("https://github.com/wxFormBuilder/wxFormBuilder/",   "fa-solid fa-cube",     "wxFormBuilder"),
+          ("https://wxglade.sourceforge.net/",                  "fa-solid fa-cube",     "wxGlade"),
+          ),
+        'More wx Goodies'),
+
+        ((
+          ("https://www.wxwidgets.org/blog/",       "fa-solid fa-star", "wxWidgets Blog"),
+          ("https://www.blog.pythonlibrary.org/",   "fa-solid fa-star", "Mouse vs. Python"),
+          ("https://www.findmyelectric.com/",       "fa-solid fa-star", "Find My Electrics"),
+          ),
+        'Friends of wxPython'),
+
+        ((
+          ("/news.xml",     "fa-solid fa-rss",  "News Feed"),
+          ("/blog.xml",     "fa-solid fa-rss",  "Blog Feed"),
+          ("/tags/",        "fa-solid fa-tag",  "Tags"),
+          ("/archive.html", "fa-solid fa-tag",  "Archive"),
+          ),
+        'Follow Us'),
+    ),
 }
 
 
 # Name of the theme to use.
-#THEME = "bootstrap3"
+#THEME = "bootstrap4"
 #THEME = "material-theme"
 #THEME = "custom"
 THEME = "wxpy-theme"
@@ -160,7 +195,7 @@ THEME = "wxpy-theme"
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it
 # as an accent color (the default ones don't). Must be a HEX value.
-THEME_COLOR = '#5670d4'
+THEME_COLOR = '#04519b'
 
 # Theme configuration. Fully theme-dependent. (translatable)
 # Samples for bootblog4 (enabled) and bootstrap4 (commented) follow.
@@ -283,6 +318,7 @@ TIMEZONE = "UTC"
 # Used by babel.dates, CLDR style: http://cldr.unicode.org/translation/date-time-1/date-time
 # You can also use 'full', 'long', 'medium', or 'short'
 # DATE_FORMAT = 'yyyy-MM-dd HH:mm'
+DATE_FORMAT = 'yyyy-MM-dd'
 
 # Date format used to display post dates, if local dates are used. (translatable)
 # Used by Luxon: https://moment.github.io/luxon/docs/manual/formatting
@@ -378,7 +414,7 @@ METADATA_FORMAT = "Nikola"
 # Nikola supports logo display.  If you have one, you can put the URL here.
 # Final output is <img src="LOGO_URL" id="logo" alt="BLOG_TITLE">.
 # The URL may be relative to the site root.
-#LOGO_URL = '/images/phoenix_main.png'
+LOGO_URL = '/images/header-logo.png'
 
 # When linking posts to social media, Nikola provides Open Graph metadata
 # which is used to show a nice preview. This includes an image preview
@@ -402,7 +438,7 @@ SHOW_BLOG_TITLE = False
 # output / TRANSLATION[lang] / TAG_PATH / tag.html (list of posts for a tag)
 # output / TRANSLATION[lang] / TAG_PATH / tag RSS_EXTENSION (RSS feed for a tag)
 # (translatable)
-# TAG_PATH = "categories"
+TAG_PATH = "tags"
 
 # By default, the list of tags is stored in
 #     output / TRANSLATION[lang] / TAG_PATH / index.html
@@ -1017,8 +1053,8 @@ LICENSE = ""
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
 CONTENT_FOOTER = 'Contents &copy; {date}  {author} - ' \
-                 'Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>, '\
-                 '<a href="https://python.org" rel="nofollow">Python</a> and Magic. '\
+                 'Powered by <a class="footer-link" href="https://getnikola.com" rel="nofollow">Nikola</a>, '\
+                 '<a class="footer-link" href="https://www.python.org" rel="nofollow">Python</a> and Magic. '\
                  '{license}'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
@@ -1281,14 +1317,14 @@ INDEX_DISPLAY_POST_COUNT = 8
 SEARCH_FORM = """
 <!-- Google custom search -->
 <form method="get" action="https://www.google.com/search"
-    class="navbar-form navbar-right" role="search">
-<div class="form-group">
-<input type="text" name="q" class="form-control" placeholder="Search">
-</div>
-<button type="submit" class="btn btn-primary btn-xs">
-	<span class="glyphicon glyphicon-search"></span>
-</button>
-<input type="hidden" name="sitesearch" value="%s">
+    class="navbar-form navbar-right pb-lg-0 pb-3 role="search">
+    <div class="input-group">
+        <input type="text" class="form-control-sm flex-grow-1 searchbar" name="q" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+        <button class="btn btn-sm btn-primary" type="submit" aria-label="Submit Search" id="button-addon2">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+    <input type="hidden" name="sitesearch" value="%s">
 </form>
 <!-- End of custom search -->
 """ % SITE_URL
@@ -1385,7 +1421,8 @@ METADATA_VALUE_MAPPING = {
 # Bundle JS and CSS into single files to make site loading faster in a HTTP/1.1
 # environment but is not recommended for HTTP/2.0 when caching is used.
 # Defaults to True.
-USE_BUNDLES = not USE_TEST_SITE
+# !This seems to brake boostrap v5
+USE_BUNDLES = False
 
 # Plugins you don't want to use. Be careful :-)
 # DISABLED_PLUGINS = ["render_galleries"]
@@ -1446,7 +1483,7 @@ WARN_ABOUT_TAG_METADATA = False
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    'header_logo': '<img src="/images/header-logo.png" />'
+    'example': '/images/header-logo.png'
 }
 
 # Add functions here and they will be called with template

@@ -110,6 +110,7 @@ ${base.late_load_js()}
         ${notes.code()}
     % endif
     <script>
+    baguetteBox.run('.gallery');
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
         captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});

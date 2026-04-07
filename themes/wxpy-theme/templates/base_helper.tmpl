@@ -66,7 +66,7 @@ lang="${lang}">
 <%def name="late_load_js()">
     %if use_cdn:
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha256-ULQV01VS9LCI2ePpLsmka+W0mawFpEA0rtxnezUj4A4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/baguettebox.js@1.13.0/dist/baguetteBox.min.js" integrity="sha256-ubLUpTgwj/5NCC7g5faXLoSE2apgR9aeIXG+5HRMjIQ=" crossorigin="anonymous"></script>
     % endif
     %if use_bundles and use_cdn:
         <script src="/assets/js/all.js"></script>
@@ -80,7 +80,7 @@ lang="${lang}">
     %endif
     %if date_fanciness != 0:
         %if use_cdn:
-            <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js" integrity="sha256-Nn+JGDrq3PuTxcDfJmmI0Srj5LpfOFlKqEiPwQK7y40=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/luxon@3.7.2/build/global/luxon.min.js" integrity="sha256-UWxf6lyCvfH7XEcrmq/cqc2m3IBrLBLOnWLC4Pw0gQQ=" crossorigin="anonymous"></script>
         %else:
             <script src="/assets/js/luxon.min.js"></script>
         %endif
@@ -94,7 +94,7 @@ lang="${lang}">
 <%def name="html_stylesheets()">
     %if use_cdn:
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha256-cLMYWYYutHkt+KpNqjg7NVkYSQ+E2VbrXsEvOqU7mL0=" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baguettebox.js@1.13.0/dist/baguetteBox.min.css" integrity="sha256-zW4nGYodillKs6YXJeNnmSIoPiG19Pl3M26UD87aad8=" crossorigin="anonymous">
     % endif
     %if use_bundles and use_cdn:
         <link href="/assets/css/all.css" rel="stylesheet" type="text/css">

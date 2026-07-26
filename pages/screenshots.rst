@@ -20,10 +20,10 @@ Transana
 
     .. class:: thumbnails
 
-        .. thumbnail:: /screenshots/transana-Synchronize.jpg
-        .. thumbnail:: /screenshots/transana-fullmultivid.jpg
-        .. thumbnail:: /screenshots/transana-Snapshot6.jpg
-        .. thumbnail:: /screenshots/transana-MediaConvert.jpg
+        .. thumbnail:: /screenshots/transana-Synchronize.gif
+        .. thumbnail:: /screenshots/transana-fullmultivid.gif
+        .. thumbnail:: /screenshots/transana-Snapshot6.gif
+        .. thumbnail:: /screenshots/transana-MediaConvert.gif
 
 `Transana <https://www.transana.com/>`_ offers sophisticated tools for the
 qualitative analysis of text, still image, audio, and video data. Work with

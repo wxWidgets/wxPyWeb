@@ -119,7 +119,7 @@ named like `wxPython-demo-VERSION.tar.gz`.
 
 * Zip files with `*.pdb` files which are Visual Studio debugger information files.
 
-* Binary wheel files for a few flavours of **Linux**.
+* Binary wheel files for a few flavors of **Linux**.
 
 
 

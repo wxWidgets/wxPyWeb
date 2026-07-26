@@ -19,7 +19,7 @@ submitting your bug report to the wxPython Phoenix project.
 1. Do your due diligence and **search** for any previous reports or other
    information about the bug you've discovered, not just the GitHub issues
    but Google for it too. You may find that it is already known, perhaps that
-   there is a workaround for it, or even that it is intended behaviour and is
+   there is a workaround for it, or even that it is intended behavior and is
    not a bug.
 
 2. If you're not on the **latest version** of wxPython, get it and try to

@@ -1421,7 +1421,7 @@ METADATA_VALUE_MAPPING = {
 # Bundle JS and CSS into single files to make site loading faster in a HTTP/1.1
 # environment but is not recommended for HTTP/2.0 when caching is used.
 # Defaults to True.
-# !This seems to brake boostrap v5
+# WARNING: Using bundling with Boostrap v5 breaks dropdown-menus.
 USE_BUNDLES = False
 
 # Plugins you don't want to use. Be careful :-)

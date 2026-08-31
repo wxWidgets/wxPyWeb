@@ -1,12 +1,13 @@
-title: Welcome to wxPython!
-slug: index
-tags:
-link:
-description: All about wxPython, the cross-platform GUI toolkit for the Python language
+<!--
+.. title: Welcome to wxPython!
+.. slug: index
+.. tags:
+.. link:
+.. description: All about wxPython, the cross-platform GUI toolkit for the Python language
+-->
 
 
-
-<div class="jumbotron">
+<div class="p-5 bg-body-secondary rounded-3 mb-5">
 <div class="row home-intro">
 <div class="col-md-12 home-intro-text">
 
@@ -20,7 +21,6 @@ modifications on Windows, Macs and Linux or other unix-like systems.
 
 <a class="btn btn-primary btn-lg" href="/pages/overview" role="button">Learn more</a>
 </div></div></div>
-
 
 
 # Latest News

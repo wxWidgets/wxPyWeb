@@ -3,10 +3,10 @@
 <!-- Begin post-list ${post_list_id} -->
 <div class="homepage_news">
 <div class="postindex">
-<div id="${post_list_id}" class="post-list">
+<div id="${post_list_id}" class="post-list list-group list-group-flush">
     %if posts:
         %for post in posts:
-            <article class="h-entry post-${post.meta('type')}">
+            <article class="h-entry list-group-item post-${post.meta('type')}">
             <header>
                 <h2 class="p-name entry-title"><a href="${post.permalink()}" class="u-url">${post.title()|h}</a></h2>
                 <div class="metadata">

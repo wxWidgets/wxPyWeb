@@ -170,7 +170,7 @@ NAVIGATION_ALT_LINKS = {
         ((
           ("https://www.wxwidgets.org/blog/",       "fa-solid fa-star", "wxWidgets Blog"),
           ("https://www.blog.pythonlibrary.org/",   "fa-solid fa-star", "Mouse vs. Python"),
-          ("https://www.findmyelectric.com/",       "fa-solid fa-star", "Find My Electrics"),
+          ("https://www.findmyelectric.com/",       "fa-solid fa-star", "Find My Electric"),
           ),
         'Friends of wxPython'),
 
@@ -720,6 +720,14 @@ REDIRECTIONS = [ ("index.php",              "index.html"),
                  ("bookshelf.php",          "/pages/bookshelf/"),
                  ("irc.php",                "/pages/irc/"),
                 ]
+
+# Tag pages used to live under /categories/ before TAG_PATH was changed to "tags"
+REDIRECTIONS += [("categories/index.html", "/tags/")] + [
+    (f"categories/{tag}/index.html", f"/tags/{tag}/")
+    for tag in ("build", "development", "general", "hardware", "life", "linux",
+                "mac", "phoenix", "quotes", "release", "software", "toocool",
+                "windows", "work")
+]
 
 # Presets of commands to execute to deploy. Can be anything, for
 # example, you may use rsync:
@@ -1317,7 +1325,7 @@ INDEX_DISPLAY_POST_COUNT = 8
 SEARCH_FORM = """
 <!-- Google custom search -->
 <form method="get" action="https://www.google.com/search"
-    class="navbar-form navbar-right pb-lg-0 pb-3 role="search">
+    class="navbar-form navbar-right pb-lg-0 pb-3" role="search">
     <div class="input-group">
         <input type="text" class="form-control-sm flex-grow-1 searchbar" name="q" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
         <button class="btn btn-sm btn-primary" type="submit" aria-label="Submit Search" id="button-addon2">
@@ -1421,8 +1429,7 @@ METADATA_VALUE_MAPPING = {
 # Bundle JS and CSS into single files to make site loading faster in a HTTP/1.1
 # environment but is not recommended for HTTP/2.0 when caching is used.
 # Defaults to True.
-# WARNING: Using bundling with Boostrap v5 breaks dropdown-menus.
-USE_BUNDLES = False
+USE_BUNDLES = not USE_TEST_SITE
 
 # Plugins you don't want to use. Be careful :-)
 # DISABLED_PLUGINS = ["render_galleries"]
@@ -1482,9 +1489,7 @@ WARN_ABOUT_TAG_METADATA = False
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {
-    'example': '/images/header-logo.png'
-}
+GLOBAL_CONTEXT = {}
 
 # Add functions here and they will be called with template
 # GLOBAL_CONTEXT as parameter when the template is about to be

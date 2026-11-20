@@ -1,0 +1,19 @@
+##
+## A shortcode template to add a book to the bookshelf
+##
+## Expected Parameters:
+##      asin: number of book
+##      title: title of book
+##      img: path to the bookcover
+##
+
+<div class="card book-card flex-grow-1">
+	<a target="_blank"  href="http://www.amazon.de/dp/${ asin }/ref=nosim?tag=wxpython-20">
+		<img class="card-img-top" src="${ img }" alt="${ title }" >
+		<div class="card-body">
+			<div>
+				${ title }
+			</div>
+		</div>
+	</a>
+</div>

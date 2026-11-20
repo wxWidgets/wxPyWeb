@@ -9,11 +9,11 @@ on:
 
 jobs:
   publish-website:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Build website
         uses: ./.github/actions/build-website

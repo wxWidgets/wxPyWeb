@@ -10,8 +10,8 @@
 -->
 
 
-<img src="/images/OSI-Approved-License-100x137.png" alt="OSI Approved License" 
-     style="float: right; margin: 0 0 15px 15px;">
+<img src="/images/osi-badge.svg" alt="OSI Approved License" 
+     style="float: right; margin: 0 15px 15px 15px; width: 100px;">
 
 wxPython is licenced under the "wxWindows Library Licence".
 
@@ -22,13 +22,12 @@ who wish to produce GPL'ed software using wxWidgets, and also those producing
 proprietary software.
 
 The wxWindows Library Licence has been
-[approved by the Open Source Initiative][2].
+[approved by the Open Source Initiative][1].
 
 In August 2005, an ambiguity in Clause 2 was removed (replaced "the user's"
 with "your") and the version bumped to 3.1.
 
-[1]: http://www.abisource.com/
-[2]: http://opensource.org/licenses/wxwindows.php
+[1]: https://opensource.org/license/wxwindows
 
 The following sections present the actual text of the various license
 files. In general you may replace "wxWidgets" with "wxPython" in order to

@@ -9,105 +9,112 @@ ${base.html_headstart()}
 ${template_hooks['extra_head']()}
 
 <!-- wxPy: add wxpy-theme specific CSS files -->
-<link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/css/fontawesome.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/css/solid.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/css/brands.min.css" rel="stylesheet" type="text/css">
 <link href="/assets/css/wxpy.css" rel="stylesheet" type="text/css">
 
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48 32x32 16x16" href="/favicon.ico">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/apple-touch-icon.png">
+
 </head>
-<body>
+<body class="d-flex flex-column h-100">
 <a href="#content" class="sr-only sr-only-focusable">${messages("Skip to main content")}</a>
 
 <!-- Menubar -->
-
-<nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container"><!-- This keeps the margins nice -->
-        <!-- wxPy show logo in header, above the menubar -->
-        <a href="${blog_url}">${header_logo}</a>
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">${messages("Toggle navigation")}</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="${abs_link(_link("root", None, lang))}">
-            %if logo_url:
+<header>
+    <nav class="navbar navbar-expand-lg gradient-bg mb-4">
+        <div class="container-lg d-flex flex-lg-column justify-content-lg-start align-items-lg-stretch px-lg-3 px-4">
+            <a class="navbar-brand" href="/" title="wxPython.org">
                 <img src="${logo_url}" alt="${blog_title|h}" id="logo">
-            %endif
-
-            % if show_blog_title:
-                <span id="blog-title">${blog_title|h}</span>
-            % endif
             </a>
-        </div><!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
-            <ul class="nav navbar-nav">
-                ${base.html_navigation_links()}
-                ${template_hooks['menu']()}
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation" data-bs-theme="dark"> <span class="navbar-toggler-icon"></span> </button>
+
+            <div class="collapse navbar-collapse" id="bs-navbar">
+                <ul class="navbar-nav me-auto py-lg-0 py-3">
+                    ${base.html_navigation_links()}
+                    ${template_hooks['menu']()}
+                </ul>
             %if search_form:
                 ${search_form}
             %endif
 
-            <ul class="nav navbar-nav navbar-right">
-                <%block name="belowtitle">
-                %if len(translations) > 1:
-                    <li>${base.html_translations()}</li>
-                %endif
-                </%block>
-                % if show_sourcelink:
-                    <%block name="sourcelink"></%block>
-                %endif
-                ${template_hooks['menu_alt']()}
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
-</nav>
-
+                <ul class="nav navbar-nav navbar-right">
+                    <%block name="belowtitle">
+                    %if len(translations) > 1:
+                        <li>${base.html_translations()}</li>
+                    %endif
+                    </%block>
+                    % if show_sourcelink:
+                        <%block name="sourcelink"></%block>
+                    %endif
+                    ${template_hooks['menu_alt']()}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 <!-- End of Menubar -->
 
-<div class="container" id="content" role="main">
+<main class="container-lg flex-shrink-0" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
         <div class="row">
-            <div class="col-md-9"> <!-- wxPy: put the main content in a column -->
-            <div class="wxpy-content-col">
+            <div class="col-lg-9 mb-3"> <!-- wxPy: put the main content in a column -->
+            <div class="card card-body">
                 ${template_hooks['page_header']()}
                 <%block name="content"></%block>
             </div>
             </div>
 
             <!-- wxPy: load sidebar html into a smaller column -->
-            <div class="col-md-3">  
+            <div class="col-lg-3">  
                 <aside>
-                <%include file="_sidebar.html" />
+                ${html_navigation_sidebar_entries()}
                 </aside>
             </div>
             <!-- end of sidebar -->
-
         </div>
         <!--End of body content-->
+    </div>
+</main>
 
-        <footer id="footer">
+<footer class="gradient-bg pt-1 mt-3 px-4 mt-auto" id="footer">
+    <div class="container-fluid d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 px-3 mx-auto">
+        <p>
             ${content_footer}
             ${template_hooks['page_footer']()}
-        </footer>
+        </p>
+        <div class="d-inline-flex gap-4">
+            <a href="https://discuss.wxpython.org/" target="_blank" rel="noopener noreferrer" aria-label="Discuss"> <i class="fa-solid fa-comments fa-lg white-icon"></i></a>
+            <a href="https://docs.wxpython.org/" target="_blank" rel="noopener noreferrer" aria-label="Documentation"> <i class="fa-solid fa-code fa-lg white-icon"></i></a>
+            <a href="https://github.com/wxWidgets/Phoenix/" target="_blank" rel="noopener noreferrer" aria-label="Github"> <i class="fa-brands fa-github fa-lg white-icon"></i></a>
+        </div>
     </div>
-</div>
+</footer>
 
 ${base.late_load_js()}
-    
-    <!-- fancy dates -->
-    <script>
-    moment.locale("${momentjs_locales[lang]}");
-    fancydates(${date_fanciness}, ${js_date_format});
-    </script>
-    <!-- end fancy dates -->
+    %if date_fanciness != 0:
+        <!-- fancy dates -->
+        <script>
+        luxon.Settings.defaultLocale = "${luxon_locales[lang]}";
+        fancydates(${date_fanciness}, ${luxon_date_format});
+        </script>
+        <!-- end fancy dates -->
+    %endif
     <%block name="extra_js"></%block>
     % if annotations and post and not post.meta('noannotations'):
         ${notes.code()}
     % elif not annotations and post and post.meta('annotations'):
         ${notes.code()}
     % endif
+    <script>
+    baguetteBox.run('.gallery');
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
 ${body_end}
 ${template_hooks['body_end']()}
 </body>

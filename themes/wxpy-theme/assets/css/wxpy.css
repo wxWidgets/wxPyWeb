@@ -1,54 +1,159 @@
 /* 
- * wxPython specific overrides for style items in the base and bootstrap3 themes.
+ * wxPython specific overrides for style items in the base and bootstrap4 themes.
  */
 
-.nav > li > a {
-	padding: 5px 10px;
+:root {
+    --wx-primary-blue: #04519b;
+    --wx-gradient-secondary-blue: #044887;
+    --wx-secondary-blue: #033769;
+    --wx-body-bg-color: #deecf9;
+    --wx-regular-link-color: #137CB8;
+    --wx-light-link-color: #84CDF7;
+    --wx-hover-link-color: #055E92;
+    --wx-btn-gradient: linear-gradient(#54A2EB, #2F8EE7 60%, #1D84E5);
+    --wx-btn-hover-gradient: linear-gradient(#1A7EDB, #1569B7 60%, #135EA5);
+    --wx-code-color: #c7254e;
+    --wx-code-bg-color: #f9f2f4;
+    --wx-heading-color: #135793;
+    --bs-heading-color: #3D75A9;
+    --bs-link-color-rgb: 19, 124, 184;
+    --bs-link-hover-color-rgb: 5, 94, 146;
 }
 
-.navbar-nav > li > a,
-.navbar-nav > li > a:hover {
-  padding-top: 10px;
-  padding-bottom: 2px;
-  -webkit-transition: color ease-in-out 0.2s;
-  -o-transition: color ease-in-out 0.2s;
-  transition: color ease-in-out 0.2s;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: #335275;
-}
-
-div.homepage_news {
-}
-
-a.u-url {
-    color: #125d8a;
-    text-decoration: none;
-}
-
+h1,
+.h1,
+a.u-url,
 div.sectionindex header h2 a {
-    color: #125d8a;
+    color: var(--wx-heading-color);
     text-decoration: none;
 }
+
+a {
+    text-decoration: none;
+}
+
+a.footer-link {
+    color: var(--wx-light-link-color);
+}
+
+a.footer-link:focus,
+a.footer-link:hover {
+    color: var(--wx-regular-link-color);
+}
+
 body {
-    background-color: #dee4f9; 
+    background-color: var(--wx-body-bg-color);
     font-size: 15px;
 }
 
-div.wxpy-content-col {
-    border-radius: 6px;
-    background-color: #ffffff;
-    padding: 6px;
+.gradient-bg {
+    background-image: linear-gradient(var(--wx-primary-blue), var(--wx-gradient-secondary-blue) 60%, var(--wx-secondary-blue));
 }
 
-
-.panel-primary > .panel-heading {
-  background-color: #00468c;
+#footer {
+    color: var(--bs-border-color);
 }
 
+.white-icon {
+    color: var(--bs-border-color);
+}
+
+.white-icon:focus,
+.white-icon:hover {
+    color: var(--wx-light-link-color);
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #ffffff;
+    background-color: var(--wx-primary-blue);
+    border-radius: 4px;
+}
+
+.nav-link:focus-visible {
+    box-shadow: 0 0 0 .2rem var(--wx-regular-link-color);
+}
+
+.navbar-nav .nav-link.show {
+    color: #ffffff;
+    background-color: var(--wx-secondary-blue);
+    border-radius: 4px;
+}
+
+.navbar-brand {
+    width: 305px;
+    max-width: 75%;
+}
+
+.navbar-toggler {
+    border-color: var(--wx-secondary-blue);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+    background-color: var(--wx-secondary-blue);
+    box-shadow: none;
+}
+
+.dropdown-item:active {
+    background-color: var(--wx-primary-blue);
+}
+
+.searchbar {
+    border-color: var(--wx-hover-link-color);
+    border-style: solid;
+    border-width: thin;
+}
+
+.card-header {
+    color: #ffffff;
+    background-color: var(--wx-primary-blue);
+}
+
+.card-body > ul > li > a {
+    color: var(--wx-regular-link-color);
+    text-decoration: none;
+}
+
+.card-body > ul > li > a:focus,
+.card-body > ul > li > a:hover {
+    color: var(--wx-hover-link-color);
+    background-color: var(--bs-secondary-bg);
+    text-decoration: none;
+}
+
+.book-card {
+    width: 168px;
+    max-width: 240px;
+}
+
+.btn-primary {
+    background-image: var(--wx-btn-gradient);
+    border-color: var(--wx-hover-link-color);
+    border-style: solid;
+    border-width: thin;
+}
+
+.btn-primary:focus,
+.btn-primary:hover {
+    background-image: var(--wx-btn-hover-gradient);
+
+}
+
+.tags > li .tag {
+    color: #ffffff;
+    background-color: var(--wx-regular-link-color);
+}
+
+.tags > li .tag:hover,
+.tags > li .tag:focus {
+    color: #ffffff;
+    background-color: var(--wx-hover-link-color);
+}
 
 a.thumbnails img {
     vertical-align: top;
@@ -57,24 +162,66 @@ a.thumbnails img {
     padding-bottom: 10px;
 }
 
+div.code {
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
 
-code, kbd, pre, samp, tt.docutils.literal {
+@media only screen and (max-width: 768px) {
+    div.code {
+        margin-left: 0.35rem;
+        margin-right: 0.35rem;
+    }
+}
+
+pre.code {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Edgecase code inside a link */
+a > code {
+    color: var(--wx-code-color);
+}
+
+code {
+    padding: 2px 4px 2px 4px;
+    border-radius: 4px;
+}
+
+code,
+kbd,
+pre,
+samp,
+tt.docutils.literal {
     font-size: 85%;
+    background-color: var(--wx-code-bg-color);
 }
 
 /* So inline literals match between reST and markdown docs */
-tt.docutils.literal { 
-    background-color: #eeeeee; 
-    color: #c7254e;
+tt.docutils.literal {
+    color: var(--wx-code-color);
+    background-color: var(--wx-code-bg-color);
 }
 
-
-/* styles for the search box form and button */
-form.navbar-form.navbar-right div.form-group input.form-control {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  height: 24px;
+/* Legacy definitions from fontawesome, still in use */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
-
-
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+}

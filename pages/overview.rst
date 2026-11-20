@@ -11,12 +11,12 @@
 What is wxPython?
 -----------------
 
-`wxPython <http://wxPython.org/>`_ is a cross-platform **GUI toolkit** for
-the `Python <http://www.python.org/>`_ programming language. It allows Python
+`wxPython <https://wxPython.org/>`_ is a cross-platform **GUI toolkit** for
+the `Python <https://www.python.org/>`_ programming language. It allows Python
 programmers to create programs with a robust, highly functional graphical
 user interface, simply and easily. It is implemented as a set of Python
 extension modules that wrap the GUI components of the popular
-`wxWidgets <http://wxwidgets.org/>`_ cross platform library, which is written
+`wxWidgets <https://wxwidgets.org/>`_ cross platform library, which is written
 in C++. 
 
 Like Python and wxWidgets, wxPython is **Open Source**, which means that
@@ -136,10 +136,4 @@ And here is the source code. The docstrings and the comments in the code
 will help you understand what it is doing.
 
 .. listing:: helloworld2.py python
-
-
-
-
-
-
 
